@@ -20,7 +20,7 @@ jobs:
     - name: Download Bedrock tarball
       run: wget https://github.com/usebedrock/bedrock/tarball/26bfa7095fb3c2712126f1cf6e4e25632fcea209 -O bedrock.tar.gz
     - name: Extract Bedrock on top of this repository
-      run: tar xf bedrock.tar.gz --strip 1
+      run: tar xf bedrock.tar.gz --strip 1 --exclude content
     - name: Install dependencies
       run: npm install
     - name: Build the static site
