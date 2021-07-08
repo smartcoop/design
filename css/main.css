@@ -1,0 +1,20 @@
+/* ==========================================================================
+  Colors
+  Only define colors here. Don't use sass color functions, stick to hex values,
+  or the color component in styleguide won't regenerate automatically anymore.
+ ========================================================================== */
+/* Grays
+ ========================================================================== */
+/* Blues
+ ========================================================================== */
+@import "https://cdn.jsdelivr.net/npm/water.css@2/out/light.css";
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%; }
+
+body {
+  max-width: none; }
+
+/*# sourceMappingURL=main.css.map */

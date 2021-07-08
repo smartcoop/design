@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <style>
+        .br-image-example {
+            max-width: 500px;
+            margin: 40px auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,7 +36,7 @@
                                     <a href="/examples/data-example.html">data-example</a>
                                 </li>
                                 <li class="br-tree-dir">
-                                    <a href="/examples/image-example.html">image-example</a>
+                                    <a class="br-bordered-list__link--active" href="/examples/image-example.html">image-example</a>
                                 </li>
                                 <li class="br-tree-dir">
                                     <a href="/examples/markdown-example.html">markdown-example</a>
@@ -51,7 +57,7 @@
                             <a href="/404.html">404</a>
                         </li>
                         <li class="br-tree-dir">
-                            <a class="br-bordered-list__link--active" href="/index.html">index</a>
+                            <a href="/index.html">index</a>
                         </li>
                         <li class="br-tree-dir">
                             <a href="/page-index.html">page-index</a>
@@ -61,7 +67,11 @@
             </div>
         </div>
         <div class="br-prototype-content">
-            <p>Welcome to Bedrock. This is your homepage. Go to <code>/content/templates/index.pug</code> to find this file and start editing your project.</p>
+            <div class="br-image-example">
+                <h1>Image example</h1>
+                <p>This example shows where to put assets (<code>content/images</code>) and how to handle paths.</p>
+                <img src="/images/avatar.svg" width="200">
+            </div>
         </div>
     </div>
 

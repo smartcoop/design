@@ -10,6 +10,28 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <style>
+        form {
+            max-width: 500px;
+            margin: 40px auto;
+        }
+
+        form input[type="text"],
+        form textarea {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border: 1px solid #DDD;
+        }
+
+        form input[type="submit"] {
+            padding: 8px;
+            background: #EEE;
+            border: none;
+            border: 1px solid #DDD;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,7 +63,7 @@
                             <h4 class="br-tree-dir-title">page-states-example</h4>
                             <ul>
                                 <li class="br-tree-dir">
-                                    <a href="/page-states-example/form-example.html">form-example
+                                    <a class="br-bordered-list__link--active" href="/page-states-example/form-example.html">form-example
                                         <div class="br-tree-dir-state-count">1</div>
                                     </a>
                                 </li>
@@ -51,7 +73,7 @@
                             <a href="/404.html">404</a>
                         </li>
                         <li class="br-tree-dir">
-                            <a class="br-bordered-list__link--active" href="/index.html">index</a>
+                            <a href="/index.html">index</a>
                         </li>
                         <li class="br-tree-dir">
                             <a href="/page-index.html">page-index</a>
@@ -59,9 +81,35 @@
                     </ul>
                 </div>
             </div>
+            <div class="br-prototype-page-states">
+                <h4 class="br-prototype-nav-main-heading">Page states for page-states-example &gt; form-example</h4>
+                <ul class="br-bordered-list">
+                    <li>
+                        <a href="/page-states-example/form-example.html">Base page</a>
+                    </li>
+                    <li>
+                        <a class="br-bordered-list__link--active" href="/page-states-example/form-example--error.html">Error</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="br-prototype-content">
-            <p>Welcome to Bedrock. This is your homepage. Go to <code>/content/templates/index.pug</code> to find this file and start editing your project.</p>
+            <form>
+                <p style="color: red">Hey! Some fields were marked as invalid.</p>
+                <p>
+                    <label>First Name</label>
+                    <input type="text">
+                </p>
+                <p>
+                    <label>Last Name</label>
+                    <input type="text">
+                </p>
+                <p>
+                    <label>Message</label>
+                    <textarea></textarea>
+                </p>
+                <input type="submit">
+            </form>
         </div>
     </div>
 
