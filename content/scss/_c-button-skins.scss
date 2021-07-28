@@ -23,8 +23,8 @@ $c-button-link-color: $color-red-500 !default;
    ========================================================================== */
 
 .c-button--primary {
-  background: $color-red-500;
-  border-color: $color-red-500;
+  background: #000;
+  border-color: #000;
   color: #fff;
 
   svg * {
@@ -33,14 +33,14 @@ $c-button-link-color: $color-red-500 !default;
 
   &:hover,
   &.c-button--hover {
-    background: $color-red-800;
-    border-color: $color-red-800;
+    background: $color-gray-800;
+    border-color: $color-gray-800;
   }
 
   &:active,
   &.c-button--active {
-    border-color: $color-red-500;
-    background: $color-red-800;
+    border-color: $color-gray-800;
+    background: $color-gray-800;
   }
 
   &:focus {
@@ -75,6 +75,66 @@ $c-button-link-color: $color-red-500 !default;
   &.c-button--active {
     background: $color-gray-50;
     border-color: $color-red-500;
+    outline: none;
+  }
+
+  &:focus {
+    outline: $c-button-outline-color auto 1px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* Danger
+   ========================================================================== */
+
+.c-button--danger {
+  border-color: $color-red-500;
+  background: $color-red-500;
+  color: #FFF;
+
+  &:hover,
+  &.c-button--hover {
+    background: $color-red-800;
+    border-color: $color-red-800;
+  }
+
+  &:active,
+  &:active:focus,
+  &.c-button--active {
+    background: $color-red-800;
+    border-color: $color-red-800;
+    outline: none;
+  }
+
+  &:focus {
+    outline: $c-button-outline-color auto 1px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* Danger secondary
+   ========================================================================== */
+
+.c-button--danger-secondary {
+  border: 1px solid $color-red-500;
+  background: #fff;
+  color: $color-red-500;
+
+  &:hover,
+  &.c-button--hover {
+    background: $color-gray-50;
+  }
+
+  &:active,
+  &:active:focus,
+  &.c-button--active {
+    background: $color-gray-50;
     outline: none;
   }
 
@@ -260,20 +320,3 @@ $c-button-link-color: $color-red-500 !default;
     outline: none;
   }
 }
-
-/* Button Icon only specific tweaks
-   ========================================================================== */
-.c-button--icon {
-  color: $color-muted;
-
-  &.c-button--active,
-  &:active {
-    color: $color-primary;
-    background-color: #fff;
-
-    &.c-button--secondary {
-      border-color: $color-gray-500;
-    }
-  }
-}
-
