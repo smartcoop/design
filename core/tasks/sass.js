@@ -6,17 +6,22 @@ const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const header = require('gulp-header');
 const autoprefixer = require('autoprefixer');
-
-const config = require('../discovery/config');
-const errors = require('../util/errors');
 const paths = require('../paths');
+const errors = require('../util/errors');
+
+let config;
+if (process.env.NODE_ENV == "production") {
+  config = require('../discovery/prod-config');
+} else {
+  config = require('../discovery/config');
+}
 
 var svgIconClassPrefix = config.icons && config.icons.svgIconClassPrefix || 'svg-icon'
 
 if (config.css.compiler == "postcss") {
-  var sources = [paths.core.scss.prototype, paths.core.scss.prism]
+  var sources = [paths.core.scss.prototype]
 } else if (config.css.compiler == "scss") {
-  var sources = [paths.content.scss.all, paths.core.scss.prototype, paths.core.scss.prism]
+  var sources = [paths.content.scss.all, paths.core.scss.prototype]
 } else {
   console.error("Please provide a CSS compiler");
 }

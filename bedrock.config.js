@@ -6,7 +6,7 @@
 
 module.exports = {
   pageTree: {
-    layoutStyle: 'sidebar' // 'sidebar' or 'fixed'
+    layoutStyle: 'fixed' // 'sidebar' or 'fixed'
   },
   js: {
     minify: false

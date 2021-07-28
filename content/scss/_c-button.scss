@@ -17,7 +17,7 @@ $c-button-height-small: 3.2rem !default;
 
 // Font size
 
-$c-button-font-size: 1.5rem;
+$c-button-font-size: 1.6rem;
 $c-button-font-size-small: 1.4rem;
 
 // Line height
@@ -32,9 +32,8 @@ $c-button-padding-horizontal-small: 1rem !default;
 
 // Spacing between icon and label
 
-$c-button-icon-spacing: 0.8rem !default;
+$c-button-icon-spacing: 0.6rem !default;
 $c-button-icon-spacing-small: 0 !default;
-
 
 /* Default size
    ========================================================================== */
@@ -50,6 +49,8 @@ $c-button-icon-spacing-small: 0 !default;
   text-align: center;
   align-items: center;
   font-weight: 500;
+  justify-content: center;
+  display: inline-flex;
 }
 
 a.c-button {
@@ -67,10 +68,16 @@ button.c-button {
   }
 }
 
+input.c-button {
+  height: 3.6rem;
+}
+
 .c-button .c-button__content {
   align-items: center;
   display: flex;
   justify-content: center;
+  position: relative;
+  pointer-events: none;
 }
 
 .c-button__label {
@@ -78,60 +85,105 @@ button.c-button {
   white-space: nowrap;
 }
 
-.c-icon + .c-button__label,
-.c-button__label + .c-icon {
+.c-button__logo {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.c-button__logo + * {
+  margin-left: 1.2rem;
+}
+
+.o-svg-icon + .c-button__label {
   margin-left: $c-button-icon-spacing;
 }
 
-
-/* Icon-only Button (Square)
-   ========================================================================== */
-
-.c-button--icon {
-  padding: ($c-button-height - $c-button-line-height)/2;
+.c-button__label + .o-svg-icon {
+  margin-left: 0.6rem;
 }
 
-.c-button--small.c-button--icon {
-  padding: ($c-button-height-small - $c-button-line-height-small)/2;;
+.c-button:not(.c-button--icon) .o-svg-icon:first-child {
+  margin-left: -0.9rem;
+}
+
+.c-button:not(.c-button--icon) .o-svg-icon:last-child {
+  margin-right: -0.9rem;
+}
+
+// Different spacing for carets
+.c-button:not(.c-button--icon) [class*='o-svg-icon-arrows-caret']:last-child {
+  margin-left: 0;
+  margin-right: -1.5rem;
+}
+
+/* Small size
+   ========================================================================== */
+
+.c-button--small {
+  font-size: $c-button-font-size-small;
+  padding: (($c-button-height-small - $c-button-line-height-small) / 2)
+    $c-button-padding-horizontal-small;
+
+  .c-button__label {
+    line-height: $c-button-line-height-small;
+  }
+
+  .o-svg-icon {
+    height: $c-button-line-height-small;
+    width: $c-button-line-height-small;
+  }
+
+  .o-svg-icon + .c-button__label,
+  .c-button__label + .o-svg-icon {
+    margin-left: $c-button-icon-spacing-small;
+  }
+
+  &.c-button--icon {
+    padding: ($c-button-height-small - $c-button-line-height-small) / 2;
+  }
+
+  &:not(.c-button--icon) .o-svg-icon:first-child {
+    margin-left: -0.6rem;
+  }
+
+  &:not(.c-button--icon) .o-svg-icon:last-child {
+    margin-right: -0.6rem;
+  }
+}
+
+/* Icon-only Button (Square)
+    ========================================================================== */
+
+.c-button--icon {
+  padding: ($c-button-height - $c-button-line-height) / 2;
+
+  &.c-button--small {
+    padding: ($c-button-height-small - $c-button-line-height-small) / 2;
+  }
 }
 
 /* Block button
-   ========================================================================== */
+    ========================================================================== */
 
 .c-button--block {
   width: 100%;
   text-align: center;
+  justify-content: center;
 }
 
 /* Link button
-   ========================================================================== */
+    ========================================================================== */
 
 .c-button--link {
   padding-left: 0;
   padding-right: 0;
   font-weight: 600;
   text-decoration: none;
+
   &:hover,
   &:active,
   &:hover svg *,
   &:active svg * {
-    color: darken($color-primary, 15%);
-  }
-}
-
-/* File button
-   ---
-   Hide an input type file inside a button that is fully clickable
-   ========================================================================== */
-
-.c-button--file {
-  position: relative;
-  input[type="file"] {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.0001;
+    color: darken($color-red-500, 15%);
   }
 }

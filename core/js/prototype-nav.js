@@ -133,5 +133,3 @@ $(window).on('keyup', function (e) {
     toggleNavigation();
   }
 });
-
-
