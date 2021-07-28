@@ -8,232 +8,272 @@
    ========================================================================== */
 
 $c-button-text-color: $g-text-color !default;
-$c-button-hover-border-color: $color-gray-150 !default;
-$c-button-outline-color: $color-primary !default;
-$c-button-focus-ring-color: $color-primary !default;
-$c-button-link-color: $color-primary !default;
+$c-button-hover-border-color: $color-gray-300 !default;
+$c-button-outline-color: $color-gray-900 !default;
+$c-button-focus-ring-color: $color-red-500 !default;
+$c-button-link-color: $color-red-500 !default;
 
 .c-button {
-  transition: 0.18s background ease-in;
+  transition: 0.18s ease-in;
+  transition-property: background, border;
+  border: 1px solid transparent;
 }
 
 /* Primary
    ========================================================================== */
 
-.c-button.c-button--primary {
-  border: none;
-  background: $color-primary;
-  color: #FFF;
+.c-button--primary {
+  background: $color-red-500;
+  border-color: $color-red-500;
+  color: #fff;
 
   svg * {
-    fill: #FFF;
+    fill: currentColor;
   }
 
   &:hover,
-  &:active,
-  &.c-button--active,
-  &:active:focus,
-  &.c-button--active:focus {
-    background: darken($color-primary, 15%);
+  &.c-button--hover {
+    background: $color-red-800;
+    border-color: $color-red-800;
   }
 
+  &:active,
+  &.c-button--active {
+    border-color: $color-red-500;
+    background: $color-red-800;
+  }
+
+  &:focus {
+    outline: $c-button-outline-color auto 1px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 /* Secondary
    ========================================================================== */
 
-   .c-button.c-button--secondary {
-    border: 1px solid $color-primary;
-    background: none;
-    color: $color-primary;
-
-    svg * {
-      fill: $color-primary;
-    }
-
-    &:hover,
-    &:active,
-    &.c-button--active,
-    &:active:focus,
-    &.c-button--active:focus {
-      background: $color-red-500;
-    }
-
-  }
-
-
-/* Tertiary
-   ========================================================================== */
-
-.c-button.c-button--tertiary {
-  border: 1px solid $color-gray-200;
+.c-button--secondary {
+  border: 1px solid $color-gray-500;
   background: #fff;
-  color: $color-gray-700;
+  color: $color-text;
 
   svg * {
-    fill: $color-gray-700;
+    fill: $color-gray-600;
   }
 
   &:hover,
-  &:active,
-  &.c-button--active,
-  &:active:focus,
-  &.c-button--active:focus {
+  &.c-button--hover {
     background: $color-gray-50;
-  }
-
-}
-
-
-/* Default
-   ========================================================================== */
-
-.c-button.c-button--default {
-  border: 1px solid $color-gray-200;
-  background: #fff;
-  color: $color-gray-700;
-
-  &:hover,
-  &:active,
-  &.c-button--active,
-  &:active:focus,
-  &.c-button--active:focus {
-    background: $color-gray-100;
-  }
-
-
-}
-/* Danger
-   ========================================================================== */
-
-.c-button.c-button--danger {
-  border: none;
-  background: $color-red-500;
-  color: #FFF;
-
-  svg * {
-    fill: #FFF;
+    border-color: $color-gray-500;
   }
 
   &:active,
-  &.c-button--active,
   &:active:focus,
-  &.c-button--active:focus {
-    background: darken($color-red-500, 10%);
-  }
-
-}
-
-
-/* Danger hover
-   ========================================================================== */
-
-.c-button.c-button--danger-hover {
-  border: 1px solid $color-gray-200;
-  background: #fff;
-  color: $color-gray-700;
-
-  svg * {
-    fill: $c-button-text-color;
-  }
-
-  &:active,
-  &:hover,
-  &.c-button--active,
-  &:active:focus,
-  &.c-button--active:focus {
-    background: $color-red-500;
-    color: #FFF;
-    box-shadow: inset 0 0 0 0.1rem $color-red-500;
-    transition: box-shadow 0.18s ease-in-out, background 0.18s ease-in-out, color 0.18s ease-in-out;
-    svg * {
-      fill: #FFF;
-    }
-  }
-
-}
-
-/* Borderless
-   ========================================================================== */
-
-.c-button.c-button--borderless {
-  color: $c-button-text-color;
-  background: none;
-  border: 0;
-
-  &:hover {
-    box-shadow: inset 0 0 0 0.1rem $c-button-hover-border-color;
-  }
-
-  &:active,
-  &.c-button--active,
-  &:active:focus,
-  &.c-button--active:focus {
-    background: $color-gray-100;
-    box-shadow: inset 0 0 0 0.1rem $c-button-hover-border-color;
-  }
-
-}
-
-/* Borderless
-   ========================================================================== */
-
-.c-button.c-button--borderless-i {
-  color: rgba(#FFF,0.5);
-  background: none;
-  border: 0;
-
-  &:hover {
-    box-shadow: inset 0 0 0 0.1rem rgba(#FFF,0.25);
+  &.c-button--active {
+    background: $color-gray-50;
+    border-color: $color-red-500;
+    outline: none;
   }
 
   &:focus {
-    outline: 0;
+    outline: $c-button-outline-color auto 1px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* Shared disabled state for primary and secondary buttons
+   ========================================================================== */
+
+.c-button--primary,
+.c-button--secondary {
+
+  &[disabled],
+  &:disabled,
+  &.c-button--disabled {
+    background: $color-gray-100;
+    border-color: $color-gray-100;
+    color: $color-disabled;
+    pointer-events: none;
+
+    svg * {
+      fill: $color-disabled;
+    }
+  }
+}
+
+/* Borderless
+   ========================================================================== */
+
+// Shared between regular and inverse version
+.c-button--borderless,
+.c-button--borderless-i,
+.c-button--borderless-muted {
+  border-color: transparent;
+  background: transparent;
+
+  &:not(.c-button--icon) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .o-svg-icon svg {
+    fill: currentColor;
+  }
+
+  &:focus {
+    outline: none;
+    background: transparent;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &[disabled],
+  &:disabled,
+  &.c-button-disabled {
+    pointer-events: none;
+  }
+}
+
+.c-button.c-button--borderless-i {
+  color: #fff;
+
+  &:hover,
+  &.c-button--hover {
+    color: $color-gray-900;
   }
 
   &:active,
-  &.c-button--active,
   &:active:focus,
-  &.c-button--active:focus {
-    background: rgba(#FFF,0.1);
-    box-shadow: inset 0 0 0 0.1rem rgba(#FFF,0.25);
+  &.c-button--active {
+    color: $color-red-500;
   }
 
-}
-
-/* Shared disabled state for all buttons
-   ========================================================================== */
-
-.c-button.c-button--primary,
-.c-button.c-button--default,
-.c-button.c-button--danger,
-.c-button.c-button--danger-hover {
+  &[disabled],
   &:disabled,
-  &.c-button--disabled {
-    background: $color-gray-50;
-    color: $color-gray-200;
-    pointer-events: none;
-    border: none;
-  }
-}
+  &.c-button-disabled {
+    color: $color-disabled;
 
-/* Invisible
-   ========================================================================== */
-
-   .c-button--invisible {
-    position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.3rem;
-
-    &:hover,
-    &:focus {
-      background-color: $color-gray-50;
-      border: .1rem solid $color-primary;
+    svg * {
+      fill: $color-disabled;
     }
   }
+}
+
+.c-button--borderless {
+  color: $color-text;
+
+  &:hover,
+  &.c-button--hover {
+    color: $color-gray-900;
+    background: transparent;
+  }
+
+  &:active,
+  &:active:focus,
+  &.c-button--active {
+    color: $color-red-500;
+    background: transparent;
+  }
+
+  &:focus {
+    color: $color-red-500;
+    background: transparent;
+  }
+
+  &[disabled],
+  &:disabled,
+  &.c-button-disabled {
+    color: $color-disabled;
+
+    svg * {
+      fill: $color-disabled;
+    }
+  }
+}
+
+.c-button--borderless-muted {
+  color: $color-muted;
+
+  &:hover,
+  &.c-button--hover {
+    color: $color-gray-900;
+    background: transparent;
+  }
+
+  &:active,
+  &:active:focus,
+  &.c-button--active {
+    color: $color-red-500;
+    background: transparent;
+  }
+
+  &:focus {
+    color: $color-red-500;
+    background: transparent;
+  }
+
+  &[disabled],
+  &:disabled,
+  &.c-button-disabled {
+    color: $color-disabled;
+
+    svg * {
+      fill: $color-disabled;
+    }
+  }
+}
+
+/* Muted
+   ========================================================================== */
+
+.c-button--muted {
+  color: $color-muted;
+
+  &:hover,
+  &.c-button--hover {
+    color: #fff;
+    background: transparent;
+  }
+
+  &:active,
+  &:active:focus,
+  &.c-button--active {
+    color: $color-red-500;
+    background: transparent;
+  }
+
+  &:focus {
+    outline: none;
+    color: $color-red-500;
+    background: transparent;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* Button Icon only specific tweaks
+   ========================================================================== */
+.c-button--icon {
+  color: $color-muted;
+
+  &.c-button--active,
+  &:active {
+    color: $color-primary;
+    background-color: #fff;
+
+    &.c-button--secondary {
+      border-color: $color-gray-500;
+    }
+  }
+}
+

@@ -8,13 +8,15 @@
 - samples.push({name: 'Content heading text', code: '<p>' + longContent + '</p>'})
 - samples.push({name: 'Blockquote', code: '<blockquote>' + longContent + '</blockquote>'})
 
-table
-    each sample in samples
-        tr
-            td
-                = sample.name
-                br
-                span.br-typography-sample-size= sample.size
-            td
-                .br-typography-sample-content!= sample.code
-                pre= sample.code
+.c-content
+    .u-spacer-bottom-l.u-spacer-top.l
+        table
+            each sample in samples
+                tr
+                    td
+                        = sample.name
+                        br
+                        span.br-typography-sample-size= sample.size
+                    td
+                        .br-typography-sample-content!= sample.code
+                        pre= sample.code

@@ -5,6 +5,9 @@ order: 1
 ---
 
 style.
+    .br-styleguide-content-inner, .br-styleguide-content {
+        height: 100%;
+    }
     .br-demo-content {
         height: 100%;
         display: flex;
@@ -12,19 +15,17 @@ style.
     }
     .br-demo-content-inner {
         max-width: 660px;
+        height: 100%;
         margin: 0 auto;
+        display: flex;
+        align-items: center;
     }
-    
+
 .br-demo-content
     .br-demo-content-inner
-        h2 Welcome to the application styleguide.
+        .c-content
+            p Welcome to the design system for SmartCoop
 
-        p You are looking at a default install of Bedrock.
+            p <strong> What is a design system?</strong> A design system is a set of shared and integrated patterns and principles that define the overall design of a product.
 
-        p To use Bedrock, start making some templates! Import your custom CSS in <code>main.scss</code>.
-
-        p Document your components using the folders in <code>templates/_components</code>.
-
-        p Make a new page by making a new pug file under <code>content/templates</code>
-
-        p Read more at <a href="https://bedrockapp.org/">bedrockapp.org</a>.
+            p <strong>Why do we need a design system?</strong> To document a design language that can be used as a guideline when creating new screens and apps. We strive for efficiency through well-defined, reusable and cross-platform components.

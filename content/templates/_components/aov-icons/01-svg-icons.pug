@@ -1,7 +1,8 @@
 each category, id in icons.svg
     if id
         h3 #{id}
-    each icon in category
-        .svg-icon
-            +icon(icon.category+'/'+icon.name)
-            p #{icon.name}
+    .c-styleguide-svg-icons
+        each icon in category
+            .c-styleguide-svg-icon
+                +icon(icon.category+'/'+icon.name)
+                p #{icon.name}
