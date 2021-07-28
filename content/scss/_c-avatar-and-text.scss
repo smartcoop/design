@@ -1,0 +1,41 @@
+/* ==========================================================================
+  c-avatar-and-text
+   ========================================================================== */
+
+.c-avatar-and-text {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+
+  .c-avatar {
+    margin-right: 1.2rem;
+  }
+
+  .c-avatar.c-avatar--small {
+    margin-right: 1.2rem;
+  }
+}
+
+.c-avatar-and-text__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.c-avatar-and-text__text p,
+.c-avatar-and-text__text h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c-avatar-and-text__text h3 {
+  margin-bottom: 0.4rem;
+}
+
+.c-avatar-and-text--wrap {
+  .c-avatar-and-text__text p,
+  .c-avatar-and-text__text h3 {
+    white-space: normal;
+    overflow: auto;
+  }
+}

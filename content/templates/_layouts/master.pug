@@ -16,15 +16,28 @@ block pageVariables
 //- Use this block to customize the styleguide
 //- @see https://bedrockapp.org/documentation/styling-the-style-guide/
 block append styleguideSettings
+    - var styleguideBrandClass = "c-h2"
+    - var styleguideComponentGroupHeaderClass = "c-h2"
+    - var styleguideSampleHeadingClass = "c-h3"
+    - var styleguideComponentListingCategoryClass = "c-h3"
+    - var styleguideRichContentClass = "c-content"
+    - var styleguideNavListTitleClass = "c-h4"
+    - var styleguideNavListClass = "c-styleguide-list"
+    - var styleguideNavListItemActiveClass = "c-styleguide-list__item--active"
+    - var styleguideInputClass = "c-input"
     - var styleguideLogoAsImage = true
-    - var styleguideLogoAsImagePath = "/images/bedrock-logo-black.svg"
+    - var styleguideLogoAsImagePath = "/images/logo.svg"
+    - var styleguideLogoAsImageAlt = "SmartCoop"
+    - var styleguideLogoAsImageForceWidth = "160"
+    - var styleguideButtonClass = "c-button c-button--secondary c-button--small"
+    - var styleguideSearchCustomTemplate = true
 
 doctype html
 html(dir="ltr" lang="en" class=htmlClass ? htmlClass : '')
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
-        
+
         if config.noIndex
             meta(name="robots" content="noindex")
 

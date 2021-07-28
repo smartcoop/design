@@ -1,0 +1,17 @@
+/* ==========================================================================
+  Component: c-brand
+   ========================================================================== */
+
+.c-brand {
+  padding: 0;
+  margin-right: 0.8rem;
+  display: block;
+  height: 3.6rem;
+  a,
+  img {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+}

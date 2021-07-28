@@ -1,0 +1,63 @@
+/* ==========================================================================
+  Component: Pill
+  ---
+  A pill. Use to display textual information in a different way than just text.
+   ========================================================================== */
+
+// Spacing between icon and label
+
+$c-pill-icon-spacing: 0.4rem !default;
+
+/* Mixins
+   ========================================================================== */
+
+@mixin pill-variant($background-color, $text-color, $border-color) {
+  background-color: $background-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+}
+
+/* Component
+   ========================================================================== */
+
+.c-pill {
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.c-icon + .c-pill__label,
+.c-pill__label + .c-icon {
+  margin-left: $c-pill-icon-spacing;
+}
+
+.c-pill--default {
+  @include pill-variant(#FFF, $color-gray-400, $color-gray-200);
+}
+
+.c-pill--success {
+  @include pill-variant($color-green-500, #FFF, $color-green-500);
+}
+
+.c-pill--warning {
+  @include pill-variant($color-orange-500, #FFF, $color-orange-500);
+}
+
+.c-pill--error {
+  @include pill-variant($color-red-500, #FFF, $color-red-500);
+}
+
+
+/* Pill list
+   ========================================================================== */
+
+.c-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .c-pill:not(:first-of-type) {
+    margin-left: .5rem;
+  }
+}

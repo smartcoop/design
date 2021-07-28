@@ -1,0 +1,23 @@
+/* ==========================================================================
+  c-alert-stack
+  ---
+  Create a global stack for alerts. You can add an element to the stack.
+   ========================================================================== */
+
+.c-alert-stack {
+  position: absolute;
+  right: 2.4rem;
+  bottom: 2.4rem;
+  display: flex;
+  flex-direction: column-reverse;
+
+  .c-alert {
+    min-width: 44rem;
+    max-width: 44rem;
+    margin: 0 0 1.6rem;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
