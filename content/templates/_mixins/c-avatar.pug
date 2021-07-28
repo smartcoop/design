@@ -1,0 +1,15 @@
+//-
+    Mixin Avatar - Create a avatar
+    @param {Object} props
+    @param {string} size - the size of a avatar (regular, small)
+    @param {string} img - image reference
+    @param {string} alt - alt tag of an image
+    @param {string} icon - icon name
+
+mixin c-avatar({img, alt = "avatar-image", icon, size = "regular"})
+    if img
+        .c-avatar(class="c-avatar--img c-avatar--"+size)&attributes(attributes)
+            img(src=img alt=alt)
+    else
+        .c-avatar(class="c-avatar--default c-avatar--"+size)&attributes(attributes)
+            +icon(icon? icon : 'user', 'o-svg-icon--'+size)

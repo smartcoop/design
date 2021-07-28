@@ -3,7 +3,7 @@ title: Possible parameters for buttons
 containsCustom: true
 ---
 
-<table class="auk-table">
+<table class="c-table">
     <thead>
         <tr>
             <th>Parameters</th>
