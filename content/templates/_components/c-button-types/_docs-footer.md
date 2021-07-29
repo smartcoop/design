@@ -17,7 +17,7 @@ containsCustom: true
             <td>buttonType</td>
             <td>string</td>
             <td><code>button</code>, <code>submit</code>, <code>reset</code></td>
-            <td>The default value of a button type is button.</td>
+            <td>The default value of a button type is <code>button</code>.</td>
         </tr>
         <tr>
             <td>href</td>
@@ -41,7 +41,7 @@ containsCustom: true
             <td>layout</td>
             <td>string</td>
             <td><code>text-icon</code>, <code>icon-only</code>, <code>default</code></td>
-            <td>Determines the placement of the icon. The default layout is icon-text.</td>
+            <td>Determines the placement of the icon. The default layout is <code>icon-text</code>.</td>
         </tr>
         <tr>
             <td>isBlock</td>
