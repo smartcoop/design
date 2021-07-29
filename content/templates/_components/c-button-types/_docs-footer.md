@@ -23,7 +23,7 @@ containsCustom: true
             <td>href</td>
             <td>string</td>
             <td>This can be any url or id.</td>
-            <td>If this parameter is used than this button will automatically become a link.</td>
+            <td>If this parameter is used then this button will automatically become a link.</td>
         </tr>
         <tr>
             <td>icon</td>
