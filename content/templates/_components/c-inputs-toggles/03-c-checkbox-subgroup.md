@@ -1,3 +1,3 @@
 ---
-title: Checkbox Nesting
+title: Checkbox nesting
 ---

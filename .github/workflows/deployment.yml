@@ -1,0 +1,30 @@
+name: Deploy to design.smart.coop
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout this repository
+      uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14.15.0
+    - name: Install dependencies
+      run: npm install
+    - name: Build the static site
+      run: npm run-script build
+    - name: Re-establish the CNAME configuration
+      run: echo design.smart.coop > dist/CNAME
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
