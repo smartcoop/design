@@ -9,159 +9,111 @@
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/prism-styleguide.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
 </head>
 
 <body>
-    <div class="br-prototype-wrapper">
-        <div class="br-prototype-nav" id="__prototype-nav" aria-hidden="true">
-            <div class="br-prototype-nav-inner">
-                <h4 class="br-prototype-nav-main-heading">Prototype navigation</h4>
-                <p class="br-prototype-nav-text">Press Ctrl + M to toggle this navigation or click <a class="br-prototype-close-nav" href="#">here</a>.</p>
-                <div id="br-page-tree">
-                    <ul class="br-bordered-list">
-                        <li>
-                            <a href="/styleguide">Styleguide</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">examples</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/data-example.html">data-example</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/image-example.html">image-example</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/markdown-example.html">markdown-example</a>
+    <div class="br-styleguide-container">
+        <div class="br-styleguide-navigation-wrapper-ie">
+            <div class="br-styleguide-header">
+                <a href="/styleguide">
+                    <img class="br-styleguide-logo" src="/images/logo.svg" alt="SmartCoop" width="160">
+                </a>
+            </div>
+            <div class="br-styleguide-search">
+                <input class="c-input" id="styleguideSearch" type="search" placeholder="Search components...">
+            </div>
+            <div class="br-styleguide-navigation-holder">
+                <div class="br-styleguide-nav-holder">
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Style guide</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/introduction.html">Introduction</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">page-states-example</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/page-states-example/form-example.html">form-example
-                                        <div class="br-tree-dir-state-count">1</div>
-                                    </a>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Basics</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/aov-colors.html"> Colors</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/aov-icons.html"> Icons</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/aov-typography.html"> Typography</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <a href="/404.html">404</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <a href="/index.html">index</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <a href="/page-index.html">page-index</a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Components</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-avatar.html"> Avatar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-button-skins.html"> Buttons (skins)</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-button-types.html"> Buttons (types)</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-inputs-text.html"> Inputs (text)</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-inputs-toggles.html"> Inputs (toggles)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Development documentation</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/browser-support.html">Browser support</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/changelog.html">Changelog</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/css-architecture.html">CSS Architecture</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/css-component-structure.html">CSS component structure</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="br-prototype-content">
-            <div class="br-styleguide-container">
-                <div class="br-styleguide-navigation-wrapper-ie">
-                    <div class="br-styleguide-header">
-                        <a href="/styleguide">
-                            <img class="br-styleguide-logo" src="/images/bedrock-logo-black.svg">
-                        </a>
-                    </div>
-                    <div class="br-styleguide-navigation-holder">
-                        <div class="br-styleguide-nav-holder">
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Style guide</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/docs/introduction.html">Introduction</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Design patterns</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/docs/doc-example-2.html">Another doc page example</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/docs/doc-example.html">Doc page example</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Overviews</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/aov-colors.html"> Colors</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/aov-icons.html"> Icons</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/aov-typography.html"> Typography</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Components</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-custom-marker.html"> Custom example
-                                                <div class="br-docs-category-marker-custom"></div>
-                                            </a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-footer-docs.html"> Example footer docs</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-humanized-names.html"> Example with automatic humanized names</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-manual-docs.html"> Example</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-named-source.html"> Example with named source</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">No category</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/cc-example.html"> Custom category</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="br-styleguide-content">
+            <div class="br-styleguide-content-inner">
+                <div class="br-componentgroup-header-wrapper">
+                    <h1 class="br-componentgroup-header c-h2">Typography</h1>
                 </div>
-                <div class="br-styleguide-content">
-                    <div class="br-styleguide-content-inner">
-                        <div class="br-componentgroup-header-wrapper">
-                            <h1 class="br-componentgroup-header">Typography</h1>
-                        </div>
-                        <div class="br-content">
-                        </div>
-                        <div class="br-sample" id="component-typography">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading">Typography</h3>
-                                <a class="br-sample-header-link" href="#component-typography">#</a>
-                            </div>
-                            <div class="br-sample-documentation">
-                                <p>Typographic elements used throughout the application.</p>
-                            </div>
-                            <div class="br-sample-content">
+                <div class="br-content c-content">
+                </div>
+                <div class="br-sample" id="component-typography">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Typography</h3>
+                        <a class="br-sample-header-link" href="#component-typography">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content">
+                        <p>Typographic elements used throughout the application.</p>
+                    </div>
+                    <div class="br-sample-content">
+                        <div class="c-content">
+                            <div class="u-spacer-bottom-l u-spacer-top l">
                                 <table>
                                     <tr>
                                         <td>Content heading 1
@@ -237,89 +189,95 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;table&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Content heading 1
-            &lt;br /&gt;
-            &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
-        &lt;/td&gt;
-        &lt;td&gt;
-            &lt;div class=&quot;br-typography-sample-content&quot;&gt;
-                &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
-            &lt;/div&gt;
-            &lt;pre&gt;&amp;lt;h1&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/h1&amp;gt;&lt;/pre&gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Content heading 2
-            &lt;br /&gt;
-            &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
-        &lt;/td&gt;
-        &lt;td&gt;
-            &lt;div class=&quot;br-typography-sample-content&quot;&gt;
-                &lt;h2&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;
-            &lt;/div&gt;
-            &lt;pre&gt;&amp;lt;h2&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/h2&amp;gt;&lt;/pre&gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Content heading 3
-            &lt;br /&gt;
-            &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
-        &lt;/td&gt;
-        &lt;td&gt;
-            &lt;div class=&quot;br-typography-sample-content&quot;&gt;
-                &lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;
-            &lt;/div&gt;
-            &lt;pre&gt;&amp;lt;h3&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/h3&amp;gt;&lt;/pre&gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Content heading 4
-            &lt;br /&gt;
-            &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
-        &lt;/td&gt;
-        &lt;td&gt;
-            &lt;div class=&quot;br-typography-sample-content&quot;&gt;
-                &lt;h4&gt;Lorem ipsum dolor sit amet&lt;/h4&gt;
-            &lt;/div&gt;
-            &lt;pre&gt;&amp;lt;h4&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/h4&amp;gt;&lt;/pre&gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Content heading text
-            &lt;br /&gt;
-            &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
-        &lt;/td&gt;
-        &lt;td&gt;
-            &lt;div class=&quot;br-typography-sample-content&quot;&gt;
-                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;pre&gt;&amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&amp;lt;/p&amp;gt;&lt;/pre&gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Blockquote
-            &lt;br /&gt;
-            &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
-        &lt;/td&gt;
-        &lt;td&gt;
-            &lt;div class=&quot;br-typography-sample-content&quot;&gt;
-                &lt;blockquote&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/blockquote&gt;
-            &lt;/div&gt;
-            &lt;pre&gt;&amp;lt;blockquote&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&amp;lt;/blockquote&amp;gt;&lt;/pre&gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">- var shortContent = 'Lorem ipsum dolor sit amet';
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-content&quot;&gt;
+    &lt;div class=&quot;u-spacer-bottom-l u-spacer-top l&quot;&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Content heading 1
+                    &lt;br /&gt;
+                    &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class=&quot;br-typography-sample-content&quot;&gt;
+                        &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
+                    &lt;/div&gt;
+                    &lt;pre&gt;&amp;lt;h1&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/h1&amp;gt;&lt;/pre&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Content heading 2
+                    &lt;br /&gt;
+                    &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class=&quot;br-typography-sample-content&quot;&gt;
+                        &lt;h2&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;pre&gt;&amp;lt;h2&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/h2&amp;gt;&lt;/pre&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Content heading 3
+                    &lt;br /&gt;
+                    &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class=&quot;br-typography-sample-content&quot;&gt;
+                        &lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;pre&gt;&amp;lt;h3&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/h3&amp;gt;&lt;/pre&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Content heading 4
+                    &lt;br /&gt;
+                    &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class=&quot;br-typography-sample-content&quot;&gt;
+                        &lt;h4&gt;Lorem ipsum dolor sit amet&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;pre&gt;&amp;lt;h4&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/h4&amp;gt;&lt;/pre&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Content heading text
+                    &lt;br /&gt;
+                    &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class=&quot;br-typography-sample-content&quot;&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;pre&gt;&amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&amp;lt;/p&amp;gt;&lt;/pre&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Blockquote
+                    &lt;br /&gt;
+                    &lt;span class=&quot;br-typography-sample-size&quot;&gt;&lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class=&quot;br-typography-sample-content&quot;&gt;
+                        &lt;blockquote&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/blockquote&gt;
+                    &lt;/div&gt;
+                    &lt;pre&gt;&amp;lt;blockquote&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&amp;lt;/blockquote&amp;gt;&lt;/pre&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">- var shortContent = 'Lorem ipsum dolor sit amet';
 - var longContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '.repeat(5).trim()
 - var samples = [];
 - samples.push({name: 'Content heading 1', code: '&lt;h1&gt;' + shortContent + '&lt;/h1&gt;'})
@@ -329,21 +287,45 @@
 - samples.push({name: 'Content heading text', code: '&lt;p&gt;' + longContent + '&lt;/p&gt;'})
 - samples.push({name: 'Blockquote', code: '&lt;blockquote&gt;' + longContent + '&lt;/blockquote&gt;'})
 
-table
-    each sample in samples
-        tr
-            td
-                = sample.name
-                br
-                span.br-typography-sample-size= sample.size
-            td
-                .br-typography-sample-content!= sample.code
-                pre= sample.code
+.c-content
+    .u-spacer-bottom-l.u-spacer-top.l
+        table
+            each sample in samples
+                tr
+                    td
+                        = sample.name
+                        br
+                        span.br-typography-sample-size= sample.size
+                    td
+                        .br-typography-sample-content!= sample.code
+                        pre= sample.code
 </pre>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="br-pagetree-fixed-wrapper">
+        <div class="br-prototype-nav" id="__prototype-nav" aria-hidden="true">
+            <div class="br-prototype-nav-inner">
+                <h4 class="br-prototype-nav-main-heading">Prototype navigation</h4>
+                <p class="br-prototype-nav-text">Press Ctrl + M to toggle this navigation or click <a class="br-prototype-close-nav" href="#">here</a>.</p>
+                <div id="br-page-tree">
+                    <ul class="br-bordered-list">
+                        <li>
+                            <a href="/styleguide">Styleguide</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/404.html">404</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/index.html">index</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/page-index.html">page-index</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

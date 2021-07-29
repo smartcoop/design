@@ -9,6 +9,7 @@
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/prism-styleguide.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
     <style>
         .br-index {
@@ -18,7 +19,25 @@
 </head>
 
 <body>
-    <div class="br-prototype-wrapper">
+    <div class="br-index">
+        <p>Prototype pages:</p>
+        <ul class="br-bordered-list">
+            <li>
+                <a href="/styleguide">Styleguide</a>
+            </li>
+            <li class="br-tree-dir">
+                <a href="/404.html">404</a>
+            </li>
+            <li class="br-tree-dir">
+                <a class="br-bordered-list__link--active" href="/index.html">index</a>
+            </li>
+            <li class="br-tree-dir">
+                <a class="br-bordered-list__link--active" href="/page-index.html">page-index</a>
+            </li>
+        </ul>
+        <p>Press Ctrl + M to toggle the listing of pages on any page.</p>
+    </div>
+    <div class="br-pagetree-fixed-wrapper">
         <div class="br-prototype-nav" id="__prototype-nav" aria-hidden="true">
             <div class="br-prototype-nav-inner">
                 <h4 class="br-prototype-nav-main-heading">Prototype navigation</h4>
@@ -27,30 +46,6 @@
                     <ul class="br-bordered-list">
                         <li>
                             <a href="/styleguide">Styleguide</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">examples</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/data-example.html">data-example</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/image-example.html">image-example</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/markdown-example.html">markdown-example</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">page-states-example</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/page-states-example/form-example.html">form-example
-                                        <div class="br-tree-dir-state-count">1</div>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="br-tree-dir">
                             <a href="/404.html">404</a>
@@ -63,50 +58,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-        <div class="br-prototype-content">
-            <div class="br-index">
-                <p>Prototype pages:</p>
-                <ul class="br-bordered-list">
-                    <li>
-                        <a href="/styleguide">Styleguide</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <h4 class="br-tree-dir-title">examples</h4>
-                        <ul>
-                            <li class="br-tree-dir">
-                                <a href="/examples/data-example.html">data-example</a>
-                            </li>
-                            <li class="br-tree-dir">
-                                <a href="/examples/image-example.html">image-example</a>
-                            </li>
-                            <li class="br-tree-dir">
-                                <a href="/examples/markdown-example.html">markdown-example</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="br-tree-dir">
-                        <h4 class="br-tree-dir-title">page-states-example</h4>
-                        <ul>
-                            <li class="br-tree-dir">
-                                <a href="/page-states-example/form-example.html">form-example
-                                    <div class="br-tree-dir-state-count">1</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a href="/404.html">404</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a class="br-bordered-list__link--active" href="/index.html">index</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a class="br-bordered-list__link--active" href="/page-index.html">page-index</a>
-                    </li>
-                </ul>
-                <p>Press Ctrl + M to toggle the listing of pages on any page.</p>
             </div>
         </div>
     </div>

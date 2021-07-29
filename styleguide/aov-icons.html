@@ -9,11 +9,1137 @@
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/prism-styleguide.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
 </head>
 
 <body>
-    <div class="br-prototype-wrapper">
+    <div class="br-styleguide-container">
+        <div class="br-styleguide-navigation-wrapper-ie">
+            <div class="br-styleguide-header">
+                <a href="/styleguide">
+                    <img class="br-styleguide-logo" src="/images/logo.svg" alt="SmartCoop" width="160">
+                </a>
+            </div>
+            <div class="br-styleguide-search">
+                <input class="c-input" id="styleguideSearch" type="search" placeholder="Search components...">
+            </div>
+            <div class="br-styleguide-navigation-holder">
+                <div class="br-styleguide-nav-holder">
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Style guide</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/introduction.html">Introduction</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Basics</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/aov-colors.html"> Colors</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/aov-icons.html"> Icons</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/aov-typography.html"> Typography</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Components</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-avatar.html"> Avatar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-button-skins.html"> Buttons (skins)</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-button-types.html"> Buttons (types)</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-inputs-text.html"> Inputs (text)</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-inputs-toggles.html"> Inputs (toggles)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Development documentation</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/browser-support.html">Browser support</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/changelog.html">Changelog</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/css-architecture.html">CSS Architecture</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/css-component-structure.html">CSS component structure</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="br-styleguide-content">
+            <div class="br-styleguide-content-inner">
+                <div class="br-componentgroup-header-wrapper">
+                    <h1 class="br-componentgroup-header c-h2">Icons</h1>
+                </div>
+                <div class="br-content c-content">
+                </div>
+                <div class="br-sample" id="component-01-svg-icons">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">SVG icons</h3>
+                        <a class="br-sample-header-link" href="#component-01-svg-icons">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content">
+                        <p>The SVG icon system is based on directly embedding SVG files into the markup. Within Bedrock, we use Pug to render these SVG&#39;s instead of having to inline them. You can either inline them, or build a solution that does it for you.</p>
+                        <p>The SVG content should be contained in a <code>.o-svg-icon</code> div that also get an icon-specific class based on its
+                            name (for example: <code>.o-svg-icon.o-svg-icon-add</code>. This allows us to style and colorize specific icons.</p>
+                    </div>
+                    <div class="br-sample-content">
+                        <div class="c-styleguide-svg-icons">
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--add  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>add</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--archive  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 5C2 3.89543 2.89543 3 4 3H20C21.1046 3 22 3.89543 22 5V7C22 7.74708 21.5904 8.39848 20.9835 8.74188C20.9944 8.82638 21 8.91253 21 9V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V9C3 8.91253 3.00561 8.82638 3.0165 8.74188C2.40961 8.39848 2 7.74707 2 7V5ZM20 7V5H4V7H20ZM5 9V19H19V9H5ZM8 12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13H9C8.44772 13 8 12.5523 8 12Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>archive</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--arrow-down  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4C12.5523 4 13 4.44772 13 5V16.5858L17.2929 12.2929C17.6834 11.9024 18.3166 11.9024 18.7071 12.2929C19.0976 12.6834 19.0976 13.3166 18.7071 13.7071L12.7071 19.7071C12.3166 20.0976 11.6834 20.0976 11.2929 19.7071L5.29289 13.7071C4.90237 13.3166 4.90237 12.6834 5.29289 12.2929C5.68342 11.9024 6.31658 11.9024 6.70711 12.2929L11 16.5858V5C11 4.44772 11.4477 4 12 4Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>arrow-down</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--arrow-left  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L7.41421 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H7.41421L11.7071 17.2929C12.0976 17.6834 12.0976 18.3166 11.7071 18.7071C11.3166 19.0976 10.6834 19.0976 10.2929 18.7071L4.29289 12.7071C4.10536 12.5196 4 12.2652 4 12C4 11.7348 4.10536 11.4804 4.29289 11.2929L10.2929 5.29289C10.6834 4.90237 11.3166 4.90237 11.7071 5.29289Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>arrow-left</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--arrow-right  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>arrow-right</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--arrow-up  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4C12.2652 4 12.5196 4.10536 12.7071 4.29289L18.7071 10.2929C19.0976 10.6834 19.0976 11.3166 18.7071 11.7071C18.3166 12.0976 17.6834 12.0976 17.2929 11.7071L13 7.41421L13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19L11 7.41421L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071C4.90237 11.3166 4.90237 10.6834 5.29289 10.2929L11.2929 4.29289C11.4804 4.10536 11.7348 4 12 4Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>arrow-up</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--attachment  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.463 5.57572C18.7758 4.82596 17.5346 4.77976 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.69289C16.3836 7.30237 17.0168 7.30237 17.4073 7.69289C17.7978 8.08342 17.7978 8.71658 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.19289C16.8606 2.62536 19.408 2.57435 20.9225 4.2082C22.4748 5.77661 22.5205 8.31156 20.8931 9.82132L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.39289C12.0836 3.00237 12.7168 3.00237 13.1073 3.39289C13.4978 3.78342 13.4978 4.41658 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.39289C19.5033 8.38265 19.5138 8.37263 19.5245 8.36284C20.2742 7.67556 20.3204 6.43445 19.4931 5.60711C19.4828 5.59686 19.4728 5.5864 19.463 5.57572Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>attachment</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--bar-chart-alt  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4ZM17 8C17.5523 8 18 8.44772 18 9V19C18 19.5523 17.5523 20 17 20C16.4477 20 16 19.5523 16 19V9C16 8.44772 16.4477 8 17 8ZM7 12C7.55228 12 8 12.4477 8 13V19C8 19.5523 7.55228 20 7 20C6.44772 20 6 19.5523 6 19V13C6 12.4477 6.44772 12 7 12Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>bar-chart-alt</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--bar-chart  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5ZM19 5H5V19H19V5ZM12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7ZM16 9C16.5523 9 17 9.44772 17 10V16C17 16.5523 16.5523 17 16 17C15.4477 17 15 16.5523 15 16V10C15 9.44772 15.4477 9 16 9ZM8 11C8.55228 11 9 11.4477 9 12V16C9 16.5523 8.55228 17 8 17C7.44772 17 7 16.5523 7 16V12C7 11.4477 7.44772 11 8 11Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>bar-chart</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--bills  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 4.89543 2.89543 4 4 4H18C19.1046 4 20 4.89543 20 6V8C21.1046 8 22 8.89543 22 10V18C22 19.1046 21.1046 20 20 20H6C4.89543 20 4 19.1046 4 18V16C2.89543 16 2 15.1046 2 14V6ZM18 16C19.1046 16 20 15.1046 20 14V18H6V16H18ZM18 6L4 6V14H18V6ZM10 10C10 9.44772 10.4477 9 11 9C11.5523 9 12 9.44772 12 10C12 10.5523 11.5523 11 11 11C10.4477 11 10 10.5523 10 10ZM11 7C9.34315 7 8 8.34315 8 10C8 11.6569 9.34315 13 11 13C12.6569 13 14 11.6569 14 10C14 8.34315 12.6569 7 11 7Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>bills</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--calendar  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 2C9.55228 2 10 2.44772 10 3V4H14V3C14 2.44772 14.4477 2 15 2C15.5523 2 16 2.44772 16 3V4H19C20.1046 4 21 4.89543 21 6V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V6C3 4.89543 3.89543 4 5 4H8V3C8 2.44772 8.44772 2 9 2ZM8 6H5V9H19V6H16V7C16 7.55228 15.5523 8 15 8C14.4477 8 14 7.55228 14 7V6H10V7C10 7.55228 9.55228 8 9 8C8.44772 8 8 7.55228 8 7V6ZM19 11H5V19H19V11Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>calendar</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--call  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.83319 4H8.32313L9.77034 7.61803L7.44546 9.16795C7.16727 9.35342 7.00016 9.66565 7.00016 10C7.0027 10.0936 7.00017 10.001 7.00017 10.001L7.00017 10.002L7.00017 10.0043L7.0002 10.0093L7.00035 10.0217C7.0005 10.0309 7.00075 10.0421 7.00117 10.0552C7.00202 10.0814 7.00355 10.1153 7.00629 10.1564C7.01176 10.2385 7.02208 10.3494 7.04147 10.4852C7.08022 10.7565 7.15544 11.1281 7.30148 11.5662C7.59472 12.4459 8.1709 13.5849 9.29306 14.7071C10.4152 15.8293 11.5542 16.4054 12.4339 16.6987C12.8721 16.8447 13.2437 16.9199 13.515 16.9587C13.6507 16.9781 13.7617 16.9884 13.8438 16.9939C13.8849 16.9966 13.9188 16.9981 13.945 16.999C13.9581 16.9994 13.9693 16.9997 13.9785 16.9998L13.9908 17L13.9959 17L13.9981 17L13.9992 17C13.9992 17 14.1108 16.9939 14.0002 17C14.3789 17 14.7252 16.786 14.8946 16.4472L15.5643 15.1078L20.0002 15.8471V20.167C17.8891 20.4723 12.1876 20.7732 7.70727 16.2929C3.22697 11.8126 3.52788 6.1111 3.83319 4ZM9.07381 10.4861L10.8797 9.28213C11.6667 8.75751 11.9785 7.75338 11.6273 6.87525L10.1801 3.25722C9.87636 2.4979 9.14094 2 8.32313 2H3.78094C2.87243 2 2.01725 2.63116 1.86811 3.6169C1.5288 5.8595 1.06695 12.481 6.29306 17.7071C11.5192 22.9332 18.1407 22.4714 20.3833 22.1321C21.369 21.9829 22.0002 21.1277 22.0002 20.2192V15.8471C22.0002 14.8694 21.2933 14.0351 20.329 13.8743L15.8931 13.135C15.027 12.9907 14.1681 13.4281 13.7754 14.2134L13.4289 14.9064C13.32 14.8796 13.1985 14.8453 13.0664 14.8013C12.4461 14.5946 11.5851 14.1707 10.7073 13.2929C9.82943 12.4151 9.40561 11.5541 9.19885 10.9338C9.14298 10.7662 9.10275 10.6154 9.07381 10.4861Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>call</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--caret-down  ">
+                                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>caret-down</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--caret-left-right  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 12L14 7.5L14 16.5L19 12Z" fill="#595959" />
+                                        <path d="M5 12L10 16.5V7.5L5 12Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>caret-left-right</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--caret-left  ">
+                                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 17L2 12L8 7L8 17Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>caret-left</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--caret-right  ">
+                                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 7L10 12L4 17L4 7Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>caret-right</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--caret-up-down  ">
+                                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 5L1.5 10L10.5 10L6 5Z" fill="#595959" />
+                                        <path d="M6 19L10.5 14H1.5L6 19Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>caret-up-down</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--caret-up  ">
+                                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 14L6 8L11 14L1 14Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>caret-up</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--check  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.6644 5.25259C21.0772 5.61951 21.1143 6.25158 20.7474 6.66437L10.0808 18.6644C9.89099 18.8779 9.61898 19 9.33334 19C9.04771 19 8.7757 18.8779 8.58593 18.6644L3.2526 12.6644C2.88568 12.2516 2.92286 11.6195 3.33565 11.2526C3.74843 10.8857 4.3805 10.9229 4.74742 11.3356L9.33334 16.4948L19.2526 5.33564C19.6195 4.92286 20.2516 4.88568 20.6644 5.25259Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>check</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--chevron-down  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>chevron-down</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--chevron-left  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>chevron-left</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--chevron-right  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>chevron-right</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--chevron-up  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L18.7071 13.2929C19.0976 13.6834 19.0976 14.3166 18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071L12 9.41421L6.70711 14.7071C6.31658 15.0976 5.68342 15.0976 5.29289 14.7071C4.90237 14.3166 4.90237 13.6834 5.29289 13.2929L11.2929 7.29289Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>chevron-up</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--circle-add  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.99999C7.58172 3.99999 4 7.58171 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58171 16.4183 3.99999 12 3.99999ZM2 12C2 6.47714 6.47715 1.99999 12 1.99999C17.5228 1.99999 22 6.47714 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 6.99999C12.5523 6.99999 13 7.44771 13 7.99999V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11H11V7.99999C11 7.44771 11.4477 6.99999 12 6.99999Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>circle-add</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--circle-information  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#595959" />
+                                        <path d="M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z" fill="#595959" />
+                                        <path d="M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>circle-information</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--circle-percent  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12ZM12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM15.7071 9.70711C16.0976 9.31658 16.0976 8.68342 15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289L8.29289 14.2929C7.90237 14.6834 7.90237 15.3166 8.29289 15.7071C8.68342 16.0976 9.31658 16.0976 9.70711 15.7071L15.7071 9.70711ZM14.5 16C15.3284 16 16 15.3284 16 14.5C16 13.6716 15.3284 13 14.5 13C13.6716 13 13 13.6716 13 14.5C13 15.3284 13.6716 16 14.5 16ZM11 9.5C11 10.3284 10.3284 11 9.5 11C8.67157 11 8 10.3284 8 9.5C8 8.67157 8.67157 8 9.5 8C10.3284 8 11 8.67157 11 9.5Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>circle-percent</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--clipboard-list  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 11.5C9.55228 11.5 10 11.0523 10 10.5C10 9.94772 9.55228 9.5 9 9.5C8.44772 9.5 8 9.94772 8 10.5C8 11.0523 8.44772 11.5 9 11.5Z" fill="#595959" />
+                                        <path d="M11 10.5C11 9.94772 11.4477 9.5 12 9.5H15C15.5523 9.5 16 9.94772 16 10.5C16 11.0523 15.5523 11.5 15 11.5H12C11.4477 11.5 11 11.0523 11 10.5Z" fill="#595959" />
+                                        <path d="M12 12.5C11.4477 12.5 11 12.9477 11 13.5C11 14.0523 11.4477 14.5 12 14.5H15C15.5523 14.5 16 14.0523 16 13.5C16 12.9477 15.5523 12.5 15 12.5H12Z" fill="#595959" />
+                                        <path d="M12 15.5C11.4477 15.5 11 15.9477 11 16.5C11 17.0523 11.4477 17.5 12 17.5H15C15.5523 17.5 16 17.0523 16 16.5C16 15.9477 15.5523 15.5 15 15.5H12Z" fill="#595959" />
+                                        <path d="M10 13.5C10 14.0523 9.55228 14.5 9 14.5C8.44772 14.5 8 14.0523 8 13.5C8 12.9477 8.44772 12.5 9 12.5C9.55228 12.5 10 12.9477 10 13.5Z" fill="#595959" />
+                                        <path d="M9 17.5C9.55228 17.5 10 17.0523 10 16.5C10 15.9477 9.55228 15.5 9 15.5C8.44772 15.5 8 15.9477 8 16.5C8 17.0523 8.44772 17.5 9 17.5Z" fill="#595959" />
+                                        <path d="M9 2C8.44772 2 8 2.44772 8 3H6C4.89543 3 4 3.89543 4 5V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V5C20 3.89543 19.1046 3 18 3H16C16 2.44772 15.5523 2 15 2H9ZM16 5H18V20H6V5H8V6C8 6.55228 8.44772 7 9 7H15C15.5523 7 16 6.55228 16 6V5ZM10 5V4H14V5H10Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>clipboard-list</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--clock  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 6C12.5523 6 13 6.44772 13 7V11.5858L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L11.2929 12.7071C11.1054 12.5196 11 12.2652 11 12V7C11 6.44772 11.4477 6 12 6Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>clock</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--close  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>close</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--contact-book  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 4C4 2.89543 4.89543 2 6 2H20C21.1046 2 22 2.89543 22 4V20C22 21.1046 21.1046 22 20 22H6C4.89543 22 4 21.1046 4 20V19H3C2.44772 19 2 18.5523 2 18C2 17.4477 2.44772 17 3 17H4V15H3C2.44772 15 2 14.5523 2 14C2 13.4477 2.44772 13 3 13H4V11H3C2.44772 11 2 10.5523 2 10C2 9.44772 2.44772 9 3 9H4V7H3C2.44772 7 2 6.55228 2 6C2 5.44772 2.44772 5 3 5H4V4ZM6 20H20V4L6 4V20ZM13 14C11.3431 14 10 15.3431 10 17C10 17.5523 9.55228 18 9 18C8.44772 18 8 17.5523 8 17C8 14.9347 9.25218 13.1619 11.0388 12.3993C10.1102 11.77 9.5 10.7062 9.5 9.5C9.5 7.567 11.067 6 13 6C14.933 6 16.5 7.567 16.5 9.5C16.5 10.7062 15.8898 11.77 14.9612 12.3993C16.7478 13.1619 18 14.9347 18 17C18 17.5523 17.5523 18 17 18C16.4477 18 16 17.5523 16 17C16 15.3431 14.6569 14 13 14ZM11.5 9.5C11.5 8.67157 12.1716 8 13 8C13.8284 8 14.5 8.67157 14.5 9.5C14.5 10.3284 13.8284 11 13 11C12.1716 11 11.5 10.3284 11.5 9.5Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>contact-book</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--delete  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 4C7 2.89543 7.89543 2 9 2H15C16.1046 2 17 2.89543 17 4V6H18.9897C18.9959 5.99994 19.0021 5.99994 19.0083 6H21C21.5523 6 22 6.44772 22 7C22 7.55228 21.5523 8 21 8H19.9311L19.0638 20.1425C18.989 21.1891 18.1182 22 17.0689 22H6.93112C5.88184 22 5.01096 21.1891 4.9362 20.1425L4.06888 8H3C2.44772 8 2 7.55228 2 7C2 6.44772 2.44772 6 3 6H4.99174C4.99795 5.99994 5.00414 5.99994 5.01032 6H7V4ZM9 6H15V4H9V6ZM6.07398 8L6.93112 20H17.0689L17.926 8H6.07398ZM10 10C10.5523 10 11 10.4477 11 11V17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17V11C9 10.4477 9.44772 10 10 10ZM14 10C14.5523 10 15 10.4477 15 11V17C15 17.5523 14.5523 18 14 18C13.4477 18 13 17.5523 13 17V11C13 10.4477 13.4477 10 14 10Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>delete</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--document-empty  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 4C4 2.89543 4.89543 2 6 2H14C14.2652 2 14.5196 2.10536 14.7071 2.29289L19.7071 7.29289C19.8946 7.48043 20 7.73478 20 8V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4ZM17.5858 8L14 4.41421V8H17.5858ZM12 4L6 4V20H18V10H13C12.4477 10 12 9.55228 12 9V4Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>document-empty</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--document-missing  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8C20 7.73478 19.8946 7.48043 19.7071 7.29289L14.7071 2.29289C14.5196 2.10536 14.2652 2 14 2H6ZM12 4L6 4V20H18V10H13C12.4477 10 12 9.55228 12 9V4ZM17.5858 8H14V4.41421L17.5858 8ZM11 18C11 17.4477 11.4477 17 12 17C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18ZM10.9864 13.2579C11.0622 12.803 11.4897 12.473 12.0888 12.5015C12.3679 12.5148 12.5963 12.6129 12.7434 12.7503C12.8736 12.872 13 13.078 13 13.4572C13 13.6952 12.9558 13.8322 12.918 13.9077C12.8824 13.979 12.8344 14.0324 12.7635 14.0797C12.595 14.192 12.2841 14.2753 11.8182 14.2753C11.2659 14.2753 10.8182 14.7231 10.8182 15.2753C10.8182 15.8276 11.2659 16.2753 11.8182 16.2753C12.4431 16.2753 13.2231 16.1769 13.8729 15.7438C14.5942 15.2629 15 14.4757 15 13.4572C15 12.5636 14.6718 11.815 14.1089 11.289C13.5627 10.7787 12.8593 10.5359 12.1839 10.5038C10.8739 10.4414 9.3014 11.2022 9.01358 12.9291C8.92278 13.4739 9.2908 13.9891 9.83557 14.0799C10.3803 14.1707 10.8956 13.8027 10.9864 13.2579Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>document-missing</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--document  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 2C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8C20 7.73478 19.8946 7.48043 19.7071 7.29289L14.7071 2.29289C14.5196 2.10536 14.2652 2 14 2H6ZM12 4V9C12 9.55228 12.4477 10 13 10H18V20H6V4L12 4ZM17.5858 8H14V4.41421L17.5858 8Z" fill="#595959" />
+                                        <path d="M8 13C8 13.5523 8.44772 14 9 14H15C15.5523 14 16 13.5523 16 13C16 12.4477 15.5523 12 15 12H9C8.44772 12 8 12.4477 8 13Z" fill="#595959" />
+                                        <path d="M8 17C8 16.4477 8.44772 16 9 16H15C15.5523 16 16 16.4477 16 17C16 17.5523 15.5523 18 15 18H9C8.44772 18 8 17.5523 8 17Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>document</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--download  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C12.5523 2 13 2.44772 13 3V13.5858L15.2929 11.2929C15.6834 10.9024 16.3166 10.9024 16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929C7.68342 10.9024 8.31658 10.9024 8.70711 11.2929L11 13.5858V3C11 2.44772 11.4477 2 12 2ZM5 17C5.55228 17 6 17.4477 6 18V20H18V18C18 17.4477 18.4477 17 19 17C19.5523 17 20 17.4477 20 18V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V18C4 17.4477 4.44772 17 5 17Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>download</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--edit-alt  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.2929 3.29289C16.6834 2.90237 17.3166 2.90237 17.7071 3.29289L20.7071 6.29289C21.0976 6.68342 21.0976 7.31658 20.7071 7.70711L11.7071 16.7071C11.5196 16.8946 11.2652 17 11 17H8C7.44772 17 7 16.5523 7 16V13C7 12.7348 7.10536 12.4804 7.29289 12.2929L16.2929 3.29289ZM9 13.4142V15H10.5858L18.5858 7L17 5.41421L9 13.4142ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>edit-alt</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--edit  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>edit</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--email  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6ZM5.51859 6L12 11.6712L18.4814 6H5.51859ZM20 7.32877L12.6585 13.7526C12.2815 14.0825 11.7185 14.0825 11.3415 13.7526L4 7.32877V18H20V7.32877Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>email</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--favorite  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2.5C12.3788 2.5 12.7251 2.714 12.8945 3.05279L15.4734 8.2106L21.144 9.03541C21.5206 9.0902 21.8335 9.35402 21.9511 9.71599C22.0687 10.078 21.9706 10.4753 21.6981 10.741L17.571 14.7649L18.4994 20.4385C18.5608 20.8135 18.4043 21.1908 18.0957 21.4124C17.787 21.6339 17.3794 21.6614 17.0438 21.4834L12 18.8071L6.95624 21.4834C6.62062 21.6614 6.21306 21.6339 5.9044 21.4124C5.59573 21.1908 5.4393 20.8135 5.50065 20.4385L6.42906 14.7649L2.30193 10.741C2.02942 10.4753 1.93136 10.078 2.04897 9.71599C2.16658 9.35402 2.47946 9.0902 2.85609 9.03541L8.5267 8.2106L11.1056 3.05279C11.275 2.714 11.6213 2.5 12 2.5ZM12 5.73607L10.082 9.57221C9.93561 9.86491 9.65531 10.0675 9.33147 10.1146L5.14842 10.723L8.19813 13.6965C8.43182 13.9243 8.53961 14.2519 8.4869 14.574L7.80004 18.7715L11.5313 16.7917C11.8244 16.6361 12.1756 16.6361 12.4687 16.7917L16.2 18.7715L15.5132 14.574C15.4604 14.2519 15.5682 13.9243 15.8019 13.6965L18.8516 10.723L14.6686 10.1146C14.3448 10.0675 14.0645 9.86491 13.9181 9.57221L12 5.73607Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>favorite</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--filter  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 5C8.44772 5 8 5.44772 8 6C8 6.55228 8.44772 7 9 7C9.55228 7 10 6.55228 10 6C10 5.44772 9.55228 5 9 5ZM6.17071 5C6.58254 3.83481 7.69378 3 9 3C10.3062 3 11.4175 3.83481 11.8293 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H11.8293C11.4175 8.16519 10.3062 9 9 9C7.69378 9 6.58254 8.16519 6.17071 7H5C4.44772 7 4 6.55228 4 6C4 5.44772 4.44772 5 5 5H6.17071ZM15 11C14.4477 11 14 11.4477 14 12C14 12.5523 14.4477 13 15 13C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11ZM12.1707 11C12.5825 9.83481 13.6938 9 15 9C16.3062 9 17.4175 9.83481 17.8293 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H17.8293C17.4175 14.1652 16.3062 15 15 15C13.6938 15 12.5825 14.1652 12.1707 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H12.1707ZM9 17C8.44772 17 8 17.4477 8 18C8 18.5523 8.44772 19 9 19C9.55228 19 10 18.5523 10 18C10 17.4477 9.55228 17 9 17ZM6.17071 17C6.58254 15.8348 7.69378 15 9 15C10.3062 15 11.4175 15.8348 11.8293 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H11.8293C11.4175 20.1652 10.3062 21 9 21C7.69378 21 6.58254 20.1652 6.17071 19H5C4.44772 19 4 18.5523 4 18C4 17.4477 4.44772 17 5 17H6.17071Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>filter</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--home  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.3356 2.25259C11.7145 1.9158 12.2855 1.9158 12.6644 2.25259L21.6644 10.2526C22.0772 10.6195 22.1143 11.2516 21.7474 11.6644C21.3805 12.0771 20.7484 12.1143 20.3356 11.7474L20 11.4491V19C20 20.1046 19.1046 21 18 21H6.00001C4.89544 21 4.00001 20.1046 4.00001 19V11.4491L3.66437 11.7474C3.25159 12.1143 2.61952 12.0771 2.2526 11.6644C1.88568 11.2516 1.92286 10.6195 2.33565 10.2526L11.3356 2.25259ZM6.00001 9.67129V19H9.00001V14C9.00001 13.4477 9.44773 13 10 13H14C14.5523 13 15 13.4477 15 14V19H18V9.67129L12 4.33795L6.00001 9.67129ZM13 19V15H11V19H13Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>home</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--location  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C7.6 2 4 5.6 4 10C4 15.4 11 21.5 11.3 21.8C11.5 21.9 11.8 22 12 22C12.2 22 12.5 21.9 12.7 21.8C13 21.5 20 15.4 20 10C20 5.6 16.4 2 12 2ZM12 19.7C9.9 17.7 6 13.4 6 10C6 6.7 8.7 4 12 4C15.3 4 18 6.7 18 10C18 13.3 14.1 17.7 12 19.7ZM12 6C9.8 6 8 7.8 8 10C8 12.2 9.8 14 12 14C14.2 14 16 12.2 16 10C16 7.8 14.2 6 12 6ZM12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>location</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--menu  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>menu</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--message  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V17C22 18.1046 21.1046 19 20 19H15.4142L12.7071 21.7071C12.3166 22.0976 11.6834 22.0976 11.2929 21.7071L8.58579 19H4C2.89543 19 2 18.1046 2 17V6ZM20 6H4V17H9C9.26522 17 9.51957 17.1054 9.70711 17.2929L12 19.5858L14.2929 17.2929C14.4804 17.1054 14.7348 17 15 17H20V6ZM6 9.5C6 8.94772 6.44772 8.5 7 8.5H17C17.5523 8.5 18 8.94772 18 9.5C18 10.0523 17.5523 10.5 17 10.5H7C6.44772 10.5 6 10.0523 6 9.5ZM6 13.5C6 12.9477 6.44772 12.5 7 12.5H13C13.5523 12.5 14 12.9477 14 13.5C14 14.0523 13.5523 14.5 13 14.5H7C6.44772 14.5 6 14.0523 6 13.5Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>message</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--options-horizontal  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="#595959" />
+                                        <path d="M6 14C7.10457 14 8 13.1046 8 12C8 10.8954 7.10457 10 6 10C4.89543 10 4 10.8954 4 12C4 13.1046 4.89543 14 6 14Z" fill="#595959" />
+                                        <path d="M18 14C19.1046 14 20 13.1046 20 12C20 10.8954 19.1046 10 18 10C16.8954 10 16 10.8954 16 12C16 13.1046 16.8954 14 18 14Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>options-horizontal</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--package  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.47 2.152C11.7943 1.94933 12.2057 1.94933 12.53 2.152L20.5153 7.14284C20.5642 7.17231 20.6104 7.20584 20.6534 7.24298C20.6897 7.27431 20.7235 7.30807 20.7547 7.34391C20.9075 7.51952 21 7.74896 21 8V16C21 16.3448 20.8224 16.6653 20.53 16.848L12.543 21.8399C12.3867 21.9412 12.2002 22 12 22C11.7998 22 11.6133 21.9412 11.457 21.8399L3.47 16.848C3.17762 16.6653 3 16.3448 3 16V8C3 7.74896 3.09251 7.51952 3.24529 7.34391C3.27645 7.30807 3.31027 7.27431 3.34658 7.24298C3.38957 7.20584 3.43576 7.1723 3.48467 7.14283L7.44945 4.66484C7.46251 4.65625 7.47574 4.64798 7.48914 4.64004L11.47 2.152ZM7.99994 6.67929L5.8868 8L12 11.8208L14.1131 10.5L7.99994 6.67929ZM15.9999 9.32079L9.88673 5.50004L12 4.17925L18.1132 8L15.9999 9.32079ZM16.5146 11.3577C16.5253 11.3512 16.536 11.3445 16.5465 11.3377L19 9.80425V15.4458L13 19.1958V13.5542L16.5146 11.3577ZM5 9.80425L11 13.5542V19.1958L5 15.4458V9.80425Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>package</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--pen  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.7071 2.29289C17.3166 1.90237 16.6834 1.90237 16.2929 2.29289L14 4.58579L12.7071 3.29289C12.3166 2.90237 11.6834 2.90237 11.2929 3.29289L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L12 5.41421L12.5858 6L10.2929 8.29289L3.29289 15.2929C3.10536 15.4804 3 15.7348 3 16V20C3 20.5523 3.44772 21 4 21H8C8.26522 21 8.51957 20.8946 8.70711 20.7071L15.7071 13.7071L21.7071 7.70711C22.0976 7.31658 22.0976 6.68342 21.7071 6.29289L17.7071 2.29289ZM14.7071 6.70711L17 4.41421L19.5858 7L15 11.5858L12.4142 9L14.7071 6.70711ZM5 16.4142L11 10.4142L13.5858 13L7.58579 19H5V16.4142Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>pen</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--percent  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="#595959" />
+                                        <path d="M17 19C18.1046 19 19 18.1046 19 17C19 15.8954 18.1046 15 17 15C15.8954 15 15 15.8954 15 17C15 18.1046 15.8954 19 17 19Z" fill="#595959" />
+                                        <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>percent</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--remove  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>remove</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--save  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 5C3 3.89543 3.89543 3 5 3H9H15H16.5858C17.1162 3 17.6249 3.21071 18 3.58579L20.7071 6.29289C20.8946 6.48043 21 6.73478 21 7V19C21 20.1046 20.1046 21 19 21H15H9H5C3.89543 21 3 20.1046 3 19V5ZM9 19H15V13H9V19ZM17 19H19V7.41421L17 5.41421V7C17 8.10457 16.1046 9 15 9H9C7.89543 9 7 8.10457 7 7V5H5V19H7V13C7 11.8954 7.89543 11 9 11H15C16.1046 11 17 11.8954 17 13V19ZM9 5V7H15V5H9Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>save</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--search  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>search</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--send  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C12.3788 2 12.725 2.214 12.8944 2.55279L21.8944 20.5528C22.067 20.8978 22.0256 21.3113 21.7882 21.6154C21.5508 21.9195 21.1597 22.0599 20.7831 21.9762L12 20.0244L3.21694 21.9762C2.84035 22.0599 2.44921 21.9195 2.2118 21.6154C1.97439 21.3113 1.93306 20.8978 2.10558 20.5528L11.1056 2.55279C11.275 2.214 11.6212 2 12 2ZM13 18.1978L19.166 19.568L13 7.23607V18.1978ZM11 7.23607L4.83402 19.568L11 18.1978V7.23607Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>send</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--settings  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4C11.4477 4 11 4.44772 11 5C11 6.69226 8.95399 7.53974 7.75738 6.34314C7.36686 5.95261 6.73369 5.95261 6.34317 6.34314C5.95265 6.73366 5.95265 7.36683 6.34317 7.75735C7.53982 8.954 6.69223 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13C6.69236 13 7.53964 15.0461 6.34311 16.2426C5.95258 16.6332 5.95258 17.2663 6.34311 17.6569C6.73363 18.0474 7.3668 18.0474 7.75732 17.6569C8.9539 16.4603 11 17.3077 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 17.3077 15.046 16.4602 16.2427 17.6568C16.6332 18.0474 17.2664 18.0474 17.6569 17.6568C18.0474 17.2663 18.0474 16.6332 17.6569 16.2426C16.4603 15.0461 17.3077 13 19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C17.3078 11 16.4601 8.95405 17.6568 7.75737C18.0473 7.36684 18.0473 6.73368 17.6568 6.34315C17.2663 5.95263 16.6331 5.95263 16.2426 6.34315C15.046 7.53979 13 6.69219 13 5C13 4.44772 12.5523 4 12 4ZM9.00816 4.77703C9.12224 3.2243 10.4181 2 12 2C13.5819 2 14.8778 3.2243 14.9918 4.77703C16.1704 3.75977 17.9525 3.8104 19.071 4.92894C20.1896 6.04748 20.2402 7.82955 19.2229 9.00816C20.7757 9.12221 22 10.4181 22 12C22 13.5819 20.7757 14.8778 19.223 14.9918C20.2403 16.1704 20.1896 17.9525 19.0711 19.0711C17.9525 20.1896 16.1705 20.2402 14.9918 19.2229C14.8778 20.7757 13.5819 22 12 22C10.4181 22 9.12221 20.7757 9.00816 19.2229C7.82955 20.2402 6.04745 20.1896 4.92889 19.0711C3.81034 17.9525 3.75972 16.1704 4.77702 14.9918C3.2243 14.8778 2 13.5819 2 12C2 10.4181 3.22433 9.12221 4.77709 9.00816C3.75978 7.82955 3.81041 6.04747 4.92896 4.92892C6.0475 3.81038 7.82955 3.75975 9.00816 4.77703Z" fill="#595959" />
+                                        <path d="M12 10C11.4696 10 10.9609 10.2107 10.5858 10.5858C10.2107 10.9609 10 11.4696 10 12C10 12.5304 10.2107 13.0391 10.5858 13.4142C10.9609 13.7893 11.4696 14 12 14C12.5304 14 13.0391 13.7893 13.4142 13.4142C13.7893 13.0391 14 12.5304 14 12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10ZM9.17157 9.17157C9.92172 8.42143 10.9391 8 12 8C13.0609 8 14.0783 8.42143 14.8284 9.17157C15.5786 9.92172 16 10.9391 16 12C16 13.0609 15.5786 14.0783 14.8284 14.8284C14.0783 15.5786 13.0609 16 12 16C10.9391 16 9.92172 15.5786 9.17157 14.8284C8.42143 14.0783 8 13.0609 8 12C8 10.9391 8.42143 9.92172 9.17157 9.17157Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>settings</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--tag  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 3C2 2.44772 2.44772 2 3 2H11C11.2652 2 11.5196 2.10536 11.7071 2.29289L21.7071 12.2929C22.0976 12.6834 22.0976 13.3166 21.7071 13.7071L13.7071 21.7071C13.3166 22.0976 12.6834 22.0976 12.2929 21.7071L2.29289 11.7071C2.10536 11.5196 2 11.2652 2 11V3ZM4 4V10.5858L13 19.5858L19.5858 13L10.5858 4H4Z" fill="#595959" />
+                                        <path d="M9 7.5C9 8.32843 8.32843 9 7.5 9C6.67157 9 6 8.32843 6 7.5C6 6.67157 6.67157 6 7.5 6C8.32843 6 9 6.67157 9 7.5Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>tag</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--timer  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C9.44772 2 9 2.44772 9 3V3.48341C5.22342 4.73933 2.5 8.30162 2.5 12.5C2.5 17.7467 6.75329 22 12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 10.4453 20.8477 8.54296 19.7389 6.98875C19.9051 6.69714 20 6.35966 20 6C20 5.49278 19.8112 5.02965 19.5 4.67709C19.1335 4.26188 18.5973 4 18 4C17.5834 4 17.1966 4.12737 16.8763 4.34529C16.289 3.99338 15.6606 3.70311 15 3.48341V3C15 2.44772 14.5523 2 14 2H10ZM12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5ZM14 12.5C14 13.6046 13.1046 14.5 12 14.5C10.8954 14.5 10 13.6046 10 12.5C10 11.7597 10.4022 11.1134 11 10.7676L11 8.5C11 7.94771 11.4477 7.5 12 7.5C12.5523 7.5 13 7.94772 13 8.5L13 10.7676C13.5978 11.1134 14 11.7597 14 12.5Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>timer</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--user  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>user</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--users  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 4C7.79086 4 6 5.79086 6 8C6 10.2091 7.79086 12 10 12C12.2091 12 14 10.2091 14 8C14 5.79086 12.2091 4 10 4ZM4 8C4 4.68629 6.68629 2 10 2C13.3137 2 16 4.68629 16 8C16 11.3137 13.3137 14 10 14C6.68629 14 4 11.3137 4 8ZM16.8284 3.75736C17.219 3.36683 17.8521 3.36683 18.2426 3.75736C20.5858 6.1005 20.5858 9.8995 18.2426 12.2426C17.8521 12.6332 17.219 12.6332 16.8284 12.2426C16.4379 11.8521 16.4379 11.219 16.8284 10.8284C18.3905 9.26633 18.3905 6.73367 16.8284 5.17157C16.4379 4.78105 16.4379 4.14788 16.8284 3.75736ZM17.5299 16.7575C17.6638 16.2217 18.2067 15.8959 18.7425 16.0299C20.0705 16.3618 20.911 17.2109 21.3944 18.1778C21.8622 19.1133 22 20.1571 22 21C22 21.5523 21.5523 22 21 22C20.4477 22 20 21.5523 20 21C20 20.3429 19.8878 19.6367 19.6056 19.0722C19.339 18.5391 18.9295 18.1382 18.2575 17.9701C17.7217 17.8362 17.3959 17.2933 17.5299 16.7575ZM6.5 18C5.24054 18 4 19.2135 4 21C4 21.5523 3.55228 22 3 22C2.44772 22 2 21.5523 2 21C2 18.3682 3.89347 16 6.5 16H13.5C16.1065 16 18 18.3682 18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 19.2135 14.7595 18 13.5 18H6.5Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>users</p>
+                            </div>
+                            <div class="c-styleguide-svg-icon">
+                                <div class="o-svg-icon o-svg-icon--warning  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0002 14C11.4479 14 11.0002 13.5523 11.0002 13V10C11.0002 9.44772 11.4479 9 12.0002 9C12.5525 9 13.0002 9.44772 13.0002 10V13C13.0002 13.5523 12.5525 14 12.0002 14Z" fill="#595959" />
+                                        <path d="M10.5002 16.5C10.5002 15.6716 11.1717 15 12.0002 15C12.8286 15 13.5002 15.6716 13.5002 16.5C13.5002 17.3284 12.8286 18 12.0002 18C11.1717 18 10.5002 17.3284 10.5002 16.5Z" fill="#595959" />
+                                        <path d="M10.2303 3.2156C10.9802 1.79093 13.0202 1.79092 13.77 3.2156L22.1136 19.0685C22.8146 20.4003 21.8488 22 20.3438 22H3.65653C2.15151 22 1.18574 20.4003 1.8867 19.0685L10.2303 3.2156ZM20.3438 20L12.0002 4.1471L3.65653 20L20.3438 20Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <p>warning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-styleguide-svg-icons&quot;&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--add  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;add&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--archive  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M2 5C2 3.89543 2.89543 3 4 3H20C21.1046 3 22 3.89543 22 5V7C22 7.74708 21.5904 8.39848 20.9835 8.74188C20.9944 8.82638 21 8.91253 21 9V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V9C3 8.91253 3.00561 8.82638 3.0165 8.74188C2.40961 8.39848 2 7.74707 2 7V5ZM20 7V5H4V7H20ZM5 9V19H19V9H5ZM8 12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13H9C8.44772 13 8 12.5523 8 12Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;archive&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--arrow-down  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 4C12.5523 4 13 4.44772 13 5V16.5858L17.2929 12.2929C17.6834 11.9024 18.3166 11.9024 18.7071 12.2929C19.0976 12.6834 19.0976 13.3166 18.7071 13.7071L12.7071 19.7071C12.3166 20.0976 11.6834 20.0976 11.2929 19.7071L5.29289 13.7071C4.90237 13.3166 4.90237 12.6834 5.29289 12.2929C5.68342 11.9024 6.31658 11.9024 6.70711 12.2929L11 16.5858V5C11 4.44772 11.4477 4 12 4Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;arrow-down&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--arrow-left  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L7.41421 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H7.41421L11.7071 17.2929C12.0976 17.6834 12.0976 18.3166 11.7071 18.7071C11.3166 19.0976 10.6834 19.0976 10.2929 18.7071L4.29289 12.7071C4.10536 12.5196 4 12.2652 4 12C4 11.7348 4.10536 11.4804 4.29289 11.2929L10.2929 5.29289C10.6834 4.90237 11.3166 4.90237 11.7071 5.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;arrow-left&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--arrow-right  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;arrow-right&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--arrow-up  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 4C12.2652 4 12.5196 4.10536 12.7071 4.29289L18.7071 10.2929C19.0976 10.6834 19.0976 11.3166 18.7071 11.7071C18.3166 12.0976 17.6834 12.0976 17.2929 11.7071L13 7.41421L13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19L11 7.41421L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071C4.90237 11.3166 4.90237 10.6834 5.29289 10.2929L11.2929 4.29289C11.4804 4.10536 11.7348 4 12 4Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;arrow-up&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--attachment  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M19.463 5.57572C18.7758 4.82596 17.5346 4.77976 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.69289C16.3836 7.30237 17.0168 7.30237 17.4073 7.69289C17.7978 8.08342 17.7978 8.71658 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.19289C16.8606 2.62536 19.408 2.57435 20.9225 4.2082C22.4748 5.77661 22.5205 8.31156 20.8931 9.82132L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.39289C12.0836 3.00237 12.7168 3.00237 13.1073 3.39289C13.4978 3.78342 13.4978 4.41658 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.39289C19.5033 8.38265 19.5138 8.37263 19.5245 8.36284C20.2742 7.67556 20.3204 6.43445 19.4931 5.60711C19.4828 5.59686 19.4728 5.5864 19.463 5.57572Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;attachment&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--bar-chart-alt  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4ZM17 8C17.5523 8 18 8.44772 18 9V19C18 19.5523 17.5523 20 17 20C16.4477 20 16 19.5523 16 19V9C16 8.44772 16.4477 8 17 8ZM7 12C7.55228 12 8 12.4477 8 13V19C8 19.5523 7.55228 20 7 20C6.44772 20 6 19.5523 6 19V13C6 12.4477 6.44772 12 7 12Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;bar-chart-alt&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--bar-chart  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5ZM19 5H5V19H19V5ZM12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7ZM16 9C16.5523 9 17 9.44772 17 10V16C17 16.5523 16.5523 17 16 17C15.4477 17 15 16.5523 15 16V10C15 9.44772 15.4477 9 16 9ZM8 11C8.55228 11 9 11.4477 9 12V16C9 16.5523 8.55228 17 8 17C7.44772 17 7 16.5523 7 16V12C7 11.4477 7.44772 11 8 11Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;bar-chart&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--bills  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M2 6C2 4.89543 2.89543 4 4 4H18C19.1046 4 20 4.89543 20 6V8C21.1046 8 22 8.89543 22 10V18C22 19.1046 21.1046 20 20 20H6C4.89543 20 4 19.1046 4 18V16C2.89543 16 2 15.1046 2 14V6ZM18 16C19.1046 16 20 15.1046 20 14V18H6V16H18ZM18 6L4 6V14H18V6ZM10 10C10 9.44772 10.4477 9 11 9C11.5523 9 12 9.44772 12 10C12 10.5523 11.5523 11 11 11C10.4477 11 10 10.5523 10 10ZM11 7C9.34315 7 8 8.34315 8 10C8 11.6569 9.34315 13 11 13C12.6569 13 14 11.6569 14 10C14 8.34315 12.6569 7 11 7Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;bills&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--calendar  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M9 2C9.55228 2 10 2.44772 10 3V4H14V3C14 2.44772 14.4477 2 15 2C15.5523 2 16 2.44772 16 3V4H19C20.1046 4 21 4.89543 21 6V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V6C3 4.89543 3.89543 4 5 4H8V3C8 2.44772 8.44772 2 9 2ZM8 6H5V9H19V6H16V7C16 7.55228 15.5523 8 15 8C14.4477 8 14 7.55228 14 7V6H10V7C10 7.55228 9.55228 8 9 8C8.44772 8 8 7.55228 8 7V6ZM19 11H5V19H19V11Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;calendar&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--call  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M3.83319 4H8.32313L9.77034 7.61803L7.44546 9.16795C7.16727 9.35342 7.00016 9.66565 7.00016 10C7.0027 10.0936 7.00017 10.001 7.00017 10.001L7.00017 10.002L7.00017 10.0043L7.0002 10.0093L7.00035 10.0217C7.0005 10.0309 7.00075 10.0421 7.00117 10.0552C7.00202 10.0814 7.00355 10.1153 7.00629 10.1564C7.01176 10.2385 7.02208 10.3494 7.04147 10.4852C7.08022 10.7565 7.15544 11.1281 7.30148 11.5662C7.59472 12.4459 8.1709 13.5849 9.29306 14.7071C10.4152 15.8293 11.5542 16.4054 12.4339 16.6987C12.8721 16.8447 13.2437 16.9199 13.515 16.9587C13.6507 16.9781 13.7617 16.9884 13.8438 16.9939C13.8849 16.9966 13.9188 16.9981 13.945 16.999C13.9581 16.9994 13.9693 16.9997 13.9785 16.9998L13.9908 17L13.9959 17L13.9981 17L13.9992 17C13.9992 17 14.1108 16.9939 14.0002 17C14.3789 17 14.7252 16.786 14.8946 16.4472L15.5643 15.1078L20.0002 15.8471V20.167C17.8891 20.4723 12.1876 20.7732 7.70727 16.2929C3.22697 11.8126 3.52788 6.1111 3.83319 4ZM9.07381 10.4861L10.8797 9.28213C11.6667 8.75751 11.9785 7.75338 11.6273 6.87525L10.1801 3.25722C9.87636 2.4979 9.14094 2 8.32313 2H3.78094C2.87243 2 2.01725 2.63116 1.86811 3.6169C1.5288 5.8595 1.06695 12.481 6.29306 17.7071C11.5192 22.9332 18.1407 22.4714 20.3833 22.1321C21.369 21.9829 22.0002 21.1277 22.0002 20.2192V15.8471C22.0002 14.8694 21.2933 14.0351 20.329 13.8743L15.8931 13.135C15.027 12.9907 14.1681 13.4281 13.7754 14.2134L13.4289 14.9064C13.32 14.8796 13.1985 14.8453 13.0664 14.8013C12.4461 14.5946 11.5851 14.1707 10.7073 13.2929C9.82943 12.4151 9.40561 11.5541 9.19885 10.9338C9.14298 10.7662 9.10275 10.6154 9.07381 10.4861Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;call&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--caret-down  &quot;&gt;
+            &lt;svg width=&quot;12&quot; height=&quot;24&quot; viewBox=&quot;0 0 12 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M11 10L6 16L1 10H11Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;caret-down&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--caret-left-right  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M19 12L14 7.5L14 16.5L19 12Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M5 12L10 16.5V7.5L5 12Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;caret-left-right&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--caret-left  &quot;&gt;
+            &lt;svg width=&quot;12&quot; height=&quot;24&quot; viewBox=&quot;0 0 12 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M8 17L2 12L8 7L8 17Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;caret-left&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--caret-right  &quot;&gt;
+            &lt;svg width=&quot;12&quot; height=&quot;24&quot; viewBox=&quot;0 0 12 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M4 7L10 12L4 17L4 7Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;caret-right&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--caret-up-down  &quot;&gt;
+            &lt;svg width=&quot;12&quot; height=&quot;24&quot; viewBox=&quot;0 0 12 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M6 5L1.5 10L10.5 10L6 5Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M6 19L10.5 14H1.5L6 19Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;caret-up-down&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--caret-up  &quot;&gt;
+            &lt;svg width=&quot;12&quot; height=&quot;24&quot; viewBox=&quot;0 0 12 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M1 14L6 8L11 14L1 14Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;caret-up&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--check  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M20.6644 5.25259C21.0772 5.61951 21.1143 6.25158 20.7474 6.66437L10.0808 18.6644C9.89099 18.8779 9.61898 19 9.33334 19C9.04771 19 8.7757 18.8779 8.58593 18.6644L3.2526 12.6644C2.88568 12.2516 2.92286 11.6195 3.33565 11.2526C3.74843 10.8857 4.3805 10.9229 4.74742 11.3356L9.33334 16.4948L19.2526 5.33564C19.6195 4.92286 20.2516 4.88568 20.6644 5.25259Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;check&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--chevron-down  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;chevron-down&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--chevron-left  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;chevron-left&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--chevron-right  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;chevron-right&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--chevron-up  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L18.7071 13.2929C19.0976 13.6834 19.0976 14.3166 18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071L12 9.41421L6.70711 14.7071C6.31658 15.0976 5.68342 15.0976 5.29289 14.7071C4.90237 14.3166 4.90237 13.6834 5.29289 13.2929L11.2929 7.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;chevron-up&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--circle-add  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 3.99999C7.58172 3.99999 4 7.58171 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58171 16.4183 3.99999 12 3.99999ZM2 12C2 6.47714 6.47715 1.99999 12 1.99999C17.5228 1.99999 22 6.47714 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 6.99999C12.5523 6.99999 13 7.44771 13 7.99999V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11H11V7.99999C11 7.44771 11.4477 6.99999 12 6.99999Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;circle-add&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--circle-information  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;circle-information&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--circle-percent  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12ZM12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM15.7071 9.70711C16.0976 9.31658 16.0976 8.68342 15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289L8.29289 14.2929C7.90237 14.6834 7.90237 15.3166 8.29289 15.7071C8.68342 16.0976 9.31658 16.0976 9.70711 15.7071L15.7071 9.70711ZM14.5 16C15.3284 16 16 15.3284 16 14.5C16 13.6716 15.3284 13 14.5 13C13.6716 13 13 13.6716 13 14.5C13 15.3284 13.6716 16 14.5 16ZM11 9.5C11 10.3284 10.3284 11 9.5 11C8.67157 11 8 10.3284 8 9.5C8 8.67157 8.67157 8 9.5 8C10.3284 8 11 8.67157 11 9.5Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;circle-percent&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--clipboard-list  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M9 11.5C9.55228 11.5 10 11.0523 10 10.5C10 9.94772 9.55228 9.5 9 9.5C8.44772 9.5 8 9.94772 8 10.5C8 11.0523 8.44772 11.5 9 11.5Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M11 10.5C11 9.94772 11.4477 9.5 12 9.5H15C15.5523 9.5 16 9.94772 16 10.5C16 11.0523 15.5523 11.5 15 11.5H12C11.4477 11.5 11 11.0523 11 10.5Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M12 12.5C11.4477 12.5 11 12.9477 11 13.5C11 14.0523 11.4477 14.5 12 14.5H15C15.5523 14.5 16 14.0523 16 13.5C16 12.9477 15.5523 12.5 15 12.5H12Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M12 15.5C11.4477 15.5 11 15.9477 11 16.5C11 17.0523 11.4477 17.5 12 17.5H15C15.5523 17.5 16 17.0523 16 16.5C16 15.9477 15.5523 15.5 15 15.5H12Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M10 13.5C10 14.0523 9.55228 14.5 9 14.5C8.44772 14.5 8 14.0523 8 13.5C8 12.9477 8.44772 12.5 9 12.5C9.55228 12.5 10 12.9477 10 13.5Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M9 17.5C9.55228 17.5 10 17.0523 10 16.5C10 15.9477 9.55228 15.5 9 15.5C8.44772 15.5 8 15.9477 8 16.5C8 17.0523 8.44772 17.5 9 17.5Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M9 2C8.44772 2 8 2.44772 8 3H6C4.89543 3 4 3.89543 4 5V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V5C20 3.89543 19.1046 3 18 3H16C16 2.44772 15.5523 2 15 2H9ZM16 5H18V20H6V5H8V6C8 6.55228 8.44772 7 9 7H15C15.5523 7 16 6.55228 16 6V5ZM10 5V4H14V5H10Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;clipboard-list&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--clock  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 6C12.5523 6 13 6.44772 13 7V11.5858L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L11.2929 12.7071C11.1054 12.5196 11 12.2652 11 12V7C11 6.44772 11.4477 6 12 6Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;clock&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--close  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;close&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--contact-book  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M4 4C4 2.89543 4.89543 2 6 2H20C21.1046 2 22 2.89543 22 4V20C22 21.1046 21.1046 22 20 22H6C4.89543 22 4 21.1046 4 20V19H3C2.44772 19 2 18.5523 2 18C2 17.4477 2.44772 17 3 17H4V15H3C2.44772 15 2 14.5523 2 14C2 13.4477 2.44772 13 3 13H4V11H3C2.44772 11 2 10.5523 2 10C2 9.44772 2.44772 9 3 9H4V7H3C2.44772 7 2 6.55228 2 6C2 5.44772 2.44772 5 3 5H4V4ZM6 20H20V4L6 4V20ZM13 14C11.3431 14 10 15.3431 10 17C10 17.5523 9.55228 18 9 18C8.44772 18 8 17.5523 8 17C8 14.9347 9.25218 13.1619 11.0388 12.3993C10.1102 11.77 9.5 10.7062 9.5 9.5C9.5 7.567 11.067 6 13 6C14.933 6 16.5 7.567 16.5 9.5C16.5 10.7062 15.8898 11.77 14.9612 12.3993C16.7478 13.1619 18 14.9347 18 17C18 17.5523 17.5523 18 17 18C16.4477 18 16 17.5523 16 17C16 15.3431 14.6569 14 13 14ZM11.5 9.5C11.5 8.67157 12.1716 8 13 8C13.8284 8 14.5 8.67157 14.5 9.5C14.5 10.3284 13.8284 11 13 11C12.1716 11 11.5 10.3284 11.5 9.5Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;contact-book&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--delete  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M7 4C7 2.89543 7.89543 2 9 2H15C16.1046 2 17 2.89543 17 4V6H18.9897C18.9959 5.99994 19.0021 5.99994 19.0083 6H21C21.5523 6 22 6.44772 22 7C22 7.55228 21.5523 8 21 8H19.9311L19.0638 20.1425C18.989 21.1891 18.1182 22 17.0689 22H6.93112C5.88184 22 5.01096 21.1891 4.9362 20.1425L4.06888 8H3C2.44772 8 2 7.55228 2 7C2 6.44772 2.44772 6 3 6H4.99174C4.99795 5.99994 5.00414 5.99994 5.01032 6H7V4ZM9 6H15V4H9V6ZM6.07398 8L6.93112 20H17.0689L17.926 8H6.07398ZM10 10C10.5523 10 11 10.4477 11 11V17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17V11C9 10.4477 9.44772 10 10 10ZM14 10C14.5523 10 15 10.4477 15 11V17C15 17.5523 14.5523 18 14 18C13.4477 18 13 17.5523 13 17V11C13 10.4477 13.4477 10 14 10Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;delete&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--document-empty  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M4 4C4 2.89543 4.89543 2 6 2H14C14.2652 2 14.5196 2.10536 14.7071 2.29289L19.7071 7.29289C19.8946 7.48043 20 7.73478 20 8V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4ZM17.5858 8L14 4.41421V8H17.5858ZM12 4L6 4V20H18V10H13C12.4477 10 12 9.55228 12 9V4Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;document-empty&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--document-missing  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M6 2C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8C20 7.73478 19.8946 7.48043 19.7071 7.29289L14.7071 2.29289C14.5196 2.10536 14.2652 2 14 2H6ZM12 4L6 4V20H18V10H13C12.4477 10 12 9.55228 12 9V4ZM17.5858 8H14V4.41421L17.5858 8ZM11 18C11 17.4477 11.4477 17 12 17C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18ZM10.9864 13.2579C11.0622 12.803 11.4897 12.473 12.0888 12.5015C12.3679 12.5148 12.5963 12.6129 12.7434 12.7503C12.8736 12.872 13 13.078 13 13.4572C13 13.6952 12.9558 13.8322 12.918 13.9077C12.8824 13.979 12.8344 14.0324 12.7635 14.0797C12.595 14.192 12.2841 14.2753 11.8182 14.2753C11.2659 14.2753 10.8182 14.7231 10.8182 15.2753C10.8182 15.8276 11.2659 16.2753 11.8182 16.2753C12.4431 16.2753 13.2231 16.1769 13.8729 15.7438C14.5942 15.2629 15 14.4757 15 13.4572C15 12.5636 14.6718 11.815 14.1089 11.289C13.5627 10.7787 12.8593 10.5359 12.1839 10.5038C10.8739 10.4414 9.3014 11.2022 9.01358 12.9291C8.92278 13.4739 9.2908 13.9891 9.83557 14.0799C10.3803 14.1707 10.8956 13.8027 10.9864 13.2579Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;document-missing&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--document  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M6 2C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8C20 7.73478 19.8946 7.48043 19.7071 7.29289L14.7071 2.29289C14.5196 2.10536 14.2652 2 14 2H6ZM12 4V9C12 9.55228 12.4477 10 13 10H18V20H6V4L12 4ZM17.5858 8H14V4.41421L17.5858 8Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M8 13C8 13.5523 8.44772 14 9 14H15C15.5523 14 16 13.5523 16 13C16 12.4477 15.5523 12 15 12H9C8.44772 12 8 12.4477 8 13Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M8 17C8 16.4477 8.44772 16 9 16H15C15.5523 16 16 16.4477 16 17C16 17.5523 15.5523 18 15 18H9C8.44772 18 8 17.5523 8 17Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;document&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--download  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 2C12.5523 2 13 2.44772 13 3V13.5858L15.2929 11.2929C15.6834 10.9024 16.3166 10.9024 16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929C7.68342 10.9024 8.31658 10.9024 8.70711 11.2929L11 13.5858V3C11 2.44772 11.4477 2 12 2ZM5 17C5.55228 17 6 17.4477 6 18V20H18V18C18 17.4477 18.4477 17 19 17C19.5523 17 20 17.4477 20 18V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V18C4 17.4477 4.44772 17 5 17Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;download&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--edit-alt  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M16.2929 3.29289C16.6834 2.90237 17.3166 2.90237 17.7071 3.29289L20.7071 6.29289C21.0976 6.68342 21.0976 7.31658 20.7071 7.70711L11.7071 16.7071C11.5196 16.8946 11.2652 17 11 17H8C7.44772 17 7 16.5523 7 16V13C7 12.7348 7.10536 12.4804 7.29289 12.2929L16.2929 3.29289ZM9 13.4142V15H10.5858L18.5858 7L17 5.41421L9 13.4142ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;edit-alt&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--edit  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;edit&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--email  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6ZM5.51859 6L12 11.6712L18.4814 6H5.51859ZM20 7.32877L12.6585 13.7526C12.2815 14.0825 11.7185 14.0825 11.3415 13.7526L4 7.32877V18H20V7.32877Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;email&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--favorite  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 2.5C12.3788 2.5 12.7251 2.714 12.8945 3.05279L15.4734 8.2106L21.144 9.03541C21.5206 9.0902 21.8335 9.35402 21.9511 9.71599C22.0687 10.078 21.9706 10.4753 21.6981 10.741L17.571 14.7649L18.4994 20.4385C18.5608 20.8135 18.4043 21.1908 18.0957 21.4124C17.787 21.6339 17.3794 21.6614 17.0438 21.4834L12 18.8071L6.95624 21.4834C6.62062 21.6614 6.21306 21.6339 5.9044 21.4124C5.59573 21.1908 5.4393 20.8135 5.50065 20.4385L6.42906 14.7649L2.30193 10.741C2.02942 10.4753 1.93136 10.078 2.04897 9.71599C2.16658 9.35402 2.47946 9.0902 2.85609 9.03541L8.5267 8.2106L11.1056 3.05279C11.275 2.714 11.6213 2.5 12 2.5ZM12 5.73607L10.082 9.57221C9.93561 9.86491 9.65531 10.0675 9.33147 10.1146L5.14842 10.723L8.19813 13.6965C8.43182 13.9243 8.53961 14.2519 8.4869 14.574L7.80004 18.7715L11.5313 16.7917C11.8244 16.6361 12.1756 16.6361 12.4687 16.7917L16.2 18.7715L15.5132 14.574C15.4604 14.2519 15.5682 13.9243 15.8019 13.6965L18.8516 10.723L14.6686 10.1146C14.3448 10.0675 14.0645 9.86491 13.9181 9.57221L12 5.73607Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;favorite&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--filter  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M9 5C8.44772 5 8 5.44772 8 6C8 6.55228 8.44772 7 9 7C9.55228 7 10 6.55228 10 6C10 5.44772 9.55228 5 9 5ZM6.17071 5C6.58254 3.83481 7.69378 3 9 3C10.3062 3 11.4175 3.83481 11.8293 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H11.8293C11.4175 8.16519 10.3062 9 9 9C7.69378 9 6.58254 8.16519 6.17071 7H5C4.44772 7 4 6.55228 4 6C4 5.44772 4.44772 5 5 5H6.17071ZM15 11C14.4477 11 14 11.4477 14 12C14 12.5523 14.4477 13 15 13C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11ZM12.1707 11C12.5825 9.83481 13.6938 9 15 9C16.3062 9 17.4175 9.83481 17.8293 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H17.8293C17.4175 14.1652 16.3062 15 15 15C13.6938 15 12.5825 14.1652 12.1707 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H12.1707ZM9 17C8.44772 17 8 17.4477 8 18C8 18.5523 8.44772 19 9 19C9.55228 19 10 18.5523 10 18C10 17.4477 9.55228 17 9 17ZM6.17071 17C6.58254 15.8348 7.69378 15 9 15C10.3062 15 11.4175 15.8348 11.8293 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H11.8293C11.4175 20.1652 10.3062 21 9 21C7.69378 21 6.58254 20.1652 6.17071 19H5C4.44772 19 4 18.5523 4 18C4 17.4477 4.44772 17 5 17H6.17071Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;filter&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--home  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M11.3356 2.25259C11.7145 1.9158 12.2855 1.9158 12.6644 2.25259L21.6644 10.2526C22.0772 10.6195 22.1143 11.2516 21.7474 11.6644C21.3805 12.0771 20.7484 12.1143 20.3356 11.7474L20 11.4491V19C20 20.1046 19.1046 21 18 21H6.00001C4.89544 21 4.00001 20.1046 4.00001 19V11.4491L3.66437 11.7474C3.25159 12.1143 2.61952 12.0771 2.2526 11.6644C1.88568 11.2516 1.92286 10.6195 2.33565 10.2526L11.3356 2.25259ZM6.00001 9.67129V19H9.00001V14C9.00001 13.4477 9.44773 13 10 13H14C14.5523 13 15 13.4477 15 14V19H18V9.67129L12 4.33795L6.00001 9.67129ZM13 19V15H11V19H13Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;home&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--location  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 2C7.6 2 4 5.6 4 10C4 15.4 11 21.5 11.3 21.8C11.5 21.9 11.8 22 12 22C12.2 22 12.5 21.9 12.7 21.8C13 21.5 20 15.4 20 10C20 5.6 16.4 2 12 2ZM12 19.7C9.9 17.7 6 13.4 6 10C6 6.7 8.7 4 12 4C15.3 4 18 6.7 18 10C18 13.3 14.1 17.7 12 19.7ZM12 6C9.8 6 8 7.8 8 10C8 12.2 9.8 14 12 14C14.2 14 16 12.2 16 10C16 7.8 14.2 6 12 6ZM12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;location&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--menu  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;menu&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--message  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V17C22 18.1046 21.1046 19 20 19H15.4142L12.7071 21.7071C12.3166 22.0976 11.6834 22.0976 11.2929 21.7071L8.58579 19H4C2.89543 19 2 18.1046 2 17V6ZM20 6H4V17H9C9.26522 17 9.51957 17.1054 9.70711 17.2929L12 19.5858L14.2929 17.2929C14.4804 17.1054 14.7348 17 15 17H20V6ZM6 9.5C6 8.94772 6.44772 8.5 7 8.5H17C17.5523 8.5 18 8.94772 18 9.5C18 10.0523 17.5523 10.5 17 10.5H7C6.44772 10.5 6 10.0523 6 9.5ZM6 13.5C6 12.9477 6.44772 12.5 7 12.5H13C13.5523 12.5 14 12.9477 14 13.5C14 14.0523 13.5523 14.5 13 14.5H7C6.44772 14.5 6 14.0523 6 13.5Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;message&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--options-horizontal  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M6 14C7.10457 14 8 13.1046 8 12C8 10.8954 7.10457 10 6 10C4.89543 10 4 10.8954 4 12C4 13.1046 4.89543 14 6 14Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M18 14C19.1046 14 20 13.1046 20 12C20 10.8954 19.1046 10 18 10C16.8954 10 16 10.8954 16 12C16 13.1046 16.8954 14 18 14Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;options-horizontal&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--package  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M11.47 2.152C11.7943 1.94933 12.2057 1.94933 12.53 2.152L20.5153 7.14284C20.5642 7.17231 20.6104 7.20584 20.6534 7.24298C20.6897 7.27431 20.7235 7.30807 20.7547 7.34391C20.9075 7.51952 21 7.74896 21 8V16C21 16.3448 20.8224 16.6653 20.53 16.848L12.543 21.8399C12.3867 21.9412 12.2002 22 12 22C11.7998 22 11.6133 21.9412 11.457 21.8399L3.47 16.848C3.17762 16.6653 3 16.3448 3 16V8C3 7.74896 3.09251 7.51952 3.24529 7.34391C3.27645 7.30807 3.31027 7.27431 3.34658 7.24298C3.38957 7.20584 3.43576 7.1723 3.48467 7.14283L7.44945 4.66484C7.46251 4.65625 7.47574 4.64798 7.48914 4.64004L11.47 2.152ZM7.99994 6.67929L5.8868 8L12 11.8208L14.1131 10.5L7.99994 6.67929ZM15.9999 9.32079L9.88673 5.50004L12 4.17925L18.1132 8L15.9999 9.32079ZM16.5146 11.3577C16.5253 11.3512 16.536 11.3445 16.5465 11.3377L19 9.80425V15.4458L13 19.1958V13.5542L16.5146 11.3577ZM5 9.80425L11 13.5542V19.1958L5 15.4458V9.80425Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;package&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--pen  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M17.7071 2.29289C17.3166 1.90237 16.6834 1.90237 16.2929 2.29289L14 4.58579L12.7071 3.29289C12.3166 2.90237 11.6834 2.90237 11.2929 3.29289L5.29289 9.29289C4.90237 9.68342 4.90237 10.3166 5.29289 10.7071C5.68342 11.0976 6.31658 11.0976 6.70711 10.7071L12 5.41421L12.5858 6L10.2929 8.29289L3.29289 15.2929C3.10536 15.4804 3 15.7348 3 16V20C3 20.5523 3.44772 21 4 21H8C8.26522 21 8.51957 20.8946 8.70711 20.7071L15.7071 13.7071L21.7071 7.70711C22.0976 7.31658 22.0976 6.68342 21.7071 6.29289L17.7071 2.29289ZM14.7071 6.70711L17 4.41421L19.5858 7L15 11.5858L12.4142 9L14.7071 6.70711ZM5 16.4142L11 10.4142L13.5858 13L7.58579 19H5V16.4142Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;pen&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--percent  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M17 19C18.1046 19 19 18.1046 19 17C19 15.8954 18.1046 15 17 15C15.8954 15 15 15.8954 15 17C15 18.1046 15.8954 19 17 19Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;percent&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--remove  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;remove&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--save  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M3 5C3 3.89543 3.89543 3 5 3H9H15H16.5858C17.1162 3 17.6249 3.21071 18 3.58579L20.7071 6.29289C20.8946 6.48043 21 6.73478 21 7V19C21 20.1046 20.1046 21 19 21H15H9H5C3.89543 21 3 20.1046 3 19V5ZM9 19H15V13H9V19ZM17 19H19V7.41421L17 5.41421V7C17 8.10457 16.1046 9 15 9H9C7.89543 9 7 8.10457 7 7V5H5V19H7V13C7 11.8954 7.89543 11 9 11H15C16.1046 11 17 11.8954 17 13V19ZM9 5V7H15V5H9Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;save&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--search  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;search&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--send  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 2C12.3788 2 12.725 2.214 12.8944 2.55279L21.8944 20.5528C22.067 20.8978 22.0256 21.3113 21.7882 21.6154C21.5508 21.9195 21.1597 22.0599 20.7831 21.9762L12 20.0244L3.21694 21.9762C2.84035 22.0599 2.44921 21.9195 2.2118 21.6154C1.97439 21.3113 1.93306 20.8978 2.10558 20.5528L11.1056 2.55279C11.275 2.214 11.6212 2 12 2ZM13 18.1978L19.166 19.568L13 7.23607V18.1978ZM11 7.23607L4.83402 19.568L11 18.1978V7.23607Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;send&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--settings  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 4C11.4477 4 11 4.44772 11 5C11 6.69226 8.95399 7.53974 7.75738 6.34314C7.36686 5.95261 6.73369 5.95261 6.34317 6.34314C5.95265 6.73366 5.95265 7.36683 6.34317 7.75735C7.53982 8.954 6.69223 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13C6.69236 13 7.53964 15.0461 6.34311 16.2426C5.95258 16.6332 5.95258 17.2663 6.34311 17.6569C6.73363 18.0474 7.3668 18.0474 7.75732 17.6569C8.9539 16.4603 11 17.3077 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19C13 17.3077 15.046 16.4602 16.2427 17.6568C16.6332 18.0474 17.2664 18.0474 17.6569 17.6568C18.0474 17.2663 18.0474 16.6332 17.6569 16.2426C16.4603 15.0461 17.3077 13 19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C17.3078 11 16.4601 8.95405 17.6568 7.75737C18.0473 7.36684 18.0473 6.73368 17.6568 6.34315C17.2663 5.95263 16.6331 5.95263 16.2426 6.34315C15.046 7.53979 13 6.69219 13 5C13 4.44772 12.5523 4 12 4ZM9.00816 4.77703C9.12224 3.2243 10.4181 2 12 2C13.5819 2 14.8778 3.2243 14.9918 4.77703C16.1704 3.75977 17.9525 3.8104 19.071 4.92894C20.1896 6.04748 20.2402 7.82955 19.2229 9.00816C20.7757 9.12221 22 10.4181 22 12C22 13.5819 20.7757 14.8778 19.223 14.9918C20.2403 16.1704 20.1896 17.9525 19.0711 19.0711C17.9525 20.1896 16.1705 20.2402 14.9918 19.2229C14.8778 20.7757 13.5819 22 12 22C10.4181 22 9.12221 20.7757 9.00816 19.2229C7.82955 20.2402 6.04745 20.1896 4.92889 19.0711C3.81034 17.9525 3.75972 16.1704 4.77702 14.9918C3.2243 14.8778 2 13.5819 2 12C2 10.4181 3.22433 9.12221 4.77709 9.00816C3.75978 7.82955 3.81041 6.04747 4.92896 4.92892C6.0475 3.81038 7.82955 3.75975 9.00816 4.77703Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M12 10C11.4696 10 10.9609 10.2107 10.5858 10.5858C10.2107 10.9609 10 11.4696 10 12C10 12.5304 10.2107 13.0391 10.5858 13.4142C10.9609 13.7893 11.4696 14 12 14C12.5304 14 13.0391 13.7893 13.4142 13.4142C13.7893 13.0391 14 12.5304 14 12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10ZM9.17157 9.17157C9.92172 8.42143 10.9391 8 12 8C13.0609 8 14.0783 8.42143 14.8284 9.17157C15.5786 9.92172 16 10.9391 16 12C16 13.0609 15.5786 14.0783 14.8284 14.8284C14.0783 15.5786 13.0609 16 12 16C10.9391 16 9.92172 15.5786 9.17157 14.8284C8.42143 14.0783 8 13.0609 8 12C8 10.9391 8.42143 9.92172 9.17157 9.17157Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;settings&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--tag  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M2 3C2 2.44772 2.44772 2 3 2H11C11.2652 2 11.5196 2.10536 11.7071 2.29289L21.7071 12.2929C22.0976 12.6834 22.0976 13.3166 21.7071 13.7071L13.7071 21.7071C13.3166 22.0976 12.6834 22.0976 12.2929 21.7071L2.29289 11.7071C2.10536 11.5196 2 11.2652 2 11V3ZM4 4V10.5858L13 19.5858L19.5858 13L10.5858 4H4Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M9 7.5C9 8.32843 8.32843 9 7.5 9C6.67157 9 6 8.32843 6 7.5C6 6.67157 6.67157 6 7.5 6C8.32843 6 9 6.67157 9 7.5Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;tag&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--timer  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M10 2C9.44772 2 9 2.44772 9 3V3.48341C5.22342 4.73933 2.5 8.30162 2.5 12.5C2.5 17.7467 6.75329 22 12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 10.4453 20.8477 8.54296 19.7389 6.98875C19.9051 6.69714 20 6.35966 20 6C20 5.49278 19.8112 5.02965 19.5 4.67709C19.1335 4.26188 18.5973 4 18 4C17.5834 4 17.1966 4.12737 16.8763 4.34529C16.289 3.99338 15.6606 3.70311 15 3.48341V3C15 2.44772 14.5523 2 14 2H10ZM12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5ZM14 12.5C14 13.6046 13.1046 14.5 12 14.5C10.8954 14.5 10 13.6046 10 12.5C10 11.7597 10.4022 11.1134 11 10.7676L11 8.5C11 7.94771 11.4477 7.5 12 7.5C12.5523 7.5 13 7.94772 13 8.5L13 10.7676C13.5978 11.1134 14 11.7597 14 12.5Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;timer&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--user  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;user&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--users  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M10 4C7.79086 4 6 5.79086 6 8C6 10.2091 7.79086 12 10 12C12.2091 12 14 10.2091 14 8C14 5.79086 12.2091 4 10 4ZM4 8C4 4.68629 6.68629 2 10 2C13.3137 2 16 4.68629 16 8C16 11.3137 13.3137 14 10 14C6.68629 14 4 11.3137 4 8ZM16.8284 3.75736C17.219 3.36683 17.8521 3.36683 18.2426 3.75736C20.5858 6.1005 20.5858 9.8995 18.2426 12.2426C17.8521 12.6332 17.219 12.6332 16.8284 12.2426C16.4379 11.8521 16.4379 11.219 16.8284 10.8284C18.3905 9.26633 18.3905 6.73367 16.8284 5.17157C16.4379 4.78105 16.4379 4.14788 16.8284 3.75736ZM17.5299 16.7575C17.6638 16.2217 18.2067 15.8959 18.7425 16.0299C20.0705 16.3618 20.911 17.2109 21.3944 18.1778C21.8622 19.1133 22 20.1571 22 21C22 21.5523 21.5523 22 21 22C20.4477 22 20 21.5523 20 21C20 20.3429 19.8878 19.6367 19.6056 19.0722C19.339 18.5391 18.9295 18.1382 18.2575 17.9701C17.7217 17.8362 17.3959 17.2933 17.5299 16.7575ZM6.5 18C5.24054 18 4 19.2135 4 21C4 21.5523 3.55228 22 3 22C2.44772 22 2 21.5523 2 21C2 18.3682 3.89347 16 6.5 16H13.5C16.1065 16 18 18.3682 18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 19.2135 14.7595 18 13.5 18H6.5Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;users&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-styleguide-svg-icon&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon--warning  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12.0002 14C11.4479 14 11.0002 13.5523 11.0002 13V10C11.0002 9.44772 11.4479 9 12.0002 9C12.5525 9 13.0002 9.44772 13.0002 10V13C13.0002 13.5523 12.5525 14 12.0002 14Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M10.5002 16.5C10.5002 15.6716 11.1717 15 12.0002 15C12.8286 15 13.5002 15.6716 13.5002 16.5C13.5002 17.3284 12.8286 18 12.0002 18C11.1717 18 10.5002 17.3284 10.5002 16.5Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;path d=&quot;M10.2303 3.2156C10.9802 1.79093 13.0202 1.79092 13.77 3.2156L22.1136 19.0685C22.8146 20.4003 21.8488 22 20.3438 22H3.65653C2.15151 22 1.18574 20.4003 1.8867 19.0685L10.2303 3.2156ZM20.3438 20L12.0002 4.1471L3.65653 20L20.3438 20Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p&gt;warning&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">each category, id in icons.svg
+    if id
+        h3 #{id}
+    .c-styleguide-svg-icons
+        each icon in category
+            .c-styleguide-svg-icon
+                +icon(icon.category+'/'+icon.name)
+                p #{icon.name}
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-02-icon-font">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Icon font</h3>
+                        <a class="br-sample-header-link" href="#component-02-icon-font">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content">
+                        <p>The icon font system creates an icon font based on SVG images in the <code>content/icon-font-source/</code> directory.</p>
+                    </div>
+                    <div class="br-sample-content">
+                        <p>You don't seem to have icon fonts activated in <code>bedrock.config.js</code>. You can safely delete these documentation templates if you are not using an icon font, or document your icon font in your own manner.</p>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;p&gt;You don't seem to have icon fonts activated in &lt;code&gt;bedrock.config.js&lt;/code&gt;. You can safely delete these documentation templates if you are not using an icon font, or document your icon font in your own manner.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">include ../../../../core/templates/mixins/icon-overview
+
+if config.icons.generateIconFont
+    +iconsOverview('icon-font', 'Icon font')
+else
+    p You don't seem to have icon fonts activated in &lt;code&gt;bedrock.config.js&lt;/code&gt;. You can safely delete these documentation templates if you are not using an icon font, or document your icon font in your own manner.</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="br-pagetree-fixed-wrapper">
         <div class="br-prototype-nav" id="__prototype-nav" aria-hidden="true">
             <div class="br-prototype-nav-inner">
                 <h4 class="br-prototype-nav-main-heading">Prototype navigation</h4>
@@ -22,30 +1148,6 @@
                     <ul class="br-bordered-list">
                         <li>
                             <a href="/styleguide">Styleguide</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">examples</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/data-example.html">data-example</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/image-example.html">image-example</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/markdown-example.html">markdown-example</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">page-states-example</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/page-states-example/form-example.html">form-example
-                                        <div class="br-tree-dir-state-count">1</div>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="br-tree-dir">
                             <a href="/404.html">404</a>
@@ -57,259 +1159,6 @@
                             <a href="/page-index.html">page-index</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div class="br-prototype-content">
-            <div class="br-styleguide-container">
-                <div class="br-styleguide-navigation-wrapper-ie">
-                    <div class="br-styleguide-header">
-                        <a href="/styleguide">
-                            <img class="br-styleguide-logo" src="/images/bedrock-logo-black.svg">
-                        </a>
-                    </div>
-                    <div class="br-styleguide-navigation-holder">
-                        <div class="br-styleguide-nav-holder">
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Style guide</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/docs/introduction.html">Introduction</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Design patterns</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/docs/doc-example-2.html">Another doc page example</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/docs/doc-example.html">Doc page example</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Overviews</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/aov-colors.html"> Colors</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/aov-icons.html"> Icons</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/aov-typography.html"> Typography</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Components</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-custom-marker.html"> Custom example
-                                                <div class="br-docs-category-marker-custom"></div>
-                                            </a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-footer-docs.html"> Example footer docs</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-humanized-names.html"> Example with automatic humanized names</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-manual-docs.html"> Example</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-named-source.html"> Example with named source</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">No category</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/cc-example.html"> Custom category</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-styleguide-content">
-                    <div class="br-styleguide-content-inner">
-                        <div class="br-componentgroup-header-wrapper">
-                            <h1 class="br-componentgroup-header">Icons</h1>
-                        </div>
-                        <div class="br-content">
-                        </div>
-                        <div class="br-sample" id="component-01-svg-icons">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading">SVG icons</h3>
-                                <a class="br-sample-header-link" href="#component-01-svg-icons">#</a>
-                            </div>
-                            <div class="br-sample-documentation">
-                                <p>The SVG icon system is based on directly embedding SVG files into the markup. Within Bedrock, we use Pug to render these SVG&#39;s instead of having to inline them. You can either inline them, or build a solution that does it for you.</p>
-                                <p>The SVG content should be contained in a <code>.o-svg-icon</code> div that also get an icon-specific class based on its
-                                    name (for example: <code>.o-svg-icon.o-svg-icon-add</code>. This allows us to style and colorize specific icons.</p>
-                            </div>
-                            <div class="br-sample-content">
-                                <h3>16</h3>
-                                <div class="svg-icon">
-                                    <div class="o-svg-icon o-svg-icon-16-check  ">
-                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                                        <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
-                                            <title>check</title>
-                                            <desc>Created with Sketch.</desc>
-                                            <defs></defs>
-                                            <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <g id="icon-fonts" transform="translate(-72.000000, -227.000000)" fill="#444B51">
-                                                    <path d="M85.8661796,229.999693 L85.2277942,230.609758 L78.7849401,237.052612 L75.8809358,234.148608 L75.2449104,233.540903 L74,234.783453 L74.6088851,235.420659 L78.1500948,238.960688 L78.7861202,239.569573 L79.4221455,238.960688 L86.5022049,231.880629 L87.11109,231.244604 L85.8661796,229.999693 Z" id="check"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <p>check</p>
-                                </div>
-                                <h3>ctrl</h3>
-                                <div class="svg-icon">
-                                    <div class="o-svg-icon o-svg-icon-ctrl-example  ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                            <path d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" />
-                                        </svg>
-                                    </div>
-                                    <p>example</p>
-                                </div>
-                                <div class="svg-icon">
-                                    <div class="o-svg-icon o-svg-icon--example  ">
-                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                                        <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                                            <!-- Generator: Sketch 3.4 (15588) - http://www.bohemiancoding.com/sketch -->
-                                            <title>add</title>
-                                            <desc>Created with Sketch.</desc>
-                                            <defs></defs>
-                                            <g id="UI-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                                                <g id="ui-08-icons" sketch:type="MSArtboardGroup" transform="translate(-350.000000, -390.000000)">
-                                                    <g id="labels" sketch:type="MSLayerGroup" transform="translate(349.000000, 349.000000)"></g>
-                                                    <g id="Group" sketch:type="MSLayerGroup" transform="translate(350.000000, 325.000000)" fill="#626262">
-                                                        <path d="M8,66 C4.11111111,66 1,69.1111111 1,73 C1,76.8888889 4.11111111,80 8,80 C11.8888889,80 15,76.8888889 15,73 C15,69.1111111 11.8888889,66 8,66 L8,66 L8,66 Z M12.1481481,74.037037 L9.03703704,74.037037 L9.03703704,77.1481481 L6.96296296,77.1481481 L6.96296296,74.037037 L3.85185185,74.037037 L3.85185185,71.962963 L6.96296296,71.962963 L6.96296296,68.8518519 L9.03703704,68.8518519 L9.03703704,71.962963 L12.1481481,71.962963 L12.1481481,74.037037 L12.1481481,74.037037 Z" id="add" sketch:type="MSShapeGroup"></path>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <p>example</p>
-                                </div>
-                            </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;h3&gt;16&lt;/h3&gt;
-&lt;div class=&quot;svg-icon&quot;&gt;
-    &lt;div class=&quot;o-svg-icon o-svg-icon-16-check  &quot;&gt;
-        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-        &lt;svg width=&quot;16px&quot; height=&quot;16px&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
-            &lt;!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch --&gt;
-            &lt;title&gt;check&lt;/title&gt;
-            &lt;desc&gt;Created with Sketch.&lt;/desc&gt;
-            &lt;defs&gt;&lt;/defs&gt;
-            &lt;g id=&quot;assets&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;
-                &lt;g id=&quot;icon-fonts&quot; transform=&quot;translate(-72.000000, -227.000000)&quot; fill=&quot;#444B51&quot;&gt;
-                    &lt;path d=&quot;M85.8661796,229.999693 L85.2277942,230.609758 L78.7849401,237.052612 L75.8809358,234.148608 L75.2449104,233.540903 L74,234.783453 L74.6088851,235.420659 L78.1500948,238.960688 L78.7861202,239.569573 L79.4221455,238.960688 L86.5022049,231.880629 L87.11109,231.244604 L85.8661796,229.999693 Z&quot; id=&quot;check&quot;&gt;&lt;/path&gt;
-                &lt;/g&gt;
-            &lt;/g&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-    &lt;p&gt;check&lt;/p&gt;
-&lt;/div&gt;
-&lt;h3&gt;ctrl&lt;/h3&gt;
-&lt;div class=&quot;svg-icon&quot;&gt;
-    &lt;div class=&quot;o-svg-icon o-svg-icon-ctrl-example  &quot;&gt;
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
-            &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot; /&gt;
-            &lt;path d=&quot;M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z&quot; /&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-    &lt;p&gt;example&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;svg-icon&quot;&gt;
-    &lt;div class=&quot;o-svg-icon o-svg-icon--example  &quot;&gt;
-        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-        &lt;svg width=&quot;16px&quot; height=&quot;16px&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:sketch=&quot;http://www.bohemiancoding.com/sketch/ns&quot;&gt;
-            &lt;!-- Generator: Sketch 3.4 (15588) - http://www.bohemiancoding.com/sketch --&gt;
-            &lt;title&gt;add&lt;/title&gt;
-            &lt;desc&gt;Created with Sketch.&lt;/desc&gt;
-            &lt;defs&gt;&lt;/defs&gt;
-            &lt;g id=&quot;UI-guide&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; sketch:type=&quot;MSPage&quot;&gt;
-                &lt;g id=&quot;ui-08-icons&quot; sketch:type=&quot;MSArtboardGroup&quot; transform=&quot;translate(-350.000000, -390.000000)&quot;&gt;
-                    &lt;g id=&quot;labels&quot; sketch:type=&quot;MSLayerGroup&quot; transform=&quot;translate(349.000000, 349.000000)&quot;&gt;&lt;/g&gt;
-                    &lt;g id=&quot;Group&quot; sketch:type=&quot;MSLayerGroup&quot; transform=&quot;translate(350.000000, 325.000000)&quot; fill=&quot;#626262&quot;&gt;
-                        &lt;path d=&quot;M8,66 C4.11111111,66 1,69.1111111 1,73 C1,76.8888889 4.11111111,80 8,80 C11.8888889,80 15,76.8888889 15,73 C15,69.1111111 11.8888889,66 8,66 L8,66 L8,66 Z M12.1481481,74.037037 L9.03703704,74.037037 L9.03703704,77.1481481 L6.96296296,77.1481481 L6.96296296,74.037037 L3.85185185,74.037037 L3.85185185,71.962963 L6.96296296,71.962963 L6.96296296,68.8518519 L9.03703704,68.8518519 L9.03703704,71.962963 L12.1481481,71.962963 L12.1481481,74.037037 L12.1481481,74.037037 Z&quot; id=&quot;add&quot; sketch:type=&quot;MSShapeGroup&quot;&gt;&lt;/path&gt;
-                    &lt;/g&gt;
-                &lt;/g&gt;
-            &lt;/g&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-    &lt;p&gt;example&lt;/p&gt;
-&lt;/div&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">each category, id in icons.svg
-    if id
-        h3 #{id}
-    each icon in category
-        .svg-icon
-            +icon(icon.category+'/'+icon.name)
-            p #{icon.name}
-</pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="br-sample" id="component-02-icon-font">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading">Icon font</h3>
-                                <a class="br-sample-header-link" href="#component-02-icon-font">#</a>
-                            </div>
-                            <div class="br-sample-documentation">
-                                <p>The icon font system creates an icon font based on SVG images in the <code>content/icon-font-source/</code> directory.</p>
-                            </div>
-                            <div class="br-sample-content">
-                                <p>You don't seem to have icon fonts activated in <code>bedrock.config.js</code>. You can safely delete these documentation templates if you are not using an icon font, or document your icon font in your own manner.</p>
-                            </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;p&gt;You don't seem to have icon fonts activated in &lt;code&gt;bedrock.config.js&lt;/code&gt;. You can safely delete these documentation templates if you are not using an icon font, or document your icon font in your own manner.&lt;/p&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">include ../../../../core/templates/mixins/icon-overview
-
-if config.icons.generateIconFont
-    +iconsOverview('icon-font', 'Icon font')
-else
-    p You don't seem to have icon fonts activated in &lt;code&gt;bedrock.config.js&lt;/code&gt;. You can safely delete these documentation templates if you are not using an icon font, or document your icon font in your own manner.</pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

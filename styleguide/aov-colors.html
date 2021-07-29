@@ -9,11 +9,375 @@
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/prism-styleguide.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
 </head>
 
 <body>
-    <div class="br-prototype-wrapper">
+    <div class="br-styleguide-container">
+        <div class="br-styleguide-navigation-wrapper-ie">
+            <div class="br-styleguide-header">
+                <a href="/styleguide">
+                    <img class="br-styleguide-logo" src="/images/logo.svg" alt="SmartCoop" width="160">
+                </a>
+            </div>
+            <div class="br-styleguide-search">
+                <input class="c-input" id="styleguideSearch" type="search" placeholder="Search components...">
+            </div>
+            <div class="br-styleguide-navigation-holder">
+                <div class="br-styleguide-nav-holder">
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Style guide</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/introduction.html">Introduction</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Basics</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/aov-colors.html"> Colors</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/aov-icons.html"> Icons</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/aov-typography.html"> Typography</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Components</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-avatar.html"> Avatar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-button-skins.html"> Buttons (skins)</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-button-types.html"> Buttons (types)</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-inputs-text.html"> Inputs (text)</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/c-inputs-toggles.html"> Inputs (toggles)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Development documentation</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/browser-support.html">Browser support</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/changelog.html">Changelog</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/css-architecture.html">CSS Architecture</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/styleguide/docs/css-component-structure.html">CSS component structure</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="br-styleguide-content">
+            <div class="br-styleguide-content-inner">
+                <div class="br-componentgroup-header-wrapper">
+                    <h1 class="br-componentgroup-header c-h2">Colors</h1>
+                </div>
+                <div class="br-content c-content">
+                </div>
+                <div class="br-sample" id="component-colors">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Colors</h3>
+                        <a class="br-sample-header-link" href="#component-colors">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <h4>Grays</h4>
+                        <ul class="br-color-swatch-list">
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #F2F2F2"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-50</div>
+                                    <div class="swatch-value">#F2F2F2</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #E5E5E5"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-100</div>
+                                    <div class="swatch-value">#E5E5E5</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #D9D9D9"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-150</div>
+                                    <div class="swatch-value">#D9D9D9</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #CCCCCC"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-200</div>
+                                    <div class="swatch-value">#CCCCCC</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #B3B3B3"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-300</div>
+                                    <div class="swatch-value">#B3B3B3</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #999999"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-400</div>
+                                    <div class="swatch-value">#999999</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #808080"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-500</div>
+                                    <div class="swatch-value">#808080</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #666666"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-600</div>
+                                    <div class="swatch-value">#666666</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #4D4D4D"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-700</div>
+                                    <div class="swatch-value">#4D4D4D</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #333333"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-800</div>
+                                    <div class="swatch-value">#333333</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #1A1A1A"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-gray-900</div>
+                                    <div class="swatch-value">#1A1A1A</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <h4>Primary colors</h4>
+                        <ul class="br-color-swatch-list">
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #B32D3B"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-red-800</div>
+                                    <div class="swatch-value">#B32D3B</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #FF4054"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-red-500</div>
+                                    <div class="swatch-value">#FF4054</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #FFB0B9"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-red-200</div>
+                                    <div class="swatch-value">#FFB0B9</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <h4>Secondary colors</h4>
+                        <ul class="br-color-swatch-list">
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #00A57D"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-green-500</div>
+                                    <div class="swatch-value">#00A57D</div>
+                                </div>
+                            </li>
+                            <li class="br-color-swatch-item">
+                                <div class="br-color-swatch-preview" style="background-color: #FF8700"></div>
+                                <div class="br-color-swatch-data">
+                                    <div class="swatch-name">$color-orange-500</div>
+                                    <div class="swatch-value">#FF8700</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;h4&gt;Grays&lt;/h4&gt;
+&lt;ul class=&quot;br-color-swatch-list&quot;&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #F2F2F2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-50&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#F2F2F2&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #E5E5E5&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-100&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#E5E5E5&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #D9D9D9&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-150&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#D9D9D9&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #CCCCCC&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-200&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#CCCCCC&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #B3B3B3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-300&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#B3B3B3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #999999&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-400&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#999999&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #808080&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-500&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#808080&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #666666&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-600&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#666666&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #4D4D4D&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-700&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#4D4D4D&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #333333&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-800&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#333333&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #1A1A1A&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-gray-900&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#1A1A1A&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Primary colors&lt;/h4&gt;
+&lt;ul class=&quot;br-color-swatch-list&quot;&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #B32D3B&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-red-800&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#B32D3B&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #FF4054&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-red-500&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#FF4054&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #FFB0B9&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-red-200&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#FFB0B9&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Secondary colors&lt;/h4&gt;
+&lt;ul class=&quot;br-color-swatch-list&quot;&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #00A57D&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-green-500&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#00A57D&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;br-color-swatch-item&quot;&gt;
+        &lt;div class=&quot;br-color-swatch-preview&quot; style=&quot;background-color: #FF8700&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;br-color-swatch-data&quot;&gt;
+            &lt;div class=&quot;swatch-name&quot;&gt;$color-orange-500&lt;/div&gt;
+            &lt;div class=&quot;swatch-value&quot;&gt;#FF8700&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">each category in colorCategories
+    h4= category.name
+    ul.br-color-swatch-list
+        each color in category.colors
+            li.br-color-swatch-item
+                .br-color-swatch-preview(style=`background-color: ${color.value}`)
+                .br-color-swatch-data
+                    .swatch-name= color.name
+                    .swatch-value= color.value
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="br-pagetree-fixed-wrapper">
         <div class="br-prototype-nav" id="__prototype-nav" aria-hidden="true">
             <div class="br-prototype-nav-inner">
                 <h4 class="br-prototype-nav-main-heading">Prototype navigation</h4>
@@ -22,30 +386,6 @@
                     <ul class="br-bordered-list">
                         <li>
                             <a href="/styleguide">Styleguide</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">examples</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/data-example.html">data-example</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/image-example.html">image-example</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/examples/markdown-example.html">markdown-example</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">page-states-example</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/page-states-example/form-example.html">form-example
-                                        <div class="br-tree-dir-state-count">1</div>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="br-tree-dir">
                             <a href="/404.html">404</a>
@@ -57,132 +397,6 @@
                             <a href="/page-index.html">page-index</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div class="br-prototype-content">
-            <div class="br-styleguide-container">
-                <div class="br-styleguide-navigation-wrapper-ie">
-                    <div class="br-styleguide-header">
-                        <a href="/styleguide">
-                            <img class="br-styleguide-logo" src="/images/bedrock-logo-black.svg">
-                        </a>
-                    </div>
-                    <div class="br-styleguide-navigation-holder">
-                        <div class="br-styleguide-nav-holder">
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Style guide</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/docs/introduction.html">Introduction</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Design patterns</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/docs/doc-example-2.html">Another doc page example</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/docs/doc-example.html">Doc page example</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Overviews</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/aov-colors.html"> Colors</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/aov-icons.html"> Icons</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/aov-typography.html"> Typography</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">Components</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-custom-marker.html"> Custom example
-                                                <div class="br-docs-category-marker-custom"></div>
-                                            </a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-footer-docs.html"> Example footer docs</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-humanized-names.html"> Example with automatic humanized names</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-manual-docs.html"> Example</a>
-                                        </li>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/c-example-named-source.html"> Example with named source</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="br-docs-category">
-                                <h4 class="br-docs-category-name">No category</h4>
-                                <div class="br-docs-category-list-wrapper">
-                                    <ul>
-                                        <li class="null ">
-                                            <a class="null " href="/styleguide/cc-example.html"> Custom category</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-styleguide-content">
-                    <div class="br-styleguide-content-inner">
-                        <div class="br-componentgroup-header-wrapper">
-                            <h1 class="br-componentgroup-header">Colors</h1>
-                        </div>
-                        <div class="br-content">
-                        </div>
-                        <div class="br-sample" id="component-colors">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading">Colors</h3>
-                                <a class="br-sample-header-link" href="#component-colors">#</a>
-                            </div>
-                            <div class="br-sample-documentation"></div>
-                            <div class="br-sample-content"></div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html"></pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">each category in colorCategories
-    h4= category.name
-    ul.br-color-swatch-list
-        each color in category.colors
-            li.br-color-swatch-item
-                .br-color-swatch-preview(style=`background-color: ${color.value}`)
-                .br-color-swatch-data
-                    .swatch-name= color.name
-                    .swatch-value= color.value
-</pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

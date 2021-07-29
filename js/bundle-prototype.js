@@ -3,12 +3,12 @@
 
 /**
  * Bedrock configuration
- * For docs, see https://bedrockapp.org/documentation/configuration/ 
+ * For docs, see https://bedrockapp.org/documentation/configuration/
  * Inline docs available in the default config object
 */
 module.exports = {
   pageTree: {
-    layoutStyle: 'sidebar' // 'sidebar' or 'fixed'
+    layoutStyle: 'fixed' // 'sidebar' or 'fixed'
 
   },
   js: {
@@ -20,10 +20,17 @@ module.exports = {
     purge: false
   },
   styleguide: {
-    categoryOrder: ['Style guide', 'Design patterns', 'Components'],
+    search: true,
+    colors: './content/scss/_s-colors.scss',
+    categoryOrder: ['Style guide', 'Design patterns', 'Components', 'Objects', 'Development documentation'],
     componentCategories: {
-      aov: 'Overviews',
-      c: 'Components'
+      aov: 'Basics',
+      c: 'Components',
+      o: 'Objects',
+      u: 'Utilities'
+    },
+    codeSamples: {
+      jsx: false
     }
   }
 };
