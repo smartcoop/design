@@ -11,13 +11,17 @@ block append headerStyles
             max-width: 660px;
             margin: 0 auto;
             line-height: 1.5;
+            display: flex;
+            align-items: center;
             text-align: center;
         }
 
 block body
     .br-homepage
         .br-homepage-inner
-            p
-                img(src="images/bedrock-logo-black.svg")
-            p Welcome to the design system and prototype pages of Smart Coop.
-            p Hit Ctrl + M (or alternatively Ctrl + B) to view the page tree or directly <a href="/styleguide/">visit the style guide</a>.
+            .c-content
+                img(src="images/logo.svg")
+                h1 Welcome to the design system for Smart Coop
+
+                p Welcome to the design system and prototype pages of Smart Coop.
+                p Hit Ctrl + M (or alternatively Ctrl + B) to view the page tree or directly <a href="/styleguide/">visit the style guide</a>.
