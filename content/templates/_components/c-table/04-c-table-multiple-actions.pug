@@ -14,14 +14,13 @@ table.c-table.c-table--styled.c-table--bordered.js-data-table
                 td Data
                 td
                     .c-button-toolbar
-                        +c-button({skin: 'borderless', icon: 'options-horizontal', layout: 'icon-only'})(data-dropdown-placement="bottom-end" data-dropdown="dropdownMenu-"+index) More options
+                        +c-button({skin: 'borderless', icon: 'options-horizontal', layout: 'icon-only'})(data-menu-placement="bottom-end" data-menu="dropdownMenu-"+index) More options
 
                         ul.c-menu(id="dropdownMenu-"+index)
                             li.c-menu__item
                                 a.c-menu__label(href="#")
                                     +icon('edit')
                                     span Edit
-                            li.c-menu__divider(role="presentation")
                             li.c-menu__item
                                 a.c-menu__label(href="#")
                                     +icon('delete')
