@@ -71,5 +71,7 @@
     "pug": "^2.0.4",
     "run-sequence": "^2.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@popperjs/core": "^2.9.2"
+  }
 }
