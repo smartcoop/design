@@ -1,0 +1,15 @@
+.c-empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5.6rem 4.8rem;
+
+  p:last-child {
+    margin: 0;
+  }
+}
+
+.c-empty-state--bg-alt {
+  background-color: $color-gray-50;
+}
