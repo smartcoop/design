@@ -1,0 +1,15 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+
+block content
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    h2.c-toolbar__title Title
+
+    .u-scroll-wrapper-body
+        .u-spacer-xl
+            p content goes here
