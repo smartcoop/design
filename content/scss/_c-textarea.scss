@@ -1,0 +1,20 @@
+/* ==========================================================================
+  c-textarea
+   ========================================================================== */
+
+.c-textarea {
+  border: 0.1rem solid $color-gray-300;
+  border-radius: 0.3rem;
+  padding: 1rem 1.2rem;
+  display: block;
+  color: $color-text;
+  font-size: 1.6rem;
+  width: 100%;
+
+  &::placeholder {
+    color: $color-gray-400;
+  }
+
+  @include textfield-transition;
+  @include textfield-focus;
+}
