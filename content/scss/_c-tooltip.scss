@@ -1,0 +1,56 @@
+/* ==========================================================================
+  c-tooltip
+ ========================================================================== */
+
+/* Variables
+========================================================================== */
+
+$c-tooltip-bg: #333 !default;
+
+/* Component       ========================================================================== */
+
+.c-tooltip {
+  display: none;
+  background: $c-tooltip-bg;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.3rem;
+  border-radius: 0.4rem;
+  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.25));
+}
+
+.c-tooltip--size-m {
+  min-width: 24rem;
+}
+
+.c-tooltip[data-show] {
+  display: block;
+}
+
+.c-tooltip__arrow,
+.c-tooltip__arrow::before {
+  position: absolute;
+  width: 0.8rem;
+  height: 0.8rem;
+  z-index: -1;
+}
+
+.c-tooltip[data-popper-placement^='top'] > .c-tooltip__arrow {
+  filter: none;
+  border-top-color: $c-tooltip-bg;
+}
+
+.c-tooltip[data-popper-placement^='bottom'] > .c-tooltip__arrow {
+  filter: none;
+  border-bottom-color: $c-tooltip-bg;
+}
+
+.c-tooltip[data-popper-placement^='left'] > .c-tooltip__arrow {
+  filter: none;
+  border-left-color: $c-tooltip-bg;
+}
+
+.c-tooltip[data-popper-placement^='right'] > .c-tooltip__arrow {
+  filter: none;
+  border-right-color: $c-tooltip-bg;
+}

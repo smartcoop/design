@@ -1,0 +1,19 @@
+div(style="min-height: 25rem")
+    .c-toolbar
+        .c-toolbar__left
+            +c-button({})(data-popover="popover-bottom-start" data-popover-placement="bottom-start")
+                .c-button__content
+                    .c-button__label Bottom Start
+
+            .c-popover#popover-bottom-start(role="tooltip")
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .c-popover__arrow(data-popper-arrow)
+
+        .c-toolbar__right
+            +c-button({})(data-popover="popover-bottom-end" data-popover-placement="bottom-end")
+                .c-button__content
+                    .c-button__label Bottom End
+
+            .c-popover#popover-bottom-end(role="tooltip")
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .c-popover__arrow(data-popper-arrow)

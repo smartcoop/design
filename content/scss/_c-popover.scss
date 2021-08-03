@@ -1,0 +1,60 @@
+/* ==========================================================================
+  c-popover
+ ========================================================================== */
+
+.c-popover {
+  background: #fff;
+  border: 0.1rem solid $color-gray-200;
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  filter: drop-shadow(0 0 0.5rem rgba(33, 33, 33, 0.25));
+  max-width: 40rem;
+  z-index: $g-c-menu-z;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.c-popover[data-show] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+[data-popper-arrow] {
+  width: 0;
+  height: 0;
+  margin: auto;
+  border: 0.8rem solid transparent;
+}
+
+[data-popper-placement^='top'] > [data-popper-arrow] {
+  border-top-color: white;
+  top: 100%;
+  filter: drop-shadow(0 1px 0 #d3d3d3);
+}
+
+[data-popper-placement^='top-end'] > [data-popper-arrow] {
+  border-top-color: white;
+  top: 100%;
+  filter: drop-shadow(0 1px 0 #d3d3d3);
+}
+
+[data-popper-placement^='bottom'] > [data-popper-arrow] {
+  border-bottom-color: white;
+  bottom: 100%;
+  filter: drop-shadow(0 -1px 0 #d3d3d3);
+}
+
+[data-popper-placement^='left'] > [data-popper-arrow] {
+  border-left-color: white;
+  left: 100%;
+  filter: drop-shadow(1px 0 0 #d3d3d3);
+}
+
+[data-popper-placement^='right'] > [data-popper-arrow] {
+  border-right-color: white;
+  right: 100%;
+  filter: drop-shadow(-1px 0 0 #d3d3d3);
+}
