@@ -53,13 +53,13 @@
 }
 
 .c-alert--warning {
-  border-color: $color-orange-500;
+  border-color: $color-yellow-500;
 
   &:before {
-    background: $color-orange-500;
+    background: $color-yellow-500;
   }
 
   > .o-svg-icon {
-    color: $color-orange-500;
+    color: $color-yellow-500;
   }
 }
