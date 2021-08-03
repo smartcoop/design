@@ -52,6 +52,7 @@
 @import "_c-form-help-text";
 @import "_c-hr";
 @import "_c-input";
+@import "_c-main-layout";
 @import "_c-menu";
 @import "_c-modal";
 @import "_c-navbar";
@@ -65,11 +66,11 @@
 @import "_c-toolbar-title";
 @import "_c-toolbar";
 @import "_c-tooltip";
-@import "c-main-layout";
 
 /* Utilities: specific helper classes, overrides
      ========================================================================== */
 
+@import '_u-scroll-wrapper';
 @import "_u-bg";
 @import "_u-generic";
 @import "_u-spacer";
