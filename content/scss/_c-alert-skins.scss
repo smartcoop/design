@@ -10,36 +10,56 @@
 .c-alert {
   background: #FFF;
   border-radius: 0.3rem;
-  border: 1px solid $color-gray-200;
+  border: 0.1rem solid $color-blue-500;
+  position: relative;
+
+  &:before {
+    content: '';
+    height: 100%;
+    width: 0.4rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: $color-blue-500;
+  }
+
+  > .o-svg-icon {
+    color: $color-blue-500;
+  }
 }
 
 .c-alert--success {
-  background: $color-green-500;
   border-color: $color-green-500;
 
-  .o-svg-icon{
+  &:before {
+    background: $color-green-500;
+  }
+
+  > .o-svg-icon {
     color: $color-green-500;
   }
 }
 
 .c-alert--error {
-  background: $color-red-500;
   border-color: $color-red-500;
 
-  .o-svg-icon{
+  &:before {
+    background: $color-red-500;
+  }
+
+  > .o-svg-icon {
     color: $color-red-500;
   }
 }
 
 .c-alert--warning {
-  background: $color-orange-500;
   border-color: $color-orange-500;
 
-  .o-svg-icon{
+  &:before {
+    background: $color-orange-500;
+  }
+
+  > .o-svg-icon {
     color: $color-orange-500;
   }
-}
-
-.c-alert--loading {
-  background: $color-gray-100;
 }

@@ -6,66 +6,68 @@
   Rules of this file: this file is ONLY for layout, please see alert-skins.scss for colors
    ========================================================================== */
 
-/* Component
+/* Variables
    ========================================================================== */
 
-.c-alert {
-  padding: 1.2rem 1.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+$c-alert-border-radius: 0.3rem !default;
 
-  .o-svg-icon-close {
-    cursor: pointer;
+/* Component
+      ========================================================================== */
+
+.c-alert {
+  padding: ($g-spacer-unit * 3);
+  border-radius: $c-alert-border-radius;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  flex-flow: row wrap;
+
+  > * {
+    flex-basis: auto;
   }
+
+  .c-button--icon:last-child {
+    cursor: pointer;
+    padding: 0.6rem;
+    margin: -0.6rem;
+  }
+
+  &+.c-alert {
+    margin-top: $g-spacer-unit * 2;
+  }
+}
+
+.c-alert__title {
+  font-weight: $g-headings-font-weight;
+  color: $g-headings-color;
 }
 
 .c-alert__body {
   display: flex;
-  align-items: center;
-  & > *:not(:last-child) {
-    margin-right: 1.2rem;
+  flex: 1;
+
+  &:not(:first-child) {
+    margin-left: $g-spacer-unit * 2;
+  }
+
+  &:not(:last-child) {
+    margin-right: $g-spacer-unit * 2;
   }
 }
 
-.c-alert--floating {
-  border-radius: 3px;
-  display: flex;
-  padding: 1.6rem;
-  transform: translateX(-50%);
-  z-index: 100;
-  min-width: 15rem;
+.c-alert__title + .c-alert__message {
+  margin-top: 0.8rem;
 }
 
-/* Animation
-   ========================================================================== */
-
-.c-alert--floating--animate-in {
-  animation: 0.3s ease-in 0.2s both floating-alert-in;
+.c-alert.c-alert--medium {
+  max-width: 66rem;
 }
 
-.c-alert--floating--animate-out {
-  animation: 0.3s ease-out 0.2s both floating-alert-out;
+.c-alert.c-alert--large {
+  max-width: 88rem;
 }
 
-@keyframes floating-alert-in {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
-
-@keyframes floating-alert-out {
-  100% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-1rem);
-  }
-  0% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
+.c-alert.c-alert--full {
+  max-width: none;
+  margin: $g-spacer-unit * 2;
 }
