@@ -1,0 +1,19 @@
+.c-modal-backdrop.c-modal-backdrop--visible(style="position:absolute;z-index:0;")
+
+.c-modal.c-modal--medium.c-modal--footerless(role="dialog" aria-labelledby="modalTitle-01")
+    .c-modal__push
+    .c-modal__header.c-modal__header--bordered
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__left
+                .c-toolbar__item
+                    h2#modalTitle-01.c-modal__title Modal Window
+            .c-toolbar__item
+                button.c-button.c-button--borderless.c-button--icon(data-modal-close aria-label="Close dialog")
+                    .c-button__content
+                        +icon('close')
+
+    .c-modal__body
+        .u-spacer-l
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    .c-modal__push

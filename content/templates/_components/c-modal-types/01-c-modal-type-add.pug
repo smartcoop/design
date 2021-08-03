@@ -1,0 +1,51 @@
+.c-modal-backdrop.c-modal-backdrop--visible(style="position:absolute;z-index:0;")
+
+.c-modal.c-modal--medium(role="dialog" aria-labelledby="modalTitle-01")
+    .c-modal__push
+    .c-modal__header.c-modal__header--bordered
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__left
+                .c-toolbar__item
+                    h2#modalTitle-01.c-modal__title Modal Window
+            .c-toolbar__item
+                button.c-button.c-button--borderless.c-button--icon(data-modal-close aria-label="Close dialog")
+                    .c-button__content
+                        +icon('close')
+
+    .c-modal__body
+        .u-spacer-l
+            .o-form-group-layout.o-form-group-layout--horizontal
+
+                .o-form-group
+                    label.o-form-group__label(for="nameId") Name
+                    .o-form-group__controls
+                        input.c-input(type="email" value="" id="nameId")
+
+                .o-form-group
+                    label.o-form-group__label(for="emailId") Email address
+                    .o-form-group__controls
+                        input.c-input(type="email" value="" id="emailId")
+
+                .o-form-group
+                    label.o-form-group__label(for="selectId") Preference
+                    .c-select-holder
+                        select.c-select(id="selectId")
+                            option Option A
+                            option Option B
+                            option Option C
+
+    .c-modal__footer.c-modal__footer--bordered
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__left
+                .c-toolbar__item
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        button.c-button.c-button--secondary(data-modal-close)
+                                .c-button__content
+                                    .c-button__label Cancel
+                        button.c-button.c-button--primary(data-modal-close)
+                                .c-button__content
+                                    +icon('add')
+                                    .c-button__label Add
+    .c-modal__push

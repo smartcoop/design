@@ -1,0 +1,21 @@
+.c-modal-backdrop.c-modal-backdrop--visible(style="position:absolute;z-index:0;")
+
+.c-modal.c-modal--small(role="dialog" aria-labelledby="modalTitle-02")
+    .c-modal__push
+    .c-modal__body
+        .u-spacer-l.u-spacer-bottom-auto
+            h3.c-h3 Modal Window
+            p.u-p-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+    .c-modal__footer
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        button.c-button.c-button--secondary(data-modal-close)
+                                .c-button__content
+                                    .c-button__label Cancel
+                        button.c-button.c-button--primary(data-modal-close)
+                                .c-button__content
+                                    .c-button__label Save
+    .c-modal__push
