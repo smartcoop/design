@@ -77,12 +77,10 @@
 
 .c-styleguide-svg-icons {
   flex-wrap: nowrap;
-  -moz-column-count: 4;
-       column-count: 4; }
+  column-count: 4; }
 
 .c-styleguide-svg-icon {
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
+  break-inside: avoid;
   display: flex;
   align-items: center;
   padding: 0.8rem 0; }

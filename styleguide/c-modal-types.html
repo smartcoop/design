@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html class="br-styleguide br-styleguide-default-styles-active" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Modal types - Styleguide - Smart Coop
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/prism-styleguide.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+</head>
+
+<body class="u-maximize-height u-overflow-hidden">
+    <div class="br-prototype-wrapper">
+        <div class="br-prototype-nav" id="__prototype-nav" aria-hidden="true">
+            <div class="br-prototype-nav-inner">
+                <h4 class="br-prototype-nav-main-heading">Prototype navigation</h4>
+                <p class="br-prototype-nav-text">Press Ctrl + M to toggle this navigation or click <a class="br-prototype-close-nav" href="#">here</a>.</p>
+                <div id="br-page-tree">
+                    <ul class="br-bordered-list">
+                        <li>
+                            <a href="/styleguide">Styleguide</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/404.html">404</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/index.html">index</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/page-index.html">page-index</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/sample-page.html">sample-page</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="br-prototype-content">
+            <div class="br-styleguide-container">
+                <div class="br-styleguide-navigation-wrapper-ie">
+                    <div class="br-styleguide-header">
+                        <a href="/styleguide">
+                            <img class="br-styleguide-logo" src="/images/logo.svg" alt="Smart Coop" width="140">
+                        </a>
+                    </div>
+                    <div class="br-styleguide-search">
+                        <input class="c-input" id="styleguideSearch" type="search" placeholder="Search components...">
+                    </div>
+                    <div class="br-styleguide-navigation-holder">
+                        <div class="br-styleguide-nav-holder">
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Style guide</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/docs/introduction.html">Introduction</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Development documentation</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/docs/browser-support.html">Browser support</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/docs/changelog.html">Changelog</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/docs/css-architecture.html">CSS architecture</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/docs/css-component-structure.html">CSS component structure</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Basics</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/aov-colors.html"> Colors</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/aov-icons.html"> Icons</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/aov-typography.html"> Typography</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Components</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-alert.html"> Alerts</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-avatar.html"> Avatar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-button-skins.html"> Buttons (skins)</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-button-types.html"> Buttons (types)</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-dropdown.html"> Dropdown</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-empty-state.html"> Empty state</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-inputs-selection.html"> Inputs (selection)</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-inputs-text.html"> Inputs (text)</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-inputs-toggles.html"> Inputs (toggles)</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-modal-sizes.html"> Modal sizes</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-modal-types.html"> Modal types</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-panel.html"> Panel</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-popover.html"> Popover</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-sidebar.html"> Sidebar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-status-pill.html"> Status pills</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-table.html"> Tables</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-toolbar.html"> Toolbar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-tooltip.html"> Tooltip</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-styleguide-content">
+                    <div class="br-styleguide-content-inner">
+                        <div class="br-componentgroup-header-wrapper">
+                            <h1 class="br-componentgroup-header c-h2">Modal types</h1>
+                        </div>
+                        <div class="br-content c-content">
+                            <p>This page documents the different modal types.</p>
+
+                        </div>
+                        <div class="br-sample" id="component-01-c-modal-footerless">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Modal footerless</h3>
+                                <a class="br-sample-header-link" href="#component-01-c-modal-footerless">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-content">
+                                <div class="c-modal-backdrop c-modal-backdrop--visible" style="position:absolute;z-index:0;"></div>
+                                <div class="c-modal c-modal--medium c-modal--footerless" role="dialog" aria-labelledby="modalTitle-01">
+                                    <div class="c-modal__push"></div>
+                                    <div class="c-modal__header c-modal__header--bordered">
+                                        <div class="c-toolbar c-toolbar--spaced">
+                                            <div class="c-toolbar__left">
+                                                <div class="c-toolbar__item">
+                                                    <h2 class="c-modal__title" id="modalTitle-01">Modal Window</h2>
+                                                </div>
+                                            </div>
+                                            <div class="c-toolbar__item">
+                                                <button class="c-button c-button--borderless c-button--icon" data-modal-close="data-modal-close" aria-label="Close dialog">
+                                                    <div class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-close  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__body">
+                                        <div class="u-spacer-l">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__push"></div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-modal-backdrop c-modal-backdrop--visible&quot; style=&quot;position:absolute;z-index:0;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;c-modal c-modal--medium c-modal--footerless&quot; role=&quot;dialog&quot; aria-labelledby=&quot;modalTitle-01&quot;&gt;
+    &lt;div class=&quot;c-modal__push&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;c-modal__header c-modal__header--bordered&quot;&gt;
+        &lt;div class=&quot;c-toolbar c-toolbar--spaced&quot;&gt;
+            &lt;div class=&quot;c-toolbar__left&quot;&gt;
+                &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                    &lt;h2 class=&quot;c-modal__title&quot; id=&quot;modalTitle-01&quot;&gt;Modal Window&lt;/h2&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                &lt;button class=&quot;c-button c-button--borderless c-button--icon&quot; data-modal-close=&quot;data-modal-close&quot; aria-label=&quot;Close dialog&quot;&gt;
+                    &lt;div class=&quot;c-button__content&quot;&gt;
+                        &lt;div class=&quot;o-svg-icon o-svg-icon-close  &quot;&gt;
+                            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                &lt;path d=&quot;M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__body&quot;&gt;
+        &lt;div class=&quot;u-spacer-l&quot;&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__push&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.c-modal-backdrop.c-modal-backdrop--visible(style=&quot;position:absolute;z-index:0;&quot;)
+
+.c-modal.c-modal--medium.c-modal--footerless(role=&quot;dialog&quot; aria-labelledby=&quot;modalTitle-01&quot;)
+    .c-modal__push
+    .c-modal__header.c-modal__header--bordered
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__left
+                .c-toolbar__item
+                    h2#modalTitle-01.c-modal__title Modal Window
+            .c-toolbar__item
+                button.c-button.c-button--borderless.c-button--icon(data-modal-close aria-label=&quot;Close dialog&quot;)
+                    .c-button__content
+                        +icon('close')
+
+    .c-modal__body
+        .u-spacer-l
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    .c-modal__push
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-01-c-modal-type-add">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Modal type (add)</h3>
+                                <a class="br-sample-header-link" href="#component-01-c-modal-type-add">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content">
+                                <p>Adding something simple, with a few form fields.</p>
+                            </div>
+                            <div class="br-sample-content">
+                                <div class="c-modal-backdrop c-modal-backdrop--visible" style="position:absolute;z-index:0;"></div>
+                                <div class="c-modal c-modal--medium" role="dialog" aria-labelledby="modalTitle-01">
+                                    <div class="c-modal__push"></div>
+                                    <div class="c-modal__header c-modal__header--bordered">
+                                        <div class="c-toolbar c-toolbar--spaced">
+                                            <div class="c-toolbar__left">
+                                                <div class="c-toolbar__item">
+                                                    <h2 class="c-modal__title" id="modalTitle-01">Modal Window</h2>
+                                                </div>
+                                            </div>
+                                            <div class="c-toolbar__item">
+                                                <button class="c-button c-button--borderless c-button--icon" data-modal-close="data-modal-close" aria-label="Close dialog">
+                                                    <div class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-close  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__body">
+                                        <div class="u-spacer-l">
+                                            <div class="o-form-group-layout o-form-group-layout--horizontal">
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="nameId">Name</label>
+                                                    <div class="o-form-group__controls">
+                                                        <input class="c-input" type="email" value="" id="nameId" />
+                                                    </div>
+                                                </div>
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="emailId">Email address</label>
+                                                    <div class="o-form-group__controls">
+                                                        <input class="c-input" type="email" value="" id="emailId" />
+                                                    </div>
+                                                </div>
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="selectId">Preference</label>
+                                                    <div class="c-select-holder">
+                                                        <select class="c-select" id="selectId">
+                                                            <option>Option A</option>
+                                                            <option>Option B</option>
+                                                            <option>Option C</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__footer c-modal__footer--bordered">
+                                        <div class="c-toolbar c-toolbar--spaced">
+                                            <div class="c-toolbar__left">
+                                                <div class="c-toolbar__item"></div>
+                                            </div>
+                                            <div class="c-toolbar__right">
+                                                <div class="c-toolbar__item">
+                                                    <div class="c-button-toolbar">
+                                                        <button class="c-button c-button--secondary" data-modal-close="data-modal-close">
+                                                            <div class="c-button__content">
+                                                                <div class="c-button__label">Cancel</div>
+                                                            </div>
+                                                        </button>
+                                                        <button class="c-button c-button--primary" data-modal-close="data-modal-close">
+                                                            <div class="c-button__content">
+                                                                <div class="o-svg-icon o-svg-icon-add  ">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="c-button__label">Add</div>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__push"></div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-modal-backdrop c-modal-backdrop--visible&quot; style=&quot;position:absolute;z-index:0;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;c-modal c-modal--medium&quot; role=&quot;dialog&quot; aria-labelledby=&quot;modalTitle-01&quot;&gt;
+    &lt;div class=&quot;c-modal__push&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;c-modal__header c-modal__header--bordered&quot;&gt;
+        &lt;div class=&quot;c-toolbar c-toolbar--spaced&quot;&gt;
+            &lt;div class=&quot;c-toolbar__left&quot;&gt;
+                &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                    &lt;h2 class=&quot;c-modal__title&quot; id=&quot;modalTitle-01&quot;&gt;Modal Window&lt;/h2&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                &lt;button class=&quot;c-button c-button--borderless c-button--icon&quot; data-modal-close=&quot;data-modal-close&quot; aria-label=&quot;Close dialog&quot;&gt;
+                    &lt;div class=&quot;c-button__content&quot;&gt;
+                        &lt;div class=&quot;o-svg-icon o-svg-icon-close  &quot;&gt;
+                            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                &lt;path d=&quot;M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__body&quot;&gt;
+        &lt;div class=&quot;u-spacer-l&quot;&gt;
+            &lt;div class=&quot;o-form-group-layout o-form-group-layout--horizontal&quot;&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;nameId&quot;&gt;Name&lt;/label&gt;
+                    &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                        &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;&quot; id=&quot;nameId&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;emailId&quot;&gt;Email address&lt;/label&gt;
+                    &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                        &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;&quot; id=&quot;emailId&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;selectId&quot;&gt;Preference&lt;/label&gt;
+                    &lt;div class=&quot;c-select-holder&quot;&gt;
+                        &lt;select class=&quot;c-select&quot; id=&quot;selectId&quot;&gt;
+                            &lt;option&gt;Option A&lt;/option&gt;
+                            &lt;option&gt;Option B&lt;/option&gt;
+                            &lt;option&gt;Option C&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__footer c-modal__footer--bordered&quot;&gt;
+        &lt;div class=&quot;c-toolbar c-toolbar--spaced&quot;&gt;
+            &lt;div class=&quot;c-toolbar__left&quot;&gt;
+                &lt;div class=&quot;c-toolbar__item&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;c-toolbar__right&quot;&gt;
+                &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                    &lt;div class=&quot;c-button-toolbar&quot;&gt;
+                        &lt;button class=&quot;c-button c-button--secondary&quot; data-modal-close=&quot;data-modal-close&quot;&gt;
+                            &lt;div class=&quot;c-button__content&quot;&gt;
+                                &lt;div class=&quot;c-button__label&quot;&gt;Cancel&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+                        &lt;button class=&quot;c-button c-button--primary&quot; data-modal-close=&quot;data-modal-close&quot;&gt;
+                            &lt;div class=&quot;c-button__content&quot;&gt;
+                                &lt;div class=&quot;o-svg-icon o-svg-icon-add  &quot;&gt;
+                                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                        &lt;path d=&quot;M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z&quot; fill=&quot;#595959&quot; /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;c-button__label&quot;&gt;Add&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__push&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.c-modal-backdrop.c-modal-backdrop--visible(style=&quot;position:absolute;z-index:0;&quot;)
+
+.c-modal.c-modal--medium(role=&quot;dialog&quot; aria-labelledby=&quot;modalTitle-01&quot;)
+    .c-modal__push
+    .c-modal__header.c-modal__header--bordered
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__left
+                .c-toolbar__item
+                    h2#modalTitle-01.c-modal__title Modal Window
+            .c-toolbar__item
+                button.c-button.c-button--borderless.c-button--icon(data-modal-close aria-label=&quot;Close dialog&quot;)
+                    .c-button__content
+                        +icon('close')
+
+    .c-modal__body
+        .u-spacer-l
+            .o-form-group-layout.o-form-group-layout--horizontal
+
+                .o-form-group
+                    label.o-form-group__label(for=&quot;nameId&quot;) Name
+                    .o-form-group__controls
+                        input.c-input(type=&quot;email&quot; value=&quot;&quot; id=&quot;nameId&quot;)
+
+                .o-form-group
+                    label.o-form-group__label(for=&quot;emailId&quot;) Email address
+                    .o-form-group__controls
+                        input.c-input(type=&quot;email&quot; value=&quot;&quot; id=&quot;emailId&quot;)
+
+                .o-form-group
+                    label.o-form-group__label(for=&quot;selectId&quot;) Preference
+                    .c-select-holder
+                        select.c-select(id=&quot;selectId&quot;)
+                            option Option A
+                            option Option B
+                            option Option C
+
+    .c-modal__footer.c-modal__footer--bordered
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__left
+                .c-toolbar__item
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        button.c-button.c-button--secondary(data-modal-close)
+                                .c-button__content
+                                    .c-button__label Cancel
+                        button.c-button.c-button--primary(data-modal-close)
+                                .c-button__content
+                                    +icon('add')
+                                    .c-button__label Add
+    .c-modal__push
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-02-c-modal-type-edit">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Modal type (edit)</h3>
+                                <a class="br-sample-header-link" href="#component-02-c-modal-type-edit">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content">
+                                <p>Editing something simple, with a few form fields.</p>
+                            </div>
+                            <div class="br-sample-content">
+                                <div class="c-modal-backdrop c-modal-backdrop--visible" style="position:absolute;z-index:0;"></div>
+                                <div class="c-modal c-modal--medium" role="dialog" aria-labelledby="modalTitle-02">
+                                    <div class="c-modal__push"></div>
+                                    <div class="c-modal__header c-modal__header--bordered">
+                                        <div class="c-toolbar c-toolbar--spaced">
+                                            <div class="c-toolbar__left">
+                                                <div class="c-toolbar__item">
+                                                    <h2 class="c-modal__title" id="modalTitle-02">Modal Window</h2>
+                                                </div>
+                                            </div>
+                                            <div class="c-toolbar__item">
+                                                <button class="c-button c-button--borderless c-button--icon" data-modal-close="data-modal-close" aria-label="Close dialog">
+                                                    <div class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-close  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__body">
+                                        <div class="u-spacer-l">
+                                            <div class="o-form-group-layout o-form-group-layout--horizontal">
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="nameId">Name</label>
+                                                    <div class="o-form-group__controls">
+                                                        <input class="c-input" type="email" value="John Doe" id="nameId" />
+                                                    </div>
+                                                </div>
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="emailId">Email address</label>
+                                                    <div class="o-form-group__controls">
+                                                        <input class="c-input" type="email" value="user@name.com" id="emailId" />
+                                                    </div>
+                                                </div>
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="passwordId">Password</label>
+                                                    <div class="o-form-group__controls">
+                                                        <input class="c-input" type="password" value="password" id="passwordId" />
+                                                    </div>
+                                                </div>
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="selectId">Preference</label>
+                                                    <div class="c-select-holder">
+                                                        <select class="c-select" id="selectId">
+                                                            <option>Option A</option>
+                                                            <option>Option B</option>
+                                                            <option>Option C</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__footer c-modal__footer--bordered">
+                                        <div class="c-toolbar c-toolbar--spaced">
+                                            <div class="c-toolbar__left">
+                                                <div class="c-toolbar__item"></div>
+                                            </div>
+                                            <div class="c-toolbar__right">
+                                                <div class="c-toolbar__item">
+                                                    <div class="c-button-toolbar">
+                                                        <button class="c-button c-button--secondary" data-modal-close="data-modal-close">
+                                                            <div class="c-button__content">
+                                                                <div class="c-button__label">Cancel</div>
+                                                            </div>
+                                                        </button>
+                                                        <button class="c-button c-button--primary" data-modal-close="data-modal-close">
+                                                            <div class="c-button__content">
+                                                                <div class="c-button__label">Save</div>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__push"></div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-modal-backdrop c-modal-backdrop--visible&quot; style=&quot;position:absolute;z-index:0;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;c-modal c-modal--medium&quot; role=&quot;dialog&quot; aria-labelledby=&quot;modalTitle-02&quot;&gt;
+    &lt;div class=&quot;c-modal__push&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;c-modal__header c-modal__header--bordered&quot;&gt;
+        &lt;div class=&quot;c-toolbar c-toolbar--spaced&quot;&gt;
+            &lt;div class=&quot;c-toolbar__left&quot;&gt;
+                &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                    &lt;h2 class=&quot;c-modal__title&quot; id=&quot;modalTitle-02&quot;&gt;Modal Window&lt;/h2&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                &lt;button class=&quot;c-button c-button--borderless c-button--icon&quot; data-modal-close=&quot;data-modal-close&quot; aria-label=&quot;Close dialog&quot;&gt;
+                    &lt;div class=&quot;c-button__content&quot;&gt;
+                        &lt;div class=&quot;o-svg-icon o-svg-icon-close  &quot;&gt;
+                            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                &lt;path d=&quot;M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__body&quot;&gt;
+        &lt;div class=&quot;u-spacer-l&quot;&gt;
+            &lt;div class=&quot;o-form-group-layout o-form-group-layout--horizontal&quot;&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;nameId&quot;&gt;Name&lt;/label&gt;
+                    &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                        &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;nameId&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;emailId&quot;&gt;Email address&lt;/label&gt;
+                    &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                        &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;emailId&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;passwordId&quot;&gt;Password&lt;/label&gt;
+                    &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                        &lt;input class=&quot;c-input&quot; type=&quot;password&quot; value=&quot;password&quot; id=&quot;passwordId&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;selectId&quot;&gt;Preference&lt;/label&gt;
+                    &lt;div class=&quot;c-select-holder&quot;&gt;
+                        &lt;select class=&quot;c-select&quot; id=&quot;selectId&quot;&gt;
+                            &lt;option&gt;Option A&lt;/option&gt;
+                            &lt;option&gt;Option B&lt;/option&gt;
+                            &lt;option&gt;Option C&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__footer c-modal__footer--bordered&quot;&gt;
+        &lt;div class=&quot;c-toolbar c-toolbar--spaced&quot;&gt;
+            &lt;div class=&quot;c-toolbar__left&quot;&gt;
+                &lt;div class=&quot;c-toolbar__item&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;c-toolbar__right&quot;&gt;
+                &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                    &lt;div class=&quot;c-button-toolbar&quot;&gt;
+                        &lt;button class=&quot;c-button c-button--secondary&quot; data-modal-close=&quot;data-modal-close&quot;&gt;
+                            &lt;div class=&quot;c-button__content&quot;&gt;
+                                &lt;div class=&quot;c-button__label&quot;&gt;Cancel&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+                        &lt;button class=&quot;c-button c-button--primary&quot; data-modal-close=&quot;data-modal-close&quot;&gt;
+                            &lt;div class=&quot;c-button__content&quot;&gt;
+                                &lt;div class=&quot;c-button__label&quot;&gt;Save&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__push&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.c-modal-backdrop.c-modal-backdrop--visible(style=&quot;position:absolute;z-index:0;&quot;)
+
+.c-modal.c-modal--medium(role=&quot;dialog&quot; aria-labelledby=&quot;modalTitle-02&quot;)
+    .c-modal__push
+    .c-modal__header.c-modal__header--bordered
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__left
+                .c-toolbar__item
+                    h2#modalTitle-02.c-modal__title Modal Window
+            .c-toolbar__item
+                button.c-button.c-button--borderless.c-button--icon(data-modal-close aria-label=&quot;Close dialog&quot;)
+                    .c-button__content
+                        +icon('close')
+
+    .c-modal__body
+        .u-spacer-l
+            .o-form-group-layout.o-form-group-layout--horizontal
+
+                .o-form-group
+                    label.o-form-group__label(for=&quot;nameId&quot;) Name
+                    .o-form-group__controls
+                        input.c-input(type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;nameId&quot;)
+
+                .o-form-group
+                    label.o-form-group__label(for=&quot;emailId&quot;) Email address
+                    .o-form-group__controls
+                        input.c-input(type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;emailId&quot;)
+
+                .o-form-group
+                    label.o-form-group__label(for=&quot;passwordId&quot;) Password
+                    .o-form-group__controls
+                        input.c-input(type=&quot;password&quot; value=&quot;password&quot; id=&quot;passwordId&quot;)
+
+                .o-form-group
+                    label.o-form-group__label(for=&quot;selectId&quot;) Preference
+                    .c-select-holder
+                        select.c-select(id=&quot;selectId&quot;)
+                            option Option A
+                            option Option B
+                            option Option C
+
+    .c-modal__footer.c-modal__footer--bordered
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__left
+                .c-toolbar__item
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        button.c-button.c-button--secondary(data-modal-close)
+                                .c-button__content
+                                    .c-button__label Cancel
+                        button.c-button.c-button--primary(data-modal-close)
+                                .c-button__content
+                                    .c-button__label Save
+    .c-modal__push
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-04-c-modal-type-delete">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Modal type (delete)</h3>
+                                <a class="br-sample-header-link" href="#component-04-c-modal-type-delete">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content">
+                                <p>A warning when you are about to delete an item.</p>
+                            </div>
+                            <div class="br-sample-content">
+                                <div class="c-modal-backdrop c-modal-backdrop--visible" style="position:absolute;z-index:0;"></div>
+                                <div class="c-modal c-modal--small" role="dialog">
+                                    <div class="c-modal__push"></div>
+                                    <div class="c-modal__body">
+                                        <div class="c-modal__content">
+                                            <h3 class="c-h3">Are you sure?</h3>
+                                            <p class="u-m-0">Are you sure want to delete this item?</p>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__footer">
+                                        <div class="c-toolbar c-toolbar--spaced">
+                                            <div class="c-toolbar__right">
+                                                <div class="c-toolbar__item">
+                                                    <div class="c-button-toolbar">
+                                                        <button class="c-button c-button--secondary" data-modal-close="data-modal-close">
+                                                            <div class="c-button__content">
+                                                                <div class="c-button__label">Cancel</div>
+                                                            </div>
+                                                        </button>
+                                                        <button class="c-button c-button--primary" data-modal-close="data-modal-close">
+                                                            <div class="c-button__content">
+                                                                <div class="o-svg-icon o-svg-icon-delete  ">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M7 4C7 2.89543 7.89543 2 9 2H15C16.1046 2 17 2.89543 17 4V6H18.9897C18.9959 5.99994 19.0021 5.99994 19.0083 6H21C21.5523 6 22 6.44772 22 7C22 7.55228 21.5523 8 21 8H19.9311L19.0638 20.1425C18.989 21.1891 18.1182 22 17.0689 22H6.93112C5.88184 22 5.01096 21.1891 4.9362 20.1425L4.06888 8H3C2.44772 8 2 7.55228 2 7C2 6.44772 2.44772 6 3 6H4.99174C4.99795 5.99994 5.00414 5.99994 5.01032 6H7V4ZM9 6H15V4H9V6ZM6.07398 8L6.93112 20H17.0689L17.926 8H6.07398ZM10 10C10.5523 10 11 10.4477 11 11V17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17V11C9 10.4477 9.44772 10 10 10ZM14 10C14.5523 10 15 10.4477 15 11V17C15 17.5523 14.5523 18 14 18C13.4477 18 13 17.5523 13 17V11C13 10.4477 13.4477 10 14 10Z" fill="#595959" />
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="c-button__label">Delete</div>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-modal__push"></div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-modal-backdrop c-modal-backdrop--visible&quot; style=&quot;position:absolute;z-index:0;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;c-modal c-modal--small&quot; role=&quot;dialog&quot;&gt;
+    &lt;div class=&quot;c-modal__push&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;c-modal__body&quot;&gt;
+        &lt;div class=&quot;c-modal__content&quot;&gt;
+            &lt;h3 class=&quot;c-h3&quot;&gt;Are you sure?&lt;/h3&gt;
+            &lt;p class=&quot;u-m-0&quot;&gt;Are you sure want to delete this item?&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__footer&quot;&gt;
+        &lt;div class=&quot;c-toolbar c-toolbar--spaced&quot;&gt;
+            &lt;div class=&quot;c-toolbar__right&quot;&gt;
+                &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                    &lt;div class=&quot;c-button-toolbar&quot;&gt;
+                        &lt;button class=&quot;c-button c-button--secondary&quot; data-modal-close=&quot;data-modal-close&quot;&gt;
+                            &lt;div class=&quot;c-button__content&quot;&gt;
+                                &lt;div class=&quot;c-button__label&quot;&gt;Cancel&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+                        &lt;button class=&quot;c-button c-button--primary&quot; data-modal-close=&quot;data-modal-close&quot;&gt;
+                            &lt;div class=&quot;c-button__content&quot;&gt;
+                                &lt;div class=&quot;o-svg-icon o-svg-icon-delete  &quot;&gt;
+                                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                        &lt;path d=&quot;M7 4C7 2.89543 7.89543 2 9 2H15C16.1046 2 17 2.89543 17 4V6H18.9897C18.9959 5.99994 19.0021 5.99994 19.0083 6H21C21.5523 6 22 6.44772 22 7C22 7.55228 21.5523 8 21 8H19.9311L19.0638 20.1425C18.989 21.1891 18.1182 22 17.0689 22H6.93112C5.88184 22 5.01096 21.1891 4.9362 20.1425L4.06888 8H3C2.44772 8 2 7.55228 2 7C2 6.44772 2.44772 6 3 6H4.99174C4.99795 5.99994 5.00414 5.99994 5.01032 6H7V4ZM9 6H15V4H9V6ZM6.07398 8L6.93112 20H17.0689L17.926 8H6.07398ZM10 10C10.5523 10 11 10.4477 11 11V17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17V11C9 10.4477 9.44772 10 10 10ZM14 10C14.5523 10 15 10.4477 15 11V17C15 17.5523 14.5523 18 14 18C13.4477 18 13 17.5523 13 17V11C13 10.4477 13.4477 10 14 10Z&quot; fill=&quot;#595959&quot; /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;c-button__label&quot;&gt;Delete&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-modal__push&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.c-modal-backdrop.c-modal-backdrop--visible(style=&quot;position:absolute;z-index:0;&quot;)
+
+.c-modal.c-modal--small(role=&quot;dialog&quot;)
+    .c-modal__push
+    .c-modal__body
+        .c-modal__content
+            h3.c-h3 Are you sure?
+            p.u-m-0 Are you sure want to delete this item?
+    .c-modal__footer
+        .c-toolbar.c-toolbar--spaced
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        button.c-button.c-button--secondary(data-modal-close)
+                                .c-button__content
+                                    .c-button__label Cancel
+                        button.c-button.c-button--primary(data-modal-close)
+                                .c-button__content
+                                    +icon('delete')
+                                    .c-button__label Delete
+    .c-modal__push
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Avatar - Styleguide - Smart Coop
+    <title>Status pills - Styleguide - Smart Coop
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -165,157 +165,157 @@
                 <div class="br-styleguide-content">
                     <div class="br-styleguide-content-inner">
                         <div class="br-componentgroup-header-wrapper">
-                            <h1 class="br-componentgroup-header c-h2">Avatar</h1>
+                            <h1 class="br-componentgroup-header c-h2">Status pills</h1>
                         </div>
                         <div class="br-content c-content">
                         </div>
-                        <div class="br-sample" id="component-01-c-avatar-small">
+                        <div class="br-sample" id="component-01-c-status-pill-default">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Small</h3>
-                                <a class="br-sample-header-link" href="#component-01-c-avatar-small">#</a>
+                                <h3 class="br-sample-heading c-h3">Status pill default</h3>
+                                <a class="br-sample-header-link" href="#component-01-c-status-pill-default">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
-                                <div class="c-avatar c-avatar--default c-avatar--small">
-                                    <div class="o-svg-icon o-svg-icon-user o-svg-icon--small ">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <span class="c-status-pill c-status-pill--default">
+                                    <span class="c-status-pill__circle"></span>
+                                    <span class="c-status-pill__label">Default</span>
+                                </span>
                             </div>
                             <div class="br-sample-footer">
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-avatar c-avatar--default c-avatar--small&quot;&gt;
-    &lt;div class=&quot;o-svg-icon o-svg-icon-user o-svg-icon--small &quot;&gt;
-        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-            &lt;path d=&quot;M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z&quot; fill=&quot;#595959&quot; /&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;span class=&quot;c-status-pill c-status-pill--default&quot;&gt;
+    &lt;span class=&quot;c-status-pill__circle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;c-status-pill__label&quot;&gt;Default&lt;/span&gt;
+&lt;/span&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">+c-avatar({size: 'small'})
+                                    <pre class="br-sample-markup br-sample-markup-pug">+c-status-pill({}) Default
 </pre>
                                 </div>
                             </div>
                         </div>
-                        <div class="br-sample" id="component-02-c-avatar-regular">
+                        <div class="br-sample" id="component-02-c-status-pill-pending">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Regular</h3>
-                                <a class="br-sample-header-link" href="#component-02-c-avatar-regular">#</a>
+                                <h3 class="br-sample-heading c-h3">Status pill pending</h3>
+                                <a class="br-sample-header-link" href="#component-02-c-status-pill-pending">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
-                                <div class="c-avatar c-avatar--default c-avatar--regular">
-                                    <div class="o-svg-icon o-svg-icon-user o-svg-icon--regular ">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <span class="c-status-pill c-status-pill--pending">
+                                    <span class="c-status-pill__circle"></span>
+                                    <span class="c-status-pill__label">Pending</span>
+                                </span>
                             </div>
                             <div class="br-sample-footer">
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-avatar c-avatar--default c-avatar--regular&quot;&gt;
-    &lt;div class=&quot;o-svg-icon o-svg-icon-user o-svg-icon--regular &quot;&gt;
-        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-            &lt;path d=&quot;M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z&quot; fill=&quot;#595959&quot; /&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;span class=&quot;c-status-pill c-status-pill--pending&quot;&gt;
+    &lt;span class=&quot;c-status-pill__circle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;c-status-pill__label&quot;&gt;Pending&lt;/span&gt;
+&lt;/span&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">+c-avatar({})
+                                    <pre class="br-sample-markup br-sample-markup-pug">+c-status-pill({skin: 'pending'}) Pending
 </pre>
                                 </div>
                             </div>
                         </div>
-                        <div class="br-sample" id="component-03-c-avatar-image">
+                        <div class="br-sample" id="component-03-c-status-pill-success">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Image</h3>
-                                <a class="br-sample-header-link" href="#component-03-c-avatar-image">#</a>
+                                <h3 class="br-sample-heading c-h3">Status pill success</h3>
+                                <a class="br-sample-header-link" href="#component-03-c-status-pill-success">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
-                                <div class="c-avatar c-avatar--img c-avatar--regular">
-                                    <img src="http://placekitten.com/500/500" alt="avatar" />
-                                </div>
+                                <span class="c-status-pill c-status-pill--success">
+                                    <span class="c-status-pill__circle"></span>
+                                    <span class="c-status-pill__label">Success</span>
+                                </span>
                             </div>
                             <div class="br-sample-footer">
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-avatar c-avatar--img c-avatar--regular&quot;&gt;
-    &lt;img src=&quot;http://placekitten.com/500/500&quot; alt=&quot;avatar&quot; /&gt;
-&lt;/div&gt;</pre>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;span class=&quot;c-status-pill c-status-pill--success&quot;&gt;
+    &lt;span class=&quot;c-status-pill__circle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;c-status-pill__label&quot;&gt;Success&lt;/span&gt;
+&lt;/span&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">+c-avatar({img: 'http://placekitten.com/500/500', alt: 'avatar'})
+                                    <pre class="br-sample-markup br-sample-markup-pug">+c-status-pill({skin: 'success'}) Success
 </pre>
                                 </div>
                             </div>
                         </div>
-                        <div class="br-sample" id="component-04-c-avatar-text">
+                        <div class="br-sample" id="component-04-c-status-pill-danger">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Avatar and text</h3>
-                                <a class="br-sample-header-link" href="#component-04-c-avatar-text">#</a>
+                                <h3 class="br-sample-heading c-h3">Status pill danger</h3>
+                                <a class="br-sample-header-link" href="#component-04-c-status-pill-danger">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
-                                <div class="c-avatar-and-text">
-                                    <div class="c-avatar c-avatar--default c-avatar--small">
-                                        <div class="o-svg-icon o-svg-icon-user o-svg-icon--small ">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="c-avatar-and-text__text">
-                                        <p>John Doe</p>
-                                    </div>
-                                </div>
+                                <span class="c-status-pill c-status-pill--danger">
+                                    <span class="c-status-pill__circle"></span>
+                                    <span class="c-status-pill__label">Refused</span>
+                                </span>
                             </div>
                             <div class="br-sample-footer">
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-avatar-and-text&quot;&gt;
-    &lt;div class=&quot;c-avatar c-avatar--default c-avatar--small&quot;&gt;
-        &lt;div class=&quot;o-svg-icon o-svg-icon-user o-svg-icon--small &quot;&gt;
-            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                &lt;path d=&quot;M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z&quot; fill=&quot;#595959&quot; /&gt;
-            &lt;/svg&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-avatar-and-text__text&quot;&gt;
-        &lt;p&gt;John Doe&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;span class=&quot;c-status-pill c-status-pill--danger&quot;&gt;
+    &lt;span class=&quot;c-status-pill__circle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;c-status-pill__label&quot;&gt;Refused&lt;/span&gt;
+&lt;/span&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">.c-avatar-and-text
-    +c-avatar({size: 'small'})
-    .c-avatar-and-text__text
-        p John Doe
+                                    <pre class="br-sample-markup br-sample-markup-pug">+c-status-pill({skin: 'danger'}) Refused
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-05-c-status-pill-warning">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Status pill warning</h3>
+                                <a class="br-sample-header-link" href="#component-05-c-status-pill-warning">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-content">
+                                <span class="c-status-pill c-status-pill--warning">
+                                    <span class="c-status-pill__circle"></span>
+                                    <span class="c-status-pill__label">Warning</span>
+                                </span>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;span class=&quot;c-status-pill c-status-pill--warning&quot;&gt;
+    &lt;span class=&quot;c-status-pill__circle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;c-status-pill__label&quot;&gt;Warning&lt;/span&gt;
+&lt;/span&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">+c-status-pill({skin: 'warning'}) Warning
 </pre>
                                 </div>
                             </div>
                         </div>
                         <div class="br-componentgroup-footer-wrapper">
-                            <h1 class="br-componentgroup-footer c-h2">Possible parameters for avatars</h1>
+                            <h1 class="br-componentgroup-footer c-h2">Possible parameters for alerts</h1>
                             <div class="br-content c-content">
                                 <table class="c-table">
                                     <thead>
@@ -328,30 +328,12 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>img</td>
-                                            <td>string</td>
-                                            <td></td>
-                                            <td>Determines if an image is set to an avatar.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>alt</td>
-                                            <td>string</td>
-                                            <td></td>
-                                            <td>Determines if an alt tag is set to an avatar.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>icon</td>
-                                            <td>string</td>
-                                            <td>See <a href="/styleguide/aov-icons.html">icon style guide</a> for available icons.</td>
-                                            <td>This parameter is used for the icon. If an icon is not set, a fallback icon is rendered.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>size</td>
+                                            <td>skin</td>
                                             <td>string</td>
                                             <td>
-                                                <code>regular</code>, <code>small</code>
+                                                <code>default</code>, <code>pending</code>, <code>success</code>, <code>danger</code>, <code>warning</code>
                                             </td>
-                                            <td>Determines the size of an avatar. The default size is set to regular.</td>
+                                            <td>Determines the skin of the status pill</td>
                                         </tr>
                                     </tbody>
                                 </table>

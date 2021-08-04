@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>CSS architecture - Styleguide - Smart Coop
+    <title>Empty state - Styleguide - Smart Coop
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -164,46 +164,125 @@
                 </div>
                 <div class="br-styleguide-content">
                     <div class="br-styleguide-content-inner">
-                        <div class="c-content" style="max-width: 85rem;">
-                            <h1>CSS Architecture</h1>
-                            <div class="u-spacer-top u-spacer-bottom">
-                                <p>Smart Coop's CSS architecture uses a combination of the BEM naming convention and the Inverted Triangle CSS architecture in order to have a maintainable, readable and scalable code structure.</p>
-                                <h3>BEM</h3>
-                                <p>BEM stands for Block Element Modifier and it categorizes the code into three groups:</p>
-                                <ul>
-                                    <li>Blocks which are a standalone entities that are meaningful on their own, for example <code>.c-menu</code>.</li>
-                                    <li>Elements which are part of a block and have no standalone meaning and are semantically tied to a block, for example <code>c-menu__item</code>.</li>
-                                    <li>Modifiers which are variants or flags on a block or element and are used to change the appearance or behavior, for example <code>c-menu--disabled</code>.</li>
-                                </ul>
-                                <p>The BEM naming convention helps to see how classes are related to each other.</p>
-                                <p>For more information about BEM, please refer to this <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">excellent article</a> by Harry Roberts.</p>
-                                <h3>Namespacing and ITCSS</h3>
-                                <p>Odyssee Mobile's CSS architecture uses namespacing. This means that every class in the codebase is prefixed with a certain string to explain what the code does and to avoid style leakage.</p>
-                                <p>The namespaces are also used to separate the code base into different layers and this is where ITCSS comes into place.</p>
-                                <p>The different layers that you find within the ITCSS architecture are, in the following order:</p>
-                                <ul>
-                                    <li>
-                                        <strong>Settings</strong>,which are used with preprocessors and contain font, colors variables.
-                                    </li>
-                                    <li>
-                                        <strong>Tools</strong>, which is a layer used for mixins and functions.
-                                    </li>
-                                    <li>In the <strong>generic</strong> layer you can find ground-zero styles like resets, normalize styles and box-sizing.</li>
-                                    <li>
-                                        <strong>Base Elements</strong> which styles bare, unclassed HTML elements to redefine the default styling from browsers.
-                                    </li>
-                                    <li>
-                                        <strong>Objects</strong>, which is a layer used for undecorated design patterns, it is prefixed with <code>o-</code>.
-                                    </li>
-                                    <li>
-                                        <strong>Components</strong>, which is used to style specific UI components, here you will find the majority of the code and classes within this layer are prefixed with <code>c-</code>.
-                                    </li>
-                                    <li>
-                                        <strong>Utilities</strong>, which are helper and override styles and namespaced with <code>u-</code>.
-                                    </li>
-                                </ul>
-                                <p>The codebase is structured in this order so that it is ordered from generic to explicit styles, low-specificity to more specificity (ID selectors are avoided as much as possible) and far reaching to local styles, which makes the framework scalable and maintainable.</p>
-                                <p>For more information on ITCSS, please refer to this <a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">slideshow</a>.</p>
+                        <div class="br-componentgroup-header-wrapper">
+                            <h1 class="br-componentgroup-header c-h2">Empty state</h1>
+                        </div>
+                        <div class="br-content c-content">
+                        </div>
+                        <div class="br-sample" id="component-01-c-empty-state">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Empty state</h3>
+                                <a class="br-sample-header-link" href="#component-01-c-empty-state">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-content">
+                                <div class="c-empty-state">
+                                    <p class="u-text-muted c-body-1">There are no items yet.</p>
+                                </div>
+                                <div class="c-empty-state c-empty-state--bg-alt">
+                                    <p class="u-text-muted c-body-1">There are no items yet.</p>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-empty-state&quot;&gt;
+    &lt;p class=&quot;u-text-muted c-body-1&quot;&gt;There are no items yet.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-empty-state c-empty-state--bg-alt&quot;&gt;
+    &lt;p class=&quot;u-text-muted c-body-1&quot;&gt;There are no items yet.&lt;/p&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.c-empty-state
+    p.u-text-muted.c-body-1 There are no items yet.
+
+.c-empty-state.c-empty-state--bg-alt
+    p.u-text-muted.c-body-1 There are no items yet.
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-02-c-empty-state-with-action">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Empty state with action</h3>
+                                <a class="br-sample-header-link" href="#component-02-c-empty-state-with-action">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-content">
+                                <div class="c-empty-state">
+                                    <p class="u-text-muted c-body-1">There are no items yet.</p>
+                                    <button class="c-button c-button--primary" type="button">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-add  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <span class="c-button__label">Add item</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="c-empty-state c-empty-state--bg-alt">
+                                    <p class="u-text-muted c-body-1">There are no items yet.</p>
+                                    <button class="c-button c-button--primary" type="button">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-add  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <span class="c-button__label">Add item</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-empty-state&quot;&gt;
+    &lt;p class=&quot;u-text-muted c-body-1&quot;&gt;There are no items yet.&lt;/p&gt;
+    &lt;button class=&quot;c-button c-button--primary&quot; type=&quot;button&quot;&gt;
+        &lt;span class=&quot;c-button__content&quot;&gt;
+            &lt;div class=&quot;o-svg-icon o-svg-icon-add  &quot;&gt;
+                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                    &lt;path d=&quot;M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+            &lt;span class=&quot;c-button__label&quot;&gt;Add item&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-empty-state c-empty-state--bg-alt&quot;&gt;
+    &lt;p class=&quot;u-text-muted c-body-1&quot;&gt;There are no items yet.&lt;/p&gt;
+    &lt;button class=&quot;c-button c-button--primary&quot; type=&quot;button&quot;&gt;
+        &lt;span class=&quot;c-button__content&quot;&gt;
+            &lt;div class=&quot;o-svg-icon o-svg-icon-add  &quot;&gt;
+                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                    &lt;path d=&quot;M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+            &lt;span class=&quot;c-button__label&quot;&gt;Add item&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.c-empty-state
+    p.u-text-muted.c-body-1 There are no items yet.
+    +c-button({skin: 'primary', icon: 'add'}) Add item
+
+.c-empty-state.c-empty-state--bg-alt
+    p.u-text-muted.c-body-1 There are no items yet.
+    +c-button({skin: 'primary', icon: 'add'}) Add item
+</pre>
+                                </div>
                             </div>
                         </div>
                     </div>

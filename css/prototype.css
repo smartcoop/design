@@ -67,15 +67,8 @@
 .cm-animate-fat-cursor {
   width: auto;
   border: 0;
-  -webkit-animation: blink 1.06s steps(1) infinite;
   animation: blink 1.06s steps(1) infinite;
   background-color: #7e7; }
-
-@-webkit-keyframes blink {
-  0% { }
-  50% {
-    background-color: transparent; }
-  100% { } }
 
 @keyframes blink {
   0% { }
@@ -184,9 +177,6 @@
 
 .cm-s-monokai div.CodeMirror-selected {
   background: #49483E; }
-
-.cm-s-monokai .CodeMirror-line::-moz-selection, .cm-s-monokai .CodeMirror-line > span::-moz-selection, .cm-s-monokai .CodeMirror-line > span > span::-moz-selection {
-  background: rgba(73, 72, 62, 0.99); }
 
 .cm-s-monokai .CodeMirror-line::selection, .cm-s-monokai .CodeMirror-line > span::selection, .cm-s-monokai .CodeMirror-line > span > span::selection {
   background: rgba(73, 72, 62, 0.99); }
@@ -366,7 +356,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 
 .CodeMirror-gutter-wrapper {
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
       user-select: none; }
 
@@ -457,9 +446,6 @@ div.CodeMirror-dragcursors {
 
 .CodeMirror-crosshair {
   cursor: crosshair; }
-
-.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection {
-  background: #d7d4f0; }
 
 .CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection {
   background: #d7d4f0; }
@@ -585,11 +571,9 @@ html.br-prototype-nav-is-open {
   padding: 2rem; }
 
 .br-prototype-nav-index-cols {
-  -moz-column-count: 3;
-       column-count: 3; }
+  column-count: 3; }
   .br-prototype-nav-index-cols li {
-    -moz-column-break-inside: avoid;
-         break-inside: avoid; }
+    break-inside: avoid; }
 
 /* Page states
    ========================================================================== */

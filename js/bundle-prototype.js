@@ -8,7 +8,7 @@
 */
 module.exports = {
   pageTree: {
-    layoutStyle: 'fixed' // 'sidebar' or 'fixed'
+    layoutStyle: 'sidebar' // 'sidebar' or 'fixed'
 
   },
   js: {
@@ -22,7 +22,7 @@ module.exports = {
   styleguide: {
     search: true,
     colors: './content/scss/_s-colors.scss',
-    categoryOrder: ['Style guide', 'Design patterns', 'Components', 'Objects', 'Development documentation'],
+    categoryOrder: ['Style guide', 'Development documentation', 'Design patterns', 'Components', 'Objects'],
     componentCategories: {
       aov: 'Basics',
       c: 'Components',
@@ -162,12 +162,12 @@ require("./styleguide-search");
 
 var _styleguideRememberScroll = _interopRequireDefault(require("./styleguide-remember-scroll"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-window.$ = _jquery["default"];
-(0, _styleguideRememberScroll["default"])('#__prototype-nav');
-(0, _styleguideRememberScroll["default"])('.br-styleguide-content');
-(0, _styleguideRememberScroll["default"])('.br-styleguide-navigation-holder');
+window.$ = _jquery.default;
+(0, _styleguideRememberScroll.default)('#__prototype-nav');
+(0, _styleguideRememberScroll.default)('.br-styleguide-content');
+(0, _styleguideRememberScroll.default)('.br-styleguide-navigation-holder');
 
 },{"./prototype-nav":5,"./styleguide-code-samples":6,"./styleguide-remember-scroll":7,"./styleguide-search":8,"./styleguide-typography":9,"jquery":22}],5:[function(require,module,exports){
 "use strict";
@@ -178,23 +178,23 @@ var _package = _interopRequireDefault(require("../../package.json"));
 
 var _config = _interopRequireDefault(require("../discovery/config"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ACTIVATION_KEYCODE = 77; // 'M' key or 'B' key for Windows
 
 var ACTIVATION_KEYCODE_WINDOWS = 66; // 'M' key or 'B' key for Windows
 
 var ESC_KEYCODE = 27;
-var NAV_STATE_STORAGE_KEY = "bedrock.".concat(_package["default"].name, ".prototypeNavState");
+var NAV_STATE_STORAGE_KEY = "bedrock.".concat(_package.default.name, ".prototypeNavState");
 var navState = {
   isOpen: false,
   closedModules: [],
-  langSelected: _config["default"].languages && _config["default"].languages.find(function (lang) {
-    return lang["default"];
+  langSelected: _config.default.languages && _config.default.languages.find(function (lang) {
+    return lang.default;
   }).id
 };
-var $html = (0, _jquery["default"])('html');
-var $prototypeNav = (0, _jquery["default"])('#__prototype-nav');
+var $html = (0, _jquery.default)('html');
+var $prototypeNav = (0, _jquery.default)('#__prototype-nav');
 var $moduleLabels = $prototypeNav.find(".br-tree-dir-title");
 
 try {
@@ -206,21 +206,21 @@ try {
 
 
 $prototypeNav.find('.br-tree-dir-title').each(function () {
-  var moduleIds = (0, _jquery["default"])(this).parentsUntil('.br-bordered-list').children('.br-tree-dir-title').map(function () {
-    return (0, _jquery["default"])(this).text();
+  var moduleIds = (0, _jquery.default)(this).parentsUntil('.br-bordered-list').children('.br-tree-dir-title').map(function () {
+    return (0, _jquery.default)(this).text();
   }).get(); // Replace space by -
 
   moduleIds = moduleIds.map(function (moduleId) {
     return moduleId.split(" ").join("-");
   });
-  (0, _jquery["default"])(this).attr('id', moduleIds.join('-'));
+  (0, _jquery.default)(this).attr('id', moduleIds.join('-'));
 });
 /**
  * Closes a module based on ID.
  */
 
 function closeModule(moduleId) {
-  (0, _jquery["default"])("#".concat(moduleId)).parents('.br-tree-dir').first().addClass('br-tree-dir--is-collapsed');
+  (0, _jquery.default)("#".concat(moduleId)).parents('.br-tree-dir').first().addClass('br-tree-dir--is-collapsed');
 
   if (navState.closedModules.indexOf(moduleId) === -1) {
     navState.closedModules.push(moduleId);
@@ -232,7 +232,7 @@ function closeModule(moduleId) {
 
 
 function openModule(moduleId) {
-  (0, _jquery["default"])("#".concat(moduleId)).parents('.br-tree-dir').first().removeClass('br-tree-dir--is-collapsed');
+  (0, _jquery.default)("#".concat(moduleId)).parents('.br-tree-dir').first().removeClass('br-tree-dir--is-collapsed');
   navState.closedModules = navState.closedModules.filter(function (id) {
     return id !== moduleId;
   });
@@ -243,7 +243,7 @@ function openModule(moduleId) {
 
 
 function toggleModule(moduleId) {
-  var isClosed = (0, _jquery["default"])("#".concat(moduleId)).parents('.br-tree-dir').first().hasClass('br-tree-dir--is-collapsed');
+  var isClosed = (0, _jquery.default)("#".concat(moduleId)).parents('.br-tree-dir').first().hasClass('br-tree-dir--is-collapsed');
   isClosed ? openModule(moduleId) : closeModule(moduleId);
   saveNavState();
 }
@@ -253,7 +253,7 @@ function toggleModule(moduleId) {
 
 
 $moduleLabels.on('click', function () {
-  var moduleId = (0, _jquery["default"])(this).attr('id');
+  var moduleId = (0, _jquery.default)(this).attr('id');
   toggleModule(moduleId);
 }); // Handle state on page load: open/close nav and close saved modules
 
@@ -291,10 +291,10 @@ function toggleNavigation() {
   navState.isOpen ? closeNavigation() : openNavigation();
 }
 
-(0, _jquery["default"])('.br-prototype-close-nav').on('click', function (e) {
+(0, _jquery.default)('.br-prototype-close-nav').on('click', function (e) {
   closeNavigation();
 });
-(0, _jquery["default"])(window).on('keyup', function (e) {
+(0, _jquery.default)(window).on('keyup', function (e) {
   if (e.keyCode === ESC_KEYCODE) {
     closeNavigation();
   } else if (e.ctrlKey && (e.keyCode == ACTIVATION_KEYCODE || e.keyCode == ACTIVATION_KEYCODE_WINDOWS)) {
@@ -317,60 +317,60 @@ require("codemirror/mode/xml/xml");
 
 var _config = _interopRequireDefault(require("../discovery/config"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $codeHolders = (0, _jquery["default"])('.br-sample-code');
-var $codeBlocks = (0, _jquery["default"])('.br-sample-markup');
+var $codeHolders = (0, _jquery.default)('.br-sample-code');
+var $codeBlocks = (0, _jquery.default)('.br-sample-markup');
 
-if (_config["default"].styleguide) {
+if (_config.default.styleguide) {
   /* Init code blocks
      ========================================================================== */
   $codeBlocks.each(function () {
-    if ((0, _jquery["default"])(this).hasClass('br-sample-markup-html')) {
+    if ((0, _jquery.default)(this).hasClass('br-sample-markup-html')) {
       var mode = 'xml';
     } else {
       var mode = 'pug';
     }
 
     var editorOptions = {
-      value: (0, _jquery["default"])(this).text(),
+      value: (0, _jquery.default)(this).text(),
       readOnly: true,
       mode: mode
     };
-    (0, _jquery["default"])(this).empty();
-    (0, _jquery["default"])(this).editor = (0, _codemirror["default"])(this, editorOptions);
+    (0, _jquery.default)(this).empty();
+    (0, _jquery.default)(this).editor = (0, _codemirror.default)(this, editorOptions);
   });
   /* Button logic: be able to show both Pug and HTML at the same time
      ========================================================================== */
 
   $codeHolders.hide();
-  (0, _jquery["default"])('.br-sample-show-code-btn-html').on('click', function (e) {
-    if ((0, _jquery["default"])(this).parents('.br-sample').find('.br-sample-code-html').is(':visible')) {
-      (0, _jquery["default"])(this).parents('.br-sample').find('.br-sample-code-html').hide();
+  (0, _jquery.default)('.br-sample-show-code-btn-html').on('click', function (e) {
+    if ((0, _jquery.default)(this).parents('.br-sample').find('.br-sample-code-html').is(':visible')) {
+      (0, _jquery.default)(this).parents('.br-sample').find('.br-sample-code-html').hide();
     } else {
-      (0, _jquery["default"])(this).parents('.br-sample').find('.br-sample-code-html').show();
+      (0, _jquery.default)(this).parents('.br-sample').find('.br-sample-code-html').show();
     }
   });
-  (0, _jquery["default"])('.br-sample-show-code-btn-pug').on('click', function (e) {
-    if ((0, _jquery["default"])(this).parents('.br-sample').find('.br-sample-code-pug').is(':visible')) {
-      (0, _jquery["default"])(this).parents('.br-sample').find('.br-sample-code-pug').hide();
+  (0, _jquery.default)('.br-sample-show-code-btn-pug').on('click', function (e) {
+    if ((0, _jquery.default)(this).parents('.br-sample').find('.br-sample-code-pug').is(':visible')) {
+      (0, _jquery.default)(this).parents('.br-sample').find('.br-sample-code-pug').hide();
     } else {
-      (0, _jquery["default"])(this).parents('.br-sample').find('.br-sample-code-pug').show();
+      (0, _jquery.default)(this).parents('.br-sample').find('.br-sample-code-pug').show();
     }
   });
   /* Save text to clipboard
      ========================================================================== */
 
-  var clipboard = new _clipboard["default"]('.br-sample-copy-code-btn', {
+  var clipboard = new _clipboard.default('.br-sample-copy-code-btn', {
     text: function text(trigger) {
-      var originalButtonText = (0, _jquery["default"])(trigger).text();
-      (0, _jquery["default"])(trigger).prop('disabled', true);
-      (0, _jquery["default"])(trigger).text('Copied!');
+      var originalButtonText = (0, _jquery.default)(trigger).text();
+      (0, _jquery.default)(trigger).prop('disabled', true);
+      (0, _jquery.default)(trigger).text('Copied!');
       setTimeout(function () {
-        (0, _jquery["default"])(trigger).text(originalButtonText);
-        (0, _jquery["default"])(trigger).prop('disabled', false);
+        (0, _jquery.default)(trigger).text(originalButtonText);
+        (0, _jquery.default)(trigger).prop('disabled', false);
       }, 1500);
-      return (0, _jquery["default"])(trigger).siblings('.br-sample-markup').find('.CodeMirror').get(0).CodeMirror.getValue();
+      return (0, _jquery.default)(trigger).siblings('.br-sample-markup').find('.CodeMirror').get(0).CodeMirror.getValue();
     }
   });
 }
@@ -381,7 +381,7 @@ if (_config["default"].styleguide) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = _default;
+exports.default = _default;
 var SCROLL_STORAGE_KEY = 'bedrock.scrollPos';
 
 var $ = require('jquery');
@@ -417,24 +417,24 @@ function _default(selector) {
 
 var _jquery = _interopRequireDefault(require("jquery"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _jquery["default"])('#styleguideSearch').on('input', function (e) {
-  var inputVal = (0, _jquery["default"])(this).val().toUpperCase();
-  (0, _jquery["default"])('.br-docs-category').each(function () {
-    (0, _jquery["default"])(this).find('.br-docs-category-list-wrapper li a').each(function () {
-      var txtValue = (0, _jquery["default"])(this).text().toUpperCase();
+(0, _jquery.default)('#styleguideSearch').on('input', function (e) {
+  var inputVal = (0, _jquery.default)(this).val().toUpperCase();
+  (0, _jquery.default)('.br-docs-category').each(function () {
+    (0, _jquery.default)(this).find('.br-docs-category-list-wrapper li a').each(function () {
+      var txtValue = (0, _jquery.default)(this).text().toUpperCase();
 
       if (txtValue.indexOf(inputVal) > -1) {
-        (0, _jquery["default"])(this).parent().show();
+        (0, _jquery.default)(this).parent().show();
       } else {
-        (0, _jquery["default"])(this).parent().hide();
+        (0, _jquery.default)(this).parent().hide();
       }
     });
-    (0, _jquery["default"])(this).show();
+    (0, _jquery.default)(this).show();
 
-    if ((0, _jquery["default"])(this).find('li:hidden').length == (0, _jquery["default"])(this).find('li').length) {
-      (0, _jquery["default"])(this).hide();
+    if ((0, _jquery.default)(this).find('li:hidden').length == (0, _jquery.default)(this).find('li').length) {
+      (0, _jquery.default)(this).hide();
     }
   });
 });
@@ -25046,7 +25046,9 @@ module.exports={
     "pug": "^2.0.4",
     "run-sequence": "^2.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@popperjs/core": "^2.9.2"
+  }
 }
 
 },{}]},{},[4]);

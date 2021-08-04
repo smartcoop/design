@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>CSS architecture - Styleguide - Smart Coop
+    <title>Inputs (selection) - Styleguide - Smart Coop
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -164,46 +164,142 @@
                 </div>
                 <div class="br-styleguide-content">
                     <div class="br-styleguide-content-inner">
-                        <div class="c-content" style="max-width: 85rem;">
-                            <h1>CSS Architecture</h1>
-                            <div class="u-spacer-top u-spacer-bottom">
-                                <p>Smart Coop's CSS architecture uses a combination of the BEM naming convention and the Inverted Triangle CSS architecture in order to have a maintainable, readable and scalable code structure.</p>
-                                <h3>BEM</h3>
-                                <p>BEM stands for Block Element Modifier and it categorizes the code into three groups:</p>
-                                <ul>
-                                    <li>Blocks which are a standalone entities that are meaningful on their own, for example <code>.c-menu</code>.</li>
-                                    <li>Elements which are part of a block and have no standalone meaning and are semantically tied to a block, for example <code>c-menu__item</code>.</li>
-                                    <li>Modifiers which are variants or flags on a block or element and are used to change the appearance or behavior, for example <code>c-menu--disabled</code>.</li>
-                                </ul>
-                                <p>The BEM naming convention helps to see how classes are related to each other.</p>
-                                <p>For more information about BEM, please refer to this <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">excellent article</a> by Harry Roberts.</p>
-                                <h3>Namespacing and ITCSS</h3>
-                                <p>Odyssee Mobile's CSS architecture uses namespacing. This means that every class in the codebase is prefixed with a certain string to explain what the code does and to avoid style leakage.</p>
-                                <p>The namespaces are also used to separate the code base into different layers and this is where ITCSS comes into place.</p>
-                                <p>The different layers that you find within the ITCSS architecture are, in the following order:</p>
-                                <ul>
-                                    <li>
-                                        <strong>Settings</strong>,which are used with preprocessors and contain font, colors variables.
-                                    </li>
-                                    <li>
-                                        <strong>Tools</strong>, which is a layer used for mixins and functions.
-                                    </li>
-                                    <li>In the <strong>generic</strong> layer you can find ground-zero styles like resets, normalize styles and box-sizing.</li>
-                                    <li>
-                                        <strong>Base Elements</strong> which styles bare, unclassed HTML elements to redefine the default styling from browsers.
-                                    </li>
-                                    <li>
-                                        <strong>Objects</strong>, which is a layer used for undecorated design patterns, it is prefixed with <code>o-</code>.
-                                    </li>
-                                    <li>
-                                        <strong>Components</strong>, which is used to style specific UI components, here you will find the majority of the code and classes within this layer are prefixed with <code>c-</code>.
-                                    </li>
-                                    <li>
-                                        <strong>Utilities</strong>, which are helper and override styles and namespaced with <code>u-</code>.
-                                    </li>
-                                </ul>
-                                <p>The codebase is structured in this order so that it is ordered from generic to explicit styles, low-specificity to more specificity (ID selectors are avoided as much as possible) and far reaching to local styles, which makes the framework scalable and maintainable.</p>
-                                <p>For more information on ITCSS, please refer to this <a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">slideshow</a>.</p>
+                        <div class="br-componentgroup-header-wrapper">
+                            <h1 class="br-componentgroup-header c-h2">Inputs (selection)</h1>
+                        </div>
+                        <div class="br-content c-content">
+                            <p>This page contains examples of selection inputs.</p>
+
+                        </div>
+                        <div class="br-sample" id="component-01-select">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Select Input</h3>
+                                <a class="br-sample-header-link" href="#component-01-select">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content">
+                                <p>A dropdown with options. Uses the standard HTML select element. Don&#39;t forget the <code>.c-select-holder</code> wrapper element.</p>
+                            </div>
+                            <div class="br-sample-content">
+                                <div class="o-form-group-layout o-form-group-layout--standard">
+                                    <div class="o-form-group">
+                                        <label class="o-form-group__label" for="selectId">Label</label>
+                                        <div class="o-form-group__controls">
+                                            <div class="c-select-holder">
+                                                <select class="c-select" id="selectId">
+                                                    <option>Option A</option>
+                                                    <option>Option B</option>
+                                                    <option>Option C</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;selectId&quot;&gt;Label&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;div class=&quot;c-select-holder&quot;&gt;
+                &lt;select class=&quot;c-select&quot; id=&quot;selectId&quot;&gt;
+                    &lt;option&gt;Option A&lt;/option&gt;
+                    &lt;option&gt;Option B&lt;/option&gt;
+                    &lt;option&gt;Option C&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
+    .o-form-group
+        label.o-form-group__label(for=&quot;selectId&quot;) Label
+        .o-form-group__controls
+            .c-select-holder
+                select.c-select(id=&quot;selectId&quot;)
+                    option Option A
+                    option Option B
+                    option Option C
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-02-selected-grouped">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Selected grouped</h3>
+                                <a class="br-sample-header-link" href="#component-02-selected-grouped">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-content">
+                                <div class="o-form-group-layout o-form-group-layout--standard">
+                                    <div class="o-form-group">
+                                        <label class="o-form-group__label" for="selectId2">Label</label>
+                                        <div class="o-form-group__controls">
+                                            <div class="c-select-holder">
+                                                <select class="c-select" id="selectId2">
+                                                    <optgroup label="Group 1">
+                                                        <option>Item 1</option>
+                                                        <option>Item 2</option>
+                                                        <option>Item 3</option>
+                                                    </optgroup>
+                                                    <optgroup label="Group 2">
+                                                        <option>Item 1</option>
+                                                        <option>Item 2</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;selectId2&quot;&gt;Label&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;div class=&quot;c-select-holder&quot;&gt;
+                &lt;select class=&quot;c-select&quot; id=&quot;selectId2&quot;&gt;
+                    &lt;optgroup label=&quot;Group 1&quot;&gt;
+                        &lt;option&gt;Item 1&lt;/option&gt;
+                        &lt;option&gt;Item 2&lt;/option&gt;
+                        &lt;option&gt;Item 3&lt;/option&gt;
+                    &lt;/optgroup&gt;
+                    &lt;optgroup label=&quot;Group 2&quot;&gt;
+                        &lt;option&gt;Item 1&lt;/option&gt;
+                        &lt;option&gt;Item 2&lt;/option&gt;
+                    &lt;/optgroup&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
+    .o-form-group
+        label.o-form-group__label(for=&quot;selectId2&quot;) Label
+        .o-form-group__controls
+            .c-select-holder
+                select.c-select#selectId2
+                    optgroup(label=&quot;Group 1&quot;)
+                        option Item 1
+                        option Item 2
+                        option Item 3
+                    optgroup(label=&quot;Group 2&quot;)
+                        option Item 1
+                        option Item 2</pre>
+                                </div>
                             </div>
                         </div>
                     </div>

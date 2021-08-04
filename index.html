@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html class="u-maximize-height" dir="ltr" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Bedrock
+    <title>Smart Coop
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -22,22 +22,15 @@
             max-width: 660px;
             margin: 0 auto;
             line-height: 1.5;
+            display: flex;
+            align-items: center;
             text-align: center;
         }
     </style>
 </head>
 
-<body>
-    <div class="br-homepage">
-        <div class="br-homepage-inner">
-            <p>
-                <img src="images/bedrock-logo-black.svg">
-            </p>
-            <p>Welcome to Bedrock. This is your homepage. Go to <code>/content/templates/index.pug</code> to find this file and start editing your project.</p>
-            <p>Hit Ctrl + M (or alternatively Ctrl + B) to view the page tree.</p>
-        </div>
-    </div>
-    <div class="br-pagetree-fixed-wrapper">
+<body class="u-maximize-height u-overflow-hidden">
+    <div class="br-prototype-wrapper">
         <div class="br-prototype-nav" id="__prototype-nav" aria-hidden="true">
             <div class="br-prototype-nav-inner">
                 <h4 class="br-prototype-nav-main-heading">Prototype navigation</h4>
@@ -56,7 +49,22 @@
                         <li class="br-tree-dir">
                             <a href="/page-index.html">page-index</a>
                         </li>
+                        <li class="br-tree-dir">
+                            <a href="/sample-page.html">sample-page</a>
+                        </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+        <div class="br-prototype-content">
+            <div class="br-homepage">
+                <div class="br-homepage-inner">
+                    <div class="c-content">
+                        <img src="images/logo.svg">
+                        <h1>Welcome to the design system for Smart Coop</h1>
+                        <p>Welcome to the design system and prototype pages of Smart Coop.</p>
+                        <p>Hit Ctrl + M (or alternatively Ctrl + B) to view the page tree or directly <a href="/styleguide/">visit the style guide</a>.</p>
+                    </div>
                 </div>
             </div>
         </div>

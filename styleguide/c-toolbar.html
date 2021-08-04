@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Avatar - Styleguide - Smart Coop
+    <title>Toolbar - Styleguide - Smart Coop
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -165,124 +165,40 @@
                 <div class="br-styleguide-content">
                     <div class="br-styleguide-content-inner">
                         <div class="br-componentgroup-header-wrapper">
-                            <h1 class="br-componentgroup-header c-h2">Avatar</h1>
+                            <h1 class="br-componentgroup-header c-h2">Toolbar</h1>
                         </div>
                         <div class="br-content c-content">
+                            <p>The toolbar is meant as a generic construct to position UI elements. It provides a structure where you can position items on the left, in the center and on the right.</p>
+                            <p>The toolbar requires a parent <code>.c-toolbar</code> div that contains children that define the positioning: <code>.c-toolbar__left</code>, <code>.c-toolbar__right</code> and <code>.c-toolbar__center</code>.</p>
+                            <p>The toolbar construct is used in many parts of the user interface: modals, panels, navbars and popovers all use the toolbar component to position elements in a consistent way.</p>
+
                         </div>
-                        <div class="br-sample" id="component-01-c-avatar-small">
+                        <div class="br-sample" id="component-01-c-toolbar-basics">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Small</h3>
-                                <a class="br-sample-header-link" href="#component-01-c-avatar-small">#</a>
+                                <h3 class="br-sample-heading c-h3">Toolbar basics</h3>
+                                <a class="br-sample-header-link" href="#component-01-c-toolbar-basics">#</a>
                             </div>
-                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-documentation c-content">
+                                <p>Place items on the left, right or in the middle.</p>
+                            </div>
                             <div class="br-sample-content">
-                                <div class="c-avatar c-avatar--default c-avatar--small">
-                                    <div class="o-svg-icon o-svg-icon-user o-svg-icon--small ">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-avatar c-avatar--default c-avatar--small&quot;&gt;
-    &lt;div class=&quot;o-svg-icon o-svg-icon-user o-svg-icon--small &quot;&gt;
-        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-            &lt;path d=&quot;M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z&quot; fill=&quot;#595959&quot; /&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">+c-avatar({size: 'small'})
-</pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="br-sample" id="component-02-c-avatar-regular">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Regular</h3>
-                                <a class="br-sample-header-link" href="#component-02-c-avatar-regular">#</a>
-                            </div>
-                            <div class="br-sample-documentation c-content"></div>
-                            <div class="br-sample-content">
-                                <div class="c-avatar c-avatar--default c-avatar--regular">
-                                    <div class="o-svg-icon o-svg-icon-user o-svg-icon--regular ">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-avatar c-avatar--default c-avatar--regular&quot;&gt;
-    &lt;div class=&quot;o-svg-icon o-svg-icon-user o-svg-icon--regular &quot;&gt;
-        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-            &lt;path d=&quot;M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z&quot; fill=&quot;#595959&quot; /&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">+c-avatar({})
-</pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="br-sample" id="component-03-c-avatar-image">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Image</h3>
-                                <a class="br-sample-header-link" href="#component-03-c-avatar-image">#</a>
-                            </div>
-                            <div class="br-sample-documentation c-content"></div>
-                            <div class="br-sample-content">
-                                <div class="c-avatar c-avatar--img c-avatar--regular">
-                                    <img src="http://placekitten.com/500/500" alt="avatar" />
-                                </div>
-                            </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-avatar c-avatar--img c-avatar--regular&quot;&gt;
-    &lt;img src=&quot;http://placekitten.com/500/500&quot; alt=&quot;avatar&quot; /&gt;
-&lt;/div&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">+c-avatar({img: 'http://placekitten.com/500/500', alt: 'avatar'})
-</pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="br-sample" id="component-04-c-avatar-text">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Avatar and text</h3>
-                                <a class="br-sample-header-link" href="#component-04-c-avatar-text">#</a>
-                            </div>
-                            <div class="br-sample-documentation c-content"></div>
-                            <div class="br-sample-content">
-                                <div class="c-avatar-and-text">
-                                    <div class="c-avatar c-avatar--default c-avatar--small">
-                                        <div class="o-svg-icon o-svg-icon-user o-svg-icon--small ">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
-                                            </svg>
+                                <div class="c-toolbar">
+                                    <div class="c-toolbar__left">
+                                        <div class="c-toolbar__item">
+                                            <p>I am an item on the left</p>
                                         </div>
                                     </div>
-                                    <div class="c-avatar-and-text__text">
-                                        <p>John Doe</p>
+                                    <div class="c-toolbar__center">
+                                        <div class="c-toolbar__center-inner">
+                                            <div class="c-toolbar__item">
+                                                <p>I am an item in the middle</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-toolbar__right">
+                                        <div class="c-toolbar__item">
+                                            <p>I am an item on the right</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -291,71 +207,192 @@
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-avatar-and-text&quot;&gt;
-    &lt;div class=&quot;c-avatar c-avatar--default c-avatar--small&quot;&gt;
-        &lt;div class=&quot;o-svg-icon o-svg-icon-user o-svg-icon--small &quot;&gt;
-            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                &lt;path d=&quot;M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z&quot; fill=&quot;#595959&quot; /&gt;
-            &lt;/svg&gt;
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-toolbar&quot;&gt;
+    &lt;div class=&quot;c-toolbar__left&quot;&gt;
+        &lt;div class=&quot;c-toolbar__item&quot;&gt;
+            &lt;p&gt;I am an item on the left&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;c-avatar-and-text__text&quot;&gt;
-        &lt;p&gt;John Doe&lt;/p&gt;
+    &lt;div class=&quot;c-toolbar__center&quot;&gt;
+        &lt;div class=&quot;c-toolbar__center-inner&quot;&gt;
+            &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                &lt;p&gt;I am an item in the middle&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-toolbar__right&quot;&gt;
+        &lt;div class=&quot;c-toolbar__item&quot;&gt;
+            &lt;p&gt;I am an item on the right&lt;/p&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">.c-avatar-and-text
-    +c-avatar({size: 'small'})
-    .c-avatar-and-text__text
-        p John Doe
+                                    <pre class="br-sample-markup br-sample-markup-pug">.c-toolbar
+    .c-toolbar__left
+        .c-toolbar__item
+            p I am an item on the left
+    .c-toolbar__center
+        .c-toolbar__center-inner
+            .c-toolbar__item
+                p I am an item in the middle
+    .c-toolbar__right
+        .c-toolbar__item
+            p I am an item on the right</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-02-c-toolbar-basics-2">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Toolbar item spacing</h3>
+                                <a class="br-sample-header-link" href="#component-02-c-toolbar-basics-2">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content">
+                                <p>There is consistent spacing between items in a toolbar. This example shows 2 items on the left, 2 items on the right.</p>
+                            </div>
+                            <div class="br-sample-content">
+                                <div class="c-toolbar">
+                                    <div class="c-toolbar__left">
+                                        <div class="c-toolbar__item">
+                                            <p>Item left 1</p>
+                                        </div>
+                                        <div class="c-toolbar__item">
+                                            <p>Item left 2</p>
+                                        </div>
+                                    </div>
+                                    <div class="c-toolbar__right">
+                                        <div class="c-toolbar__item">
+                                            <p>Item right 1</p>
+                                        </div>
+                                        <div class="c-toolbar__item">
+                                            <p>Item right 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-toolbar&quot;&gt;
+    &lt;div class=&quot;c-toolbar__left&quot;&gt;
+        &lt;div class=&quot;c-toolbar__item&quot;&gt;
+            &lt;p&gt;Item left 1&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;c-toolbar__item&quot;&gt;
+            &lt;p&gt;Item left 2&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-toolbar__right&quot;&gt;
+        &lt;div class=&quot;c-toolbar__item&quot;&gt;
+            &lt;p&gt;Item right 1&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;c-toolbar__item&quot;&gt;
+            &lt;p&gt;Item right 2&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.c-toolbar
+    .c-toolbar__left
+        .c-toolbar__item
+            p Item left 1
+        .c-toolbar__item
+            p Item left 2
+    .c-toolbar__right
+        .c-toolbar__item
+            p Item right 1
+        .c-toolbar__item
+            p Item right 2
+
 </pre>
                                 </div>
                             </div>
                         </div>
-                        <div class="br-componentgroup-footer-wrapper">
-                            <h1 class="br-componentgroup-footer c-h2">Possible parameters for avatars</h1>
-                            <div class="br-content c-content">
-                                <table class="c-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Parameters</th>
-                                            <th>Type</th>
-                                            <th>Possible values</th>
-                                            <th>Description</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>img</td>
-                                            <td>string</td>
-                                            <td></td>
-                                            <td>Determines if an image is set to an avatar.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>alt</td>
-                                            <td>string</td>
-                                            <td></td>
-                                            <td>Determines if an alt tag is set to an avatar.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>icon</td>
-                                            <td>string</td>
-                                            <td>See <a href="/styleguide/aov-icons.html">icon style guide</a> for available icons.</td>
-                                            <td>This parameter is used for the icon. If an icon is not set, a fallback icon is rendered.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>size</td>
-                                            <td>string</td>
-                                            <td>
-                                                <code>regular</code>, <code>small</code>
-                                            </td>
-                                            <td>Determines the size of an avatar. The default size is set to regular.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
+                        <div class="br-sample" id="component-03-c-toolbar-modal">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Toolbar (modal)</h3>
+                                <a class="br-sample-header-link" href="#component-03-c-toolbar-modal">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content">
+                                <p>A toolbar as it might appear inside a <a href="/styleguide/c-modal.html">modal window</a>.</p>
+                            </div>
+                            <div class="br-sample-content">
+                                <!-- Toolbar code-->
+                                <div class="c-toolbar">
+                                    <div class="c-toolbar__left">
+                                        <div class="c-toolbar__item">
+                                            <h2 class="c-toolbar__title">Modal title</h2>
+                                        </div>
+                                    </div>
+                                    <div class="c-toolbar__right">
+                                        <div class="c-toolbar__item">
+                                            <div class="c-button-toolbar">
+                                                <button class="c-button c-button--borderless" data-modal-close="data-modal-close">
+                                                    <div class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-close  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Cancel</div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;!-- Toolbar code--&gt;
+&lt;div class=&quot;c-toolbar&quot;&gt;
+    &lt;div class=&quot;c-toolbar__left&quot;&gt;
+        &lt;div class=&quot;c-toolbar__item&quot;&gt;
+            &lt;h2 class=&quot;c-toolbar__title&quot;&gt;Modal title&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-toolbar__right&quot;&gt;
+        &lt;div class=&quot;c-toolbar__item&quot;&gt;
+            &lt;div class=&quot;c-button-toolbar&quot;&gt;
+                &lt;button class=&quot;c-button c-button--borderless&quot; data-modal-close=&quot;data-modal-close&quot;&gt;
+                    &lt;div class=&quot;c-button__content&quot;&gt;
+                        &lt;div class=&quot;o-svg-icon o-svg-icon-close  &quot;&gt;
+                            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                &lt;path d=&quot;M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;u-sr-accessible&quot;&gt;Cancel&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">// Toolbar code
+.c-toolbar
+    .c-toolbar__left
+        .c-toolbar__item
+            h2.c-toolbar__title Modal title
+    .c-toolbar__right
+        .c-toolbar__item
+            .c-button-toolbar
+                button.c-button.c-button--borderless(data-modal-close)
+                    .c-button__content
+                        +icon('close')
+                        .u-sr-accessible Cancel
+</pre>
+                                </div>
                             </div>
                         </div>
                     </div>
