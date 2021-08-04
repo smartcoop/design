@@ -1,0 +1,69 @@
+/* ==========================================================================
+  Component: Status Pill
+   ========================================================================== */
+
+/* Component
+   ========================================================================== */
+
+.c-status-pill {
+  border-radius: 2.4rem;
+  padding: 0.2rem 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  border: 0.1rem solid transparent;
+}
+
+.c-status-pill__circle {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.8rem;
+}
+
+.c-status-pill__circle + .c-status-pill__label {
+  margin-left: 0.6rem;
+}
+
+/* Skins
+   ========================================================================== */
+
+.c-status-pill--default {
+  border: 0.1rem solid $color-gray-900;
+
+  .c-status-pill__circle {
+    background: $color-gray-600;
+  }
+}
+
+.c-status-pill--pending {
+  border-color: $color-blue-500;
+
+  .c-status-pill__circle {
+    background: $color-blue-500;
+  }
+}
+
+.c-status-pill--danger {
+  border: 0.1rem solid $color-red-500;
+
+  .c-status-pill__circle {
+    background: $color-red-500;
+  }
+}
+
+.c-status-pill--success {
+  border: 0.1rem solid $color-green-500;
+
+  .c-status-pill__circle {
+    background: $color-green-500;
+  }
+}
+
+.c-status-pill--warning {
+  border: 0.1rem solid $color-yellow-500;
+
+  .c-status-pill__circle {
+    background: $color-yellow-500;
+  }
+}

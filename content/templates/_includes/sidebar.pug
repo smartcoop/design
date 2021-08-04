@@ -1,0 +1,72 @@
+.c-sidebar
+
+    a.c-sidebar__logo(href="/")
+        img(src='/images/logo.svg' alt='Smart Coop Logo')
+
+    .c-sidebar__menu
+        nav
+            ul.c-sidebar-menu
+                -
+                    var navItems = [
+                        {
+                            pathName: '#',
+                            name: 'Dashboard',
+                            icon: 'home'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Quotes & invoices',
+                            icon: 'document'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Funding',
+                            icon: 'bills'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Expenses',
+                            icon: 'tag'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Contracts',
+                            icon: 'pen'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Contracts Covid-19',
+                            icon: 'pen'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Equipment',
+                            icon: 'package'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Activities',
+                            icon: 'calendar'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Members',
+                            icon: 'users'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Archive',
+                            icon: 'archive'
+                        },
+                        {
+                            pathName: '#',
+                            name: 'Detachement',
+                            icon: 'send'
+                        },
+                    ]
+
+                each item in navItems
+                    li.c-sidebar__item(class=item.name==moduleTitle ? 'c-sidebar__item--active' : '')
+                        a.c-sidebar__link(href=item.pathName)
+                            +icon(item.icon)
+                            .c-sidebar-item__label #{item.name}

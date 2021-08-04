@@ -37,7 +37,7 @@ $g-c-menu-z: 60 !default;
 
 .c-menu__item {
   display: flex;
-  padding: 0.8rem 3.2rem;
+  padding: 0.8rem 1.6rem;
   position: relative;
 
   &:hover {
@@ -67,8 +67,11 @@ $g-c-menu-z: 60 !default;
   color: inherit;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: block;
   width: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   .o-svg-icon {
     margin-right: 1rem;

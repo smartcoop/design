@@ -1,0 +1,25 @@
+//-
+    Mixin Status pill - Create a status pill
+
+    @param {string} Pug block content - the status pill label
+    @param {Object} props
+    @param {string} skin - the skin of the status pill (default, success, warning, danger)
+    @param {string} icon - icon name
+    @param {string} href - if href
+
+mixin c-status-pill({skin = "default", href})
+    - var classListing = "c-status-pill c-status-pill--"+skin
+    if href
+        a(href=href class=classListing)&attributes(attributes)
+            +c-status-pill-inner
+                block
+
+    else
+        span(class=classListing)&attributes(attributes)
+            +c-status-pill-inner
+                block
+
+mixin c-status-pill-inner()
+    span.c-status-pill__circle
+    span.c-status-pill__label
+        block

@@ -126,6 +126,10 @@ $c-button-link-color: $color-red-500 !default;
   background: #fff;
   color: $color-red-500;
 
+  svg * {
+    fill: currentColor;
+  }
+
   &:hover,
   &.c-button--hover {
     background: $color-gray-50;
@@ -182,7 +186,7 @@ $c-button-link-color: $color-red-500 !default;
     padding-right: 0;
   }
 
-  .o-svg-icon svg {
+  svg * {
     fill: currentColor;
   }
 
@@ -288,35 +292,5 @@ $c-button-link-color: $color-red-500 !default;
     svg * {
       fill: $color-disabled;
     }
-  }
-}
-
-/* Muted
-   ========================================================================== */
-
-.c-button--muted {
-  color: $color-muted;
-
-  &:hover,
-  &.c-button--hover {
-    color: #fff;
-    background: transparent;
-  }
-
-  &:active,
-  &:active:focus,
-  &.c-button--active {
-    color: $color-red-500;
-    background: transparent;
-  }
-
-  &:focus {
-    outline: none;
-    color: $color-red-500;
-    background: transparent;
-  }
-
-  &:focus:not(:focus-visible) {
-    outline: none;
   }
 }

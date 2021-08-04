@@ -1,0 +1,11 @@
+div(style="height: 200px;")
+    +c-button({icon: 'caret-down', layout: 'text-icon'})(data-menu="dropdownMenuIcons"  data-menu-samewidth="true") Open dropdown
+ul.c-menu(id="dropdownMenuIcons")
+    li.c-menu__item
+        a.c-menu__label(href="#")
+            +icon('edit')
+            | Edit
+    li.c-menu__item
+        a.c-menu__label(href="#")
+            +icon('delete')
+            | Delete

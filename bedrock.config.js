@@ -6,7 +6,7 @@
 
 module.exports = {
   pageTree: {
-    layoutStyle: 'fixed' // 'sidebar' or 'fixed'
+    layoutStyle: 'sidebar' // 'sidebar' or 'fixed'
   },
   js: {
     minify: false
@@ -21,10 +21,10 @@ module.exports = {
     colors: './content/scss/_s-colors.scss',
     categoryOrder: [
       'Style guide',
+      'Development documentation',
       'Design patterns',
       'Components',
-      'Objects',
-      'Development documentation'
+      'Objects'
     ],
     componentCategories: {
       aov: 'Basics',

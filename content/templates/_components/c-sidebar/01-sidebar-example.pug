@@ -1,0 +1,21 @@
+.c-sidebar
+    a.c-sidebar__logo(href="/")
+        img(src='/images/logo.svg' alt='Smart Coop Logo')
+
+    .c-sidebar__menu
+        nav
+            ul.c-sidebar-menu
+                li.c-sidebar__item.c-sidebar__item--active
+                    a.c-sidebar__link(href="#")
+                        +icon('home')
+                        .c-sidebar-item__label Item
+                li.c-sidebar__item
+                    a.c-sidebar__link(href="#")
+                        +icon('document')
+                        .c-sidebar-item__label Item
+                li.c-sidebar__item
+                    a.c-sidebar__link(href="#")
+                        +icon('bills')
+                        .c-sidebar-item__label Item
+
+

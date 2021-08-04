@@ -1,0 +1,13 @@
+div(style="height: 200px;")
+    div(style="padding-top: 180px;")
+        +c-button({icon: 'caret-up', layout: 'text-icon'})(data-menu="dropupMenu" data-menu-samewidth="true" data-menu-placement="top-start") Open dropup
+ul.c-menu(id="dropupMenu")
+    li.c-menu__item
+        a.c-menu__label(href="#") Item A
+    li.c-menu__item
+        a.c-menu__label(href="#") Item B
+    li.c-menu__item
+        a.c-menu__label(href="#") Item C
+    li.c-menu__divider(role="presentation")
+    li.c-menu__item
+        a.c-menu__label(href="#") Extra Item

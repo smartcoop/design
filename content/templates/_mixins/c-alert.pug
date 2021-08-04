@@ -1,0 +1,21 @@
+//-
+    Mixin Alert - Create an alert
+
+    @param {Object} props
+    @param {string} skin - the skin of the alert
+    @param {string} icon - which icon to show in the alert
+    @param {string} message - the alert message
+    @param {string} title - the alert title
+    @param {boolean} isClosable - makes alert closable
+
+mixin c-alert({skin="default", icon, message, title, isClosable=false})
+    .c-alert(class="c-alert--"+skin+" "+closableClass)&attributes(attributes)
+        +icon(icon? icon : 'circle-information', 'o-svg-icon--'+skin)
+        .c-alert__body
+            .c-alert__text
+                if title
+                    h4.c-alert__title= title
+                if message
+                    p.c-alert__message= message
+        if isClosable
+            +c-button({isLink: true, skin: 'borderless-muted', icon: 'close', layout: 'icon-only'})(data-alert-close aria-label="Close alert") Alert sluiten

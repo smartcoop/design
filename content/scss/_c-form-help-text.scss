@@ -7,10 +7,8 @@
 .c-form-help-text {
   color: $color-gray-400;
   display: block;
-  font-size: 1.3rem;
-  .c-input + & {
-    margin-top: 0.4rem;
-  }
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
 }
 
 .c-form-help-text--error {

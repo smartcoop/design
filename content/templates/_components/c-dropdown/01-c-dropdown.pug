@@ -1,0 +1,12 @@
+div(style="height: 200px;")
+    +c-button({icon: 'caret-down', layout: 'text-icon'})(data-menu="dropdownMenu" data-menu-samewidth="true") Open dropdown
+ul.c-menu(id="dropdownMenu")
+    li.c-menu__item
+        a.c-menu__label(href="#") Item A
+    li.c-menu__item
+        a.c-menu__label(href="#") Item B
+    li.c-menu__item
+        a.c-menu__label(href="#") Item C
+    li.c-menu__divider(role="presentation")
+    li.c-menu__item
+        a.c-menu__label(href="#") Extra Item
