@@ -28,6 +28,9 @@
                             <a href="/404.html">404</a>
                         </li>
                         <li class="br-tree-dir">
+                            <a href="/contact-form.html">contact-form</a>
+                        </li>
+                        <li class="br-tree-dir">
                             <a href="/index.html">index</a>
                         </li>
                         <li class="br-tree-dir">
@@ -35,6 +38,9 @@
                         </li>
                         <li class="br-tree-dir">
                             <a href="/sample-page.html">sample-page</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/subscription-form.html">subscription-form</a>
                         </li>
                     </ul>
                 </div>
@@ -241,7 +247,11 @@
                                     <div class="c-alert__body">
                                         <div class="c-alert__text">
                                             <h4 class="c-alert__title">Alert title</h4>
-                                            <p class="c-alert__message">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="c-alert__message">
+                                                <div class="c-content">
+                                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <button class="c-button-link c-button--borderless-muted c-button--icon" type="button" data-alert-close="data-alert-close" aria-label="Close alert">
@@ -273,7 +283,11 @@
     &lt;div class=&quot;c-alert__body&quot;&gt;
         &lt;div class=&quot;c-alert__text&quot;&gt;
             &lt;h4 class=&quot;c-alert__title&quot;&gt;Alert title&lt;/h4&gt;
-            &lt;p class=&quot;c-alert__message&quot;&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+            &lt;div class=&quot;c-alert__message&quot;&gt;
+                &lt;div class=&quot;c-content&quot;&gt;
+                    &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;button class=&quot;c-button-link c-button--borderless-muted c-button--icon&quot; type=&quot;button&quot; data-alert-close=&quot;data-alert-close&quot; aria-label=&quot;Close alert&quot;&gt;
@@ -300,10 +314,81 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="br-sample" id="component-03-c-alert-closable">
+                        <div class="br-sample" id="component-03-c-alert-rich-text">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Alert with rich text</h3>
+                                <a class="br-sample-header-link" href="#component-03-c-alert-rich-text">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-content">
+                                <div class="c-alert c-alert--default undefined">
+                                    <div class="o-svg-icon o-svg-icon-circle-information o-svg-icon--default ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#595959" />
+                                            <path d="M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z" fill="#595959" />
+                                            <path d="M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <div class="c-alert__body">
+                                        <div class="c-alert__text">
+                                            <h4 class="c-alert__title">Alert title</h4>
+                                            <div class="c-alert__message">
+                                                <div class="c-content">
+                                                    <ul>
+                                                        <li>This is text for the first bullet.</li>
+                                                        <li>This is text for the second bullet.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-alert c-alert--default undefined&quot;&gt;
+    &lt;div class=&quot;o-svg-icon o-svg-icon-circle-information o-svg-icon--default &quot;&gt;
+        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+            &lt;path d=&quot;M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;path d=&quot;M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;path d=&quot;M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z&quot; fill=&quot;#595959&quot; /&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-alert__body&quot;&gt;
+        &lt;div class=&quot;c-alert__text&quot;&gt;
+            &lt;h4 class=&quot;c-alert__title&quot;&gt;Alert title&lt;/h4&gt;
+            &lt;div class=&quot;c-alert__message&quot;&gt;
+                &lt;div class=&quot;c-content&quot;&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;This is text for the first bullet.&lt;/li&gt;
+                        &lt;li&gt;This is text for the second bullet.&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">+c-alert({
+    title: &quot;Alert title&quot;,
+    message: `&lt;ul&gt;
+            &lt;li&gt;This is text for the first bullet.&lt;/li&gt;
+            &lt;li&gt;This is text for the second bullet.&lt;/li&gt;
+        &lt;/ul&gt;`,
+})
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-04-c-alert-closable">
                             <div class="br-sample-header br-sample-clearfix">
                                 <h3 class="br-sample-heading c-h3">Closable</h3>
-                                <a class="br-sample-header-link" href="#component-03-c-alert-closable">#</a>
+                                <a class="br-sample-header-link" href="#component-04-c-alert-closable">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
@@ -374,10 +459,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="br-sample" id="component-04-c-alert-skins">
+                        <div class="br-sample" id="component-05-c-alert-skins">
                             <div class="br-sample-header br-sample-clearfix">
                                 <h3 class="br-sample-heading c-h3">Skins</h3>
-                                <a class="br-sample-header-link" href="#component-04-c-alert-skins">#</a>
+                                <a class="br-sample-header-link" href="#component-05-c-alert-skins">#</a>
                             </div>
                             <div class="br-sample-documentation c-content">
                                 <p>All the different skins for alerts: default, error, warning and success.</p>

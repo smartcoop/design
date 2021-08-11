@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html class="u-maximize-height" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Smart Coop
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/prism-styleguide.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+</head>
+
+<body class="u-maximize-height u-overflow-hidden">
+    <div class="br-prototype-wrapper">
+        <div class="br-prototype-nav" id="__prototype-nav" aria-hidden="true">
+            <div class="br-prototype-nav-inner">
+                <h4 class="br-prototype-nav-main-heading">Prototype navigation</h4>
+                <p class="br-prototype-nav-text">Press Ctrl + M to toggle this navigation or click <a class="br-prototype-close-nav" href="#">here</a>.</p>
+                <div id="br-page-tree">
+                    <ul class="br-bordered-list">
+                        <li>
+                            <a href="/styleguide">Styleguide</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/404.html">404</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/contact-form.html">contact-form</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/index.html">index</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/page-index.html">page-index</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a href="/sample-page.html">sample-page</a>
+                        </li>
+                        <li class="br-tree-dir">
+                            <a class="br-bordered-list__link--active" href="/subscription-form.html">subscription-form</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="br-prototype-content">
+            <div class="u-spacer-l">
+                <div class="o-container o-container--medium">
+                    <div class="u-spacer-bottom">
+                        <img src="images/logo.svg" alt="Smart">
+                    </div>
+                    <div class="c-hr"></div>
+                    <h1 class="c-h2">Inscription</h1>
+                    <div class="c-content">
+                        <p>Pour une utilisation optimale des services que Smart met à vote disposition, il est vivement souhaitable et recommandé de participer à une session Smart : <a href="#">mode d'emploi</a>.</p>
+                    </div>
+                    <div class="u-spacer-bottom">
+                        <div class="c-alert c-alert--default undefined">
+                            <div class="o-svg-icon o-svg-icon-circle-information o-svg-icon--default ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#595959" />
+                                    <path d="M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z" fill="#595959" />
+                                    <path d="M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z" fill="#595959" />
+                                </svg>
+                            </div>
+                            <div class="c-alert__body">
+                                <div class="c-alert__text">
+                                    <h4 class="c-alert__title">Important</h4>
+                                    <div class="c-alert__message">
+                                        <div class="c-content">
+                                            <ul>
+                                                <li>Vous recevrez VOS codes personnels par mail pour accéder à votre « compte Smart » (et encoder vos contrats) dans les 48h ouvrés suivant l'envoi de vos documents d'inscription. N'hésitez pas à contacter le bureau Smart le plus proche de chez vous en cas d'urgence.</li>
+                                                <li>N'oubliez pas de toujours déclarer vos dates de travail à l'avance. Il n'est pas permis d'antidater vos prestations.</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-form-group-layout o-form-group-layout--standard">
+                        <div class="o-grid">
+                            <div class="o-grid-col-6">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfName">Nom</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfName" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-6">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfFirstName">Prénom</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfFirstName" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-6">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfGender">Sexe</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select" id="tfGender">
+                                                <option>Masculin</option>
+                                                <option>Feminin</option>
+                                                <option>X</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-6">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfLangue">Langue</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select" id="tfLangue">
+                                                <option>Français</option>
+                                                <option>Nederlands</option>
+                                                <option>Deutsch</option>
+                                                <option>Espanol</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-hr"></div>
+                        <h3 class="c-h3">Adresse officielle</h3>
+                        <div class="o-grid">
+                            <div class="o-grid-col-8">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressOfficalStreet">Avenue/rue</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfAddressOfficalStreet" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-2">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressOfficalStreetNo">No</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfAddressOfficalStreetNo" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-2">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressOfficalStreetBuildingAddition">Bte</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfAddressOfficalStreetBuildingAddition" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-6">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressOfficalZipCode">Code postal</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfAddressOfficalZipCode" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-6">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressOfficalCountry">Pays</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select" id="tfAddressOfficalCountry">
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="c-h3">Adresse Courrier</h3>
+                        <div class="o-grid">
+                            <div class="o-grid-col-8">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressPostalStreet">Avenue/rue</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfAddressPostalStreet" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-2">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressPostalStreetNo">No</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfAddressPostalStreetNo" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-2">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressPostalStreetBuildingAddition">Bte</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfAddressPostalStreetBuildingAddition" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-6">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressPostalZipCode">Code postal</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="tfAddressPostalZipCode" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- @todo Fix this bug with the key not being shown correctly-->
+                            <div class="o-grid-col-6">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="tfAddressPostalCountry">Pays</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select" id="tfAddressPostalCountry">
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                                <option>[object Object]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @todo enter more data-->
+                    <!--
+            N° Gsm: N° tél:
+            Email:
+            Date de naissance: jour 01 v mois_01 année 2010
+            Etat civil: Célibataire
+            Ville de naissance: Nationalité: Choisir
+            Pays de naissance:
+            Numéro de registre national ou inscription © au registre des étrangers:
+            N° carte identité:
+            Envoyez svp une copie de vote carte d'identité (recto verso) en annexe de votre fiche d'inscription.
+            Numéro IBAN de vote compte bancaire personnel:
+            Envoyez sp une copie de vote carte bancaire en annexe de vote fiche d'inscription.
+            Pourcentage de précompte professionnel à appliquer par défaut: % ®
+            Fonction:
+            Principale: Autre:
+            Discipline(s)/métier(s) que vous souhaitez développer au sein de Smart (étudiant, artiste et chômeur 'est pas une fonction)
+            U j'autorise Smart à transmettre mes données à des tiers, à de fins professionnelles uniquement (https://www.autoriteprotectiondonnees.be/) suivant
+            -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>
