@@ -38,7 +38,7 @@ block body
                     .o-grid-col-6
                         +c-form-group({ label: 'Code postal', id: 'tfAddressOfficalZipCode'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Pays', id: 'tfAddressOfficalCountry', type: 'select', value: contentData.countries.all })
+                        +c-form-group({ label: 'Pays', id: 'tfAddressOfficalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
                 h3.c-h3 Adresse Courrier
                 .o-grid
                     .o-grid-col-8
@@ -51,7 +51,7 @@ block body
                         +c-form-group({ label: 'Code postal', id: 'tfAddressPostalZipCode'})
                     // @todo Fix this bug with the key not being shown correctly
                     .o-grid-col-6
-                        +c-form-group({ label: 'Pays', id: 'tfAddressPostalCountry', type: 'select', value: contentData.countries.all, key: countryName })
+                        +c-form-group({ label: 'Pays', id: 'tfAddressPostalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
 
             // @todo enter more data
 
