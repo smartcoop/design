@@ -6,6 +6,6 @@ mixin c-select({ id, value = [A, B, C], key })
         select.c-select(id=id)
             each item in value
                 if key
-                    option= item.key
+                    option= item[key]
                 else
                     option= item
