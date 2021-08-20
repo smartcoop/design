@@ -14,6 +14,18 @@ containsCustom: true
     </thead>
     <tbody>
         <tr>
+            <td>layout</td>
+            <td>string</td>
+            <td><code>text-icon</code>, <code>icon-only</code>, <code>default</code></td>
+            <td>Determines the placement of the icon. The default layout is <code>icon-text</code>.</td>
+        </tr>
+        <tr>
+            <td>skin</td>
+            <td>string</td>
+            <td><code>primary</code>, <code>secondary</code>, <code>borderless</code>, <code>muted</code></td>
+            <td>Determines how the button is visually rendered.</td>
+        </tr>
+        <tr>
             <td>type</td>
             <td>string</td>
             <td><code>button</code>, <code>submit</code>, <code>reset</code></td>
@@ -30,18 +42,6 @@ containsCustom: true
             <td>string</td>
             <td>See <a href="/styleguide/aov-icons.html">icon style guide</a> for available icons.</td>
             <td>This parameter is used for buttons with icons.</td>
-        </tr>
-        <tr>
-            <td>skin</td>
-            <td>string</td>
-            <td><code>primary</code>, <code>secondary</code>, <code>borderless</code>, <code>muted</code></td>
-            <td>Determines how the button is visually rendered.</td>
-        </tr>
-        <tr>
-            <td>layout</td>
-            <td>string</td>
-            <td><code>text-icon</code>, <code>icon-only</code>, <code>default</code></td>
-            <td>Determines the placement of the icon. The default layout is <code>icon-text</code>.</td>
         </tr>
         <tr>
             <td>isBlock</td>
