@@ -134,6 +134,10 @@
     border-bottom: 1px solid $color-gray-100;
   }
 
+  table tr:last-child td {
+    border: none;
+  }
+
   strong {
     font-weight: $g-headings-font-weight;
   }
