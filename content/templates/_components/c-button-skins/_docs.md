@@ -1,5 +1,5 @@
 ---
-title: Buttons (skins)
+title: Buttons
 ---
 
-This page documents the different button skins.
+This page documents the different button skins and types.
