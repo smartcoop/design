@@ -4,7 +4,7 @@
     @param {string} Pug block content - the button label
 
     @param {Object} props
-    @param {string} buttonType - button type
+    @param {string} type - button type
     @param {string} href - if href
     @param {string} icon - icon name
     @param {string} skin - the skin of the button (primary, secondary, tertiary, danger-primary, danger-hover, borderless, muted)
@@ -12,7 +12,7 @@
     @param {boolean} isBlock - if block
     @param {boolean} isLink - if link button
 
-mixin c-button({buttonType = "button", href, icon, skin = "secondary", layout, isBlock = false, isLink = false})
+mixin c-button({type = "button", href, icon, skin = "secondary", layout, isBlock = false, isLink = false})
     - var iconOnlyClass = ""
     - if (layout == "icon-only") iconOnlyClass = " c-button--icon"
     - var blockClass = ""
@@ -29,7 +29,7 @@ mixin c-button({buttonType = "button", href, icon, skin = "secondary", layout, i
                     else
                         |
     else
-        button(type=buttonType class=classListing)&attributes(attributes)
+        button(type=type class=classListing)&attributes(attributes)
             span.c-button__content
                 +c-button-inner-layout(icon, layout)
                     if block

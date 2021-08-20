@@ -14,7 +14,7 @@ containsCustom: true
     </thead>
     <tbody>
         <tr>
-            <td>buttonType</td>
+            <td>type</td>
             <td>string</td>
             <td><code>button</code>, <code>submit</code>, <code>reset</code></td>
             <td>The default value of a button type is <code>button</code>.</td>
