@@ -1,0 +1,74 @@
+extends /templates/_layouts/default
+
+block body
+    .u-spacer-l
+        .o-container.o-container--medium
+            .u-spacer-bottom
+                img(src="images/logo.svg" alt="Smart")
+            .c-hr
+            h1.c-h2 Inscription
+            .c-content
+                p Pour une utilisation optimale des services que Smart met à vote disposition, il est vivement souhaitable et recommandé de participer à une session Smart : <a href="#">mode d'emploi</a>.
+
+            .u-spacer-bottom
+                +c-alert({
+                    title: "Important",
+                    message: `<ul><li>Vous recevrez VOS codes personnels par mail pour accéder à votre « compte Smart » (et encoder vos contrats) dans les 48h ouvrés suivant l'envoi de vos documents d'inscription. N'hésitez pas à contacter le bureau Smart le plus proche de chez vous en cas d'urgence.</li><li>N'oubliez pas de toujours déclarer vos dates de travail à l'avance. Il n'est pas permis d'antidater vos prestations.</li>`,
+                })
+
+            .o-form-group-layout.o-form-group-layout--standard
+                .o-grid
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Nom', id: 'tfName'})
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Prénom', id: 'tfFirstName'})
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Sexe', id: 'tfGender', type: 'select', value: ['Masculin','Feminin','X']})
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Langue', id: 'tfLangue', type: 'select', value: ['Français','Nederlands','Deutsch','Espanol']})
+                .c-hr
+                h3.c-h3 Adresse officielle
+                .o-grid
+                    .o-grid-col-8
+                        +c-form-group({ label: 'Avenue/rue', id: 'tfAddressOfficalStreet'})
+                    .o-grid-col-2
+                        +c-form-group({ label: 'No', id: 'tfAddressOfficalStreetNo'})
+                    .o-grid-col-2
+                        +c-form-group({ label: 'Bte', id: 'tfAddressOfficalStreetBuildingAddition'})
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Code postal', id: 'tfAddressOfficalZipCode'})
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Pays', id: 'tfAddressOfficalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+                h3.c-h3 Adresse Courrier
+                .o-grid
+                    .o-grid-col-8
+                        +c-form-group({ label: 'Avenue/rue', id: 'tfAddressPostalStreet'})
+                    .o-grid-col-2
+                        +c-form-group({ label: 'No', id: 'tfAddressPostalStreetNo'})
+                    .o-grid-col-2
+                        +c-form-group({ label: 'Bte', id: 'tfAddressPostalStreetBuildingAddition'})
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Code postal', id: 'tfAddressPostalZipCode'})
+                    // @todo Fix this bug with the key not being shown correctly
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Pays', id: 'tfAddressPostalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+
+            // @todo enter more data
+
+            //
+                N° Gsm: N° tél:
+                Email:
+                Date de naissance: jour 01 v mois_01 année 2010
+                Etat civil: Célibataire
+                Ville de naissance: Nationalité: Choisir
+                Pays de naissance:
+                Numéro de registre national ou inscription © au registre des étrangers:
+                N° carte identité:
+                Envoyez svp une copie de vote carte d'identité (recto verso) en annexe de votre fiche d'inscription.
+                Numéro IBAN de vote compte bancaire personnel:
+                Envoyez sp une copie de vote carte bancaire en annexe de vote fiche d'inscription.
+                Pourcentage de précompte professionnel à appliquer par défaut: % ®
+                Fonction:
+                Principale: Autre:
+                Discipline(s)/métier(s) que vous souhaitez développer au sein de Smart (étudiant, artiste et chômeur 'est pas une fonction)
+                U j'autorise Smart à transmettre mes données à des tiers, à de fins professionnelles uniquement (https://www.autoriteprotectiondonnees.be/) suivant

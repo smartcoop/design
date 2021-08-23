@@ -16,6 +16,7 @@ mixin c-alert({skin="default", icon, message, title, isClosable=false})
                 if title
                     h4.c-alert__title= title
                 if message
-                    p.c-alert__message= message
+                    .c-alert__message
+                        .c-content!= marked(message)
         if isClosable
             +c-button({isLink: true, skin: 'borderless-muted', icon: 'close', layout: 'icon-only'})(data-alert-close aria-label="Close alert") Alert sluiten
