@@ -67,6 +67,10 @@ $c-alert-border-radius: 0.3rem !default;
   max-width: 88rem;
 }
 
+.c-alert__message .c-content p:only-child {
+  margin: 0;
+}
+
 .c-alert.c-alert--full {
   max-width: none;
   margin: $g-spacer-unit * 2;
