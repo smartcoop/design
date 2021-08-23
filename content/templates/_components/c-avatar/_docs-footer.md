@@ -37,5 +37,11 @@ containsCustom: true
             <td><code>regular</code>, <code>small</code></td>
             <td>Determines the size of an avatar. The default size is set to regular.</td>
         </tr>
+        <tr>
+            <td>href</td>
+            <td>string</td>
+            <td>This can be any url or id.</td>
+            <td>If this parameter is used then this avatar will automatically become a link.</td>
+        </tr>
     </tbody>
 </table>
