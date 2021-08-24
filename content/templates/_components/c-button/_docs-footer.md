@@ -29,7 +29,7 @@ containsCustom: true
             <td>type</td>
             <td>string</td>
             <td><code>button</code>, <code>submit</code>, <code>reset</code></td>
-            <td>The default value of a button type is <code>button</code>.</td>
+            <td>The default value is <code>button</code>.</td>
         </tr>
         <tr>
             <td>href</td>
