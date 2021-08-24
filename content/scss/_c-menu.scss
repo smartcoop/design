@@ -10,20 +10,25 @@
 $g-c-menu-z: 60 !default;
 
 /* Component
-   ========================================================================== */
+      ========================================================================== */
 
 .c-menu {
-  background: #FFF;
+  background: #fff;
   border: 1px solid $color-gray-200;
   border-radius: 0.3rem;
-  box-shadow: 0 2px 20px 0 rgba($g-text-color, 0.1), 0 1px 3px 0 rgba($g-text-color, 0.1);
+  filter: drop-shadow(0 0 0.5rem rgba(33, 33, 33, 0.25));
   color: $g-text-color;
   min-width: 10rem;
   opacity: 0;
   padding: 0.4rem 0;
   position: absolute;
-  display: none;
+  visibility: hidden;
+  pointer-events: none;
   z-index: $g-c-menu-z;
+}
+
+.c-menu--large {
+  min-width: 22rem;
 }
 
 .c-menu.c-menu--visible.js-no-action {
@@ -32,38 +37,22 @@ $g-c-menu-z: 60 !default;
 
 .c-menu--visible {
   opacity: 1;
-  display: block;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .c-menu__item {
   display: flex;
-  padding: 0.8rem 1.6rem;
   position: relative;
-
-  &:hover {
-    background-color: $color-gray-50;
-  }
-
-  &.c-menu__item--large {
-    flex-direction: column;
-    white-space: normal;
-  }
-
-  &.c-menu__item--center {
-    align-items: center;
-  }
+  align-items: center;
 }
 
 .c-menu__item--nowrap {
   white-space: nowrap;
 }
 
-
-.c-menu__item--selected {
-  font-weight: 600;
-}
-
 .c-menu__label {
+  padding: 0.8rem 1.6rem;
   color: inherit;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -73,8 +62,18 @@ $g-c-menu-z: 60 !default;
   justify-content: flex-start;
   align-items: center;
 
+  .c-avatar,
   .o-svg-icon {
-    margin-right: 1rem;
+    margin-right: $g-spacer-unit;
+  }
+
+  // Hover state
+  &:hover {
+    background-color: $color-gray-50;
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 0.2rem $color-blue-200;
   }
 }
 
@@ -85,10 +84,26 @@ $g-c-menu-z: 60 !default;
   padding-top: 0.4rem;
 }
 
-.c-menu__icon {
-  opacity: 0.5;
-  margin-right: 0.5rem;
-  .c-menu__item:hover & {
-    opacity: 1;
+.c-menu__item--danger {
+  color: $color-error;
+
+  .c-menu__label:focus {
+    box-shadow: inset 0 0 0 0.2rem $color-red-200;
+  }
+}
+
+// Styling for items not used in a dropdown, ie as a list item
+*:not(.c-menu)>.c-menu__item {
+  min-height: $g-bar-size-medium;
+  border-bottom: 1px solid $color-gray-200;
+  padding-left: 0;
+  padding-right: 0;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &--selected::after {
+    right: 0.6rem;
   }
 }
