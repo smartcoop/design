@@ -22,7 +22,7 @@ module.exports = {
   styleguide: {
     search: true,
     colors: './content/scss/_s-colors.scss',
-    categoryOrder: ['Style guide', 'Development documentation', 'Design patterns', 'Components', 'Objects'],
+    categoryOrder: ['Style guide', 'Design patterns', 'Components', 'Objects', 'Development documentation'],
     componentCategories: {
       aov: 'Basics',
       c: 'Components',
