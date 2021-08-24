@@ -19,12 +19,7 @@
  ========================================================================== */
 /* Secondary colors
  ========================================================================== */
-/* Repeat color variables for semantic mapping
-   For example, you can use this file to globally change the colors of primary buttons and links;
-  these are usually mapped to $color-primary at the component level.
-
-  This is in a separate file because _settings.color.scss is being used to generate documentation
-  about the colors, and we technically cannot read variables that reference other variables.
+/* Semantic colors
  ========================================================================== */
 /* ==========================================================================
    Variables
@@ -671,11 +666,11 @@ abbr[title] {
     color: #FF4054; }
 
 .c-alert--warning {
-  border-color: #F4C95D; }
+  border-color: #F0F096; }
   .c-alert--warning:before {
-    background: #F4C95D; }
+    background: #F0F096; }
   .c-alert--warning > .o-svg-icon {
-    color: #F4C95D; }
+    color: #F0F096; }
 
 /* ==========================================================================
   c-alert-stack
@@ -1521,6 +1516,9 @@ input.c-button {
 .c-content table td {
   border-bottom: 1px solid #E5E5E5; }
 
+.c-content table tr:last-child td {
+  border: none; }
+
 .c-content strong {
   font-weight: 500; }
 
@@ -1760,46 +1758,42 @@ textarea.c-input--h-large {
 /* Variables
    ========================================================================== */
 /* Component
-   ========================================================================== */
+      ========================================================================== */
 .c-menu {
-  background: #FFF;
+  background: #fff;
   border: 1px solid #CCCCCC;
   border-radius: 0.3rem;
-  box-shadow: 0 2px 20px 0 rgba(77, 77, 77, 0.1), 0 1px 3px 0 rgba(77, 77, 77, 0.1);
+  filter: drop-shadow(0 0 0.5rem rgba(33, 33, 33, 0.25));
   color: #4D4D4D;
   min-width: 10rem;
   opacity: 0;
   padding: 0.4rem 0;
   position: absolute;
-  display: none;
+  visibility: hidden;
+  pointer-events: none;
   z-index: 70; }
+
+.c-menu--large {
+  min-width: 22rem; }
 
 .c-menu.c-menu--visible.js-no-action {
   position: static; }
 
 .c-menu--visible {
   opacity: 1;
-  display: block; }
+  visibility: visible;
+  pointer-events: auto; }
 
 .c-menu__item {
   display: flex;
-  padding: 0.8rem 1.6rem;
-  position: relative; }
-  .c-menu__item:hover {
-    background-color: #F2F2F2; }
-  .c-menu__item.c-menu__item--large {
-    flex-direction: column;
-    white-space: normal; }
-  .c-menu__item.c-menu__item--center {
-    align-items: center; }
+  position: relative;
+  align-items: center; }
 
 .c-menu__item--nowrap {
   white-space: nowrap; }
 
-.c-menu__item--selected {
-  font-weight: 600; }
-
 .c-menu__label {
+  padding: 0.8rem 1.6rem;
   color: inherit;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1808,8 +1802,13 @@ textarea.c-input--h-large {
   display: flex;
   justify-content: flex-start;
   align-items: center; }
+  .c-menu__label .c-avatar,
   .c-menu__label .o-svg-icon {
-    margin-right: 1rem; }
+    margin-right: 0.8rem; }
+  .c-menu__label:hover {
+    background-color: #F2F2F2; }
+  .c-menu__label:focus {
+    box-shadow: inset 0 0 0 0.2rem #8AB5FF; }
 
 .c-menu__divider {
   border-top: 0.1rem solid #CCCCCC;
@@ -1817,11 +1816,20 @@ textarea.c-input--h-large {
   margin-top: 0.4rem;
   padding-top: 0.4rem; }
 
-.c-menu__icon {
-  opacity: 0.5;
-  margin-right: 0.5rem; }
-  .c-menu__item:hover .c-menu__icon {
-    opacity: 1; }
+.c-menu__item--danger {
+  color: #FF4054; }
+  .c-menu__item--danger .c-menu__label:focus {
+    box-shadow: inset 0 0 0 0.2rem #FFB0B9; }
+
+*:not(.c-menu) > .c-menu__item {
+  min-height: 5.6rem;
+  border-bottom: 1px solid #CCCCCC;
+  padding-left: 0;
+  padding-right: 0; }
+  *:not(.c-menu) > .c-menu__item:last-child {
+    border-bottom: 0; }
+  *:not(.c-menu) > .c-menu__item--selected::after {
+    right: 0.6rem; }
 
 /* ==========================================================================
   Component: c-modal
@@ -2283,9 +2291,9 @@ textarea.c-input--h-large {
     background: #00A57D; }
 
 .c-status-pill--warning {
-  border: 0.1rem solid #F4C95D; }
+  border: 0.1rem solid #F0F096; }
   .c-status-pill--warning .c-status-pill__circle {
-    background: #F4C95D; }
+    background: #F0F096; }
 
 /* ==========================================================================
   Component: table

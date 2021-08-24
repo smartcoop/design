@@ -5,11 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Buttons (skins) - Styleguide - Smart Coop
+    <title>Buttons - Styleguide - Smart Coop
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
-    <link rel="stylesheet" href="/css/prism-styleguide.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
 </head>
 
@@ -96,10 +95,10 @@
                                             <a class="null " href="/styleguide/c-avatar.html"> Avatar</a>
                                         </li>
                                         <li class="null ">
-                                            <a class="null " href="/styleguide/c-button-skins.html"> Buttons (skins)</a>
+                                            <a class="null " href="/styleguide/c-button.html"> Buttons</a>
                                         </li>
                                         <li class="null ">
-                                            <a class="null " href="/styleguide/c-button-types.html"> Buttons (types)</a>
+                                            <a class="null " href="/styleguide/c-checkbox.html"> Checkbox</a>
                                         </li>
                                         <li class="null ">
                                             <a class="null " href="/styleguide/c-dropdown.html"> Dropdown</a>
@@ -114,9 +113,6 @@
                                             <a class="null " href="/styleguide/c-inputs-text.html"> Inputs (text)</a>
                                         </li>
                                         <li class="null ">
-                                            <a class="null " href="/styleguide/c-inputs-toggles.html"> Inputs (toggles)</a>
-                                        </li>
-                                        <li class="null ">
                                             <a class="null " href="/styleguide/c-modal-sizes.html"> Modal sizes</a>
                                         </li>
                                         <li class="null ">
@@ -127,6 +123,9 @@
                                         </li>
                                         <li class="null ">
                                             <a class="null " href="/styleguide/c-popover.html"> Popover</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/c-radio-button.html"> Radio button</a>
                                         </li>
                                         <li class="null ">
                                             <a class="null " href="/styleguide/c-sidebar.html"> Sidebar</a>
@@ -142,6 +141,16 @@
                                         </li>
                                         <li class="null ">
                                             <a class="null " href="/styleguide/c-tooltip.html"> Tooltip</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Utilities</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/styleguide/u-spacer.html"> Spacing utility classes</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -171,10 +180,10 @@
                 <div class="br-styleguide-content">
                     <div class="br-styleguide-content-inner">
                         <div class="br-componentgroup-header-wrapper">
-                            <h1 class="br-componentgroup-header c-h2">Buttons (skins)</h1>
+                            <h1 class="br-componentgroup-header c-h2">Buttons</h1>
                         </div>
                         <div class="br-content c-content">
-                            <p>This page documents the different button skins.</p>
+                            <p>This page documents the different button skins and types.</p>
 
                         </div>
                         <div class="br-sample" id="component-01-c-button-primary">
@@ -352,6 +361,137 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="br-sample" id="component-06-c-button-icon-text">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Text + icon button</h3>
+                                <a class="br-sample-header-link" href="#component-06-c-button-icon-text">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content">
+                                <p>A button with text and an icon.</p>
+                            </div>
+                            <div class="br-sample-content">
+                                <button class="c-button c-button--secondary" type="button">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <span class="c-button__label">Button label</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
+    &lt;span class=&quot;c-button__content&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon-edit  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">+c-button({ icon: 'edit'}) Button label
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-07-c-button-text-icon">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Text + icon button (right side)</h3>
+                                <a class="br-sample-header-link" href="#component-07-c-button-text-icon">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content">
+                                <p>A button with text and an icon on the right side. This is an exception, please default to the icon on the left side.</p>
+                            </div>
+                            <div class="br-sample-content">
+                                <button class="c-button c-button--secondary" type="button">
+                                    <span class="c-button__content">
+                                        <span class="c-button__label">Button label</span>
+                                        <div class="o-svg-icon o-svg-icon-caret-down  ">
+                                            <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
+    &lt;span class=&quot;c-button__content&quot;&gt;
+        &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon-caret-down  &quot;&gt;
+            &lt;svg width=&quot;12&quot; height=&quot;24&quot; viewBox=&quot;0 0 12 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M11 10L6 16L1 10H11Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+    &lt;/span&gt;
+&lt;/button&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">+c-button({ layout: 'text-icon', icon: 'caret-down'}) Button label
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-08-c-button-icon">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">A button (icon only)</h3>
+                                <a class="br-sample-header-link" href="#component-08-c-button-icon">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content">
+                                <p>A button with an icon only. Note the <code>.u-sr-accessible</code> class which lets screenreaders read the button label while hiding it in general.</p>
+                            </div>
+                            <div class="br-sample-content">
+                                <button class="c-button c-button--secondary c-button--icon" type="button">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-add  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Button label
+                                        </div>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;button class=&quot;c-button c-button--secondary c-button--icon&quot; type=&quot;button&quot;&gt;
+    &lt;span class=&quot;c-button__content&quot;&gt;
+        &lt;div class=&quot;o-svg-icon o-svg-icon-add  &quot;&gt;
+            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;path d=&quot;M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;u-sr-accessible&quot;&gt;Button label
+        &lt;/div&gt;
+    &lt;/span&gt;
+&lt;/button&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">+c-button({ layout: 'icon-only', icon: 'add'}) Button label
+</pre>
+                                </div>
+                            </div>
+                        </div>
                         <div class="br-componentgroup-footer-wrapper">
                             <h1 class="br-componentgroup-footer c-h2">Possible parameters for buttons</h1>
                             <div class="br-content c-content">
@@ -366,7 +506,23 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>buttonType</td>
+                                            <td>layout</td>
+                                            <td>string</td>
+                                            <td>
+                                                <code>text-icon</code>, <code>icon-only</code>, <code>default</code>
+                                            </td>
+                                            <td>Determines the placement of the icon. The default layout is <code>icon-text</code>.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>skin</td>
+                                            <td>string</td>
+                                            <td>
+                                                <code>primary</code>, <code>secondary</code>, <code>borderless</code>, <code>muted</code>
+                                            </td>
+                                            <td>Determines how the button is visually rendered.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>type</td>
                                             <td>string</td>
                                             <td>
                                                 <code>button</code>, <code>submit</code>, <code>reset</code>
@@ -384,22 +540,6 @@
                                             <td>string</td>
                                             <td>See <a href="/styleguide/aov-icons.html">icon style guide</a> for available icons.</td>
                                             <td>This parameter is used for buttons with icons.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>skin</td>
-                                            <td>string</td>
-                                            <td>
-                                                <code>primary</code>, <code>secondary</code>, <code>borderless</code>, <code>muted</code>
-                                            </td>
-                                            <td>Determines how the button is visually rendered.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>layout</td>
-                                            <td>string</td>
-                                            <td>
-                                                <code>text-icon</code>, <code>icon-only</code>, <code>default</code>
-                                            </td>
-                                            <td>Determines the placement of the icon. The default layout is <code>icon-text</code>.</td>
                                         </tr>
                                         <tr>
                                             <td>isBlock</td>
