@@ -1,5 +1,5 @@
 ---
-title: Possible parameters for buttons
+title: Possible parameters for button
 containsCustom: true
 ---
 

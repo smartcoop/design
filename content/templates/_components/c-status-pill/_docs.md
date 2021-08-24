@@ -1,3 +1,3 @@
 ---
-title: Status pills
+title: Status pill
 ---
