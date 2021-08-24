@@ -84,6 +84,14 @@ $g-c-menu-z: 60 !default;
   padding-top: 0.4rem;
 }
 
+.c-menu__item--danger {
+  color: $color-error;
+
+  .c-menu__label:focus {
+    box-shadow: inset 0 0 0 0.2rem $color-red-200;
+  }
+}
+
 // Styling for items not used in a dropdown, ie as a list item
 *:not(.c-menu)>.c-menu__item {
   min-height: $g-bar-size-medium;
