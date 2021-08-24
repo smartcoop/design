@@ -21,10 +21,10 @@ module.exports = {
     colors: './content/scss/_s-colors.scss',
     categoryOrder: [
       'Style guide',
-      'Development documentation',
       'Design patterns',
       'Components',
-      'Objects'
+      'Objects',
+      'Development documentation'
     ],
     componentCategories: {
       aov: 'Basics',
