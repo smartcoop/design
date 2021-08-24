@@ -6,52 +6,51 @@ block body
             .u-spacer-bottom
                 img(src="images/logo.svg" alt="Smart")
             .c-hr
-            h1.c-h2 Inscription
+            h1.c-h2 Registration
             .c-content
-                p Pour une utilisation optimale des services que Smart met à vote disposition, il est vivement souhaitable et recommandé de participer à une session Smart : <a href="#">mode d'emploi</a>.
-
+                p For optimal use of the Smart services, it is highly recommended to attend a Smart session: view our <a href="#">user manual</a>.
             .u-spacer-bottom
                 +c-alert({
                     title: "Important",
-                    message: `<ul><li>Vous recevrez VOS codes personnels par mail pour accéder à votre « compte Smart » (et encoder vos contrats) dans les 48h ouvrés suivant l'envoi de vos documents d'inscription. N'hésitez pas à contacter le bureau Smart le plus proche de chez vous en cas d'urgence.</li><li>N'oubliez pas de toujours déclarer vos dates de travail à l'avance. Il n'est pas permis d'antidater vos prestations.</li>`,
+                    message: `<ul><li>You will receive your personal codes to access your “Smart account” (and to fill in your contracts) by email within 48 working hours of sending your registration documents. Do not hesitate to contact the nearest Smart office in case of emergency.</li><li>Remember to always declare your working days in advance. It is not allowed to backdate your services.</li>`,
                 })
 
             .o-form-group-layout.o-form-group-layout--standard
                 .o-grid
                     .o-grid-col-6
-                        +c-form-group({ label: 'Nom', id: 'tfName'})
+                        +c-form-group({ label: 'Name', id: 'tfName'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Prénom', id: 'tfFirstName'})
+                        +c-form-group({ label: 'First name', id: 'tfFirstName'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Sexe', id: 'tfGender', type: 'select', value: ['Masculin','Feminin','X']})
+                        +c-form-group({ label: 'Gender', id: 'tfGender', type: 'select', value: ['Male','Female','X']})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Langue', id: 'tfLangue', type: 'select', value: ['Français','Nederlands','Deutsch','Espanol']})
+                        +c-form-group({ label: 'Language', id: 'tfLangue', type: 'select', value: ['Français','Nederlands','Deutsch','Espanol']})
                 .c-hr
                 h3.c-h3 Adresse officielle
                 .o-grid
                     .o-grid-col-8
-                        +c-form-group({ label: 'Avenue/rue', id: 'tfAddressOfficalStreet'})
+                        +c-form-group({ label: 'Street', id: 'tfAddressOfficalStreet'})
                     .o-grid-col-2
-                        +c-form-group({ label: 'No', id: 'tfAddressOfficalStreetNo'})
+                        +c-form-group({ label: 'Number', id: 'tfAddressOfficalStreetNo'})
                     .o-grid-col-2
-                        +c-form-group({ label: 'Bte', id: 'tfAddressOfficalStreetBuildingAddition'})
+                        +c-form-group({ label: 'Addition', id: 'tfAddressOfficalStreetBuildingAddition'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Code postal', id: 'tfAddressOfficalZipCode'})
+                        +c-form-group({ label: 'Postal code', id: 'tfAddressOfficalZipCode'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Pays', id: 'tfAddressOfficalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+                        +c-form-group({ label: 'Country', id: 'tfAddressOfficalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
                 h3.c-h3 Adresse Courrier
                 .o-grid
                     .o-grid-col-8
-                        +c-form-group({ label: 'Avenue/rue', id: 'tfAddressPostalStreet'})
+                        +c-form-group({ label: 'Street', id: 'tfAddressPostalStreet'})
                     .o-grid-col-2
-                        +c-form-group({ label: 'No', id: 'tfAddressPostalStreetNo'})
+                        +c-form-group({ label: 'Number', id: 'tfAddressPostalStreetNo'})
                     .o-grid-col-2
-                        +c-form-group({ label: 'Bte', id: 'tfAddressPostalStreetBuildingAddition'})
+                        +c-form-group({ label: 'Addition', id: 'tfAddressPostalStreetBuildingAddition'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Code postal', id: 'tfAddressPostalZipCode'})
+                        +c-form-group({ label: 'Postal code', id: 'tfAddressPostalZipCode'})
                     // @todo Fix this bug with the key not being shown correctly
                     .o-grid-col-6
-                        +c-form-group({ label: 'Pays', id: 'tfAddressPostalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+                        +c-form-group({ label: 'Country', id: 'tfAddressPostalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
 
             // @todo enter more data
 
