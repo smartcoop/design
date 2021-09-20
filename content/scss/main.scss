@@ -67,11 +67,18 @@
 @import "_c-toolbar";
 @import "_c-tooltip";
 
+/* Components specific to design system website
+   ========================================================================== */
+
+@import "_c-design-system-home-illustration";
+
 /* Utilities: specific helper classes, overrides
-     ========================================================================== */
+   ========================================================================== */
 
 @import '_u-scroll-wrapper';
 @import "_u-bg";
 @import "_u-generic";
 @import "_u-spacer";
 @import "_u-text";
+
+
