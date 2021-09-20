@@ -2530,6 +2530,7 @@ textarea.c-input--h-large {
   display: block;
   color: #4D4D4D;
   font-size: 1.6rem;
+  line-height: 1.5;
   width: 100%;
   transition: all 0.15s ease-in-out; }
   .c-textarea:-ms-input-placeholder {
