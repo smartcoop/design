@@ -1,0 +1,27 @@
+extends ../../index
+
+block append pageVariables
+    - var moduleTitle = "Copywriting - Design system in practice"
+
+block content
+
+    .o-container-vertical
+
+        h1.c-d-h1 Design system in practice
+
+        .o-grid
+
+            .o-grid-col-bp3-3
+                .u-spacer-bottom
+                    ul.c-side-menu
+                        li.c-side-menu__item(class=pathname.match(/design\/in-practice\/copywriting/) ? "c-side-menu__item--active" : "")
+                            a.c-side-menu__link(href="/design/in-practice/copywriting.html") Copywriting
+
+                        li.c-side-menu__item(class=pathname.match(/design\/in-practice\/icon-workflow/) ? "c-side-menu__item--active" : "")
+                            a.c-side-menu__link(href="/design/in-practice/icon-workflow.html") Icon workflow
+
+            .o-grid-col-bp3-9
+                block subContent
+                    .c-display
+                        h2 Copywriting
+                        p ...
