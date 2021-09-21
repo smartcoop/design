@@ -51,23 +51,8 @@ function renderView(req, res, viewName, customLocals) {
 }
 
 module.exports = function (done) {
-  app.get('/styleguide', function (req, res) {
-    renderView(req, res, 'styleguide/index', {
-      pathname: 'styleguide/index'
-    });
-  });
 
-  app.get('/styleguide/docs/:doc', function (req, res) {
-    const docFilename = req.params.doc.replace('.html', '');
-    const doc = _.find(docs.discover().allDocs, doc => doc.attributes.filename === docFilename);
-
-    renderView(req, res, 'styleguide/doc', {
-      pathname: path.join('styleguide/docs/', docFilename),
-      doc
-    });
-  });
-
-  app.get('/styleguide/:group', function (req, res) {
+  app.get('/development/docs/:group', function (req, res) {
     const componentGroups = components.discover();
     const componentGroup = req.params.group.replace('.html', '');
 

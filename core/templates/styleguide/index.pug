@@ -1,41 +1,17 @@
-extends /templates/_layouts/master
+extends /templates/index
 
 block append pageVariables
     - var htmlClass = 'br-styleguide br-styleguide-default-styles-active'
 
-block body
+block content
 
-    .br-styleguide-container
-
-        .br-styleguide-navigation-wrapper-ie
-
-            .br-styleguide-header
-                if styleguideBrandCustomTemplate
-                    include ../../../content/docs/templates/styleguide-custom-brand-template
-                else
-                    if styleguideLogoAsImage
-                        a(href=styleguideBrandLink?styleguideBrandLink:"")
-                            img.br-styleguide-logo(src=styleguideLogoAsImagePath alt=styleguideLogoAsImageAlt width=styleguideLogoAsImageForceWidth)
-                    else
-                        h1.br-styleguide-brand-heading(class=styleguideBrandClass)
-                            a.br-reset-link-styling(href=styleguideBrandLink?styleguideBrandLink:"/styleguide" class=styleguideResetLinkStylingClass) #{projectTitle}
-
+    .o-grid
+        .o-grid-col-3
             if config.styleguide.search
-                .br-styleguide-search
-                    if styleguideSearchCustomTemplate
-                        include ../../../content/docs/templates/styleguide-custom-search-template
-                    else
-                        input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
-
-            .br-styleguide-navigation-holder
-
-                block nav
-                    include ../includes/styleguide-nav
-
-        .br-styleguide-content
-            .br-styleguide-content-inner
-                block content
-                    block homeContent
-                        // Place style guide introduction here. By default redirects to first docs page.
-                        script.
-                            window.location = "/styleguide/docs/introduction.html"
+                input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
+            
+            block nav
+                include ../includes/styleguide-nav
+            
+        .o-grid-col-9
+            block subContent
