@@ -629,6 +629,319 @@ abbr[title] {
 .o-svg-icon--subtle {
   color: #999999; }
 
+/* Content styling (styling for base html elements)
+   + helpers for article style content
+   ========================================================================== */
+/* ==========================================================================
+  c-content
+  ---
+  Usage: wrap a .c-content class around content to turn it into rich text.
+
+  .c-h1, .c-h2, .c-body-1, c-body 2
+  ---
+  Usage: use these classes to style individual components like their rich text equivalent
+   ========================================================================== */
+.c-h1, .c-h2, .c-h3, .c-h4,
+.c-content h1,
+.c-content h2,
+.c-content h3,
+.c-content h4 {
+  color: #1A1A1A; }
+
+.c-h1, .c-content h1 {
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 3.2rem;
+  margin: 0 0 3.2rem;
+  line-height: 1.25; }
+
+.c-h2, .c-content h2 {
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin: 0 0 2.4rem;
+  line-height: 1.3; }
+
+.c-h3, .c-content h3 {
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0 0 1.6rem;
+  line-height: 1.4; }
+
+.c-h4, .c-content h4 {
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0 0 0.8rem; }
+
+.c-body-1 {
+  font-size: 1.6rem;
+  margin: 1.5rem 0; }
+
+.c-body-2, .c-content p small {
+  font-size: 1.4rem;
+  margin: 1.4rem 0; }
+
+.c-subline {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem; }
+
+.c-content p {
+  margin: 1.5rem 0; }
+
+.c-content a {
+  text-decoration: none;
+  color: #1267FB;
+  border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
+
+.c-content dl {
+  border: 1px solid #E5E5E5;
+  border-radius: .3rem;
+  overflow: hidden;
+  padding: 1.2rem;
+  margin: 1.5rem 0; }
+  .c-content dl dt {
+    float: left;
+    width: 30%;
+    clear: left;
+    font-weight: 500; }
+  .c-content dl dd {
+    float: left;
+    width: 70%; }
+
+.c-content ul, .c-content ol {
+  padding-left: 3rem;
+  margin: 1.5rem 0; }
+  .c-content ul ul, .c-content ul ol, .c-content ol ul, .c-content ol ol {
+    margin: 0; }
+
+.c-content ul {
+  list-style: disc; }
+
+.c-content ol {
+  list-style: decimal; }
+
+.c-content blockquote {
+  font-style: italic;
+  padding-left: 1.5rem;
+  margin-left: 0.2rem;
+  border-left: 0.4rem solid #E5E5E5; }
+
+.c-content strong {
+  font-weight: 500; }
+
+.c-content .c-button {
+  text-decoration: none; }
+
+/* ==========================================================================
+  c-display
+  ---
+  Usage: wrap a .c-display class around content to turn it into rich text.
+  Similar to .c-content, but meant for a reading context.
+
+   ========================================================================== */
+.c-display {
+  font-size: 1.8rem;
+  line-height: 1.72; }
+
+.c-d-h1, .c-d-h2, .c-d-h3, .c-d-h4,
+.c-display h1,
+.c-display h2,
+.c-display h3,
+.c-display h4 {
+  color: #1A1A1A; }
+
+.c-d-h1, .c-display h1,
+.c-d-h2, .c-display h2,
+.c-d-h3, .c-display h3,
+.c-d-h4, .c-display h4 {
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700; }
+
+.c-d-h1, .c-display h1 {
+  font-size: 3.8rem;
+  margin: 0 0 3.8rem;
+  line-height: 1.25; }
+
+.c-d-h2, .c-display h2 {
+  font-size: 3rem;
+  margin: 0 0 3rem;
+  line-height: 1.36; }
+
+.c-d-h3, .c-display h3 {
+  font-size: 2.6rem;
+  margin: 0 0 1.2rem;
+  line-height: 1.36; }
+
+.c-d-h4, .c-display h4 {
+  font-size: 2.2rem;
+  margin: 0 0 2.2rem;
+  line-height: 1.36; }
+
+.c-d-body-1, .c-display p {
+  font-size: 1.8rem;
+  margin: 1.4rem 0; }
+
+.c-d-body-2, .c-display p small {
+  font-size: 1.6rem;
+  margin: 1.6rem 0;
+  line-height: 1.72; }
+
+.c-display figure {
+  margin: 1.8rem 0; }
+
+.c-display figcaption {
+  color: #666666; }
+
+.c-display p {
+  margin: 1.8rem 0; }
+
+.c-display a {
+  text-decoration: none;
+  color: #1267FB;
+  border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
+
+.c-display ul, .c-display ol {
+  padding-left: 3.2rem;
+  margin: 1.8rem 0; }
+  .c-display ul ul, .c-display ul ol, .c-display ol ul, .c-display ol ol {
+    margin: 0; }
+
+.c-display ul {
+  list-style: disc; }
+
+.c-display ol {
+  list-style: decimal; }
+
+/* ==========================================================================
+  Shared styles between c-display and c-content
+   ========================================================================== */
+.c-display table,
+.c-content table {
+  width: 100%;
+  margin: 1.5rem 0; }
+
+.c-display table td,
+.c-display table th,
+.c-content table td,
+.c-content table th {
+  padding: 0.8rem; }
+
+.c-display table th,
+.c-content table th {
+  border-bottom: 0.2rem solid #CCCCCC;
+  font-weight: 500;
+  text-align: left; }
+
+.c-display table td,
+.c-content table td {
+  border-bottom: 1px solid #E5E5E5; }
+
+.c-display table tr:last-child td,
+.c-content table tr:last-child td {
+  border: none; }
+
+.c-display pre,
+.c-content pre {
+  background: #F2F2F2;
+  padding: 1.5rem;
+  margin: 0 0 1rem;
+  font-size: 75%;
+  white-space: pre-wrap; }
+
+.c-display pre, .c-display code,
+.c-content pre,
+.c-content code {
+  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+
+.c-display code,
+.c-content code {
+  font-size: 85%;
+  background: #F2F2F2;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  color: #FF4054; }
+
+/* ==========================================================================
+  Shared styles between c-display and c-content
+   ========================================================================== */
+.c-display table,
+.c-content table {
+  width: 100%;
+  margin: 1.5rem 0; }
+
+.c-display table td,
+.c-display table th,
+.c-content table td,
+.c-content table th {
+  padding: 0.8rem; }
+
+.c-display table th,
+.c-content table th {
+  border-bottom: 0.2rem solid #CCCCCC;
+  font-weight: 500;
+  text-align: left; }
+
+.c-display table td,
+.c-content table td {
+  border-bottom: 1px solid #E5E5E5; }
+
+.c-display table tr:last-child td,
+.c-content table tr:last-child td {
+  border: none; }
+
+.c-display pre,
+.c-content pre {
+  background: #F2F2F2;
+  padding: 1.5rem;
+  margin: 0 0 1rem;
+  font-size: 75%;
+  white-space: pre-wrap; }
+
+.c-display pre, .c-display code,
+.c-content pre,
+.c-content code {
+  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+
+.c-display code,
+.c-content code {
+  font-size: 85%;
+  background: #F2F2F2;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  color: #FF4054; }
+
+/* ==========================================================================
+  Component: video-wrapper
+   ========================================================================== */
+.c-video-wrapper {
+  position: relative;
+  padding-bottom: 43%;
+  height: 0; }
+
+.c-video-wrapper--aspect-2-3 {
+  padding-bottom: 66.67%;
+  /* 3:2 */ }
+
+.c-video-wrapper--aspect-16-9 {
+  padding-bottom: 56.25%;
+  /* 16:9 */ }
+
+.c-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.c-figure {
+  margin: 1.8rem 0; }
+
+.c-figure__figcaption {
+  color: #666666; }
+
 /* Components: separately styled components (buttons, form inputs, toolbars...)
    ========================================================================== */
 /* ==========================================================================
@@ -1042,7 +1355,8 @@ abbr[title] {
 .c-pill-navigation__item > a {
   display: block;
   padding: .8rem 1.6rem;
-  color: #4D4D4D; }
+  color: #4D4D4D;
+  font-weight: 500; }
 
 .c-pill-navigation__item--has-child-menu > a {
   padding: .8rem 2.8rem .8rem 1.6rem; }
@@ -1548,251 +1862,6 @@ input.c-button {
    ========================================================================== */
 .c-checkbox-subgroup {
   margin: 0.8rem 0 0 2.4rem; }
-
-/* ==========================================================================
-  c-content
-  ---
-  Usage: wrap a .c-content class around content to turn it into rich text.
-
-  .c-h1, .c-h2, .c-body-1, c-body 2
-  ---
-  Usage: use these classes to style individual components like their rich text equivalent
-   ========================================================================== */
-.c-h1, .c-h2, .c-h3, .c-h4,
-.c-content h1,
-.c-content h2,
-.c-content h3,
-.c-content h4 {
-  color: #1A1A1A; }
-
-.c-h1, .c-content h1 {
-  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 3.2rem;
-  margin: 0 0 3.2rem;
-  line-height: 1.25; }
-
-.c-h2, .c-content h2 {
-  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 2.4rem;
-  margin: 0 0 2.4rem;
-  line-height: 1.3; }
-
-.c-h3, .c-content h3 {
-  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
-  margin: 0 0 1.6rem;
-  line-height: 1.4; }
-
-.c-h4, .c-content h4 {
-  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin: 0 0 0.8rem; }
-
-.c-body-1 {
-  font-size: 1.6rem;
-  margin: 1.5rem 0; }
-
-.c-body-2, .c-content p small {
-  font-size: 1.4rem;
-  margin: 1.4rem 0; }
-
-.c-subline {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06rem; }
-
-.c-content p {
-  margin: 1.5rem 0; }
-
-.c-content a {
-  text-decoration: none;
-  color: #1267FB;
-  border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
-
-.c-content dl {
-  border: 1px solid #E5E5E5;
-  border-radius: .3rem;
-  overflow: hidden;
-  padding: 1.2rem;
-  margin: 1.5rem 0; }
-  .c-content dl dt {
-    float: left;
-    width: 30%;
-    clear: left;
-    font-weight: 500; }
-  .c-content dl dd {
-    float: left;
-    width: 70%; }
-
-.c-content ul, .c-content ol {
-  padding-left: 3rem;
-  margin: 1.5rem 0; }
-  .c-content ul ul, .c-content ul ol, .c-content ol ul, .c-content ol ol {
-    margin: 0; }
-
-.c-content ul {
-  list-style: disc; }
-
-.c-content ol {
-  list-style: decimal; }
-
-.c-content blockquote {
-  font-style: italic;
-  padding-left: 1.5rem;
-  margin-left: 0.2rem;
-  border-left: 0.4rem solid #E5E5E5; }
-
-.c-content table {
-  width: 100%;
-  margin: 1.5rem 0; }
-
-.c-content table td,
-.c-content table th {
-  padding: 0.8rem; }
-
-.c-content table th {
-  border-bottom: 0.2rem solid #CCCCCC;
-  font-weight: 500;
-  text-align: left; }
-
-.c-content table td {
-  border-bottom: 1px solid #E5E5E5; }
-
-.c-content table tr:last-child td {
-  border: none; }
-
-.c-content strong {
-  font-weight: 500; }
-
-.c-content .c-button {
-  text-decoration: none; }
-
-.c-content pre {
-  background: #F2F2F2;
-  padding: 1.5rem;
-  margin: 0 0 1rem;
-  font-size: 75%;
-  white-space: pre-wrap; }
-
-.c-content pre, .c-content code {
-  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
-
-.c-content code {
-  font-size: 85%;
-  background: #F2F2F2;
-  padding: 0.2rem;
-  border-radius: 0.2rem;
-  color: #FF4054; }
-
-.c-content--inverse {
-  color: #E5E5E5; }
-
-/* ==========================================================================
-  c-display
-  ---
-  Usage: wrap a .c-display class around content to turn it into rich text.
-  Similar to .c-content, but meant for a reading context.
-
-   ========================================================================== */
-.c-display {
-  font-size: 1.8rem;
-  line-height: 1.72; }
-
-.c-d-h1, .c-d-h2, .c-d-h3, .c-d-h4,
-.c-display h1,
-.c-display h2,
-.c-display h3,
-.c-display h4 {
-  color: #1A1A1A; }
-
-.c-d-h1, .c-display h1,
-.c-d-h2, .c-display h2,
-.c-d-h3, .c-display h3,
-.c-d-h4, .c-display h4 {
-  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 700; }
-
-.c-d-h1, .c-display h1 {
-  font-size: 3.8rem;
-  margin: 0 0 3.8rem;
-  line-height: 1.25; }
-
-.c-d-h2, .c-display h2 {
-  font-size: 3rem;
-  margin: 0 0 3rem;
-  line-height: 1.36; }
-
-.c-d-h3, .c-display h3 {
-  font-size: 2.6rem;
-  margin: 0 0 1.2rem;
-  line-height: 1.36; }
-
-.c-d-h4, .c-display h4 {
-  font-size: 2.2rem;
-  margin: 0 0 2.2rem;
-  line-height: 1.36; }
-
-.c-d-body-1, .c-display p {
-  font-size: 1.8rem;
-  margin: 1.4rem 0; }
-
-.c-d-body-2, .c-display p small {
-  font-size: 1.6rem;
-  margin: 1.6rem 0;
-  line-height: 1.72; }
-
-.c-display figure {
-  margin: 1.8rem 0; }
-
-.c-display figcaption {
-  color: #666666; }
-
-.c-display p {
-  margin: 1.8rem 0; }
-
-.c-display a {
-  text-decoration: none;
-  color: #1267FB;
-  border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
-
-.c-display ul, .c-display ol {
-  padding-left: 3.2rem;
-  margin: 1.8rem 0; }
-  .c-display ul ul, .c-display ul ol, .c-display ol ul, .c-display ol ol {
-    margin: 0; }
-
-.c-display ul {
-  list-style: disc; }
-
-.c-display ol {
-  list-style: decimal; }
-
-.c-display pre {
-  background: #F2F2F2;
-  padding: 1.5rem;
-  margin: 0 0 1rem;
-  font-size: 75%;
-  white-space: pre-wrap; }
-
-.c-display pre, .c-display code {
-  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
-
-.c-display code {
-  font-size: 85%;
-  background: #F2F2F2;
-  padding: 0.4rem;
-  border-radius: 0.2rem;
-  color: #FF4054; }
-
-.c-figure {
-  margin: 1.8rem 0; }
-
-.c-figure__figcaption {
-  color: #666666; }
 
 .c-empty-state {
   display: flex;
@@ -2910,29 +2979,6 @@ textarea.c-input--h-large {
 .c-tooltip[data-popper-placement^='right'] > .c-tooltip__arrow {
   filter: none;
   border-right-color: #333; }
-
-/* ==========================================================================
-  Component: video-wrapper
-   ========================================================================== */
-.c-video-wrapper {
-  position: relative;
-  padding-bottom: 43%;
-  height: 0; }
-
-.c-video-wrapper--aspect-2-3 {
-  padding-bottom: 66.67%;
-  /* 3:2 */ }
-
-.c-video-wrapper--aspect-16-9 {
-  padding-bottom: 56.25%;
-  /* 16:9 */ }
-
-.c-video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
 
 /* Components specific to design system website
    ========================================================================== */

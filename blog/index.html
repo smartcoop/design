@@ -12,326 +12,235 @@
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
 </head>
 
-<body class="u-maximize-height u-overflow-hidden">
-    <div class="br-prototype-wrapper">
-        <div class="br-prototype-nav" id="__prototype-nav" aria-hidden="true">
-            <div class="br-prototype-nav-inner">
-                <h4 class="br-prototype-nav-main-heading">Prototype navigation</h4>
-                <p class="br-prototype-nav-text">Press Ctrl + M to toggle this navigation or click <a class="br-prototype-close-nav" href="#">here</a>.</p>
-                <div id="br-page-tree">
-                    <ul class="br-bordered-list">
-                        <li>
-                            <a href="/styleguide">Styleguide</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">blog</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <h4 class="br-tree-dir-title">2021</h4>
-                                    <ul>
-                                        <li class="br-tree-dir">
-                                            <h4 class="br-tree-dir-title">09</h4>
-                                            <ul>
-                                                <li class="br-tree-dir">
-                                                    <a href="/blog/2021/09/this-is-a-title.html">this-is-a-title</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a class="br-bordered-list__link--active" href="/blog/index.html">index</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">design</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/design/assets-and-resources.html">assets-and-resources</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/design/how-it-works.html">how-it-works</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/design/practical-design-workflow.html">practical-design-workflow</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">development</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/development/repo-links.html">repo-links</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">template-examples</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/template-examples/contact-form.html">contact-form</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/template-examples/register-form.html">register-form</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/template-examples/sample-page.html">sample-page</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <h4 class="br-tree-dir-title">tests</h4>
-                            <ul>
-                                <li class="br-tree-dir">
-                                    <a href="/tests/figure-figcaption.html">figure-figcaption</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/tests/type-test.html">type-test</a>
-                                </li>
-                                <li class="br-tree-dir">
-                                    <a href="/tests/video.html">video</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="br-tree-dir">
-                            <a href="/404.html">404</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <a href="/changelog.html">changelog</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <a class="br-bordered-list__link--active" href="/index.html">index</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <a href="/menu.html">menu</a>
-                        </li>
-                        <li class="br-tree-dir">
-                            <a href="/page-index.html">page-index</a>
-                        </li>
-                    </ul>
+<body class="u-maximize-height">
+    <header id="header">
+        <div class="o-container">
+            <div class="u-padding-vertical-xl">
+                <div class="c-navbar c-navbar--bordered-bottom c-navbar--large c-navbar--unpadded">
+                    <div class="c-toolbar">
+                        <div class="c-toolbar__left">
+                            <div class="c-toolbar__item">
+                                <a href="/">
+                                    <img src="/images/logo.svg" alt="Smart">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-toolbar__right">
+                            <div class="c-toolbar__item">
+                                <!-- Nav for desktop-->
+                                <nav class="c-design-system-nav">
+                                    <button class="c-button c-button--borderless c-button--icon" type="button" id="c-design-system-nav-open">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-menu  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">Open menu
+                                            </div>
+                                        </span>
+                                    </button>
+                                    <div class="c-design-system-nav__mobile">
+                                        <button class="c-button c-button--borderless c-button--icon" type="button" id="c-design-system-nav-close">
+                                            <span class="c-button__content">
+                                                <div class="o-svg-icon o-svg-icon-close  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                                    </svg>
+                                                </div>
+                                                <div class="u-sr-accessible">Close menu
+                                                </div>
+                                            </span>
+                                        </button>
+                                        <ul>
+                                            <li>
+                                                <span>Design</span>
+                                                <ul>
+                                                    <li>
+                                                        <a href="/design/how-it-works.html">Design workflow</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/design/design-system-in-practice.html">Design system in practice</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span>Development</span>
+                                                <ul>
+                                                    <li>
+                                                        <a href="/development/component-documentation.html">Component documentation</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                    </li>
+                                                    <li role="presentational"></li>
+                                                    <li>
+                                                        <a href="/development/browser-support.html">Browser support</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/development/css-architecture.html">CSS architecture</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/development/css-component-structure.html">CSS component structure</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/blog/index.html">Blog</a>
+                                            </li>
+                                            <li>
+                                                <a href="/changelog.html">Changelog</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="c-design-system-nav__desktop">
+                                        <ul class="c-pill-navigation">
+                                            <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                                <!-- @todo now we are using menu.js, which is really meant for dropdowns. Make more accessible with aria-haspopup="true" aria-expanded="false", switch with JS?-->
+                                                <a href="#" data-menu="menu1" data-menu-samewidth="true">Design</a>
+                                                <ul class="c-menu c-menu--large" id="menu1">
+                                                    <li class="c-menu__item">
+                                                        <a class="c-menu__label" href="/design/how-it-works.html">Design workflow</a>
+                                                    </li>
+                                                    <li class="c-menu__item">
+                                                        <a class="c-menu__label" href="/design/design-system-in-practice.html">Design system in practice</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                                <a href="#" data-menu="menu2" data-menu-samewidth="true">Development</a>
+                                                <ul class="c-menu c-menu--large" id="menu2">
+                                                    <li class="c-menu__item">
+                                                        <a class="c-menu__label" href="/development/component-documentation.html">Component documentation</a>
+                                                    </li>
+                                                    <li class="c-menu__item">
+                                                        <a class="c-menu__label" href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                    </li>
+                                                    <li class="c-menu__divider" role="presentational"></li>
+                                                    <li class="c-menu__item">
+                                                        <a class="c-menu__label" href="/development/browser-support.html">Browser support</a>
+                                                    </li>
+                                                    <li class="c-menu__item">
+                                                        <a class="c-menu__label" href="/development/css-architecture.html">CSS architecture</a>
+                                                    </li>
+                                                    <li class="c-menu__item">
+                                                        <a class="c-menu__label" href="/development/css-component-structure.html">CSS component structure</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="c-pill-navigation__item">
+                                                <a href="/blog/index.html">Blog</a>
+                                            </li>
+                                            <li class="c-pill-navigation__item">
+                                                <a href="/changelog.html">Changelog</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="br-prototype-content">
-            <header id="header">
-                <div class="o-container">
-                    <div class="u-padding-vertical-xl">
-                        <div class="c-navbar c-navbar--bordered-bottom c-navbar--large c-navbar--unpadded">
-                            <div class="c-toolbar">
-                                <div class="c-toolbar__left">
-                                    <div class="c-toolbar__item">
-                                        <a href="/">
-                                            <img src="/images/logo.svg" alt="Smart">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="c-toolbar__right">
-                                    <div class="c-toolbar__item">
-                                        <!-- Nav for desktop-->
-                                        <nav class="c-design-system-nav">
-                                            <button class="c-button c-button--borderless c-button--icon" type="button" id="c-design-system-nav-open">
-                                                <span class="c-button__content">
-                                                    <div class="o-svg-icon o-svg-icon-menu  ">
-                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z" fill="#595959" />
-                                                        </svg>
-                                                    </div>
-                                                    <div class="u-sr-accessible">Open menu
-                                                    </div>
-                                                </span>
-                                            </button>
-                                            <div class="c-design-system-nav__mobile">
-                                                <button class="c-button c-button--borderless c-button--icon" type="button" id="c-design-system-nav-close">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-close  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                        <div class="u-sr-accessible">Close menu
-                                                        </div>
-                                                    </span>
-                                                </button>
-                                                <ul>
-                                                    <li>
-                                                        <span>Design</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="/design/how-it-works.html">Design workflow</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/design/design-system-in-practice.html">Design system in practice</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <span>Development</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="/development/component-documentation.html">Component documentation</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/development/package-links.html">Package links</a>
-                                                            </li>
-                                                            <li role="presentational"></li>
-                                                            <li>
-                                                                <a href="/development/browser-support.html">Browser support</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/development/css-architecture.html">CSS architecture</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/development/css-component-structure.html">CSS component structure</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/blog/index.html">Blog</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/changelog.html">Changelog</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="c-design-system-nav__desktop">
-                                                <ul class="c-pill-navigation">
-                                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
-                                                        <!-- @todo now we are using menu.js, which is really meant for dropdowns. Make more accessible with aria-haspopup="true" aria-expanded="false", switch with JS?-->
-                                                        <a href="#" data-menu="menu1" data-menu-samewidth="true">Design</a>
-                                                        <ul class="c-menu c-menu--large" id="menu1">
-                                                            <li class="c-menu__item">
-                                                                <a class="c-menu__label" href="/design/how-it-works.html">Design workflow</a>
-                                                            </li>
-                                                            <li class="c-menu__item">
-                                                                <a class="c-menu__label" href="/design/design-system-in-practice.html">Design system in practice</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
-                                                        <a href="#" data-menu="menu2" data-menu-samewidth="true">Development</a>
-                                                        <ul class="c-menu c-menu--large" id="menu2">
-                                                            <li class="c-menu__item">
-                                                                <a class="c-menu__label" href="/development/component-documentation.html">Component documentation</a>
-                                                            </li>
-                                                            <li class="c-menu__item">
-                                                                <a class="c-menu__label" href="/development/package-links.html">Package links</a>
-                                                            </li>
-                                                            <li class="c-menu__divider" role="presentational"></li>
-                                                            <li class="c-menu__item">
-                                                                <a class="c-menu__label" href="/development/browser-support.html">Browser support</a>
-                                                            </li>
-                                                            <li class="c-menu__item">
-                                                                <a class="c-menu__label" href="/development/css-architecture.html">CSS architecture</a>
-                                                            </li>
-                                                            <li class="c-menu__item">
-                                                                <a class="c-menu__label" href="/development/css-component-structure.html">CSS component structure</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="c-pill-navigation__item">
-                                                        <a href="/blog/index.html">Blog</a>
-                                                    </li>
-                                                    <li class="c-pill-navigation__item">
-                                                        <a href="/changelog.html">Changelog</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </nav>
-                                    </div>
+    </header>
+    <main class="o-container">
+        <div class="o-container o-container--medium">
+            <div class="o-container-vertical">
+                <h1 class="c-d-h1">Blog</h1>
+                <ul class="c-blog-article-list">
+                    <li>
+                        <article class="c-blog-article">
+                            <header class="c-blog-article__header">
+                                <h2 class="c-d-h2">
+                                    <a href="/blog/2021/09/this-is-a-title.html">This is a title...</a>
+                                </h2>
+                                <p>September 21, 2021</p>
+                            </header>
+                            <div class="c-blog-article__content">
+                                <div class="c-display">
+                                    <p>This is a post... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                 </div>
                             </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="c-blog-article">
+                            <header class="c-blog-article__header">
+                                <h2 class="c-d-h2">
+                                    <a href="/blog/2021/09/this-is-a-title.html">Smart Coop announces an open design system </a>
+                                </h2>
+                                <p>September 21, 2021</p>
+                            </header>
+                            <div class="c-blog-article__content">
+                                <div class="c-display">
+                                    <p>We're happy to announce we've started work on a design system. In SmartCoop's collaborative spirit we are working in an open source manner. What this project will do is provide a foundation for future SmartCoop applications.</p>
+                                    <p>The home for the design system will live at the homepage of this very website. From this website you will be able to read what's new, find the necessary documentation to get started with designing and developing for the SmartCoop context yourself as well as find the right links to be able to contribute.</p>
+                                    <p>As an open source project, others can benefit from the design and development discussions that are happening in the open (just like we are benefiting from similarly open sourced projects).</p>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <!-- @todo perhaps simply hide button when it is not relevant instead of disabling-->
+                <div class="c-toolbar">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <button class="c-button c-button--secondary" type="button" disabled="disabled">
+                                <span class="c-button__content">
+                                    <div class="o-svg-icon o-svg-icon-chevron-left  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <span class="c-button__label">Previous page</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <button class="c-button c-button--secondary" type="button">
+                                <span class="c-button__content">
+                                    <span class="c-button__label">Next page</span>
+                                    <div class="o-svg-icon o-svg-icon-chevron-right  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </header>
-            <main class="o-container">
-                <div class="o-container o-container--medium">
-                    <div class="o-container-vertical">
-                        <h1 class="c-d-h1">Blog</h1>
-                        <ul class="c-blog-article-list">
-                            <li>
-                                <article class="c-blog-article">
-                                    <header class="c-blog-article__header">
-                                        <h2 class="c-d-h2">
-                                            <a href="/blog/2021/09/this-is-a-title.html">This is a title...</a>
-                                        </h2>
-                                        <p>September 21, 2021</p>
-                                    </header>
-                                    <div class="c-blog-article__content">
-                                        <div class="c-display">
-                                            <p>This is a post... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="c-blog-article">
-                                    <header class="c-blog-article__header">
-                                        <h2 class="c-d-h2">
-                                            <a href="/blog/2021/09/this-is-a-title.html">Smart Coop announces an open design system </a>
-                                        </h2>
-                                        <p>September 21, 2021</p>
-                                    </header>
-                                    <div class="c-blog-article__content">
-                                        <div class="c-display">
-                                            <p>We're happy to announce we've started work on a design system. In SmartCoop's collaborative spirit we are working in an open source manner. What this project will do is provide a foundation for future SmartCoop applications.</p>
-                                            <p>The home for the design system will live at the homepage of this very website. From this website you will be able to read what's new, find the necessary documentation to get started with designing and developing for the SmartCoop context yourself as well as find the right links to be able to contribute.</p>
-                                            <p>As an open source project, others can benefit from the design and development discussions that are happening in the open (just like we are benefiting from similarly open sourced projects).</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-                        </ul>
-                        <!-- @todo perhaps simply hide button when it is not relevant instead of disabling-->
-                        <div class="c-toolbar">
-                            <div class="c-toolbar__left">
-                                <div class="c-toolbar__item">
-                                    <button class="c-button c-button--secondary" type="button" disabled="disabled">
-                                        <span class="c-button__content">
-                                            <div class="o-svg-icon o-svg-icon-chevron-left  ">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
-                                                </svg>
-                                            </div>
-                                            <span class="c-button__label">Previous page</span>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="c-toolbar__right">
-                                <div class="c-toolbar__item">
-                                    <button class="c-button c-button--secondary" type="button">
-                                        <span class="c-button__content">
-                                            <span class="c-button__label">Next page</span>
-                                            <div class="o-svg-icon o-svg-icon-chevron-right  ">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z" fill="#595959" />
-                                                </svg>
-                                            </div>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <footer id="footer">
-                <div class="o-container">
-                    <hr class="c-hr">
-                    <ul class="c-bordered-list-horizontal c-bordered-list-horizontal--muted">
-                        <li>
-                            <a href="#">Share feedback on Github</a>
-                        </li>
-                        <li>
-                            <a href="#">Licensing information</a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+            </div>
         </div>
-    </div>
+    </main>
+    <footer id="footer">
+        <div class="o-container-vertical">
+            <div class="o-container">
+                <hr class="c-hr">
+                <ul class="c-bordered-list-horizontal c-bordered-list-horizontal--muted">
+                    <li>
+                        <a href="#">
+                            <div class="o-flex">
+                                <div class="u-spacer-right-s">
+                                    <div class="o-svg-icon o-svg-icon-github  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </div>Share feedback on Github
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Licensing information</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script src="/js/bundle-prototype.js"></script>
     <script src="/js/bundle-client.js"></script>

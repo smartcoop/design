@@ -7,10 +7,7 @@
  * Inline docs available in the default config object
 */
 module.exports = {
-  pageTree: {
-    layoutStyle: 'sidebar' // 'sidebar' or 'fixed'
-
-  },
+  pageTree: false,
   js: {
     minify: false
   },
@@ -20,6 +17,7 @@ module.exports = {
     purge: false
   },
   styleguide: {
+    url: '/development/docs',
     search: true,
     colors: './content/scss/_s-colors.scss',
     categoryOrder: ['Style guide', 'Design patterns', 'Components', 'Objects', 'Development documentation'],
@@ -94,6 +92,8 @@ var defaultConfig = {
    *  determines whether the styleguide gets generated
    */
   styleguide: {
+    url: '/styleguide',
+
     /**
      *  search [boolean]
      *  Feature flag for search feature
