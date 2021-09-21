@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Checkbox - Styleguide - Smart Coop
+    <title>Flexbox Layout - Styleguide - Smart Coop
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -211,40 +211,59 @@
                 <div class="br-styleguide-content">
                     <div class="br-styleguide-content-inner">
                         <div class="br-componentgroup-header-wrapper">
-                            <h1 class="br-componentgroup-header c-h2">Checkbox</h1>
+                            <h1 class="br-componentgroup-header c-h2">Flexbox Layout</h1>
                         </div>
                         <div class="br-content c-content">
+                            <p>Flexbox helper classes enable you to quickly layout items in relation to each other.</p>
+                            <h4 id="parent-element-classes">Parent element classes</h4>
+                            <ul>
+                                <li>
+                                    <code>.o-flex</code>
+                                </li>
+                                <li>
+                                    <code>.o-flex--vertical</code>
+                                </li>
+                                <li>
+                                    <code>.o-flex--vertical-center</code>
+                                </li>
+                                <li>
+                                    <code>.o-flex--horizontal-center</code>
+                                </li>
+                                <li>
+                                    <code>.o-flex--center</code>
+                                </li>
+                                <li>
+                                    <code>.o-flex--justify-between</code>
+                                </li>
+                                <li>
+                                    <code>.o-flex--spaced</code>
+                                </li>
+                                <li>
+                                    <code>.o-flex--spaced-wide</code>
+                                </li>
+                            </ul>
+                            <h4 id="child-element-classes">Child element classes</h4>
+                            <ul>
+                                <li>
+                                    <code>.o-flex__item</code>
+                                </li>
+                                <li>
+                                    <code>.o-flex__item--shrink</code>
+                                </li>
+                            </ul>
+
                         </div>
-                        <div class="br-sample" id="component-01-c-checkbox">
+                        <div class="br-sample" id="component-01-o-flex-horizontal">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Checkbox</h3>
-                                <a class="br-sample-header-link" href="#component-01-c-checkbox">#</a>
+                                <h3 class="br-sample-heading c-h3">Horizontal</h3>
+                                <a class="br-sample-header-link" href="#component-01-o-flex-horizontal">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
-                                <div class="o-form-group-layout o-form-group-layout--standard">
-                                    <div class="o-form-group">
-                                        <label class="o-form-group__label">Value</label>
-                                        <div class="o-form-group__controls">
-                                            <div class="c-checkbox-group">
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Value 1
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Value 2
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" checked="checked" />Value 3
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="o-flex" style="height: 100px;">
+                                    <div style="background-color: green; width: 200px; height: 100px;"></div>
+                                    <div class="o-flex__item" style="background-color: red; height: 150px;"></div>
+                                    <div style="background-color: blue; width: 200px; height: 50px;"></div>
                                 </div>
                             </div>
                             <div class="br-sample-footer">
@@ -252,84 +271,33 @@
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-checkbox-group&quot;&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 1
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 2
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Value 3
-                    &lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-flex&quot; style=&quot;height: 100px;&quot;&gt;
+    &lt;div style=&quot;background-color: green; width: 200px; height: 100px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;o-flex__item&quot; style=&quot;background-color: red; height: 150px;&quot;&gt;&lt;/div&gt;
+    &lt;div style=&quot;background-color: blue; width: 200px; height: 50px;&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label Value
-        .o-form-group__controls
-            .c-checkbox-group
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 1
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 2
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;, checked)
-                        | Value 3
+                                    <pre class="br-sample-markup br-sample-markup-pug">.o-flex(style=&quot;height: 100px;&quot;)
+    div(style=&quot;background-color: green; width: 200px; height: 100px;&quot;)
+    .o-flex__item(style=&quot;background-color: red; height: 150px;&quot;)
+    div(style=&quot;background-color: blue; width: 200px; height: 50px;&quot;)
 </pre>
                                 </div>
                             </div>
                         </div>
-                        <div class="br-sample" id="component-02-c-checkbox-inline">
+                        <div class="br-sample" id="component-02-c-flex-vertical">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Checkbox (inline)</h3>
-                                <a class="br-sample-header-link" href="#component-02-c-checkbox-inline">#</a>
+                                <h3 class="br-sample-heading c-h3">Flex vertical</h3>
+                                <a class="br-sample-header-link" href="#component-02-c-flex-vertical">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
-                                <div class="o-form-group-layout o-form-group-layout--standard">
-                                    <div class="o-form-group">
-                                        <label class="o-form-group__label">Value</label>
-                                        <div class="o-form-group__controls">
-                                            <div class="c-checkbox-group c-checkbox-group--inline">
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Inline Value 1
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Inline Value 2
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" checked="checked" />Inline Value 3
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="o-flex o-flex--vertical" style="height: 400px;">
+                                    <div style="background-color: green; width: 200px; height: 100px;"></div>
+                                    <div class="o-flex__item" style="background-color: red; width: 300px; height: 150px;"></div>
+                                    <div style="background-color: blue; width: 200px; height: 50px;"></div>
                                 </div>
                             </div>
                             <div class="br-sample-footer">
@@ -337,96 +305,33 @@
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-checkbox-group c-checkbox-group--inline&quot;&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Inline Value 1
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Inline Value 2
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Inline Value 3
-                    &lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-flex o-flex--vertical&quot; style=&quot;height: 400px;&quot;&gt;
+    &lt;div style=&quot;background-color: green; width: 200px; height: 100px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;o-flex__item&quot; style=&quot;background-color: red; width: 300px; height: 150px;&quot;&gt;&lt;/div&gt;
+    &lt;div style=&quot;background-color: blue; width: 200px; height: 50px;&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label Value
-        .o-form-group__controls
-            .c-checkbox-group.c-checkbox-group--inline
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Inline Value 1
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Inline Value 2
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot; checked)
-                        | Inline Value 3
+                                    <pre class="br-sample-markup br-sample-markup-pug">.o-flex.o-flex--vertical(style=&quot;height: 400px;&quot;)
+    div(style=&quot;background-color: green; width: 200px; height: 100px;&quot;)
+    .o-flex__item(style=&quot;background-color: red; width: 300px; height: 150px;&quot;)
+    div(style=&quot;background-color: blue; width: 200px; height: 50px;&quot;)
 </pre>
                                 </div>
                             </div>
                         </div>
-                        <div class="br-sample" id="component-03-c-checkbox-subgroup">
+                        <div class="br-sample" id="component-02-o-flex-vertical">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Checkbox nesting</h3>
-                                <a class="br-sample-header-link" href="#component-03-c-checkbox-subgroup">#</a>
+                                <h3 class="br-sample-heading c-h3">Vertical</h3>
+                                <a class="br-sample-header-link" href="#component-02-o-flex-vertical">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
-                                <div class="o-form-group-layout o-form-group-layout--standard">
-                                    <div class="o-form-group">
-                                        <label class="o-form-group__label">Value</label>
-                                        <div class="o-form-group__controls">
-                                            <div class="c-checkbox-group">
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Value 1
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Value 2
-                                                    </label>
-                                                    <div class="c-checkbox-subgroup">
-                                                        <div class="c-checkbox">
-                                                            <label>
-                                                                <input type="checkbox" checked="checked" />Subvalue 1
-                                                            </label>
-                                                        </div>
-                                                        <div class="c-checkbox">
-                                                            <label>
-                                                                <input type="checkbox" checked="checked" />Subvalue 2
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" checked="checked" />Value 3
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="o-flex o-flex--vertical" style="height: 400px;">
+                                    <div style="background-color: green; width: 200px; height: 100px;"></div>
+                                    <div class="o-flex__item" style="background-color: red; width: 300px; height: 150px;"></div>
+                                    <div style="background-color: blue; width: 200px; height: 50px;"></div>
                                 </div>
                             </div>
                             <div class="br-sample-footer">
@@ -434,71 +339,120 @@
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-checkbox-group&quot;&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 1
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 2
-                    &lt;/label&gt;
-                    &lt;div class=&quot;c-checkbox-subgroup&quot;&gt;
-                        &lt;div class=&quot;c-checkbox&quot;&gt;
-                            &lt;label&gt;
-                                &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Subvalue 1
-                            &lt;/label&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&quot;c-checkbox&quot;&gt;
-                            &lt;label&gt;
-                                &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Subvalue 2
-                            &lt;/label&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Value 3
-                    &lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-flex o-flex--vertical&quot; style=&quot;height: 400px;&quot;&gt;
+    &lt;div style=&quot;background-color: green; width: 200px; height: 100px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;o-flex__item&quot; style=&quot;background-color: red; width: 300px; height: 150px;&quot;&gt;&lt;/div&gt;
+    &lt;div style=&quot;background-color: blue; width: 200px; height: 50px;&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label Value
-        .o-form-group__controls
-            .c-checkbox-group
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 1
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 2
-                    .c-checkbox-subgroup
-                        .c-checkbox
-                            label
-                                input(type=&quot;checkbox&quot;, checked)
-                                | Subvalue 1
-                        .c-checkbox
-                            label
-                                input(type=&quot;checkbox&quot;, checked)
-                                | Subvalue 2
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;, checked)
-                        | Value 3
+                                    <pre class="br-sample-markup br-sample-markup-pug">.o-flex.o-flex--vertical(style=&quot;height: 400px;&quot;)
+    div(style=&quot;background-color: green; width: 200px; height: 100px;&quot;)
+    .o-flex__item(style=&quot;background-color: red; width: 300px; height: 150px;&quot;)
+    div(style=&quot;background-color: blue; width: 200px; height: 50px;&quot;)
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-03-c-flex-centering">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Flex centering</h3>
+                                <a class="br-sample-header-link" href="#component-03-c-flex-centering">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-content">
+                                <div class="o-flex o-flex--center" style="height: 100px;">
+                                    <div style="background-color: green; width: 200px; height: 100px;"></div>
+                                    <div class="o-flex__item" style="background-color: red; height: 150px;"></div>
+                                    <div style="background-color: blue; width: 200px; height: 50px;"></div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-flex o-flex--center&quot; style=&quot;height: 100px;&quot;&gt;
+    &lt;div style=&quot;background-color: green; width: 200px; height: 100px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;o-flex__item&quot; style=&quot;background-color: red; height: 150px;&quot;&gt;&lt;/div&gt;
+    &lt;div style=&quot;background-color: blue; width: 200px; height: 50px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.o-flex.o-flex--center(style=&quot;height: 100px;&quot;)
+    div(style=&quot;background-color: green; width: 200px; height: 100px;&quot;)
+    .o-flex__item(style=&quot;background-color: red; height: 150px;&quot;)
+    div(style=&quot;background-color: blue; width: 200px; height: 50px;&quot;)
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-03-o-flex-centering">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Centering</h3>
+                                <a class="br-sample-header-link" href="#component-03-o-flex-centering">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-content">
+                                <div class="o-flex o-flex--center" style="height: 100px;">
+                                    <div style="background-color: green; width: 200px; height: 100px;"></div>
+                                    <div class="o-flex__item" style="background-color: red; height: 150px;"></div>
+                                    <div style="background-color: blue; width: 200px; height: 50px;"></div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-flex o-flex--center&quot; style=&quot;height: 100px;&quot;&gt;
+    &lt;div style=&quot;background-color: green; width: 200px; height: 100px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;o-flex__item&quot; style=&quot;background-color: red; height: 150px;&quot;&gt;&lt;/div&gt;
+    &lt;div style=&quot;background-color: blue; width: 200px; height: 50px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.o-flex.o-flex--center(style=&quot;height: 100px;&quot;)
+    div(style=&quot;background-color: green; width: 200px; height: 100px;&quot;)
+    .o-flex__item(style=&quot;background-color: red; height: 150px;&quot;)
+    div(style=&quot;background-color: blue; width: 200px; height: 50px;&quot;)
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="br-sample" id="component-04-o-flex-space-between">
+                            <div class="br-sample-header br-sample-clearfix">
+                                <h3 class="br-sample-heading c-h3">Space Between</h3>
+                                <a class="br-sample-header-link" href="#component-04-o-flex-space-between">#</a>
+                            </div>
+                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-content">
+                                <div class="o-flex o-flex--justify-between" style="height: 100px;">
+                                    <div style="background-color: green; width: 200px; height: 100px;"></div>
+                                    <div style="background-color: red; width: 300px; height: 150px;"></div>
+                                    <div style="background-color: blue; width: 200px; height: 50px;"></div>
+                                </div>
+                            </div>
+                            <div class="br-sample-footer">
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                                <div class="br-sample-code br-sample-code-html">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-flex o-flex--justify-between&quot; style=&quot;height: 100px;&quot;&gt;
+    &lt;div style=&quot;background-color: green; width: 200px; height: 100px;&quot;&gt;&lt;/div&gt;
+    &lt;div style=&quot;background-color: red; width: 300px; height: 150px;&quot;&gt;&lt;/div&gt;
+    &lt;div style=&quot;background-color: blue; width: 200px; height: 50px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                                <div class="br-sample-code br-sample-code-pug">
+                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                                    <pre class="br-sample-markup br-sample-markup-pug">.o-flex.o-flex--justify-between(style=&quot;height: 100px;&quot;)
+    div(style=&quot;background-color: green; width: 200px; height: 100px;&quot;)
+    div(style=&quot;background-color: red; width: 300px; height: 150px;&quot;)
+    div(style=&quot;background-color: blue; width: 200px; height: 50px;&quot;)
 </pre>
                                 </div>
                             </div>

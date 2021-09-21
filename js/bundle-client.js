@@ -1,6 +1,8 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+require("./modules/accordion");
+
 require("./modules/menu");
 
 require("./modules/modals");
@@ -9,7 +11,24 @@ require("./modules/popper-popover");
 
 require("./modules/popper-tooltip");
 
-},{"./modules/menu":2,"./modules/modals":3,"./modules/popper-popover":4,"./modules/popper-tooltip":5}],2:[function(require,module,exports){
+},{"./modules/accordion":2,"./modules/menu":3,"./modules/modals":4,"./modules/popper-popover":5,"./modules/popper-tooltip":6}],2:[function(require,module,exports){
+"use strict";
+
+/* Accordion
+   ========================================================================== */
+$('.c-accordion__item-header').on('click', function () {
+  $(this).closest('.c-accordion__item').toggleClass('c-accordion__item--closed');
+
+  if ($(this).attr('aria-expanded') === 'false') {
+    $(this).attr('aria-expanded', 'true');
+    $(this).siblings(".c-accordion__item-content").attr('aria-hidden', 'false');
+  } else {
+    $(this).attr('aria-expanded', 'false');
+    $(this).siblings(".c-accordion__item-content").attr('aria-hidden', 'true');
+  }
+});
+
+},{}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -156,7 +175,7 @@ selectOptions.forEach(function (option) {
 
 document.addEventListener('click', handleOutsideClick);
 
-},{"./util":6,"@popperjs/core":7}],3:[function(require,module,exports){
+},{"./util":7,"@popperjs/core":8}],4:[function(require,module,exports){
 "use strict";
 
 var _util = require("./util");
@@ -360,7 +379,7 @@ var focusTrap = function focusTrap(modal, e) {
   modal.addEventListener("keydown", handleKeyDown, false);
 };
 
-},{"./util":6}],4:[function(require,module,exports){
+},{"./util":7}],5:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -455,7 +474,7 @@ document.addEventListener('click', function (e) {
   }
 });
 
-},{"./util":6,"@popperjs/core":7}],5:[function(require,module,exports){
+},{"./util":7,"@popperjs/core":8}],6:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -529,7 +548,7 @@ function hide(e) {
   destroy();
 }
 
-},{"@popperjs/core":7}],6:[function(require,module,exports){
+},{"@popperjs/core":8}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -559,7 +578,7 @@ var isClickOutside = function isClickOutside(event, elements) {
 
 exports.isClickOutside = isClickOutside;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 (function (process){(function (){
 /**
  * @popperjs/core v2.9.2 - MIT License
@@ -2468,7 +2487,7 @@ exports.preventOverflow = preventOverflow$1;
 
 
 }).call(this)}).call(this,require('_process'))
-},{"_process":8}],8:[function(require,module,exports){
+},{"_process":9}],9:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Checkbox - Styleguide - Smart Coop
+    <title>Bordered list - Styleguide - Smart Coop
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -211,294 +211,254 @@
                 <div class="br-styleguide-content">
                     <div class="br-styleguide-content-inner">
                         <div class="br-componentgroup-header-wrapper">
-                            <h1 class="br-componentgroup-header c-h2">Checkbox</h1>
+                            <h1 class="br-componentgroup-header c-h2">Bordered list</h1>
                         </div>
                         <div class="br-content c-content">
+                            <p>Use a bordered list to create a list with borders. You can make a combination of text and links. Wrap regular text in a <code>span</code> element to emulate the markup structure of <code>a</code>.</p>
+
                         </div>
-                        <div class="br-sample" id="component-01-c-checkbox">
+                        <div class="br-sample" id="component-01-c-bordered-list">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Checkbox</h3>
-                                <a class="br-sample-header-link" href="#component-01-c-checkbox">#</a>
+                                <h3 class="br-sample-heading c-h3">Bordered list</h3>
+                                <a class="br-sample-header-link" href="#component-01-c-bordered-list">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
-                                <div class="o-form-group-layout o-form-group-layout--standard">
-                                    <div class="o-form-group">
-                                        <label class="o-form-group__label">Value</label>
-                                        <div class="o-form-group__controls">
-                                            <div class="c-checkbox-group">
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Value 1
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Value 2
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" checked="checked" />Value 3
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ul class="c-bordered-list">
+                                    <li>
+                                        <span>Apple</span>
+                                    </li>
+                                    <li>
+                                        <span>Banana</span>
+                                    </li>
+                                    <li>
+                                        <span>Pear</span>
+                                    </li>
+                                </ul>
+                                <br />
+                                <br />
+                                <ul class="c-bordered-list">
+                                    <li>
+                                        <span>Text</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                </ul>
+                                <br />
+                                <br />
+                                <ul class="c-bordered-list">
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="br-sample-footer">
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-checkbox-group&quot;&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 1
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 2
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Value 3
-                    &lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;ul class=&quot;c-bordered-list&quot;&gt;
+    &lt;li&gt;
+        &lt;span&gt;Apple&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Banana&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Pear&lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;ul class=&quot;c-bordered-list&quot;&gt;
+    &lt;li&gt;
+        &lt;span&gt;Text&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;ul class=&quot;c-bordered-list&quot;&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label Value
-        .o-form-group__controls
-            .c-checkbox-group
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 1
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 2
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;, checked)
-                        | Value 3
+                                    <pre class="br-sample-markup br-sample-markup-pug">ul.c-bordered-list
+    li
+        span Apple
+    li
+        span Banana
+    li
+        span Pear
+
+br
+br
+
+ul.c-bordered-list
+    li
+        span Text
+    li
+        a(href=&quot;#&quot;) Link to page
+    li
+        a(href=&quot;#&quot;) Link to page
+
+br
+br
+
+ul.c-bordered-list
+    li
+        a(href=&quot;#&quot;) Link to page
+    li
+        a(href=&quot;#&quot;) Link to page
+    li
+        a(href=&quot;#&quot;) Link to page
 </pre>
                                 </div>
                             </div>
                         </div>
-                        <div class="br-sample" id="component-02-c-checkbox-inline">
+                        <div class="br-sample" id="component-02-c-bordered-list-horizontal">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Checkbox (inline)</h3>
-                                <a class="br-sample-header-link" href="#component-02-c-checkbox-inline">#</a>
+                                <h3 class="br-sample-heading c-h3">Bordered list horizontal</h3>
+                                <a class="br-sample-header-link" href="#component-02-c-bordered-list-horizontal">#</a>
                             </div>
                             <div class="br-sample-documentation c-content"></div>
                             <div class="br-sample-content">
-                                <div class="o-form-group-layout o-form-group-layout--standard">
-                                    <div class="o-form-group">
-                                        <label class="o-form-group__label">Value</label>
-                                        <div class="o-form-group__controls">
-                                            <div class="c-checkbox-group c-checkbox-group--inline">
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Inline Value 1
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Inline Value 2
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" checked="checked" />Inline Value 3
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ul class="c-bordered-list-horizontal">
+                                    <li>
+                                        <span>Apple</span>
+                                    </li>
+                                    <li>
+                                        <span>Banana</span>
+                                    </li>
+                                    <li>
+                                        <span>Pear</span>
+                                    </li>
+                                </ul>
+                                <br />
+                                <br />
+                                <ul class="c-bordered-list-horizontal">
+                                    <li>
+                                        <span>Text</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                </ul>
+                                <br />
+                                <br />
+                                <ul class="c-bordered-list-horizontal">
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link to page</a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="br-sample-footer">
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-checkbox-group c-checkbox-group--inline&quot;&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Inline Value 1
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Inline Value 2
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Inline Value 3
-                    &lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;ul class=&quot;c-bordered-list-horizontal&quot;&gt;
+    &lt;li&gt;
+        &lt;span&gt;Apple&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Banana&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;Pear&lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;ul class=&quot;c-bordered-list-horizontal&quot;&gt;
+    &lt;li&gt;
+        &lt;span&gt;Text&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;ul class=&quot;c-bordered-list-horizontal&quot;&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Link to page&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label Value
-        .o-form-group__controls
-            .c-checkbox-group.c-checkbox-group--inline
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Inline Value 1
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Inline Value 2
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot; checked)
-                        | Inline Value 3
-</pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="br-sample" id="component-03-c-checkbox-subgroup">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Checkbox nesting</h3>
-                                <a class="br-sample-header-link" href="#component-03-c-checkbox-subgroup">#</a>
-                            </div>
-                            <div class="br-sample-documentation c-content"></div>
-                            <div class="br-sample-content">
-                                <div class="o-form-group-layout o-form-group-layout--standard">
-                                    <div class="o-form-group">
-                                        <label class="o-form-group__label">Value</label>
-                                        <div class="o-form-group__controls">
-                                            <div class="c-checkbox-group">
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Value 1
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" />Value 2
-                                                    </label>
-                                                    <div class="c-checkbox-subgroup">
-                                                        <div class="c-checkbox">
-                                                            <label>
-                                                                <input type="checkbox" checked="checked" />Subvalue 1
-                                                            </label>
-                                                        </div>
-                                                        <div class="c-checkbox">
-                                                            <label>
-                                                                <input type="checkbox" checked="checked" />Subvalue 2
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" checked="checked" />Value 3
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-checkbox-group&quot;&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 1
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 2
-                    &lt;/label&gt;
-                    &lt;div class=&quot;c-checkbox-subgroup&quot;&gt;
-                        &lt;div class=&quot;c-checkbox&quot;&gt;
-                            &lt;label&gt;
-                                &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Subvalue 1
-                            &lt;/label&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&quot;c-checkbox&quot;&gt;
-                            &lt;label&gt;
-                                &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Subvalue 2
-                            &lt;/label&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Value 3
-                    &lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label Value
-        .o-form-group__controls
-            .c-checkbox-group
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 1
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 2
-                    .c-checkbox-subgroup
-                        .c-checkbox
-                            label
-                                input(type=&quot;checkbox&quot;, checked)
-                                | Subvalue 1
-                        .c-checkbox
-                            label
-                                input(type=&quot;checkbox&quot;, checked)
-                                | Subvalue 2
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;, checked)
-                        | Value 3
+                                    <pre class="br-sample-markup br-sample-markup-pug">ul.c-bordered-list-horizontal
+    li
+        span Apple
+    li
+        span Banana
+    li
+        span Pear
+
+br
+br
+
+ul.c-bordered-list-horizontal
+    li
+        span Text
+    li
+        a(href=&quot;#&quot;) Link to page
+    li
+        a(href=&quot;#&quot;) Link to page
+
+br
+br
+
+ul.c-bordered-list-horizontal
+    li
+        a(href=&quot;#&quot;) Link to page
+    li
+        a(href=&quot;#&quot;) Link to page
+    li
+        a(href=&quot;#&quot;) Link to page
 </pre>
                                 </div>
                             </div>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Tooltip - Styleguide - Smart Coop
+    <title>Grid - Styleguide - Smart Coop
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -211,24 +211,79 @@
                 <div class="br-styleguide-content">
                     <div class="br-styleguide-content-inner">
                         <div class="br-componentgroup-header-wrapper">
-                            <h1 class="br-componentgroup-header c-h2">Tooltip</h1>
+                            <h1 class="br-componentgroup-header c-h2">Grid</h1>
                         </div>
                         <div class="br-content c-content">
                         </div>
-                        <div class="br-sample" id="component-01-c-tooltip-right">
+                        <div class="br-sample" id="component-01-o-grid">
                             <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Tooltip right</h3>
-                                <a class="br-sample-header-link" href="#component-01-c-tooltip-right">#</a>
+                                <h3 class="br-sample-heading c-h3">Simple grid classes</h3>
+                                <a class="br-sample-header-link" href="#component-01-o-grid">#</a>
                             </div>
-                            <div class="br-sample-documentation c-content"></div>
+                            <div class="br-sample-documentation c-content">
+                                <p>12 columns based grid for easily layouting forms and other components. This uses flexbox internally.</p>
+                            </div>
                             <div class="br-sample-content">
-                                <button class="c-button c-button--secondary" type="button" data-tooltip="tooltip-1" data-tooltip-placement="right">
-                                    <span class="c-button__content">
-                                        <span class="c-button__label">Trigger a tooltip - Right</span>
-                                    </span>
-                                </button>
-                                <div class="c-tooltip" id="tooltip-1" role="tooltip">This is a tooltip
-                                    <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
+                                <div class="o-grid">
+                                    <div class="o-grid-col-24">24</div>
+                                    <div class="o-grid-col-12 o-grid-col-sm-24">12</div>
+                                    <div class="o-grid-col-12 o-grid-col-sm-24">12</div>
+                                    <div class="o-grid-col-6">6</div>
+                                    <div class="o-grid-col-6">6</div>
+                                    <div class="o-grid-col-6">6</div>
+                                    <div class="o-grid-col-6">6</div>
+                                    <div class="o-grid-col-4">4</div>
+                                    <div class="o-grid-col-4">4</div>
+                                    <div class="o-grid-col-4">4</div>
+                                    <div class="o-grid-col-4">4</div>
+                                    <div class="o-grid-col-4">4</div>
+                                    <div class="o-grid-col-4">4</div>
+                                    <div class="o-grid-col-3">3</div>
+                                    <div class="o-grid-col-3">3</div>
+                                    <div class="o-grid-col-3">3</div>
+                                    <div class="o-grid-col-3">3</div>
+                                    <div class="o-grid-col-3">3</div>
+                                    <div class="o-grid-col-3">3</div>
+                                    <div class="o-grid-col-3">3</div>
+                                    <div class="o-grid-col-3">3</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-2">2</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-1">1</div>
+                                    <div class="o-grid-col-static">This column will adapt to its content.</div>
+                                    <div class="o-grid-col-flex">This column will fill the remaining space.</div>
                                 </div>
                             </div>
                             <div class="br-sample-footer">
@@ -236,164 +291,130 @@
                                 <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                                 <div class="br-sample-code br-sample-code-html">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot; data-tooltip=&quot;tooltip-1&quot; data-tooltip-placement=&quot;right&quot;&gt;
-    &lt;span class=&quot;c-button__content&quot;&gt;
-        &lt;span class=&quot;c-button__label&quot;&gt;Trigger a tooltip - Right&lt;/span&gt;
-    &lt;/span&gt;
-&lt;/button&gt;
-&lt;div class=&quot;c-tooltip&quot; id=&quot;tooltip-1&quot; role=&quot;tooltip&quot;&gt;This is a tooltip
-    &lt;div class=&quot;c-tooltip__arrow&quot; data-popper-arrow=&quot;data-popper-arrow&quot;&gt;&lt;/div&gt;
+                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-grid&quot;&gt;
+    &lt;div class=&quot;o-grid-col-24&quot;&gt;24&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-12 o-grid-col-sm-24&quot;&gt;12&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-12 o-grid-col-sm-24&quot;&gt;12&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-6&quot;&gt;6&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-6&quot;&gt;6&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-6&quot;&gt;6&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-6&quot;&gt;6&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-4&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-4&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-4&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-4&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-4&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-4&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-2&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-1&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-static&quot;&gt;This column will adapt to its content.&lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-flex&quot;&gt;This column will fill the remaining space.&lt;/div&gt;
 &lt;/div&gt;</pre>
                                 </div>
                                 <div class="br-sample-code br-sample-code-pug">
                                     <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">+c-button({})(data-tooltip=&quot;tooltip-1&quot; data-tooltip-placement=&quot;right&quot;) Trigger a tooltip - Right
-.c-tooltip#tooltip-1(role=&quot;tooltip&quot;)
-    | This is a tooltip
-    .c-tooltip__arrow(data-popper-arrow)
-
-</pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="br-sample" id="component-02-c-tooltip-left">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Tooltip left</h3>
-                                <a class="br-sample-header-link" href="#component-02-c-tooltip-left">#</a>
-                            </div>
-                            <div class="br-sample-documentation c-content"></div>
-                            <div class="br-sample-content">
-                                <div class="c-toolbar">
-                                    <div class="c-toolbar__right">
-                                        <button class="c-button c-button--secondary" type="button" data-tooltip="tooltip-2" data-tooltip-placement="left">
-                                            <span class="c-button__content">
-                                                <span class="c-button__label">Trigger a tooltip - Left</span>
-                                            </span>
-                                        </button>
-                                        <div class="c-tooltip" id="tooltip-2" role="tooltip">This is a tooltip
-                                            <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-toolbar&quot;&gt;
-    &lt;div class=&quot;c-toolbar__right&quot;&gt;
-        &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot; data-tooltip=&quot;tooltip-2&quot; data-tooltip-placement=&quot;left&quot;&gt;
-            &lt;span class=&quot;c-button__content&quot;&gt;
-                &lt;span class=&quot;c-button__label&quot;&gt;Trigger a tooltip - Left&lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;c-tooltip&quot; id=&quot;tooltip-2&quot; role=&quot;tooltip&quot;&gt;This is a tooltip
-            &lt;div class=&quot;c-tooltip__arrow&quot; data-popper-arrow=&quot;data-popper-arrow&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">.c-toolbar
-    .c-toolbar__right
-        +c-button({})(data-tooltip=&quot;tooltip-2&quot; data-tooltip-placement=&quot;left&quot;) Trigger a tooltip - Left
-        .c-tooltip#tooltip-2(role=&quot;tooltip&quot;)
-            | This is a tooltip
-            .c-tooltip__arrow(data-popper-arrow)
-
-</pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="br-sample" id="component-03-c-tooltip-top">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Tooltip top</h3>
-                                <a class="br-sample-header-link" href="#component-03-c-tooltip-top">#</a>
-                            </div>
-                            <div class="br-sample-documentation c-content"></div>
-                            <div class="br-sample-content">
-                                <div style="padding-top: 3.2rem;">
-                                    <button class="c-button c-button--secondary" type="button" data-tooltip="tooltip-3" data-tooltip-placement="top">
-                                        <span class="c-button__content">
-                                            <span class="c-button__label">Trigger a tooltip - Top</span>
-                                        </span>
-                                    </button>
-                                    <div class="c-tooltip" id="tooltip-3" role="tooltip">This is a tooltip
-                                        <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div style=&quot;padding-top: 3.2rem;&quot;&gt;
-    &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot; data-tooltip=&quot;tooltip-3&quot; data-tooltip-placement=&quot;top&quot;&gt;
-        &lt;span class=&quot;c-button__content&quot;&gt;
-            &lt;span class=&quot;c-button__label&quot;&gt;Trigger a tooltip - Top&lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/button&gt;
-    &lt;div class=&quot;c-tooltip&quot; id=&quot;tooltip-3&quot; role=&quot;tooltip&quot;&gt;This is a tooltip
-        &lt;div class=&quot;c-tooltip__arrow&quot; data-popper-arrow=&quot;data-popper-arrow&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">div(style=&quot;padding-top: 3.2rem;&quot;)
-    +c-button({})(data-tooltip=&quot;tooltip-3&quot; data-tooltip-placement=&quot;top&quot;) Trigger a tooltip - Top
-    .c-tooltip#tooltip-3(role=&quot;tooltip&quot;)
-        | This is a tooltip
-        .c-tooltip__arrow(data-popper-arrow)
-
-</pre>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="br-sample" id="component-04-c-tooltip-bottom">
-                            <div class="br-sample-header br-sample-clearfix">
-                                <h3 class="br-sample-heading c-h3">Tooltip bottom</h3>
-                                <a class="br-sample-header-link" href="#component-04-c-tooltip-bottom">#</a>
-                            </div>
-                            <div class="br-sample-documentation c-content"></div>
-                            <div class="br-sample-content">
-                                <div style="padding-bottom: 3.2rem;">
-                                    <button class="c-button c-button--secondary" type="button" data-tooltip="tooltip-4" data-tooltip-placement="bottom">
-                                        <span class="c-button__content">
-                                            <span class="c-button__label">Trigger a tooltip - Bottom</span>
-                                        </span>
-                                    </button>
-                                    <div class="c-tooltip" id="tooltip-4" role="tooltip">This is a tooltip
-                                        <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="br-sample-footer">
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                                <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                                <div class="br-sample-code br-sample-code-html">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-html">&lt;div style=&quot;padding-bottom: 3.2rem;&quot;&gt;
-    &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot; data-tooltip=&quot;tooltip-4&quot; data-tooltip-placement=&quot;bottom&quot;&gt;
-        &lt;span class=&quot;c-button__content&quot;&gt;
-            &lt;span class=&quot;c-button__label&quot;&gt;Trigger a tooltip - Bottom&lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/button&gt;
-    &lt;div class=&quot;c-tooltip&quot; id=&quot;tooltip-4&quot; role=&quot;tooltip&quot;&gt;This is a tooltip
-        &lt;div class=&quot;c-tooltip__arrow&quot; data-popper-arrow=&quot;data-popper-arrow&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                                </div>
-                                <div class="br-sample-code br-sample-code-pug">
-                                    <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                                    <pre class="br-sample-markup br-sample-markup-pug">div(style=&quot;padding-bottom: 3.2rem;&quot;)
-    +c-button({})(data-tooltip=&quot;tooltip-4&quot; data-tooltip-placement=&quot;bottom&quot;) Trigger a tooltip - Bottom
-    .c-tooltip#tooltip-4(role=&quot;tooltip&quot;)
-        | This is a tooltip
-        .c-tooltip__arrow(data-popper-arrow)
+                                    <pre class="br-sample-markup br-sample-markup-pug">.o-grid
+    .o-grid-col-24 24
+    .o-grid-col-12.o-grid-col-sm-24 12
+    .o-grid-col-12.o-grid-col-sm-24 12
+    .o-grid-col-6 6
+    .o-grid-col-6 6
+    .o-grid-col-6 6
+    .o-grid-col-6 6
+    .o-grid-col-4 4
+    .o-grid-col-4 4
+    .o-grid-col-4 4
+    .o-grid-col-4 4
+    .o-grid-col-4 4
+    .o-grid-col-4 4
+    .o-grid-col-3 3
+    .o-grid-col-3 3
+    .o-grid-col-3 3
+    .o-grid-col-3 3
+    .o-grid-col-3 3
+    .o-grid-col-3 3
+    .o-grid-col-3 3
+    .o-grid-col-3 3
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-2 2
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-1 1
+    .o-grid-col-static This column will adapt to its content.
+    .o-grid-col-flex This column will fill the remaining space.
 
 </pre>
                                 </div>
