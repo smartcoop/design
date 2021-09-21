@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>CSS component structure - Smart Coop Design System
+    <title>Icon workflow - Design system in practice - Smart Coop Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -151,60 +151,25 @@
         </div>
     </header>
     <main class="o-container">
-        <div class="o-container o-container--medium">
-            <div class="o-container-vertical">
-                <div class="c-display">
-                    <h1>CSS component structure</h1>
-                    <div class="u-spacer-top u-spacer-bottom">
-                        <p>Here's a starting point for a new component:</p>
-                        <div class="c-code">
-                            <pre>/* ==========================================================================
-   My component name
-   ========================================================================== */
-
-/* Variables
-   ========================================================================== */
-
-/* Component
-   ========================================================================== */
-</pre>
-                        </div>
-                        <p>Note the first level and second level block comment. Check Necolas's <a href="https://github.com/necolas/idiomatic-css#3-comments">Idiomatic CSS repo</a> for more information.</p>
-                        <p>Here's what the component would look like a bit further down the line:</p>
-                        <div class="c-code">
-                            <pre>/* ==========================================================================
-   Custom component
-   ---
-   Does something custom
-   ========================================================================== */
-
-/* Variables
-   ========================================================================== */
-
-$c-custom-bg: #FFF !default;
-
-/* Component
-   ========================================================================== */
-
-.c-custom {
-  background: $c-custom-bg;
-}
-
-.c-custom--modifier {
-  background: #000;
-}
-
-.c-custom__child {
-  // Code for child
-}
-
-.c-custom__child--modifier {
-  // Code for child with modifier
-}
-</pre>
-                        </div>
-                        <h3>SCSS formatting</h3>
-                        <p>We use 2 spaces and no tabs. Please see the <code>.editorconfig</code> file in the repository for more specifics. It is helpful to download an editorconfig plugin for your editor. Please see <a href="https://editorconfig.org/">editorconfig.org</a>.</p>
+        <div class="o-container-vertical">
+            <h1 class="c-d-h1">Design system in practice</h1>
+            <div class="o-grid">
+                <div class="o-grid-col-bp3-3">
+                    <div class="u-spacer-bottom">
+                        <ul class="c-side-menu">
+                            <li class="c-side-menu__item">
+                                <a class="c-side-menu__link" href="/design/in-practice/copywriting.html">Copywriting</a>
+                            </li>
+                            <li class="c-side-menu__item c-side-menu__item--active">
+                                <a class="c-side-menu__link" href="/design/in-practice/icon-workflow.html">Icon workflow</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="o-grid-col-bp3-9">
+                    <div class="c-display">
+                        <h2>Icon workflow</h2>
+                        <p>...</p>
                     </div>
                 </div>
             </div>
