@@ -76,7 +76,7 @@
 /* Button overrides
    ========================================================================== */
 /* Generic: CSS reset, box-sizing, global CSS tweaks
-     ========================================================================== */
+   ========================================================================== */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -125,7 +125,7 @@ table {
   border-spacing: 0; }
 
 /* Elements: element selectors, CMS-generated content
-     ========================================================================== */
+   ========================================================================== */
 /* ==========================================================================
    Elements: Base
    ---
@@ -185,7 +185,7 @@ abbr[title] {
   opacity: 0.5; }
 
 /* Objects: layout-related CSS, grid, SVG icons frame, flexbox classes
-     ========================================================================== */
+   ========================================================================== */
 /* ==========================================================================
     Object: Container
     ---
@@ -660,7 +660,7 @@ abbr[title] {
   color: #999999; }
 
 /* Components: separately styled components (buttons, form inputs, toolbars...)
-     ========================================================================== */
+   ========================================================================== */
 /* ==========================================================================
   c-accordion
    ========================================================================== */
@@ -694,6 +694,61 @@ abbr[title] {
 
 .c-accordion__item.c-accordion__item--closed .c-button .o-svg-icon:first-child {
   transform: rotate(0deg); }
+
+/* ==========================================================================
+  c-alert
+  ---
+  Use alerts for messaging across the application.
+  ---
+  Rules of this file: this file is ONLY for layout, please see alert-skins.scss for colors
+   ========================================================================== */
+/* Variables
+   ========================================================================== */
+/* Component
+      ========================================================================== */
+.c-alert {
+  padding: 2.4rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  flex-flow: row wrap; }
+  .c-alert > * {
+    flex-basis: auto; }
+  .c-alert .c-button--icon:last-child {
+    cursor: pointer;
+    padding: 0.6rem;
+    margin: -0.6rem; }
+  .c-alert + .c-alert {
+    margin-top: 1.6rem; }
+
+.c-alert__title {
+  font-weight: 500;
+  color: #1A1A1A; }
+
+.c-alert__body {
+  display: flex;
+  flex: 1; }
+  .c-alert__body:not(:first-child) {
+    margin-left: 1.6rem; }
+  .c-alert__body:not(:last-child) {
+    margin-right: 1.6rem; }
+
+.c-alert__title + .c-alert__message {
+  margin-top: 0.8rem; }
+
+.c-alert.c-alert--medium {
+  max-width: 66rem; }
+
+.c-alert.c-alert--large {
+  max-width: 88rem; }
+
+.c-alert__message .c-content p:only-child {
+  margin: 0; }
+
+.c-alert.c-alert--full {
+  max-width: none;
+  margin: 1.6rem; }
 
 /* ==========================================================================
   c-alert-skins
@@ -756,91 +811,6 @@ abbr[title] {
     margin: 0 0 1.6rem; }
     .c-alert-stack .c-alert:first-child {
       margin: 0; }
-
-/* ==========================================================================
-  c-alert
-  ---
-  Use alerts for messaging across the application.
-  ---
-  Rules of this file: this file is ONLY for layout, please see alert-skins.scss for colors
-   ========================================================================== */
-/* Variables
-   ========================================================================== */
-/* Component
-      ========================================================================== */
-.c-alert {
-  padding: 2.4rem;
-  border-radius: 0.3rem;
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  flex-flow: row wrap; }
-  .c-alert > * {
-    flex-basis: auto; }
-  .c-alert .c-button--icon:last-child {
-    cursor: pointer;
-    padding: 0.6rem;
-    margin: -0.6rem; }
-  .c-alert + .c-alert {
-    margin-top: 1.6rem; }
-
-.c-alert__title {
-  font-weight: 500;
-  color: #1A1A1A; }
-
-.c-alert__body {
-  display: flex;
-  flex: 1; }
-  .c-alert__body:not(:first-child) {
-    margin-left: 1.6rem; }
-  .c-alert__body:not(:last-child) {
-    margin-right: 1.6rem; }
-
-.c-alert__title + .c-alert__message {
-  margin-top: 0.8rem; }
-
-.c-alert.c-alert--medium {
-  max-width: 66rem; }
-
-.c-alert.c-alert--large {
-  max-width: 88rem; }
-
-.c-alert__message .c-content p:only-child {
-  margin: 0; }
-
-.c-alert.c-alert--full {
-  max-width: none;
-  margin: 1.6rem; }
-
-/* ==========================================================================
-  c-avatar-and-text
-   ========================================================================== */
-.c-avatar-and-text {
-  display: flex;
-  align-items: center;
-  min-width: 0; }
-  .c-avatar-and-text .c-avatar {
-    margin-right: 1.2rem; }
-  .c-avatar-and-text .c-avatar.c-avatar--small {
-    margin-right: 1.2rem; }
-
-.c-avatar-and-text__text {
-  flex: 1;
-  min-width: 0; }
-
-.c-avatar-and-text__text p,
-.c-avatar-and-text__text h3 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.c-avatar-and-text__text h3 {
-  margin-bottom: 0.4rem; }
-
-.c-avatar-and-text--wrap .c-avatar-and-text__text p,
-.c-avatar-and-text--wrap .c-avatar-and-text__text h3 {
-  white-space: normal;
-  overflow: auto; }
 
 /* ==========================================================================
   c-avatar
@@ -974,68 +944,34 @@ abbr[title] {
     z-index: 1; }
 
 /* ==========================================================================
-  c-brand
+  c-avatar-and-text
    ========================================================================== */
-.c-brand {
-  padding: 0;
-  margin-right: 0.8rem;
-  display: block;
-  height: 3.6rem; }
-  .c-brand a,
-  .c-brand img {
-    display: block;
-    position: relative;
-    height: 100%;
-    width: 100%; }
+.c-avatar-and-text {
+  display: flex;
+  align-items: center;
+  min-width: 0; }
+  .c-avatar-and-text .c-avatar {
+    margin-right: 1.2rem; }
+  .c-avatar-and-text .c-avatar.c-avatar--small {
+    margin-right: 1.2rem; }
 
-/* ==========================================================================
-  c-bordered-list-horizontal
-   ========================================================================== */
-.c-bordered-list-horizontal {
-  display: flex; }
-  .c-bordered-list-horizontal li {
-    border-right: 0.1rem solid #CCCCCC; }
-    .c-bordered-list-horizontal li:last-child {
-      border: none; }
-    .c-bordered-list-horizontal li a, .c-bordered-list-horizontal li span {
-      display: block;
-      padding: .4rem 0.8rem; }
+.c-avatar-and-text__text {
+  flex: 1;
+  min-width: 0; }
 
-.c-bordered-list-horizontal--muted a {
-  color: #666666; }
+.c-avatar-and-text__text p,
+.c-avatar-and-text__text h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
 
-/* ==========================================================================
-    Component: Bordered list
-   ========================================================================== */
-.c-bordered-list a, .c-bordered-list span {
-  display: block;
-  padding: .8rem; }
+.c-avatar-and-text__text h3 {
+  margin-bottom: 0.4rem; }
 
-.c-bordered-list a {
-  text-decoration: none; }
-
-.c-bordered-list li {
-  border-bottom: 0.1rem solid #dfdfdf; }
-  .c-bordered-list li:last-child {
-    border: none; }
-
-.c-bordered-list--direct-padding li {
-  padding: .8rem; }
-
-/* ==========================================================================
-  c-brand
-   ========================================================================== */
-.c-brand {
-  padding: 0;
-  margin-right: 0.8rem;
-  display: block;
-  height: 3.6rem; }
-  .c-brand a,
-  .c-brand img {
-    display: block;
-    position: relative;
-    height: 100%;
-    width: 100%; }
+.c-avatar-and-text--wrap .c-avatar-and-text__text p,
+.c-avatar-and-text--wrap .c-avatar-and-text__text h3 {
+  white-space: normal;
+  overflow: auto; }
 
 /* ==========================================================================
   c-blankslate
@@ -1076,6 +1012,187 @@ abbr[title] {
 
 .c-blankslate > .o-svg-icon {
   opacity: 0.5; }
+
+/* ==========================================================================
+    Component: Bordered list
+   ========================================================================== */
+.c-bordered-list a, .c-bordered-list span {
+  display: block;
+  padding: .8rem; }
+
+.c-bordered-list a {
+  text-decoration: none; }
+
+.c-bordered-list li {
+  border-bottom: 0.1rem solid #dfdfdf; }
+  .c-bordered-list li:last-child {
+    border: none; }
+
+.c-bordered-list--direct-padding li {
+  padding: .8rem; }
+
+/* ==========================================================================
+  c-bordered-list-horizontal
+   ========================================================================== */
+.c-bordered-list-horizontal {
+  display: flex; }
+  .c-bordered-list-horizontal li {
+    border-right: 0.1rem solid #CCCCCC; }
+    .c-bordered-list-horizontal li:last-child {
+      border: none; }
+    .c-bordered-list-horizontal li a, .c-bordered-list-horizontal li span {
+      display: block;
+      padding: .4rem 0.8rem; }
+
+.c-bordered-list-horizontal--muted a {
+  color: #666666; }
+
+/* ==========================================================================
+  c-brand
+   ========================================================================== */
+.c-brand {
+  padding: 0;
+  margin-right: 0.8rem;
+  display: block;
+  height: 3.6rem; }
+  .c-brand a,
+  .c-brand img {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%; }
+
+/* ==========================================================================
+  c-brand
+   ========================================================================== */
+.c-brand {
+  padding: 0;
+  margin-right: 0.8rem;
+  display: block;
+  height: 3.6rem; }
+  .c-brand a,
+  .c-brand img {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%; }
+
+/* ==========================================================================
+  c-button
+ ========================================================================== */
+/* Default size
+   ========================================================================== */
+.c-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1.6rem;
+  font-size: 1.6rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  display: inline-flex; }
+
+a.c-button {
+  display: inline-flex;
+  justify-content: center; }
+
+button.c-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0; }
+  button.c-button::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+
+input.c-button {
+  height: 3.6rem; }
+
+.c-button .c-button__content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  pointer-events: none; }
+
+.c-button__label {
+  line-height: 2.4rem;
+  white-space: nowrap; }
+
+.c-button__logo {
+  width: 2.4rem;
+  height: 2.4rem; }
+
+.c-button__logo + * {
+  margin-left: 1.2rem; }
+
+.o-svg-icon + .c-button__label {
+  margin-left: 0.6rem; }
+
+.c-button__label + .o-svg-icon {
+  margin-left: 0.6rem; }
+
+.c-button:not(.c-button--icon) .o-svg-icon:first-child {
+  margin-left: -0.9rem; }
+
+.c-button:not(.c-button--icon) .o-svg-icon:last-child {
+  margin-right: -0.9rem; }
+
+.c-button:not(.c-button--icon) [class*='o-svg-icon-arrows-caret']:last-child {
+  margin-left: 0;
+  margin-right: -1.5rem; }
+
+/* Small size
+   ========================================================================== */
+.c-button--small {
+  font-size: 1.4rem;
+  padding: 0.4rem 1rem; }
+  .c-button--small .c-button__label {
+    line-height: 1.8rem; }
+  .c-button--small .o-svg-icon {
+    height: 1.8rem;
+    width: 1.8rem; }
+  .c-button--small .o-svg-icon + .c-button__label,
+  .c-button--small .c-button__label + .o-svg-icon {
+    margin-left: 0; }
+  .c-button--small.c-button--icon {
+    padding: 0.4rem; }
+  .c-button--small:not(.c-button--icon) .o-svg-icon:first-child {
+    margin-left: -0.6rem; }
+  .c-button--small:not(.c-button--icon) .o-svg-icon:last-child {
+    margin-right: -0.6rem; }
+
+/* Icon-only Button (Square)
+    ========================================================================== */
+.c-button--icon {
+  padding: 0.6rem; }
+  .c-button--icon.c-button--small {
+    padding: 0.4rem; }
+
+/* Block button
+    ========================================================================== */
+.c-button--block {
+  width: 100%;
+  text-align: center;
+  justify-content: center; }
+
+/* Link button
+    ========================================================================== */
+.c-button--link {
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: 600;
+  text-decoration: none; }
+  .c-button--link:hover, .c-button--link:active,
+  .c-button--link:hover svg *,
+  .c-button--link:active svg * {
+    color: #f30019; }
 
 /* ==========================================================================
   c-button-group
@@ -1284,123 +1401,6 @@ abbr[title] {
   justify-content: flex-end; }
 
 /* ==========================================================================
-  c-button
- ========================================================================== */
-/* Default size
-   ========================================================================== */
-.c-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  text-decoration: none;
-  cursor: pointer;
-  vertical-align: middle;
-  border-radius: 0.3rem;
-  padding: 0.5rem 1.6rem;
-  font-size: 1.6rem;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  display: inline-flex; }
-
-a.c-button {
-  display: inline-flex;
-  justify-content: center; }
-
-button.c-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  margin: 0; }
-  button.c-button::-moz-focus-inner {
-    border: 0;
-    padding: 0; }
-
-input.c-button {
-  height: 3.6rem; }
-
-.c-button .c-button__content {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  pointer-events: none; }
-
-.c-button__label {
-  line-height: 2.4rem;
-  white-space: nowrap; }
-
-.c-button__logo {
-  width: 2.4rem;
-  height: 2.4rem; }
-
-.c-button__logo + * {
-  margin-left: 1.2rem; }
-
-.o-svg-icon + .c-button__label {
-  margin-left: 0.6rem; }
-
-.c-button__label + .o-svg-icon {
-  margin-left: 0.6rem; }
-
-.c-button:not(.c-button--icon) .o-svg-icon:first-child {
-  margin-left: -0.9rem; }
-
-.c-button:not(.c-button--icon) .o-svg-icon:last-child {
-  margin-right: -0.9rem; }
-
-.c-button:not(.c-button--icon) [class*='o-svg-icon-arrows-caret']:last-child {
-  margin-left: 0;
-  margin-right: -1.5rem; }
-
-/* Small size
-   ========================================================================== */
-.c-button--small {
-  font-size: 1.4rem;
-  padding: 0.4rem 1rem; }
-  .c-button--small .c-button__label {
-    line-height: 1.8rem; }
-  .c-button--small .o-svg-icon {
-    height: 1.8rem;
-    width: 1.8rem; }
-  .c-button--small .o-svg-icon + .c-button__label,
-  .c-button--small .c-button__label + .o-svg-icon {
-    margin-left: 0; }
-  .c-button--small.c-button--icon {
-    padding: 0.4rem; }
-  .c-button--small:not(.c-button--icon) .o-svg-icon:first-child {
-    margin-left: -0.6rem; }
-  .c-button--small:not(.c-button--icon) .o-svg-icon:last-child {
-    margin-right: -0.6rem; }
-
-/* Icon-only Button (Square)
-    ========================================================================== */
-.c-button--icon {
-  padding: 0.6rem; }
-  .c-button--icon.c-button--small {
-    padding: 0.4rem; }
-
-/* Block button
-    ========================================================================== */
-.c-button--block {
-  width: 100%;
-  text-align: center;
-  justify-content: center; }
-
-/* Link button
-    ========================================================================== */
-.c-button--link {
-  padding-left: 0;
-  padding-right: 0;
-  font-weight: 600;
-  text-decoration: none; }
-  .c-button--link:hover, .c-button--link:active,
-  .c-button--link:hover svg *,
-  .c-button--link:active svg * {
-    color: #f30019; }
-
-/* ==========================================================================
   Component: Checkbox and Radio
   ---
   Custom styling for checkboxes and radio buttons.
@@ -1606,7 +1606,7 @@ input.c-button {
   font-size: 1.6rem;
   margin: 1.5rem 0; }
 
-.c-body-2 {
+.c-body-2, .c-content p small {
   font-size: 1.4rem;
   margin: 1.4rem 0; }
 
@@ -1700,6 +1700,69 @@ input.c-button {
 
 .c-content--inverse {
   color: #E5E5E5; }
+
+/* ==========================================================================
+  c-display
+  ---
+  Usage: wrap a .c-display class around content to turn it into rich text.
+  Similar to .c-content, but meant for a reading context.
+
+   ========================================================================== */
+.c-d-h1, .c-d-h2, .c-d-h3, .c-d-h4,
+.c-display h1,
+.c-display h2,
+.c-display h3,
+.c-display h4 {
+  color: #1A1A1A; }
+
+.c-d-h1, .c-display h1,
+.c-d-h2, .c-display h2,
+.c-d-h3, .c-display h3,
+.c-d-h4, .c-display h4 {
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700; }
+
+.c-d-h1, .c-display h1 {
+  font-size: 3.8rem;
+  margin: 0 0 3.8rem;
+  line-height: 1.25; }
+
+.c-d-h2, .c-display h2 {
+  font-size: 3rem;
+  margin: 0 0 3rem;
+  line-height: 1.36; }
+
+.c-d-h3, .c-display h3 {
+  font-size: 2.6rem;
+  margin: 0 0 2.6rem;
+  line-height: 1.36; }
+
+.c-d-h4, .c-display h4 {
+  font-size: 2.2rem;
+  margin: 0 0 2.2rem;
+  line-height: 1.36; }
+
+.c-d-body-1, .c-display p {
+  font-size: 1.8rem;
+  margin: 1.8rem 0;
+  line-height: 1.72; }
+
+.c-d-body-2, .c-display p small {
+  font-size: 1.6rem;
+  margin: 1.6rem 0;
+  line-height: 1.72; }
+
+.c-display figure {
+  margin: 1.8rem 0; }
+
+.c-display figcaption {
+  color: #666666; }
+
+.c-figure {
+  margin: 1.8rem 0; }
+
+.c-figure__figcaption {
+  color: #666666; }
 
 .c-empty-state {
   display: flex;
@@ -2666,16 +2729,6 @@ textarea.c-input--h-large {
     box-shadow: inset 0 0 0 0.1rem #1267FB; }
 
 /* ==========================================================================
-  Component: Toolbar-title
-  ========================================================================== */
-.c-toolbar-title {
-  font-size: 2rem;
-  font-weight: 500; }
-
-.c-toolbar-title--small {
-  font-size: 1.6rem; }
-
-/* ==========================================================================
   Component: Toolbar
   ---
   Component for aligning multiple sub components on a horizontal axis
@@ -2796,6 +2849,16 @@ textarea.c-input--h-large {
         margin-right: 1.6rem; } }
 
 /* ==========================================================================
+  Component: Toolbar-title
+  ========================================================================== */
+.c-toolbar-title {
+  font-size: 2rem;
+  font-weight: 500; }
+
+.c-toolbar-title--small {
+  font-size: 1.6rem; }
+
+/* ==========================================================================
   c-tooltip
  ========================================================================== */
 /* Variables
@@ -2838,6 +2901,29 @@ textarea.c-input--h-large {
 .c-tooltip[data-popper-placement^='right'] > .c-tooltip__arrow {
   filter: none;
   border-right-color: #333; }
+
+/* ==========================================================================
+  Component: video-wrapper
+   ========================================================================== */
+.c-video-wrapper {
+  position: relative;
+  padding-bottom: 43%;
+  height: 0; }
+
+.c-video-wrapper--aspect-2-3 {
+  padding-bottom: 66.67%;
+  /* 3:2 */ }
+
+.c-video-wrapper--aspect-16-9 {
+  padding-bottom: 56.25%;
+  /* 16:9 */ }
+
+.c-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 /* Components specific to design system website
    ========================================================================== */

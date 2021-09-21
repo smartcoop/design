@@ -5,16 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Smart Coop Design System
+    <title>Type test - Smart Coop Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
-    <style>
-        .br-index {
-            padding: 20px;
-        }
-    </style>
 </head>
 
 <body class="u-maximize-height u-overflow-hidden">
@@ -38,7 +33,7 @@
                                     <a href="/tests/type-test.html">type-test</a>
                                 </li>
                                 <li class="br-tree-dir">
-                                    <a href="/tests/video.html">video</a>
+                                    <a class="br-bordered-list__link--active" href="/tests/video.html">video</a>
                                 </li>
                             </ul>
                         </li>
@@ -49,10 +44,10 @@
                             <a href="/contact-form.html">contact-form</a>
                         </li>
                         <li class="br-tree-dir">
-                            <a class="br-bordered-list__link--active" href="/index.html">index</a>
+                            <a href="/index.html">index</a>
                         </li>
                         <li class="br-tree-dir">
-                            <a class="br-bordered-list__link--active" href="/page-index.html">page-index</a>
+                            <a href="/page-index.html">page-index</a>
                         </li>
                         <li class="br-tree-dir">
                             <a href="/register-form.html">register-form</a>
@@ -65,46 +60,15 @@
             </div>
         </div>
         <div class="br-prototype-content">
-            <div class="br-index">
-                <p>Prototype pages:</p>
-                <ul class="br-bordered-list">
-                    <li>
-                        <a href="/styleguide">Styleguide</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <h4 class="br-tree-dir-title">tests</h4>
-                        <ul>
-                            <li class="br-tree-dir">
-                                <a href="/tests/figure-figcaption.html">figure-figcaption</a>
-                            </li>
-                            <li class="br-tree-dir">
-                                <a href="/tests/type-test.html">type-test</a>
-                            </li>
-                            <li class="br-tree-dir">
-                                <a href="/tests/video.html">video</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a href="/404.html">404</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a href="/contact-form.html">contact-form</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a class="br-bordered-list__link--active" href="/index.html">index</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a class="br-bordered-list__link--active" href="/page-index.html">page-index</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a href="/register-form.html">register-form</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a href="/sample-page.html">sample-page</a>
-                    </li>
-                </ul>
-                <p>Press Ctrl + M to toggle the listing of pages on any page.</p>
+            <div style="padding: 40px;">
+                <div class="c-content">
+                    <h1>Responsive images and video</h1>
+                    <p>This page tests responsive images and video (that keeps its aspect ratio).
+                    <div class="c-video-wrapper c-video-wrapper--aspect-16-9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kevqiiYNFrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

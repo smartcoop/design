@@ -5,16 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Smart Coop Design System
+    <title>Type test - Smart Coop Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
-    <style>
-        .br-index {
-            padding: 20px;
-        }
-    </style>
 </head>
 
 <body class="u-maximize-height u-overflow-hidden">
@@ -32,7 +27,7 @@
                             <h4 class="br-tree-dir-title">tests</h4>
                             <ul>
                                 <li class="br-tree-dir">
-                                    <a href="/tests/figure-figcaption.html">figure-figcaption</a>
+                                    <a class="br-bordered-list__link--active" href="/tests/figure-figcaption.html">figure-figcaption</a>
                                 </li>
                                 <li class="br-tree-dir">
                                     <a href="/tests/type-test.html">type-test</a>
@@ -49,10 +44,10 @@
                             <a href="/contact-form.html">contact-form</a>
                         </li>
                         <li class="br-tree-dir">
-                            <a class="br-bordered-list__link--active" href="/index.html">index</a>
+                            <a href="/index.html">index</a>
                         </li>
                         <li class="br-tree-dir">
-                            <a class="br-bordered-list__link--active" href="/page-index.html">page-index</a>
+                            <a href="/page-index.html">page-index</a>
                         </li>
                         <li class="br-tree-dir">
                             <a href="/register-form.html">register-form</a>
@@ -65,46 +60,41 @@
             </div>
         </div>
         <div class="br-prototype-content">
-            <div class="br-index">
-                <p>Prototype pages:</p>
-                <ul class="br-bordered-list">
-                    <li>
-                        <a href="/styleguide">Styleguide</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <h4 class="br-tree-dir-title">tests</h4>
-                        <ul>
-                            <li class="br-tree-dir">
-                                <a href="/tests/figure-figcaption.html">figure-figcaption</a>
-                            </li>
-                            <li class="br-tree-dir">
-                                <a href="/tests/type-test.html">type-test</a>
-                            </li>
-                            <li class="br-tree-dir">
-                                <a href="/tests/video.html">video</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a href="/404.html">404</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a href="/contact-form.html">contact-form</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a class="br-bordered-list__link--active" href="/index.html">index</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a class="br-bordered-list__link--active" href="/page-index.html">page-index</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a href="/register-form.html">register-form</a>
-                    </li>
-                    <li class="br-tree-dir">
-                        <a href="/sample-page.html">sample-page</a>
-                    </li>
-                </ul>
-                <p>Press Ctrl + M to toggle the listing of pages on any page.</p>
+            <div style="padding: 40px;">
+                <div class="c-content">
+                    <h1>Figure and figcaption test</h1>
+                    <p>This page tests the figure and figcaption elements used to give a caption to images.</p>
+                </div>
+                <div class="o-grid">
+                    <div class="o-grid-col-6">
+                        <div class="c-content">
+                            <h2>Test with explicit CSS classes</h2>
+                            <figure class="c-figure">
+                                <img src="http://placehold.it/1200x600">
+                                <figcaption class="c-figure__figcaption">This is a caption to the image.</figcaption>
+                            </figure>
+                            <figure class="c-figure">
+                                <img src="http://placehold.it/1200x600">
+                                <figcaption class="c-figure__figcaption">This is a caption to the image.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="o-grid-col-6">
+                        <div class="c-content">
+                            <h2>Classless example (nested under <code>.c-display</code>)</h2>
+                        </div>
+                        <div class="c-display">
+                            <figure>
+                                <img src="http://placehold.it/1200x600">
+                                <figcaption>This is a caption to the image.</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="http://placehold.it/1200x600">
+                                <figcaption>This is a caption to the image.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
