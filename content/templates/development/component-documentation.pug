@@ -5,31 +5,30 @@ block append pageVariables
 
 block content
 
-    .o-container-vertical
+    .u-padding-bottom-l
+        h1.c-d-h2 Component documentation
 
-        h1.c-d-h1 Component documentation
+    .o-grid
+    
+        .o-grid-col-bp3-3
+            .u-spacer-bottom
 
-        .o-grid
-        
-            .o-grid-col-bp3-3
-                .u-spacer-bottom
+                each docsCategoryName in config.styleguide.categoryOrder
+                    if docsCategoryName === 'Components' && Object.keys(components.byCategory).length > 0
+                        each category, categoryName in components.byCategory
+                            .br-docs-category
+                                if Object.keys(components.byCategory).length > 1
+                                    h4.br-docs-category-name(class=styleguideNavListTitleClass)= categoryName
+                                else
+                                    h4.br-docs-category-name(class=styleguideNavListTitleClass) Components
+                                .br-docs-category-list-wrapper(class=styleguideNavListWrapperClass)
+                                    ul(class=styleguideNavListClass)
+                                        each group in category
+                                            - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
+                                            li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
+                                                a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
+                                                    |  #{groupName}
 
-                    each docsCategoryName in config.styleguide.categoryOrder
-                        if docsCategoryName === 'Components' && Object.keys(components.byCategory).length > 0
-                            each category, categoryName in components.byCategory
-                                .br-docs-category
-                                    if Object.keys(components.byCategory).length > 1
-                                        h4.br-docs-category-name(class=styleguideNavListTitleClass)= categoryName
-                                    else
-                                        h4.br-docs-category-name(class=styleguideNavListTitleClass) Components
-                                    .br-docs-category-list-wrapper(class=styleguideNavListWrapperClass)
-                                        ul(class=styleguideNavListClass)
-                                            each group in category
-                                                - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
-                                                li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
-                                                    a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
-                                                        |  #{groupName}
-
-            .o-grid-col-bp3-9
-                    .c-display
-                        p Please choose an item in the navigation.
+        .o-grid-col-bp3-9
+                .c-display
+                    p Please choose an item in the navigation.

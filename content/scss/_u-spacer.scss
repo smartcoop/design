@@ -206,3 +206,23 @@ $g-spacer-unit: 0.8rem !default;
   padding-left: $g-spacer-unit * 4 !important;
   padding-right: $g-spacer-unit * 4 !important;
 }
+
+
+/* Bottom padding only
+     ========================================================================== */
+
+.u-padding-bottom-s {
+  padding-bottom: $g-spacer-unit !important;
+}
+
+.u-padding-bottom {
+  padding-bottom: $g-spacer-unit * 2 !important;
+}
+
+.u-padding-bottom-l {
+  padding-bottom: $g-spacer-unit * 3 !important;
+}
+
+.u-padding-bottom-xl {
+  padding-bottom: $g-spacer-unit * 4 !important;
+}

@@ -5,13 +5,18 @@ block append pageVariables
 
 block content
 
+    .u-padding-bottom-l
+        h1.c-d-h2 Component documentation
+
     .o-grid
+    
         .o-grid-col-3
             if config.styleguide.search
-                input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
-            
+                .u-spacer-bottom
+                    input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
+        
             block nav
                 include ../includes/styleguide-nav
-            
+        
         .o-grid-col-9
             block subContent
