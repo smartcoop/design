@@ -1,0 +1,32 @@
+extends how-it-works
+
+block append pageVariables
+    - var moduleTitle = "How it works"
+
+block subContent
+
+    .c-display
+        h2 Practical design workflow
+        h3 Making design improvement proposals
+        ul
+            li  Create a new file, and link it to the design system library
+            li Propose your changes using a Github issue
+            li A reviewer will review your work. A discussion might ensue; when the work is approved, it will be merged into the greater whole*.
+
+        h3 How to deprecate a Figma component
+
+        ul
+            li Add [DEPRECATED] to the artboard name
+            li Give the layers a pink-ish background so people can see in their design files that the component has been deprecated
+            li Move it to the Deprecated components page
+            li In time, deprecated components should be cleaned up.
+
+        h3 How to propose a Figma component
+
+        ul
+            li Make a copy of the design library file
+            li Create a new Github issue
+            li Reference the Github issue number with a # in the name of your design file
+            li Describe your proposal
+
+        p.u-text-muted *Note that Figma is working on a branching feature which will make this process less manual in the future.

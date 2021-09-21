@@ -1,10 +1,16 @@
 /* ==========================================================================
-  Component: main layout
+  c-blog-article
    ========================================================================== */
 
-.c-main-layout {
-  display: flex;
-  height: 100%;
-  min-height: 0;
-  overflow: hidden;
+.c-blog-article {
+  
+}
+
+.c-blog-article__header {
+  h1, h2 {
+    margin: 0;
+  }
+  a {
+    color: $g-headings-color;
+  }
 }

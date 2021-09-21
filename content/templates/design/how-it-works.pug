@@ -1,0 +1,36 @@
+extends ../index
+
+block append pageVariables
+    - var moduleTitle = "Design workflow"
+
+block content
+
+    .o-container-vertical
+
+        .o-grid
+
+            .o-grid-col-bp3-3
+                // @todo implement selected state based on pathname
+                // .c-side-menu__item--active
+
+                ul.c-side-menu
+                    li.c-side-menu__item(class=pathname.match(/design\/how-it-works/) ? "c-side-menu__item--active" : "")
+                        a.c-side-menu__link(href="/design/how-it-works.html") How it works - A participatory model
+
+                    li.c-side-menu__item(class=pathname.match(/design\/practical-design-workflow/) ? "c-side-menu__item--active" : "")
+                        a.c-side-menu__link(href="/design/practical-design-workflow.html") Practical design workflow
+
+                    li.c-side-menu__item(class=pathname.match(/design\/assets-and-resources/) ? "c-side-menu__item--active" : "")
+                        a.c-side-menu__link(href="/design/assets-and-resources.html") Assets and resources
+
+            .o-grid-col-bp3-9
+                block subContent
+                    .c-display
+                        h2 How it works - A participatory model
+                        p This page describes the open design process for Smart Coop’s design system. The design system is an ever-evolving system made by Smart Coop and the community. Everyone is free to participate.
+                        p The participatory model of open source for code is a well-known concept. Open design is quite new. On this page we describe our open process for the design part.
+                        h2 Where to find the design files
+                        h3 Figma file
+                        p The Figma file is published at this link and lives under the SmartCoop organisation.
+                        h3 Getting editor access
+                        p To keep some order, editor access is available once you’ve understood how we work, through an introductory meeting where the process is explained. In order to apply to participate, please e-mail thu@smart.coop

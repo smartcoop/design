@@ -1,0 +1,69 @@
+.c-navbar.c-navbar--bordered-bottom
+    .c-toolbar.c-toolbar--medium
+        .c-toolbar__left
+            .c-toolbar__item
+                a(href="/")
+                    img(src='/images/logo.svg' alt='Smart Coop Logo')
+            .c-toolbar__item
+                nav
+                    ul.c-bordered-list-horizontal
+                        -
+                            var navItems = [
+                                {
+                                    pathName: '#',
+                                    name: 'Dashboard',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Quotes & invoices',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Funding',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Expenses',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Contracts',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Contracts Covid-19',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Equipment',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Activities',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Members',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Archive',
+                                },
+                                {
+                                    pathName: '#',
+                                    name: 'Detachement',
+                                },
+                            ]
+
+                        each item in navItems
+                            li(class=item.name==moduleTitle ? 'c-sidebar__item--active' : '')
+                                a(href=item.pathName)
+                                    .c-sidebar-item__label #{item.name}
+
+        .c-toolbar__right
+            .c-toolbar__item
+                .c-avatar-and-text
+                    +c-avatar({size: 'small'})
+                    .c-avatar-and-text__text
+                        p Jane Cooper
+

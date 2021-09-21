@@ -1,0 +1,35 @@
+extends ../index
+
+block append pageVariables
+    - var moduleTitle = "Changelog"
+
+block content
+
+    .o-container.o-container--medium
+        .o-container-vertical
+            
+                h1.c-d-h1 Blog
+
+                ul.c-blog-article-list
+                    li
+                        article.c-blog-article
+                            header.c-blog-article__header
+                                h2.c-d-h2: a(href="/blog/2021/09/this-is-a-title.html") This is a title...
+                                p.c-d-body-1 September 21, 2021
+
+                            .c-blog-article__content
+                                .c-display
+                                    p This is a post... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    li
+                        article.c-blog-article
+                            header.c-blog-article__header
+                                h2.c-d-h2: a(href="/blog/2021/09/this-is-a-title.html") This is a title...
+                                p.c-d-body-1 September 21, 2021
+
+                            .c-blog-article__content
+                                .c-display
+                                    p This is a post... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                .c-pagination-simple
+                    +c-button({}) Previous page
+                    +c-button({}) Next page
