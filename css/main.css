@@ -236,6 +236,9 @@ abbr[title] {
    ========================================================================== */
 /* Block spacing
    ========================================================================== */
+.o-container-vertical--padding-mini {
+  padding: 1.2rem 0; }
+
 .o-container-vertical--padding-small {
   padding: 2.4rem 0; }
 
@@ -256,39 +259,6 @@ abbr[title] {
 
 .o-container-vertical--bottom-bordered {
   border-bottom: 1px solid #E5E5E5; }
-
-/* ==========================================================================
-  Block types (attached to vertical containers, since this is often the parent)
-   ========================================================================== */
-/* Block type: intro
-   ========================================================================== */
-.o-container-vertical-intro__intro {
-  font-size: 1.8rem;
-  color: #808080;
-  text-align: center; }
-
-/* Block type: title
-   ========================================================================== */
-.o-container-vertical-title__title {
-  text-align: center;
-  font-size: 4.8rem;
-  font-weight: 500;
-  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-
-/* Block type: subtitle
-   ========================================================================== */
-.o-container-vertical-subtitle__title {
-  font-size: 3.2rem;
-  font-weight: 500;
-  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-
-/* Block type: anchor list
-   ========================================================================== */
-.o-container-vertical-anchor-list__list {
-  text-align: center; }
-  .o-container-vertical-anchor-list__list li {
-    display: inline-block;
-    margin: 1rem; }
 
 /* ==========================================================================
     Object: Flex
@@ -951,9 +921,7 @@ abbr[title] {
   align-items: center;
   min-width: 0; }
   .c-avatar-and-text .c-avatar {
-    margin-right: 1.2rem; }
-  .c-avatar-and-text .c-avatar.c-avatar--small {
-    margin-right: 1.2rem; }
+    margin-right: .8rem; }
 
 .c-avatar-and-text__text {
   flex: 1;
@@ -1063,19 +1031,41 @@ abbr[title] {
     width: 100%; }
 
 /* ==========================================================================
-  c-brand
+  c-pill-navigation
    ========================================================================== */
-.c-brand {
-  padding: 0;
-  margin-right: 0.8rem;
+.c-pill-navigation {
+  display: flex; }
+
+.c-pill-navigation__item {
+  display: block; }
+
+.c-pill-navigation__item > a {
   display: block;
-  height: 3.6rem; }
-  .c-brand a,
-  .c-brand img {
-    display: block;
-    position: relative;
-    height: 100%;
-    width: 100%; }
+  padding: .8rem 1.6rem;
+  color: #4D4D4D; }
+
+.c-pill-navigation__item--has-child-menu > a {
+  padding: .8rem 2.8rem .8rem 1.6rem; }
+
+.c-pill-navigation__item--active > a {
+  background: #F2F2F2;
+  border-radius: .3rem; }
+
+.c-pill-navigation__item--has-child-menu > a {
+  position: relative; }
+  .c-pill-navigation__item--has-child-menu > a:after {
+    pointer-events: none;
+    content: ' ';
+    position: absolute;
+    right: 1.4rem;
+    top: 1.8rem;
+    width: 0;
+    height: 0;
+    border-width: 1rem;
+    border: 0.5rem solid #808080;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent; }
 
 /* ==========================================================================
   c-button
@@ -1781,6 +1771,23 @@ input.c-button {
 .c-display ol {
   list-style: decimal; }
 
+.c-display pre {
+  background: #F2F2F2;
+  padding: 1.5rem;
+  margin: 0 0 1rem;
+  font-size: 75%;
+  white-space: pre-wrap; }
+
+.c-display pre, .c-display code {
+  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+
+.c-display code {
+  font-size: 85%;
+  background: #F2F2F2;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  color: #FF4054; }
+
 .c-figure {
   margin: 1.8rem 0; }
 
@@ -2226,6 +2233,9 @@ textarea.c-input--h-large {
   padding: 0 2.4rem;
   height: 6.4rem;
   width: 100%; }
+
+.c-navbar--unpadded {
+  padding: 0; }
 
 .c-navbar--auto {
   height: auto; }
@@ -2926,24 +2936,81 @@ textarea.c-input--h-large {
 
 /* Components specific to design system website
    ========================================================================== */
-.c-design-system-home-illustration {
-  background: #F6F6F6;
-  padding: 2rem; }
+.c-avatar-and-text-list {
+  display: flex; }
+  .c-avatar-and-text-list li {
+    margin-right: 2.4rem; }
 
 /* ==========================================================================
   c-blog-article
    ========================================================================== */
-.c-blog-article__header h1, .c-blog-article__header h2 {
-  margin: 0; }
-
-.c-blog-article__header a {
-  color: #1A1A1A; }
+.c-blog-article__header {
+  margin-bottom: 1.8rem; }
+  .c-blog-article__header h1, .c-blog-article__header h2 {
+    margin: 0; }
+  .c-blog-article__header p {
+    margin: .6rem 0 0;
+    color: #666666; }
+  .c-blog-article__header a {
+    color: #1A1A1A; }
 
 /* ==========================================================================
   c-blog-article-list
    ========================================================================== */
 .c-blog-article-list li {
   margin: 0 0 4.8rem; }
+
+.c-design-system-home-illustration {
+  background: #F6F6F6;
+  padding: 2rem; }
+
+.c-design-system-nav__desktop {
+  display: none; }
+
+@media (min-width: 900px) {
+  .c-design-system-nav__desktop {
+    display: block; }
+  #c-design-system-nav-open {
+    display: none; } }
+
+#c-design-system-nav-close {
+  position: fixed;
+  top: 0;
+  right: 0; }
+
+.c-design-system-nav__mobile {
+  display: none;
+  background: #FFF;
+  height: 100%; }
+  .c-design-system-nav__mobile > ul {
+    margin-top: 4rem; }
+  .c-design-system-nav__mobile a, .c-design-system-nav__mobile span {
+    display: block;
+    padding: .8rem .8rem .8rem 1.2rem;
+    position: relative;
+    color: #4D4D4D; }
+  .c-design-system-nav__mobile li.selected a:before {
+    content: '';
+    height: 100%;
+    width: 0.4rem;
+    position: absolute;
+    border-radius: 0.3rem 0 0 0.3rem;
+    left: 0;
+    bottom: 0;
+    background: #FF4054; }
+  .c-design-system-nav__mobile a:hover,
+  .c-design-system-nav__mobile a:active,
+  .c-design-system-nav__mobile a:focus {
+    background: #F2F2F2; }
+  .c-design-system-nav__mobile span {
+    color: #999999; }
+  .c-design-system-nav__mobile ul {
+    padding-left: 1.2rem; }
+
+.c-design-system-nav__mobile--visible {
+  position: fixed;
+  display: block;
+  inset: 0; }
 
 /* Utilities: specific helper classes, overrides
    ========================================================================== */

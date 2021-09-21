@@ -104,6 +104,9 @@
                             <a href="/index.html">index</a>
                         </li>
                         <li class="br-tree-dir">
+                            <a href="/menu.html">menu</a>
+                        </li>
+                        <li class="br-tree-dir">
                             <a href="/page-index.html">page-index</a>
                         </li>
                     </ul>
@@ -114,7 +117,7 @@
             <header id="header">
                 <div class="o-container">
                     <div class="u-padding-vertical-xl">
-                        <div class="c-navbar c-navbar--bordered-bottom c-navbar--large">
+                        <div class="c-navbar c-navbar--bordered-bottom c-navbar--large c-navbar--unpadded">
                             <div class="c-toolbar">
                                 <div class="c-toolbar__left">
                                     <div class="c-toolbar__item">
@@ -125,31 +128,117 @@
                                 </div>
                                 <div class="c-toolbar__right">
                                     <div class="c-toolbar__item">
-                                        <ul class="c-bordered-list-horizontal">
-                                            <li>
-                                                <a href="/design/how-it-works.html">Design</a>
-                                            </li>
-                                            <li>
-                                                <a href="/development/repo-links.html">Development</a>
-                                            </li>
-                                            <li>
-                                                <a href="/blog/index.html">Blog</a>
-                                            </li>
-                                            <li>
-                                                <a href="/changelog.html">Changelog</a>
-                                            </li>
-                                        </ul>
+                                        <!-- Nav for desktop-->
+                                        <nav class="c-design-system-nav">
+                                            <button class="c-button c-button--borderless c-button--icon" type="button" id="c-design-system-nav-open">
+                                                <span class="c-button__content">
+                                                    <div class="o-svg-icon o-svg-icon-menu  ">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z" fill="#595959" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="u-sr-accessible">Open menu
+                                                    </div>
+                                                </span>
+                                            </button>
+                                            <div class="c-design-system-nav__mobile">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button" id="c-design-system-nav-close">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-close  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Close menu
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                                <ul>
+                                                    <li>
+                                                        <span>Design</span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="/design/how-it-works.html">Design workflow</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/design/design-system-in-practice.html">Design system in practice</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span>Development</span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="/development/component-documentation.html">Component documentation</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/development/package-links.html">Package links</a>
+                                                            </li>
+                                                            <li role="presentational"></li>
+                                                            <li>
+                                                                <a href="/development/browser-support.html">Browser support</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/development/css-architecture.html">CSS architecture</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/development/css-component-structure.html">CSS component structure</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/blog/index.html">Blog</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/changelog.html">Changelog</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="c-design-system-nav__desktop">
+                                                <ul class="c-pill-navigation">
+                                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                                        <!-- @todo now we are using menu.js, which is really meant for dropdowns. Make more accessible with aria-haspopup="true" aria-expanded="false", switch with JS?-->
+                                                        <a href="#" data-menu="menu1" data-menu-samewidth="true">Design</a>
+                                                        <ul class="c-menu c-menu--large" id="menu1">
+                                                            <li class="c-menu__item">
+                                                                <a class="c-menu__label" href="/design/how-it-works.html">Design workflow</a>
+                                                            </li>
+                                                            <li class="c-menu__item">
+                                                                <a class="c-menu__label" href="/design/design-system-in-practice.html">Design system in practice</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                                        <a href="#" data-menu="menu2" data-menu-samewidth="true">Development</a>
+                                                        <ul class="c-menu c-menu--large" id="menu2">
+                                                            <li class="c-menu__item">
+                                                                <a class="c-menu__label" href="/development/component-documentation.html">Component documentation</a>
+                                                            </li>
+                                                            <li class="c-menu__item">
+                                                                <a class="c-menu__label" href="/development/package-links.html">Package links</a>
+                                                            </li>
+                                                            <li class="c-menu__divider" role="presentational"></li>
+                                                            <li class="c-menu__item">
+                                                                <a class="c-menu__label" href="/development/browser-support.html">Browser support</a>
+                                                            </li>
+                                                            <li class="c-menu__item">
+                                                                <a class="c-menu__label" href="/development/css-architecture.html">CSS architecture</a>
+                                                            </li>
+                                                            <li class="c-menu__item">
+                                                                <a class="c-menu__label" href="/development/css-component-structure.html">CSS component structure</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="c-pill-navigation__item">
+                                                        <a href="/blog/index.html">Blog</a>
+                                                    </li>
+                                                    <li class="c-pill-navigation__item">
+                                                        <a href="/changelog.html">Changelog</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
                                     </div>
-                                    <!-- @todo make a dedicated componen-->
-                                    <!--
-                    ul.c-nav-pills
-                        li.c-nav-pills__item: a(href="#") Design
-                        li.c-nav-pills__item: a(href="#") Development
-                        li.c-nav-pills__item: a(href="#") Blog
-                        li.c-nav-pills__item: a(href="#") Changelog
-                        li.c-nav-pills__item: a(href="#") About
-                    
-                    -->
                                 </div>
                             </div>
                         </div>
@@ -164,16 +253,22 @@
                             <p>This is the development changelog. For the design changelog, please refer to the library <a href="#">Figma file</a>.</p>
                             <div class="u-spacer-top u-spacer-bottom">
                                 <div class="u-spacer-bottom-xl">
-                                    <h3>21 Sep 2021</h3>
+                                    <h3>September 21, 2021</h3>
                                     <ul>
                                         <li>Add accordion component and corresponding javascript</li>
                                         <li>Add blank slate component</li>
                                         <li>Add bordered list component</li>
                                         <li>Document container, grid, form-group, and flex objects</li>
+                                        <li>Implement design system website base</li>
+                                        <li>Implement design system website base</li>
+                                        <li>Remove sidebar from main template in favor of top menu</li>
+                                        <li>Refactor side-menu component to be independent of any sidebar (sidebar currently does not exist anymore)</li>
+                                        <li>Add icon: <code>github</code>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="u-spacer-bottom-xl">
-                                    <h3>20 Aug 2021</h3>
+                                    <h3>August 20, 2021</h3>
                                     <ul>
                                         <li>Remove missing stylesheet reference which was causing an error</li>
                                         <li>Improve spacing footer docs in styleguide</li>
@@ -187,7 +282,7 @@
                                     </ul>
                                 </div>
                                 <div class="u-spacer-bottom-xl">
-                                    <h3>3 Aug 2021</h3>
+                                    <h3>August 3, 2021</h3>
                                     <ul>
                                         <li>Add <a href="/sample-page.html">sample page</a>
                                         </li>
@@ -209,13 +304,13 @@
                                     </ul>
                                 </div>
                                 <div class="u-spacer-bottom-xl">
-                                    <h3>29 Jul 2021</h3>
+                                    <h3>July 29, 2021</h3>
                                     <ul>
                                         <li>Add changelog page</li>
                                         <li>Add browser support page</li>
                                     </ul>
                                 </div>
-                                <h3>28 Jul 2021</h3>
+                                <h3>July 28, 2021</h3>
                                 <ul>
                                     <li>Add Mono icons to repository</li>
                                     <li>Add inputs (toggles) to styleguide</li>
