@@ -1323,7 +1323,7 @@ input.c-button {
 .c-checkbox input[type='checkbox']:checked,
 .c-checkbox input[type='checkbox'][data-indeterminate]:checked,
 .c-radio input[type='radio']:checked {
-  border-color: #FF4054; }
+  border-color: #1267FB; }
   .c-checkbox input[type='checkbox']:checked:before,
   .c-checkbox input[type='checkbox'][data-indeterminate]:checked:before,
   .c-radio input[type='radio']:checked:before {
@@ -1341,7 +1341,6 @@ input.c-button {
   transition: 0.14s box-shadow ease-in-out; }
 
 /* Checkbox specific
-   @todo document disabled and indeterminate state
    ========================================================================== */
 .c-checkbox input[type='checkbox'] {
   background: #FFF;
@@ -1379,7 +1378,7 @@ input.c-button {
 
 .c-checkbox input[type='checkbox']:checked:not([disabled]),
 .c-checkbox input[type='checkbox'][data-indeterminate]:checked:not([disabled]) {
-  background-color: #FF4054; }
+  background-color: #1267FB; }
 
 /* Radio specific
    @todo document disabled state
@@ -1394,7 +1393,7 @@ input.c-button {
 
 .c-radio input[type='radio']:checked:before,
 .c-radio input[type='radio'][disabled]:before {
-  background: #FF4054;
+  background: #1267FB;
   height: 0.8rem;
   width: 0.8rem;
   top: 0.3rem;
