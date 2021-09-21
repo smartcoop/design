@@ -18,43 +18,52 @@ block body
             .o-form-group-layout.o-form-group-layout--standard
                 .o-grid
                     .o-grid-col-6
-                        +c-form-group({ label: 'Name', id: 'tfName'})
+                        +c-form-group({ label: 'Name', id: 'registerFormName'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'First name', id: 'tfFirstName'})
+                        +c-form-group({ label: 'First name', id: 'registerFormFirstName'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Gender', id: 'tfGender', type: 'select', value: ['Male','Female','X']})
+                        +c-form-group({ label: 'Gender', id: 'registerFormGender', type: 'select', value: ['Male','Female','X']})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Language', id: 'tfLangue', type: 'select', value: ['Français','Nederlands','Deutsch','Espanol']})
+                        +c-form-group({ label: 'Language', id: 'registerFormLangue', type: 'select', value: ['Français','Nederlands','Deutsch','Espanol']})
                 .c-hr
-                h3.c-h3 Adresse officielle
+                h3.c-h3 Official address
                 .o-grid
                     .o-grid-col-8
-                        +c-form-group({ label: 'Street', id: 'tfAddressOfficalStreet'})
+                        +c-form-group({ label: 'Street', id: 'registerFormAddressOfficalStreet'})
                     .o-grid-col-2
-                        +c-form-group({ label: 'Number', id: 'tfAddressOfficalStreetNo'})
+                        +c-form-group({ label: 'Number', id: 'registerFormAddressOfficalStreetNo'})
                     .o-grid-col-2
-                        +c-form-group({ label: 'Addition', id: 'tfAddressOfficalStreetBuildingAddition'})
+                        +c-form-group({ label: 'Addition', id: 'registerFormAddressOfficalStreetBuildingAddition'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Postal code', id: 'tfAddressOfficalZipCode'})
+                        +c-form-group({ label: 'Postal code', id: 'registerFormAddressOfficalZipCode'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Country', id: 'tfAddressOfficalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
-                h3.c-h3 Adresse Courrier
+                        +c-form-group({ label: 'Country', id: 'registerFormAddressOfficalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+                h3.c-h3 Mailing address
                 .o-grid
                     .o-grid-col-8
-                        +c-form-group({ label: 'Street', id: 'tfAddressPostalStreet'})
+                        +c-form-group({ label: 'Street', id: 'registerFormAddressPostalStreet'})
                     .o-grid-col-2
-                        +c-form-group({ label: 'Number', id: 'tfAddressPostalStreetNo'})
+                        +c-form-group({ label: 'Number', id: 'registerFormAddressPostalStreetNo'})
                     .o-grid-col-2
-                        +c-form-group({ label: 'Addition', id: 'tfAddressPostalStreetBuildingAddition'})
+                        +c-form-group({ label: 'Addition', id: 'registerFormAddressPostalStreetBuildingAddition'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Postal code', id: 'tfAddressPostalZipCode'})
+                        +c-form-group({ label: 'Postal code', id: 'registerFormAddressPostalZipCode'})
                     .o-grid-col-6
-                        +c-form-group({ label: 'Country', id: 'tfAddressPostalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+                        +c-form-group({ label: 'Country', id: 'registerFormAddressPostalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+                .c-hr
+                .o-grid
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Cell phone number', id: 'registerFormCellPhoneNumber'})
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Home phone number', id: 'registerFormHomePhoneNumber'})
+                    .o-grid-col-6
+                        +c-form-group({ label: 'E-mail', id: 'registerFormfieldEmail'})
+                    .o-grid-col-6
+                        +c-form-group({ label: 'Birthdate', id: 'registerFormfieldEmail'})
 
             // @todo enter more data
 
             //
-                N° Gsm: N° tél:
                 Email:
                 Date de naissance: jour 01 v mois_01 année 2010
                 Etat civil: Célibataire
