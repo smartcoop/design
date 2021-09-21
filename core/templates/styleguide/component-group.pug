@@ -2,9 +2,9 @@ extends index
 
 block append pageVariables
     - var pageTitle = componentGroup.docs && componentGroup.docs.attributes.title || componentGroup.group.id
-    - var moduleTitle = pageTitle + ' - Styleguide'
+    - var moduleTitle = pageTitle + ' - Component documentation'
 
-block content
+block subContent
 
     if !componentGroup.docs
         h1.br-componentgroup-header(class=styleguideComponentGroupHeaderClass)= componentGroup.group.id

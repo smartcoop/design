@@ -49,10 +49,10 @@ gulp.task('icon-font', iconFont);
 
 gulp.task('templates:compile:content', templates.compile.content);
 gulp.task('templates:compile:styleguide', templates.compile.styleguide);
-gulp.task('templates:compile:docs', templates.compile.docs);
+//gulp.task('templates:compile:docs', templates.compile.docs);
 
 gulp.task('templates:compile', config.styleguide ?
-  gulp.parallel('templates:compile:content', 'templates:compile:styleguide', 'templates:compile:docs') :
+  gulp.parallel('templates:compile:content', 'templates:compile:styleguide') :
   gulp.series('templates:compile:content')
 );
 

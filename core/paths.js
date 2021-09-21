@@ -88,7 +88,7 @@ module.exports = {
     js: path.join(compiledPath, 'js/'),
     css: path.join(compiledPath, 'css/'),
     styleguide: path.join(compiledPath, 'styleguide/'),
-    docs: path.join(compiledPath, 'styleguide/docs/'),
+    docs: path.join(compiledPath, config.styleguide.url+'/docs/'),
     assets: {
       images: path.join(compiledPath, 'images/'),
       fonts: path.join(compiledPath, 'fonts/'),
@@ -105,7 +105,7 @@ module.exports = {
       allFiles: path.join(distPath, 'css/**/*.css'),
     },
     styleguide: path.join(distPath, 'styleguide/'),
-    docs: path.join(distPath, 'styleguide/docs/'),
+    docs: path.join(distPath, config.styleguide.url+'/docs/'),
     assets: {
       images: path.join(distPath, 'images/'),
       fonts: path.join(distPath, 'fonts/'),
