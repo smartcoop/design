@@ -1,0 +1,60 @@
+/* ==========================================================================
+  c-pill-navigation
+   ========================================================================== */
+
+.c-pill-navigation {
+  display: flex;
+}
+
+.c-pill-navigation__item {
+  display: block;
+}
+
+.c-pill-navigation__item > a {
+  display: block;
+  padding: .8rem 1.6rem;
+  color: $color-text;
+}
+
+.c-pill-navigation__item--has-child-menu > a {
+  padding: .8rem 2.8rem .8rem 1.6rem;
+}
+
+.c-pill-navigation__item--active > a {
+  background: $color-gray-50;
+  border-radius: .3rem;
+}
+
+
+// A wrapper, so we can position a CSS created arrow
+.c-pill-navigation__item--has-child-menu > a {
+  position: relative;
+  &:after {
+    pointer-events: none;
+    content: ' ';
+    position: absolute;
+    right: 1.4rem;
+    top: 1.8rem;
+    width: 0;
+    height: 0;
+    border-width: 1rem;
+    border: 0.5rem solid $color-gray-500;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+}
+
+
+.c-pill-navigation .c-menu {
+//  background: blue;
+//  background: #FFF;
+//  border: .1rem solid $color-gray-150;
+//  border-radius: .3rem;
+//  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.c-pill-navigation a:focus + ul {
+  //visibility: visible;
+  //opacity: 1;
+}

@@ -78,12 +78,16 @@ $o-container-side-gap: 1.2rem !default; // Should be 1/2 of grid col gap
 /* Block spacing
    ========================================================================== */
 
+.o-container-vertical--padding-mini {
+  padding: 1.2rem 0;
+}
+
 .o-container-vertical--padding-small {
-   padding: 2.4rem 0;
+  padding: 2.4rem 0;
 }
 
 .o-container-vertical { // Standard padding
-   padding: 3.6rem 0;
+  padding: 3.6rem 0;
 }
 
 .o-container-vertical--padding-medium {
@@ -104,47 +108,4 @@ $o-container-side-gap: 1.2rem !default; // Should be 1/2 of grid col gap
 
 .o-container-vertical--bottom-bordered {
   border-bottom: 1px solid $color-gray-100;
-}
-
-/* ==========================================================================
-  Block types (attached to vertical containers, since this is often the parent)
-   ========================================================================== */
-
-/* Block type: intro
-   ========================================================================== */
-
-.o-container-vertical-intro__intro {
-  font-size: 1.8rem;
-  color: $color-gray-500;
-  text-align: center;
-}
-
-/* Block type: title
-   ========================================================================== */
-
-.o-container-vertical-title__title {
-  text-align: center;
-  font-size: 4.8rem;
-  font-weight: $g-headings-font-weight;
-  font-family: $g-headings-font-family;
-}
-
-/* Block type: subtitle
-   ========================================================================== */
-
-.o-container-vertical-subtitle__title {
-  font-size: 3.2rem;
-  font-weight: $g-headings-font-weight;
-  font-family: $g-headings-font-family;
-}
-
-/* Block type: anchor list
-   ========================================================================== */
-
-.o-container-vertical-anchor-list__list {
-  text-align: center;
-  li {
-    display: inline-block;
-    margin: 1rem;
-  }
 }

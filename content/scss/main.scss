@@ -46,7 +46,8 @@
 @import "_c-bordered-list";
 @import "_c-bordered-list-horizontal";
 @import "_c-brand";
-@import "_c-brand";
+
+@import "_c-pill-navigation";
 @import "_c-button";
 @import "_c-button-group";
 @import "_c-button-skins";
@@ -78,9 +79,11 @@
 /* Components specific to design system website
    ========================================================================== */
 
-@import "_c-design-system-home-illustration";
+@import "_c-avatar-and-text-list";
 @import "_c-blog-article";
 @import "_c-blog-article-list";
+@import "_c-design-system-home-illustration";
+@import "_c-design-system-nav";
 
 /* Utilities: specific helper classes, overrides
    ========================================================================== */
@@ -90,5 +93,3 @@
 @import "_u-generic";
 @import "_u-spacer";
 @import "_u-text";
-
-

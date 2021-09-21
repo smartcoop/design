@@ -1,0 +1,65 @@
+.c-design-system-nav__desktop {
+  display: none;
+}
+
+@media (min-width: $g-bp3) {
+
+  .c-design-system-nav__desktop {
+    display: block;
+  }
+  
+  // Hide the button on desktop
+  #c-design-system-nav-open {
+    display: none;
+  }
+}
+
+#c-design-system-nav-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.c-design-system-nav__mobile {
+  display: none;
+  background: #FFF;
+  height: 100%;
+  > ul {
+    margin-top: 4rem;
+  }
+  a, span {
+    display: block;
+    padding: .8rem .8rem .8rem 1.2rem;
+    position: relative;
+    color: $color-text;
+  }
+  li.selected a {
+    &:before {
+      content: '';
+      height: 100%;
+      width: 0.4rem;
+      position: absolute;
+      border-radius: 0.3rem 0 0 0.3rem;
+      left: 0;
+      bottom: 0;
+      background: $color-red-500;
+    }
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    background: $color-gray-50;
+  }
+  span {
+    color: $color-gray-400;
+  }
+  ul {
+    padding-left: 1.2rem;
+  }
+}
+
+.c-design-system-nav__mobile--visible {
+  position: fixed;
+  display: block;
+  inset: 0;
+}

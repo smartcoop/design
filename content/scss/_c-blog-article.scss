@@ -7,8 +7,13 @@
 }
 
 .c-blog-article__header {
+  margin-bottom: 1.8rem;
   h1, h2 {
     margin: 0;
+  }
+  p {
+    margin: .6rem 0 0;
+    color: $color-muted;
   }
   a {
     color: $g-headings-color;
