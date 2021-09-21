@@ -30,8 +30,8 @@ $c-radio-spacing: 0.8rem !default;
 $c-checkbox-spacing-inline: 0.8rem !default;
 $c-radio-spacing-inline: 0.8rem !default;
 
-$c-checkbox-checked-color: $color-primary !default;
-$c-radio-checked-color: $color-primary !default;
+$c-checkbox-checked-color: $color-blue-500 !default;
+$c-radio-checked-color: $color-blue-500 !default;
 
 /* Spacing/Grouping
    ========================================================================== */
@@ -100,7 +100,6 @@ $c-radio-checked-color: $color-primary !default;
 }
 
 /* Checkbox specific
-   @todo document disabled and indeterminate state
    ========================================================================== */
 
 .c-checkbox input[type='checkbox'] {
