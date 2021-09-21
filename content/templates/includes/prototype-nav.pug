@@ -1,0 +1,35 @@
+include ../mixins/render-page-tree
+
+//- `basePage` is set in the `renderPageTree()` mixin, and then used in the navigation
+- var basePage
+- var navClasses = [ basePage && basePage.states ? 'br-prototype-nav--has-states' : null]
+
+#__prototype-nav.br-prototype-nav(aria-hidden="true" class=navClasses.join(" "))
+    .br-prototype-nav-inner
+        h4.br-prototype-nav-main-heading Prototype navigation
+        p.br-prototype-nav-text Press Ctrl + M to toggle this navigation or click <a class="br-prototype-close-nav" href="#">here</a>.
+        block prototypeNavAdditionalText
+
+        if config.languages && config.languages.length > 1
+            p.br-prototype-nav-text Language selection:
+            each lang in config.languages
+                input(class='br-prototype-langselector',type='radio', name='lang', id=lang.id, value=lang.id, checked=lang.default===true)
+                label(for=lang.id)= lang.label
+        #br-page-tree
+            +renderPageTree
+
+    if basePage && basePage.states
+        - var basePageParentsLabel = basePage.parents.join(" > ")
+        .br-prototype-page-states
+            h4.br-prototype-nav-main-heading Page states for #{basePageParentsLabel}
+            ul.br-bordered-list
+                - var basePagePath = basePage.path.replace('.pug', '');
+                - var isBasePageActive = pathname === basePagePath;
+
+                li: a(href=basePage.href, class=isBasePageActive ? 'br-bordered-list__link--active' : null) Base page
+
+                each state in basePage.states
+                    - var statePagePath = state.path.replace('.pug', '');
+                    - var isStatePageActive = pathname === statePagePath;
+                    li: a(href=state.href, class=isStatePageActive ? 'br-bordered-list__link--active' : null)
+                        = state.label
