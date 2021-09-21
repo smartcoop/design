@@ -70,7 +70,9 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
+    color: $color-blue-500;
+    border-bottom: .1rem solid rgba($color-blue-500,.33);
   }
 
   dl {
@@ -140,10 +142,6 @@
 
   strong {
     font-weight: $g-headings-font-weight;
-  }
-
-  a {
-    text-decoration: underline;
   }
 
   .c-button {

@@ -1,29 +1,74 @@
 extends /templates/_layouts/master
 
-block append headerStyles
-    style.
-        .br-homepage {
-            height: 100%;
-            display: flex;
-            align-items: center;
-        }
-        .br-homepage-inner {
-            max-width: 660px;
-            margin: 0 auto;
-            line-height: 1.5;
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
-
-
 block body
-    .br-homepage
-        .br-homepage-inner
-            .c-content
-                .u-spacer-bottom
-                    img(src="images/logo.svg" alt="Smart")
-                .c-design-system-home-illustration
-                    img(src="images/illustration-form.png" style="max-width: 534px;")
-                h2 Build and design with Smart Coop’s Design System
-                p Create the best Smart Coop experiences using reusable building blocks, built by and for the community.
+
+    header#header
+        .o-container
+            .u-padding-vertical-xl
+                .c-navbar.c-navbar--bordered-bottom.c-navbar--large
+                    .c-toolbar
+                        .c-toolbar__left
+                            .c-toolbar__item
+                                a(href="/")
+                                    img(src="images/logo.svg" alt="Smart")
+
+                        .c-toolbar__right
+                            .c-toolbar__item
+                                ul.c-bordered-list-horizontal
+                                    li: a(href="#") Design
+                                    li: a(href="#") Development
+                                    li: a(href="#") Blog
+                                    li: a(href="#") Changelog
+                                    li: a(href="#") About
+
+                            // @todo make a dedicated componen
+                            //
+                                ul.c-nav-pills
+                                    li.c-nav-pills__item: a(href="#") Design
+                                    li.c-nav-pills__item: a(href="#") Development
+                                    li.c-nav-pills__item: a(href="#") Blog
+                                    li.c-nav-pills__item: a(href="#") Changelog
+                                    li.c-nav-pills__item: a(href="#") About
+
+    main.o-container
+
+        .c-design-system-home-hero.u-padding-vertical-xl
+            .o-grid
+                .o-grid-col-6
+                    .o-flex.o-flex.o-flex--vertical-center(style="height: 100%;")
+                        .c-content
+                            h2 Build and design with Smart Coop’s Design System
+                            p Create the best Smart Coop experiences using reusable building blocks, built by and for the community.
+                .o-grid-col-6
+                    .c-design-system-home-illustration
+                        img(src="images/illustration-form.png" style="max-width: 534px;")
+
+        .o-grid
+            .o-grid-col-4
+                .c-panel
+                    .c-panel__body
+                        .c-content
+                            h3 Design files
+                            p We publish our Figma files publicly for everyone to contribute. Please read about our design workflow <a href="#">here</a>.
+                        
+            .o-grid-col-4
+                .c-panel
+                    .c-panel__body
+                        .c-content
+                            h3 HTML/CSS components
+                            p View our extensive library of copy-pastable HTML/CSS components.
+                        +c-button({}) Go to components
+            .o-grid-col-4
+                .c-panel
+                    .c-panel__body
+                        .c-content
+                            h3 Angular components
+                            p View our extensive library of ready to use Angular components.
+                        +c-button({ icon: 'github'}) Go to components
+
+    footer#footer
+        .o-container
+            hr.c-hr
+            ul.c-bordered-list-horizontal.c-bordered-list-horizontal--muted
+                 li: a(href="#") Share feedback on Github
+                 li: a(href="#") Licensing information
