@@ -15,17 +15,17 @@
 @import "_s-variables";
 
 /* Generic: CSS reset, box-sizing, global CSS tweaks
-     ========================================================================== */
+   ========================================================================== */
 
 @import "_reset";
 
 /* Elements: element selectors, CMS-generated content
-     ========================================================================== */
+   ========================================================================== */
 
 @import "_e-base";
 
 /* Objects: layout-related CSS, grid, SVG icons frame, flexbox classes
-     ========================================================================== */
+   ========================================================================== */
 
 @import "_o-container";
 @import "_o-flex";
@@ -34,27 +34,27 @@
 @import "_o-svg-icon";
 
 /* Components: separately styled components (buttons, form inputs, toolbars...)
-     ========================================================================== */
+   ========================================================================== */
 
 @import "_c-accordion";
+@import "_c-alert";
 @import "_c-alert-skins";
 @import "_c-alert-stack";
-@import "_c-alert";
-@import "_c-avatar-and-text";
 @import "_c-avatar";
-@import "_c-brand";
-
-@import "_c-bordered-list-horizontal";
-@import "_c-bordered-list";
-@import "_c-brand";
+@import "_c-avatar-and-text";
 @import "_c-blankslate";
-
+@import "_c-bordered-list";
+@import "_c-bordered-list-horizontal";
+@import "_c-brand";
+@import "_c-brand";
+@import "_c-button";
 @import "_c-button-group";
 @import "_c-button-skins";
 @import "_c-button-toolbar";
-@import "_c-button";
 @import "_c-checkbox-radio";
 @import "_c-content";
+@import "_c-display";
+@import "_c-figure";
 @import "_c-empty-state";
 @import "_c-form-help-text";
 @import "_c-hr";
@@ -70,9 +70,10 @@
 @import "_c-status-pill";
 @import "_c-table";
 @import "_c-textarea";
-@import "_c-toolbar-title";
 @import "_c-toolbar";
+@import "_c-toolbar-title";
 @import "_c-tooltip";
+@import "_c-video-wrapper";
 
 /* Components specific to design system website
    ========================================================================== */

@@ -1,0 +1,68 @@
+/* ==========================================================================
+  c-display
+  ---
+  Usage: wrap a .c-display class around content to turn it into rich text.
+  Similar to .c-content, but meant for a reading context.
+
+   ========================================================================== */
+
+.c-d-h1, .c-d-h2, .c-d-h3, .c-d-h4,
+.c-display h1,
+.c-display h2,
+.c-display h3,
+.c-display h4 {
+  color: $g-headings-color;
+}
+
+.c-d-h1, .c-display h1,
+.c-d-h2, .c-display h2,
+.c-d-h3, .c-display h3,
+.c-d-h4, .c-display h4 {
+  font-family: $g-headings-font-family;
+  font-weight: $g-display-headings-font-weight;
+}
+
+.c-d-h1, .c-display h1 {
+  font-size: 3.8rem;
+  margin: 0 0 3.8rem;
+  line-height: 1.25;
+}
+
+.c-d-h2, .c-display h2 {
+  font-size: 3rem;
+  margin: 0 0 3rem;
+  line-height: 1.36;
+}
+
+.c-d-h3, .c-display h3 {
+  font-size: 2.6rem;
+  margin: 0 0 2.6rem;
+  line-height: 1.36;
+}
+
+.c-d-h4, .c-display h4 {
+  font-size: 2.2rem;
+  margin: 0 0 2.2rem;
+  line-height: 1.36;
+}
+
+
+.c-d-body-1, .c-display p {
+  font-size: 1.8rem;
+  margin: 1.8rem 0;
+  line-height: 1.72;
+}
+
+.c-d-body-2, .c-display p small {
+  font-size: 1.6rem;
+  margin: 1.6rem 0;
+  line-height: 1.72;
+}
+
+.c-display figure {
+  margin: 1.8rem 0;
+}
+
+.c-display figcaption {
+  color: $color-muted;
+}

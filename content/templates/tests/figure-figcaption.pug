@@ -1,0 +1,34 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Type test"
+
+block body
+    div(style="padding: 40px;")
+        .c-content
+            h1 Figure and figcaption test
+            p This page tests the figure and figcaption elements used to give a caption to images.
+
+        .o-grid
+            .o-grid-col-6
+                .c-content
+                    h2 Test with explicit CSS classes
+
+                    figure.c-figure
+                        img(src="http://placehold.it/1200x600")
+                        figcaption.c-figure__figcaption This is a caption to the image.
+
+                    figure.c-figure
+                        img(src="http://placehold.it/1200x600")
+                        figcaption.c-figure__figcaption This is a caption to the image.
+
+            .o-grid-col-6
+                .c-content
+                    h2 Classless example (nested under <code>.c-display</code>)
+                .c-display
+                    figure
+                        img(src="http://placehold.it/1200x600")
+                        figcaption This is a caption to the image.
+                    figure
+                        img(src="http://placehold.it/1200x600")
+                        figcaption This is a caption to the image.
