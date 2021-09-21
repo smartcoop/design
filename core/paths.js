@@ -104,7 +104,7 @@ module.exports = {
       mainPath: path.join(distPath, 'css/'),
       allFiles: path.join(distPath, 'css/**/*.css'),
     },
-    styleguide: path.join(distPath, 'styleguide/'),
+    styleguide: path.join(distPath, config.styleguide.url),
     docs: path.join(distPath, config.styleguide.url+'/docs/'),
     assets: {
       images: path.join(distPath, 'images/'),
