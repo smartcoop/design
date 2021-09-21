@@ -3329,6 +3329,20 @@ textarea.c-input--h-large {
   padding-left: 3.2rem !important;
   padding-right: 3.2rem !important; }
 
+/* Bottom padding only
+     ========================================================================== */
+.u-padding-bottom-s {
+  padding-bottom: 0.8rem !important; }
+
+.u-padding-bottom {
+  padding-bottom: 1.6rem !important; }
+
+.u-padding-bottom-l {
+  padding-bottom: 2.4rem !important; }
+
+.u-padding-bottom-xl {
+  padding-bottom: 3.2rem !important; }
+
 /* ==========================================================================
   Utility: Text
   ===
