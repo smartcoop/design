@@ -33,6 +33,17 @@
 @import "_o-grid";
 @import "_o-svg-icon";
 
+
+/* Content styling (styling for base html elements)
+   + helpers for article style content
+   ========================================================================== */
+
+@import "_c-content";
+@import "_c-display";
+@import "_c-content-display";
+@import "_c-video-wrapper";
+@import "_c-figure";
+
 /* Components: separately styled components (buttons, form inputs, toolbars...)
    ========================================================================== */
 
@@ -46,16 +57,12 @@
 @import "_c-bordered-list";
 @import "_c-bordered-list-horizontal";
 @import "_c-brand";
-
 @import "_c-pill-navigation";
 @import "_c-button";
 @import "_c-button-group";
 @import "_c-button-skins";
 @import "_c-button-toolbar";
 @import "_c-checkbox-radio";
-@import "_c-content";
-@import "_c-display";
-@import "_c-figure";
 @import "_c-empty-state";
 @import "_c-form-help-text";
 @import "_c-hr";
@@ -74,7 +81,6 @@
 @import "_c-toolbar";
 @import "_c-toolbar-title";
 @import "_c-tooltip";
-@import "_c-video-wrapper";
 
 /* Components specific to design system website
    ========================================================================== */

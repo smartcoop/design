@@ -1,0 +1,15 @@
+extends ../index
+
+block append pageVariables
+    - var moduleTitle = "Package and repo links"
+
+block content
+
+    .o-container.o-container--medium
+        .o-container-vertical
+            .c-display
+                h1 Package and repo links
+                p You can clone the repository for the design system website at:
+                pre
+                    code git clone git@github.com:smartcoop/design.git
+                p Currently, there is no npm package for the CSS.

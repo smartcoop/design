@@ -40,7 +40,7 @@ block body
                                                     li
                                                         a(href="/development/component-documentation.html") Component documentation
                                                     li
-                                                        a(href="/development/package-links.html") Package links
+                                                        a(href="/development/package-and-repo-links.html") Package and repo links
                                                     li(role="presentational")
                                                     li
                                                         a(href="/development/browser-support.html") Browser support
@@ -69,7 +69,7 @@ block body
                                                     li.c-menu__item
                                                         a.c-menu__label(href="/development/component-documentation.html") Component documentation
                                                     li.c-menu__item
-                                                        a.c-menu__label(href="/development/package-links.html") Package links
+                                                        a.c-menu__label(href="/development/package-and-repo-links.html") Package and repo links
                                                     li.c-menu__divider(role="presentational")
                                                     li.c-menu__item
                                                         a.c-menu__label(href="/development/browser-support.html") Browser support
@@ -121,8 +121,13 @@ block body
                             +c-button({ icon: 'github'}) Go to components
 
     footer#footer
-        .o-container
-            hr.c-hr
-            ul.c-bordered-list-horizontal.c-bordered-list-horizontal--muted
-                 li: a(href="#") Share feedback on Github
-                 li: a(href="#") Licensing information
+        .o-container-vertical
+            .o-container
+                hr.c-hr
+                ul.c-bordered-list-horizontal.c-bordered-list-horizontal--muted
+                     li: a(href="#")
+                         .o-flex
+                             .u-spacer-right-s
+                                 +icon('github')
+                             | Share feedback on Github
+                     li: a(href="#") Licensing information

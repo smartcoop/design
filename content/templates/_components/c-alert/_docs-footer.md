@@ -22,7 +22,7 @@ containsCustom: true
         <tr>
             <td>icon</td>
             <td>string</td>
-            <td>See <a href="/styleguide/aov-icons.html">icon style guide</a> for available icons.</td>
+            <td>See <a href="/development/docs/aov-icons.html">icon style guide</a> for available icons.</td>
             <td>Overrides the default icon with another icon.</td>
         </tr>
         <tr>

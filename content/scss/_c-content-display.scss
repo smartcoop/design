@@ -1,0 +1,56 @@
+/* ==========================================================================
+  Shared styles between c-display and c-content
+   ========================================================================== */
+
+.c-display,
+.c-content {
+
+  // Table styling
+  
+  table {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+
+  table td,
+  table th {
+    padding: 0.8rem;
+  }
+
+  table th {
+    border-bottom: 0.2rem solid $color-gray-200;
+    font-weight: $g-headings-font-weight;
+    text-align: left;
+  }
+
+  table td {
+    border-bottom: 1px solid $color-gray-100;
+  }
+
+  table tr:last-child td {
+    border: none;
+  }
+
+  // Code block styling
+
+  pre {
+    background: $color-gray-50;
+    padding: 1.5rem;
+    margin: 0 0 1rem;
+    font-size: 75%;
+    white-space: pre-wrap;
+  }
+
+  pre, code {
+    font-family: $g-code-font-family;
+  }
+
+  code {
+    font-size: 85%;
+    background: $color-gray-50;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    color: $color-red-500;
+  }
+
+}

@@ -14,6 +14,7 @@
   display: block;
   padding: .8rem 1.6rem;
   color: $color-text;
+  font-weight: 500;
 }
 
 .c-pill-navigation__item--has-child-menu > a {
@@ -25,8 +26,6 @@
   border-radius: .3rem;
 }
 
-
-// A wrapper, so we can position a CSS created arrow
 .c-pill-navigation__item--has-child-menu > a {
   position: relative;
   &:after {
@@ -45,16 +44,3 @@
   }
 }
 
-
-.c-pill-navigation .c-menu {
-//  background: blue;
-//  background: #FFF;
-//  border: .1rem solid $color-gray-150;
-//  border-radius: .3rem;
-//  box-shadow: 0 0 10px rgba(0,0,0,0.25);
-}
-
-.c-pill-navigation a:focus + ul {
-  //visibility: visible;
-  //opacity: 1;
-}

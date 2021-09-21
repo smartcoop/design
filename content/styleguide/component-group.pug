@@ -1,0 +1,32 @@
+extends index
+
+block append pageVariables
+    - var pageTitle = componentGroup.docs && componentGroup.docs.attributes.title || componentGroup.group.id
+    - var moduleTitle = pageTitle + ' - Component documentation'
+
+block subContent
+
+    if !componentGroup.docs
+        h1.br-componentgroup-header(class=styleguideComponentGroupHeaderClass)= componentGroup.group.id
+    else
+        .br-componentgroup-header-wrapper
+            h1.br-componentgroup-header(class=styleguideComponentGroupHeaderClass)= componentGroup.docs.attributes.title || componentGroup.group.id
+            if componentGroup.docs.attributes.originalDocsLink
+                .br-original-docs-link
+                    a(href=componentGroup.docs.attributes.originalDocsLink)
+                        span.br-original-docs-link-text View original
+                        span.br-original-docs-link-icon &rarr;
+
+        .br-content(class=styleguideRichContentClass)
+            != componentGroup.docs.body
+
+    each component in componentGroup.components
+        +sample(component)
+
+    if componentGroup.docsFooter
+        .br-componentgroup-footer-wrapper
+            if componentGroup.docsFooter.attributes
+                h1.br-componentgroup-footer(class=styleguideComponentGroupHeaderClass)= componentGroup.docsFooter.attributes.title || ""
+
+            .br-content(class=styleguideRichContentClass)
+                != componentGroup.docsFooter.body

@@ -1,0 +1,17 @@
+extends /templates/index
+
+block append pageVariables
+    - var htmlClass = 'br-styleguide br-styleguide-default-styles-active'
+
+block content
+
+    .o-grid
+        .o-grid-col-3
+            if config.styleguide.search
+                input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
+            
+            block nav
+                include ../includes/styleguide-nav
+            
+        .o-grid-col-9
+            block subContent
