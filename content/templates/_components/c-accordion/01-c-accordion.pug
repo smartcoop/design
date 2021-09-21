@@ -1,0 +1,22 @@
+.c-accordion
+    .c-accordion__item.c-accordion__item--closed
+        .c-accordion__item-header(aria-expanded="false" aria-controls="content1")
+            .c-toolbar
+                .c-toolbar__left
+                    .c-toolbar__item
+                        +c-button({skin: 'borderless', layout: 'icon-only', icon: 'chevron-right'}) Chevron
+                        span.c-accordion__item-title Title 1
+
+        .c-accordion__item-content#content1(aria-hidden="true")
+            p Content 1
+
+    .c-accordion__item.c-accordion__item--closed
+        .c-accordion__item-header(aria-expanded="false" aria-controls="content2")
+            .c-toolbar
+                .c-toolbar__left
+                    .c-toolbar__item
+                        +c-button({skin: 'borderless', layout: 'icon-only', icon: 'chevron-right'}) Chevron
+                        span.c-accordion__item-title Title 2
+
+        .c-accordion__item-content#content2(aria-hidden="true")
+            p Content 2

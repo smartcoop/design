@@ -1,0 +1,49 @@
+/* ==========================================================================
+  c-blankslate
+   ========================================================================== */
+
+.c-blankslate {
+  border: .1rem solid $color-gray-150;
+  background: #FFF;
+  border-radius: 0.4rem;
+  padding: 4.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.c-blankslate__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9.6rem;
+  height: 9.6rem;
+  background-color: $color-gray-200;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.c-blankslate--spacious {
+  padding: 9.6rem 4.8rem;
+  text-align: center;
+}
+
+// Additional styles for common content
+
+.c-blankslate {
+  > .c-h3 {
+    margin: 0.8rem;
+  }
+  > .c-h4 {
+    margin-bottom: 0.8rem;
+  }
+  > .c-body-1 {
+    margin: 0 auto;
+    max-width: 65rem;
+  }
+  > .o-svg-icon {
+    opacity: 0.5;
+  }
+}

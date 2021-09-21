@@ -1,0 +1,14 @@
+.c-accordion
+    .c-accordion__item.c-accordion__item--closed
+        .c-accordion__item-header(aria-expanded="false")
+            .c-toolbar
+                .c-toolbar__left
+                    .c-toolbar__item
+                        +c-button({skin: 'borderless', layout: 'icon-only', icon: 'chevron-right'}) Chevron
+                        span.c-accordion__item-title Title 1
+                .c-toolbar__right
+                    .c-toolbar__item
+                        +c-button({skin: 'borderless', icon: 'add', layout: 'icon-only'})
+
+        .c-accordion__item-content(aria-hidden="true")
+            p Content 1
