@@ -5,30 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Smart Coop Design System
+    <title>Design workflow - Smart Coop Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-        }
-
-        p {
-            margin: auto;
-        }
-
-        .br-prototype-content {
-            display: flex;
-            align-items: center;
-        }
-    </style>
 </head>
 
 <body class="u-maximize-height u-overflow-hidden">
@@ -70,7 +51,7 @@
                                     <a href="/design/assets-and-resources.html">assets-and-resources</a>
                                 </li>
                                 <li class="br-tree-dir">
-                                    <a href="/design/how-it-works.html">how-it-works</a>
+                                    <a class="br-bordered-list__link--active" href="/design/how-it-works.html">how-it-works</a>
                                 </li>
                                 <li class="br-tree-dir">
                                     <a href="/design/practical-design-workflow.html">practical-design-workflow</a>
@@ -114,7 +95,7 @@
                             </ul>
                         </li>
                         <li class="br-tree-dir">
-                            <a class="br-bordered-list__link--active" href="/404.html">404</a>
+                            <a href="/404.html">404</a>
                         </li>
                         <li class="br-tree-dir">
                             <a href="/changelog.html">changelog</a>
@@ -130,7 +111,97 @@
             </div>
         </div>
         <div class="br-prototype-content">
-            <p>Page not found.</p>
+            <header id="header">
+                <div class="o-container">
+                    <div class="u-padding-vertical-xl">
+                        <div class="c-navbar c-navbar--bordered-bottom c-navbar--large">
+                            <div class="c-toolbar">
+                                <div class="c-toolbar__left">
+                                    <div class="c-toolbar__item">
+                                        <a href="/">
+                                            <img src="/images/logo.svg" alt="Smart">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="c-toolbar__right">
+                                    <div class="c-toolbar__item">
+                                        <ul class="c-bordered-list-horizontal">
+                                            <li>
+                                                <a href="/design/how-it-works.html">Design</a>
+                                            </li>
+                                            <li>
+                                                <a href="/development/repo-links.html">Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="/blog.html">Blog</a>
+                                            </li>
+                                            <li>
+                                                <a href="/changelog.html">Changelog</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- @todo make a dedicated componen-->
+                                    <!--
+                    ul.c-nav-pills
+                        li.c-nav-pills__item: a(href="#") Design
+                        li.c-nav-pills__item: a(href="#") Development
+                        li.c-nav-pills__item: a(href="#") Blog
+                        li.c-nav-pills__item: a(href="#") Changelog
+                        li.c-nav-pills__item: a(href="#") About
+                    
+                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="o-container">
+                <div class="o-container-vertical">
+                    <div class="o-grid">
+                        <div class="o-grid-col-bp3-3">
+                            <!-- @todo implement selected state based on pathname-->
+                            <!-- .c-side-menu__item--active-->
+                            <ul class="c-side-menu">
+                                <li class="c-side-menu__item c-side-menu__item--active">
+                                    <a class="c-side-menu__link" href="/design/how-it-works.html">How it works - A participatory model</a>
+                                </li>
+                                <li class="c-side-menu__item">
+                                    <a class="c-side-menu__link" href="/design/practical-design-workflow.html">Practical design workflow</a>
+                                </li>
+                                <li class="c-side-menu__item">
+                                    <a class="c-side-menu__link" href="/design/assets-and-resources.html">Assets and resources</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="o-grid-col-bp3-9">
+                            <div class="c-display">
+                                <h2>How it works - A participatory model</h2>
+                                <p>This page describes the open design process for Smart Coop’s design system. The design system is an ever-evolving system made by Smart Coop and the community. Everyone is free to participate.</p>
+                                <p>The participatory model of open source for code is a well-known concept. Open design is quite new. On this page we describe our open process for the design part.</p>
+                                <h2>Where to find the design files</h2>
+                                <h3>Figma file</h3>
+                                <p>The Figma file is published at this link and lives under the SmartCoop organisation.</p>
+                                <h3>Getting editor access</h3>
+                                <p>To keep some order, editor access is available once you’ve understood how we work, through an introductory meeting where the process is explained. In order to apply to participate, please e-mail thu@smart.coop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer id="footer">
+                <div class="o-container">
+                    <hr class="c-hr">
+                    <ul class="c-bordered-list-horizontal c-bordered-list-horizontal--muted">
+                        <li>
+                            <a href="#">Share feedback on Github</a>
+                        </li>
+                        <li>
+                            <a href="#">Licensing information</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
         </div>
     </div>
 

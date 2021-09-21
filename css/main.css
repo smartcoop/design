@@ -1981,9 +1981,9 @@ textarea.c-input--h-large {
   margin: 0; }
 
 /* ==========================================================================
-  Component: main layout
+  Component: app layout
    ========================================================================== */
-.c-main-layout {
+.c-app-layout {
   display: flex;
   height: 100%;
   min-height: 0;
@@ -2433,36 +2433,12 @@ textarea.c-input--h-large {
     border-right-color: transparent; }
 
 /* ==========================================================================
-  c-sidebar
+  c-side-menu
   ========================================================================== */
-.c-sidebar {
-  background-color: #F2F2F2;
-  height: 100%;
-  width: 32rem;
-  padding: 4rem 0;
-  position: relative;
-  min-width: 32rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-
-.c-sidebar__menu {
-  flex: 1;
-  overflow: auto;
-  padding: 0 2.4rem; }
-
-.c-sidebar__logo {
-  display: inline-block;
-  height: 3.2rem;
-  padding: 0 2.4rem;
-  margin-bottom: 4rem; }
-  .c-sidebar__logo img {
-    height: 100%; }
-
-.c-sidebar__item + .c-sidebar__item {
+.c-side-menu__item + .c-side-menu__item {
   margin-top: 0.4rem; }
 
-.c-sidebar__link {
+.c-side-menu__link {
   text-decoration: none;
   padding: 1.2rem 2.4rem;
   border-radius: 0.3rem;
@@ -2470,15 +2446,15 @@ textarea.c-input--h-large {
   align-items: center;
   display: flex;
   position: relative; }
-  .c-sidebar__link .o-svg-icon:first-child {
+  .c-side-menu__link .o-svg-icon:first-child {
     margin-right: 1.6rem; }
-  .c-sidebar__link:hover {
+  .c-side-menu__link:hover {
     background: #fff; }
 
-.c-sidebar__item--active > .c-sidebar__link {
+.c-side-menu__item--active > .c-side-menu__link {
   background: #fff;
   color: #1A1A1A; }
-  .c-sidebar__item--active > .c-sidebar__link:before {
+  .c-side-menu__item--active > .c-side-menu__link:before {
     content: '';
     height: 100%;
     width: 0.4rem;
@@ -2953,6 +2929,21 @@ textarea.c-input--h-large {
 .c-design-system-home-illustration {
   background: #F6F6F6;
   padding: 2rem; }
+
+/* ==========================================================================
+  c-blog-article
+   ========================================================================== */
+.c-blog-article__header h1, .c-blog-article__header h2 {
+  margin: 0; }
+
+.c-blog-article__header a {
+  color: #1A1A1A; }
+
+/* ==========================================================================
+  c-blog-article-list
+   ========================================================================== */
+.c-blog-article-list li {
+  margin: 0 0 4.8rem; }
 
 /* Utilities: specific helper classes, overrides
    ========================================================================== */
