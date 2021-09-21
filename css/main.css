@@ -1001,6 +1001,9 @@ abbr[title] {
       display: block;
       padding: .4rem 0.8rem; }
 
+.c-bordered-list-horizontal--muted a {
+  color: #666666; }
+
 /* ==========================================================================
     Component: Bordered list
    ========================================================================== */
@@ -1616,7 +1619,9 @@ input.c-button {
   margin: 1.5rem 0; }
 
 .c-content a {
-  text-decoration: underline; }
+  text-decoration: none;
+  color: #1267FB;
+  border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
 
 .c-content dl {
   border: 1px solid #E5E5E5;
@@ -1672,9 +1677,6 @@ input.c-button {
 
 .c-content strong {
   font-weight: 500; }
-
-.c-content a {
-  text-decoration: underline; }
 
 .c-content .c-button {
   text-decoration: none; }
@@ -2167,6 +2169,9 @@ textarea.c-input--h-large {
    ========================================================================== */
 .c-navbar--small {
   height: 5.6rem; }
+
+.c-navbar--large {
+  height: 8rem; }
 
 /* ==========================================================================
   Component: c-panel
