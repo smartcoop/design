@@ -106,27 +106,28 @@ block body
                             img(src="images/illustration-form.png" style="max-width: 534px;")
 
             .o-grid
-                .o-grid-col-bp3-4
+                .o-grid-col-bp3-6
                     .c-panel.u-spacer-bottom
                         .c-panel__body
                             .c-display
                                 h3 Design files
-                                p We publish our Figma files publicly for everyone to contribute. Please read about our design workflow <a href="#">here</a>.
+                                p We publish our Figma files publicly for everyone to contribute. Please read about our design workflow <a href="/design/how-it-works.html">here</a>.
 
-                .o-grid-col-bp3-4
+                .o-grid-col-bp3-6
                     .c-panel.u-spacer-bottom
                         .c-panel__body
                             .c-display
                                 h3 HTML/CSS components
                                 p View our extensive library of copy-pastable HTML/CSS components.
                             +c-button({ href: '/development/component-documentation.html' }) Go to components
-                .o-grid-col-bp3-4
-                    .c-panel.u-spacer-bottom
-                        .c-panel__body
-                            .c-display
-                                h3 Angular components
-                                p View our extensive library of ready to use Angular components.
-                            +c-button({ icon: 'github'}) Go to components
+                //
+                    .o-grid-col-bp3-4
+                        .c-panel.u-spacer-bottom
+                            .c-panel__body
+                                .c-display
+                                    h3 Angular components
+                                    p View our extensive library of ready to use Angular components.
+                                +c-button({ icon: 'github'}) Go to components
 
     footer#footer
         .o-container-vertical
