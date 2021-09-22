@@ -1954,14 +1954,9 @@ textarea.c-input--h-large {
 .c-input-group__item {
   flex: 1; }
 
-/* Input group append
+/* Input group
    ========================================================================== */
-.c-input-group__append {
-  height: 3.6rem;
-  margin-left: 1rem; }
-
-/* Input group prepend
-   ========================================================================== */
+.c-input-group__append,
 .c-input-group__prepend {
   height: 3.6rem;
   width: 3.6rem;
@@ -1970,13 +1965,24 @@ textarea.c-input--h-large {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -0.1rem;
   padding: 0 0.8rem;
-  border-radius: 0.4rem 0 0 0.4rem;
   border: 1px solid #CCCCCC; }
+
+/* Input group prepend
+   ========================================================================== */
+.c-input-group__prepend {
+  margin-right: -0.1rem;
+  border-radius: 0.4rem 0 0 0.4rem; }
+
+.c-input-group__append {
+  border-radius: 0 0.4rem 0.4rem 0;
+  margin-left: -0.1rem; }
 
 .c-input-group > .c-input:not(:first-child) {
   border-radius: 0 0.4rem 0.4rem 0; }
+
+.c-input-group > .c-input:not(:last-child) {
+  border-radius: 0.4rem 0 0 0.4rem; }
 
 /* File input
   ========================================================================== */
@@ -2021,6 +2027,7 @@ textarea.c-input--h-large {
    ========================================================================== */
 .c-app-layout {
   display: flex;
+  flex-direction: column;
   height: 100%;
   min-height: 0;
   overflow: hidden; }
@@ -2939,6 +2946,33 @@ textarea.c-input--h-large {
 .c-tooltip[data-popper-placement^='right'] > .c-tooltip__arrow {
   filter: none;
   border-right-color: #333; }
+
+/* ==========================================================================
+  c-user-navigation
+   ========================================================================== */
+.c-user-navigation {
+  display: flex;
+  align-items: center;
+  padding: .4rem 3rem .4rem 0.8rem;
+  border: none;
+  color: #4D4D4D;
+  position: relative; }
+  .c-user-navigation:after {
+    pointer-events: none;
+    content: ' ';
+    position: absolute;
+    right: 0.8rem;
+    top: 1.8rem;
+    width: 0;
+    height: 0;
+    border-width: 1rem;
+    border: 0.5rem solid #808080;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent; }
+
+.c-user-navigation .o-svg-icon {
+  opacity: 0.5; }
 
 /* Components specific to design system website
    ========================================================================== */
