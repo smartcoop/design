@@ -6,40 +6,44 @@
                     img(src='/images/logo.svg' alt='Smart Coop Logo')
             .c-toolbar__item
                 nav
-                    ul.c-bordered-list-horizontal
+                    ul.c-pill-navigation
                         -
                             var navItems = [
                                 {
                                     pathName: '#',
-                                    name: 'Dashboard',
+                                    name: 'Activities'
                                 },
                                 {
                                     pathName: '#',
-                                    name: 'Quotes & invoices',
+                                    name: 'Management',
+                                    subMenu: [
+                                        {
+                                            pathName: '#',
+                                            name: 'Nav item'
+                                        },
+                                        {
+                                            pathName: '#',
+                                            name: 'Nav item'
+                                        },
+                                        {
+                                            pathName: '#',
+                                            name: 'Nav item'
+                                        },
+                                    ]
                                 },
                                 {
                                     pathName: '#',
-                                    name: 'Funding',
-                                },
-                                {
-                                    pathName: '#',
-                                    name: 'Expenses',
-                                },
-                                {
-                                    pathName: '#',
-                                    name: 'Contracts',
-                                },
-                                {
-                                    pathName: '#',
-                                    name: 'Contracts Covid-19',
-                                },
-                                {
-                                    pathName: '#',
-                                    name: 'Equipment',
-                                },
-                                {
-                                    pathName: '#',
-                                    name: 'Activities',
+                                    name: 'Documents',
+                                    subMenu: [
+                                        {
+                                            pathName: '#',
+                                            name: 'Nav item'
+                                        },
+                                        {
+                                            pathName: '#',
+                                            name: 'Nav item'
+                                        },
+                                    ]
                                 },
                                 {
                                     pathName: '#',
@@ -49,18 +53,41 @@
                                     pathName: '#',
                                     name: 'Archive',
                                 },
-                                {
-                                    pathName: '#',
-                                    name: 'Detachement',
-                                },
                             ]
 
-                        each item in navItems
-                            li(class=item.name==moduleTitle ? 'c-sidebar__item--active' : '')
-                                a(href=item.pathName)
-                                    .c-sidebar-item__label #{item.name}
+                        each item, index in navItems
+                            li.c-pill-navigation__item(class=item.subMenu? 'c-pill-navigation__item--has-child-menu' : '')
+                                if item.subMenu
+                                    a(href="#" data-menu="subMenu-"+index data-menu-samewidth="true") #{item.name}
+                                    ul.c-menu.c-menu--large(id="subMenu-"+index)
+                                        each subItem in item.subMenu
+                                            li.c-menu__item
+                                                a.c-menu__label(href=subItem.pathName) #{subItem.name}
+                                else
+                                    a(href=item.pathName) #{item.name}
 
         .c-toolbar__right
+            .c-toolbar__item
+                +c-button({ skin: 'borderless', layout: 'icon-only', icon: 'circle-help'})(data-menu="helpMenu") Help
+                ul.c-menu(id="helpMenu")
+                    -
+                        var helpItems = [
+                            {
+                                pathName: '#',
+                                name: 'About this page'
+                            },
+                            {
+                                pathName: '#',
+                                name: 'Documentation'
+                            },
+                            {
+                                pathName: '#',
+                                name: 'Report a bug'
+                            },
+                        ]
+                    each item in helpItems
+                        li.c-menu__item
+                            a.c-menu__label(href=item.pathName) #{item.name}
             .c-toolbar__item
                 .c-avatar-and-text
                     +c-avatar({size: 'small'})
