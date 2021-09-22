@@ -9,8 +9,22 @@ block subContent
         h2 Practical design workflow
         h3 Making design improvement proposals
         ul
-            li  Create a new file, and link it to the design system library
-            li Propose your changes using a Github issue
+            li
+                | Create a new Figma file, and link it to the design system library.
+
+                figure.c-figure.c-figure--boxed
+                    img(src="/images/library-link@2x.png" srcset="/images/library-link.png 1x, /images/library-link@2x.png 2x")
+                    figcaption Currently, please enable the library and disable all other libraries for the best user experience.
+
+            li
+                | Propose your changes using a <a href="https://github.com/smartcoop/design/issues">Github issue</a>. Make sure you set file sharing options to “anyone with the link” to make sure everyone can see your proposal without having to gain specific viewer/editor access.
+
+                figure.c-figure.c-figure--boxed
+                    img(src="/images/sharing-link@2x.png" srcset="/images/sharing-link.png 1x, /images/sharing-link@2x.png 2x")
+
+            li To help make the link between the Github issue and your design file, reference the Github issue number with a # in the name of your design file.
+            li Make sure your design file does not contain any customer data.
+            li Describe your proposal to the design system.
             li A reviewer will review your work. A discussion might ensue; when the work is approved, it will be merged into the greater whole*.
 
         h3 How to deprecate a Figma component
@@ -19,14 +33,4 @@ block subContent
             li Add [DEPRECATED] to the artboard name
             li Give the layers a pink-ish background so people can see in their design files that the component has been deprecated
             li Move it to the Deprecated components page
-            li In time, deprecated components should be cleaned up.
-
-        h3 How to propose a Figma component
-
-        ul
-            li Make a copy of the design library file
-            li Create a new Github issue
-            li Reference the Github issue number with a # in the name of your design file
-            li Describe your proposal
-
-        p.u-text-muted *Note that Figma is working on a branching feature which will make this process less manual in the future.
+            li In time, deprecated components should be cleaned up. The timing of this needs to be determined as the project gets continued.

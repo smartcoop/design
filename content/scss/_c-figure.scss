@@ -5,3 +5,14 @@
 .c-figure__figcaption {
   color: $color-muted;
 }
+
+.c-figure--boxed {
+  background: $color-gray-30;
+  padding: 3rem;
+  border-radius: .3rem;
+  img {
+    max-width: 62rem;
+    display: block;
+    margin: 0 auto 1.2rem;
+  }
+}

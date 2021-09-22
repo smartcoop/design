@@ -18,12 +18,19 @@
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 
 .c-design-system-nav__mobile {
   display: none;
   background: #FFF;
   height: 100%;
+  width: 100%;
+  li[role="presentational"] {
+    height: .1rem;
+    margin: .4rem 0;
+    background: $color-gray-100;
+  }
   > ul {
     margin-top: 4rem;
   }
