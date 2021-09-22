@@ -40,7 +40,6 @@ var htmlElement = document.querySelector('html');
 var mobileNavigationOpenButton = document.querySelector('#c-design-system-nav-open');
 var mobileNavigationCloseButton = document.querySelector('#c-design-system-nav-close');
 var mobileMenu = document.querySelector('.c-design-system-nav__mobile');
-console.log(mobileMenu);
 
 var handleMenuOpen = function handleMenuOpen(e) {
   e.preventDefault();

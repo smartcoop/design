@@ -762,17 +762,17 @@ abbr[title] {
 
 .c-d-h1, .c-display h1 {
   font-size: 3.8rem;
-  margin: 0 0 3.8rem;
+  margin: 0 0 3.2rem;
   line-height: 1.25; }
 
 .c-d-h2, .c-display h2 {
   font-size: 3rem;
-  margin: 0 0 3rem;
+  margin: 0 0 2.4rem;
   line-height: 1.36; }
 
 .c-d-h3, .c-display h3 {
   font-size: 2.6rem;
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.8rem;
   line-height: 1.36; }
 
 .c-d-h4, .c-display h4 {
@@ -848,56 +848,7 @@ abbr[title] {
   background: #F2F2F2;
   padding: 1.5rem;
   margin: 0 0 1rem;
-  font-size: 75%;
-  white-space: pre-wrap; }
-
-.c-display pre, .c-display code,
-.c-content pre,
-.c-content code {
-  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
-
-.c-display code,
-.c-content code {
   font-size: 85%;
-  background: #F2F2F2;
-  padding: 0.2rem;
-  border-radius: 0.2rem;
-  color: #FF4054; }
-
-/* ==========================================================================
-  Shared styles between c-display and c-content
-   ========================================================================== */
-.c-display table,
-.c-content table {
-  width: 100%;
-  margin: 1.5rem 0; }
-
-.c-display table td,
-.c-display table th,
-.c-content table td,
-.c-content table th {
-  padding: 0.8rem; }
-
-.c-display table th,
-.c-content table th {
-  border-bottom: 0.2rem solid #CCCCCC;
-  font-weight: 500;
-  text-align: left; }
-
-.c-display table td,
-.c-content table td {
-  border-bottom: 1px solid #E5E5E5; }
-
-.c-display table tr:last-child td,
-.c-content table tr:last-child td {
-  border: none; }
-
-.c-display pre,
-.c-content pre {
-  background: #F2F2F2;
-  padding: 1.5rem;
-  margin: 0 0 1rem;
-  font-size: 75%;
   white-space: pre-wrap; }
 
 .c-display pre, .c-display code,
@@ -3022,12 +2973,18 @@ textarea.c-input--h-large {
 #c-design-system-nav-close {
   position: fixed;
   top: 0;
-  right: 0; }
+  right: 0;
+  z-index: 1; }
 
 .c-design-system-nav__mobile {
   display: none;
   background: #FFF;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
+  .c-design-system-nav__mobile li[role="presentational"] {
+    height: .1rem;
+    margin: .4rem 0;
+    background: #E5E5E5; }
   .c-design-system-nav__mobile > ul {
     margin-top: 4rem; }
   .c-design-system-nav__mobile a, .c-design-system-nav__mobile span {
