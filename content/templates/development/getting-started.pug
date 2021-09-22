@@ -1,0 +1,70 @@
+extends ../index
+
+block append pageVariables
+    - var moduleTitle = "Getting started"
+
+block content
+
+    h1.c-d-h1 Getting started
+
+    .o-grid
+
+        .o-grid-col-bp3-3
+            .u-spacer-bottom
+                ul.c-side-menu
+                    li.c-side-menu__item(class=pathname.match(/development\/getting-started/) ? "c-side-menu__item--active" : "")
+                        a.c-side-menu__link(href="/development/getting-started.html") Getting started
+
+                    li.c-side-menu__item(class=pathname.match(/development\/package/) ? "c-side-menu__item--active" : "")
+                        a.c-side-menu__link(href="/development/package-and-repo-links.html") Package and repo links
+
+        .o-grid-col-bp3-9
+            block subContent
+
+                .c-display
+
+                    h2 Usage
+
+                    p Please link to the stylesheet in the <code>&lt;head&gt;</code> of your application:
+
+                    pre
+                        code &lt;link rel="stylesheet" href="https://design.smart.coop/css/main.css"&gt;
+
+                    p Go to the <a href="https://design.smart.coop/development/component-documentation.html">component documentation</a>, and find the component you need.
+                
+                    p Copy paste the HTML (or Pug if you are using this template language), and you are on your way to create an app.
+
+                    hr.c-hr
+
+                    h2 Using Pug
+
+                    p If you use the Pug templating language in your own project, you will need to include the mixins in your global namespace in your app. You can find the mixins <a href="https://github.com/smartcoop/design/tree/main/content/templates/_mixins">here</a>. There is a very specific icon mixin which you can find <a href="https://github.com/smartcoop/design/blob/main/core/templates/mixins/icon.pug">here</a>.
+
+                    hr.c-hr
+
+                    h2 Codepen
+
+                    p You can fork this <a href="https://codepen.io/wolfr/pen/JjJZqoq">pen</a> to get started, it contains the right settings.
+
+                    hr.c-hr
+
+                    h2 Templates
+
+                    p You can reference the following example templates to see how to use the components in practice.
+
+                    ul
+                        li: a(href="/development/template-examples/contact-form.html") Contact form
+                        li: a(href="/development/template-examples/register-form.html") Register form
+                        li: a(href="/development/template-examples/app-form.html") App form
+                        li: a(href="/development/template-examples/wizard.html") Wizard
+
+                    hr.c-hr
+
+                    h2 Tests
+                
+                    p These tests are mostly used as “design unit tests” to see if the system is functioning correctly. If you are not actively developing the design system, feel free to ignore this.
+
+                    ul
+                        li: a(href="/development/design-tests/figure-figcaption.html") Figure/figcaption
+                        li: a(href="/development/design-tests/video.html") Responsive video and images
+                        li: a(href="/development/design-tests/type-test.html") Type test
