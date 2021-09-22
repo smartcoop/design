@@ -1,0 +1,114 @@
+/* ==========================================================================
+  c-wizard-step
+ ========================================================================== */
+
+.c-wizard {  
+  ul {
+    @media screen and (min-width: $g-bp1) {
+      display: flex;
+      height: 6.4rem;
+      max-height: 6.4rem;
+      border-bottom: .1rem solid $color-border;
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+    }
+  }
+}
+
+.c-wizard li {
+  flex-basis: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 2.4rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: $g-bp1) {
+    justify-content: center;
+  }
+}
+
+.c-wizard__item {
+  position: relative;
+  color: $color-muted;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: 0;
+  height: 100%;
+
+  &:hover,
+  &:focus {
+    color: $color-black;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    height: .3rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.c-wizard__indicator {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 100%;
+  background: $color-gray-100;
+  border: 0.2rem solid $color-gray-100;
+  margin-right: .8rem;
+  color: $color-icon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-wizard--complete {
+  color: $color-muted;
+  .c-wizard__indicator {
+    background: $color-success;
+    border-color: $color-success;
+    &:before {
+      content: "";
+      position: absolute; 
+      width: 2.4rem;
+      height: 2.4rem;
+      left: -0.2rem;
+      top: -0.2rem;
+      border-radius: 100%;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E")
+        no-repeat;
+      transition: all 0.14s;
+      transition-property: opacity;
+    }
+  }
+}
+
+
+.c-wizard--active {
+  color: $color-text;
+
+  &:after {
+    background-color: $color-black;
+  }
+
+  .c-wizard__indicator {
+    background: $color-black;
+    border-color: $color-black;
+    color: $color-white;
+  }
+}

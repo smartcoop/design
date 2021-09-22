@@ -4,9 +4,10 @@
   or the color component in styleguide won't regenerate automatically anymore.
  ========================================================================== */
 
-/* Grays
+/* Base
  ========================================================================== */
 
+$color-white: #FFFFFF;
 $color-gray-30: #F6F6F6;
 $color-gray-50: #F2F2F2;
 $color-gray-100: #E5E5E5;
@@ -15,10 +16,11 @@ $color-gray-200: #CCCCCC;
 $color-gray-300: #B3B3B3;
 $color-gray-400: #999999;
 $color-gray-500: #808080;
-$color-gray-600: #666666;
-$color-gray-700: #4D4D4D;
+$color-gray-650: #595959;
 $color-gray-800: #333333;
 $color-gray-900: #1A1A1A;
+$color-black: #000000;
+
 
 /* Primary colors
  ========================================================================== */
@@ -46,11 +48,14 @@ $color-beige-500: #FFFAE7;
 
 $color-primary: #FF4054;
 $color-header: #000000;
-$color-text: #4D4D4D;
-$color-muted: #666666;
+$color-text: #333333;
+$color-icon: #595959;
+$color-muted: #808080;
+$color-input-border: #D4D4D4;
 $color-border: #E5E5E5;
 $color-disabled: #999999;
 $color-background: #F2F2F2;
+$color-background-light: #F6F6F6;
 $color-error: #FF4054;
 $color-success: #00A57D;
 $color-warning: #F4C95D;

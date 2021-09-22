@@ -46,7 +46,7 @@
     display: block;
     text-decoration: none;
     padding: 0.8rem 1.6rem;
-    color: $color-gray-700;
+    color: $color-text;
 
     &:hover {
       color: $color-red-500;
@@ -63,6 +63,7 @@
 
 .br-color-swatch-preview {
   border-radius: 100%;
+  border: .1rem solid $color-gray-30;
 }
 
 .br-color-swatch-item {
