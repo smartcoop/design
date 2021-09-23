@@ -1305,16 +1305,22 @@ abbr[title] {
   c-brand
    ========================================================================== */
 .c-brand {
+  text-align: left;
   padding: 0;
   margin-right: 0.8rem;
   display: block;
-  height: 3.6rem; }
-  .c-brand a,
+  height: 4.8rem; }
   .c-brand img {
+    display: block;
+    height: 100%; }
+  .c-brand a {
     display: block;
     position: relative;
     height: 100%;
     width: 100%; }
+
+.c-brand--small {
+  height: 3.6rem; }
 
 /* ==========================================================================
   c-button

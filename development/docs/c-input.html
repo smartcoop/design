@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Inputs (selection) - Component documentation - Smart Coop Design System
+    <title>Input - Component documentation - Smart Coop Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -21,7 +21,7 @@
                         <div class="c-toolbar__left">
                             <div class="c-toolbar__item">
                                 <a href="/">
-                                    <img src="/images/logo.svg" alt="Smart">
+                                    <img src="/images/logo.svg" alt="Smart Coop">
                                 </a>
                             </div>
                         </div>
@@ -203,6 +203,9 @@
                                     <a class="null " href="/development/docs/c-bordered-list.html"> Bordered list</a>
                                 </li>
                                 <li class="null ">
+                                    <a class="null " href="/development/docs/c-brand.html"> Brand</a>
+                                </li>
+                                <li class="null ">
                                     <a class="null " href="/development/docs/c-button.html"> Button</a>
                                 </li>
                                 <li class="null ">
@@ -215,16 +218,22 @@
                                     <a class="null " href="/development/docs/c-empty-state.html"> Empty state</a>
                                 </li>
                                 <li class="null ">
-                                    <a class="null " href="/development/docs/c-inputs-selection.html"> Inputs (selection)</a>
+                                    <a class="null " href="/development/docs/c-input-group.html"> Input group</a>
                                 </li>
                                 <li class="null ">
-                                    <a class="null " href="/development/docs/c-inputs-text.html"> Inputs (text)</a>
+                                    <a class="null " href="/development/docs/c-input-icon.html"> Input icon</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-input.html"> Input</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-modal-sizes.html"> Modal sizes</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-modal-types.html"> Modal types</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-multi-select.html"> Multi Select</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-or.html"> Or</a>
@@ -237,6 +246,9 @@
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-radio-button.html"> Radio button</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-select.html"> Select</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-side-menu.html"> Side menu</a>
@@ -298,32 +310,32 @@
             </div>
             <div class="o-grid-col-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-h2">Inputs (selection)</h1>
+                    <h1 class="br-componentgroup-header c-h2">Input</h1>
                 </div>
                 <div class="br-content c-content">
-                    <p>This page contains examples of selection inputs.</p>
+                    <p>A text input.</p>
 
                 </div>
-                <div class="br-sample" id="component-01-select">
+                <div class="br-sample" id="component-01-c-input">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Select Input</h3>
-                        <a class="br-sample-header-link" href="#component-01-select">#</a>
+                        <h3 class="br-sample-heading c-h3">Text input</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-input">#</a>
                     </div>
                     <div class="br-sample-documentation c-content">
-                        <p>A dropdown with options. Uses the standard HTML select element. Don&#39;t forget the <code>.c-select-holder</code> wrapper element.</p>
+                        <p>A standard text input. Use for single line text. Avoid using the <code>placeholder</code> attribute, unless really necessary.</p>
                     </div>
                     <div class="br-sample-content">
                         <div class="o-form-group-layout o-form-group-layout--standard">
                             <div class="o-form-group">
-                                <label class="o-form-group__label" for="selectId">Label</label>
+                                <label class="o-form-group__label" for="textFieldId">Label</label>
                                 <div class="o-form-group__controls">
-                                    <div class="c-select-holder">
-                                        <select class="c-select" id="selectId">
-                                            <option>Option A</option>
-                                            <option>Option B</option>
-                                            <option>Option C</option>
-                                        </select>
-                                    </div>
+                                    <input class="c-input" type="text" value="Default Input" id="textFieldId" />
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="textFieldId">Label</label>
+                                <div class="o-form-group__controls">
+                                    <input class="c-input" type="text" disabled="disabled" value="Default Input" id="textFieldId" />
                                 </div>
                             </div>
                         </div>
@@ -335,84 +347,15 @@
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
     &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot; for=&quot;selectId&quot;&gt;Label&lt;/label&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textFieldId&quot;&gt;Label&lt;/label&gt;
         &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-select-holder&quot;&gt;
-                &lt;select class=&quot;c-select&quot; id=&quot;selectId&quot;&gt;
-                    &lt;option&gt;Option A&lt;/option&gt;
-                    &lt;option&gt;Option B&lt;/option&gt;
-                    &lt;option&gt;Option C&lt;/option&gt;
-                &lt;/select&gt;
-            &lt;/div&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;text&quot; value=&quot;Default Input&quot; id=&quot;textFieldId&quot; /&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label(for=&quot;selectId&quot;) Label
-        .o-form-group__controls
-            .c-select-holder
-                select.c-select(id=&quot;selectId&quot;)
-                    option Option A
-                    option Option B
-                    option Option C
-</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-02-selected-grouped">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Selected grouped</h3>
-                        <a class="br-sample-header-link" href="#component-02-selected-grouped">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content"></div>
-                    <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <label class="o-form-group__label" for="selectId2">Label</label>
-                                <div class="o-form-group__controls">
-                                    <div class="c-select-holder">
-                                        <select class="c-select" id="selectId2">
-                                            <optgroup label="Group 1">
-                                                <option>Item 1</option>
-                                                <option>Item 2</option>
-                                                <option>Item 3</option>
-                                            </optgroup>
-                                            <optgroup label="Group 2">
-                                                <option>Item 1</option>
-                                                <option>Item 2</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
     &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot; for=&quot;selectId2&quot;&gt;Label&lt;/label&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textFieldId&quot;&gt;Label&lt;/label&gt;
         &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-select-holder&quot;&gt;
-                &lt;select class=&quot;c-select&quot; id=&quot;selectId2&quot;&gt;
-                    &lt;optgroup label=&quot;Group 1&quot;&gt;
-                        &lt;option&gt;Item 1&lt;/option&gt;
-                        &lt;option&gt;Item 2&lt;/option&gt;
-                        &lt;option&gt;Item 3&lt;/option&gt;
-                    &lt;/optgroup&gt;
-                    &lt;optgroup label=&quot;Group 2&quot;&gt;
-                        &lt;option&gt;Item 1&lt;/option&gt;
-                        &lt;option&gt;Item 2&lt;/option&gt;
-                    &lt;/optgroup&gt;
-                &lt;/select&gt;
-            &lt;/div&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;text&quot; disabled=&quot;disabled&quot; value=&quot;Default Input&quot; id=&quot;textFieldId&quot; /&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -421,17 +364,13 @@
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
     .o-form-group
-        label.o-form-group__label(for=&quot;selectId2&quot;) Label
+        label.o-form-group__label(for=&quot;textFieldId&quot;) Label
         .o-form-group__controls
-            .c-select-holder
-                select.c-select#selectId2
-                    optgroup(label=&quot;Group 1&quot;)
-                        option Item 1
-                        option Item 2
-                        option Item 3
-                    optgroup(label=&quot;Group 2&quot;)
-                        option Item 1
-                        option Item 2</pre>
+            input.c-input(type=&quot;text&quot; value=&quot;Default Input&quot; id=&quot;textFieldId&quot;)
+    .o-form-group
+        label.o-form-group__label(for=&quot;textFieldId&quot;) Label
+        .o-form-group__controls
+            input.c-input(type=&quot;text&quot; disabled value=&quot;Default Input&quot; id=&quot;textFieldId&quot;)</pre>
                         </div>
                     </div>
                 </div>

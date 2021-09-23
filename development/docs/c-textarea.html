@@ -21,7 +21,7 @@
                         <div class="c-toolbar__left">
                             <div class="c-toolbar__item">
                                 <a href="/">
-                                    <img src="/images/logo.svg" alt="Smart">
+                                    <img src="/images/logo.svg" alt="Smart Coop">
                                 </a>
                             </div>
                         </div>
@@ -203,6 +203,9 @@
                                     <a class="null " href="/development/docs/c-bordered-list.html"> Bordered list</a>
                                 </li>
                                 <li class="null ">
+                                    <a class="null " href="/development/docs/c-brand.html"> Brand</a>
+                                </li>
+                                <li class="null ">
                                     <a class="null " href="/development/docs/c-button.html"> Button</a>
                                 </li>
                                 <li class="null ">
@@ -215,16 +218,22 @@
                                     <a class="null " href="/development/docs/c-empty-state.html"> Empty state</a>
                                 </li>
                                 <li class="null ">
-                                    <a class="null " href="/development/docs/c-inputs-selection.html"> Inputs (selection)</a>
+                                    <a class="null " href="/development/docs/c-input-group.html"> Input group</a>
                                 </li>
                                 <li class="null ">
-                                    <a class="null " href="/development/docs/c-inputs-text.html"> Inputs (text)</a>
+                                    <a class="null " href="/development/docs/c-input-icon.html"> Input icon</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-input.html"> Input</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-modal-sizes.html"> Modal sizes</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-modal-types.html"> Modal types</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-multi-select.html"> Multi Select</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-or.html"> Or</a>
@@ -237,6 +246,9 @@
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-radio-button.html"> Radio button</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-select.html"> Select</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-side-menu.html"> Side menu</a>
@@ -307,11 +319,16 @@
                         <h3 class="br-sample-heading c-h3">Textarea</h3>
                         <a class="br-sample-header-link" href="#component-01-c-textarea">#</a>
                     </div>
-                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-documentation c-content">
+                        <p>A standard textarea. Use for multi-line text. Manipulate the height with the <code>rows</code> attribute or the following modifier classes: <code>.c-input--h-small</code>, <code>.c-input--h-medium</code>, <code>.c-input--h-large</code>.</p>
+                        <p>Optionally add a class of <code>.autosize</code> to autosize. This functionality relies on <a href="https://www.npmjs.com/package/autosize">autosize</a>.</p>
+                    </div>
                     <div class="br-sample-content">
-                        <div class="o-form-group">
-                            <label class="o-form-group__label" for="textareaId">Label</label>
-                            <textarea class="c-textarea" id="textareaId"></textarea>
+                        <div class="o-form-group-layout o-form-group-layout--standard">
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="textareaId">Label</label>
+                                <textarea class="c-textarea" rows="5" id="textareaId"></textarea>
+                            </div>
                         </div>
                     </div>
                     <div class="br-sample-footer">
@@ -319,16 +336,19 @@
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group&quot;&gt;
-    &lt;label class=&quot;o-form-group__label&quot; for=&quot;textareaId&quot;&gt;Label&lt;/label&gt;
-    &lt;textarea class=&quot;c-textarea&quot; id=&quot;textareaId&quot;&gt;&lt;/textarea&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textareaId&quot;&gt;Label&lt;/label&gt;
+        &lt;textarea class=&quot;c-textarea&quot; rows=&quot;5&quot; id=&quot;textareaId&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group
-    label.o-form-group__label(for=&quot;textareaId&quot;) Label
-    textarea.c-textarea(id=&quot;textareaId&quot;)
+                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
+    .o-form-group
+        label.o-form-group__label(for=&quot;textareaId&quot;) Label
+        textarea.c-textarea(rows=&quot;5&quot; id=&quot;textareaId&quot;)
 </pre>
                         </div>
                     </div>

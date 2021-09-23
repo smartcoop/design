@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Inputs (text) - Component documentation - Smart Coop Design System
+    <title>Input icon - Component documentation - Smart Coop Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -21,7 +21,7 @@
                         <div class="c-toolbar__left">
                             <div class="c-toolbar__item">
                                 <a href="/">
-                                    <img src="/images/logo.svg" alt="Smart">
+                                    <img src="/images/logo.svg" alt="Smart Coop">
                                 </a>
                             </div>
                         </div>
@@ -203,6 +203,9 @@
                                     <a class="null " href="/development/docs/c-bordered-list.html"> Bordered list</a>
                                 </li>
                                 <li class="null ">
+                                    <a class="null " href="/development/docs/c-brand.html"> Brand</a>
+                                </li>
+                                <li class="null ">
                                     <a class="null " href="/development/docs/c-button.html"> Button</a>
                                 </li>
                                 <li class="null ">
@@ -215,16 +218,22 @@
                                     <a class="null " href="/development/docs/c-empty-state.html"> Empty state</a>
                                 </li>
                                 <li class="null ">
-                                    <a class="null " href="/development/docs/c-inputs-selection.html"> Inputs (selection)</a>
+                                    <a class="null " href="/development/docs/c-input-group.html"> Input group</a>
                                 </li>
                                 <li class="null ">
-                                    <a class="null " href="/development/docs/c-inputs-text.html"> Inputs (text)</a>
+                                    <a class="null " href="/development/docs/c-input-icon.html"> Input icon</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-input.html"> Input</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-modal-sizes.html"> Modal sizes</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-modal-types.html"> Modal types</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-multi-select.html"> Multi Select</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-or.html"> Or</a>
@@ -237,6 +246,9 @@
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-radio-button.html"> Radio button</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-select.html"> Select</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-side-menu.html"> Side menu</a>
@@ -298,129 +310,9 @@
             </div>
             <div class="o-grid-col-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-h2">Inputs (text)</h1>
+                    <h1 class="br-componentgroup-header c-h2">Input icon</h1>
                 </div>
                 <div class="br-content c-content">
-                    <p>This page contains examples of typical form elements. For examples of full forms, please refer to the <a href="/developmnet/docs/o-form-groups.html">form groups</a> object.</p>
-
-                </div>
-                <div class="br-sample" id="component-01-c-input">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Text input</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-input">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content">
-                        <p>A standard text input. Use for single line text. Avoid using the <code>placeholder</code> attribute, unless really necessary.</p>
-                    </div>
-                    <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <label class="o-form-group__label" for="textFieldId">Label</label>
-                                <div class="o-form-group__controls">
-                                    <input class="c-input" type="text" value="Default Input" id="textFieldId" />
-                                </div>
-                            </div>
-                            <div class="o-form-group">
-                                <label class="o-form-group__label" for="textFieldId">Label</label>
-                                <div class="o-form-group__controls">
-                                    <input class="c-input" type="text" disabled="disabled" value="Default Input" id="textFieldId" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textFieldId&quot;&gt;Label&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;input class=&quot;c-input&quot; type=&quot;text&quot; value=&quot;Default Input&quot; id=&quot;textFieldId&quot; /&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textFieldId&quot;&gt;Label&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;input class=&quot;c-input&quot; type=&quot;text&quot; disabled=&quot;disabled&quot; value=&quot;Default Input&quot; id=&quot;textFieldId&quot; /&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label(for=&quot;textFieldId&quot;) Label
-        .o-form-group__controls
-            input.c-input(type=&quot;text&quot; value=&quot;Default Input&quot; id=&quot;textFieldId&quot;)
-    .o-form-group
-        label.o-form-group__label(for=&quot;textFieldId&quot;) Label
-        .o-form-group__controls
-            input.c-input(type=&quot;text&quot; disabled value=&quot;Default Input&quot; id=&quot;textFieldId&quot;)</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-02-c-textarea">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Textarea</h3>
-                        <a class="br-sample-header-link" href="#component-02-c-textarea">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content">
-                        <p>A standard textarea. Use for multi-line text. Manipulate the height with the <code>rows</code> attribute or the following modifier classes: <code>.c-input--h-small</code>, <code>.c-input--h-medium</code>, <code>.c-input--h-large</code>.</p>
-                        <p>Optionally add a class of <code>.autosize</code> to autosize. This functionality relies on <a href="https://www.npmjs.com/package/autosize">autosize</a>.</p>
-                    </div>
-                    <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <label class="o-form-group__label" for="textareaId">Label</label>
-                                <div class="o-form-group__controls">
-                                    <textarea class="c-textarea" rows="5" id="textareaId"></textarea>
-                                </div>
-                            </div>
-                            <div class="o-form-group">
-                                <label class="o-form-group__label" for="textareaId2">Label</label>
-                                <div class="o-form-group__controls">
-                                    <textarea class="c-textarea" rows="5" disabled="disabled" id="textareaId2"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textareaId&quot;&gt;Label&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;textarea class=&quot;c-textarea&quot; rows=&quot;5&quot; id=&quot;textareaId&quot;&gt;&lt;/textarea&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textareaId2&quot;&gt;Label&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;textarea class=&quot;c-textarea&quot; rows=&quot;5&quot; disabled=&quot;disabled&quot; id=&quot;textareaId2&quot;&gt;&lt;/textarea&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label(for=&quot;textareaId&quot;) Label
-        .o-form-group__controls
-            textarea.c-textarea(rows=&quot;5&quot; id=&quot;textareaId&quot;)
-    .o-form-group
-        label.o-form-group__label(for=&quot;textareaId2&quot;) Label
-        .o-form-group__controls
-            textarea.c-textarea(rows=&quot;5&quot; disabled id=&quot;textareaId2&quot;)
-</pre>
-                        </div>
-                    </div>
                 </div>
                 <div class="br-sample" id="component-03-c-input-icon">
                     <div class="br-sample-header br-sample-clearfix">
@@ -469,104 +361,6 @@
         .c-input-with-icon
             input.c-input(type=&quot;text&quot; placeholder=&quot;Enter your search term...&quot;)
             +icon('search')
-</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-04-c-input-prepend">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Input group with prepend</h3>
-                        <a class="br-sample-header-link" href="#component-04-c-input-prepend">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content"></div>
-                    <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <div class="c-input-group">
-                                    <div class="c-input-group__prepend">
-                                        <div class="o-svg-icon o-svg-icon-search  ">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="#595959" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <input class="c-input" type="text" placeholder="Search ..." />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;div class=&quot;c-input-group&quot;&gt;
-            &lt;div class=&quot;c-input-group__prepend&quot;&gt;
-                &lt;div class=&quot;o-svg-icon o-svg-icon-search  &quot;&gt;
-                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                        &lt;path d=&quot;M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z&quot; fill=&quot;#595959&quot; /&gt;
-                    &lt;/svg&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;input class=&quot;c-input&quot; type=&quot;text&quot; placeholder=&quot;Search ...&quot; /&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        .c-input-group
-            .c-input-group__prepend
-                +icon('search')
-            input.c-input(type=&quot;text&quot; placeholder=&quot;Search ...&quot;)
-
-</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-05-c-input-append">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Input group with append</h3>
-                        <a class="br-sample-header-link" href="#component-05-c-input-append">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content"></div>
-                    <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <div class="c-input-group">
-                                    <input class="c-input" type="number" value="1200" />
-                                    <div class="c-input-group__append">€</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;div class=&quot;c-input-group&quot;&gt;
-            &lt;input class=&quot;c-input&quot; type=&quot;number&quot; value=&quot;1200&quot; /&gt;
-            &lt;div class=&quot;c-input-group__append&quot;&gt;€&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">
-.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        .c-input-group
-            input.c-input(type=&quot;number&quot; value=&quot;1200&quot;)
-            .c-input-group__append €
-
 </pre>
                         </div>
                     </div>
