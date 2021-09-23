@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Blank slate - Component documentation - Smart Coop Design System
+    <title>Tabs - Component documentation - Smart Coop Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -298,122 +298,228 @@
             </div>
             <div class="o-grid-col-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-h2">Blank slate</h1>
+                    <h1 class="br-componentgroup-header c-h2">Tabs</h1>
                 </div>
                 <div class="br-content c-content">
                 </div>
-                <div class="br-sample" id="component-01-c-blank-slate-spacious">
+                <div class="br-sample" id="component-01-c-tabs">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Blank slate spacious</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-blank-slate-spacious">#</a>
+                        <h3 class="br-sample-heading c-h3">Tabs</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-tabs">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="c-blankslate c-blankslate--spacious">
-                            <div class="u-spacer-bottom">
-                                <h3 class="c-h3">This is a blank slate</h3>
-                                <p class="c-body-1">Use it to provide information when no dynamic content exists.</p>
+                        <nav class="c-tabs">
+                            <ul>
+                                <li>
+                                    <a class="c-tabs__item" href="#section1">Item</a>
+                                </li>
+                                <li>
+                                    <a class="c-tabs__item" href="#section2">Item</a>
+                                </li>
+                                <li>
+                                    <a class="c-tabs__item" href="#section3">Item</a>
+                                </li>
+                                <li>
+                                    <a class="c-tabs__item" href="#section4">Item</a>
+                                </li>
+                                <li>
+                                    <a class="c-tabs__item" href="#section5">Item</a>
+                                </li>
+                            </ul>
+                            <div class="c-tabs__section" id="section1">
+                                <p>a tab</p>
                             </div>
-                        </div>
+                            <div class="c-tabs__section" id="section2">
+                                <p>another tab</p>
+                            </div>
+                            <div class="c-tabs__section" id="section3">
+                                <p>a third tab</p>
+                            </div>
+                            <div class="c-tabs__section" id="section4">
+                                <p>a fourth tab</p>
+                            </div>
+                            <div class="c-tabs__section" id="section5">
+                                <p>a fifth tab</p>
+                            </div>
+                        </nav>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-blankslate c-blankslate--spacious&quot;&gt;
-    &lt;div class=&quot;u-spacer-bottom&quot;&gt;
-        &lt;h3 class=&quot;c-h3&quot;&gt;This is a blank slate&lt;/h3&gt;
-        &lt;p class=&quot;c-body-1&quot;&gt;Use it to provide information when no dynamic content exists.&lt;/p&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;nav class=&quot;c-tabs&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section1&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section2&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section3&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section4&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section5&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section1&quot;&gt;
+        &lt;p&gt;a tab&lt;/p&gt;
     &lt;/div&gt;
-&lt;/div&gt;</pre>
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section2&quot;&gt;
+        &lt;p&gt;another tab&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section3&quot;&gt;
+        &lt;p&gt;a third tab&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section4&quot;&gt;
+        &lt;p&gt;a fourth tab&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section5&quot;&gt;
+        &lt;p&gt;a fifth tab&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.c-blankslate.c-blankslate--spacious
-    .u-spacer-bottom
-        h3.c-h3 This is a blank slate
-        p.c-body-1 Use it to provide information when no dynamic content exists.
+                            <pre class="br-sample-markup br-sample-markup-pug">nav.c-tabs
+    ul
+        li
+            a.c-tabs__item(href=&quot;#section1&quot;) Item
+        li
+            a.c-tabs__item(href=&quot;#section2&quot;) Item
+        li
+            a.c-tabs__item(href=&quot;#section3&quot;) Item
+        li
+            a.c-tabs__item(href=&quot;#section4&quot;) Item
+        li
+            a.c-tabs__item(href=&quot;#section5&quot;) Item
+
+    .c-tabs__section#section1
+        p a tab
+    .c-tabs__section#section2
+        p another tab
+    .c-tabs__section#section3
+        p a third tab
+    .c-tabs__section#section4
+        p a fourth tab
+    .c-tabs__section#section5
+        p a fifth tab
 </pre>
                         </div>
                     </div>
                 </div>
-                <div class="br-sample" id="component-02-c-blank-slate-with-icon">
+                <div class="br-sample" id="component-02-c-tabs--bottom-border">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Blank slate with icon</h3>
-                        <a class="br-sample-header-link" href="#component-02-c-blank-slate-with-icon">#</a>
+                        <h3 class="br-sample-heading c-h3">Tabs bottom border</h3>
+                        <a class="br-sample-header-link" href="#component-02-c-tabs--bottom-border">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="c-blankslate">
-                            <div class="u-spacer-bottom-l">
-                                <div class="c-blankslate__icon">
-                                    <img src="/images/projects-icon.svg" alt="" />
-                                </div>
+                        <nav class="c-tabs c-tabs--border-bottom">
+                            <ul>
+                                <li>
+                                    <a class="c-tabs__item" href="#section1">Item</a>
+                                </li>
+                                <li>
+                                    <a class="c-tabs__item" href="#section2">Item</a>
+                                </li>
+                                <li>
+                                    <a class="c-tabs__item" href="#section3">Item</a>
+                                </li>
+                                <li>
+                                    <a class="c-tabs__item" href="#section4">Item</a>
+                                </li>
+                                <li>
+                                    <a class="c-tabs__item" href="#section5">Item</a>
+                                </li>
+                            </ul>
+                            <div class="c-tabs__section" id="section1">
+                                <p>a tab</p>
                             </div>
-                            <h3 class="c-h3">This is a blank slate</h3>
-                            <p class="c-body-1">Use it to provide information when no dynamic content exists.</p>
-                        </div>
+                            <div class="c-tabs__section" id="section2">
+                                <p>another tab</p>
+                            </div>
+                            <div class="c-tabs__section" id="section3">
+                                <p>a third tab</p>
+                            </div>
+                            <div class="c-tabs__section" id="section4">
+                                <p>a fourth tab</p>
+                            </div>
+                            <div class="c-tabs__section" id="section5">
+                                <p>a fifth tab</p>
+                            </div>
+                        </nav>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-blankslate&quot;&gt;
-    &lt;div class=&quot;u-spacer-bottom-l&quot;&gt;
-        &lt;div class=&quot;c-blankslate__icon&quot;&gt;
-            &lt;img src=&quot;/images/projects-icon.svg&quot; alt=&quot;&quot; /&gt;
-        &lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;nav class=&quot;c-tabs c-tabs--border-bottom&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section1&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section2&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section3&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section4&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section5&quot;&gt;Item&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section1&quot;&gt;
+        &lt;p&gt;a tab&lt;/p&gt;
     &lt;/div&gt;
-    &lt;h3 class=&quot;c-h3&quot;&gt;This is a blank slate&lt;/h3&gt;
-    &lt;p class=&quot;c-body-1&quot;&gt;Use it to provide information when no dynamic content exists.&lt;/p&gt;
-&lt;/div&gt;</pre>
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section2&quot;&gt;
+        &lt;p&gt;another tab&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section3&quot;&gt;
+        &lt;p&gt;a third tab&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section4&quot;&gt;
+        &lt;p&gt;a fourth tab&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section5&quot;&gt;
+        &lt;p&gt;a fifth tab&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.c-blankslate
-    .u-spacer-bottom-l
-        .c-blankslate__icon
-            img(src=&quot;/images/projects-icon.svg&quot; alt=&quot;&quot;)
-    h3.c-h3 This is a blank slate
-    p.c-body-1 Use it to provide information when no dynamic content exists.
-</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-03-c-blank-slate">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Blank slate</h3>
-                        <a class="br-sample-header-link" href="#component-03-c-blank-slate">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content"></div>
-                    <div class="br-sample-content">
-                        <div class="c-blankslate">
-                            <div class="u-spacer-bottom">
-                                <h3 class="c-h3">This is a blank slate</h3>
-                                <p class="c-body-1">Use it to provide information when no dynamic content exists.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-blankslate&quot;&gt;
-    &lt;div class=&quot;u-spacer-bottom&quot;&gt;
-        &lt;h3 class=&quot;c-h3&quot;&gt;This is a blank slate&lt;/h3&gt;
-        &lt;p class=&quot;c-body-1&quot;&gt;Use it to provide information when no dynamic content exists.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.c-blankslate
-    .u-spacer-bottom
-        h3.c-h3 This is a blank slate
-        p.c-body-1 Use it to provide information when no dynamic content exists.
+                            <pre class="br-sample-markup br-sample-markup-pug">nav.c-tabs.c-tabs--border-bottom
+    ul
+        li
+            a.c-tabs__item(href=&quot;#section1&quot;) Item
+        li
+            a.c-tabs__item(href=&quot;#section2&quot;) Item
+        li
+            a.c-tabs__item(href=&quot;#section3&quot;) Item
+        li
+            a.c-tabs__item(href=&quot;#section4&quot;) Item
+        li
+            a.c-tabs__item(href=&quot;#section5&quot;) Item
+
+    .c-tabs__section#section1
+        p a tab
+    .c-tabs__section#section2
+        p another tab
+    .c-tabs__section#section3
+        p a third tab
+    .c-tabs__section#section4
+        p a fourth tab
+    .c-tabs__section#section5
+        p a fifth tab
 </pre>
                         </div>
                     </div>

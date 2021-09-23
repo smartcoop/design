@@ -2789,6 +2789,59 @@ textarea.c-input--h-large {
     padding-right: 2.4rem; }
 
 /* ==========================================================================
+   c-tabs
+   ========================================================================== */
+/* Variables
+   ========================================================================== */
+/* Component
+   ========================================================================== */
+.c-tabs ul {
+  margin-bottom: 1.6rem; }
+  @media screen and (min-width: 400px) {
+    .c-tabs ul {
+      display: flex;
+      height: 4.8rem;
+      max-height: 4.8rem; } }
+
+.c-tabs li {
+  flex-basis: auto;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+  @media screen and (min-width: 400px) {
+    .c-tabs li {
+      justify-content: center; } }
+  @media screen and (max-width: 399px) {
+    .c-tabs li + li {
+      margin-top: 0.8rem; } }
+
+.c-tabs__item {
+  color: #808080;
+  transition: color 0.1s linear;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.08rem;
+  padding: 0 0.8rem;
+  height: 100%; }
+  .c-tabs__item:hover {
+    color: #000000; }
+  .c-tabs__item:focus {
+    color: #000000; }
+  .c-tabs__item:focus:not(:focus-visible) {
+    outline: none; }
+  .c-tabs__item[aria-selected="true"] {
+    box-shadow: inset 0 -0.2rem 0 #FF4054;
+    color: #000000;
+    position: relative;
+    z-index: 10;
+    margin-bottom: -0.1rem; }
+
+.c-tabs.c-tabs--border-bottom ul {
+  border-bottom: 1px solid #CCCCCC; }
+
+/* ==========================================================================
   c-textarea
    ========================================================================== */
 .c-textarea {

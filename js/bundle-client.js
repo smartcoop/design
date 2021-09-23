@@ -9,13 +9,15 @@ require("./modules/modals");
 
 require("./modules/popper-popover");
 
+require("./modules/tabs");
+
 require("./modules/input-password.js");
 
 require("./modules/popper-tooltip");
 
 require("./modules/design-system-website-mobile-menu");
 
-},{"./modules/accordion":2,"./modules/design-system-website-mobile-menu":3,"./modules/input-password.js":4,"./modules/menu":5,"./modules/modals":6,"./modules/popper-popover":7,"./modules/popper-tooltip":8}],2:[function(require,module,exports){
+},{"./modules/accordion":2,"./modules/design-system-website-mobile-menu":3,"./modules/input-password.js":4,"./modules/menu":5,"./modules/modals":6,"./modules/popper-popover":7,"./modules/popper-tooltip":8,"./modules/tabs":9}],2:[function(require,module,exports){
 "use strict";
 
 /* Accordion
@@ -268,7 +270,7 @@ selectOptions.forEach(function (option) {
 
 document.addEventListener('click', handleOutsideClick);
 
-},{"./util":9,"@popperjs/core":10}],6:[function(require,module,exports){
+},{"./util":10,"@popperjs/core":11}],6:[function(require,module,exports){
 "use strict";
 
 var _util = require("./util");
@@ -472,7 +474,7 @@ var focusTrap = function focusTrap(modal, e) {
   modal.addEventListener("keydown", handleKeyDown, false);
 };
 
-},{"./util":9}],7:[function(require,module,exports){
+},{"./util":10}],7:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -567,7 +569,7 @@ document.addEventListener('click', function (e) {
   }
 });
 
-},{"./util":9,"@popperjs/core":10}],8:[function(require,module,exports){
+},{"./util":10,"@popperjs/core":11}],8:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -641,7 +643,134 @@ function hide(e) {
   destroy();
 }
 
-},{"@popperjs/core":10}],9:[function(require,module,exports){
+},{"@popperjs/core":11}],9:[function(require,module,exports){
+"use strict";
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/* JS adapted from https://inclusive-components.design/tabbed-interfaces/ */
+var Tabs = /*#__PURE__*/function () {
+  function Tabs(el) {
+    _classCallCheck(this, Tabs);
+
+    this.el = el;
+    this.tablist = this.el.querySelector("ul");
+    this.tabs = this.el.querySelectorAll("a.c-tabs__item");
+    this.panels = this.el.querySelectorAll(".c-tabs__section");
+    this.init();
+  }
+
+  _createClass(Tabs, [{
+    key: "init",
+    value: function init() {
+      var _this = this;
+
+      // Add the tablist role to the first <ul> in the .tabbed container
+      this.tablist.setAttribute("role", "tablist"); // Add semantics and remove user focusability for each tab
+
+      this.tabs.forEach(function (tab, i) {
+        tab.setAttribute("role", "tab");
+        tab.setAttribute("id", "tab" + (i + 1));
+        tab.setAttribute("tabindex", "-1");
+        tab.parentNode.setAttribute("role", "presentation"); // Attach events to the tabs if the tabs have panels. Otherwise they just act as links
+
+        if (_this.panels.length) _this.attachEvents(tab, i);
+      }); // Add tab panel semantics and hide them all
+
+      this.panels.forEach(function (panel, i) {
+        panel.setAttribute("role", "tabpanel");
+        panel.setAttribute("tabindex", "-1");
+        panel.setAttribute("aria-labelledby", _this.tabs[i].id);
+        panel.hidden = true;
+      }); // Initially activate the first tab and reveal the first tab panel
+
+      if (this.panels[0]) {
+        this.tabs[0].removeAttribute("tabindex");
+        this.tabs[0].setAttribute("aria-selected", "true");
+        this.panels[0].hidden = false;
+      }
+    }
+  }, {
+    key: "attachEvents",
+    value: function attachEvents(tab) {
+      var _this2 = this;
+
+      // Handle clicking of tabs for mouse users
+      tab.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        var currentTab = _this2.tablist.querySelector("[aria-selected]");
+
+        if (e.currentTarget !== currentTab) {
+          _this2.switchTab(currentTab, e.currentTarget);
+        }
+      }); // Handle keydown events for keyboard users
+
+      tab.addEventListener("keydown", function (e) {
+        // Get the index of the current tab in the tabs node list
+        var index = _toConsumableArray(_this2.tabs).indexOf(e.currentTarget); // Work out which key the user is pressing and
+        // Calculate the new tab's index where appropriate
+
+
+        var dir = e.which === 37 ? index - 1 : e.which === 39 ? index + 1 : e.which === 40 ? "down" : null;
+
+        if (dir !== null) {
+          e.preventDefault(); // If the down key is pressed, move focus to the open panel,
+          // otherwise switch to the adjacent tab
+
+          dir === "down" ? _this2.panels[index].focus() : _this2.tabs[dir] ? _this2.switchTab(e.currentTarget, _this2.tabs[dir]) : void 0;
+        }
+      });
+    }
+  }, {
+    key: "switchTab",
+    value: function switchTab(oldTab, newTab) {
+      newTab.focus(); // Make the active tab focusable by the user (Tab key)
+
+      newTab.removeAttribute("tabindex"); // Set the selected state
+
+      newTab.setAttribute("aria-selected", "true");
+      oldTab.removeAttribute("aria-selected");
+      oldTab.setAttribute("tabindex", "-1"); // Get the indices of the new and old tabs to find the correct
+      // tab panels to show and hide
+
+      var index = _toConsumableArray(this.tabs).indexOf(newTab);
+
+      var oldIndex = _toConsumableArray(this.tabs).indexOf(oldTab);
+
+      if (this.panels[oldIndex]) this.panels[oldIndex].hidden = true;
+      if (this.panels[index]) this.panels[index].hidden = false;
+    }
+  }]);
+
+  return Tabs;
+}();
+
+var tablists = document.querySelectorAll(".c-tabs");
+
+if (tablists.length) {
+  _toConsumableArray(tablists).map(function (tablist) {
+    return new Tabs(tablist);
+  });
+}
+
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -671,7 +800,7 @@ var isClickOutside = function isClickOutside(event, elements) {
 
 exports.isClickOutside = isClickOutside;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (process){(function (){
 /**
  * @popperjs/core v2.9.2 - MIT License
@@ -2580,7 +2709,7 @@ exports.preventOverflow = preventOverflow$1;
 
 
 }).call(this)}).call(this,require('_process'))
-},{"_process":11}],11:[function(require,module,exports){
+},{"_process":12}],12:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
