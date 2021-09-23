@@ -757,28 +757,31 @@ abbr[title] {
 .c-d-h2, .c-display h2,
 .c-d-h3, .c-display h3,
 .c-d-h4, .c-display h4 {
-  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 700; }
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 
 .c-d-h1, .c-display h1 {
   font-size: 3.8rem;
   margin: 0 0 3.2rem;
-  line-height: 1.25; }
+  line-height: 1.25;
+  font-weight: 700; }
 
 .c-d-h2, .c-display h2 {
   font-size: 3rem;
   margin: 0 0 2.4rem;
-  line-height: 1.36; }
+  line-height: 1.36;
+  font-weight: 600; }
 
 .c-d-h3, .c-display h3 {
   font-size: 2.6rem;
   margin: 0 0 1.8rem;
-  line-height: 1.36; }
+  line-height: 1.36;
+  font-weight: 600; }
 
 .c-d-h4, .c-display h4 {
   font-size: 2.2rem;
   margin: 0 0 2.2rem;
-  line-height: 1.36; }
+  line-height: 1.36;
+  font-weight: 600; }
 
 .c-d-body-1, .c-display p {
   font-size: 1.8rem;
