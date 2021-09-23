@@ -175,7 +175,9 @@ input.c-button {
   padding-right: 0;
   font-weight: 600;
   text-decoration: none;
-
+  border-color: transparent;
+  border-radius: 0;
+  background: none;
   &:hover,
   &:active,
   &:hover svg *,
