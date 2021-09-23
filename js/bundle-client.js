@@ -9,11 +9,13 @@ require("./modules/modals");
 
 require("./modules/popper-popover");
 
+require("./modules/input-password.js");
+
 require("./modules/popper-tooltip");
 
 require("./modules/design-system-website-mobile-menu");
 
-},{"./modules/accordion":2,"./modules/design-system-website-mobile-menu":3,"./modules/menu":4,"./modules/modals":5,"./modules/popper-popover":6,"./modules/popper-tooltip":7}],2:[function(require,module,exports){
+},{"./modules/accordion":2,"./modules/design-system-website-mobile-menu":3,"./modules/input-password.js":4,"./modules/menu":5,"./modules/modals":6,"./modules/popper-popover":7,"./modules/popper-tooltip":8}],2:[function(require,module,exports){
 "use strict";
 
 /* Accordion
@@ -53,10 +55,73 @@ var handleMenuClose = function handleMenuClose(e) {
   htmlElement.classList.remove('u-no-scroll');
 };
 
-mobileNavigationOpenButton.addEventListener('click', handleMenuOpen, false);
-mobileNavigationCloseButton.addEventListener('click', handleMenuClose, false);
+mobileNavigationOpenButton && mobileNavigationOpenButton.addEventListener('click', handleMenuOpen, false);
+mobileNavigationCloseButton && mobileNavigationCloseButton.addEventListener('click', handleMenuClose, false);
 
 },{}],4:[function(require,module,exports){
+"use strict";
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var InputPassword = /*#__PURE__*/function () {
+  function InputPassword(el) {
+    _classCallCheck(this, InputPassword);
+
+    this.el = el;
+    this.icons = el.parentElement.querySelectorAll(".o-svg-icon-eye,.o-svg-icon-eye-off");
+    this.attach();
+  }
+
+  _createClass(InputPassword, [{
+    key: "attach",
+    value: function attach() {
+      var _this = this;
+
+      _toConsumableArray(this.icons).map(function (icon) {
+        return icon.addEventListener("click", _this.onClick.bind(_this));
+      });
+    }
+  }, {
+    key: "onClick",
+    value: function onClick(event) {
+      event.preventDefault();
+
+      if (this.el.type === "password") {
+        this.el.type = "text";
+      } else {
+        this.el.type = "password";
+      }
+    }
+  }]);
+
+  return InputPassword;
+}();
+
+var passwordsInputs = document.querySelectorAll("input[type=password]");
+
+if (passwordsInputs.length) {
+  _toConsumableArray(passwordsInputs).map(function (input) {
+    return new InputPassword(input);
+  });
+}
+
+},{}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -203,7 +268,7 @@ selectOptions.forEach(function (option) {
 
 document.addEventListener('click', handleOutsideClick);
 
-},{"./util":8,"@popperjs/core":9}],5:[function(require,module,exports){
+},{"./util":9,"@popperjs/core":10}],6:[function(require,module,exports){
 "use strict";
 
 var _util = require("./util");
@@ -407,7 +472,7 @@ var focusTrap = function focusTrap(modal, e) {
   modal.addEventListener("keydown", handleKeyDown, false);
 };
 
-},{"./util":8}],6:[function(require,module,exports){
+},{"./util":9}],7:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -502,7 +567,7 @@ document.addEventListener('click', function (e) {
   }
 });
 
-},{"./util":8,"@popperjs/core":9}],7:[function(require,module,exports){
+},{"./util":9,"@popperjs/core":10}],8:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -576,7 +641,7 @@ function hide(e) {
   destroy();
 }
 
-},{"@popperjs/core":9}],8:[function(require,module,exports){
+},{"@popperjs/core":10}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -606,7 +671,7 @@ var isClickOutside = function isClickOutside(event, elements) {
 
 exports.isClickOutside = isClickOutside;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 (function (process){(function (){
 /**
  * @popperjs/core v2.9.2 - MIT License
@@ -2515,7 +2580,7 @@ exports.preventOverflow = preventOverflow$1;
 
 
 }).call(this)}).call(this,require('_process'))
-},{"_process":10}],10:[function(require,module,exports){
+},{"_process":11}],11:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
