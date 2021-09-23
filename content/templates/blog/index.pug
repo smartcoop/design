@@ -22,13 +22,14 @@ block content
                                     p We're happy to announce we've started work on a design system. In SmartCoop's collaborative spirit we are working in an open source manner. What this project will do is provide a foundation for future SmartCoop applications.
                                 +c-button({ href: "/blog/2021/09/smartcoop-announces-an-open-design-system.html"}) Read more
 
-                hr.c-hr
+                //
+                    hr.c-hr
 
-                .c-toolbar
-                    //
-                        .c-toolbar__left
+                    .c-toolbar
+                        //
+                            .c-toolbar__left
+                                .c-toolbar__item
+                                    +c-button({ icon: "chevron-left"}) Previous page
+                        .c-toolbar__right
                             .c-toolbar__item
-                                +c-button({ icon: "chevron-left"}) Previous page
-                    .c-toolbar__right
-                        .c-toolbar__item
-                            +c-button({ icon: "chevron-right", layout: "text-icon"  }) Next page
+                                +c-button({ icon: "chevron-right", layout: "text-icon"  }) Next page

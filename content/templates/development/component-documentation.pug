@@ -2,6 +2,41 @@ extends ../index
 
 block append pageVariables
     - var moduleTitle = "Component documentation"
+    -
+        var obj = [
+            {
+                name: "Button",
+                ref: "button"
+            },
+            {
+                name: "Input",
+                ref: "input"
+            },
+            {
+                name: "Radio button",
+                ref: "radio-button"
+            },
+            {
+                name: "Checkbox",
+                ref: "checkbox"
+            },
+            {
+                name: "Select",
+                ref: "select"
+            },
+            {
+                name: "Tooltip",
+                ref: "tooltip"
+            },
+            {
+                name: "Dialog",
+                ref: "dialog"
+            },
+            {
+                name: "Alert",
+                ref: "alert"
+            }
+        ]
 
 block append headerStyles
 
@@ -10,10 +45,20 @@ block append headerStyles
             background: #FFF;
             border-radius: .3rem;
             display: block;
-            padding: 2rem;
+        }
+        #component-docs span {
+            display: block;
+            padding: .8rem 1.6rem;
+            color: #333
+            
+        }
+        #component-docs img {
+            background: #F2F2F2;
+            display: block;
         }
         #component-docs a:hover {
-            background: #F2F2F2;
+            border-color: #000;
+            transition: 0.18s ease-in-out border-color;
         }
 
 block content
@@ -22,46 +67,40 @@ block content
         h1.c-d-h2 Component documentation
 
     .o-grid
-    
-        .o-grid-col-bp3-3
-            .u-spacer-bottom
 
-                each docsCategoryName in config.styleguide.categoryOrder
-                    if docsCategoryName === 'Components' && Object.keys(components.byCategory).length > 0
-                        each category, categoryName in components.byCategory
-                            .br-docs-category
-                                if Object.keys(components.byCategory).length > 1
-                                    h4.br-docs-category-name(class=styleguideNavListTitleClass)= categoryName
-                                else
-                                    h4.br-docs-category-name(class=styleguideNavListTitleClass) Components
-                                .br-docs-category-list-wrapper(class=styleguideNavListWrapperClass)
-                                    ul(class=styleguideNavListClass)
-                                        each group in category
-                                            - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
-                                            li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
-                                                a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
-                                                    |  #{groupName}
+        .o-grid-col-bp3-3
+
+            .u-spacer-bottom-l
+
+                .c-input-group
+                    .c-input-group__prepend
+                        +icon('search')
+                    input.c-input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass style="max-width: 70%")
+
+            each docsCategoryName in config.styleguide.categoryOrder
+                if docsCategoryName === 'Components' && Object.keys(components.byCategory).length > 0
+                    each category, categoryName in components.byCategory
+                        .br-docs-category
+                            if Object.keys(components.byCategory).length > 1
+                                h4.br-docs-category-name(class=styleguideNavListTitleClass)= categoryName
+                            else
+                                h4.br-docs-category-name(class=styleguideNavListTitleClass) Components
+                            .br-docs-category-list-wrapper(class=styleguideNavListWrapperClass)
+                                ul(class=styleguideNavListClass)
+                                    each group in category
+                                        - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
+                                        li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
+                                            a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
+                                                |  #{groupName}
 
         .o-grid-col-bp3-9
                 .c-display
-                    p Please choose an item in the navigation. Or choose one of the popular components:
-                    
+                    p(style="margin-top: 0;") Please choose an item in the navigation. Or choose one of the popular components:
+
                 ul.o-panel-grid#component-docs
-                    li.c-panel
-                        .c-panel__content
-                            a(href="/development/docs/c-button.html") Button
-                    li.c-panel
-                        .c-panel__content
-                            a(href="/development/docs/c-input.html") Input
-                    li.c-panel
-                        .c-panel__content
-                            a(href="/development/docs/c-dialog.html") Dialog
-                    li.c-panel
-                        .c-panel__content
-                            a(href="/development/docs/c-checkbox.html") Checkbox
-                    li.c-panel
-                        .c-panel__content
-                            a(href="/development/docs/c-select.html") Select
-                    li.c-panel
-                        .c-panel__content
-                            a(href="/development/docs/c-tooltip.html") Tooltip
+                    each item in obj
+                        li
+                            a.c-panel(href="/development/docs/c-"+item.ref+".html")
+                                .c-panel__content
+                                    img(src="/images/component-illustrations/"+item.ref+".png" alt="")
+                                    span #{item.name}

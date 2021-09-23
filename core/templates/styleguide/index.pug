@@ -10,13 +10,17 @@ block content
 
     .o-grid
     
-        .o-grid-col-3
+        .o-grid-col-bp3-3
             if config.styleguide.search
-                .u-spacer-bottom
-                    input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
-        
+                .u-spacer-bottom-l
+
+                    .c-input-group
+                        .c-input-group__prepend
+                            +icon('search')
+                        input.c-input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass style="max-width: 70%")
+
             block nav
                 include ../includes/styleguide-nav
         
-        .o-grid-col-9
+        .o-grid-col-bp3-9
             block subContent

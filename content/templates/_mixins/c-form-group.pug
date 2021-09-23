@@ -1,11 +1,19 @@
 //-
     Mixin Form field - Create a form group, which wraps an input by default
 
-mixin c-form-group({ label = 'Default label', id, type = 'text', value, key = null })
+mixin c-form-group({ label = 'Default label', id, type = 'text', value, key = null, placeholder, helper })
     .o-form-group
         label.o-form-group__label(for=id)= label
         .o-form-group__controls
             if type == 'text'
-                +c-input({ id, value })
+                +c-input({ id, value, placeholder })
+            if type == 'date'
+                +c-input({ id, value, type: 'date' })
+            if type == 'time'
+                +c-input({ id, value, type: 'time' })
+            if type == 'textarea'
+                +c-textarea({ id })
             if type == 'select'
                 +c-select({ id, value, key })
+            if helper
+                p.c-form-help-text=helper
