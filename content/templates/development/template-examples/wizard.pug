@@ -1,0 +1,94 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+
+block content
+
+
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    nav.c-wizard
+                        ul
+                            li
+                                a.c-wizard__item.c-wizard--complete(href="#")
+                                    .c-wizard__indicator
+                                    .c-wizard__label General info
+                            li
+                                a.c-wizard__item.c-wizard--active(href="#")
+                                    .c-wizard__indicator 2
+                                    .c-wizard__label Location and dates
+                            li
+                                a.c-wizard__item(href="#")
+                                    .c-wizard__indicator 3
+                                    .c-wizard__label Function and risks
+                            li
+                                a.c-wizard__item(href="#")
+                                    .c-wizard__indicator 4
+                                    .c-wizard__label Contract type
+                            li
+                                a.c-wizard__item(href="#")
+                                    .c-wizard__indicator 5
+                                    .c-wizard__label Confirm
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        +c-button({icon: 'arrow-left'}) Back
+                        +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
+
+    .u-scroll-wrapper-body
+        .o-container.o-container--large
+            .o-container-vertical
+                .c-panel.u-spacer-bottom-l
+                    .c-panel__header
+                        h2.c-panel__title Form grouping
+                    .c-panel__body
+                        .o-form-group-layout.o-form-group-layout--standard
+                            .o-form-group
+                                label.o-form-group__label Add client
+                                .c-empty-state.c-empty-state--bg-alt
+                                    p.u-text-muted.c-body-1 Please add a client for this quote.
+                                    .c-button-toolbar
+                                        +c-button({icon: 'add'}) Add new client
+                                        +c-button({icon: 'add'}) Add existing client
+
+                            .o-form-group
+
+                                label.o-form-group__label Radio
+                                .o-form-group__controls
+                                    .c-radio-group
+                                        .c-radio
+                                            label
+                                                input(type="radio" name="radio1"  checked)
+                                                | Lorem ipsum dolor sit amet.
+                                        .c-radio
+                                            label
+                                                input(type="radio" name="radio1")
+                                                | Lorem ipsum dolor sit amet.
+
+                .c-panel.u-spacer-bottom-l
+                    .c-panel__header
+                        h2.c-panel__title Form grouping
+                    .c-panel__body
+                        .o-form-group-layout.o-form-group-layout--standard
+                            .o-form-group
+                                label.o-form-group__label(for="textInputId") Input
+                                .o-form-group__controls
+                                    input.c-input(type="text" placeholder="Placeholder" id="textInputId")
+                            .o-form-group
+                                label.o-form-group__label(for="selectInputId") Select
+                                .o-form-group__controls
+                                    .c-select-holder
+                                        select.c-select(id="selectInputId")
+                                            option(disabled selected) Choose an item
+                                            option Option A
+                                            option Option B
+                                            option Option C
+                                    p.c-form-help-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                            .o-form-group
+                                label.o-form-group__label(for="textareaInputId") Textarea
+                                .o-form-group__controls
+                                    textarea.c-textarea(rows="5" id="textareaInputId")
+                                    p.c-form-help-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
