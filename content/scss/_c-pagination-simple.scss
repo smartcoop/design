@@ -1,0 +1,11 @@
+/* ==========================================================================
+  c-pagination-simple
+ ========================================================================== */
+
+.c-pagination-simple {
+  display: flex;
+  align-items: center;
+  .c-pagination__item + .c-pagination__item {
+    margin-left: 0.8rem;
+  }
+}
