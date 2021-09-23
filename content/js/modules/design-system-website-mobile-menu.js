@@ -19,5 +19,5 @@ const handleMenuClose = function handleMenuClose(e) {
   htmlElement.classList.remove('u-no-scroll');
 }
 
-mobileNavigationOpenButton.addEventListener('click', handleMenuOpen, false);
-mobileNavigationCloseButton.addEventListener('click', handleMenuClose, false);
+mobileNavigationOpenButton && mobileNavigationOpenButton.addEventListener('click', handleMenuOpen, false);
+mobileNavigationCloseButton && mobileNavigationCloseButton.addEventListener('click', handleMenuClose, false);
