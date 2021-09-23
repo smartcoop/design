@@ -68,26 +68,23 @@
 
         .c-toolbar__right
             .c-toolbar__item
-                +c-button({ skin: 'borderless', layout: 'icon-only', icon: 'circle-help'})(data-menu="helpMenu") Help
-                ul.c-menu(id="helpMenu")
-                    -
-                        var helpItems = [
-                            {
-                                pathName: '#',
-                                name: 'About this page'
-                            },
-                            {
-                                pathName: '#',
-                                name: 'Documentation'
-                            },
-                            {
-                                pathName: '#',
-                                name: 'Report a bug'
-                            },
-                        ]
-                    each item in helpItems
-                        li.c-menu__item
-                            a.c-menu__label(href=item.pathName) #{item.name}
+                nav
+                    ul.c-pill-navigation
+                        li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu
+                            a(href="#" data-menu="helpMenu")
+                                +icon('circle-help')
+                                span.u-sr-accessible Help
+
+                            ul.c-menu.c-menu--large(id="helpMenu")
+                                li.c-menu__item
+                                    a.c-menu__label(href="#") About this page
+                                li.c-menu__divider(role="presentational")
+                                li.c-menu__item
+                                    a.c-menu__label(href="#")
+                                        span Documentation
+                                        +icon('external-link')
+                                li.c-menu__item
+                                    a.c-menu__label(href="#") Report a bug
             .c-toolbar__item
                 .c-input-group
                     .c-input-group__prepend
@@ -98,9 +95,10 @@
             .c-toolbar__item
                 a.c-user-navigation(href="#" data-menu="userMenu")
                     +c-avatar({img: '/images/avatars/1.jpg', alt: 'avatar'})
-                ul.c-menu(id="userMenu")
+                ul.c-menu.c-menu--large(id="userMenu")
                     // @todo add correct user menu items
                     li.c-menu__item
-                        a.c-menu__label(href="#") Settings
+                        a.c-menu__label(href="#") My profile
+                    li.c-menu__divider(role="presentational")
                     li.c-menu__item
-                        a.c-menu__label(href="#") Log out
+                        a.c-menu__label(href="#") Sign out

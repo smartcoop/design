@@ -62,9 +62,10 @@ $g-c-menu-z: 60 !default;
   justify-content: flex-start;
   align-items: center;
 
-  .c-avatar,
-  .o-svg-icon {
-    margin-right: $g-spacer-unit;
+  .c-avatar + span,
+  .o-svg-icon + span,
+  span + .o-svg-icon {
+    margin-left: $g-spacer-unit;
   }
 
   // Hover state
