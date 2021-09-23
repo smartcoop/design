@@ -57,22 +57,28 @@ block content
                         h2.c-panel__title Form grouping
                     .c-panel__body
                         .o-form-group-layout.o-form-group-layout--standard
+                            +c-form-group({ label: 'Input', id: 'input'})
+                            +c-form-group({ label: 'Select', id: 'select', type: 'select', value: ['Choose an item','A','B', 'C'], helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                            +c-form-group({ label: 'Textarea', id: 'textarea', type: 'textarea', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+
+                .c-panel.u-spacer-bottom-l
+                    .c-panel__header
+                        h2.c-panel__title Form grouping
+                    .c-panel__body
+                        .o-form-group-layout.o-form-group-layout--standard
+                            +c-form-group({ label: 'Nr BCE', id: 'input', placeholder: '__/__/__'})
                             .o-form-group
-                                label.o-form-group__label(for="textInputId") Input
-                                .o-form-group__controls
-                                    input.c-input(type="text" placeholder="Placeholder" id="textInputId")
+                                label.o-form-group__label(for="saleAmount") Sale amount
+                                .c-input-group
+                                    input.c-input(type="number" id="saleAmount")
+                                    .c-input-group__append €
                             .o-form-group
-                                label.o-form-group__label(for="selectInputId") Select
-                                .o-form-group__controls
-                                    .c-select-holder
-                                        select.c-select(id="selectInputId")
-                                            option(disabled selected) Choose an item
-                                            option Option A
-                                            option Option B
-                                            option Option C
-                                    p.c-form-help-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                            .o-form-group
-                                label.o-form-group__label(for="textareaInputId") Textarea
-                                .o-form-group__controls
-                                    textarea.c-textarea(rows="5" id="textareaInputId")
-                                    p.c-form-help-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                label.o-form-group__label(for="time") Time
+                                .o-flex.o-flex--vertical-center.o-flex--spaced
+                                    span
+                                        p From
+                                        +c-input({ id: 'time', type: 'time'})
+                                    span
+                                        p To
+                                        +c-input({ id: 'time', type: 'time'})
+                            +c-form-group({ id: 'date', type: 'date' })
