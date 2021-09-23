@@ -3,7 +3,7 @@
   Only define colors here. Don't use sass color functions, stick to hex values,
   or the color component in styleguide won't regenerate automatically anymore.
  ========================================================================== */
-/* Grays
+/* Base
  ========================================================================== */
 /* Primary colors
  ========================================================================== */
@@ -49,7 +49,7 @@
     display: block;
     text-decoration: none;
     padding: 0.8rem 1.6rem;
-    color: #4D4D4D; }
+    color: #333333; }
     .c-styleguide-list li a:hover {
       color: #FF4054; }
   .c-styleguide-list li.c-styleguide-list__item--active a {
@@ -58,7 +58,8 @@
 /* Colors
    ========================================================================== */
 .br-color-swatch-preview {
-  border-radius: 100%; }
+  border-radius: 100%;
+  border: 0.1rem solid #F6F6F6; }
 
 .br-color-swatch-item {
   width: 20rem; }

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Panel - Component documentation - Smart Coop Design System
+    <title>Wizard - Component documentation - Smart Coop Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -295,178 +295,116 @@
             </div>
             <div class="o-grid-col-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-h2">Panel</h1>
+                    <h1 class="br-componentgroup-header c-h2">Wizard</h1>
                 </div>
                 <div class="br-content c-content">
                 </div>
-                <div class="br-sample" id="component-01-c-panel-body-only">
+                <div class="br-sample" id="component-01-c-wizard">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Panel body only</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-panel-body-only">#</a>
+                        <h3 class="br-sample-heading c-h3">Wizard</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-wizard">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="c-panel">
-                            <div class="c-panel__body">
-                                <p>Panel content</p>
-                            </div>
-                        </div>
+                        <nav class="c-wizard c-wizard--bordered">
+                            <ul>
+                                <li>
+                                    <a class="c-wizard__item c-wizard--complete" href="#">
+                                        <div class="c-wizard__indicator"></div>
+                                        <div class="c-wizard__label">Step 1</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="c-wizard__item c-wizard--active" href="#">
+                                        <div class="c-wizard__indicator">2</div>
+                                        <div class="c-wizard__label">Step 2</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="c-wizard__item" href="#">
+                                        <div class="c-wizard__indicator">3</div>
+                                        <div class="c-wizard__label">Step 3</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="c-wizard__item" href="#">
+                                        <div class="c-wizard__indicator">4</div>
+                                        <div class="c-wizard__label">Step 4</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="c-wizard__item" href="#">
+                                        <div class="c-wizard__indicator">5</div>
+                                        <div class="c-wizard__label">Step 5</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-panel&quot;&gt;
-    &lt;div class=&quot;c-panel__body&quot;&gt;
-        &lt;p&gt;Panel content&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;nav class=&quot;c-wizard c-wizard--bordered&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-wizard__item c-wizard--complete&quot; href=&quot;#&quot;&gt;
+                &lt;div class=&quot;c-wizard__indicator&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;c-wizard__label&quot;&gt;Step 1&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-wizard__item c-wizard--active&quot; href=&quot;#&quot;&gt;
+                &lt;div class=&quot;c-wizard__indicator&quot;&gt;2&lt;/div&gt;
+                &lt;div class=&quot;c-wizard__label&quot;&gt;Step 2&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-wizard__item&quot; href=&quot;#&quot;&gt;
+                &lt;div class=&quot;c-wizard__indicator&quot;&gt;3&lt;/div&gt;
+                &lt;div class=&quot;c-wizard__label&quot;&gt;Step 3&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-wizard__item&quot; href=&quot;#&quot;&gt;
+                &lt;div class=&quot;c-wizard__indicator&quot;&gt;4&lt;/div&gt;
+                &lt;div class=&quot;c-wizard__label&quot;&gt;Step 4&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-wizard__item&quot; href=&quot;#&quot;&gt;
+                &lt;div class=&quot;c-wizard__indicator&quot;&gt;5&lt;/div&gt;
+                &lt;div class=&quot;c-wizard__label&quot;&gt;Step 5&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.c-panel
-    .c-panel__body
-        p Panel content
-</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-02-c-panel-simple">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Panel simple</h3>
-                        <a class="br-sample-header-link" href="#component-02-c-panel-simple">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content">
-                        <p>Uses a simplified markup structure in the header.</p>
-                    </div>
-                    <div class="br-sample-content">
-                        <div class="c-panel">
-                            <div class="c-panel__header">
-                                <h2 class="c-panel__title">Panel header</h2>
-                            </div>
-                            <div class="c-panel__body">
-                                <p>Panel content</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-panel&quot;&gt;
-    &lt;div class=&quot;c-panel__header&quot;&gt;
-        &lt;h2 class=&quot;c-panel__title&quot;&gt;Panel header&lt;/h2&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-panel__body&quot;&gt;
-        &lt;p&gt;Panel content&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.c-panel
-    .c-panel__header
-        h2.c-panel__title Panel header
-    .c-panel__body
-        p Panel content
-</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-03-c-panel-toolbar">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Panel (with toolbar)</h3>
-                        <a class="br-sample-header-link" href="#component-03-c-panel-toolbar">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content">
-                        <p>Uses a toolbar markup structure in the header, to allow for the positioning of controls. See <a href="/development/docs/toolbars.html">toolbar</a>.</p>
-                    </div>
-                    <div class="br-sample-content">
-                        <div class="c-panel">
-                            <div class="c-panel__header">
-                                <div class="c-toolbar">
-                                    <div class="c-toolbar__left">
-                                        <div class="c-toolbar__item">
-                                            <h2 class="c-toolbar-title">Panel title</h2>
-                                        </div>
-                                    </div>
-                                    <div class="c-toolbar__right">
-                                        <div class="c-toolbar__item">
-                                            <div class="c-button-toolbar">
-                                                <button class="c-button c-button--secondary" type="button">
-                                                    <span class="c-button__content">
-                                                        <span class="c-button__label">Button Label</span>
-                                                    </span>
-                                                </button>
-                                                <button class="c-button c-button--primary" type="button">
-                                                    <span class="c-button__content">
-                                                        <span class="c-button__label">Button Label</span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-panel__body">
-                                <p>Panel content</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-panel&quot;&gt;
-    &lt;div class=&quot;c-panel__header&quot;&gt;
-        &lt;div class=&quot;c-toolbar&quot;&gt;
-            &lt;div class=&quot;c-toolbar__left&quot;&gt;
-                &lt;div class=&quot;c-toolbar__item&quot;&gt;
-                    &lt;h2 class=&quot;c-toolbar-title&quot;&gt;Panel title&lt;/h2&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;c-toolbar__right&quot;&gt;
-                &lt;div class=&quot;c-toolbar__item&quot;&gt;
-                    &lt;div class=&quot;c-button-toolbar&quot;&gt;
-                        &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
-                            &lt;span class=&quot;c-button__content&quot;&gt;
-                                &lt;span class=&quot;c-button__label&quot;&gt;Button Label&lt;/span&gt;
-                            &lt;/span&gt;
-                        &lt;/button&gt;
-                        &lt;button class=&quot;c-button c-button--primary&quot; type=&quot;button&quot;&gt;
-                            &lt;span class=&quot;c-button__content&quot;&gt;
-                                &lt;span class=&quot;c-button__label&quot;&gt;Button Label&lt;/span&gt;
-                            &lt;/span&gt;
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-panel__body&quot;&gt;
-        &lt;p&gt;Panel content&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.c-panel
-    .c-panel__header
-        .c-toolbar
-            .c-toolbar__left
-                .c-toolbar__item
-                    h2.c-toolbar-title Panel title
-            .c-toolbar__right
-                .c-toolbar__item
-                    .c-button-toolbar
-                        +c-button({}) Button Label
-                        +c-button({skin: 'primary'}) Button Label
-    .c-panel__body
-        p Panel content
-</pre>
+                            <pre class="br-sample-markup br-sample-markup-pug">nav.c-wizard.c-wizard--bordered
+    ul
+        li
+            a.c-wizard__item.c-wizard--complete(href=&quot;#&quot;)
+                .c-wizard__indicator
+                .c-wizard__label Step 1
+        li
+            a.c-wizard__item.c-wizard--active(href=&quot;#&quot;)
+                .c-wizard__indicator 2
+                .c-wizard__label Step 2
+        li
+            a.c-wizard__item(href=&quot;#&quot;)
+                .c-wizard__indicator 3
+                .c-wizard__label Step 3
+        li
+            a.c-wizard__item(href=&quot;#&quot;)
+                .c-wizard__indicator 4
+                .c-wizard__label Step 4
+        li
+            a.c-wizard__item(href=&quot;#&quot;)
+                .c-wizard__indicator 5
+                .c-wizard__label Step 5</pre>
                         </div>
                     </div>
                 </div>
