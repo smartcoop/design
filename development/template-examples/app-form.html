@@ -240,30 +240,71 @@
                             <div class="c-panel__body">
                                 <div class="o-form-group-layout o-form-group-layout--standard">
                                     <div class="o-form-group">
-                                        <label class="o-form-group__label" for="textInputId">Input</label>
+                                        <label class="o-form-group__label" for="input">Input</label>
                                         <div class="o-form-group__controls">
-                                            <input class="c-input" type="text" placeholder="Placeholder" id="textInputId">
+                                            <input class="c-input" type="text" id="input" />
                                         </div>
                                     </div>
                                     <div class="o-form-group">
-                                        <label class="o-form-group__label" for="selectInputId">Select</label>
+                                        <label class="o-form-group__label" for="select">Select</label>
                                         <div class="o-form-group__controls">
                                             <div class="c-select-holder">
-                                                <select class="c-select" id="selectInputId">
-                                                    <option disabled selected>Choose an item</option>
-                                                    <option>Option A</option>
-                                                    <option>Option B</option>
-                                                    <option>Option C</option>
+                                                <select class="c-select" id="select">
+                                                    <option>Choose an item</option>
+                                                    <option>A</option>
+                                                    <option>B</option>
+                                                    <option>C</option>
                                                 </select>
                                             </div>
                                             <p class="c-form-help-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.</p>
                                         </div>
                                     </div>
                                     <div class="o-form-group">
-                                        <label class="o-form-group__label" for="textareaInputId">Textarea</label>
+                                        <label class="o-form-group__label" for="textarea">Textarea</label>
                                         <div class="o-form-group__controls">
-                                            <textarea class="c-textarea" rows="5" id="textareaInputId"></textarea>
+                                            <textarea class="c-textarea" rows="5" id="textarea"></textarea>
                                             <p class="c-form-help-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-panel u-spacer-bottom-l">
+                            <div class="c-panel__header">
+                                <h2 class="c-panel__title">Form grouping</h2>
+                            </div>
+                            <div class="c-panel__body">
+                                <div class="o-form-group-layout o-form-group-layout--standard">
+                                    <div class="o-form-group">
+                                        <label class="o-form-group__label" for="input">Nr BCE</label>
+                                        <div class="o-form-group__controls">
+                                            <input class="c-input" type="text" placeholder="__/__/__" id="input" />
+                                        </div>
+                                    </div>
+                                    <div class="o-form-group">
+                                        <label class="o-form-group__label" for="saleAmount">Sale amount</label>
+                                        <div class="c-input-group">
+                                            <input class="c-input" type="number" id="saleAmount">
+                                            <div class="c-input-group__append">€</div>
+                                        </div>
+                                    </div>
+                                    <div class="o-form-group">
+                                        <label class="o-form-group__label" for="time">Time</label>
+                                        <div class="o-flex o-flex--vertical-center o-flex--spaced">
+                                            <span>
+                                                <p>From</p>
+                                                <input class="c-input" type="time" id="time" />
+                                            </span>
+                                            <span>
+                                                <p>To</p>
+                                                <input class="c-input" type="time" id="time" />
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="o-form-group">
+                                        <label class="o-form-group__label" for="date">Default label</label>
+                                        <div class="o-form-group__controls">
+                                            <input class="c-input" type="date" id="date" />
                                         </div>
                                     </div>
                                 </div>

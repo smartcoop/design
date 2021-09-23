@@ -2079,6 +2079,8 @@ textarea.c-input--h-large {
   line-height: 2.4rem;
   font-size: 85%; }
 
+/* Input group
+========================================================================== */
 .c-input-group {
   display: flex;
   align-items: flex-start; }
@@ -2086,8 +2088,6 @@ textarea.c-input--h-large {
 .c-input-group__item {
   flex: 1; }
 
-/* Input group
-   ========================================================================== */
 .c-input-group__append,
 .c-input-group__prepend {
   height: 3.6rem;
