@@ -1,0 +1,41 @@
+/* ==========================================================================
+  Input With Icon
+   ========================================================================== */
+
+.c-input-with-icon {
+  display: block;
+  position: relative;
+  color: $color-gray-600;
+
+  .o-svg-icon {
+    position: absolute;
+    top: 0.9rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    left: 0.8rem;
+  }
+
+  .c-input:last-child {
+    padding-right: 3rem;
+  }
+
+  .c-input + .o-svg-icon {
+    right: 0.8rem;
+    left: auto;
+  }
+
+  .c-input + .o-svg-icon + .o-svg-icon {
+    right: 0.8rem;
+    left: auto;
+  }
+  
+  // Specific situation for sign in
+
+  .c-input[type="password"] ~ .o-svg-icon-eye-off {
+    display: none;
+  }
+
+  .c-input[type="text"] ~ .o-svg-icon-eye {
+    display: none;
+  }
+}

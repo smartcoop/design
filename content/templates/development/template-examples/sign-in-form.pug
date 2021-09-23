@@ -1,0 +1,51 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var bodyClass = 'u-bg-gray-50'
+
+block body
+
+    .o-container-vertical
+        .o-container
+            a(href="/")
+                img(src="/images/logo.svg" alt="Smart")
+    
+
+    .o-container-vertical
+        .o-container.o-container--small
+            .c-panel
+                .c-panel__body
+
+                    form
+                        h3.c-h2 Sign in
+                        .o-form-group-layout.o-form-group-layout--standard
+                            .o-form-group
+                                label.o-form-group__label E-mail
+                                .o-form-group__controls
+                                    input.c-input(type="email")
+
+                            .o-form-group
+                                label.o-form-group__label Password
+                                .o-form-group__controls
+                                    .c-input-with-icon
+                                        input.c-input(type="password")
+                                        +icon('eye')
+                                        +icon('eye-off')
+
+                            .o-form-group
+                                a.c-button.c-button--primary.c-button--block(href="#")
+                                    .c-button__content
+                                        .c-button__label Sign in
+                                p.u-text-right.u-spacer-top-s
+                                    a.u-text-muted(href="#") Forgot password
+
+                            p.c-or
+                                span or
+            
+                            .o-form-group
+                                a.c-button.c-button--secondary.c-button--block(href="#")
+                                    .c-button__content
+                                        .c-button__label Register your account
+                            .o-form-group.u-ta-center
+
+

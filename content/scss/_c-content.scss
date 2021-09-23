@@ -18,23 +18,23 @@
 
 .c-h1, .c-content h1 {
   font-family: $g-headings-font-family;
-  font-weight: $g-headings-font-weight;
-  font-size: 3.2rem;
+  font-weight: 500;
+  font-size: 2.4rem;
   margin: 0 0 3.2rem;
   line-height: 1.25;
 }
 
 .c-h2, .c-content h2 {
   font-family: $g-headings-font-family;
-  font-weight: $g-headings-font-weight;
-  font-size: 2.4rem;
+  font-weight: 500;
+  font-size: 2.2rem;
   margin: 0 0 2.4rem;
   line-height: 1.3;
 }
 
 .c-h3, .c-content h3 {
   font-family: $g-headings-font-family;
-  font-weight: $g-headings-font-weight;
+  font-weight: 500;
   font-size: 2rem;
   margin: 0 0 1.6rem;
   line-height: 1.4;
@@ -42,8 +42,8 @@
 
 .c-h4, .c-content h4 {
   font-family: $g-base-font-family;
-  font-size: $g-base-font-size;
-  font-weight: $g-headings-font-weight;
+  font-size: 1.8rem;
+  font-weight: 500;
   margin: 0 0 0.8rem;
 }
 
@@ -85,7 +85,7 @@
       float: left;
       width: 30%;
       clear: left;
-      font-weight: $g-headings-font-weight;
+      font-weight: 500;
     }
     dd {
       float: left;
@@ -117,7 +117,7 @@
   }
 
   strong {
-    font-weight: $g-headings-font-weight;
+    font-weight: 500;
   }
 
   .c-button {

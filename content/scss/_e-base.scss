@@ -39,7 +39,6 @@ body.c-body-compensate-header {
   margin: $g-bar-size-regular 0 0;
 }
 
-
 img,
 video {
   max-width: 100%;
@@ -54,7 +53,7 @@ select {
 }
 
 a {
-  color: $color-primary;
+  color: $color-link;
   text-decoration: none;
 }
 
@@ -63,7 +62,7 @@ em, i {
 }
 
 strong, b {
-  font-weight: $g-headings-font-weight;
+  font-weight: 500;
 }
 
 /* Required fields

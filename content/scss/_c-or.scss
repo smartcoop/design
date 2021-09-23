@@ -1,0 +1,28 @@
+/* ==========================================================================
+  c-or
+  Decorated "or"
+ ========================================================================== */
+
+.c-or {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 2.4rem 0;
+
+  span {
+    background: #FFF;
+    padding: 1rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-top: .1rem solid $color-border;
+  }
+}
