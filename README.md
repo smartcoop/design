@@ -6,6 +6,8 @@ It uses Bedrock in the background, which is a static site generator specialized 
 
 ### Easy install
 
+    git clone git@github.com:smartcoop/design.git
+    cd design
     npm install
     npm start
 
