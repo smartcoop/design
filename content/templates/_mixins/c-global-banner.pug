@@ -1,0 +1,13 @@
+//-
+    Mixin Global Banner - Create a global banner
+
+    @param {Object} props
+    @param {string} skin - the skin of the banner
+    @param {string} icon - which icon to show in the banner
+    @param {string} message - the banner message
+
+mixin c-global-banner({skin="default", icon, message})
+    .c-global-banner(class="c-global-banner--"+skin)&attributes(attributes)
+        +icon(icon? icon : 'circle-information', 'o-svg-icon--'+skin)
+        .c-global-banner__label!= marked(message)
+        +c-button({skin: 'borderless', layout: 'icon-only', icon: 'close'})(data-banner-close) Close
