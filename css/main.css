@@ -1603,7 +1603,10 @@ input.c-button {
   padding-left: 0;
   padding-right: 0;
   font-weight: 600;
-  text-decoration: none; }
+  text-decoration: none;
+  border-color: transparent;
+  border-radius: 0;
+  background: none; }
   .c-button--link:hover, .c-button--link:active,
   .c-button--link:hover svg *,
   .c-button--link:active svg * {
