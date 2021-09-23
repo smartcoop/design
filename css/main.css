@@ -1812,8 +1812,50 @@ input.c-button {
   .c-button-toolbar .c-button--link + .c-button--link {
     margin-left: 1.6rem; }
 
+.c-button-toolbar__label {
+  margin-bottom: 0.8rem; }
+
 .c-table .c-button-toolbar {
   justify-content: flex-end; }
+
+.c-button-toolbar--compact .c-button {
+  border-radius: 0; }
+
+.c-button-toolbar--compact .c-button-toolbar__label {
+  margin: 0; }
+
+.c-button-toolbar--compact .c-button-toolbar__label + * {
+  margin-left: 1.6rem; }
+
+.c-button-toolbar--compact * + .c-button-toolbar__label {
+  margin-left: 1.6rem; }
+
+.c-button-toolbar--compact .c-button:first-child {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem; }
+
+.c-button-toolbar--compact .c-button:last-child {
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem; }
+
+.c-button-toolbar--compact .c-button + .c-button {
+  margin: 0 0 0 -0.1rem; }
+
+.c-button-toolbar--vertical {
+  flex-flow: column; }
+  .c-button-toolbar--vertical .c-button + .c-button {
+    margin-left: 0;
+    margin-top: 0.8rem; }
+  .c-button-toolbar--vertical .c-button:first-child {
+    border-radius: 0;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem; }
+  .c-button-toolbar--vertical .c-button:last-child {
+    border-radius: 0;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem; }
+  .c-button-toolbar--vertical.c-button-toolbar--compact .c-button + .c-button {
+    margin: -0.2rem 0 0 0; }
 
 /* ==========================================================================
   Component: Checkbox and Radio
@@ -2820,7 +2862,7 @@ textarea.c-input--h-large {
 .c-table--styled td,
 .c-table--styled th {
   text-align: left;
-  padding: 1.6rem;
+  padding: 1.2rem 1.6rem;
   position: relative; }
 
 .c-table--styled td .c-button,
@@ -3155,6 +3197,15 @@ textarea.c-input--h-large {
       .c-toolbar.c-toolbar--drop-columns-low-mq .c-toolbar__right .c-toolbar__item {
         margin-left: 0;
         margin-right: 1.6rem; } }
+
+/* ==========================================================================
+  c-pagination-simple
+ ========================================================================== */
+.c-pagination-simple {
+  display: flex;
+  align-items: center; }
+  .c-pagination-simple .c-pagination__item + .c-pagination__item {
+    margin-left: 0.8rem; }
 
 /* ==========================================================================
   Component: Toolbar-title
