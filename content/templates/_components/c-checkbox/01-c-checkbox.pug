@@ -6,12 +6,25 @@
                 .c-checkbox
                     label
                         input(type="checkbox")
-                        | Value 1
+                        | Checkbox
                 .c-checkbox
                     label
-                        input(type="checkbox")
-                        | Value 2
+                        input(type="checkbox" checked)
+                        | Checkbox checked
                 .c-checkbox
                     label
-                        input(type="checkbox", checked)
-                        | Value 3
+                        input(type="checkbox" disabled)
+                        | Checkbox disabled
+                .c-checkbox
+                    label
+                        input(type="checkbox" disabled checked)
+                        | Checkbox disabled checked
+                .c-checkbox
+                    label
+                        input#inputIndeterminate(type="checkbox")
+                        | Checkbox indeterminate
+
+script.
+    var input = document.getElementById("inputIndeterminate");
+    input.indeterminate = true;
+    input.setAttribute('data-indeterminate', true);
