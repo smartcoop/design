@@ -1,0 +1,80 @@
+/* ==========================================================================
+   c-tabs
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+$c-tabs-item-color: $color-muted !default;
+$c-tabs-item-active-color: $color-header !default;
+$c-tabs-item-border-color: $color-gray-200 !default;
+$c-tabs-item-hover-border-color: $color-gray-200 !default;
+$c-tabs-active-border-width: 0.2rem !default;
+
+/* Component
+   ========================================================================== */
+
+.c-tabs {
+  ul {
+    margin-bottom: $g-spacer-unit * 2;
+
+    @media screen and (min-width: $g-bp1) {
+      display: flex;
+      height: 4.8rem;
+      max-height: 4.8rem;
+    }
+  }
+
+  li {
+    flex-basis: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: $g-bp1) {
+      justify-content: center;
+    }
+
+    & + li {
+      @media screen and (max-width: ($g-bp1 - 1px)) {
+        margin-top: $g-spacer-unit;
+      }
+    }
+  }
+}
+
+.c-tabs__item {
+  color: $c-tabs-item-color;
+  transition: color 0.1s linear;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.08rem;
+  padding: 0 $g-spacer-unit;
+  height: 100%;
+
+  &:hover {
+    color: $c-tabs-item-active-color;
+  }
+
+  &:focus {
+    color: $c-tabs-item-active-color;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &[aria-selected="true"] {
+    box-shadow: inset 0 -#{$c-tabs-active-border-width} 0 $color-red-500;
+    color: $c-tabs-item-active-color;
+    position: relative; // makes box-shadow to be on top of the global border
+    z-index: $g-c-tabs-z;
+    margin-bottom: -0.1rem;
+  }
+}
+
+.c-tabs.c-tabs--border-bottom ul {
+  border-bottom: 1px solid $c-tabs-item-border-color;
+}
