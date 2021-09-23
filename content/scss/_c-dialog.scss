@@ -1,0 +1,203 @@
+/* ==========================================================================
+  Component: c-dialog
+  ---
+  Dialog windows
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+$c-dialog-padding-horizontal: 2.4rem !default;
+$c-dialog-padding-vertical: 2.4rem !default;
+$c-dialog-border-radius: 0.4rem !default;
+$c-dialog-shadow-color: $color-gray-650 !default;
+
+$c-dialog-header-bg-color: #fff !default;
+$c-dialog-footer-bg-color: #fff !default;
+$c-dialog-header-border-color: $color-border !default;
+$c-dialog-footer-border-color: $color-border !default;
+
+$g-c-dialog-backdrop-z: 30 !default;
+$g-c-dialog-context-z: 40 !default;
+$g-c-dialog-z: 50 !default;
+
+/* Component
+   ========================================================================== */
+
+.c-dialog-context {
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transform: translateY(-4rem) scale(0.98);
+  transition: visibility 0s linear 0.2s, opacity 0.2s linear,
+    transform 0.2s ease-in-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: $g-c-dialog-context-z;
+  align-items: center;
+  justify-content: center;
+
+  &.c-dialog-context--visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-delay: 0s;
+    visibility: visible;
+  }
+}
+
+.c-dialog {
+  border-radius: $c-dialog-border-radius;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: $g-c-dialog-z;
+  margin: 0 auto;
+  position: relative;
+  max-height: calc(100vh - 4.8rem);
+}
+
+.c-dialog__push {
+  min-height: 2.4rem;
+  flex: 1;
+}
+
+.c-dialog__content {
+  padding: $c-dialog-padding-vertical $c-dialog-padding-horizontal;
+}
+
+.c-dialog__body {
+  background-color: #fff;
+  flex: 0 1 auto;
+  overflow: auto;
+}
+
+.c-dialog__body--no-padding {
+  padding: 0;
+}
+
+.c-dialog__header {
+  height: 6.4rem;
+  flex: 0;
+  background-color: $c-dialog-header-bg-color;
+  border-radius: $c-dialog-border-radius $c-dialog-border-radius 0 0;
+}
+
+.c-dialog__header--bordered {
+  border-bottom: 1px solid $c-dialog-header-border-color;
+}
+
+.c-dialog__title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.c-dialog__header--no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.c-dialog__footer {
+  height: 6.4rem;
+  flex: 0;
+  background-color: $c-dialog-footer-bg-color;
+  border-radius: 0 0 $c-dialog-border-radius $c-dialog-border-radius;
+
+  // fix for border radii when no footer actions are available
+  &:empty {
+    height: 0.3rem;
+    border-radius: 0 0 $c-dialog-border-radius $c-dialog-border-radius;
+    flex-basis: auto;
+  }
+}
+
+.c-dialog__footer--bordered {
+  border-top: 1px solid $c-dialog-footer-border-color;
+}
+
+/* Sizes
+  ========================================================================== */
+
+.c-dialog--large {
+  width: 88rem;
+}
+
+.c-dialog--medium {
+  width: 66rem;
+}
+
+.c-dialog--small {
+  width: 44rem;
+}
+
+.c-dialog--fullscreen {
+  max-height: none;
+  max-width: none;
+
+  height: calc(100% - #{$c-dialog-padding-horizontal * 2});
+  width: calc(100% - #{$c-dialog-padding-horizontal * 2});
+
+  .c-dialog__body {
+    flex: 1 1 auto;
+  }
+}
+
+.c-dialog--fullwidth {
+  max-width: 66rem;
+  width: calc(100% - #{$c-dialog-padding-horizontal * 2});
+}
+
+.c-dialog--fullheight {
+  max-height: 120rem;
+  height: calc(100% - #{$c-dialog-padding-horizontal * 2});
+
+  .c-dialog__body {
+    flex: 1 1 auto;
+  }
+}
+
+/* Exceptions for small dialog
+   ========================================================================== */
+
+.c-dialog--small .c-dialog__body {
+  border-radius: $c-dialog-border-radius $c-dialog-border-radius 0 0;
+}
+
+/* Exceptions for headerless dialog
+   ========================================================================== */
+
+.c-dialog--headerless .c-dialog__body {
+  border-radius: $c-dialog-border-radius $c-dialog-border-radius 0 0;
+}
+
+/* Exceptions for footerless dialog
+   ========================================================================== */
+
+.c-dialog--footerless .c-dialog__body {
+  border-radius: 0 0 $c-dialog-border-radius $c-dialog-border-radius;
+}
+
+/* Backdrop
+  ========================================================================== */
+
+.c-dialog-backdrop {
+  background: rgba($color-gray-900, 0.8);
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+  left: 0;
+  visibility: hidden;
+  z-index: $g-c-dialog-backdrop-z;
+
+  &.c-dialog-backdrop--visible {
+    opacity: 1;
+    transition-delay: 0s;
+    visibility: visible;
+  }
+}

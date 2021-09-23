@@ -1,10 +1,10 @@
 # Smart Coop Design System
 
-This repository contains the design system website hosted at https://design.smart.coop/; as well as the component documentation.
+This repository contains the design system website hosted at <a href="https://design.smart.coop/">design.smart.coop</a>. This site describes how to contribute to the design system from a design and development perspective. A big part of the site is <a href="https://design.smart.coop/development/component-documentation.html">the component documentation</a> where you can find copy/pastable HTML and CSS for common components.
 
-It uses Bedrock in the background, which is a static site generator specialized in showing design systems. For instructions, view the README <a href="https://github.com/usebedrock/bedrock">here</a>.
+This website uses Bedrock in the background, which is a static site generator specialized in showing design systems. For instructions, view the README <a href="https://github.com/usebedrock/bedrock">here</a>.
 
-### Easy install
+### Get started
 
     git clone git@github.com:smartcoop/design.git
     cd design
@@ -15,11 +15,12 @@ It uses Bedrock in the background, which is a static site generator specialized 
 
 ### Contributing
 
-We don't have contributing guidelines yet!
+You can contribute to this project in several ways.
 
-See https://github.com/smartcoop/design/issues/75 .
-
-This text to be replaced when we have something.
+* Create a pull request, that improves the code
+    * Look at open issues for inspiration
+    * Discuss an open issue if you need more information to solve it
+* Create an issue that describes a comment you have, a problem or bug
 
 ### License
 

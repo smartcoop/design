@@ -1,18 +1,18 @@
-.c-modal-backdrop.c-modal-backdrop--visible(style="position:absolute;z-index:0;")
+.c-dialog-backdrop.c-dialog-backdrop--visible(style="position:absolute;z-index:0;")
 
-.c-modal.c-modal--medium(role="dialog" aria-labelledby="modalTitle-02")
-    .c-modal__push
-    .c-modal__header.c-modal__header--bordered
+.c-dialog.c-dialog--medium(role="dialog" aria-labelledby="dialogTitle-02")
+    .c-dialog__push
+    .c-dialog__header.c-dialog__header--bordered
         .c-toolbar.c-toolbar--spaced
             .c-toolbar__left
                 .c-toolbar__item
-                    h2#modalTitle-02.c-modal__title Modal Window
+                    h2#dialogTitle-02.c-dialog__title dialog Window
             .c-toolbar__item
-                button.c-button.c-button--borderless.c-button--icon(data-modal-close aria-label="Close dialog")
+                button.c-button.c-button--borderless.c-button--icon(data-dialog-close aria-label="Close dialog")
                     .c-button__content
                         +icon('close')
 
-    .c-modal__body
+    .c-dialog__body
         .u-spacer-l
             .o-form-group-layout.o-form-group-layout--horizontal
 
@@ -39,17 +39,17 @@
                             option Option B
                             option Option C
 
-    .c-modal__footer.c-modal__footer--bordered
+    .c-dialog__footer.c-dialog__footer--bordered
         .c-toolbar.c-toolbar--spaced
             .c-toolbar__left
                 .c-toolbar__item
             .c-toolbar__right
                 .c-toolbar__item
                     .c-button-toolbar
-                        button.c-button.c-button--secondary(data-modal-close)
+                        button.c-button.c-button--secondary(data-dialog-close)
                                 .c-button__content
                                     .c-button__label Cancel
-                        button.c-button.c-button--primary(data-modal-close)
+                        button.c-button.c-button--primary(data-dialog-close)
                                 .c-button__content
                                     .c-button__label Save
-    .c-modal__push
+    .c-dialog__push

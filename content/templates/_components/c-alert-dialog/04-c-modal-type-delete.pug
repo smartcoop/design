@@ -1,21 +1,21 @@
-.c-modal-backdrop.c-modal-backdrop--visible(style="position:absolute;z-index:0;")
+.c-dialog-backdrop.c-dialog-backdrop--visible(style="position:absolute;z-index:0;")
 
-.c-modal.c-modal--small(role="dialog")
-    .c-modal__push
-    .c-modal__body
-        .c-modal__content
+.c-dialog.c-dialog--small(role="dialog")
+    .c-dialog__push
+    .c-dialog__body
+        .c-dialog__content
             h3.c-h3 Are you sure?
             p.u-m-0 Are you sure want to delete this item?
-    .c-modal__footer
+    .c-dialog__footer
         .c-toolbar.c-toolbar--spaced
             .c-toolbar__right
                 .c-toolbar__item
                     .c-button-toolbar
-                        button.c-button.c-button--secondary(data-modal-close)
+                        button.c-button.c-button--secondary(data-dialog-close)
                                 .c-button__content
                                     .c-button__label Cancel
-                        button.c-button.c-button--primary(data-modal-close)
+                        button.c-button.c-button--primary(data-dialog-close)
                                 .c-button__content
                                     +icon('delete')
                                     .c-button__label Delete
-    .c-modal__push
+    .c-dialog__push

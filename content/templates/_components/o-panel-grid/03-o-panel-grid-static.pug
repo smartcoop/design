@@ -1,0 +1,18 @@
+.o-panel-grid
+    .o-panel-grid__item(
+        data-row=1,
+        data-column=-1,
+        data-row-span=3,
+        data-column-span=1
+    )
+        .c-panel.c-panel--background-gray.u-maximize-height
+            .c-panel__content.c-panel__content--centered.c-panel__content--spaced
+                .u-spacer
+                    p Content
+
+    each val in [1,2,3,4,5,6,7,8,9]
+        .c-panel
+            .c-panel__content
+                .u-spacer
+                    p Content
+

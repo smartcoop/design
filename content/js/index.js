@@ -1,6 +1,6 @@
 import "./modules/accordion";
 import "./modules/menu";
-import "./modules/modals";
+import "./modules/dialogs";
 import "./modules/popper-popover";
 import "./modules/tabs";
 import "./modules/input-password.js"

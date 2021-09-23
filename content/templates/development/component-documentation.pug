@@ -3,6 +3,19 @@ extends ../index
 block append pageVariables
     - var moduleTitle = "Component documentation"
 
+block append headerStyles
+
+    style.
+        #component-docs a {
+            background: #FFF;
+            border-radius: .3rem;
+            display: block;
+            padding: 2rem;
+        }
+        #component-docs a:hover {
+            background: #F2F2F2;
+        }
+
 block content
 
     .u-padding-bottom-l
@@ -31,4 +44,24 @@ block content
 
         .o-grid-col-bp3-9
                 .c-display
-                    p Please choose an item in the navigation.
+                    p Please choose an item in the navigation. Or choose one of the popular components:
+                    
+                ul.o-panel-grid#component-docs
+                    li.c-panel
+                        .c-panel__content
+                            a(href="/development/docs/c-button.html") Button
+                    li.c-panel
+                        .c-panel__content
+                            a(href="/development/docs/c-input.html") Input
+                    li.c-panel
+                        .c-panel__content
+                            a(href="/development/docs/c-dialog.html") Dialog
+                    li.c-panel
+                        .c-panel__content
+                            a(href="/development/docs/c-checkbox.html") Checkbox
+                    li.c-panel
+                        .c-panel__content
+                            a(href="/development/docs/c-select.html") Select
+                    li.c-panel
+                        .c-panel__content
+                            a(href="/development/docs/c-tooltip.html") Tooltip

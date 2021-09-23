@@ -1,5 +1,5 @@
 ---
-title: Modal type (delete)
+title: Delete
 ---
 
 A warning when you are about to delete an item.
