@@ -138,25 +138,3 @@
   font-weight: 400;
   border: 0.1rem solid $color-gray-200;
 }
-
-/* Better display for modals when prototype nav is open
-   ========================================================================== */
-
-.br-prototype-nav-is-open .c-modal {
-  left: 11%;
-  position: relative;
-
-  &.c-modal--fullscreen {
-    left: 0;
-    padding-left: calc(25rem);
-  }
-}
-
-#component-05-c-button-muted .br-sample-content {
-  background: #999;
-}
-
-#component-01-c-header-backdrop-default .br-sample-content,
-#component-02-c-header-backdrop-with-back-button .br-sample-content {
-  background: #212121;
-}
