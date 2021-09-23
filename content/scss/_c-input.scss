@@ -88,26 +88,6 @@ textarea.c-input--h-large { height: 20rem; }
   font-size: 85%;
 }
 
-/* Input With Icon
-   ========================================================================== */
-
-.c-input-with-icon {
-  display: block;
-  position: relative;
-
-  .c-input {
-    padding-left: 3rem;
-  }
-
-  .o-svg-icon {
-    left: 0.8rem;
-    opacity: 0.5;
-    position: absolute;
-    top: 0.9rem;
-    width: 1.8rem;
-    height: 1.8rem;
-  }
-}
 
 .c-input-group {
   display: flex;
@@ -157,52 +137,3 @@ textarea.c-input--h-large { height: 20rem; }
 }
 
 
-/* File input
-  ========================================================================== */
-
-.c-input-file {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-
-.c-input-file + label {
-  border: 1px dashed $color-gray-300;
-  border-radius: 0.4rem;
-  padding: 1.6rem;
-  display: flex;
-  cursor: pointer;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  .c-button {
-    margin-left: 0.8rem;
-  }
-}
-.c-input-file:focus + label {
-  outline: 1px dotted #000;
-  outline: -webkit-focus-ring-color auto 5px;
-}
-
-.c-input-file + label * {
-  pointer-events: none;
-}
-
-.c-input-file--large {
-
-  + label {
-    flex-direction: column;
-    flex-wrap: nowrap;
-
-    & > *:not(:last-child) {
-      margin-bottom: 1.2rem;
-    }
-  }
-
-  .c-button {
-    margin: 0;
-  }
-}
