@@ -260,6 +260,176 @@ abbr[title] {
 .o-container-vertical--bottom-bordered {
   border-bottom: 1px solid #E5E5E5; }
 
+.o-panel-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 2.4rem 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(25.6rem, 1fr)); }
+  @media screen and (min-width: 400px) {
+    .o-panel-grid.small-up-1 {
+      grid-template-columns: repeat(1, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.small-up-2 {
+      grid-template-columns: repeat(2, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.small-up-3 {
+      grid-template-columns: repeat(3, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.small-up-4 {
+      grid-template-columns: repeat(4, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.small-up-5 {
+      grid-template-columns: repeat(5, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.small-up-6 {
+      grid-template-columns: repeat(6, minmax(4.8rem, 1fr)); } }
+  @media screen and (min-width: 700px) {
+    .o-panel-grid.medium-up-1 {
+      grid-template-columns: repeat(1, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.medium-up-2 {
+      grid-template-columns: repeat(2, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.medium-up-3 {
+      grid-template-columns: repeat(3, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.medium-up-4 {
+      grid-template-columns: repeat(4, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.medium-up-5 {
+      grid-template-columns: repeat(5, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.medium-up-6 {
+      grid-template-columns: repeat(6, minmax(4.8rem, 1fr)); } }
+  @media screen and (min-width: 900px) {
+    .o-panel-grid.large-up-1 {
+      grid-template-columns: repeat(1, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.large-up-2 {
+      grid-template-columns: repeat(2, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.large-up-3 {
+      grid-template-columns: repeat(3, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.large-up-4 {
+      grid-template-columns: repeat(4, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.large-up-5 {
+      grid-template-columns: repeat(5, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.large-up-6 {
+      grid-template-columns: repeat(6, minmax(4.8rem, 1fr)); } }
+  @media screen and (min-width: 1200px) {
+    .o-panel-grid.extra-large-up-1 {
+      grid-template-columns: repeat(1, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.extra-large-up-2 {
+      grid-template-columns: repeat(2, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.extra-large-up-3 {
+      grid-template-columns: repeat(3, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.extra-large-up-4 {
+      grid-template-columns: repeat(4, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.extra-large-up-5 {
+      grid-template-columns: repeat(5, minmax(4.8rem, 1fr)); }
+    .o-panel-grid.extra-large-up-6 {
+      grid-template-columns: repeat(6, minmax(4.8rem, 1fr)); } }
+
+.o-panel-grid__item[data-column="-1"] {
+  grid-column-start: -2; }
+
+.o-panel-grid__item[data-column="1"] {
+  grid-column-start: 1; }
+
+.o-panel-grid__item[data-column-span="1"] {
+  grid-column-end: span 1; }
+
+.o-panel-grid__item[data-column="-2"] {
+  grid-column-start: -3; }
+
+.o-panel-grid__item[data-column="2"] {
+  grid-column-start: 2; }
+
+.o-panel-grid__item[data-column-span="2"] {
+  grid-column-end: span 2; }
+
+.o-panel-grid__item[data-column="-3"] {
+  grid-column-start: -4; }
+
+.o-panel-grid__item[data-column="3"] {
+  grid-column-start: 3; }
+
+.o-panel-grid__item[data-column-span="3"] {
+  grid-column-end: span 3; }
+
+.o-panel-grid__item[data-column="-4"] {
+  grid-column-start: -5; }
+
+.o-panel-grid__item[data-column="4"] {
+  grid-column-start: 4; }
+
+.o-panel-grid__item[data-column-span="4"] {
+  grid-column-end: span 4; }
+
+.o-panel-grid__item[data-column="-5"] {
+  grid-column-start: -6; }
+
+.o-panel-grid__item[data-column="5"] {
+  grid-column-start: 5; }
+
+.o-panel-grid__item[data-column-span="5"] {
+  grid-column-end: span 5; }
+
+.o-panel-grid__item[data-column="-6"] {
+  grid-column-start: -7; }
+
+.o-panel-grid__item[data-column="6"] {
+  grid-column-start: 6; }
+
+.o-panel-grid__item[data-column-span="6"] {
+  grid-column-end: span 6; }
+
+.o-panel-grid__item[data-row="-1"] {
+  grid-row-start: -2; }
+
+.o-panel-grid__item[data-row="1"] {
+  grid-row-start: 1; }
+
+.o-panel-grid__item[data-row-span="1"] {
+  grid-row-end: span 1; }
+
+.o-panel-grid__item[data-row="-2"] {
+  grid-row-start: -3; }
+
+.o-panel-grid__item[data-row="2"] {
+  grid-row-start: 2; }
+
+.o-panel-grid__item[data-row-span="2"] {
+  grid-row-end: span 2; }
+
+.o-panel-grid__item[data-row="-3"] {
+  grid-row-start: -4; }
+
+.o-panel-grid__item[data-row="3"] {
+  grid-row-start: 3; }
+
+.o-panel-grid__item[data-row-span="3"] {
+  grid-row-end: span 3; }
+
+.o-panel-grid__item[data-row="-4"] {
+  grid-row-start: -5; }
+
+.o-panel-grid__item[data-row="4"] {
+  grid-row-start: 4; }
+
+.o-panel-grid__item[data-row-span="4"] {
+  grid-row-end: span 4; }
+
+.o-panel-grid__item[data-row="-5"] {
+  grid-row-start: -6; }
+
+.o-panel-grid__item[data-row="5"] {
+  grid-row-start: 5; }
+
+.o-panel-grid__item[data-row-span="5"] {
+  grid-row-end: span 5; }
+
+.o-panel-grid__item[data-row="-6"] {
+  grid-row-start: -7; }
+
+.o-panel-grid__item[data-row="6"] {
+  grid-row-start: 6; }
+
+.o-panel-grid__item[data-row-span="6"] {
+  grid-row-end: span 6; }
+
+.o-panel-grid--fill {
+  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr)); }
+
 /* ==========================================================================
     Object: Flex
     ---
@@ -2096,15 +2266,15 @@ textarea.c-input--h-large {
     right: 0.6rem; }
 
 /* ==========================================================================
-  Component: c-modal
+  Component: c-dialog
   ---
-  Modal windows
+  Dialog windows
    ========================================================================== */
 /* Variables
    ========================================================================== */
 /* Component
    ========================================================================== */
-.c-modal-context {
+.c-dialog-context {
   display: flex;
   height: 100%;
   left: 0;
@@ -2118,13 +2288,13 @@ textarea.c-input--h-large {
   z-index: 50;
   align-items: center;
   justify-content: center; }
-  .c-modal-context.c-modal-context--visible {
+  .c-dialog-context.c-dialog-context--visible {
     opacity: 1;
     transform: translateY(0) scale(1);
     transition-delay: 0s;
     visibility: visible; }
 
-.c-modal {
+.c-dialog {
   border-radius: 0.4rem;
   display: flex;
   flex-direction: column;
@@ -2134,98 +2304,98 @@ textarea.c-input--h-large {
   position: relative;
   max-height: calc(100vh - 4.8rem); }
 
-.c-modal__push {
+.c-dialog__push {
   min-height: 2.4rem;
   flex: 1; }
 
-.c-modal__content {
+.c-dialog__content {
   padding: 2.4rem 2.4rem; }
 
-.c-modal__body {
+.c-dialog__body {
   background-color: #fff;
   flex: 0 1 auto;
   overflow: auto; }
 
-.c-modal__body--no-padding {
+.c-dialog__body--no-padding {
   padding: 0; }
 
-.c-modal__header {
+.c-dialog__header {
   height: 6.4rem;
   flex: 0;
   background-color: #fff;
   border-radius: 0.4rem 0.4rem 0 0; }
 
-.c-modal__header--bordered {
+.c-dialog__header--bordered {
   border-bottom: 1px solid #E5E5E5; }
 
-.c-modal__title {
+.c-dialog__title {
   font-size: 2rem;
   font-weight: 500; }
 
-.c-modal__header--no-padding {
+.c-dialog__header--no-padding {
   padding-top: 0;
   padding-bottom: 0; }
 
-.c-modal__footer {
+.c-dialog__footer {
   height: 6.4rem;
   flex: 0;
   background-color: #fff;
   border-radius: 0 0 0.4rem 0.4rem; }
-  .c-modal__footer:empty {
+  .c-dialog__footer:empty {
     height: 0.3rem;
     border-radius: 0 0 0.4rem 0.4rem;
     flex-basis: auto; }
 
-.c-modal__footer--bordered {
+.c-dialog__footer--bordered {
   border-top: 1px solid #E5E5E5; }
 
 /* Sizes
   ========================================================================== */
-.c-modal--large {
+.c-dialog--large {
   width: 88rem; }
 
-.c-modal--medium {
+.c-dialog--medium {
   width: 66rem; }
 
-.c-modal--small {
+.c-dialog--small {
   width: 44rem; }
 
-.c-modal--fullscreen {
+.c-dialog--fullscreen {
   max-height: none;
   max-width: none;
   height: calc(100% - 4.8rem);
   width: calc(100% - 4.8rem); }
-  .c-modal--fullscreen .c-modal__body {
+  .c-dialog--fullscreen .c-dialog__body {
     flex: 1 1 auto; }
 
-.c-modal--fullwidth {
+.c-dialog--fullwidth {
   max-width: 66rem;
   width: calc(100% - 4.8rem); }
 
-.c-modal--fullheight {
+.c-dialog--fullheight {
   max-height: 120rem;
   height: calc(100% - 4.8rem); }
-  .c-modal--fullheight .c-modal__body {
+  .c-dialog--fullheight .c-dialog__body {
     flex: 1 1 auto; }
 
-/* Exceptions for small modal
+/* Exceptions for small dialog
    ========================================================================== */
-.c-modal--small .c-modal__body {
+.c-dialog--small .c-dialog__body {
   border-radius: 0.4rem 0.4rem 0 0; }
 
-/* Exceptions for headerless modal
+/* Exceptions for headerless dialog
    ========================================================================== */
-.c-modal--headerless .c-modal__body {
+.c-dialog--headerless .c-dialog__body {
   border-radius: 0.4rem 0.4rem 0 0; }
 
-/* Exceptions for footerless modal
+/* Exceptions for footerless dialog
    ========================================================================== */
-.c-modal--footerless .c-modal__body {
+.c-dialog--footerless .c-dialog__body {
   border-radius: 0 0 0.4rem 0.4rem; }
 
 /* Backdrop
   ========================================================================== */
-.c-modal-backdrop {
+.c-dialog-backdrop {
   background: rgba(26, 26, 26, 0.8);
   display: block;
   width: 100%;
@@ -2237,7 +2407,7 @@ textarea.c-input--h-large {
   left: 0;
   visibility: hidden;
   z-index: 40; }
-  .c-modal-backdrop.c-modal-backdrop--visible {
+  .c-dialog-backdrop.c-dialog-backdrop--visible {
     opacity: 1;
     transition-delay: 0s;
     visibility: visible; }
@@ -2779,7 +2949,7 @@ textarea.c-input--h-large {
   .c-table-responsive > .c-table--bordered {
     border: 0; }
 
-/* Card + table context
+/* Panel + table context
    ========================================================================== */
 .c-panel .c-table {
   background: #FFF; }

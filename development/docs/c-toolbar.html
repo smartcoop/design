@@ -188,6 +188,9 @@
                                     <a class="null " href="/development/docs/c-accordion.html"> Accordion</a>
                                 </li>
                                 <li class="null ">
+                                    <a class="null " href="/development/docs/c-alert-dialog.html"> Alert dialog</a>
+                                </li>
+                                <li class="null ">
                                     <a class="null " href="/development/docs/c-alert-stack.html"> Alert stack</a>
                                 </li>
                                 <li class="null ">
@@ -212,6 +215,9 @@
                                     <a class="null " href="/development/docs/c-checkbox.html"> Checkbox</a>
                                 </li>
                                 <li class="null ">
+                                    <a class="null " href="/development/docs/c-dialog.html"> Dialog</a>
+                                </li>
+                                <li class="null ">
                                     <a class="null " href="/development/docs/c-dropdown.html"> Dropdown</a>
                                 </li>
                                 <li class="null ">
@@ -225,12 +231,6 @@
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-input.html"> Input</a>
-                                </li>
-                                <li class="null ">
-                                    <a class="null " href="/development/docs/c-modal-sizes.html"> Modal sizes</a>
-                                </li>
-                                <li class="null ">
-                                    <a class="null " href="/development/docs/c-modal-types.html"> Modal types</a>
                                 </li>
                                 <li class="null ">
                                     <a class="null " href="/development/docs/c-multi-select.html"> Multi Select</a>
@@ -293,6 +293,9 @@
                                 <li class="null ">
                                     <a class="null " href="/development/docs/o-grid.html"> Grid</a>
                                 </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-panel-grid.html"> Panel grid</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -315,7 +318,7 @@
                 <div class="br-content c-content">
                     <p>The toolbar is meant as a generic construct to position UI elements. It provides a structure where you can position items on the left, in the center and on the right.</p>
                     <p>The toolbar requires a parent <code>.c-toolbar</code> div that contains children that define the positioning: <code>.c-toolbar__left</code>, <code>.c-toolbar__right</code> and <code>.c-toolbar__center</code>.</p>
-                    <p>The toolbar construct is used in many parts of the user interface: modals, panels, navbars and popovers all use the toolbar component to position elements in a consistent way.</p>
+                    <p>The toolbar construct is used in many parts of the user interface: dialogs, panels, navbars and popovers all use the toolbar component to position elements in a consistent way.</p>
 
                 </div>
                 <div class="br-sample" id="component-01-c-toolbar-basics">
@@ -460,24 +463,24 @@
                 </div>
                 <div class="br-sample" id="component-03-c-toolbar-modal">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Toolbar (modal)</h3>
+                        <h3 class="br-sample-heading c-h3">Toolbar (dialog)</h3>
                         <a class="br-sample-header-link" href="#component-03-c-toolbar-modal">#</a>
                     </div>
                     <div class="br-sample-documentation c-content">
-                        <p>A toolbar as it might appear inside a <a href="/development/docs/c-modal.html">modal window</a>.</p>
+                        <p>A toolbar as it might appear inside a <a href="/development/docs/c-dialog.html">dialog window</a>.</p>
                     </div>
                     <div class="br-sample-content">
                         <!-- Toolbar code-->
                         <div class="c-toolbar">
                             <div class="c-toolbar__left">
                                 <div class="c-toolbar__item">
-                                    <h2 class="c-toolbar__title">Modal title</h2>
+                                    <h2 class="c-toolbar__title">Dialog title</h2>
                                 </div>
                             </div>
                             <div class="c-toolbar__right">
                                 <div class="c-toolbar__item">
                                     <div class="c-button-toolbar">
-                                        <button class="c-button c-button--borderless" data-modal-close="data-modal-close">
+                                        <button class="c-button c-button--borderless" data-dialog-close="data-dialog-close">
                                             <div class="c-button__content">
                                                 <div class="o-svg-icon o-svg-icon-close  ">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -501,13 +504,13 @@
 &lt;div class=&quot;c-toolbar&quot;&gt;
     &lt;div class=&quot;c-toolbar__left&quot;&gt;
         &lt;div class=&quot;c-toolbar__item&quot;&gt;
-            &lt;h2 class=&quot;c-toolbar__title&quot;&gt;Modal title&lt;/h2&gt;
+            &lt;h2 class=&quot;c-toolbar__title&quot;&gt;Dialog title&lt;/h2&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;c-toolbar__right&quot;&gt;
         &lt;div class=&quot;c-toolbar__item&quot;&gt;
             &lt;div class=&quot;c-button-toolbar&quot;&gt;
-                &lt;button class=&quot;c-button c-button--borderless&quot; data-modal-close=&quot;data-modal-close&quot;&gt;
+                &lt;button class=&quot;c-button c-button--borderless&quot; data-dialog-close=&quot;data-dialog-close&quot;&gt;
                     &lt;div class=&quot;c-button__content&quot;&gt;
                         &lt;div class=&quot;o-svg-icon o-svg-icon-close  &quot;&gt;
                             &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
@@ -528,11 +531,11 @@
 .c-toolbar
     .c-toolbar__left
         .c-toolbar__item
-            h2.c-toolbar__title Modal title
+            h2.c-toolbar__title Dialog title
     .c-toolbar__right
         .c-toolbar__item
             .c-button-toolbar
-                button.c-button.c-button--borderless(data-modal-close)
+                button.c-button.c-button--borderless(data-dialog-close)
                     .c-button__content
                         +icon('close')
                         .u-sr-accessible Cancel

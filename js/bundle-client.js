@@ -5,7 +5,7 @@ require("./modules/accordion");
 
 require("./modules/menu");
 
-require("./modules/modals");
+require("./modules/dialogs");
 
 require("./modules/popper-popover");
 
@@ -17,7 +17,7 @@ require("./modules/popper-tooltip");
 
 require("./modules/design-system-website-mobile-menu");
 
-},{"./modules/accordion":2,"./modules/design-system-website-mobile-menu":3,"./modules/input-password.js":4,"./modules/menu":5,"./modules/modals":6,"./modules/popper-popover":7,"./modules/popper-tooltip":8,"./modules/tabs":9}],2:[function(require,module,exports){
+},{"./modules/accordion":2,"./modules/design-system-website-mobile-menu":3,"./modules/dialogs":4,"./modules/input-password.js":5,"./modules/menu":6,"./modules/popper-popover":7,"./modules/popper-tooltip":8,"./modules/tabs":9}],2:[function(require,module,exports){
 "use strict";
 
 /* Accordion
@@ -61,6 +61,234 @@ mobileNavigationOpenButton && mobileNavigationOpenButton.addEventListener('click
 mobileNavigationCloseButton && mobileNavigationCloseButton.addEventListener('click', handleMenuClose, false);
 
 },{}],4:[function(require,module,exports){
+"use strict";
+
+var _util = require("./util.js");
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+// Global settings
+var dialogClass = 'c-dialog';
+var backdropClass = 'c-dialog-backdrop';
+var backdropVisibleclass = 'c-dialog-backdrop--visible';
+var contextClass = 'c-dialog-context';
+var contextVisibleClass = 'c-dialog-context--visible';
+var menuActiveClass = '.c-menu--visible';
+var queryParams = getQueryParameters(); // DOM elements
+
+var bodyEl = document.querySelector('body');
+var dialogTriggers = document.querySelectorAll('[data-dialog]');
+var closeButtons = document.querySelectorAll('[data-dialog-close]');
+var closeAllButtons = document.querySelectorAll("[data-dialog-close-all]");
+var contexts = document.querySelectorAll(".".concat(contextClass));
+var dialogs = document.querySelectorAll(".".concat(dialogClass));
+var backdrop = document.querySelector(".".concat(backdropClass)); // Check for triggers on page
+
+if (dialogTriggers.length > 0) {
+  // Create backdrop if non-existent
+  if (backdrop === null) {
+    backdrop = document.createElement('div');
+    backdrop.classList.add(backdropClass);
+    bodyEl.appendChild(backdrop);
+  }
+} // Find parent context -- add try-catch to prevent error when class is not found
+
+
+var findParentContext = function findParentContext(el) {
+  var parentEl = el;
+
+  try {
+    while (!parentEl.classList.contains(contextClass)) {
+      parentEl = parentEl.parentNode;
+    }
+  } catch (_unused) {
+    return null;
+  }
+
+  return parentEl;
+}; // Open dialog
+
+
+var showdialog = function showdialog(contextEl) {
+  if (contextEl) {
+    contextEl.classList.add(contextVisibleClass);
+    bodyEl.classList.add("u-kill-scroll");
+    backdrop.classList.add(backdropVisibleclass);
+  } // Push dialog to URL of browser
+
+
+  window.history.pushState('page', 'Title', "".concat(window.location.origin).concat(window.location.pathname, "?dialog=").concat(contextEl.getAttribute('id')));
+}; // Close dialog
+
+
+var closedialog = function closedialog(contextEl) {
+  if (contextEl) {
+    contextEl.classList.remove(contextVisibleClass);
+    bodyEl.classList.remove("u-kill-scroll");
+    backdrop.classList.remove(backdropVisibleclass);
+  } // Push normal URL to browser again
+
+
+  window.history.pushState('page', 'Title', "".concat(window.location.origin).concat(window.location.pathname));
+}; // Close all other dialogs in case multiple dialogs are opened after each other
+
+
+var closedialogs = function closedialogs(contextEl) {
+  _toConsumableArray(dialogs).filter(function (dialog) {
+    return dialog.parentElement !== contextEl;
+  }).forEach(function (dialog) {
+    if (dialog.parentElement.classList.contains(contextVisibleClass)) {
+      dialog.parentElement.classList.remove(contextVisibleClass);
+      bodyEl.classList.remove("u-kill-scroll");
+    }
+  });
+}; // Handle trigger clicks
+
+
+var handleTriggerClick = function handleTriggerClick(e) {
+  e.preventDefault();
+  var contextId = e.currentTarget.getAttribute('data-dialog');
+  var contextEl = document.getElementById(contextId);
+  closedialogs(contextEl);
+  showdialog(contextEl);
+}; // Handle close button clicks
+
+
+var handleCloseClicks = function handleCloseClicks(e) {
+  e.preventDefault();
+  var contextEl = findParentContext(e.currentTarget);
+  closedialog(contextEl);
+}; // Handle close all button clicks
+
+
+var handleCloseAllClicks = function handleCloseAllClicks(e) {
+  e.preventDefault();
+  closedialogs(null);
+  var contextEl = findParentContext(e.currentTarget);
+  closedialog(contextEl);
+}; // Close dialog on click outside
+
+
+var handleContextClicks = function handleContextClicks(e) {
+  var activeContext = document.querySelector(".".concat(contextVisibleClass));
+
+  if ((0, _util.isClickOutside)(e, dialogs)) {
+    if (!activeContext.querySelector(menuActiveClass)) closedialog(activeContext);
+  }
+}; // Close dialog on pressing escape key
+
+
+var handleEscKey = function handleEscapeKey(e) {
+  if (e.keyCode === 27) {
+    var activeContext = document.querySelector(".".concat(contextVisibleClass));
+    closedialog(activeContext);
+  }
+}; // Get query parameters to open dialogs if they're in the URL
+
+
+function getQueryParameters(str) {
+  return (str || document.location.search).replace(/(^\?)/, '').split('&').map(function (n) {
+    return n = n.split('='), this[n[0]] = n[1], this;
+  }.bind({}))[0];
+} // If there is a parameter `dialog` in the URL, call that dialog
+
+
+if (queryParams.dialog) {
+  var calldialog = document.getElementById(queryParams.dialog);
+  showdialog(calldialog);
+} // Move contexts to root element
+
+
+contexts.forEach(function (context) {
+  return bodyEl.appendChild(context);
+}); // Add click listener to triggers
+
+dialogTriggers.forEach(function (dialogTrigger) {
+  return dialogTrigger.addEventListener('click', handleTriggerClick, false);
+}); // Add click listener to close buttons
+
+closeButtons.forEach(function (closeButton) {
+  return closeButton.addEventListener('click', handleCloseClicks, false);
+}); // Add click listener to close buttons for all dialogs
+
+closeAllButtons.forEach(function (closeAllButton) {
+  return closeAllButton.addEventListener("click", handleCloseAllClicks, false);
+}); // Add click listener to contexts
+
+contexts.forEach(function (context) {
+  return context.addEventListener('click', handleContextClicks, false);
+}); // Add click listener to key press
+
+document.addEventListener('keyup', handleEscKey, false);
+/* Accessibility
+   ========================================================================== */
+// Needs to be reviewed/improved
+
+window.addEventListener('load', function () {
+  for (var i = 0; i < dialogs.length; i += 1) {
+    focusTrap(dialogs[i]);
+  }
+});
+
+var focusTrap = function focusTrap(dialog, e) {
+  dialog.focusedElBeforeOpen;
+  var focusableEls = dialog.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"]');
+  dialog.focusableEls = Array.prototype.slice.call(focusableEls);
+  dialog.firstFocusableEl = dialog.focusableEls[0];
+  dialog.lastFocusableEl = dialog.focusableEls[dialog.focusableEls.length - 1];
+  dialog.firstFocusableEl.focus();
+
+  function handleKeyDown(e) {
+    var KEY_TAB = 9;
+
+    function handleBackwardTab() {
+      if (document.activeElement === dialog.firstFocusableEl) {
+        e.preventDefault();
+        dialog.lastFocusableEl.focus();
+      }
+    }
+
+    function handleForwardTab() {
+      if (document.activeElement === dialog.lastFocusableEl) {
+        e.preventDefault();
+        dialog.firstFocusableEl.focus();
+      }
+    }
+
+    switch (e.keyCode) {
+      case KEY_TAB:
+        if (dialog.focusableEls.length === 1) {
+          e.preventDefault();
+          break;
+        }
+
+        if (e.shiftKey) {
+          handleBackwardTab();
+        } else {
+          handleForwardTab();
+        }
+
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  dialog.addEventListener('keydown', handleKeyDown, false);
+};
+
+},{"./util.js":10}],5:[function(require,module,exports){
 "use strict";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -123,7 +351,7 @@ if (passwordsInputs.length) {
   });
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -270,211 +498,7 @@ selectOptions.forEach(function (option) {
 
 document.addEventListener('click', handleOutsideClick);
 
-},{"./util":10,"@popperjs/core":11}],6:[function(require,module,exports){
-"use strict";
-
-var _util = require("./util");
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-// Global settings
-var modalClass = "c-modal";
-var backdropClass = "c-modal-backdrop";
-var backdropVisibleclass = "c-modal-backdrop--visible";
-var contextClass = "c-modal-context";
-var contextVisibleClass = "c-modal-context--visible";
-var menuActiveClass = ".c-menu--visible";
-var queryParams = getQueryParameters(); // DOM elements
-
-var bodyEl = document.querySelector("body");
-var modalTriggers = document.querySelectorAll("[data-modal]");
-var closeButtons = document.querySelectorAll("[data-modal-close]");
-var contexts = document.querySelectorAll(".".concat(contextClass));
-var modals = document.querySelectorAll(".".concat(modalClass));
-var backdrop = document.querySelector(".".concat(backdropClass)); // Check for triggers on page
-
-if (modalTriggers.length > 0) {
-  // Create backdrop if non-existent
-  if (backdrop === null) {
-    backdrop = document.createElement("div");
-    backdrop.classList.add(backdropClass);
-    bodyEl.appendChild(backdrop);
-  }
-} // Find parent context
-
-
-var findParentContext = function findParentContext(el) {
-  var parentEl = el;
-
-  while (!parentEl.classList.contains(contextClass)) {
-    parentEl = parentEl.parentNode;
-  }
-
-  return parentEl;
-}; // Open modal
-
-
-var showModal = function showModal(contextEl) {
-  contextEl.classList.add(contextVisibleClass);
-  backdrop.classList.add(backdropVisibleclass); // Push modal to URL of browser
-
-  window.history.pushState("page", "Title", "".concat(window.location.origin).concat(window.location.pathname, "?modal=").concat(contextEl.getAttribute("id")));
-}; // Close modal
-
-
-var closeModal = function closeModal(contextEl) {
-  contextEl.classList.remove(contextVisibleClass);
-  backdrop.classList.remove(backdropVisibleclass); // Push normal URL to browser again
-
-  window.history.pushState("page", "Title", "".concat(window.location.origin).concat(window.location.pathname));
-}; // Close all other modals in case multiple modals are opened after each other
-
-
-var closeModals = function closeModals(contextEl) {
-  _toConsumableArray(modals).filter(function (modal) {
-    return modal.parentElement !== contextEl;
-  }).forEach(function (modal) {
-    return modal.parentElement.classList.remove(contextVisibleClass);
-  });
-}; // Handle trigger clicks
-
-
-var handleTriggerClick = function handleTriggerClick(e) {
-  e.preventDefault();
-  var contextId = e.currentTarget.getAttribute("data-modal");
-  var contextEl = document.getElementById(contextId);
-  closeModals(contextEl);
-  showModal(contextEl);
-}; // Handle close button clicks
-
-
-var handleCloseClicks = function handleCloseClicks(e) {
-  e.preventDefault();
-  var contextEl = findParentContext(e.currentTarget);
-  closeModal(contextEl);
-}; // Close modal on click outside
-
-
-var handleContextClicks = function handleContextClicks(e) {
-  var activeContext = document.querySelector(".".concat(contextVisibleClass));
-
-  if ((0, _util.isClickOutside)(e, modals)) {
-    if (!activeContext.querySelector(menuActiveClass)) closeModal(activeContext);
-  }
-}; // Close modal on pressing escape key
-
-
-var handleEscKey = function handleEscapeKey(e) {
-  if (e.keyCode === 27) {
-    var activeContext = document.querySelector(".".concat(contextVisibleClass));
-    closeModal(activeContext);
-  }
-}; // Get query parameters to open modals if they're in the URL
-
-
-function getQueryParameters(str) {
-  return (str || document.location.search).replace(/(^\?)/, "").split("&").map(function (n) {
-    return n = n.split("="), this[n[0]] = n[1], this;
-  }.bind({}))[0];
-} // If there is a parameter `modal` in the URL, call that modal
-
-
-if (queryParams.modal) {
-  var callModal = document.getElementById(queryParams.modal);
-  showModal(callModal);
-} // Move contexts to root element
-
-
-contexts.forEach(function (context) {
-  return bodyEl.appendChild(context);
-}); // Add click listener to triggers
-
-modalTriggers.forEach(function (modalTrigger) {
-  return modalTrigger.addEventListener("click", handleTriggerClick, false);
-}); // Add click listener to close buttons
-
-closeButtons.forEach(function (closeButton) {
-  return closeButton.addEventListener("click", handleCloseClicks, false);
-}); // Add click listener to modals
-// modals.forEach((modal) =>
-//   modal.addEventListener('click', handleModalClicks, false)
-// );
-// Add click listener to contexts
-
-contexts.forEach(function (context) {
-  return context.addEventListener("click", handleContextClicks, false);
-}); // Add click listener to key press
-
-document.addEventListener("keyup", handleEscKey, false);
-/* Accessibility
-   ========================================================================== */
-// Needs to be reviewed/improved
-
-window.addEventListener("load", function () {
-  for (var i = 0; i < modals.length; i += 1) {
-    focusTrap(modals[i]);
-  }
-});
-
-var focusTrap = function focusTrap(modal, e) {
-  modal.focusedElBeforeOpen;
-  var focusableEls = modal.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
-  modal.focusableEls = Array.prototype.slice.call(focusableEls);
-  modal.firstFocusableEl = modal.focusableEls[0];
-  modal.lastFocusableEl = modal.focusableEls[modal.focusableEls.length - 1];
-  modal.firstFocusableEl.focus();
-
-  function handleKeyDown(e) {
-    var KEY_TAB = 9;
-
-    function handleBackwardTab() {
-      if (document.activeElement === modal.firstFocusableEl) {
-        e.preventDefault();
-        modal.lastFocusableEl.focus();
-      }
-    }
-
-    function handleForwardTab() {
-      if (document.activeElement === modal.lastFocusableEl) {
-        e.preventDefault();
-        modal.firstFocusableEl.focus();
-      }
-    }
-
-    switch (e.keyCode) {
-      case KEY_TAB:
-        if (modal.focusableEls.length === 1) {
-          e.preventDefault();
-          break;
-        }
-
-        if (e.shiftKey) {
-          handleBackwardTab();
-        } else {
-          handleForwardTab();
-        }
-
-        break;
-
-      default:
-        break;
-    }
-  }
-
-  modal.addEventListener("keydown", handleKeyDown, false);
-};
-
-},{"./util":10}],7:[function(require,module,exports){
+},{"./util":10,"@popperjs/core":11}],7:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
