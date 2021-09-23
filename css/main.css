@@ -2232,9 +2232,10 @@ textarea.c-input--h-large {
   display: flex;
   justify-content: flex-start;
   align-items: center; }
-  .c-menu__label .c-avatar,
-  .c-menu__label .o-svg-icon {
-    margin-right: 0.8rem; }
+  .c-menu__label .c-avatar + span,
+  .c-menu__label .o-svg-icon + span,
+  .c-menu__label span + .o-svg-icon {
+    margin-left: 0.8rem; }
   .c-menu__label:hover {
     background-color: #F2F2F2; }
   .c-menu__label:focus {
