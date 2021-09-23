@@ -1,46 +1,49 @@
 /* ==========================================================================
-  c-wizard-step
+  c-wizard
  ========================================================================== */
 
 .c-wizard {  
   ul {
-    @media screen and (min-width: $g-bp1) {
+    @media screen and (min-width: $g-bp2) {
       display: flex;
-      height: 6.4rem;
-      max-height: 6.4rem;
-      border-bottom: .1rem solid $color-border;
       padding-left: 2.4rem;
       padding-right: 2.4rem;
+    }
+  }
+
+  &.c-wizard--bordered {
+    @media screen and (min-width: $g-bp2) {
+      border-bottom: .1rem solid $color-border;
     }
   }
 }
 
 .c-wizard li {
-  flex-basis: auto;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  margin-right: 2.4rem;
+  position: relative;
+  height: 6.4rem;
 
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @media screen and (min-width: $g-bp1) {
+  @media screen and (min-width: $g-bp2) {
+    margin-right: 2.4rem;
     justify-content: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 .c-wizard__item {
-  position: relative;
   color: $color-muted;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1;
   padding: 0;
-  height: 100%;
+  transition: color 0.18s ease-in;
+  height: 6.1rem;
+  width: 100%;
 
   &:hover,
   &:focus {
@@ -54,39 +57,50 @@
   &:after {
     content: '';
     position: absolute;
-    background-color: transparent;
+    display: block;
+    background-color: $color-background-light;
     height: .3rem;
     width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
   }
+
+  @media screen and (min-width: $g-bp2) {
+    &:after {
+      background-color: transparent;
+    }
+  }
 }
 
 .c-wizard__indicator {
   position: relative;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
   background: $color-gray-100;
   border: 0.2rem solid $color-gray-100;
-  margin-right: .8rem;
+  margin-right: .6rem;
   color: $color-icon;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .c-wizard--complete {
   color: $color-muted;
+
   .c-wizard__indicator {
     background: $color-success;
     border-color: $color-success;
+
     &:before {
       content: "";
       position: absolute; 
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 2rem;
+      height: 2rem;
       left: -0.2rem;
       top: -0.2rem;
       border-radius: 100%;
