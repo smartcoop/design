@@ -3073,23 +3073,21 @@ textarea.c-input--h-large {
 /* ==========================================================================
   c-wizard
  ========================================================================== */
-@media screen and (min-width: 700px) {
-  .c-wizard ul {
-    display: flex; } }
+.c-wizard ul {
+  display: flex; }
 
-@media screen and (min-width: 700px) {
-  .c-wizard.c-wizard--bordered {
-    border-bottom: 0.1rem solid #E5E5E5; } }
+.c-wizard.c-wizard--bordered {
+  border-bottom: 0.1rem solid #E5E5E5; }
 
 .c-wizard li {
   position: relative;
-  height: 6.4rem; }
+  height: 6.4rem;
+  margin-right: 1.6rem; }
+  .c-wizard li:last-child {
+    margin-right: 0; }
   @media screen and (min-width: 700px) {
     .c-wizard li {
-      margin-right: 2.4rem;
-      justify-content: center; }
-      .c-wizard li:last-child {
-        margin-right: 0; } }
+      margin-right: 2.4rem; } }
 
 .c-wizard__item {
   color: #808080;
@@ -3111,15 +3109,12 @@ textarea.c-input--h-large {
     content: '';
     position: absolute;
     display: block;
-    background-color: #F6F6F6;
+    background-color: transparent;
     height: .3rem;
     width: 100%;
     bottom: 0;
     left: 0;
     right: 0; }
-  @media screen and (min-width: 700px) {
-    .c-wizard__item:after {
-      background-color: transparent; } }
 
 .c-wizard__indicator {
   position: relative;
@@ -3128,13 +3123,19 @@ textarea.c-input--h-large {
   border-radius: 100%;
   background: #E5E5E5;
   border: 0.2rem solid #E5E5E5;
-  margin-right: .6rem;
   color: #595959;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0; }
+
+.c-wizard__label {
+  display: none; }
+  @media screen and (min-width: 700px) {
+    .c-wizard__label {
+      display: block;
+      margin-left: .6rem; } }
 
 .c-wizard--complete {
   color: #808080; }
