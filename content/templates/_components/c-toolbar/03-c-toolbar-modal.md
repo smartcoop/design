@@ -1,5 +1,5 @@
 ---
-title: Toolbar (modal)
+title: Toolbar (dialog)
 ---
 
-A toolbar as it might appear inside a <a href="/development/docs/c-modal.html">modal window</a>.
+A toolbar as it might appear inside a <a href="/development/docs/c-dialog.html">dialog window</a>.
