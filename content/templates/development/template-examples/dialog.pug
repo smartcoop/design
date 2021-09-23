@@ -1,0 +1,40 @@
+extends /templates/development/template-examples/app-form
+
+block append dialogs
+    .c-dialog-context.c-dialog-context--visible
+
+        .c-dialog-backdrop.c-dialog-backdrop--visible
+
+        .c-dialog.c-dialog--medium.c-dialog--footerless(role="dialog" aria-labelledby="dialogTitle-01")
+            .c-dialog__push
+            .c-dialog__header.c-dialog__header--bordered
+                .c-toolbar.c-toolbar--spaced
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            h2#dialogTitle-01.c-dialog__title Dialog title
+                    .c-toolbar__item
+                        button.c-button.c-button--borderless.c-button--icon(data-dialog-close aria-label="Close dialog")
+                            .c-button__content
+                                +icon('close')
+
+            .c-dialog__body
+                .u-spacer-l
+                    .o-form-group-layout.o-form-group-layout--standard
+                        +c-form-group({ label: 'Input', id: 'input'})
+                        +c-form-group({ label: 'Select', id: 'select', type: 'select', value: ['Choose an item','A','B', 'C'], helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                        +c-form-group({ label: 'Textarea', id: 'textarea', type: 'textarea', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+
+            .c-dialog__footer.c-dialog__footer--bordered
+                .c-toolbar.c-toolbar--spaced
+                    .c-toolbar__left
+                        .c-toolbar__item
+                    .c-toolbar__right
+                        .c-toolbar__item
+                            .c-button-toolbar
+                                button.c-button.c-button--secondary(data-dialog-close)
+                                        .c-button__content
+                                            .c-button__label Cancel
+                                button.c-button.c-button--primary(data-dialog-close)
+                                        .c-button__content
+                                            .c-button__label Save
+            .c-dialog__push
