@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Checkbox - Component documentation - Smart Coop Design System
+    <title>Global banner - Component documentation - Smart Coop Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -328,167 +328,39 @@
             </div>
             <div class="o-grid-col-bp3-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-h2">Checkbox</h1>
+                    <h1 class="br-componentgroup-header c-h2">Global banner</h1>
                 </div>
                 <div class="br-content c-content">
                 </div>
-                <div class="br-sample" id="component-01-c-checkbox">
+                <div class="br-sample" id="component-01-c-global-banner--info">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Checkbox</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-checkbox">#</a>
+                        <h3 class="br-sample-heading c-h3">Info</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-global-banner--info">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <label class="o-form-group__label">Value</label>
-                                <div class="o-form-group__controls">
-                                    <div class="c-checkbox-group">
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" />Checkbox
-                                            </label>
-                                        </div>
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" checked="checked" />Checkbox checked
-                                            </label>
-                                        </div>
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" disabled="disabled" />Checkbox disabled
-                                            </label>
-                                        </div>
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" disabled="disabled" checked="checked" />Checkbox disabled checked
-                                            </label>
-                                        </div>
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input id="inputIndeterminate" type="checkbox" />Checkbox indeterminate
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="c-global-banner c-global-banner--default">
+                            <div class="o-svg-icon o-svg-icon-circle-information o-svg-icon--default ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#595959" />
+                                    <path d="M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z" fill="#595959" />
+                                    <path d="M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z" fill="#595959" />
+                                </svg>
                             </div>
-                        </div>
-                        <script>
-                            var input = document.getElementById("inputIndeterminate");
-                            input.indeterminate = true;
-                            input.setAttribute('data-indeterminate', true);
-                        </script>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-checkbox-group&quot;&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Checkbox
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Checkbox checked
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; /&gt;Checkbox disabled
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Checkbox disabled checked
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input id=&quot;inputIndeterminate&quot; type=&quot;checkbox&quot; /&gt;Checkbox indeterminate
-                    &lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;
-    var input = document.getElementById(&quot;inputIndeterminate&quot;);
-    input.indeterminate = true;
-    input.setAttribute('data-indeterminate', true);
-&lt;/script&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label Value
-        .o-form-group__controls
-            .c-checkbox-group
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Checkbox
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot; checked)
-                        | Checkbox checked
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot; disabled)
-                        | Checkbox disabled
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot; disabled checked)
-                        | Checkbox disabled checked
-                .c-checkbox
-                    label
-                        input#inputIndeterminate(type=&quot;checkbox&quot;)
-                        | Checkbox indeterminate
-
-script.
-    var input = document.getElementById(&quot;inputIndeterminate&quot;);
-    input.indeterminate = true;
-    input.setAttribute('data-indeterminate', true);</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-02-c-checkbox-inline">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Checkbox (inline)</h3>
-                        <a class="br-sample-header-link" href="#component-02-c-checkbox-inline">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content"></div>
-                    <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <label class="o-form-group__label">Value</label>
-                                <div class="o-form-group__controls">
-                                    <div class="c-checkbox-group c-checkbox-group--inline">
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" />Inline Value 1
-                                            </label>
-                                        </div>
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" />Inline Value 2
-                                            </label>
-                                        </div>
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" checked="checked" />Inline Value 3
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="c-global-banner__label">
+                                <p>Nam eget hendrerit massa, a consequat turpis.</p>
                             </div>
+                            <button class="c-button c-button--borderless c-button--icon" type="button" data-banner-close="data-banner-close">
+                                <span class="c-button__content">
+                                    <div class="o-svg-icon o-svg-icon-close  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <div class="u-sr-accessible">Close
+                                    </div>
+                                </span>
+                            </button>
                         </div>
                     </div>
                     <div class="br-sample-footer">
@@ -496,96 +368,67 @@ script.
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-checkbox-group c-checkbox-group--inline&quot;&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Inline Value 1
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Inline Value 2
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Inline Value 3
-                    &lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-global-banner c-global-banner--default&quot;&gt;
+    &lt;div class=&quot;o-svg-icon o-svg-icon-circle-information o-svg-icon--default &quot;&gt;
+        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+            &lt;path d=&quot;M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;path d=&quot;M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;path d=&quot;M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z&quot; fill=&quot;#595959&quot; /&gt;
+        &lt;/svg&gt;
     &lt;/div&gt;
+    &lt;div class=&quot;c-global-banner__label&quot;&gt;
+        &lt;p&gt;Nam eget hendrerit massa, a consequat turpis.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;c-button c-button--borderless c-button--icon&quot; type=&quot;button&quot; data-banner-close=&quot;data-banner-close&quot;&gt;
+        &lt;span class=&quot;c-button__content&quot;&gt;
+            &lt;div class=&quot;o-svg-icon o-svg-icon-close  &quot;&gt;
+                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                    &lt;path d=&quot;M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;u-sr-accessible&quot;&gt;Close
+            &lt;/div&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
 &lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label Value
-        .o-form-group__controls
-            .c-checkbox-group.c-checkbox-group--inline
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Inline Value 1
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Inline Value 2
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot; checked)
-                        | Inline Value 3
-</pre>
+                            <pre class="br-sample-markup br-sample-markup-pug">+c-global-banner({
+    message: &quot;Nam eget hendrerit massa, a consequat turpis.&quot;
+})</pre>
                         </div>
                     </div>
                 </div>
-                <div class="br-sample" id="component-03-c-checkbox-subgroup">
+                <div class="br-sample" id="component-02-c-global-banner--warning">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Checkbox nesting</h3>
-                        <a class="br-sample-header-link" href="#component-03-c-checkbox-subgroup">#</a>
+                        <h3 class="br-sample-heading c-h3">Warning</h3>
+                        <a class="br-sample-header-link" href="#component-02-c-global-banner--warning">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <label class="o-form-group__label">Value</label>
-                                <div class="o-form-group__controls">
-                                    <div class="c-checkbox-group">
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" />Value 1
-                                            </label>
-                                        </div>
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" />Value 2
-                                            </label>
-                                            <div class="c-checkbox-subgroup">
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" checked="checked" />Subvalue 1
-                                                    </label>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" checked="checked" />Subvalue 2
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox" checked="checked" />Value 3
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="c-global-banner c-global-banner--warning">
+                            <div class="o-svg-icon o-svg-icon-warning o-svg-icon--warning ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0002 14C11.4479 14 11.0002 13.5523 11.0002 13V10C11.0002 9.44772 11.4479 9 12.0002 9C12.5525 9 13.0002 9.44772 13.0002 10V13C13.0002 13.5523 12.5525 14 12.0002 14Z" fill="#595959" />
+                                    <path d="M10.5002 16.5C10.5002 15.6716 11.1717 15 12.0002 15C12.8286 15 13.5002 15.6716 13.5002 16.5C13.5002 17.3284 12.8286 18 12.0002 18C11.1717 18 10.5002 17.3284 10.5002 16.5Z" fill="#595959" />
+                                    <path d="M10.2303 3.2156C10.9802 1.79093 13.0202 1.79092 13.77 3.2156L22.1136 19.0685C22.8146 20.4003 21.8488 22 20.3438 22H3.65653C2.15151 22 1.18574 20.4003 1.8867 19.0685L10.2303 3.2156ZM20.3438 20L12.0002 4.14709L3.65653 20L20.3438 20Z" fill="#595959" />
+                                </svg>
                             </div>
+                            <div class="c-global-banner__label">
+                                <p>Nam eget hendrerit massa, a consequat turpis.</p>
+                            </div>
+                            <button class="c-button c-button--borderless c-button--icon" type="button" data-banner-close="data-banner-close">
+                                <span class="c-button__content">
+                                    <div class="o-svg-icon o-svg-icon-close  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <div class="u-sr-accessible">Close
+                                    </div>
+                                </span>
+                            </button>
                         </div>
                     </div>
                     <div class="br-sample-footer">
@@ -593,72 +436,37 @@ script.
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
-        &lt;div class=&quot;o-form-group__controls&quot;&gt;
-            &lt;div class=&quot;c-checkbox-group&quot;&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 1
-                    &lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 2
-                    &lt;/label&gt;
-                    &lt;div class=&quot;c-checkbox-subgroup&quot;&gt;
-                        &lt;div class=&quot;c-checkbox&quot;&gt;
-                            &lt;label&gt;
-                                &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Subvalue 1
-                            &lt;/label&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&quot;c-checkbox&quot;&gt;
-                            &lt;label&gt;
-                                &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Subvalue 2
-                            &lt;/label&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;c-checkbox&quot;&gt;
-                    &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Value 3
-                    &lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-global-banner c-global-banner--warning&quot;&gt;
+    &lt;div class=&quot;o-svg-icon o-svg-icon-warning o-svg-icon--warning &quot;&gt;
+        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+            &lt;path d=&quot;M12.0002 14C11.4479 14 11.0002 13.5523 11.0002 13V10C11.0002 9.44772 11.4479 9 12.0002 9C12.5525 9 13.0002 9.44772 13.0002 10V13C13.0002 13.5523 12.5525 14 12.0002 14Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;path d=&quot;M10.5002 16.5C10.5002 15.6716 11.1717 15 12.0002 15C12.8286 15 13.5002 15.6716 13.5002 16.5C13.5002 17.3284 12.8286 18 12.0002 18C11.1717 18 10.5002 17.3284 10.5002 16.5Z&quot; fill=&quot;#595959&quot; /&gt;
+            &lt;path d=&quot;M10.2303 3.2156C10.9802 1.79093 13.0202 1.79092 13.77 3.2156L22.1136 19.0685C22.8146 20.4003 21.8488 22 20.3438 22H3.65653C2.15151 22 1.18574 20.4003 1.8867 19.0685L10.2303 3.2156ZM20.3438 20L12.0002 4.14709L3.65653 20L20.3438 20Z&quot; fill=&quot;#595959&quot; /&gt;
+        &lt;/svg&gt;
     &lt;/div&gt;
+    &lt;div class=&quot;c-global-banner__label&quot;&gt;
+        &lt;p&gt;Nam eget hendrerit massa, a consequat turpis.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;c-button c-button--borderless c-button--icon&quot; type=&quot;button&quot; data-banner-close=&quot;data-banner-close&quot;&gt;
+        &lt;span class=&quot;c-button__content&quot;&gt;
+            &lt;div class=&quot;o-svg-icon o-svg-icon-close  &quot;&gt;
+                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                    &lt;path d=&quot;M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;u-sr-accessible&quot;&gt;Close
+            &lt;/div&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
 &lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label Value
-        .o-form-group__controls
-            .c-checkbox-group
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 1
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 2
-                    .c-checkbox-subgroup
-                        .c-checkbox
-                            label
-                                input(type=&quot;checkbox&quot;, checked)
-                                | Subvalue 1
-                        .c-checkbox
-                            label
-                                input(type=&quot;checkbox&quot;, checked)
-                                | Subvalue 2
-                .c-checkbox
-                    label
-                        input(type=&quot;checkbox&quot;, checked)
-                        | Value 3
-</pre>
+                            <pre class="br-sample-markup br-sample-markup-pug">+c-global-banner({
+    skin: &quot;warning&quot;,
+    icon: &quot;warning&quot;,
+    message: &quot;Nam eget hendrerit massa, a consequat turpis.&quot;
+})</pre>
                         </div>
                     </div>
                 </div>

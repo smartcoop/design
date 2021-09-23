@@ -2042,6 +2042,42 @@ input.c-button {
   margin-top: 0.4rem; }
 
 /* ==========================================================================
+  Component: Global banner
+   ========================================================================== */
+.c-global-banner {
+  padding: 1.2rem 2.4rem;
+  position: relative;
+  min-height: 5.6rem;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.1)); }
+  .c-global-banner.c-global-banner--default {
+    background-color: #1267FB; }
+    .c-global-banner.c-global-banner--default .c-global-banner__label {
+      color: #FFFFFF; }
+    .c-global-banner.c-global-banner--default .c-button--icon,
+    .c-global-banner.c-global-banner--default .o-svg-icon {
+      color: #FFFFFF; }
+  .c-global-banner.c-global-banner--warning {
+    background-color: #F4C95D; }
+    .c-global-banner.c-global-banner--warning .o-svg-icon {
+      color: #595959; }
+  .c-global-banner .o-svg-icon {
+    flex-shrink: 0; }
+  .c-global-banner .c-button--icon {
+    position: absolute;
+    right: 1.2rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 2.4rem; }
+
+.c-global-banner__label {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-left: 1.6rem; }
+
+/* ==========================================================================
   Component: hr
   ---
   A horizontal ruler.
