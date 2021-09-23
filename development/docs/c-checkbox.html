@@ -331,23 +331,38 @@
                                     <div class="c-checkbox-group">
                                         <div class="c-checkbox">
                                             <label>
-                                                <input type="checkbox" />Value 1
+                                                <input type="checkbox" />Checkbox
                                             </label>
                                         </div>
                                         <div class="c-checkbox">
                                             <label>
-                                                <input type="checkbox" />Value 2
+                                                <input type="checkbox" checked="checked" />Checkbox checked
                                             </label>
                                         </div>
                                         <div class="c-checkbox">
                                             <label>
-                                                <input type="checkbox" checked="checked" />Value 3
+                                                <input type="checkbox" disabled="disabled" />Checkbox disabled
+                                            </label>
+                                        </div>
+                                        <div class="c-checkbox">
+                                            <label>
+                                                <input type="checkbox" disabled="disabled" checked="checked" />Checkbox disabled checked
+                                            </label>
+                                        </div>
+                                        <div class="c-checkbox">
+                                            <label>
+                                                <input id="inputIndeterminate" type="checkbox" />Checkbox indeterminate
                                             </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            var input = document.getElementById("inputIndeterminate");
+                            input.indeterminate = true;
+                            input.setAttribute('data-indeterminate', true);
+                        </script>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
@@ -361,23 +376,38 @@
             &lt;div class=&quot;c-checkbox-group&quot;&gt;
                 &lt;div class=&quot;c-checkbox&quot;&gt;
                     &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 1
+                        &lt;input type=&quot;checkbox&quot; /&gt;Checkbox
                     &lt;/label&gt;
                 &lt;/div&gt;
                 &lt;div class=&quot;c-checkbox&quot;&gt;
                     &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; /&gt;Value 2
+                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Checkbox checked
                     &lt;/label&gt;
                 &lt;/div&gt;
                 &lt;div class=&quot;c-checkbox&quot;&gt;
                     &lt;label&gt;
-                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;Value 3
+                        &lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; /&gt;Checkbox disabled
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;c-checkbox&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Checkbox disabled checked
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;c-checkbox&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input id=&quot;inputIndeterminate&quot; type=&quot;checkbox&quot; /&gt;Checkbox indeterminate
                     &lt;/label&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+&lt;script&gt;
+    var input = document.getElementById(&quot;inputIndeterminate&quot;);
+    input.indeterminate = true;
+    input.setAttribute('data-indeterminate', true);
+&lt;/script&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
@@ -389,16 +419,28 @@
                 .c-checkbox
                     label
                         input(type=&quot;checkbox&quot;)
-                        | Value 1
+                        | Checkbox
                 .c-checkbox
                     label
-                        input(type=&quot;checkbox&quot;)
-                        | Value 2
+                        input(type=&quot;checkbox&quot; checked)
+                        | Checkbox checked
                 .c-checkbox
                     label
-                        input(type=&quot;checkbox&quot;, checked)
-                        | Value 3
-</pre>
+                        input(type=&quot;checkbox&quot; disabled)
+                        | Checkbox disabled
+                .c-checkbox
+                    label
+                        input(type=&quot;checkbox&quot; disabled checked)
+                        | Checkbox disabled checked
+                .c-checkbox
+                    label
+                        input#inputIndeterminate(type=&quot;checkbox&quot;)
+                        | Checkbox indeterminate
+
+script.
+    var input = document.getElementById(&quot;inputIndeterminate&quot;);
+    input.indeterminate = true;
+    input.setAttribute('data-indeterminate', true);</pre>
                         </div>
                     </div>
                 </div>

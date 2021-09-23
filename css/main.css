@@ -1873,15 +1873,15 @@ input.c-button {
 .c-radio input[type='radio']:active,
 .c-radio input[type='radio']:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(153, 153, 153, 0.5);
-  border-color: #999999;
+  box-shadow: 0 0 0 0.2rem rgba(212, 212, 212, 0.5);
+  border-color: #D4D4D4;
   transition: 0.14s box-shadow ease-in-out; }
 
 /* Checkbox specific
    ========================================================================== */
 .c-checkbox input[type='checkbox'] {
   background: #FFF;
-  border: 0.1rem solid #999999;
+  border: 0.1rem solid #D4D4D4;
   border-radius: 0.3rem;
   height: 1.6rem;
   width: 1.6rem;
@@ -1899,19 +1899,15 @@ input.c-button {
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;'%3E%3Cpath id='Rectangle' d='M12,8c0,-0.552 -0.448,-1 -1,-1l-6,0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l6,0c0.552,0 1,-0.448 1,-1Z' style='fill:%23fff;'/%3E%3C/svg%3E") no-repeat; }
 
 .c-checkbox input[type='checkbox'][disabled] {
-  border: 0.1rem solid #999999; }
+  border: 0.1rem solid #D4D4D4;
+  background: #F2F2F2; }
+  .c-checkbox input[type='checkbox'][disabled]:focus, .c-checkbox input[type='checkbox'][disabled]:active {
+    box-shadow: none; }
   .c-checkbox input[type='checkbox'][disabled]:checked:before {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat; }
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23B3B3B3'/%3E%3C/g%3E%3C/svg%3E") no-repeat; }
 
-.c-checkbox input[type='checkbox'][disabled]:not(:checked):before {
-  border-radius: 0.1rem;
-  width: 1rem;
-  height: 1rem;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: 0.1rem solid #999999;
-  opacity: 1; }
+.c-checkbox input[type='checkbox'][disabled][data-indeterminate]:checked:before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;'%3E%3Cpath id='Rectangle' d='M12,8c0,-0.552 -0.448,-1 -1,-1l-6,0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l6,0c0.552,0 1,-0.448 1,-1Z' style='fill:%23B3B3B3;'/%3E%3C/svg%3E") no-repeat; }
 
 .c-checkbox input[type='checkbox']:checked:not([disabled]),
 .c-checkbox input[type='checkbox'][data-indeterminate]:checked:not([disabled]) {
@@ -1922,7 +1918,7 @@ input.c-button {
    ========================================================================== */
 .c-radio input[type='radio'] {
   background: #FFF;
-  border: 0.1rem solid #999999;
+  border: 0.1rem solid #D4D4D4;
   border-radius: 100%;
   height: 1.6rem;
   width: 1.6rem;
@@ -1938,11 +1934,11 @@ input.c-button {
   border-radius: 100%; }
 
 .c-radio input[type='radio'][disabled] {
-  border-color: 0.1rem solid #999999; }
+  border-color: 0.1rem solid #D4D4D4; }
   .c-radio input[type='radio'][disabled]:before {
     background: #FFF; }
   .c-radio input[type='radio'][disabled]:checked:before {
-    background: 0.1rem solid #999999; }
+    background: 0.1rem solid #D4D4D4; }
 
 /* Inline checkbox and Radio
    ========================================================================== */
