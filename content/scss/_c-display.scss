@@ -24,31 +24,36 @@
 .c-d-h3, .c-display h3,
 .c-d-h4, .c-display h4 {
   font-family: $g-headings-font-family;
-  font-weight: $g-display-headings-font-weight;
 }
+
+
 
 .c-d-h1, .c-display h1 {
   font-size: 3.8rem;
   margin: 0 0 3.2rem;
   line-height: 1.25;
+  font-weight: 700;
 }
 
 .c-d-h2, .c-display h2 {
   font-size: 3rem;
   margin: 0 0 2.4rem;
   line-height: 1.36;
+  font-weight: 600;
 }
 
 .c-d-h3, .c-display h3 {
   font-size: 2.6rem;
   margin: 0 0 1.8rem;
   line-height: 1.36;
+  font-weight: 600;
 }
 
 .c-d-h4, .c-display h4 {
   font-size: 2.2rem;
   margin: 0 0 2.2rem;
   line-height: 1.36;
+  font-weight: 600;
 }
 
 

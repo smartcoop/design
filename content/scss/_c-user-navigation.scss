@@ -1,0 +1,30 @@
+/* ==========================================================================
+  c-user-navigation
+   ========================================================================== */
+
+.c-user-navigation {
+  display: flex;
+  align-items: center;
+  padding: .4rem 3rem .4rem 0.8rem;
+  border: none;
+  color: $color-text;
+  position: relative;
+  &:after {
+    pointer-events: none;
+    content: ' ';
+    position: absolute;
+    right: 0.8rem;
+    top: 1.8rem;
+    width: 0;
+    height: 0;
+    border-width: 1rem;
+    border: 0.5rem solid $color-gray-500;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+}
+
+.c-user-navigation .o-svg-icon {
+  opacity: 0.5;
+}

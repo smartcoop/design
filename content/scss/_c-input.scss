@@ -118,17 +118,11 @@ textarea.c-input--h-large { height: 20rem; }
   flex: 1;
 }
 
-/* Input group append
+
+/* Input group
    ========================================================================== */
 
-.c-input-group__append {
-  height: 3.6rem;
-  margin-left: 1rem;
-}
-
-/* Input group prepend
-   ========================================================================== */
-
+.c-input-group__append,
 .c-input-group__prepend {
   height: 3.6rem;
   width: 3.6rem;
@@ -137,14 +131,29 @@ textarea.c-input--h-large { height: 20rem; }
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -0.1rem;
   padding: 0 0.8rem;
-  border-radius: 0.4rem 0 0 0.4rem;
   border: 1px solid $color-gray-200;
+}
+
+/* Input group prepend
+   ========================================================================== */
+
+.c-input-group__prepend {
+  margin-right: -0.1rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.c-input-group__append {
+  border-radius: 0 0.4rem 0.4rem 0;
+  margin-left: -0.1rem;
 }
 
 .c-input-group > .c-input:not(:first-child) {
   border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.c-input-group > .c-input:not(:last-child) {
+  border-radius: 0.4rem 0 0 0.4rem;
 }
 
 
