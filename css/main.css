@@ -3339,7 +3339,7 @@ textarea.c-input--h-large {
   margin-right: 1.6rem; }
   .c-wizard li:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 900px) {
     .c-wizard li {
       margin-right: 2.4rem; } }
 
@@ -3349,7 +3349,7 @@ textarea.c-input--h-large {
   align-items: center;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1;
   padding: 0;
   transition: color 0.18s ease-in;
@@ -3372,8 +3372,8 @@ textarea.c-input--h-large {
 
 .c-wizard__indicator {
   position: relative;
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 100%;
   background: #E5E5E5;
   border: 0.2rem solid #E5E5E5;
@@ -3386,10 +3386,10 @@ textarea.c-input--h-large {
 
 .c-wizard__label {
   display: none; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 900px) {
     .c-wizard__label {
       display: block;
-      margin-left: .6rem; } }
+      margin-left: .8rem; } }
 
 .c-wizard--complete {
   color: #808080; }
@@ -3399,8 +3399,8 @@ textarea.c-input--h-large {
     .c-wizard--complete .c-wizard__indicator:before {
       content: "";
       position: absolute;
-      width: 2rem;
-      height: 2rem;
+      width: 2.4rem;
+      height: 2.4rem;
       left: -0.2rem;
       top: -0.2rem;
       border-radius: 100%;
