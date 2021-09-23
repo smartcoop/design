@@ -78,7 +78,6 @@
 @import "_c-panel";
 @import "_c-pill-navigation";
 @import "_c-popover";
-@import "_c-select";
 @import "_c-side-menu";
 @import "_c-status-pill";
 @import "_c-table";
@@ -90,6 +89,14 @@
 @import "_c-tooltip";
 @import "_c-user-navigation";
 @import "_c-wizard";
+
+/* Non-functional visual examples, please replace with plugin
+   or improved implementation using component framework
+   ========================================================================== */
+
+@import "_c-datepicker";
+@import "_c-rich-content-editor";
+@import "_c-select";
 
 /* Components specific to design system website
    ========================================================================== */

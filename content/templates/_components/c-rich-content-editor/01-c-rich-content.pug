@@ -1,0 +1,29 @@
+.o-form-group-layout.o-form-group-layout--standard
+    .o-form-group
+        label.o-form-group__label Message
+        .o-form-group__controls
+            .c-rich-content-editor
+                .c-rich-content-editor-toolbar
+                    button.c-button.c-button--borderless-muted.c-button--icon
+                        .c-button__content
+                            // Bold
+                            +icon('bold')
+                            .u-sr-accessible Bold
+                    button.c-button.c-button--borderless-muted.c-button--icon
+                        .c-button__content
+                            // Italic
+                            +icon('italic')
+                            .u-sr-accessible Italic
+                    button.c-button.c-button--borderless-muted.c-button--icon
+                        .c-button__content
+                            // Ordered list
+                            +icon('unordered-list')
+                            .u-sr-accessible Unordered list
+                    button.c-button.c-button--borderless-muted.c-button--icon
+                        .c-button__content
+                            // Unordered list
+                            +icon('ordered-list')
+                            .u-sr-accessible Ordered list
+
+                textarea.c-input.c-input--h-large
+                    | I am content

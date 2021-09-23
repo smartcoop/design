@@ -1,0 +1,21 @@
+/* ==========================================================================
+  rich-content-editor
+  ---
+  @todo Document this component
+   ========================================================================== */
+
+.c-rich-content-editor-toolbar {
+  background: #FFF;
+  border: 0.1rem solid $color-gray-500;
+  border-bottom: none;
+  border-radius-bottom-left: $c-input-border-radius;
+  border-radius-top-left: $c-input-border-radius;
+  .c-button {
+    border-radius: none;
+  }
+}
+
+.c-rich-content-editor-toolbar + textarea {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

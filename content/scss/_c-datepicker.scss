@@ -1,0 +1,45 @@
+/* ==========================================================================
+  c-datepicker
+   ========================================================================== */
+
+/* Datepicker table
+   ========================================================================== */
+
+.c-datepicker-table {
+  width: 100%;
+  th, td {
+    padding: .2rem;
+    text-align: center;
+  }
+  th {
+    color: $color-gray-300;
+  }
+  td, th {
+    a, span {
+      display: inline-block;
+      width: 4rem;
+      height: 4rem;
+      text-align: center;
+      line-height: 4rem;
+    }
+    a {
+      border-radius: 100%;
+    }
+    a:hover {
+      background: $color-gray-100;
+    }
+  }
+}
+
+/* Datepicker today
+   ========================================================================== */
+
+.c-datepicker-table .c-datepicker-today {
+  a {
+    background: $color-blue-500;
+    color: #FFF;
+    &:hover {
+      background: $color-blue-700;
+    }
+  }
+}
