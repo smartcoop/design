@@ -3,15 +3,24 @@
    ========================================================================== */
 
 .c-brand {
+  text-align: left;
   padding: 0;
   margin-right: 0.8rem;
   display: block;
-  height: 3.6rem;
-  a,
+  height: 4.8rem;
   img {
+    display: block;
+    height: 100%;
+  }
+  a {
     display: block;
     position: relative;
     height: 100%;
     width: 100%;
   }
+}
+
+
+.c-brand--small {
+  height: 3.6rem;
 }
