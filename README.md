@@ -11,6 +11,8 @@ It uses Bedrock in the background, which is a static site generator specialized 
     npm install
     npm start
 
+(Make sure you are using a recent version of Node.)
+
 ### Contributing
 
 We don't have contributing guidelines yet!
