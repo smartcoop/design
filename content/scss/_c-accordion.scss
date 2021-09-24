@@ -18,6 +18,7 @@ $c-accordion-border: $color-gray-100 !default;
   .c-accordion__item-header {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   .c-accordion__item-title {
