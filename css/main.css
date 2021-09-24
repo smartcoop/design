@@ -2151,6 +2151,10 @@ textarea.c-input--h-large {
 .c-input--w-large {
   width: 44rem; }
 
+@media (min-width: 900px) {
+  .c-input--max-width {
+    max-width: 70%; } }
+
 .c-input[readonly] {
   background-color: #CCCCCC; }
 
@@ -2180,8 +2184,6 @@ textarea.c-input--h-large {
   padding: 0 0.8rem;
   border: 1px solid #CCCCCC; }
 
-/* Input group prepend
-   ========================================================================== */
 .c-input-group__prepend {
   margin-right: -0.1rem;
   border-radius: 0.4rem 0 0 0.4rem; }
@@ -2190,11 +2192,11 @@ textarea.c-input--h-large {
   border-radius: 0 0.4rem 0.4rem 0;
   margin-left: -0.1rem; }
 
-.c-input-group > .c-input:not(:first-child) {
-  border-radius: 0 0.4rem 0.4rem 0; }
-
 .c-input-group > .c-input:not(:last-child) {
   border-radius: 0.4rem 0 0 0.4rem; }
+
+.c-input-group > .c-input:not(:first-child) {
+  border-radius: 0 0.4rem 0.4rem 0; }
 
 /* File input
   ========================================================================== */
