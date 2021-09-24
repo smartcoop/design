@@ -14,18 +14,12 @@
   }
 }
 
-// #c-design-system-nav-close {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   z-index: 1;
-// }
-
 .c-design-system-nav__mobile {
   display: none;
   background: #FFF;
   height: 100%;
   width: 100%;
+  overflow: auto;
   
   li[role="presentational"] {
     height: .1rem;
@@ -34,6 +28,7 @@
   }
   > ul {
     margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
     
     ul {
       margin-left: 1.2rem;
