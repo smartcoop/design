@@ -30,21 +30,19 @@ $c-accordion-border: $color-gray-100 !default;
 
   .c-accordion__item-content {
     margin-left: 4rem;
-    display: block;
+    max-height: 0px;
+    overflow: hidden;
+    line-height: 1.6; 
+    transition: max-height 200ms ease-in-out;
   }
 
-  .c-button .o-svg-icon:first-child {
-    transform: rotate(90deg);
-    transition: .4s ease-in-out;
+  .c-button--icon {
+    transition: transform 200ms ease-in-out;
   }
 
-  &.c-accordion__item--closed {
-    .c-accordion__item-content {
-      display: none;
-    }
-
-    .c-button .o-svg-icon:first-child {
-      transform: rotate(0deg);
+  &.js-active {
+    .c-button--icon {
+      transform: rotate(90deg);
     }
   }
 }

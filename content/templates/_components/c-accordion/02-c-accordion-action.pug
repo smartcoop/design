@@ -1,6 +1,6 @@
 .c-accordion
-    .c-accordion__item.c-accordion__item--closed
-        .c-accordion__item-header(aria-expanded="false")
+    .c-accordion__item
+        .c-accordion__item-header
             .c-toolbar
                 .c-toolbar__left
                     .c-toolbar__item
@@ -10,5 +10,5 @@
                     .c-toolbar__item
                         +c-button({skin: 'borderless', icon: 'add', layout: 'icon-only'})
 
-        .c-accordion__item-content(aria-hidden="true")
+        .c-accordion__item-content
             p Content 1
