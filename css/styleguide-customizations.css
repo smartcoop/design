@@ -113,6 +113,7 @@
 .c-button.br-sample-copy-code-btn,
 .c-button.br-sample-show-code-btn {
   font-weight: 400;
-  border: 0.1rem solid #CCCCCC; }
+  border: 0.1rem solid #CCCCCC;
+  white-space: nowrap; }
 
 /*# sourceMappingURL=styleguide-customizations.css.map */

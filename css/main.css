@@ -198,10 +198,10 @@ abbr[title] {
 .o-container {
   margin: 0 auto;
   max-width: 130rem;
-  width: calc(100% - 2.4rem); }
+  width: calc(100% - 4.8rem); }
   @media (min-width: 700px) {
     .o-container {
-      width: calc(100% - 3.2rem); } }
+      width: calc(100% - 4.8rem); } }
   @media (min-width: 900px) {
     .o-container {
       width: calc(100% - 4.8rem); } }
@@ -2518,15 +2518,26 @@ textarea.c-input--h-large {
   top: 0;
   left: 0;
   z-index: 30;
-  border-bottom: 1px solid #D9D9D9; }
+  border-bottom: 1px solid #E5E5E5; }
+
+.c-navbar--main {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 1.6rem; }
+  .c-navbar--main .c-toolbar__right {
+    z-index: 61; }
+  @media (min-width: 900px) {
+    .c-navbar--main {
+      margin: 3.2rem 0;
+      height: 8rem; } }
 
 /* Bordered equivalents
    ========================================================================== */
 .c-navbar--bordered-top {
-  border-top: 0.1rem solid #D9D9D9; }
+  border-top: 0.1rem solid #E5E5E5; }
 
 .c-navbar--bordered-bottom {
-  border-bottom: 0.1rem solid #D9D9D9; }
+  border-bottom: 0.1rem solid #E5E5E5; }
 
 /* Sizes
    ========================================================================== */
@@ -2535,6 +2546,35 @@ textarea.c-input--h-large {
 
 .c-navbar--large {
   height: 8rem; }
+
+/* Component navigation
+   ========================================================================== */
+.c-navbar-components .c-navbar-components__header {
+  cursor: pointer;
+  padding: 0 2.4rem;
+  background: #F2F2F2; }
+
+.c-navbar-components .c-navbar-components__content {
+  max-height: 0px;
+  overflow: hidden;
+  line-height: 1.6;
+  transition: max-height 350ms ease-in-out; }
+
+.c-navbar-components .c-button--icon {
+  transition: transform 200ms ease-in-out; }
+
+.c-navbar-components.js-active .c-button--icon {
+  transform: rotate(180deg); }
+
+@media (min-width: 900px) {
+  .c-navbar-components {
+    display: none; } }
+
+.br-styleguide-nav-holder--desktop {
+  display: none; }
+  @media (min-width: 900px) {
+    .br-styleguide-nav-holder--desktop {
+      display: block; } }
 
 /* ==========================================================================
   c-or
@@ -3460,12 +3500,6 @@ textarea.c-input--h-large {
   #c-design-system-nav-open {
     display: none; } }
 
-#c-design-system-nav-close {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1; }
-
 .c-design-system-nav__mobile {
   display: none;
   background: #FFF;
@@ -3476,10 +3510,12 @@ textarea.c-input--h-large {
     margin: .4rem 0;
     background: #E5E5E5; }
   .c-design-system-nav__mobile > ul {
-    margin-top: 4rem; }
+    margin-top: 2.4rem; }
+    .c-design-system-nav__mobile > ul ul {
+      margin-left: 1.2rem; }
   .c-design-system-nav__mobile a, .c-design-system-nav__mobile span {
     display: block;
-    padding: .8rem .8rem .8rem 1.2rem;
+    padding: .8rem 1.2rem .8rem 1.2rem;
     position: relative;
     color: #333333; }
   .c-design-system-nav__mobile li.selected a:before {
@@ -3498,12 +3534,33 @@ textarea.c-input--h-large {
   .c-design-system-nav__mobile span {
     color: #999999; }
   .c-design-system-nav__mobile ul {
-    padding-left: 1.2rem; }
+    padding-left: 1.2rem;
+    padding-right: 1.2rem; }
 
 .c-design-system-nav__mobile--visible {
   position: fixed;
   display: block;
-  inset: 0; }
+  inset: 0;
+  height: calc(100% - 6.4rem);
+  top: 6.4rem; }
+
+.c-design-system-logo {
+  height: 2.8rem; }
+  @media (min-width: 900px) {
+    .c-design-system-logo {
+      height: 3.6rem; } }
+
+.c-design-system-nav-open {
+  display: block; }
+
+.c-design-system-nav-close {
+  display: none; }
+
+.u-kill-scroll .c-design-system-nav-open {
+  display: none; }
+
+.u-kill-scroll .c-design-system-nav-close {
+  display: block; }
 
 /* Utilities: specific helper classes, overrides
    ========================================================================== */

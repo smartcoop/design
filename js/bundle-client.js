@@ -19,7 +19,9 @@ require("./modules/design-system-website-mobile-menu");
 
 require("./modules/close-global-banner");
 
-},{"./modules/accordion":2,"./modules/close-global-banner":3,"./modules/design-system-website-mobile-menu":4,"./modules/dialogs":5,"./modules/input-password.js":6,"./modules/menu":7,"./modules/popper-popover":8,"./modules/popper-tooltip":9,"./modules/tabs":10}],2:[function(require,module,exports){
+require("./modules/navbar-components");
+
+},{"./modules/accordion":2,"./modules/close-global-banner":3,"./modules/design-system-website-mobile-menu":4,"./modules/dialogs":5,"./modules/input-password.js":6,"./modules/menu":7,"./modules/navbar-components":8,"./modules/popper-popover":9,"./modules/popper-tooltip":10,"./modules/tabs":11}],2:[function(require,module,exports){
 "use strict";
 
 /* Accordion
@@ -108,13 +110,13 @@ var mobileMenu = document.querySelector('.c-design-system-nav__mobile');
 var handleMenuOpen = function handleMenuOpen(e) {
   e.preventDefault();
   mobileMenu.classList.add('c-design-system-nav__mobile--visible');
-  htmlElement.classList.add('u-no-scroll');
+  htmlElement.classList.add('u-kill-scroll');
 };
 
 var handleMenuClose = function handleMenuClose(e) {
   e.preventDefault();
   mobileMenu.classList.remove('c-design-system-nav__mobile--visible');
-  htmlElement.classList.remove('u-no-scroll');
+  htmlElement.classList.remove('u-kill-scroll');
 };
 
 mobileNavigationOpenButton && mobileNavigationOpenButton.addEventListener('click', handleMenuOpen, false);
@@ -348,7 +350,7 @@ var focusTrap = function focusTrap(dialog, e) {
   dialog.addEventListener('keydown', handleKeyDown, false);
 };
 
-},{"./util.js":11}],6:[function(require,module,exports){
+},{"./util.js":12}],6:[function(require,module,exports){
 "use strict";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -558,7 +560,48 @@ selectOptions.forEach(function (option) {
 
 document.addEventListener('click', handleOutsideClick);
 
-},{"./util":11,"@popperjs/core":12}],8:[function(require,module,exports){
+},{"./util":12,"@popperjs/core":13}],8:[function(require,module,exports){
+"use strict";
+
+/* Navbar components
+   ========================================================================== */
+var headers = document.querySelectorAll('.c-navbar-components .c-navbar-components__header');
+
+for (var i = 0; i < headers.length; i++) {
+  headers[i].addEventListener('click', openCurrNavbar);
+} //Use this as the callback if you would like multiple dropdowns to be open
+
+
+function openNavbar(e) {
+  var parent = this.parentElement;
+  var article = this.nextElementSibling;
+
+  if (!parent.classList.contains('js-active')) {
+    parent.classList.add('js-active');
+    article.style.maxHeight = article.scrollHeight + 'px';
+  } else {
+    parent.classList.remove('js-active');
+    article.style.maxHeight = '0px';
+  }
+} //Use this as the callback if you would like no more than one dropdown to be open
+
+
+function openCurrNavbar(e) {
+  for (var i = 0; i < headers.length; i++) {
+    var parent = headers[i].parentElement;
+    var article = headers[i].nextElementSibling;
+
+    if (this === headers[i] && !parent.classList.contains('js-active')) {
+      parent.classList.add('js-active');
+      article.style.maxHeight = article.scrollHeight + 'px';
+    } else {
+      parent.classList.remove('js-active');
+      article.style.maxHeight = '0px';
+    }
+  }
+}
+
+},{}],9:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -653,7 +696,7 @@ document.addEventListener('click', function (e) {
   }
 });
 
-},{"./util":11,"@popperjs/core":12}],9:[function(require,module,exports){
+},{"./util":12,"@popperjs/core":13}],10:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -727,7 +770,7 @@ function hide(e) {
   destroy();
 }
 
-},{"@popperjs/core":12}],10:[function(require,module,exports){
+},{"@popperjs/core":13}],11:[function(require,module,exports){
 "use strict";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -854,7 +897,7 @@ if (tablists.length) {
   });
 }
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -884,7 +927,7 @@ var isClickOutside = function isClickOutside(event, elements) {
 
 exports.isClickOutside = isClickOutside;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 (function (process){(function (){
 /**
  * @popperjs/core v2.9.2 - MIT License
@@ -2793,7 +2836,7 @@ exports.preventOverflow = preventOverflow$1;
 
 
 }).call(this)}).call(this,require('_process'))
-},{"_process":13}],13:[function(require,module,exports){
+},{"_process":14}],14:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
