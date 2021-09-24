@@ -31,18 +31,29 @@
   top: 0;
   left: 0;
   z-index: $g-c-global-navbar-z;
-  border-bottom: 1px solid $color-gray-150;
+  border-bottom: 1px solid $color-border;
+}
+
+.c-navbar--main {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 1.6rem;
+
+  @media (min-width: $g-bp3) {
+    margin: 3.2rem 0;
+    height: $g-bar-size-large;
+  }
 }
 
 /* Bordered equivalents
    ========================================================================== */
 
 .c-navbar--bordered-top {
-  border-top: 0.1rem solid $color-gray-150;
+  border-top: 0.1rem solid $color-border;
 }
 
 .c-navbar--bordered-bottom {
-  border-bottom: 0.1rem solid $color-gray-150;
+  border-bottom: 0.1rem solid $color-border;
 }
 
 /* Sizes

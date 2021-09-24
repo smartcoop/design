@@ -10,13 +10,13 @@ const mobileMenu = document.querySelector('.c-design-system-nav__mobile');
 const handleMenuOpen = function handleMenuOpen(e) {
   e.preventDefault();
   mobileMenu.classList.add('c-design-system-nav__mobile--visible');
-  htmlElement.classList.add('u-no-scroll');
+  htmlElement.classList.add('u-kill-scroll');
 }
 
 const handleMenuClose = function handleMenuClose(e) {
   e.preventDefault();
   mobileMenu.classList.remove('c-design-system-nav__mobile--visible');
-  htmlElement.classList.remove('u-no-scroll');
+  htmlElement.classList.remove('u-kill-scroll');
 }
 
 mobileNavigationOpenButton && mobileNavigationOpenButton.addEventListener('click', handleMenuOpen, false);
