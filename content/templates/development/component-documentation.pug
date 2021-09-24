@@ -69,29 +69,56 @@ block content
     .o-grid
 
         .o-grid-col-bp3-3
-
             .u-spacer-bottom-l
-
                 .c-input-group
                     .c-input-group__prepend
                         +icon('search')
                     input.c-input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass style="max-width: 70%")
+            
+            .c-navbar-components.u-padding-bottom-xl
+                .c-navbar-components__header
+                    .c-toolbar
+                        .c-toolbar__left
+                            .c-toolbar__item
+                                .c-toolbar-title Components
+                        .c-toolbar__right
+                            .c-toolbar__item
+                                +c-button({skin: 'borderless', layout: 'icon-only', icon: 'chevron-down'}) Chevron down
 
-            each docsCategoryName in config.styleguide.categoryOrder
-                if docsCategoryName === 'Components' && Object.keys(components.byCategory).length > 0
-                    each category, categoryName in components.byCategory
-                        .br-docs-category
-                            if Object.keys(components.byCategory).length > 1
-                                h4.br-docs-category-name(class=styleguideNavListTitleClass)= categoryName
-                            else
-                                h4.br-docs-category-name(class=styleguideNavListTitleClass) Components
-                            .br-docs-category-list-wrapper(class=styleguideNavListWrapperClass)
-                                ul(class=styleguideNavListClass)
-                                    each group in category
-                                        - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
-                                        li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
-                                            a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
-                                                |  #{groupName}
+                .c-navbar-components__content
+                    .br-styleguide-nav-holder.br-styleguide-nav-holder--mobile.u-spacer-top-l.u-padding-horizontal-l(class=styleguideNavigationHolderClass)
+                        each docsCategoryName in config.styleguide.categoryOrder
+                            if docsCategoryName === 'Components' && Object.keys(components.byCategory).length > 0
+                                each category, categoryName in components.byCategory
+                                    .br-docs-category
+                                        if Object.keys(components.byCategory).length > 1
+                                            h4.br-docs-category-name(class=styleguideNavListTitleClass)= categoryName
+                                        else
+                                            h4.br-docs-category-name(class=styleguideNavListTitleClass) Components
+                                        .br-docs-category-list-wrapper(class=styleguideNavListWrapperClass)
+                                            ul(class=styleguideNavListClass)
+                                                each group in category
+                                                    - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
+                                                    li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
+                                                        a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
+                                                            |  #{groupName}
+
+            .br-styleguide-nav-holder.br-styleguide-nav-holder--desktop(class=styleguideNavigationHolderClass)
+                each docsCategoryName in config.styleguide.categoryOrder
+                    if docsCategoryName === 'Components' && Object.keys(components.byCategory).length > 0
+                        each category, categoryName in components.byCategory
+                            .br-docs-category
+                                if Object.keys(components.byCategory).length > 1
+                                    h4.br-docs-category-name(class=styleguideNavListTitleClass)= categoryName
+                                else
+                                    h4.br-docs-category-name(class=styleguideNavListTitleClass) Components
+                                .br-docs-category-list-wrapper(class=styleguideNavListWrapperClass)
+                                    ul(class=styleguideNavListClass)
+                                        each group in category
+                                            - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
+                                            li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
+                                                a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
+                                                    |  #{groupName}
 
         .o-grid-col-bp3-9
                 .c-display

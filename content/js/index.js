@@ -7,3 +7,4 @@ import "./modules/input-password.js"
 import "./modules/popper-tooltip";
 import "./modules/design-system-website-mobile-menu";
 import "./modules/close-global-banner";
+import "./modules/navbar-components";
