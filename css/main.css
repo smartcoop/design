@@ -1089,7 +1089,8 @@ abbr[title] {
 
 .c-accordion__item .c-accordion__item-header {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
 
 .c-accordion__item .c-accordion__item-title {
   font-weight: 500; }
