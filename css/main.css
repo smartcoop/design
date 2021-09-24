@@ -1099,17 +1099,16 @@ abbr[title] {
 
 .c-accordion__item .c-accordion__item-content {
   margin-left: 4rem;
-  display: block; }
+  max-height: 0px;
+  overflow: hidden;
+  line-height: 1.6;
+  transition: max-height 200ms ease-in-out; }
 
-.c-accordion__item .c-button .o-svg-icon:first-child {
-  transform: rotate(90deg);
-  transition: .4s ease-in-out; }
+.c-accordion__item .c-button--icon {
+  transition: transform 200ms ease-in-out; }
 
-.c-accordion__item.c-accordion__item--closed .c-accordion__item-content {
-  display: none; }
-
-.c-accordion__item.c-accordion__item--closed .c-button .o-svg-icon:first-child {
-  transform: rotate(0deg); }
+.c-accordion__item.js-active .c-button--icon {
+  transform: rotate(90deg); }
 
 /* ==========================================================================
   c-alert
@@ -2558,7 +2557,7 @@ textarea.c-input--h-large {
   max-height: 0px;
   overflow: hidden;
   line-height: 1.6;
-  transition: max-height 350ms ease-in-out; }
+  transition: max-height 200ms ease-in-out; }
 
 .c-navbar-components .c-button--icon {
   transition: transform 200ms ease-in-out; }

@@ -516,8 +516,8 @@
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
                         <div class="c-accordion">
-                            <div class="c-accordion__item c-accordion__item--closed">
-                                <div class="c-accordion__item-header" aria-expanded="false" aria-controls="content1">
+                            <div class="c-accordion__item">
+                                <div class="c-accordion__item-header">
                                     <div class="c-toolbar">
                                         <div class="c-toolbar__left">
                                             <div class="c-toolbar__item">
@@ -537,12 +537,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="c-accordion__item-content" id="content1" aria-hidden="true">
+                                <div class="c-accordion__item-content">
                                     <p>Content 1</p>
                                 </div>
                             </div>
-                            <div class="c-accordion__item c-accordion__item--closed">
-                                <div class="c-accordion__item-header" aria-expanded="false" aria-controls="content2">
+                            <div class="c-accordion__item">
+                                <div class="c-accordion__item-header">
                                     <div class="c-toolbar">
                                         <div class="c-toolbar__left">
                                             <div class="c-toolbar__item">
@@ -562,7 +562,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="c-accordion__item-content" id="content2" aria-hidden="true">
+                                <div class="c-accordion__item-content">
                                     <p>Content 2</p>
                                 </div>
                             </div>
@@ -574,8 +574,8 @@
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-accordion&quot;&gt;
-    &lt;div class=&quot;c-accordion__item c-accordion__item--closed&quot;&gt;
-        &lt;div class=&quot;c-accordion__item-header&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;content1&quot;&gt;
+    &lt;div class=&quot;c-accordion__item&quot;&gt;
+        &lt;div class=&quot;c-accordion__item-header&quot;&gt;
             &lt;div class=&quot;c-toolbar&quot;&gt;
                 &lt;div class=&quot;c-toolbar__left&quot;&gt;
                     &lt;div class=&quot;c-toolbar__item&quot;&gt;
@@ -595,12 +595,12 @@
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;c-accordion__item-content&quot; id=&quot;content1&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div class=&quot;c-accordion__item-content&quot;&gt;
             &lt;p&gt;Content 1&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;c-accordion__item c-accordion__item--closed&quot;&gt;
-        &lt;div class=&quot;c-accordion__item-header&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;content2&quot;&gt;
+    &lt;div class=&quot;c-accordion__item&quot;&gt;
+        &lt;div class=&quot;c-accordion__item-header&quot;&gt;
             &lt;div class=&quot;c-toolbar&quot;&gt;
                 &lt;div class=&quot;c-toolbar__left&quot;&gt;
                     &lt;div class=&quot;c-toolbar__item&quot;&gt;
@@ -620,7 +620,7 @@
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;c-accordion__item-content&quot; id=&quot;content2&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div class=&quot;c-accordion__item-content&quot;&gt;
             &lt;p&gt;Content 2&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -629,26 +629,26 @@
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-pug">.c-accordion
-    .c-accordion__item.c-accordion__item--closed
-        .c-accordion__item-header(aria-expanded=&quot;false&quot; aria-controls=&quot;content1&quot;)
+    .c-accordion__item
+        .c-accordion__item-header
             .c-toolbar
                 .c-toolbar__left
                     .c-toolbar__item
                         +c-button({skin: 'borderless', layout: 'icon-only', icon: 'chevron-right'}) Chevron
                         span.c-accordion__item-title Title 1
 
-        .c-accordion__item-content#content1(aria-hidden=&quot;true&quot;)
+        .c-accordion__item-content
             p Content 1
 
-    .c-accordion__item.c-accordion__item--closed
-        .c-accordion__item-header(aria-expanded=&quot;false&quot; aria-controls=&quot;content2&quot;)
+    .c-accordion__item
+        .c-accordion__item-header
             .c-toolbar
                 .c-toolbar__left
                     .c-toolbar__item
                         +c-button({skin: 'borderless', layout: 'icon-only', icon: 'chevron-right'}) Chevron
                         span.c-accordion__item-title Title 2
 
-        .c-accordion__item-content#content2(aria-hidden=&quot;true&quot;)
+        .c-accordion__item-content
             p Content 2
 </pre>
                         </div>
@@ -662,8 +662,8 @@
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
                         <div class="c-accordion">
-                            <div class="c-accordion__item c-accordion__item--closed">
-                                <div class="c-accordion__item-header" aria-expanded="false">
+                            <div class="c-accordion__item">
+                                <div class="c-accordion__item-header">
                                     <div class="c-toolbar">
                                         <div class="c-toolbar__left">
                                             <div class="c-toolbar__item">
@@ -698,7 +698,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="c-accordion__item-content" aria-hidden="true">
+                                <div class="c-accordion__item-content">
                                     <p>Content 1</p>
                                 </div>
                             </div>
@@ -710,8 +710,8 @@
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-accordion&quot;&gt;
-    &lt;div class=&quot;c-accordion__item c-accordion__item--closed&quot;&gt;
-        &lt;div class=&quot;c-accordion__item-header&quot; aria-expanded=&quot;false&quot;&gt;
+    &lt;div class=&quot;c-accordion__item&quot;&gt;
+        &lt;div class=&quot;c-accordion__item-header&quot;&gt;
             &lt;div class=&quot;c-toolbar&quot;&gt;
                 &lt;div class=&quot;c-toolbar__left&quot;&gt;
                     &lt;div class=&quot;c-toolbar__item&quot;&gt;
@@ -746,7 +746,7 @@
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;c-accordion__item-content&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div class=&quot;c-accordion__item-content&quot;&gt;
             &lt;p&gt;Content 1&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -755,8 +755,8 @@
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-pug">.c-accordion
-    .c-accordion__item.c-accordion__item--closed
-        .c-accordion__item-header(aria-expanded=&quot;false&quot;)
+    .c-accordion__item
+        .c-accordion__item-header
             .c-toolbar
                 .c-toolbar__left
                     .c-toolbar__item
@@ -766,7 +766,7 @@
                     .c-toolbar__item
                         +c-button({skin: 'borderless', icon: 'add', layout: 'icon-only'})
 
-        .c-accordion__item-content(aria-hidden=&quot;true&quot;)
+        .c-accordion__item-content
             p Content 1
 </pre>
                         </div>
