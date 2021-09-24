@@ -50,7 +50,7 @@ block append headerStyles
             display: block;
             padding: .8rem 1.6rem;
             color: #333
-            
+
         }
         #component-docs img {
             background: #F2F2F2;
@@ -75,7 +75,7 @@ block content
                 .c-input-group
                     .c-input-group__prepend
                         +icon('search')
-                    input.c-input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass style="max-width: 70%")
+                    input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
 
             each docsCategoryName in config.styleguide.categoryOrder
                 if docsCategoryName === 'Components' && Object.keys(components.byCategory).length > 0

@@ -78,6 +78,12 @@ textarea.c-input--h-large { height: 20rem; }
 .c-input--w-medium { width: 16rem; }
 .c-input--w-large { width: 44rem; }
 
+.c-input--max-width {
+  @media (min-width: $g-bp3) {
+    max-width: 70%;
+  }
+}
+
 .c-input[readonly] {
   background-color: $c-input-readonly-border-color;
 }
@@ -113,9 +119,6 @@ textarea.c-input--h-large { height: 20rem; }
   border: 1px solid $color-gray-200;
 }
 
-/* Input group prepend
-   ========================================================================== */
-
 .c-input-group__prepend {
   margin-right: -0.1rem;
   border-radius: 0.4rem 0 0 0.4rem;
@@ -126,12 +129,12 @@ textarea.c-input--h-large { height: 20rem; }
   margin-left: -0.1rem;
 }
 
-.c-input-group > .c-input:not(:first-child) {
-  border-radius: 0 0.4rem 0.4rem 0;
-}
-
 .c-input-group > .c-input:not(:last-child) {
   border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.c-input-group > .c-input:not(:first-child) {
+  border-radius: 0 0.4rem 0.4rem 0;
 }
 
 
