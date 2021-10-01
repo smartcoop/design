@@ -2,4 +2,4 @@
 title: Brand
 ---
 
-Smart Coop's logo.
+Smart's logo.

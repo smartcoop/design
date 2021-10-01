@@ -1,13 +1,13 @@
 //-
-    Mixin Brand - The Smart Coop logo
+    Mixin Brand - The Smart logo
 
     @param {Object} props
     @param {href} href - This should be the URL of the homepage of your app or site.
     @param {enum [small, medium]} size - Determines the size
-    @param {boolean} isLink 
+    @param {boolean} isLink
 
 
 mixin c-brand({href="/", size="medium", isClosable=true})
     .c-brand(class="c-brand--"+size)
         a(href=href)
-            img(src="/images/logo.svg" alt="Smart Coop")
+            img(src="/images/logo.svg" alt="Smart")
