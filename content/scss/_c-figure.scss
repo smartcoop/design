@@ -11,7 +11,9 @@
   padding: 3rem;
   border-radius: .3rem;
   img {
-    max-width: 62rem;
+    @media (min-width: $g-bp3) {
+      max-width: 62rem;
+    }
     display: block;
     margin: 0 auto 1.2rem;
   }
