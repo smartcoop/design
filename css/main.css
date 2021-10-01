@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
   Stylesheet for Smart
   ITCSS + BEM
@@ -893,18 +894,6 @@ abbr[title] {
 .c-content ol {
   list-style: decimal; }
 
-.c-content blockquote {
-  font-style: italic;
-  padding-left: 1.5rem;
-  margin-left: 0.2rem;
-  border-left: 0.4rem solid #E5E5E5; }
-
-.c-content strong {
-  font-weight: 500; }
-
-.c-content .c-button {
-  text-decoration: none; }
-
 /* ==========================================================================
   c-display
   ---
@@ -991,6 +980,8 @@ abbr[title] {
 /* ==========================================================================
   Shared styles between c-display and c-content
    ========================================================================== */
+/* Tables
+   ========================================================================== */
 .c-display table,
 .c-content table {
   width: 100%;
@@ -1008,14 +999,23 @@ abbr[title] {
   font-weight: 500;
   text-align: left; }
 
+.c-display table th[scope="row"],
+.c-content table th[scope="row"] {
+  border-bottom: 0.1rem solid #CCCCCC;
+  border-right: 0.2rem solid #CCCCCC; }
+
 .c-display table td,
 .c-content table td {
   border-bottom: 1px solid #E5E5E5; }
 
 .c-display table tr:last-child td,
-.c-content table tr:last-child td {
-  border: none; }
+.c-display table tr:last-child th[scope="row"],
+.c-content table tr:last-child td,
+.c-content table tr:last-child th[scope="row"] {
+  border-bottom: none; }
 
+/* Code blocks
+   ========================================================================== */
 .c-display pre,
 .c-content pre {
   background: #F2F2F2;
@@ -1036,6 +1036,58 @@ abbr[title] {
   padding: 0.2rem;
   border-radius: 0.2rem;
   color: #FF4054; }
+
+/* Block and inline quotes
+   ========================================================================== */
+.c-display blockquote,
+.c-content blockquote {
+  font-style: italic;
+  padding-left: 1.5rem;
+  margin-left: 0.2rem;
+  border-left: 0.4rem solid #E5E5E5; }
+
+.c-display .c-block-quote--enable-auto-quotes p:first-child:before,
+.c-content .c-block-quote--enable-auto-quotes p:first-child:before {
+  content: open-quote; }
+
+.c-display .c-block-quote--enable-auto-quotes p:last-of-type:after,
+.c-content .c-block-quote--enable-auto-quotes p:last-of-type:after {
+  content: close-quote; }
+
+.c-display blockquote cite,
+.c-content blockquote cite {
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 85%;
+  letter-spacing: .1rem; }
+
+.c-display strong,
+.c-content strong {
+  font-weight: 500; }
+
+.c-display .c-button,
+.c-content .c-button {
+  text-decoration: none; }
+
+.c-display *,
+.c-content * {
+  quotes: "“" "”"; }
+
+.c-display *[lang="fr"] *,
+.c-content *[lang="fr"] * {
+  quotes: "«" "»"; }
+
+.c-display *[lang="de"] *,
+.c-content *[lang="de"] * {
+  quotes: "»" "«"; }
+
+.c-display q:before,
+.c-content q:before {
+  content: open-quote; }
+
+.c-display q:after,
+.c-content q:after {
+  content: close-quote; }
 
 /* ==========================================================================
   Component: video-wrapper
@@ -2902,11 +2954,6 @@ textarea.c-input--h-large {
    ========================================================================== */
 /* Component
    ========================================================================== */
-/*.c-table {
-  a {
-    font-weight: 500;
-  }
-}*/
 .c-table {
   width: 100%; }
   .c-table th, .c-table td {
@@ -3038,23 +3085,6 @@ textarea.c-input--h-large {
 
 .o-table-col-15 {
   width: 93.75%; }
-
-/* Untable a table
-   ========================================================================== */
-.c-table--untable tr {
-  display: block; }
-  .c-table--untable tr th {
-    display: block; }
-  .c-table--untable tr td {
-    display: block; }
-
-@media (min-width: 700px) {
-  .c-table--untable tr {
-    display: table-row; }
-    .c-table--untable tr th {
-      display: table-cell; }
-    .c-table--untable tr td {
-      display: table-cell; } }
 
 /* Responsive table
    Adapted from Bootstrap 4
