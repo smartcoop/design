@@ -1,0 +1,105 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Type test"
+
+block body
+    div(style="padding: 40px;")
+        .c-content
+            h1 Tables in content test
+            p This page tests usage of tables (using tabular data to explain something). For example, in a blog post, one might list financials.
+
+        .o-grid
+            .o-grid-col-6
+                .c-content
+
+                    // This example shows a table where the column headers are right in the tbody (horizontal table)
+                    table.c-table.c-table--horizontal
+                        tbody
+                            tr
+                                th(scope="row") Table header
+                                td Table cell
+                                td Table cell
+                            tr
+                                th(scope="row") Table header
+                                td Table cell
+                                td Table cell
+                            tr
+                                th(scope="row") Table header
+                                td Table cell
+                                td Table cell
+
+                    // This example shows cell width control
+                    table.c-table
+                        thead
+                            tr
+                                th Table header
+                                th Table header
+                                th Table header
+                        tbody
+                            tr
+                                td.o-table-col-4 Table cell
+                                td Table cell
+                                td Table cell
+                            tr
+                                td.o-table-col-4 Table cell
+                                td Table cell
+                                td Table cell
+                            tr
+                                td.o-table-col-4 Table cell
+                                td Table cell
+                                td Table cell
+                    table.c-table.c-table--untable
+                        tbody
+                            tr
+                                th Table header
+                                th Table header
+                                th Table header
+                            tr
+                                td Table cell
+                                td Table cell
+                                td Table cell
+                            tr
+                                td Table cell
+                                td Table cell
+                                td Table cell
+                            tr
+                                td Table cell
+                                td Table cell
+                                td Table cell
+                    table.c-table
+                        tbody
+                            tr
+                                th Table header
+                                th Table header
+                                th.u-text-right Revenue
+                            tr
+                                td Table cell
+                                td Table cell
+                                td.u-text-right €22 0 20,13
+                            tr
+                                td Table cell
+                                td Table cell
+                                td.u-text-right €25 0 40,70
+                            tr
+                                td December
+                                td Table cell
+                                td.u-text-right €19 990,90
+                    table.c-table.c-table-responsive
+                        tbody
+                            tr
+                                th Table header
+                                th Table header
+                                th Table header
+                                th Table header
+                                th Table header
+                                th Table header
+                                th Table header
+                            tr
+                                td Table cell
+                                td Table cell with very long content
+                                td Table cell
+                                td Table cell with extremely long content, lorem ipsum dolor sit amet
+                                td Table cell with very long content
+                                td Table cell with extremely long content, lorem ipsum dolor sit amet
+                                td Table cell

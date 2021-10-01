@@ -2,11 +2,12 @@
   Shared styles between c-display and c-content
    ========================================================================== */
 
+/* Tables
+   ========================================================================== */
+
 .c-display,
 .c-content {
 
-  // Table styling
-  
   table {
     width: 100%;
     margin: 1.5rem 0;
@@ -23,13 +24,26 @@
     text-align: left;
   }
 
+  table th[scope="row"] {
+    border-bottom: .1rem solid $color-gray-200;
+    border-right: .2rem solid $color-gray-200;
+  }
+
   table td {
     border-bottom: 1px solid $color-gray-100;
   }
 
-  table tr:last-child td {
-    border: none;
+  table tr:last-child td,
+  table tr:last-child th[scope="row"] {
+    border-bottom: none;
   }
+}
+
+/* Code blocks
+   ========================================================================== */
+
+.c-display,
+.c-content {
 
   // Code block styling
 
@@ -51,6 +65,66 @@
     padding: 0.2rem;
     border-radius: 0.2rem;
     color: $color-red-500;
+  }
+
+}
+
+/* Block and inline quotes
+   ========================================================================== */
+
+.c-display,
+.c-content {
+
+  blockquote {
+    font-style: italic;
+    padding-left: 1.5rem;
+    margin-left: 0.2rem;
+    border-left: .4rem solid $color-gray-100;
+  }
+
+  .c-block-quote--enable-auto-quotes p:first-child:before {
+    content: open-quote;
+  }
+
+  .c-block-quote--enable-auto-quotes p:last-of-type:after {
+    content: close-quote;
+  }
+
+  blockquote cite {
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 85%;
+    letter-spacing: .1rem;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  .c-button {
+    text-decoration: none;
+  }
+
+  // Inline quotes
+
+  * {
+    quotes: "“" "”";
+  }
+
+  *[lang="fr"] * {
+    quotes: "«" "»";
+  }
+
+  *[lang="de"] * {
+    quotes: "»" "«";
+  }
+
+  q:before {
+    content: open-quote;
+  }
+
+  q:after {
+    content: close-quote;
   }
 
 }

@@ -16,12 +16,6 @@ $c-table-row-selected-bg: $color-primary !default;
 /* Component
    ========================================================================== */
 
-/*.c-table {
-  a {
-    font-weight: 500;
-  }
-}*/
-
 .c-table {
   width: 100%;
 
@@ -161,32 +155,6 @@ $i: 1;
   }
 
   $i: $i + 1;
-}
-
-/* Untable a table
-   ========================================================================== */
-
-.c-table--untable {
-  tr {
-    display: block;
-    th {
-      display: block;
-    }
-    td {
-      display: block;
-    }
-  }
-  @media (min-width: $g-bp2) {
-    tr {
-      display: table-row;
-      th {
-        display: table-cell;
-      }
-      td {
-        display: table-cell;
-      }
-    }
-  }
 }
 
 /* Responsive table
