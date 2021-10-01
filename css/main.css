@@ -1071,9 +1071,11 @@ abbr[title] {
   padding: 3rem;
   border-radius: .3rem; }
   .c-figure--boxed img {
-    max-width: 62rem;
     display: block;
     margin: 0 auto 1.2rem; }
+    @media (min-width: 900px) {
+      .c-figure--boxed img {
+        max-width: 62rem; } }
 
 /* Components: separately styled components (buttons, form inputs, toolbars...)
    ========================================================================== */
