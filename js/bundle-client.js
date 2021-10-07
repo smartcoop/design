@@ -3,25 +3,27 @@
 
 require("./modules/accordion");
 
-require("./modules/menu");
-
-require("./modules/dialogs");
-
-require("./modules/popper-popover");
-
-require("./modules/tabs");
-
-require("./modules/input-password.js");
-
-require("./modules/popper-tooltip");
-
-require("./modules/design-system-website-mobile-menu");
+require("./modules/close-alert");
 
 require("./modules/close-global-banner");
 
+require("./modules/design-system-website-mobile-menu");
+
+require("./modules/dialogs");
+
+require("./modules/input-password.js");
+
+require("./modules/menu");
+
 require("./modules/navbar-components");
 
-},{"./modules/accordion":2,"./modules/close-global-banner":3,"./modules/design-system-website-mobile-menu":4,"./modules/dialogs":5,"./modules/input-password.js":6,"./modules/menu":7,"./modules/navbar-components":8,"./modules/popper-popover":9,"./modules/popper-tooltip":10,"./modules/tabs":11}],2:[function(require,module,exports){
+require("./modules/popper-popover");
+
+require("./modules/popper-tooltip");
+
+require("./modules/tabs");
+
+},{"./modules/accordion":2,"./modules/close-alert":3,"./modules/close-global-banner":4,"./modules/design-system-website-mobile-menu":5,"./modules/dialogs":6,"./modules/input-password.js":7,"./modules/menu":8,"./modules/navbar-components":9,"./modules/popper-popover":10,"./modules/popper-tooltip":11,"./modules/tabs":12}],2:[function(require,module,exports){
 "use strict";
 
 /* Accordion
@@ -83,6 +85,59 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+/* alert JS
+   ========================================================================== */
+var CloseAlert = /*#__PURE__*/function () {
+  function CloseAlert(alert) {
+    _classCallCheck(this, CloseAlert);
+
+    this.alertClass = alert;
+    this.closeButton = alert.querySelector('[data-alert-close]');
+    this.init();
+  }
+
+  _createClass(CloseAlert, [{
+    key: "init",
+    value: function init() {
+      var parentClassScope = this;
+      this.closeButton.addEventListener('click', function (e) {
+        parentClassScope.alertClass.remove();
+      });
+    }
+  }]);
+
+  return CloseAlert;
+}();
+
+var closableAlerts = document.querySelectorAll('[data-alert-closable]');
+
+if (closableAlerts.length) {
+  _toConsumableArray(closableAlerts).map(function (closableAlertsWithClick) {
+    return new CloseAlert(closableAlertsWithClick);
+  });
+}
+
+},{}],4:[function(require,module,exports){
+"use strict";
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 /* banner JS
    ========================================================================== */
 var CloseBanner = /*#__PURE__*/function () {
@@ -120,7 +175,7 @@ if (closablebanners.length) {
   });
 }
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 /* ==========================================================================
@@ -146,7 +201,7 @@ var handleMenuClose = function handleMenuClose(e) {
 mobileNavigationOpenButton && mobileNavigationOpenButton.addEventListener('click', handleMenuOpen, false);
 mobileNavigationCloseButton && mobileNavigationCloseButton.addEventListener('click', handleMenuClose, false);
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 var _util = require("./util.js");
@@ -374,7 +429,7 @@ var focusTrap = function focusTrap(dialog, e) {
   dialog.addEventListener('keydown', handleKeyDown, false);
 };
 
-},{"./util.js":12}],6:[function(require,module,exports){
+},{"./util.js":13}],7:[function(require,module,exports){
 "use strict";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -437,7 +492,7 @@ if (passwordsInputs.length) {
   });
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -584,7 +639,7 @@ selectOptions.forEach(function (option) {
 
 document.addEventListener('click', handleOutsideClick);
 
-},{"./util":12,"@popperjs/core":13}],8:[function(require,module,exports){
+},{"./util":13,"@popperjs/core":14}],9:[function(require,module,exports){
 "use strict";
 
 /* Navbar components
@@ -625,7 +680,7 @@ function openCurrNavbar(e) {
   }
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -720,7 +775,7 @@ document.addEventListener('click', function (e) {
   }
 });
 
-},{"./util":12,"@popperjs/core":13}],10:[function(require,module,exports){
+},{"./util":13,"@popperjs/core":14}],11:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -794,7 +849,7 @@ function hide(e) {
   destroy();
 }
 
-},{"@popperjs/core":13}],11:[function(require,module,exports){
+},{"@popperjs/core":14}],12:[function(require,module,exports){
 "use strict";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -921,7 +976,7 @@ if (tablists.length) {
   });
 }
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -951,7 +1006,7 @@ var isClickOutside = function isClickOutside(event, elements) {
 
 exports.isClickOutside = isClickOutside;
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 (function (process){(function (){
 /**
  * @popperjs/core v2.9.2 - MIT License
@@ -2860,7 +2915,7 @@ exports.preventOverflow = preventOverflow$1;
 
 
 }).call(this)}).call(this,require('_process'))
-},{"_process":14}],14:[function(require,module,exports){
+},{"_process":15}],15:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
