@@ -28,14 +28,31 @@
     right: 0.8rem;
     left: auto;
   }
-  
-  // Specific situation for sign in
 
-  .c-input[type="password"] ~ .o-svg-icon-eye-off {
-    display: none;
+  // Specific situation for password show/hide toggle
+  .c-input-with-icon__toggle {
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    right: 0.4rem;
+    padding: 0.3rem;
+
+    .o-svg-icon {
+      position: initial;
+    }
   }
 
-  .c-input[type="text"] ~ .o-svg-icon-eye {
+  .c-input[type="password"] ~ .c-input-with-icon__toggle .o-svg-icon-eye-off,
+  .c-input[type="text"] ~ .c-input-with-icon__toggle .o-svg-icon-eye {
     display: none;
   }
 }

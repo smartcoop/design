@@ -1,17 +1,15 @@
 class InputPassword {
   constructor(el) {
     this.el = el;
-    this.icons = el.parentElement.querySelectorAll(
-      ".o-svg-icon-eye,.o-svg-icon-eye-off"
+    this.button = el.parentElement.querySelector(
+      "button[data-password-toggle]"
     );
 
     this.attach();
   }
 
   attach() {
-    [...this.icons].map((icon) =>
-      icon.addEventListener("click", this.onClick.bind(this))
-    );
+    this.button.addEventListener("click", this.onClick.bind(this))
   }
 
   onClick(event) {

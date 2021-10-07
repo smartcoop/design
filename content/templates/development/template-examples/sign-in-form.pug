@@ -29,8 +29,9 @@ block body
                                 .o-form-group__controls
                                     .c-input-with-icon
                                         input.c-input(type="password")
-                                        +icon('eye')
-                                        +icon('eye-off')
+                                        button.c-input-with-icon__toggle(data-password-toggle)
+                                            +icon('eye')
+                                            +icon('eye-off')
 
                             .o-form-group
                                 a.c-button.c-button--primary.c-button--block(href="#")
@@ -41,7 +42,7 @@ block body
 
                             p.c-or
                                 span or
-            
+
                             .o-form-group
                                 a.c-button.c-button--secondary.c-button--block(href="#")
                                     .c-button__content
