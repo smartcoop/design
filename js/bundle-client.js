@@ -455,18 +455,14 @@ var InputPassword = /*#__PURE__*/function () {
     _classCallCheck(this, InputPassword);
 
     this.el = el;
-    this.icons = el.parentElement.querySelectorAll(".o-svg-icon-eye,.o-svg-icon-eye-off");
+    this.button = el.parentElement.querySelector("button[data-password-toggle]");
     this.attach();
   }
 
   _createClass(InputPassword, [{
     key: "attach",
     value: function attach() {
-      var _this = this;
-
-      _toConsumableArray(this.icons).map(function (icon) {
-        return icon.addEventListener("click", _this.onClick.bind(_this));
-      });
+      this.button.addEventListener("click", this.onClick.bind(this));
     }
   }, {
     key: "onClick",

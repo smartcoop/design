@@ -508,10 +508,10 @@
                 </div>
                 <div class="br-content c-content">
                 </div>
-                <div class="br-sample" id="component-03-c-input-icon">
+                <div class="br-sample" id="component-01-c-input-icon">
                     <div class="br-sample-header br-sample-clearfix">
                         <h3 class="br-sample-heading c-h3">Text field with icon</h3>
-                        <a class="br-sample-header-link" href="#component-03-c-input-icon">#</a>
+                        <a class="br-sample-header-link" href="#component-01-c-input-icon">#</a>
                     </div>
                     <div class="br-sample-documentation c-content">
                         <p>Text field with icon. Commonly used for search forms.</p>
@@ -555,6 +555,95 @@
         .c-input-with-icon
             input.c-input(type=&quot;text&quot; placeholder=&quot;Enter your search term...&quot;)
             +icon('search')
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-02-c-input-icon-toggle">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Text field with toggleable icon (password field)</h3>
+                        <a class="br-sample-header-link" href="#component-02-c-input-icon-toggle">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content">
+                        <p>Clicking the icon toggles the visibility of the password.</p>
+                    </div>
+                    <div class="br-sample-content">
+                        <div class="o-form-group-layout o-form-group-layout--standard">
+                            <div class="o-form-group">
+                                <div class="c-input-with-icon">
+                                    <input class="c-input" type="password" />
+                                    <button class="c-input-with-icon__toggle" data-password-toggle="data-password-toggle">
+                                        <div class="o-svg-icon o-svg-icon-eye  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z" fill="#7A7A7A" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z" fill="#7A7A7A" />
+                                                <path d="M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z" fill="#7A7A7A" />
+                                                <path d="M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z" fill="#7A7A7A" />
+                                            </svg>
+                                        </div>
+                                        <div class="o-svg-icon o-svg-icon-eye-off  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0)">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z" fill="#7A7A7A" />
+                                                    <path d="M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z" fill="#7A7A7A" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0">
+                                                        <rect width="24" height="24" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;div class=&quot;c-input-with-icon&quot;&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;password&quot; /&gt;
+            &lt;button class=&quot;c-input-with-icon__toggle&quot; data-password-toggle=&quot;data-password-toggle&quot;&gt;
+                &lt;div class=&quot;o-svg-icon o-svg-icon-eye  &quot;&gt;
+                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                        &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                        &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                        &lt;path d=&quot;M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                        &lt;path d=&quot;M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;o-svg-icon o-svg-icon-eye-off  &quot;&gt;
+                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                        &lt;g clip-path=&quot;url(#clip0)&quot;&gt;
+                            &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path d=&quot;M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                        &lt;/g&gt;
+                        &lt;defs&gt;
+                            &lt;clipPath id=&quot;clip0&quot;&gt;
+                                &lt;rect width=&quot;24&quot; height=&quot;24&quot; fill=&quot;white&quot; /&gt;
+                            &lt;/clipPath&gt;
+                        &lt;/defs&gt;
+                    &lt;/svg&gt;
+                &lt;/div&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
+    .o-form-group
+        .c-input-with-icon
+            input.c-input(type=&quot;password&quot;)
+            button.c-input-with-icon__toggle(data-password-toggle)
+                +icon('eye')
+                +icon('eye-off')
 </pre>
                         </div>
                     </div>
