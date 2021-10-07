@@ -1,0 +1,83 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+
+block content
+
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar.u-bg-gray-50
+            .u-scroll-wrapper
+                .u-scroll-wrapper-body
+                    .o-container
+                        .o-container-vertical
+                            ul.c-side-menu
+                                li.c-side-menu__item.c-side-menu__item--active
+                                    a.c-side-menu__link(href="#")
+                                        +icon('document')
+                                        .c-sidebar-item__label Quotes &amp; invoices
+                                li.c-side-menu__item
+                                    a.c-side-menu__link(href="#")
+                                        +icon('bills')
+                                        .c-sidebar-item__label Funding
+                                li.c-side-menu__item
+                                    a.c-side-menu__link(href="#")
+                                        +icon('tag')
+                                        .c-sidebar-item__label Expenses
+
+        .c-app-layout-inner__main
+            .u-scroll-wrapper
+                .c-navbar.c-navbar--bordered-bottom
+                    .c-toolbar
+                        .c-toolbar__left
+                            .c-toolbar__item
+                                a.c-button.c-button--icon.c-button--borderless(href="#")
+                                    .c-button__content
+                                        +icon('arrow-left')
+                                        .u-sr-accessible Back
+                            .c-toolbar__item
+                                    h2.c-toolbar__title Toolbar Title
+
+                        .c-toolbar__right
+                            .c-toolbar__item
+                                .c-button-toolbar
+                                    +c-button({ skin: 'danger-secondary', icon: 'close' }) Cancel
+                                    +c-button({ skin: 'primary', icon: 'save' }) Save
+
+                .u-scroll-wrapper-body
+                    .o-container.o-container--large
+                        .o-container-vertical
+                            .c-panel.u-spacer-bottom-l
+                                .c-panel__header
+                                    h2.c-panel__title Form grouping
+                                .c-panel__body
+                                    .o-form-group-layout.o-form-group-layout--standard
+                                        .o-form-group
+                                            label.o-form-group__label Add client
+                                            .c-empty-state.c-empty-state--bg-alt
+                                                p.u-text-muted.c-body-1 Please add a client for this quote.
+                                                .c-button-toolbar
+                                                    +c-button({icon: 'add'}) Add new client
+                                                    +c-button({icon: 'add'}) Add existing client
+
+                                        .o-form-group
+                                            label.o-form-group__label Radio
+                                            .o-form-group__controls
+                                                .c-radio-group
+                                                    .c-radio
+                                                        label
+                                                            input(type="radio" name="radio1"  checked)
+                                                            | Lorem ipsum dolor sit amet.
+                                                    .c-radio
+                                                        label
+                                                            input(type="radio" name="radio1")
+                                                            | Lorem ipsum dolor sit amet.
+
+                            .c-panel.u-spacer-bottom-l
+                                .c-panel__header
+                                    h2.c-panel__title Form grouping
+                                .c-panel__body
+                                    .o-form-group-layout.o-form-group-layout--standard
+                                        +c-form-group({ label: 'Input', id: 'input'})
+                                        +c-form-group({ label: 'Select', id: 'select', type: 'select', value: ['Choose an item','A','B', 'C'], helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                        +c-form-group({ label: 'Textarea', id: 'textarea', type: 'textarea', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
