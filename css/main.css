@@ -1292,6 +1292,20 @@ abbr[title] {
   min-height: 0;
   overflow: hidden; }
 
+.c-app-layout-inner {
+  display: flex;
+  height: 100%; }
+
+.c-app-layout-inner__sidebar {
+  width: 32rem;
+  height: 100%;
+  flex: 0 0 auto; }
+
+.c-app-layout-inner__main {
+  width: 100%;
+  height: 100%;
+  flex: 1; }
+
 /* ==========================================================================
   c-avatar
   ---
