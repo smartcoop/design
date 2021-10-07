@@ -9,8 +9,8 @@
     @param {boolean} isClosable - makes alert closable
 
 mixin c-alert({skin="default", icon, message, title, isClosable=false})
-    .c-alert(class="c-alert--"+skin+" "+closableClass)&attributes(attributes)
-        +icon(icon? icon : 'circle-information', 'o-svg-icon--'+skin)
+    .c-alert(class="c-alert--"+skin data-alert-closable=isClosable || false)&attributes(attributes)
+        +icon(icon? icon : 'circle-information')
         .c-alert__body
             .c-alert__text
                 if title
