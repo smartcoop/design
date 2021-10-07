@@ -3,9 +3,10 @@ extends /templates/_layouts/default
 block body
     .o-container-vertical
         .o-container.o-container--medium
-            +c-alert({
-                title: "Please enter your message and we will be in touch soon."
-            })
+            .u-spacer-bottom-l
+                +c-alert({
+                    title: "Please enter your message and we will be in touch soon."
+                })
 
             .o-form-group-layout.o-form-group-layout--standard
                 .o-form-group
@@ -13,7 +14,7 @@ block body
                     .o-form-group__controls
                         input.c-input(type="text" value="Jane Cooper" id="tfNameId")
                 .o-form-group
-                    label.o-form-group__label(for="tfEmailId") Your e-mail address
+                    label.o-form-group__label(for="tfEmailId") Your email address
                     .o-form-group__controls
                         input.c-input(type="text" value="jane.cooper@gmail.com" id="tfEmailId")
                 .o-form-group
