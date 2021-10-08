@@ -15,11 +15,12 @@
 
   &:before {
     content: '';
-    height: 100%;
+    height: calc(100% + .1rem);
     width: 0.4rem;
+    border-radius: 0.3rem 0 0 .3rem;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: -.1rem;
+    bottom: -.05rem;
     background: $color-blue-500;
   }
 
