@@ -1234,11 +1234,12 @@ abbr[title] {
   position: relative; }
   .c-alert:before {
     content: '';
-    height: 100%;
+    height: calc(100% + .1rem);
     width: 0.4rem;
+    border-radius: 0.3rem 0 0 .3rem;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: -.1rem;
+    bottom: -.05rem;
     background: #1267FB; }
   .c-alert > .o-svg-icon {
     color: #1267FB; }
