@@ -1,0 +1,39 @@
+extends ../../../index
+
+block append pageVariables
+    - var moduleTitle = "Changelog"
+
+block content
+
+    .o-container.o-container--medium
+        .o-container-vertical
+
+            article.c-blog-article
+                .c-blog-article__header
+                    h1.c-d-h1 Smart Coop announces an open design system
+                    p October 8, 2021
+
+                .c-blog-article__content
+                    .c-display
+
+                        p We're happy to announce we, at Smart Belgium, have started to work on a design system for the web applications of the Smart group. For the first time, but surely not the last, we've decided to make this project open source and available on GitHub. We believe this matches the collaborative values of Smart and will enable various parties of the Smart ecosystem to benefit from it.
+                        p The home of the design system lives at the homepage of this very website. In addition to the blog that you're reading right now, you will be able to learn what's new, find the necessary documentation to get started with designing, using and developing the design system yourself, as well as find the right links to be able to contribute.
+                        p With this design system we are pursuing three goals:
+
+                        ul
+                            li The first goal is to create the visual basis of our future software developments. This may mean the different colors that can be used, the shape and size of a button, or the location of a menu or a form on the screen. This visual work follows and stands on top of the graphic charter introduced in early 2019.
+                            li The second goal is to create and assemble those design elements in a tool called Figma. Figma is specialized to design software interfaces. In addition of design work by designers, it can also be used by software development teams to prototype what new screens could look like and how they are organized.
+                            li The third goal is to implement and present the design using web technologies: HTML and CSS. This implementation is meant to be a source of truth for other developers, so they can replicate the design in whatever programming language and technical stack they want.
+
+                        p We're very excited by what we've done so far and will write additional blog posts soon. In the mean time, you can already join the conversation using <a href="https://github.com/smartcoop/design/issues/111">GitHub issues</a>.
+
+                    .o-container-vertical.o-container-vertical--padding-mini
+                        ul.c-avatar-and-text-list
+                            li.c-avatar-and-text
+                                +c-avatar({ href: "https://github.com/thusc/", img: "https://avatars.githubusercontent.com/u/45588452?v=4" })
+                                .c-avatar-and-text__text
+                                    p Thu
+                            li.c-avatar-and-text
+                                +c-avatar({ href: "https://github.com/Wolfr/", img: "https://avatars.githubusercontent.com/u/12690?v=4" })
+                                .c-avatar-and-text__text
+                                    p Wolfr
