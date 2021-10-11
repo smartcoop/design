@@ -1401,7 +1401,6 @@ abbr[title] {
 /* Image variant
    ========================================================================== */
 .c-avatar--img {
-  background: none;
   border: 0.1rem solid #B3B3B3;
   overflow: hidden; }
   .c-avatar--img img {
