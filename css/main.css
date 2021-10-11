@@ -1698,8 +1698,6 @@ input.c-button {
 /* Variables
    ========================================================================== */
 .c-button {
-  transition: 0.18s ease-in;
-  transition-property: background, border;
   border: 1px solid transparent; }
 
 /* Primary
@@ -1987,8 +1985,7 @@ input.c-button {
 .c-radio input[type='radio']:focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(212, 212, 212, 0.5);
-  border-color: #D4D4D4;
-  transition: 0.14s box-shadow ease-in-out; }
+  border-color: #D4D4D4; }
 
 /* Checkbox specific
    ========================================================================== */
@@ -2005,9 +2002,7 @@ input.c-button {
     left: -0.1rem;
     top: -0.1rem;
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
-    opacity: 0;
-    transition: all 0.14s;
-    transition-property: opacity; }
+    opacity: 0; }
   .c-checkbox input[type='checkbox'][data-indeterminate]:before {
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;'%3E%3Cpath id='Rectangle' d='M12,8c0,-0.552 -0.448,-1 -1,-1l-6,0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l6,0c0.552,0 1,-0.448 1,-1Z' style='fill:%23fff;'/%3E%3C/svg%3E") no-repeat; }
 
@@ -2178,8 +2173,7 @@ input.c-button {
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
-          appearance: none;
-  transition: all 0.15s ease-in-out; }
+          appearance: none; }
   .c-input:focus {
     outline: 0;
     border-color: #1267FB;
@@ -2860,7 +2854,6 @@ textarea.c-input--h-large {
 /* Component
    ========================================================================== */
 .c-select {
-  transition: all 0.15s ease-in-out;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -3176,7 +3169,6 @@ textarea.c-input--h-large {
 
 .c-tabs__item {
   color: #808080;
-  transition: color 0.1s linear;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -3211,8 +3203,7 @@ textarea.c-input--h-large {
   color: #333333;
   font-size: 1.6rem;
   line-height: 1.5;
-  width: 100%;
-  transition: all 0.15s ease-in-out; }
+  width: 100%; }
   .c-textarea:-ms-input-placeholder {
     color: #999999; }
   .c-textarea::placeholder {
@@ -3460,7 +3451,6 @@ textarea.c-input--h-large {
   font-size: 1.4rem;
   line-height: 1;
   padding: 0;
-  transition: color 0.18s ease-in;
   height: 6.1rem;
   width: 100%; }
   .c-wizard__item:hover, .c-wizard__item:focus {
@@ -3512,9 +3502,7 @@ textarea.c-input--h-large {
       left: -0.2rem;
       top: -0.2rem;
       border-radius: 100%;
-      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
-      transition: all 0.14s;
-      transition-property: opacity; }
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat; }
 
 .c-wizard--active {
   color: #333333; }
