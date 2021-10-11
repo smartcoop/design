@@ -1,0 +1,8 @@
+//-
+    Mixin Input - Create an input group with icon after
+
+mixin c-input-group-after({ id, type = "text", placeholder, icon })
+    .c-input-group
+        input(type=type class="c-input" placeholder=placeholder id=id)
+        .c-input-group__append
+            +icon(icon)
