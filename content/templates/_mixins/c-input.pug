@@ -1,19 +1,5 @@
 //-
     Mixin Input - Create an input
 
-mixin c-input({ id, type = "text", placeholder, prependIcon, appendIcon })
-    if prependIcon || appendIcon
-        .c-input-group
-            +c-input-inner(id, type, placeholder)
-                block
-            if appendIcon
-                .c-input-group__append
-                    +icon(appendIcon)
-            if prependIcon
-                .c-input-group__prepend
-                    +icon(prependIcon)
-    else
-        +c-input-inner(id, type, placeholder)
-
-mixin c-input-inner(id, type, placeholder)
+mixin c-input({ id, type = "text", placeholder })
     input(type=type class="c-input" placeholder=placeholder id=id)
