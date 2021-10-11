@@ -3,6 +3,6 @@
 
 mixin c-input-group-after({ id, type = "text", placeholder, icon })
     .c-input-group
-        input(type=type class="c-input" placeholder=placeholder id=id)
+        +c-input({ id, value, type, placeholder })
         .c-input-group__append
             +icon(icon)
