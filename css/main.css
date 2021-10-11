@@ -2628,35 +2628,6 @@ textarea.c-input--h-large {
 .c-navbar--large {
   height: 8rem; }
 
-/* Component navigation
-   ========================================================================== */
-.c-navbar-components .c-navbar-components__header {
-  cursor: pointer;
-  padding: 0 2.4rem;
-  background: #F2F2F2; }
-
-.c-navbar-components .c-navbar-components__content {
-  max-height: 0px;
-  overflow: hidden;
-  line-height: 1.6;
-  transition: max-height 200ms ease-in-out; }
-
-.c-navbar-components .c-button--icon {
-  transition: transform 200ms ease-in-out; }
-
-.c-navbar-components.js-active .c-button--icon {
-  transform: rotate(180deg); }
-
-@media (min-width: 900px) {
-  .c-navbar-components {
-    display: none; } }
-
-.br-styleguide-nav-holder--desktop {
-  display: none; }
-  @media (min-width: 900px) {
-    .br-styleguide-nav-holder--desktop {
-      display: block; } }
-
 /* ==========================================================================
   c-or
   Decorated "or"
@@ -3616,6 +3587,36 @@ textarea.c-input--h-large {
 
 .u-kill-scroll .c-design-system-nav-close {
   display: block; }
+
+/* ==========================================================================
+  c-navbar-components
+   ========================================================================== */
+.c-navbar-components .c-navbar-components__header {
+  cursor: pointer;
+  padding: 0 2.4rem;
+  background: #F2F2F2; }
+
+.c-navbar-components .c-navbar-components__content {
+  max-height: 0px;
+  overflow: hidden;
+  line-height: 1.6;
+  transition: max-height 200ms ease-in-out; }
+
+.c-navbar-components .c-button--icon {
+  transition: transform 200ms ease-in-out; }
+
+.c-navbar-components.js-active .c-button--icon {
+  transform: rotate(180deg); }
+
+@media (min-width: 900px) {
+  .c-navbar-components {
+    display: none; } }
+
+.br-styleguide-nav-holder--desktop {
+  display: none; }
+  @media (min-width: 900px) {
+    .br-styleguide-nav-holder--desktop {
+      display: block; } }
 
 /* Utilities: specific helper classes, overrides
    ========================================================================== */
