@@ -96,7 +96,6 @@ $c-radio-checked-color: $color-blue-500 !default;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba($c-checkbox-input-border-color, .5);
   border-color: $c-checkbox-input-border-color;
-  transition: 0.14s box-shadow ease-in-out;
 }
 
 /* Checkbox specific
@@ -117,8 +116,6 @@ $c-radio-checked-color: $color-blue-500 !default;
     top: ($c-checkbox-size - $c-checkbox-icon-size - 0.2rem) / 2;
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
     opacity: 0;
-    transition: all 0.14s;
-    transition-property: opacity;
   }
 
   &[data-indeterminate]:before {

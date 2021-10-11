@@ -16,6 +16,5 @@
     color: $color-gray-400;
   }
 
-  @include textfield-transition;
   @include textfield-focus;
 }

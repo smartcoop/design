@@ -45,7 +45,6 @@ $c-tabs-active-border-width: 0.2rem !default;
 
 .c-tabs__item {
   color: $c-tabs-item-color;
-  transition: color 0.1s linear;
   display: inline-flex;
   align-items: center;
   text-decoration: none;

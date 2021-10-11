@@ -14,8 +14,6 @@ $c-button-focus-ring-color: $color-red-500 !default;
 $c-button-link-color: $color-red-500 !default;
 
 .c-button {
-  transition: 0.18s ease-in;
-  transition-property: background, border;
   border: 1px solid transparent;
 }
 

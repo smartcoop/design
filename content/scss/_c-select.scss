@@ -8,7 +8,6 @@
    ========================================================================== */
 
 .c-select {
-  @include textfield-transition;
   appearance: none;
   background: $c-input-bg-color; // We use properties from textfield here
   border: 1px solid $c-input-border-color;

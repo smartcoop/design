@@ -28,10 +28,6 @@ $c-input-padding: 0.8rem !default;
   }
 }
 
-@mixin textfield-transition {
-  transition: all 0.15s ease-in-out;
-}
-
 /* Component
    ========================================================================== */
 
@@ -44,7 +40,6 @@ $c-input-padding: 0.8rem !default;
   padding: $c-input-padding;
   width: 100%;
   appearance: none;
-  @include textfield-transition;
   @include textfield-focus;
 
   &[disabled] {
