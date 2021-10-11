@@ -42,7 +42,7 @@
   .c-toolbar__right {
     z-index: 61;
   }
-  
+
   @media (min-width: $g-bp3) {
     margin: 3.2rem 0;
     height: $g-bar-size-large;
@@ -71,44 +71,3 @@
   height: $g-bar-size-large;
 }
 
-
-/* Component navigation
-   ========================================================================== */
-
-.c-navbar-components {
-  .c-navbar-components__header {
-    cursor: pointer;
-    padding: 0 2.4rem;
-    background: $color-background;
-  }
-
-  .c-navbar-components__content {
-    max-height: 0px;
-    overflow: hidden;
-    line-height: 1.6; 
-    transition: max-height 200ms ease-in-out;
-  }
-
-  .c-button--icon {
-    transition: transform 200ms ease-in-out;
-  }
-
-  &.js-active {
-    .c-button--icon {
-      transform: rotate(180deg);
-    }
-  }
-
-  @media (min-width: $g-bp3) {
-    display: none;
-  }
-
-}
-
-.br-styleguide-nav-holder--desktop {
-  display: none;
-
-  @media (min-width: $g-bp3) {
-    display: block;
-  }
-}
