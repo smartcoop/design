@@ -1,0 +1,21 @@
+.c-display
+    - var shortContent = 'Lorem ipsum dolor sit amet';
+    - var mediumContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    - var samples = [];
+    - samples.push({name: 'Display heading 1', code: '<h1 class="c-display-h1">' + shortContent + '</h1>', extraClass: contentClass})
+    - samples.push({name: 'Display heading 2',code: '<h2 class="c-display-h2">' + shortContent + '</h2>', extraClass: contentClass})
+    - samples.push({name: 'Display heading 3', code: '<h3 class="c-display-h3">' + shortContent + '</h3>', extraClass: contentClass})
+    - samples.push({name: 'Display Intro', code: '<p class="c-display-intro">' + mediumContent + '</p>', extraClass: contentClass})
+    - samples.push({name: 'Display Body 1', code: '<p class="c-display-body-1">' + mediumContent + '</p>', extraClass: contentClass})
+    - samples.push({name: 'Display Body 2', code: '<p class="c-display-body-2">' + mediumContent + '</p>', extraClass: contentClass})
+
+    .u-spacer-bottom-l.u-spacer-top-l
+        table.c-table.c-table.c-styleguide-table-typography
+            each sample in samples
+                tr
+                    td.o-table-col-4
+                        = sample.name
+                        br
+                        span.br-typography-sample-size= sample.size
+                    td.o-table-col-12
+                        .br-typography-sample-content!= sample.code
