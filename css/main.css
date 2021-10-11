@@ -1035,7 +1035,8 @@ abbr[title] {
   background: #F2F2F2;
   padding: 0.2rem;
   border-radius: 0.2rem;
-  color: #FF4054; }
+  color: #FF4054;
+  white-space: nowrap; }
 
 /* Block and inline quotes
    ========================================================================== */
