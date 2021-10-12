@@ -1,0 +1,31 @@
+/* ==========================================================================
+  Component: Key value list
+   ========================================================================== */
+
+.c-key-value {
+  .c-key-value-item + .c-key-value-item {
+    margin-top: 1.6rem;
+  }
+}
+
+.c-key-value-item__key {
+  padding: .8rem 0;
+  color: $color-text;
+  font-weight: 500;
+}
+
+.c-key-value--horizontal {
+  .c-key-value-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .c-key-value-item__key {
+    width: 45%;
+    margin-bottom: 0;
+  }
+
+  .c-key-value-item + .c-key-value-item {
+    margin-top: 0.4rem;
+  }
+}
