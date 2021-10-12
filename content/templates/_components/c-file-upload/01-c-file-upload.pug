@@ -1,8 +1,8 @@
 .o-form-group-layout.o-form-group-layout--standard
     .o-form-group
-        label.o-form-group__label(for="textFieldId") Label
+        label.o-form-group__label(for="fileUpload") Label
         .c-file-upload
-            input(type="file")
+            input(type="file" id="fileUpload")
             .c-file-upload__content
                 .u-spacer-bottom
                     +c-button({ icon: 'attachment'}) Upload document
