@@ -443,6 +443,9 @@ abbr[title] {
 .o-flex {
   display: flex; }
 
+.o-flex-inline {
+  display: inline-flex; }
+
 .o-flex--vertical {
   flex-direction: column; }
 
