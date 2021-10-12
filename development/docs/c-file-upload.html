@@ -527,9 +527,9 @@
                     <div class="br-sample-content">
                         <div class="o-form-group-layout o-form-group-layout--standard">
                             <div class="o-form-group">
-                                <label class="o-form-group__label" for="textFieldId">Label</label>
+                                <label class="o-form-group__label" for="fileUpload">Label</label>
                                 <div class="c-file-upload">
-                                    <input type="file" />
+                                    <input type="file" id="fileUpload" />
                                     <div class="c-file-upload__content">
                                         <div class="u-spacer-bottom">
                                             <button class="c-button c-button--secondary" type="button">
@@ -556,9 +556,9 @@
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
     &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textFieldId&quot;&gt;Label&lt;/label&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;fileUpload&quot;&gt;Label&lt;/label&gt;
         &lt;div class=&quot;c-file-upload&quot;&gt;
-            &lt;input type=&quot;file&quot; /&gt;
+            &lt;input type=&quot;file&quot; id=&quot;fileUpload&quot; /&gt;
             &lt;div class=&quot;c-file-upload__content&quot;&gt;
                 &lt;div class=&quot;u-spacer-bottom&quot;&gt;
                     &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
@@ -582,9 +582,9 @@
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
     .o-form-group
-        label.o-form-group__label(for=&quot;textFieldId&quot;) Label
+        label.o-form-group__label(for=&quot;fileUpload&quot;) Label
         .c-file-upload
-            input(type=&quot;file&quot;)
+            input(type=&quot;file&quot; id=&quot;fileUpload&quot;)
             .c-file-upload__content
                 .u-spacer-bottom
                     +c-button({ icon: 'attachment'}) Upload document
