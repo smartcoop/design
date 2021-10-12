@@ -6,7 +6,7 @@ block body
             .o-container.o-container--medium
                 .u-spacer-bottom
                     +c-brand({size: "small"})
-                .c-hr
+                hr.c-hr
                 h1.c-h2 Register your account
                 .c-content
                     p For optimal use of the Smart services, it is highly recommended to attend a Smart session: view our <a href="#">user manual</a>.
@@ -26,7 +26,7 @@ block body
                             +c-form-group({ label: 'Gender', id: 'registerFormGender', type: 'select', value: ['Male','Female','X']})
                         .o-grid-col-6
                             +c-form-group({ label: 'Language', id: 'registerFormLangue', type: 'select', value: ['Français','Nederlands','Deutsch','Espanol']})
-                    .c-hr
+                    hr.c-hr
                     h3.c-h3 Official address
                     .o-grid
                         .o-grid-col-8
@@ -39,7 +39,7 @@ block body
                             +c-form-group({ label: 'Postal code', id: 'registerFormAddressOfficalZipCode'})
                         .o-grid-col-6
                             +c-form-group({ label: 'Country', id: 'registerFormAddressOfficalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
-                    .c-hr
+                    hr.c-hr
                     h3.c-h3 Mailing address
                     .o-grid
                         .o-grid-col-8
@@ -52,7 +52,7 @@ block body
                             +c-form-group({ label: 'Postal code', id: 'registerFormAddressPostalZipCode'})
                         .o-grid-col-6
                             +c-form-group({ label: 'Country', id: 'registerFormAddressPostalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
-                    .c-hr
+                    hr.c-hr
                     .o-grid
                         .o-grid-col-6
                             +c-form-group({ label: 'Mobile number', id: 'registerFormCellPhoneNumber'})
@@ -80,7 +80,7 @@ block body
                             +c-form-group({ label: 'Main function', id: 'registerFormfieldMainFunction' })
                         .o-grid-col-6.o-grid-col-static
                             +c-form-group({ label: 'Other function', id: 'registerFormfieldOtherFunction' })
-                    .c-hr
+                    hr.c-hr
                     h3.c-h3 Documents
                     .o-form-group
                         p.o-form-group__label Please upload a copy of your identity card (front and back)
@@ -107,7 +107,7 @@ block body
                                 .u-spacer-bottom
                                     +c-button({ icon: 'attachment'}) Upload document
                                 p Drag your file here or click the button to select a file
-                    .c-hr
+                    hr.c-hr
                     .o-form-group
                         .c-checkbox
                             label
