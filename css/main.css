@@ -2087,6 +2087,153 @@ input.c-button {
 .c-checkbox-subgroup {
   margin: 0.8rem 0 0 2.4rem; }
 
+/* ==========================================================================
+  Component: c-dialog
+  ---
+  Dialog windows
+   ========================================================================== */
+/* Variables
+   ========================================================================== */
+/* Component
+   ========================================================================== */
+.c-dialog-context {
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transform: translateY(-4rem) scale(0.98);
+  transition: visibility 0s linear 0.2s, opacity 0.2s linear, transform 0.2s ease-in-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: 50;
+  align-items: center;
+  justify-content: center; }
+  .c-dialog-context.c-dialog-context--visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-delay: 0s;
+    visibility: visible; }
+
+.c-dialog {
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 60;
+  margin: 0 auto;
+  position: relative;
+  max-height: calc(100vh - 4.8rem); }
+
+.c-dialog__push {
+  min-height: 2.4rem;
+  flex: 1; }
+
+.c-dialog__content {
+  padding: 2.4rem 2.4rem; }
+
+.c-dialog__body {
+  background-color: #fff;
+  flex: 0 1 auto;
+  overflow: auto; }
+
+.c-dialog__body--no-padding {
+  padding: 0; }
+
+.c-dialog__header {
+  height: 6.4rem;
+  flex: 0;
+  background-color: #fff;
+  border-radius: 0.4rem 0.4rem 0 0; }
+
+.c-dialog__header--bordered {
+  border-bottom: 1px solid #E5E5E5; }
+
+.c-dialog__title {
+  font-size: 2rem;
+  font-weight: 500; }
+
+.c-dialog__header--no-padding {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.c-dialog__footer {
+  height: 6.4rem;
+  flex: 0;
+  background-color: #fff;
+  border-radius: 0 0 0.4rem 0.4rem; }
+  .c-dialog__footer:empty {
+    height: 0.3rem;
+    border-radius: 0 0 0.4rem 0.4rem;
+    flex-basis: auto; }
+
+.c-dialog__footer--bordered {
+  border-top: 1px solid #E5E5E5; }
+
+/* Sizes
+  ========================================================================== */
+.c-dialog--large {
+  width: 88rem; }
+
+.c-dialog--medium {
+  width: 66rem; }
+
+.c-dialog--small {
+  width: 44rem; }
+
+.c-dialog--fullscreen {
+  max-height: none;
+  max-width: none;
+  height: calc(100% - 4.8rem);
+  width: calc(100% - 4.8rem); }
+  .c-dialog--fullscreen .c-dialog__body {
+    flex: 1 1 auto; }
+
+.c-dialog--fullwidth {
+  max-width: 66rem;
+  width: calc(100% - 4.8rem); }
+
+.c-dialog--fullheight {
+  max-height: 120rem;
+  height: calc(100% - 4.8rem); }
+  .c-dialog--fullheight .c-dialog__body {
+    flex: 1 1 auto; }
+
+/* Exceptions for small dialog
+   ========================================================================== */
+.c-dialog--small .c-dialog__body {
+  border-radius: 0.4rem 0.4rem 0 0; }
+
+/* Exceptions for headerless dialog
+   ========================================================================== */
+.c-dialog--headerless .c-dialog__body {
+  border-radius: 0.4rem 0.4rem 0 0; }
+
+/* Exceptions for footerless dialog
+   ========================================================================== */
+.c-dialog--footerless .c-dialog__body {
+  border-radius: 0 0 0.4rem 0.4rem; }
+
+/* Backdrop
+  ========================================================================== */
+.c-dialog-backdrop {
+  background: rgba(26, 26, 26, 0.8);
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+  left: 0;
+  visibility: hidden;
+  z-index: 40; }
+  .c-dialog-backdrop.c-dialog-backdrop--visible {
+    opacity: 1;
+    transition-delay: 0s;
+    visibility: visible; }
+
 .c-empty-state {
   display: flex;
   flex-direction: column;
@@ -2098,6 +2245,47 @@ input.c-button {
 
 .c-empty-state--bg-alt {
   background-color: #F2F2F2; }
+
+/* ==========================================================================
+  c-file-upload
+   ========================================================================== */
+.c-file-upload {
+  background: transparent;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+
+.c-file-upload__content {
+  border: 0.1rem dashed #B3B3B3;
+  border-radius: .3rem;
+  width: 100%;
+  padding: 3rem;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 12rem; }
+
+.c-file-upload input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.0001; }
+
+.c-file-upload input[type="file"]:focus:not([disabled]) ~ .c-file-upload__content {
+  outline: 0;
+  border-color: transparent;
+  box-shadow: inset 0 0 0 0.1rem #1267FB; }
+
+.c-file-upload input[type="file"]:hover:not([disabled]) ~ .c-file-upload__content {
+  background-color: #F6F6F6; }
 
 /* ==========================================================================
   c-form-help-text
@@ -2270,47 +2458,6 @@ textarea.c-input--h-large {
   border-radius: 0 0.4rem 0.4rem 0; }
 
 /* ==========================================================================
-  c-file-upload
-   ========================================================================== */
-.c-file-upload {
-  background: transparent;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; }
-
-.c-file-upload__content {
-  border: 0.1rem dashed #B3B3B3;
-  border-radius: .3rem;
-  width: 100%;
-  padding: 3rem;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  min-height: 12rem; }
-
-.c-file-upload input[type="file"] {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.0001; }
-
-.c-file-upload input[type="file"]:focus:not([disabled]) ~ .c-file-upload__content {
-  outline: 0;
-  border-color: transparent;
-  box-shadow: inset 0 0 0 0.1rem #1267FB; }
-
-.c-file-upload input[type="file"]:hover:not([disabled]) ~ .c-file-upload__content {
-  background-color: #F6F6F6; }
-
-/* ==========================================================================
   Input With Icon
    ========================================================================== */
 .c-input-with-icon {
@@ -2353,6 +2500,28 @@ textarea.c-input--h-large {
   .c-input-with-icon .c-input[type="password"] ~ .c-input-with-icon__toggle .o-svg-icon-eye-off,
   .c-input-with-icon .c-input[type="text"] ~ .c-input-with-icon__toggle .o-svg-icon-eye {
     display: none; }
+
+/* ==========================================================================
+  Component: Key value list
+   ========================================================================== */
+.c-key-value .c-key-value-item + .c-key-value-item {
+  margin-top: 1.6rem; }
+
+.c-key-value-item__key {
+  padding: .8rem 0;
+  color: #333333;
+  font-weight: 500; }
+
+.c-key-value--horizontal .c-key-value-item {
+  display: flex;
+  align-items: center; }
+
+.c-key-value--horizontal .c-key-value-item__key {
+  width: 45%;
+  margin-bottom: 0; }
+
+.c-key-value--horizontal .c-key-value-item + .c-key-value-item {
+  margin-top: 0.4rem; }
 
 /* ==========================================================================
    Component: Menu
@@ -2435,153 +2604,6 @@ textarea.c-input--h-large {
     border-bottom: 0; }
   *:not(.c-menu) > .c-menu__item--selected::after {
     right: 0.6rem; }
-
-/* ==========================================================================
-  Component: c-dialog
-  ---
-  Dialog windows
-   ========================================================================== */
-/* Variables
-   ========================================================================== */
-/* Component
-   ========================================================================== */
-.c-dialog-context {
-  display: flex;
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  transform: translateY(-4rem) scale(0.98);
-  transition: visibility 0s linear 0.2s, opacity 0.2s linear, transform 0.2s ease-in-out;
-  visibility: hidden;
-  width: 100%;
-  z-index: 50;
-  align-items: center;
-  justify-content: center; }
-  .c-dialog-context.c-dialog-context--visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    transition-delay: 0s;
-    visibility: visible; }
-
-.c-dialog {
-  border-radius: 0.4rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  z-index: 60;
-  margin: 0 auto;
-  position: relative;
-  max-height: calc(100vh - 4.8rem); }
-
-.c-dialog__push {
-  min-height: 2.4rem;
-  flex: 1; }
-
-.c-dialog__content {
-  padding: 2.4rem 2.4rem; }
-
-.c-dialog__body {
-  background-color: #fff;
-  flex: 0 1 auto;
-  overflow: auto; }
-
-.c-dialog__body--no-padding {
-  padding: 0; }
-
-.c-dialog__header {
-  height: 6.4rem;
-  flex: 0;
-  background-color: #fff;
-  border-radius: 0.4rem 0.4rem 0 0; }
-
-.c-dialog__header--bordered {
-  border-bottom: 1px solid #E5E5E5; }
-
-.c-dialog__title {
-  font-size: 2rem;
-  font-weight: 500; }
-
-.c-dialog__header--no-padding {
-  padding-top: 0;
-  padding-bottom: 0; }
-
-.c-dialog__footer {
-  height: 6.4rem;
-  flex: 0;
-  background-color: #fff;
-  border-radius: 0 0 0.4rem 0.4rem; }
-  .c-dialog__footer:empty {
-    height: 0.3rem;
-    border-radius: 0 0 0.4rem 0.4rem;
-    flex-basis: auto; }
-
-.c-dialog__footer--bordered {
-  border-top: 1px solid #E5E5E5; }
-
-/* Sizes
-  ========================================================================== */
-.c-dialog--large {
-  width: 88rem; }
-
-.c-dialog--medium {
-  width: 66rem; }
-
-.c-dialog--small {
-  width: 44rem; }
-
-.c-dialog--fullscreen {
-  max-height: none;
-  max-width: none;
-  height: calc(100% - 4.8rem);
-  width: calc(100% - 4.8rem); }
-  .c-dialog--fullscreen .c-dialog__body {
-    flex: 1 1 auto; }
-
-.c-dialog--fullwidth {
-  max-width: 66rem;
-  width: calc(100% - 4.8rem); }
-
-.c-dialog--fullheight {
-  max-height: 120rem;
-  height: calc(100% - 4.8rem); }
-  .c-dialog--fullheight .c-dialog__body {
-    flex: 1 1 auto; }
-
-/* Exceptions for small dialog
-   ========================================================================== */
-.c-dialog--small .c-dialog__body {
-  border-radius: 0.4rem 0.4rem 0 0; }
-
-/* Exceptions for headerless dialog
-   ========================================================================== */
-.c-dialog--headerless .c-dialog__body {
-  border-radius: 0.4rem 0.4rem 0 0; }
-
-/* Exceptions for footerless dialog
-   ========================================================================== */
-.c-dialog--footerless .c-dialog__body {
-  border-radius: 0 0 0.4rem 0.4rem; }
-
-/* Backdrop
-  ========================================================================== */
-.c-dialog-backdrop {
-  background: rgba(26, 26, 26, 0.8);
-  display: block;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  transition: visibility 0s linear 0.2s, opacity 0.2s linear;
-  left: 0;
-  visibility: hidden;
-  z-index: 40; }
-  .c-dialog-backdrop.c-dialog-backdrop--visible {
-    opacity: 1;
-    transition-delay: 0s;
-    visibility: visible; }
 
 /* ==========================================================================
   Component: navbar

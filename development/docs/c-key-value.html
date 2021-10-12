@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Input group - Component documentation - Smart Design System
+    <title>Key value list - Component documentation - Smart Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -518,112 +518,144 @@
             </div>
             <div class="o-grid-col-bp3-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-h2">Input group</h1>
+                    <h1 class="br-componentgroup-header c-h2">Key value list</h1>
                 </div>
                 <div class="br-content c-content">
                 </div>
-                <div class="br-sample" id="component-01-c-input-prepend">
+                <div class="br-sample" id="component-01-c-key-value">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Input group with prepend</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-input-prepend">#</a>
+                        <h3 class="br-sample-heading c-h3">Key value</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-key-value">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <div class="c-input-group">
-                                    <div class="c-input-group__prepend">
-                                        <div class="o-svg-icon o-svg-icon-search  ">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="#595959" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <input class="c-input" type="text" placeholder="Search..." id="inputGroupBefore" />
-                                </div>
+                        <dl class="c-key-value">
+                            <div class="c-key-value-item">
+                                <dt class="c-key-value-item__key">Key</dt>
+                                <dd class="c-key-value-item__value">Value</dd>
                             </div>
-                        </div>
+                            <div class="c-key-value-item">
+                                <dt class="c-key-value-item__key">Key</dt>
+                                <dd class="c-key-value-item__value">Value</dd>
+                            </div>
+                            <div class="c-key-value-item">
+                                <dt class="c-key-value-item__key">Key</dt>
+                                <dd class="c-key-value-item__value">Value</dd>
+                            </div>
+                            <div class="c-key-value-item">
+                                <dt class="c-key-value-item__key">Key</dt>
+                                <dd class="c-key-value-item__value">Value</dd>
+                            </div>
+                        </dl>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;div class=&quot;c-input-group&quot;&gt;
-            &lt;div class=&quot;c-input-group__prepend&quot;&gt;
-                &lt;div class=&quot;o-svg-icon o-svg-icon-search  &quot;&gt;
-                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                        &lt;path d=&quot;M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z&quot; fill=&quot;#595959&quot; /&gt;
-                    &lt;/svg&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;input class=&quot;c-input&quot; type=&quot;text&quot; placeholder=&quot;Search...&quot; id=&quot;inputGroupBefore&quot; /&gt;
-        &lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;dl class=&quot;c-key-value&quot;&gt;
+    &lt;div class=&quot;c-key-value-item&quot;&gt;
+        &lt;dt class=&quot;c-key-value-item__key&quot;&gt;Key&lt;/dt&gt;
+        &lt;dd class=&quot;c-key-value-item__value&quot;&gt;Value&lt;/dd&gt;
     &lt;/div&gt;
-&lt;/div&gt;</pre>
+    &lt;div class=&quot;c-key-value-item&quot;&gt;
+        &lt;dt class=&quot;c-key-value-item__key&quot;&gt;Key&lt;/dt&gt;
+        &lt;dd class=&quot;c-key-value-item__value&quot;&gt;Value&lt;/dd&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-key-value-item&quot;&gt;
+        &lt;dt class=&quot;c-key-value-item__key&quot;&gt;Key&lt;/dt&gt;
+        &lt;dd class=&quot;c-key-value-item__value&quot;&gt;Value&lt;/dd&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-key-value-item&quot;&gt;
+        &lt;dt class=&quot;c-key-value-item__key&quot;&gt;Key&lt;/dt&gt;
+        &lt;dd class=&quot;c-key-value-item__value&quot;&gt;Value&lt;/dd&gt;
+    &lt;/div&gt;
+&lt;/dl&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        +c-input-group-before({ placeholder: 'Search...', id: 'inputGroupBefore', icon: 'search'})
+                            <pre class="br-sample-markup br-sample-markup-pug">dl.c-key-value
+    .c-key-value-item
+        dt.c-key-value-item__key Key
+        dd.c-key-value-item__value Value
+    .c-key-value-item
+        dt.c-key-value-item__key Key
+        dd.c-key-value-item__value Value
+    .c-key-value-item
+        dt.c-key-value-item__key Key
+        dd.c-key-value-item__value Value
+    .c-key-value-item
+        dt.c-key-value-item__key Key
+        dd.c-key-value-item__value Value
 </pre>
                         </div>
                     </div>
                 </div>
-                <div class="br-sample" id="component-02-c-input-append">
+                <div class="br-sample" id="component-02-c-key-value-horizontal">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Input group with append</h3>
-                        <a class="br-sample-header-link" href="#component-02-c-input-append">#</a>
+                        <h3 class="br-sample-heading c-h3">Key value horizontal</h3>
+                        <a class="br-sample-header-link" href="#component-02-c-key-value-horizontal">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <div class="c-input-group">
-                                    <input class="c-input" type="text" id="inputGroupBefore" />
-                                    <div class="c-input-group__append">
-                                        <div class="o-svg-icon o-svg-icon-percent  ">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="#595959" />
-                                                <path d="M17 19C18.1046 19 19 18.1046 19 17C19 15.8954 18.1046 15 17 15C15.8954 15 15 15.8954 15 17C15 18.1046 15.8954 19 17 19Z" fill="#595959" />
-                                                <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" fill="#595959" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
+                        <dl class="c-key-value c-key-value--horizontal">
+                            <div class="c-key-value-item">
+                                <dt class="c-key-value-item__key">Key</dt>
+                                <dd class="c-key-value-item__value">Value</dd>
                             </div>
-                        </div>
+                            <div class="c-key-value-item">
+                                <dt class="c-key-value-item__key">Key</dt>
+                                <dd class="c-key-value-item__value">Value</dd>
+                            </div>
+                            <div class="c-key-value-item">
+                                <dt class="c-key-value-item__key">Key</dt>
+                                <dd class="c-key-value-item__value">Value</dd>
+                            </div>
+                            <div class="c-key-value-item">
+                                <dt class="c-key-value-item__key">Key</dt>
+                                <dd class="c-key-value-item__value">Value</dd>
+                            </div>
+                        </dl>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;div class=&quot;c-input-group&quot;&gt;
-            &lt;input class=&quot;c-input&quot; type=&quot;text&quot; id=&quot;inputGroupBefore&quot; /&gt;
-            &lt;div class=&quot;c-input-group__append&quot;&gt;
-                &lt;div class=&quot;o-svg-icon o-svg-icon-percent  &quot;&gt;
-                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                        &lt;path d=&quot;M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z&quot; fill=&quot;#595959&quot; /&gt;
-                        &lt;path d=&quot;M17 19C18.1046 19 19 18.1046 19 17C19 15.8954 18.1046 15 17 15C15.8954 15 15 15.8954 15 17C15 18.1046 15.8954 19 17 19Z&quot; fill=&quot;#595959&quot; /&gt;
-                        &lt;path d=&quot;M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z&quot; fill=&quot;#595959&quot; /&gt;
-                    &lt;/svg&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;dl class=&quot;c-key-value c-key-value--horizontal&quot;&gt;
+    &lt;div class=&quot;c-key-value-item&quot;&gt;
+        &lt;dt class=&quot;c-key-value-item__key&quot;&gt;Key&lt;/dt&gt;
+        &lt;dd class=&quot;c-key-value-item__value&quot;&gt;Value&lt;/dd&gt;
     &lt;/div&gt;
-&lt;/div&gt;</pre>
+    &lt;div class=&quot;c-key-value-item&quot;&gt;
+        &lt;dt class=&quot;c-key-value-item__key&quot;&gt;Key&lt;/dt&gt;
+        &lt;dd class=&quot;c-key-value-item__value&quot;&gt;Value&lt;/dd&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-key-value-item&quot;&gt;
+        &lt;dt class=&quot;c-key-value-item__key&quot;&gt;Key&lt;/dt&gt;
+        &lt;dd class=&quot;c-key-value-item__value&quot;&gt;Value&lt;/dd&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-key-value-item&quot;&gt;
+        &lt;dt class=&quot;c-key-value-item__key&quot;&gt;Key&lt;/dt&gt;
+        &lt;dd class=&quot;c-key-value-item__value&quot;&gt;Value&lt;/dd&gt;
+    &lt;/div&gt;
+&lt;/dl&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        +c-input-group-after({ id: 'inputGroupBefore', icon: 'percent'})
+                            <pre class="br-sample-markup br-sample-markup-pug">dl.c-key-value.c-key-value--horizontal
+    .c-key-value-item
+        dt.c-key-value-item__key Key
+        dd.c-key-value-item__value Value
+    .c-key-value-item
+        dt.c-key-value-item__key Key
+        dd.c-key-value-item__value Value
+    .c-key-value-item
+        dt.c-key-value-item__key Key
+        dd.c-key-value-item__value Value
+    .c-key-value-item
+        dt.c-key-value-item__key Key
+        dd.c-key-value-item__value Value
 </pre>
                         </div>
                     </div>
