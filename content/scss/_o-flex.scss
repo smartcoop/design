@@ -16,6 +16,10 @@ $o-flex-gutter-width: 0.8rem !default;
   display: flex;
 }
 
+.o-flex-inline {
+  display: inline-flex;
+}
+
 .o-flex--vertical {
   flex-direction: column;
 }
