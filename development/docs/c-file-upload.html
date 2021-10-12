@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Tabs - Component documentation - Smart Design System
+    <title>File upload - Component documentation - Smart Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -512,228 +512,83 @@
             </div>
             <div class="o-grid-col-bp3-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-h2">Tabs</h1>
+                    <h1 class="br-componentgroup-header c-h2">File upload</h1>
                 </div>
                 <div class="br-content c-content">
                 </div>
-                <div class="br-sample" id="component-01-c-tabs">
+                <div class="br-sample" id="component-01-c-file-upload">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Tabs</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-tabs">#</a>
+                        <h3 class="br-sample-heading c-h3">Text input</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-file-upload">#</a>
                     </div>
-                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-documentation c-content">
+                        <p>A standard text input. Use for single line text. Avoid using the <code>placeholder</code> attribute, unless really necessary.</p>
+                    </div>
                     <div class="br-sample-content">
-                        <nav class="c-tabs">
-                            <ul>
-                                <li>
-                                    <a class="c-tabs__item" href="#section1">Item</a>
-                                </li>
-                                <li>
-                                    <a class="c-tabs__item" href="#section2">Item</a>
-                                </li>
-                                <li>
-                                    <a class="c-tabs__item" href="#section3">Item</a>
-                                </li>
-                                <li>
-                                    <a class="c-tabs__item" href="#section4">Item</a>
-                                </li>
-                                <li>
-                                    <a class="c-tabs__item" href="#section5">Item</a>
-                                </li>
-                            </ul>
-                            <div class="c-tabs__section" id="section1">
-                                <p>a tab</p>
+                        <div class="o-form-group-layout o-form-group-layout--standard">
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="textFieldId">Label</label>
+                                <div class="c-file-upload">
+                                    <input type="file" />
+                                    <div class="c-file-upload__content">
+                                        <div class="u-spacer-bottom">
+                                            <button class="c-button c-button--secondary" type="button">
+                                                <span class="c-button__content">
+                                                    <div class="o-svg-icon o-svg-icon-attachment  ">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.463 5.57572C18.7758 4.82596 17.5346 4.77976 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.69289C16.3836 7.30237 17.0168 7.30237 17.4073 7.69289C17.7978 8.08342 17.7978 8.71658 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.19289C16.8606 2.62536 19.408 2.57435 20.9225 4.2082C22.4748 5.77661 22.5205 8.31156 20.8931 9.82132L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.39289C12.0836 3.00237 12.7168 3.00237 13.1073 3.39289C13.4978 3.78342 13.4978 4.41658 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.39289C19.5033 8.38265 19.5138 8.37263 19.5245 8.36284C20.2742 7.67556 20.3204 6.43445 19.4931 5.60711C19.4828 5.59686 19.4728 5.5864 19.463 5.57572Z" fill="#595959" />
+                                                        </svg>
+                                                    </div>
+                                                    <span class="c-button__label">Upload document</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <p>Drag your file here or click the button to select a file</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="c-tabs__section" id="section2">
-                                <p>another tab</p>
-                            </div>
-                            <div class="c-tabs__section" id="section3">
-                                <p>a third tab</p>
-                            </div>
-                            <div class="c-tabs__section" id="section4">
-                                <p>a fourth tab</p>
-                            </div>
-                            <div class="c-tabs__section" id="section5">
-                                <p>a fifth tab</p>
-                            </div>
-                        </nav>
+                        </div>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;nav class=&quot;c-tabs&quot;&gt;
-    &lt;ul&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section1&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section2&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section3&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section4&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section5&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section1&quot;&gt;
-        &lt;p&gt;a tab&lt;/p&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textFieldId&quot;&gt;Label&lt;/label&gt;
+        &lt;div class=&quot;c-file-upload&quot;&gt;
+            &lt;input type=&quot;file&quot; /&gt;
+            &lt;div class=&quot;c-file-upload__content&quot;&gt;
+                &lt;div class=&quot;u-spacer-bottom&quot;&gt;
+                    &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;c-button__content&quot;&gt;
+                            &lt;div class=&quot;o-svg-icon o-svg-icon-attachment  &quot;&gt;
+                                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                    &lt;path d=&quot;M19.463 5.57572C18.7758 4.82596 17.5346 4.77976 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.69289C16.3836 7.30237 17.0168 7.30237 17.4073 7.69289C17.7978 8.08342 17.7978 8.71658 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.19289C16.8606 2.62536 19.408 2.57435 20.9225 4.2082C22.4748 5.77661 22.5205 8.31156 20.8931 9.82132L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.39289C12.0836 3.00237 12.7168 3.00237 13.1073 3.39289C13.4978 3.78342 13.4978 4.41658 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.39289C19.5033 8.38265 19.5138 8.37263 19.5245 8.36284C20.2742 7.67556 20.3204 6.43445 19.4931 5.60711C19.4828 5.59686 19.4728 5.5864 19.463 5.57572Z&quot; fill=&quot;#595959&quot; /&gt;
+                                &lt;/svg&gt;
+                            &lt;/div&gt;
+                            &lt;span class=&quot;c-button__label&quot;&gt;Upload document&lt;/span&gt;
+                        &lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;p&gt;Drag your file here or click the button to select a file&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section2&quot;&gt;
-        &lt;p&gt;another tab&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section3&quot;&gt;
-        &lt;p&gt;a third tab&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section4&quot;&gt;
-        &lt;p&gt;a fourth tab&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section5&quot;&gt;
-        &lt;p&gt;a fifth tab&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</pre>
+&lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">nav.c-tabs
-    ul
-        li
-            a.c-tabs__item(href=&quot;#section1&quot;) Item
-        li
-            a.c-tabs__item(href=&quot;#section2&quot;) Item
-        li
-            a.c-tabs__item(href=&quot;#section3&quot;) Item
-        li
-            a.c-tabs__item(href=&quot;#section4&quot;) Item
-        li
-            a.c-tabs__item(href=&quot;#section5&quot;) Item
-
-    .c-tabs__section#section1
-        p a tab
-    .c-tabs__section#section2
-        p another tab
-    .c-tabs__section#section3
-        p a third tab
-    .c-tabs__section#section4
-        p a fourth tab
-    .c-tabs__section#section5
-        p a fifth tab
-</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-02-c-tabs--bottom-border">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Tabs bottom border</h3>
-                        <a class="br-sample-header-link" href="#component-02-c-tabs--bottom-border">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content"></div>
-                    <div class="br-sample-content">
-                        <nav class="c-tabs c-tabs--border-bottom">
-                            <ul>
-                                <li>
-                                    <a class="c-tabs__item" href="#section1">Item</a>
-                                </li>
-                                <li>
-                                    <a class="c-tabs__item" href="#section2">Item</a>
-                                </li>
-                                <li>
-                                    <a class="c-tabs__item" href="#section3">Item</a>
-                                </li>
-                                <li>
-                                    <a class="c-tabs__item" href="#section4">Item</a>
-                                </li>
-                                <li>
-                                    <a class="c-tabs__item" href="#section5">Item</a>
-                                </li>
-                            </ul>
-                            <div class="c-tabs__section" id="section1">
-                                <p>a tab</p>
-                            </div>
-                            <div class="c-tabs__section" id="section2">
-                                <p>another tab</p>
-                            </div>
-                            <div class="c-tabs__section" id="section3">
-                                <p>a third tab</p>
-                            </div>
-                            <div class="c-tabs__section" id="section4">
-                                <p>a fourth tab</p>
-                            </div>
-                            <div class="c-tabs__section" id="section5">
-                                <p>a fifth tab</p>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;nav class=&quot;c-tabs c-tabs--border-bottom&quot;&gt;
-    &lt;ul&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section1&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section2&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section3&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section4&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a class=&quot;c-tabs__item&quot; href=&quot;#section5&quot;&gt;Item&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section1&quot;&gt;
-        &lt;p&gt;a tab&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section2&quot;&gt;
-        &lt;p&gt;another tab&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section3&quot;&gt;
-        &lt;p&gt;a third tab&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section4&quot;&gt;
-        &lt;p&gt;a fourth tab&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;c-tabs__section&quot; id=&quot;section5&quot;&gt;
-        &lt;p&gt;a fifth tab&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">nav.c-tabs.c-tabs--border-bottom
-    ul
-        li
-            a.c-tabs__item(href=&quot;#section1&quot;) Item
-        li
-            a.c-tabs__item(href=&quot;#section2&quot;) Item
-        li
-            a.c-tabs__item(href=&quot;#section3&quot;) Item
-        li
-            a.c-tabs__item(href=&quot;#section4&quot;) Item
-        li
-            a.c-tabs__item(href=&quot;#section5&quot;) Item
-
-    .c-tabs__section#section1
-        p a tab
-    .c-tabs__section#section2
-        p another tab
-    .c-tabs__section#section3
-        p a third tab
-    .c-tabs__section#section4
-        p a fourth tab
-    .c-tabs__section#section5
-        p a fifth tab
+                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
+    .o-form-group
+        label.o-form-group__label(for=&quot;textFieldId&quot;) Label
+        .c-file-upload
+            input(type=&quot;file&quot;)
+            .c-file-upload__content
+                .u-spacer-bottom
+                    +c-button({ icon: 'attachment'}) Upload document
+                p Drag your file here or click the button to select a file
 </pre>
                         </div>
                     </div>
