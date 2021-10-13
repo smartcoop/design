@@ -1718,13 +1718,13 @@ input.c-button {
   .c-button--primary svg * {
     fill: currentColor; }
   .c-button--primary:hover, .c-button--primary.c-button--hover {
-    background: #333333;
+    background: #595959;
     border-color: #333333; }
   .c-button--primary:active, .c-button--primary.c-button--active {
-    border-color: #333333;
+    border-color: #595959;
     background: #333333; }
   .c-button--primary:focus {
-    outline: #1A1A1A auto 1px; }
+    outline: #8AB5FF auto 1px; }
   .c-button--primary:focus:not(:focus-visible) {
     outline: none; }
 
@@ -1741,10 +1741,10 @@ input.c-button {
     border-color: #808080; }
   .c-button--secondary:active, .c-button--secondary:active:focus, .c-button--secondary.c-button--active {
     background: #F2F2F2;
-    border-color: #FF4054;
+    border-color: #808080;
     outline: none; }
   .c-button--secondary:focus {
-    outline: #1A1A1A auto 1px; }
+    outline: #8AB5FF auto 1px; }
   .c-button--secondary:focus:not(:focus-visible) {
     outline: none; }
 
@@ -1762,7 +1762,7 @@ input.c-button {
     border-color: #B32D3B;
     outline: none; }
   .c-button--danger:focus {
-    outline: #1A1A1A auto 1px; }
+    outline: #8AB5FF auto 1px; }
   .c-button--danger:focus:not(:focus-visible) {
     outline: none; }
 
@@ -1780,7 +1780,7 @@ input.c-button {
     background: #F2F2F2;
     outline: none; }
   .c-button--danger-secondary:focus {
-    outline: #1A1A1A auto 1px; }
+    outline: #8AB5FF auto 1px; }
   .c-button--danger-secondary:focus:not(:focus-visible) {
     outline: none; }
 
@@ -1819,7 +1819,7 @@ input.c-button {
   .c-button--borderless:focus,
   .c-button--borderless-i:focus,
   .c-button--borderless-muted:focus {
-    outline: none;
+    outline: #8AB5FF auto 1px;
     background: transparent; }
   .c-button--borderless:focus:not(:focus-visible),
   .c-button--borderless-i:focus:not(:focus-visible),
@@ -1851,10 +1851,10 @@ input.c-button {
     color: #1A1A1A;
     background: transparent; }
   .c-button--borderless:active, .c-button--borderless:active:focus, .c-button--borderless.c-button--active {
-    color: #FF4054;
+    color: #1A1A1A;
     background: transparent; }
   .c-button--borderless:focus {
-    color: #FF4054;
+    color: #1A1A1A;
     background: transparent; }
   .c-button--borderless[disabled], .c-button--borderless:disabled, .c-button--borderless.c-button-disabled {
     color: #999999; }
