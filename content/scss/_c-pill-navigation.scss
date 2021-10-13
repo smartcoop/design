@@ -10,24 +10,21 @@
   display: block;
 }
 
-.c-pill-navigation__item > a {
+.c-pill-navigation__item > a,
+.c-pill-navigation__item > button {
   display: block;
   padding: .8rem 1.6rem;
   color: $color-text;
   font-weight: 500;
 }
 
-.c-pill-navigation__item--has-child-menu > a {
+.c-pill-navigation__item--has-child-menu > button {
   padding: .8rem 2.8rem .8rem 1.6rem;
-}
-
-.c-pill-navigation__item--active > a {
-  background: $color-gray-50;
-  border-radius: .3rem;
-}
-
-.c-pill-navigation__item--has-child-menu > a {
+  appearance: none;
+  background: none;
+  border: none;
   position: relative;
+  line-height: 1.5;
   &:after {
     pointer-events: none;
     content: ' ';
@@ -43,4 +40,10 @@
     border-right-color: transparent;
   }
 }
+
+.c-pill-navigation__item--active > a {
+  background: $color-gray-50;
+  border-radius: .3rem;
+}
+
 

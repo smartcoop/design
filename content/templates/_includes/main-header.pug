@@ -57,7 +57,7 @@
                         each item, index in navItems
                             li.c-pill-navigation__item(class=item.subMenu? 'c-pill-navigation__item--has-child-menu' : '')
                                 if item.subMenu
-                                    a(href="#" data-menu="subMenu-"+index data-menu-samewidth="true") #{item.name}
+                                    button(type="button" data-menu="subMenu-"+index data-menu-samewidth="true") #{item.name}
                                     ul.c-menu.c-menu--large(id="subMenu-"+index)
                                         each subItem in item.subMenu
                                             li.c-menu__item
