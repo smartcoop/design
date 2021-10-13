@@ -46,14 +46,21 @@ $o-form-group-label-font-weight: 500 !default;
 
   .o-form-group {
     display: flex;
-    align-items: center;
-    margin: $o-form-group-spacing/2 0;
+    align-items: flex-start;
+    margin-bottom: $o-form-group-spacer-unit * 2;
+  }
+
+  .o-form-group__controls--full-width {
+    flex: 1 1 auto;
   }
 
   .o-form-group__label {
+    padding: 0.8rem 0;
     display: block;
-    width: 19.2rem;
+    width: 45%;
+    max-width: 24rem;
     font-weight: $o-form-group-label-font-weight;
+    flex: 1 0 auto;
   }
 
 }
