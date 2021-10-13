@@ -9,7 +9,7 @@
 
 $c-button-text-color: $g-text-color !default;
 $c-button-hover-border-color: $color-gray-300 !default;
-$c-button-outline-color: $color-gray-900 !default;
+$c-button-outline-color: $color-blue-200 !default;
 $c-button-focus-ring-color: $color-red-500 !default;
 $c-button-link-color: $color-red-500 !default;
 
@@ -31,13 +31,13 @@ $c-button-link-color: $color-red-500 !default;
 
   &:hover,
   &.c-button--hover {
-    background: $color-gray-800;
+    background: $color-gray-650;
     border-color: $color-gray-800;
   }
 
   &:active,
   &.c-button--active {
-    border-color: $color-gray-800;
+    border-color: $color-gray-650;
     background: $color-gray-800;
   }
 
@@ -72,7 +72,7 @@ $c-button-link-color: $color-red-500 !default;
   &:active:focus,
   &.c-button--active {
     background: $color-gray-50;
-    border-color: $color-red-500;
+    border-color: $color-gray-500;
     outline: none;
   }
 
@@ -189,7 +189,7 @@ $c-button-link-color: $color-red-500 !default;
   }
 
   &:focus {
-    outline: none;
+    outline: $c-button-outline-color auto 1px;
     background: transparent;
   }
 
@@ -241,12 +241,12 @@ $c-button-link-color: $color-red-500 !default;
   &:active,
   &:active:focus,
   &.c-button--active {
-    color: $color-red-500;
+    color: $color-gray-900;
     background: transparent;
   }
 
   &:focus {
-    color: $color-red-500;
+    color: $color-gray-900;
     background: transparent;
   }
 
