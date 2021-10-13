@@ -522,20 +522,23 @@ abbr[title] {
    Affect form groups
    ========================================================================== */
 .o-form-group-layout--horizontal .o-form-group {
-  display: flex;
-  align-items: flex-start;
   margin-bottom: 1.6rem; }
-
-.o-form-group-layout--horizontal .o-form-group__controls--full-width {
-  flex: 1 1 auto; }
 
 .o-form-group-layout--horizontal .o-form-group__label {
   padding: 0.8rem 0;
-  display: block;
-  width: 45%;
-  max-width: 24rem;
   font-weight: 500;
-  flex: 1 0 auto; }
+  display: block; }
+
+@media (min-width: 400px) {
+  .o-form-group-layout--horizontal .o-form-group {
+    display: flex;
+    align-items: flex-start; }
+  .o-form-group-layout--horizontal .o-form-group__controls--full-width {
+    flex: 1 1 auto; }
+  .o-form-group-layout--horizontal .o-form-group__label {
+    width: 45%;
+    max-width: 24rem;
+    flex: 0 0 auto; } }
 
 .o-form-group-layout--inline {
   display: flex; }
