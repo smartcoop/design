@@ -2647,6 +2647,7 @@ textarea.c-input--h-large {
 
 .c-navbar--horizontal-scroll {
   overflow-x: auto;
+  overflow-y: hidden;
   display: flex; }
   .c-navbar--horizontal-scroll .c-toolbar {
     width: auto; }
