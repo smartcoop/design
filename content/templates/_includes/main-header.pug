@@ -85,11 +85,9 @@
                                 li.c-menu__item
                                     a.c-menu__label(href="#") Report a bug
             .c-toolbar__item
-                .c-input-group
-                    .c-input-group__prepend
-                        +icon('search')
-                    input.c-input(type="text" placeholder="Search ...")
-
+                .c-input-with-icon
+                    +icon('search')
+                    input.c-input(type="text" placeholder="Search...")
 
             .c-toolbar__item
                 a.c-user-navigation(href="#" data-menu="userMenu")

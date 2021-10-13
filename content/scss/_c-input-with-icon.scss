@@ -15,8 +15,12 @@
     left: 0.8rem;
   }
 
-  .c-input:last-child {
+  .c-input:first-child {
     padding-right: 3rem;
+  }
+
+  .c-input:last-child {
+    padding-left: 3rem;
   }
 
   .c-input + .o-svg-icon {
