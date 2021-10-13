@@ -5,11 +5,11 @@ block body
         .o-container-vertical
             .o-container.o-container--medium
                 .o-form-group-layout.o-form-group-layout--horizontal
+                    h2.c-h2 Title form
                     .o-form-group
                         label.o-form-group__label(for="domain") Domain
                         .o-form-group__controls.o-form-group__controls--full-width
                             +c-select( { id: 'domain', value: ['Select', 'Domain A', 'Domain B', 'Domain C']})
-
                     .o-form-group
                         label.o-form-group__label Reason for the reduction
                         .o-form-group__controls
@@ -31,26 +31,22 @@ block body
                                     p.c-form-help-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
 
                     hr.c-hr
-
+                    h3.c-h3 Subtitle form
                     .o-form-group
                         label.o-form-group__label(for="description") Description
                         .o-form-group__controls.o-form-group__controls--full-width
                             +c-textarea({ id: 'description' })
                             p.c-form-help-text Lorem ipsum dolor sit amet.
-
-
                     .o-form-group
                         label.o-form-group__label(for="title") Title
                         .o-form-group__controls.o-form-group__controls--full-width
                             +c-input({ id: 'title' })
                             p.c-form-help-text Lorem ipsum dolor sit amet.
-
                     .o-form-group
                         label.o-form-group__label(for="yearOfCreation") Year of creation
                         .o-form-group__controls.o-form-group__controls--full-width
                             +c-select( { id: 'yearOfCreation', value: contentData.years })
                             p.c-form-help-text Lorem ipsum dolor sit amet.
-
                     .o-form-group
                         .u-spacer-left-auto
                             input.c-button.c-button--primary(type="submit" value="Save settings")

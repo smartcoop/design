@@ -43,48 +43,61 @@ $o-form-group-label-font-weight: 500 !default;
    ========================================================================== */
 
 .o-form-group-layout--horizontal {
-
   .o-form-group {
-    display: flex;
-    align-items: flex-start;
     margin-bottom: $o-form-group-spacer-unit * 2;
   }
 
-  .o-form-group__controls--full-width {
-    flex: 1 1 auto;
+  .o-form-group__label {
+    padding: $o-form-group-spacing/2 0;
+    font-weight: $o-form-group-label-font-weight;
+    display: block;
   }
 
-  .o-form-group__label {
-    padding: 0.8rem 0;
-    display: block;
-    width: 45%;
-    max-width: 24rem;
-    font-weight: $o-form-group-label-font-weight;
-    flex: 1 0 auto;
+  @media(min-width: $g-bp1) {
+    .o-form-group {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .o-form-group__controls--full-width {
+      flex: 1 1 auto;
+    }
+
+    .o-form-group__label {
+      width: 45%;
+      max-width: 24rem;
+      flex: 0 0 auto;
+    }
   }
 
 }
 
 .o-form-group-layout--inline {
   display: flex;
+
   .o-form-group__label {
     white-space: nowrap;
   }
+
   .o-form-group {
     display: flex;
     flex: 1 0 auto;
     align-items: center;
     margin-left: .8rem;
+
     &:first-child {
       margin: 0;
     }
+
     .o-form-group__controls {
       flex: 1 1 auto;
     }
+
     .c-button {
       height: 100%;
     }
   }
+
   .o-form-group__label {
     font-weight: $o-form-group-label-font-weight;
     margin-right: .8rem;
