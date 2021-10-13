@@ -2792,6 +2792,7 @@ textarea.c-input--h-large {
   background: none;
   border: none;
   position: relative;
+  margin: 0;
   cursor: pointer;
   line-height: 1.5; }
   .c-pill-navigation__item--has-child-menu > button:after {
