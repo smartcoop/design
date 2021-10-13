@@ -132,7 +132,7 @@ module.exports = {
     },
     {
       "countryCode": "BQ",
-      "countryName": "Bonaire, Sint Eustatius and Saba[d]"
+      "countryName": "Bonaire, Sint Eustatius and Saba"
     },
     {
       "countryCode": "BA",
@@ -768,7 +768,7 @@ module.exports = {
     },
     {
       "countryCode": "SH",
-      "countryName": "Saint Helena, Ascension and Tristan da Cunha[e]"
+      "countryName": "Saint Helena, Ascension and Tristan da Cunha"
     },
     {
       "countryCode": "KN",
@@ -876,7 +876,7 @@ module.exports = {
     },
     {
       "countryCode": "SJ",
-      "countryName": "Svalbard and Jan Mayen[f]"
+      "countryName": "Svalbard and Jan Mayen"
     },
     {
       "countryCode": "SE",
@@ -968,7 +968,7 @@ module.exports = {
     },
     {
       "countryCode": "UM",
-      "countryName": "United States Minor Outlying Islands[h]"
+      "countryName": "United States Minor Outlying Islands"
     },
     {
       "countryCode": "UY",
