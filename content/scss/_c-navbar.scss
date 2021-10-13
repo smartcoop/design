@@ -49,6 +49,15 @@
   }
 }
 
+.c-navbar--horizontal-scroll {
+  overflow-x: auto;
+  display: flex;
+
+  .c-toolbar {
+    width: auto;
+  }
+}
+
 /* Bordered equivalents
    ========================================================================== */
 
