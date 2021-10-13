@@ -2470,8 +2470,10 @@ textarea.c-input--h-large {
     width: 1.8rem;
     height: 1.8rem;
     left: 0.8rem; }
-  .c-input-with-icon .c-input:last-child {
+  .c-input-with-icon .c-input:first-child {
     padding-right: 3rem; }
+  .c-input-with-icon .c-input:last-child {
+    padding-left: 3rem; }
   .c-input-with-icon .c-input + .o-svg-icon {
     right: 0.8rem;
     left: auto; }
@@ -3304,7 +3306,7 @@ textarea.c-input--h-large {
    ========================================================================== */
 .c-toolbar__title {
   font-weight: 500;
-  font-size: 1.8rem; }
+  font-size: 2.2rem; }
 
 .c-toolbar__dropdown {
   display: flex;
