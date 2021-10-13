@@ -3219,7 +3219,7 @@ textarea.c-input--h-large {
   c-textarea
    ========================================================================== */
 .c-textarea {
-  border: 0.1rem solid #B3B3B3;
+  border: 0.1rem solid #CCCCCC;
   border-radius: 0.3rem;
   padding: 1rem 1.2rem;
   display: block;
