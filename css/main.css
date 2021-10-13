@@ -2770,22 +2770,23 @@ textarea.c-input--h-large {
 .c-pill-navigation__item {
   display: block; }
 
-.c-pill-navigation__item > a {
+.c-pill-navigation__item > a,
+.c-pill-navigation__item > button {
   display: block;
   padding: .8rem 1.6rem;
   color: #333333;
   font-weight: 500; }
 
-.c-pill-navigation__item--has-child-menu > a {
-  padding: .8rem 2.8rem .8rem 1.6rem; }
-
-.c-pill-navigation__item--active > a {
-  background: #F2F2F2;
-  border-radius: .3rem; }
-
-.c-pill-navigation__item--has-child-menu > a {
-  position: relative; }
-  .c-pill-navigation__item--has-child-menu > a:after {
+.c-pill-navigation__item--has-child-menu > button {
+  padding: .8rem 2.8rem .8rem 1.6rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  position: relative;
+  line-height: 1.5; }
+  .c-pill-navigation__item--has-child-menu > button:after {
     pointer-events: none;
     content: ' ';
     position: absolute;
@@ -2798,6 +2799,10 @@ textarea.c-input--h-large {
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent; }
+
+.c-pill-navigation__item--active > a {
+  background: #F2F2F2;
+  border-radius: .3rem; }
 
 /* ==========================================================================
   c-popover
