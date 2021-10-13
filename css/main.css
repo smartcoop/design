@@ -2645,6 +2645,12 @@ textarea.c-input--h-large {
       margin: 3.2rem 0;
       height: 8rem; } }
 
+.c-navbar--horizontal-scroll {
+  overflow-x: auto;
+  display: flex; }
+  .c-navbar--horizontal-scroll .c-toolbar {
+    width: auto; }
+
 /* Bordered equivalents
    ========================================================================== */
 .c-navbar--bordered-top {
