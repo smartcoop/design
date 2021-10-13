@@ -523,13 +523,19 @@ abbr[title] {
    ========================================================================== */
 .o-form-group-layout--horizontal .o-form-group {
   display: flex;
-  align-items: center;
-  margin: 0.8rem 0; }
+  align-items: flex-start;
+  margin-bottom: 1.6rem; }
+
+.o-form-group-layout--horizontal .o-form-group__controls--full-width {
+  flex: 1 1 auto; }
 
 .o-form-group-layout--horizontal .o-form-group__label {
+  padding: 0.8rem 0;
   display: block;
-  width: 19.2rem;
-  font-weight: 500; }
+  width: 45%;
+  max-width: 24rem;
+  font-weight: 500;
+  flex: 1 0 auto; }
 
 .o-form-group-layout--inline {
   display: flex; }
