@@ -522,7 +522,7 @@ abbr[title] {
    Affect form groups
    ========================================================================== */
 .o-form-group-layout--horizontal .o-form-group {
-  margin-bottom: 1.6rem; }
+  margin-bottom: 1.2rem; }
 
 .o-form-group-layout--horizontal .o-form-group__label {
   padding: 0.8rem 0;
