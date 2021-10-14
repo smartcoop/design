@@ -49,6 +49,26 @@
   }
 }
 
+.c-navbar--app {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+
+  .c-toolbar__left,
+  .c-toolbar__right {
+    z-index: 61;
+  }
+
+  .c-toolbar {
+    flex: 1 0 auto;
+    width: auto;
+  }
+
+  .c-toolbar__item {
+    position: unset; // To review, position relative on c-toolbar__item was preventing sub menus (absolutely positioned elements) to appear outside of navbar, an absolute positioned element's closest positioned ancestors must also be an ancestor of the element with overflow: hidden to appear outside of it.
+  }
+}
+
 /* Bordered equivalents
    ========================================================================== */
 
@@ -70,4 +90,3 @@
 .c-navbar--large {
   height: $g-bar-size-large;
 }
-
