@@ -13,7 +13,9 @@ class InputPassword {
   }
 
   attach() {
-    this.button.addEventListener("click", this.onClick.bind(this))
+    if (this.button) {
+      this.button.addEventListener("click", this.onClick.bind(this))
+    }
   }
 
   onClick(event) {
