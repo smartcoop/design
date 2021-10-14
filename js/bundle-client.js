@@ -465,7 +465,9 @@ var InputPassword = /*#__PURE__*/function () {
   _createClass(InputPassword, [{
     key: "attach",
     value: function attach() {
-      this.button.addEventListener("click", this.onClick.bind(this));
+      if (this.button) {
+        this.button.addEventListener("click", this.onClick.bind(this));
+      }
     }
   }, {
     key: "onClick",
