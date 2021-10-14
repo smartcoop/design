@@ -23,10 +23,10 @@ block body
                                     input.c-input(type="email")
 
                             .o-form-group
-                                label.o-form-group__label Password
+                                label.o-form-group__label(for="passwordId") Password
                                 .o-form-group__controls
                                     .c-input-with-icon
-                                        input.c-input(type="password")
+                                        input.c-input#passwordId(type="password")
                                         button.c-input-with-icon__toggle(data-password-toggle)
                                             +icon('eye')
                                             +icon('eye-off')

@@ -13,7 +13,11 @@
     .o-form-group
         label.o-form-group__label(for="passwordId") Password
         .o-form-group__controls
-            input.c-input(type="password" value="password" id="passwordId")
+            .c-input-with-icon
+                input.c-input#passwordId(type="password")
+                button.c-input-with-icon__toggle(data-password-toggle)
+                    +icon('eye')
+                    +icon('eye-off')
 
     .o-form-group
         label.o-form-group__label(for="selectId") Preference
