@@ -1,0 +1,82 @@
+/* ==========================================================================
+  c-filter-pill
+   ========================================================================== */
+
+.c-filter-pill {
+  font-size: 1.4rem;
+  font-weight: 500;
+  align-items: center;
+  padding: 0.2rem 0;
+  border-radius: .5rem;
+  height: 2.4rem;
+  background: $color-gray-50;
+  border: .1rem solid $color-gray-200;
+  width: fit-content;
+  display: flex;
+
+  &:active,
+  ~ .c-menu--visible {
+    background-color: $color-blue-500;
+    border-color: $color-blue-700;
+
+    .c-filter-pill__label,
+    .c-filter-pill__append {
+      color: #FFF;
+    }
+
+    .c-filter-pill__append {
+      &:before {
+        background-color: $color-blue-700;
+      }
+    }
+
+    .c-filter-pill__counter {
+      background: $color-blue-700;
+    }
+  }
+}
+
+.c-filter-pill__label {
+  margin: 0 0.8rem;
+  color: $color-text;
+}
+
+.c-filter-pill__counter {
+  font-size: 1.2rem;
+  line-height: 1;
+  background-color: $color-blue-500;
+  color: #fff;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.8rem;
+}
+
+.c-filter-pill__append {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.4rem;
+
+  .o-svg-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0rem;
+    height: 2.4rem;
+    width: 0.1rem;
+    background-color: $color-gray-200;
+  }
+}

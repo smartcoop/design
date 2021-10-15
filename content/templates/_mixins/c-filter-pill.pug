@@ -1,0 +1,11 @@
+//-
+    Mixin Form field - Create a filter pill
+
+mixin c-filter-pill({ counter })
+    button.c-filter-pill(type="button")&attributes(attributes)
+        span.c-filter-pill__label
+            block
+        if counter
+            span.c-filter-pill__counter= counter
+        .c-filter-pill__append(data-filter-close aria-label="Toggle filter menu")
+            +icon('chevron-down')
