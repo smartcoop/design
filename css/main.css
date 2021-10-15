@@ -2297,6 +2297,86 @@ input.c-button {
   background-color: #F6F6F6; }
 
 /* ==========================================================================
+  c-filter-pill
+   ========================================================================== */
+.c-filter-pill {
+  font-size: 1.4rem;
+  font-weight: 500;
+  align-items: center;
+  padding: 0.2rem 0;
+  border-radius: .5rem;
+  height: 2.4rem;
+  background: #F2F2F2;
+  border: 0.1rem solid #CCCCCC;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex; }
+  .c-filter-pill:active,
+  .c-filter-pill ~ .c-menu--visible {
+    background-color: #1267FB;
+    border-color: #154EB1; }
+    .c-filter-pill:active .c-filter-pill__label,
+    .c-filter-pill:active .c-filter-pill__append,
+    .c-filter-pill ~ .c-menu--visible .c-filter-pill__label,
+    .c-filter-pill ~ .c-menu--visible .c-filter-pill__append {
+      color: #FFF; }
+    .c-filter-pill:active .c-filter-pill__append:before,
+    .c-filter-pill ~ .c-menu--visible .c-filter-pill__append:before {
+      background-color: #154EB1; }
+    .c-filter-pill:active .c-filter-pill__counter,
+    .c-filter-pill ~ .c-menu--visible .c-filter-pill__counter {
+      background: #154EB1; }
+
+.c-filter-pill__label {
+  margin: 0 0.8rem;
+  color: #333333; }
+
+.c-filter-pill__counter {
+  font-size: 1.2rem;
+  line-height: 1;
+  background-color: #1267FB;
+  color: #fff;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.8rem; }
+
+.c-filter-pill__append {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.4rem; }
+  .c-filter-pill__append .o-svg-icon {
+    width: 1.6rem;
+    height: 1.6rem; }
+  .c-filter-pill__append:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0rem;
+    height: 2.4rem;
+    width: 0.1rem;
+    background-color: #CCCCCC; }
+
+/* ==========================================================================
+  c-filter-pill-list
+   ========================================================================== */
+.c-filter-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .c-filter-pill-list .c-filter-pill-list__item + .c-filter-pill-list__item {
+    margin-left: 0.8rem; }
+
+/* ==========================================================================
   c-form-help-text
   ---
   Help text + Errors on forms
@@ -3963,6 +4043,18 @@ textarea.c-input--h-large {
 
 .u-padding-bottom-xl {
   padding-bottom: 3.2rem !important; }
+
+/* ==========================================================================
+  Utility: shadow
+   ========================================================================== */
+.u-shadow-10 {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.12), 0px 0px 8px rgba(0, 0, 0, 0.06); }
+
+.u-shadow-30 {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 0px 16px rgba(0, 0, 0, 0.06); }
+
+.u-shadow-50 {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 8px rgba(0, 0, 0, 0.16), 0px 0px 16px rgba(0, 0, 0, 0.1), 0px 0px 24px rgba(0, 0, 0, 0.09); }
 
 /* ==========================================================================
   Utility: Text

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Alert stack - Component documentation - Smart Design System
+    <title>Filter pill - Component documentation - Smart Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -530,189 +530,85 @@
             </div>
             <div class="o-grid-col-bp3-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-h2">Alert stack</h1>
+                    <h1 class="br-componentgroup-header c-h2">Filter pill</h1>
                 </div>
                 <div class="br-content c-content">
                 </div>
-                <div class="br-sample" id="component-01-c-alert-in-messaging-stack">
+                <div class="br-sample" id="component-01-c-filter-pill">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Alert in messaging stack</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-alert-in-messaging-stack">#</a>
-                    </div>
-                    <div class="br-sample-documentation c-content">
-                        <p>An alert in the context of the messaging stack.</p>
-                    </div>
-                    <div class="br-sample-content">
-                        <div style="position: relative; width: 100%; height: 100%; min-height: 220px;">
-                            <ul class="c-alert-stack" style="position: absolute;">
-                                <li class="c-alert c-alert--dark">
-                                    <div class="o-svg-icon o-svg-icon-circle-check o-svg-icon--green ">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM16.664 8.753C16.862 8.92918 16.9819 9.17675 16.9975 9.44132C17.0131 9.70589 16.923 9.96582 16.747 10.164L11.414 16.164C11.3202 16.2696 11.2051 16.3541 11.0762 16.412C10.9474 16.4698 10.8077 16.4997 10.6665 16.4997C10.5253 16.4997 10.3856 16.4698 10.2568 16.412C10.1279 16.3541 10.0128 16.2696 9.919 16.164L7.253 13.164C7.08712 12.9645 7.0053 12.7083 7.02482 12.4495C7.04434 12.1907 7.16368 11.9497 7.35762 11.7773C7.55156 11.6049 7.80492 11.5147 8.06418 11.5256C8.32344 11.5366 8.56828 11.6479 8.747 11.836L10.667 13.995L15.253 8.835C15.4293 8.63716 15.677 8.51739 15.9415 8.50202C16.2061 8.48664 16.4659 8.57691 16.664 8.753Z" fill="#595959" />
-                                        </svg>
-                                    </div>
-                                    <div class="c-alert__body">
-                                        <p>Item added.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="br-sample-footer">
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
-                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
-                        <div class="br-sample-code br-sample-code-html">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div style=&quot;position: relative; width: 100%; height: 100%; min-height: 220px;&quot;&gt;
-    &lt;ul class=&quot;c-alert-stack&quot; style=&quot;position: absolute;&quot;&gt;
-        &lt;li class=&quot;c-alert c-alert--dark&quot;&gt;
-            &lt;div class=&quot;o-svg-icon o-svg-icon-circle-check o-svg-icon--green &quot;&gt;
-                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                    &lt;path d=&quot;M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM16.664 8.753C16.862 8.92918 16.9819 9.17675 16.9975 9.44132C17.0131 9.70589 16.923 9.96582 16.747 10.164L11.414 16.164C11.3202 16.2696 11.2051 16.3541 11.0762 16.412C10.9474 16.4698 10.8077 16.4997 10.6665 16.4997C10.5253 16.4997 10.3856 16.4698 10.2568 16.412C10.1279 16.3541 10.0128 16.2696 9.919 16.164L7.253 13.164C7.08712 12.9645 7.0053 12.7083 7.02482 12.4495C7.04434 12.1907 7.16368 11.9497 7.35762 11.7773C7.55156 11.6049 7.80492 11.5147 8.06418 11.5256C8.32344 11.5366 8.56828 11.6479 8.747 11.836L10.667 13.995L15.253 8.835C15.4293 8.63716 15.677 8.51739 15.9415 8.50202C16.2061 8.48664 16.4659 8.57691 16.664 8.753Z&quot; fill=&quot;#595959&quot; /&gt;
-                &lt;/svg&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;c-alert__body&quot;&gt;
-                &lt;p&gt;Item added.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</pre>
-                        </div>
-                        <div class="br-sample-code br-sample-code-pug">
-                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">div(style=&quot;position: relative; width: 100%; height: 100%; min-height: 220px;&quot;)
-    ul.c-alert-stack(style=&quot;position: absolute;&quot;)
-        li.c-alert.c-alert--dark
-            +icon('circle-check', 'o-svg-icon--green')
-            .c-alert__body
-                p Item added.
-</pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="br-sample" id="component-02-multiple-alerts-in-messaging-stack">
-                    <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Multiple alerts in messaging stack</h3>
-                        <a class="br-sample-header-link" href="#component-02-multiple-alerts-in-messaging-stack">#</a>
+                        <h3 class="br-sample-heading c-h3">Filter pill</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-filter-pill">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div style="position: relative; width: 100%; height: 100%; min-height: 220px;">
-                            <ul class="c-alert-stack" style="position: absolute;">
-                                <li class="c-alert">
-                                    <div class="o-svg-icon o-svg-icon-circle-check o-svg-icon--green ">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM16.664 8.753C16.862 8.92918 16.9819 9.17675 16.9975 9.44132C17.0131 9.70589 16.923 9.96582 16.747 10.164L11.414 16.164C11.3202 16.2696 11.2051 16.3541 11.0762 16.412C10.9474 16.4698 10.8077 16.4997 10.6665 16.4997C10.5253 16.4997 10.3856 16.4698 10.2568 16.412C10.1279 16.3541 10.0128 16.2696 9.919 16.164L7.253 13.164C7.08712 12.9645 7.0053 12.7083 7.02482 12.4495C7.04434 12.1907 7.16368 11.9497 7.35762 11.7773C7.55156 11.6049 7.80492 11.5147 8.06418 11.5256C8.32344 11.5366 8.56828 11.6479 8.747 11.836L10.667 13.995L15.253 8.835C15.4293 8.63716 15.677 8.51739 15.9415 8.50202C16.2061 8.48664 16.4659 8.57691 16.664 8.753Z" fill="#595959" />
-                                        </svg>
-                                    </div>
-                                    <div class="c-alert__body">
-                                        <p>Item added.</p>
-                                    </div>
-                                    <button class="c-button c-button--icon c-button--borderless">
-                                        <div class="c-button__content">
-                                            <div class="o-svg-icon o-svg-icon-close  ">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
-                                                </svg>
-                                            </div>
-                                            <div class="u-sr-accessible">Close</div>
+                        <ul class="c-filter-pill-list">
+                            <li class="c-filter-pill-list__item">
+                                <button class="c-filter-pill" type="button">
+                                    <span class="c-filter-pill__label">Label</span>
+                                    <div class="c-filter-pill__append" data-filter-close="data-filter-close" aria-label="Toggle filter menu">
+                                        <div class="o-svg-icon o-svg-icon-chevron-down  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#595959" />
+                                            </svg>
                                         </div>
-                                    </button>
-                                </li>
-                                <li class="c-alert">
-                                    <div class="o-svg-icon o-svg-icon-circle-check o-svg-icon--green ">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM16.664 8.753C16.862 8.92918 16.9819 9.17675 16.9975 9.44132C17.0131 9.70589 16.923 9.96582 16.747 10.164L11.414 16.164C11.3202 16.2696 11.2051 16.3541 11.0762 16.412C10.9474 16.4698 10.8077 16.4997 10.6665 16.4997C10.5253 16.4997 10.3856 16.4698 10.2568 16.412C10.1279 16.3541 10.0128 16.2696 9.919 16.164L7.253 13.164C7.08712 12.9645 7.0053 12.7083 7.02482 12.4495C7.04434 12.1907 7.16368 11.9497 7.35762 11.7773C7.55156 11.6049 7.80492 11.5147 8.06418 11.5256C8.32344 11.5366 8.56828 11.6479 8.747 11.836L10.667 13.995L15.253 8.835C15.4293 8.63716 15.677 8.51739 15.9415 8.50202C16.2061 8.48664 16.4659 8.57691 16.664 8.753Z" fill="#595959" />
-                                        </svg>
                                     </div>
-                                    <div class="c-alert__body">
-                                        <p>Item added.</p>
-                                    </div>
-                                    <button class="c-button c-button--icon c-button--borderless">
-                                        <div class="c-button__content">
-                                            <div class="o-svg-icon o-svg-icon-close  ">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
-                                                </svg>
-                                            </div>
-                                            <div class="u-sr-accessible">Close</div>
+                                </button>
+                            </li>
+                            <li class="c-filter-pill-list__item">
+                                <button class="c-filter-pill" type="button">
+                                    <span class="c-filter-pill__label">Label</span>
+                                    <span class="c-filter-pill__counter">2</span>
+                                    <div class="c-filter-pill__append" data-filter-close="data-filter-close" aria-label="Toggle filter menu">
+                                        <div class="o-svg-icon o-svg-icon-chevron-down  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#595959" />
+                                            </svg>
                                         </div>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div style=&quot;position: relative; width: 100%; height: 100%; min-height: 220px;&quot;&gt;
-    &lt;ul class=&quot;c-alert-stack&quot; style=&quot;position: absolute;&quot;&gt;
-        &lt;li class=&quot;c-alert&quot;&gt;
-            &lt;div class=&quot;o-svg-icon o-svg-icon-circle-check o-svg-icon--green &quot;&gt;
-                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                    &lt;path d=&quot;M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM16.664 8.753C16.862 8.92918 16.9819 9.17675 16.9975 9.44132C17.0131 9.70589 16.923 9.96582 16.747 10.164L11.414 16.164C11.3202 16.2696 11.2051 16.3541 11.0762 16.412C10.9474 16.4698 10.8077 16.4997 10.6665 16.4997C10.5253 16.4997 10.3856 16.4698 10.2568 16.412C10.1279 16.3541 10.0128 16.2696 9.919 16.164L7.253 13.164C7.08712 12.9645 7.0053 12.7083 7.02482 12.4495C7.04434 12.1907 7.16368 11.9497 7.35762 11.7773C7.55156 11.6049 7.80492 11.5147 8.06418 11.5256C8.32344 11.5366 8.56828 11.6479 8.747 11.836L10.667 13.995L15.253 8.835C15.4293 8.63716 15.677 8.51739 15.9415 8.50202C16.2061 8.48664 16.4659 8.57691 16.664 8.753Z&quot; fill=&quot;#595959&quot; /&gt;
-                &lt;/svg&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;c-alert__body&quot;&gt;
-                &lt;p&gt;Item added.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;button class=&quot;c-button c-button--icon c-button--borderless&quot;&gt;
-                &lt;div class=&quot;c-button__content&quot;&gt;
-                    &lt;div class=&quot;o-svg-icon o-svg-icon-close  &quot;&gt;
-                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                            &lt;path d=&quot;M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z&quot; fill=&quot;#595959&quot; /&gt;
-                        &lt;/svg&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;u-sr-accessible&quot;&gt;Close&lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;ul class=&quot;c-filter-pill-list&quot;&gt;
+    &lt;li class=&quot;c-filter-pill-list__item&quot;&gt;
+        &lt;button class=&quot;c-filter-pill&quot; type=&quot;button&quot;&gt;
+            &lt;span class=&quot;c-filter-pill__label&quot;&gt;Label&lt;/span&gt;
+            &lt;div class=&quot;c-filter-pill__append&quot; data-filter-close=&quot;data-filter-close&quot; aria-label=&quot;Toggle filter menu&quot;&gt;
+                &lt;div class=&quot;o-svg-icon o-svg-icon-chevron-down  &quot;&gt;
+                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                        &lt;path d=&quot;M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+                    &lt;/svg&gt;
                 &lt;/div&gt;
-            &lt;/button&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;c-alert&quot;&gt;
-            &lt;div class=&quot;o-svg-icon o-svg-icon-circle-check o-svg-icon--green &quot;&gt;
-                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                    &lt;path d=&quot;M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM16.664 8.753C16.862 8.92918 16.9819 9.17675 16.9975 9.44132C17.0131 9.70589 16.923 9.96582 16.747 10.164L11.414 16.164C11.3202 16.2696 11.2051 16.3541 11.0762 16.412C10.9474 16.4698 10.8077 16.4997 10.6665 16.4997C10.5253 16.4997 10.3856 16.4698 10.2568 16.412C10.1279 16.3541 10.0128 16.2696 9.919 16.164L7.253 13.164C7.08712 12.9645 7.0053 12.7083 7.02482 12.4495C7.04434 12.1907 7.16368 11.9497 7.35762 11.7773C7.55156 11.6049 7.80492 11.5147 8.06418 11.5256C8.32344 11.5366 8.56828 11.6479 8.747 11.836L10.667 13.995L15.253 8.835C15.4293 8.63716 15.677 8.51739 15.9415 8.50202C16.2061 8.48664 16.4659 8.57691 16.664 8.753Z&quot; fill=&quot;#595959&quot; /&gt;
-                &lt;/svg&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;c-alert__body&quot;&gt;
-                &lt;p&gt;Item added.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;button class=&quot;c-button c-button--icon c-button--borderless&quot;&gt;
-                &lt;div class=&quot;c-button__content&quot;&gt;
-                    &lt;div class=&quot;o-svg-icon o-svg-icon-close  &quot;&gt;
-                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                            &lt;path d=&quot;M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z&quot; fill=&quot;#595959&quot; /&gt;
-                        &lt;/svg&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;u-sr-accessible&quot;&gt;Close&lt;/div&gt;
+        &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-filter-pill-list__item&quot;&gt;
+        &lt;button class=&quot;c-filter-pill&quot; type=&quot;button&quot;&gt;
+            &lt;span class=&quot;c-filter-pill__label&quot;&gt;Label&lt;/span&gt;
+            &lt;span class=&quot;c-filter-pill__counter&quot;&gt;2&lt;/span&gt;
+            &lt;div class=&quot;c-filter-pill__append&quot; data-filter-close=&quot;data-filter-close&quot; aria-label=&quot;Toggle filter menu&quot;&gt;
+                &lt;div class=&quot;o-svg-icon o-svg-icon-chevron-down  &quot;&gt;
+                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                        &lt;path d=&quot;M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+                    &lt;/svg&gt;
                 &lt;/div&gt;
-            &lt;/button&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</pre>
+            &lt;/div&gt;
+        &lt;/button&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">div(style=&quot;position: relative; width: 100%; height: 100%; min-height: 220px;&quot;)
-    ul.c-alert-stack(style=&quot;position: absolute;&quot;)
-        li.c-alert
-            +icon('circle-check', 'o-svg-icon--green')
-            .c-alert__body
-                p Item added.
-            button.c-button.c-button--icon.c-button--borderless
-                .c-button__content
-                    +icon('close')
-                    .u-sr-accessible Close
-
-        li.c-alert
-            +icon('circle-check', 'o-svg-icon--green')
-            .c-alert__body
-                p Item added.
-            button.c-button.c-button--icon.c-button--borderless
-                .c-button__content
-                    +icon('close')
-                    .u-sr-accessible Close
+                            <pre class="br-sample-markup br-sample-markup-pug">ul.c-filter-pill-list
+    li.c-filter-pill-list__item
+        +c-filter-pill({}) Label
+    li.c-filter-pill-list__item
+        +c-filter-pill({counter: '2'}) Label
 </pre>
                         </div>
                     </div>
