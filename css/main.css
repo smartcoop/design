@@ -2739,10 +2739,11 @@ textarea.c-input--h-large {
 .c-navbar--app {
   overflow-x: auto;
   overflow-y: hidden;
-  display: flex; }
+  display: flex;
+  z-index: 61; }
   .c-navbar--app .c-toolbar__left,
   .c-navbar--app .c-toolbar__right {
-    z-index: 61; }
+    z-index: initial; }
   .c-navbar--app .c-toolbar {
     flex: 1 0 auto;
     width: auto; }
