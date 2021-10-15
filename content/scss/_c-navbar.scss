@@ -53,10 +53,11 @@
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
+  z-index: 61;
 
   .c-toolbar__left,
   .c-toolbar__right {
-    z-index: 61;
+    z-index: initial; // Fix safari bug menu z-index
   }
 
   .c-toolbar {
@@ -65,7 +66,7 @@
   }
 
   .c-toolbar__item {
-    position: unset; // To review, position relative on c-toolbar__item was preventing sub menus (absolutely positioned elements) to appear outside of navbar, an absolute positioned element's closest positioned ancestors must also be an ancestor of the element with overflow: hidden to appear outside of it.
+    position: unset; // Fix bug menu z-index (to appear outside of navbar, an absolute positioned element's closest positioned ancestors must also be an ancestor of the element with overflow: hidden).
   }
 }
 
