@@ -13,6 +13,7 @@ mixin c-contract-card({ title, ref, month, days=[], client, status })
                         .c-toolbar__item
                             .c-button-toolbar
                                 +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
+                                +c-button({ layout: 'icon-only', icon: 'print', skin: 'borderless' }) Print
                                 +c-button({ layout: 'icon-only', icon: 'delete', skin: 'borderless' }) Delete
 
                 .u-padding-vertical-l
@@ -31,4 +32,11 @@ mixin c-contract-card({ title, ref, month, days=[], client, status })
                         +icon('user', 'o-svg-icon--subtle')
                         span.u-spacer-left-s= client
 
-                span.c-body-2.u-text-muted= ref
+
+                .c-toolbar.c-toolbar--auto
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            span.c-body-2.u-text-muted= ref
+                    .c-toolbar__right
+                        .c-toolbar__item
+                            +c-status-pill({skin: status.toLowerCase() })= status
