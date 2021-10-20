@@ -1,0 +1,20 @@
+nav.c-pagination(aria-label='Page navigation')
+    ul.c-pagination__nav
+        li.c-pagination__item
+            +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-left', skin: 'borderless'})(disabled)
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 1
+        li.c-pagination__item
+            span.c-pagination__dots ...
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 20
+        li.c-pagination__item.c-pagination__item--active
+            a.c-pagination__link(href='#') 21
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 22
+        li.c-pagination__item
+            span.c-pagination__dots ...
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 250
+        li.c-pagination__item
+            +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-right', skin: 'borderless'})

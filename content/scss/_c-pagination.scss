@@ -1,0 +1,63 @@
+/* ==========================================================================
+  c-pagination
+  ---
+  Pagination component
+   ========================================================================== */
+
+.c-pagination {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.c-pagination__nav {
+  display: flex;
+  align-items: center;
+}
+
+.c-pagination__link {
+  min-width: 3.6rem;
+  height: 3.6rem;
+  padding: 0 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  color: $g-text-color;
+  background: $color-gray-30;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color-gray-100;
+  }
+}
+
+.c-pagination__dots {
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-muted;
+}
+
+.c-pagination__item + .c-pagination__item {
+  margin-left: 0.8rem;
+}
+
+.c-pagination__item--active {
+  .c-pagination__link {
+    background-color: $color-white;
+    border: 1px solid $color-black;
+  }
+}
+
+.c-pagination__item--disabled {
+  .c-pagination__link {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+  }
+}
