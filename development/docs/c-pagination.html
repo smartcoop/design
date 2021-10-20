@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Or - Component documentation - Smart Design System
+    <title>Pagination - Component documentation - Smart Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -534,36 +534,416 @@
             </div>
             <div class="o-grid-col-bp3-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-h2">Or</h1>
+                    <h1 class="br-componentgroup-header c-h2">Pagination</h1>
                 </div>
                 <div class="br-content c-content">
-                    <p>Provide the user with a separator between two options. Example usage can be found in the <a href="/development/template-examples/sign-in-form.html">sign in</a> form.</p>
-
                 </div>
-                <div class="br-sample" id="component-01-c-or">
+                <div class="br-sample" id="component-01-c-pagination">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Or</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-or">#</a>
+                        <h3 class="br-sample-heading c-h3">Default</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-pagination">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <p class="c-or">
-                            <span>or</span>
-                        </p>
+                        <nav class="c-pagination" aria-label="Page navigation">
+                            <ul class="c-pagination__nav">
+                                <li class="c-pagination__item">
+                                    <a class="c-button c-button--borderless c-button--icon" href="#" disabled="disabled">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-chevron-left  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">
+                                            </div>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="c-pagination__item c-pagination__item--active">
+                                    <a class="c-pagination__link" href="#">1</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">2</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">3</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">4</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">5</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-button c-button--borderless c-button--icon" href="#">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-chevron-right  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">
+                                            </div>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;p class=&quot;c-or&quot;&gt;
-    &lt;span&gt;or&lt;/span&gt;
-&lt;/p&gt;</pre>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;nav class=&quot;c-pagination&quot; aria-label=&quot;Page navigation&quot;&gt;
+    &lt;ul class=&quot;c-pagination__nav&quot;&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-button c-button--borderless c-button--icon&quot; href=&quot;#&quot; disabled=&quot;disabled&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-chevron-left  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item c-pagination__item--active&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-button c-button--borderless c-button--icon&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-chevron-right  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">p.c-or
-    span or
+                            <pre class="br-sample-markup br-sample-markup-pug">nav.c-pagination(aria-label='Page navigation')
+    ul.c-pagination__nav
+        li.c-pagination__item
+            +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-left', skin: 'borderless'})(disabled)
+        li.c-pagination__item.c-pagination__item--active
+            a.c-pagination__link(href='#') 1
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 2
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 3
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 4
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 5
+        li.c-pagination__item
+            +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-right', skin: 'borderless'})
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-02-c-pagination-many">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Pagination (many)</h3>
+                        <a class="br-sample-header-link" href="#component-02-c-pagination-many">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <nav class="c-pagination" aria-label="Page navigation">
+                            <ul class="c-pagination__nav">
+                                <li class="c-pagination__item">
+                                    <a class="c-button c-button--borderless c-button--icon" href="#" disabled="disabled">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-chevron-left  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">
+                                            </div>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="c-pagination__item c-pagination__item--active">
+                                    <a class="c-pagination__link" href="#">1</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">2</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">3</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">4</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">5</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <span class="c-pagination__dots">...</span>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">250</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-button c-button--borderless c-button--icon" href="#">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-chevron-right  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">
+                                            </div>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;nav class=&quot;c-pagination&quot; aria-label=&quot;Page navigation&quot;&gt;
+    &lt;ul class=&quot;c-pagination__nav&quot;&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-button c-button--borderless c-button--icon&quot; href=&quot;#&quot; disabled=&quot;disabled&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-chevron-left  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item c-pagination__item--active&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;span class=&quot;c-pagination__dots&quot;&gt;...&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;250&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-button c-button--borderless c-button--icon&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-chevron-right  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">nav.c-pagination(aria-label='Page navigation')
+    ul.c-pagination__nav
+        li.c-pagination__item
+            +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-left', skin: 'borderless'})(disabled)
+        li.c-pagination__item.c-pagination__item--active
+            a.c-pagination__link(href='#') 1
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 2
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 3
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 4
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 5
+        li.c-pagination__item
+            span.c-pagination__dots ...
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 250
+        li.c-pagination__item
+            +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-right', skin: 'borderless'})
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-03-c-pagination-middle">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Pagination (middle selection)</h3>
+                        <a class="br-sample-header-link" href="#component-03-c-pagination-middle">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <nav class="c-pagination" aria-label="Page navigation">
+                            <ul class="c-pagination__nav">
+                                <li class="c-pagination__item">
+                                    <a class="c-button c-button--borderless c-button--icon" href="#" disabled="disabled">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-chevron-left  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">
+                                            </div>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">1</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <span class="c-pagination__dots">...</span>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">20</a>
+                                </li>
+                                <li class="c-pagination__item c-pagination__item--active">
+                                    <a class="c-pagination__link" href="#">21</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">22</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <span class="c-pagination__dots">...</span>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-pagination__link" href="#">250</a>
+                                </li>
+                                <li class="c-pagination__item">
+                                    <a class="c-button c-button--borderless c-button--icon" href="#">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-chevron-right  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">
+                                            </div>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;nav class=&quot;c-pagination&quot; aria-label=&quot;Page navigation&quot;&gt;
+    &lt;ul class=&quot;c-pagination__nav&quot;&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-button c-button--borderless c-button--icon&quot; href=&quot;#&quot; disabled=&quot;disabled&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-chevron-left  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;span class=&quot;c-pagination__dots&quot;&gt;...&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;20&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item c-pagination__item--active&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;21&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;22&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;span class=&quot;c-pagination__dots&quot;&gt;...&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-pagination__link&quot; href=&quot;#&quot;&gt;250&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;c-pagination__item&quot;&gt;
+            &lt;a class=&quot;c-button c-button--borderless c-button--icon&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-chevron-right  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">nav.c-pagination(aria-label='Page navigation')
+    ul.c-pagination__nav
+        li.c-pagination__item
+            +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-left', skin: 'borderless'})(disabled)
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 1
+        li.c-pagination__item
+            span.c-pagination__dots ...
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 20
+        li.c-pagination__item.c-pagination__item--active
+            a.c-pagination__link(href='#') 21
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 22
+        li.c-pagination__item
+            span.c-pagination__dots ...
+        li.c-pagination__item
+            a.c-pagination__link(href='#') 250
+        li.c-pagination__item
+            +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-right', skin: 'borderless'})
 </pre>
                         </div>
                     </div>

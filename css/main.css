@@ -2790,6 +2790,63 @@ textarea.c-input--h-large {
     border-top: 0.1rem solid #E5E5E5; }
 
 /* ==========================================================================
+  c-pagination
+  ---
+  Pagination component
+   ========================================================================== */
+.c-pagination {
+  display: flex;
+  flex: 1;
+  justify-content: center; }
+
+.c-pagination__nav {
+  display: flex;
+  align-items: center; }
+
+.c-pagination__link {
+  min-width: 3.6rem;
+  height: 3.6rem;
+  padding: 0 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  color: #333333;
+  background: #F6F6F6; }
+  .c-pagination__link:hover, .c-pagination__link:active, .c-pagination__link:focus {
+    background-color: #E5E5E5; }
+
+.c-pagination__dots {
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #808080; }
+
+.c-pagination__item + .c-pagination__item {
+  margin-left: 0.8rem; }
+
+.c-pagination__item--active .c-pagination__link {
+  background-color: #FFFFFF;
+  border: 1px solid #000000; }
+
+.c-pagination__item--disabled .c-pagination__link {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none; }
+
+/* ==========================================================================
+  c-pagination-simple
+ ========================================================================== */
+.c-pagination-simple {
+  display: flex;
+  align-items: center; }
+  .c-pagination-simple .c-pagination__item + .c-pagination__item {
+    margin-left: 0.8rem; }
+
+/* ==========================================================================
   Component: c-panel
    ========================================================================== */
 /* Variables
@@ -3449,15 +3506,6 @@ textarea.c-input--h-large {
       .c-toolbar.c-toolbar--drop-columns-low-mq .c-toolbar__right .c-toolbar__item {
         margin-left: 0;
         margin-right: 1.6rem; } }
-
-/* ==========================================================================
-  c-pagination-simple
- ========================================================================== */
-.c-pagination-simple {
-  display: flex;
-  align-items: center; }
-  .c-pagination-simple .c-pagination__item + .c-pagination__item {
-    margin-left: 0.8rem; }
 
 /* ==========================================================================
   Component: Toolbar-title
