@@ -1,0 +1,67 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Tools - Contracts"
+
+block content
+
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                        h2.c-toolbar__title Contracts to be validated
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    ul.c-filter-pill-list
+                        li.c-filter-pill-list__item
+                            +c-filter-pill({counter: '1'}) Start date
+                        li.c-filter-pill-list__item
+                            +c-filter-pill({}) Client
+                        li.c-filter-pill-list__item
+                            +c-filter-pill({}) Description
+
+    .u-scroll-wrapper-body
+        .u-spacer-l
+            .o-panel-grid.small-up-2
+                each val in [1,2,3,4,5,6]
+                    +c-contract-card({
+                            title: 'Amet minim mollit',
+                            ref: '2021.NET.000000',
+                            month: 'September 2021',
+                            days: ['10','12','13'],
+                            client: 'Client name',
+                            status: 'Pending'
+
+                    })
+
+
+    .c-navbar.c-navbar--bordered-top
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    .c-pagination-simple
+                        .c-pagination-simple__item 1 of 4
+                        .c-pagination-simple__item
+                            .c-button-toolbar
+                                button.c-button.c-button--icon.c-button--borderless(disabled)
+                                    .c-button__content
+                                        +icon('chevron-left')
+                                        .u-sr-accessible Previous
+                                button.c-button.c-button--icon.c-button--borderless
+                                    .c-button__content
+                                        +icon('chevron-right')
+                                        .u-sr-accessible Next
+
+            .c-toolbar__right
+                .c-toolbar__item
+                    .o-form-group-layout.o-form-group-layout--inline
+                        .o-form-group
+                            label.u-spacer-right-s(for="itemsPerPageId") Items per page
+                            .o-form-group__controls
+                                .c-select-holder
+                                    select.c-select(id="itemsPerPageId")
+                                        option 10
+                                        option 20
+                                        option 50

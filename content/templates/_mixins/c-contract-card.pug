@@ -1,0 +1,34 @@
+//-
+    Mixin Form field - Create a filter pill
+
+mixin c-contract-card({ title, ref, month, days=[], client, status })
+    .c-panel
+        .c-panel__content
+            .u-spacer-l
+                .c-toolbar.c-toolbar--auto
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            h3.c-panel__title= title
+                    .c-toolbar__right
+                        .c-toolbar__item
+                            .c-button-toolbar
+                                +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
+                                +c-button({ layout: 'icon-only', icon: 'delete', skin: 'borderless' }) Delete
+
+                .u-padding-vertical-l
+                    .o-flex.o-flex--vertical-center.u-spacer-bottom-s
+                        +icon('calendar', 'o-svg-icon--subtle')
+                        span.u-spacer-left-s #{month} - Days
+                            each day, index in days
+                                if (index + 1 == days.length)
+                                    | #{day}
+                                else
+                                    |
+                                    | #{day},
+                                    |
+
+                    .o-flex.o-flex--vertical-center
+                        +icon('user', 'o-svg-icon--subtle')
+                        span.u-spacer-left-s= client
+
+                span.c-body-2.u-text-muted= ref
