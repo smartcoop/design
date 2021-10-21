@@ -26,16 +26,20 @@ $o-form-group-label-font-weight: 500 !default;
     flex: 1 1 auto;
   }
 
-  .o-form-group__label {
+  label.o-form-group__label,
+  .o-form-group__label label {
     padding: $o-form-group-spacing/2 0;
-
     color: $c-input-label-color;
-    flex: none;
     font-size: $g-base-font-size;
     font-weight: $o-form-group-label-font-weight;
     display: block;
+    flex: none;
   }
 
+  .o-form-group__label--with-helper {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* o-form-horizontal
@@ -47,10 +51,16 @@ $o-form-group-label-font-weight: 500 !default;
     margin-bottom: 1.2rem;
   }
 
-  .o-form-group__label {
-    padding: $o-form-group-spacing/2 0;
+  label.o-form-group__label,
+  .o-form-group__label label {
+    padding: 0.6rem 0;
     font-weight: $o-form-group-label-font-weight;
     display: block;
+  }
+
+  .o-form-group__label--with-helper {
+    display: flex;
+    align-items: center;
   }
 
   @media(min-width: $g-bp1) {
@@ -110,13 +120,4 @@ $o-form-group-label-font-weight: 500 !default;
   .o-form-group--inline-shrink {
     flex: 0 1 auto;
   }
-}
-
-/* o-form-group label wrapper
-   For labels with helper tooltip
-   ========================================================================== */
-
-.o-form-group__label-wrapper {
-  display: flex;
-  align-items: center;
 }
