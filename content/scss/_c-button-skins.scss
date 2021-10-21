@@ -273,12 +273,12 @@ $c-button-link-color: $color-red-500 !default;
   &:active,
   &:active:focus,
   &.c-button--active {
-    color: $color-red-500;
+    color: $color-gray-900;
     background: transparent;
   }
 
   &:focus {
-    color: $color-red-500;
+    color: $color-gray-900;
     background: transparent;
   }
 
