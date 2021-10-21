@@ -10,6 +10,9 @@ block content
             .c-toolbar__left
                 .c-toolbar__item
                         h2.c-toolbar__title Contracts to be validated
+            if !isEmpty
+                .c-toolbar__right
+                    +c-button({skin: 'primary', icon: 'add'}) Add item
     if !isEmpty
         .c-navbar.c-navbar--scrollable.c-navbar--bordered-bottom
             .c-toolbar
@@ -55,6 +58,7 @@ block content
                     .c-blank-slate
                         +c-avatar({icon: 'document', size: 'large'})
                         p.u-text-muted.c-body-1 There are no items yet.
+                        +c-button({icon: 'add'}) Add item
         else
             .u-spacer-l
                 .o-panel-grid.medium-up-2
