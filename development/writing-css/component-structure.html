@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="u-maximize-height" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>CSS component structure - Smart Design System
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+</head>
+
+<body class="u-maximize-height">
+    <header id="header">
+        <div class="o-container">
+            <div class="c-navbar c-navbar--bordered-bottom c-navbar--main">
+                <div class="c-toolbar">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <div class="c-brand c-brand--small">
+                                <a href="/">
+                                    <img src="/images/logo.svg" alt="Smart" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <!-- Nav for desktop-->
+                            <nav class="c-design-system-nav">
+                                <button class="c-button c-button--borderless c-button--icon c-design-system-nav-open" type="button" id="c-design-system-nav-open">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-menu  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Open menu
+                                        </div>
+                                    </span>
+                                </button>
+                                <button class="c-button c-button--borderless c-button--icon c-design-system-nav-close" type="button" id="c-design-system-nav-close">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-close  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Close menu
+                                        </div>
+                                    </span>
+                                </button>
+                                <div class="c-design-system-nav__mobile">
+                                    <ul>
+                                        <li>
+                                            <span>Design</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/design/how-it-works.html">Design workflow</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/design/in-practice/copywriting.html">Design system in practice</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>Development</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/development/getting-started.html">Getting started</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/component-documentation.html">Component documentation</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/browser-support.html">Browser support</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/writing-css/architecture.html">CSS architecture</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/writing-css/component-structure.html">CSS component structure</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/index.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="/changelog.html">Changelog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-design-system-nav__desktop">
+                                    <ul class="c-pill-navigation">
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <!-- @todo now we are using menu.js, which is really meant for dropdowns. Make more accessible with aria-haspopup="true" aria-expanded="false", switch with JS?-->
+                                            <button type="button" data-menu="menu1" data-menu-samewidth="true">Design</button>
+                                            <ul class="c-menu c-menu--large" id="menu1">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/design/how-it-works.html">Design workflow</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/design/in-practice/copywriting.html">Design system in practice</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <button type="button" data-menu="menu2" data-menu-samewidth="true">Development</button>
+                                            <ul class="c-menu c-menu--large" id="menu2">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/getting-started.html">Getting started</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                </li>
+                                                <li class="c-menu__divider" role="presentational"></li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/component-documentation.html">Component documentation</a>
+                                                </li>
+                                                <li class="c-menu__divider" role="presentational"></li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/browser-support.html">Browser support</a>
+                                                </li>
+                                                <li class="c-menu__divider" role="presentational"></li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/writing-css/architecture.html">CSS architecture</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/writing-css/component-structure.html">CSS component structure</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/blog/index.html">Blog</a>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/changelog.html">Changelog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="o-container">
+        <div class="o-container-vertical">
+            <h1 class="c-d-h1">Writing CSS</h1>
+            <div class="o-grid">
+                <div class="o-grid-col-bp3-3">
+                    <div class="u-spacer-bottom">
+                        <ul class="c-side-menu">
+                            <li class="c-side-menu__item">
+                                <a class="c-side-menu__link" href="/development/writing-css/architecture.html">CSS architecture</a>
+                            </li>
+                            <li class="c-side-menu__item c-side-menu__item--active">
+                                <a class="c-side-menu__link" href="/development/writing-css/component-structure.html">CSS component structure</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="o-grid-col-bp3-9">
+                    <div class="c-display">
+                        <h1>CSS component structure</h1>
+                        <div class="u-spacer-top u-spacer-bottom">
+                            <p>Here's a starting point for a new component:</p>
+                            <div class="c-code">
+                                <pre>/* ==========================================================================
+   My component name
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+/* Component
+   ========================================================================== */
+</pre>
+                            </div>
+                            <p>Note the first level and second level block comment. Check Necolas's <a href="https://github.com/necolas/idiomatic-css#3-comments">Idiomatic CSS repo</a> for more information.</p>
+                            <p>Here's what the component would look like a bit further down the line:</p>
+                            <div class="c-code">
+                                <pre>/* ==========================================================================
+   Custom component
+   ---
+   Does something custom
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+$c-custom-bg: #FFF !default;
+
+/* Component
+   ========================================================================== */
+
+.c-custom {
+  background: $c-custom-bg;
+}
+
+.c-custom--modifier {
+  background: #000;
+}
+
+.c-custom__child {
+  // Code for child
+}
+
+.c-custom__child--modifier {
+  // Code for child with modifier
+}
+</pre>
+                            </div>
+                            <h3>SCSS formatting</h3>
+                            <p>We use 2 spaces and no tabs. Please see the <code>.editorconfig</code> file in the repository for more specifics. It is helpful to download an editorconfig plugin for your editor. Please see <a href="https://editorconfig.org/">editorconfig.org</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="o-container-vertical">
+            <div class="o-container">
+                <hr class="c-hr">
+                <ul class="c-bordered-list-horizontal c-bordered-list-horizontal--muted">
+                    <li>
+                        <a href="https://github.com/smartcoop/design">
+                            <div class="o-flex">
+                                <div class="u-spacer-right-s">
+                                    <div class="o-svg-icon o-svg-icon-github  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </div>Share feedback on GitHub
+                            </div>
+                            <!--li: a(href="#") Licensing information
+                -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>
