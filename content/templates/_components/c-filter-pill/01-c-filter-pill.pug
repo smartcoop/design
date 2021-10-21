@@ -1,5 +1,37 @@
-ul.c-filter-pill-list
-    li.c-filter-pill-list__item
-        +c-filter-pill({}) Label
-    li.c-filter-pill-list__item
-        +c-filter-pill({counter: '2'}) Label
+div(style="min-height: 36rem;")
+    +c-filter-pill({counter: '2'})(data-popover="filter-example" data-popover-placement="bottom-start") Label
+
+    .c-popover(role="popover" id="filter-example")
+        h4.c-h4 Label
+
+        .o-form-group-layout.o-form-group-layout--standard
+            .o-form-group
+                .o-form-group__controls
+                    .c-checkbox-group
+                        .c-checkbox
+                            label
+                                input(type="checkbox")
+                                | Checkbox
+                        .c-checkbox
+                            label
+                                input(type="checkbox" checked)
+                                | Checkbox
+                        .c-checkbox
+                            label
+                                input(type="checkbox" checked)
+                                | Checkbox
+                        .c-checkbox
+                            label
+                                input(type="checkbox")
+                                | Checkbox
+                        .c-checkbox
+                            label
+                                input(type="checkbox")
+                                | Checkbox
+
+        .c-toolbar.c-toolbar--auto
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        +c-button({}) Reset
+                        +c-button({skin: 'primary'}) Apply filter
