@@ -7,7 +7,7 @@
 /* Variables
    ========================================================================== */
 
-$c-avatar-default-bg: $color-gray-500 !default;
+$c-avatar-default-bg: $color-gray-100 !default;
 $c-avatar-dimensions-xl: 9.6rem !default;
 $c-avatar-dimensions-l: 6.4rem !default;
 $c-avatar-dimensions-m: 4.8rem !default;
@@ -29,7 +29,7 @@ $c-avatar-dimensions-xs: 1.8rem !default;
   border-radius: 50%;
   text-align: center;
   background-color: $c-avatar-default-bg;
-  color: #FFF;
+  color: $color-icon;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -115,6 +115,13 @@ $c-avatar-dimensions-xs: 1.8rem !default;
   min-height: $c-avatar-dimensions-l;
   line-height: $c-avatar-dimensions-l;
   font-size: 2.4rem;
+
+  .o-svg-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    position: relative;
+    top: -0.1rem;
+  }
 }
 
 /* Image variant
