@@ -17,6 +17,8 @@ $c-tooltip-bg: rgba(0,0,0,0.65) !default;
   padding: .8rem 1.2rem;
   font-size: 1.3rem;
   border-radius: 0.4rem;
+  max-width: 24rem;
+  z-index: 1;
 }
 
 .c-tooltip--size-m {
