@@ -20,13 +20,12 @@
                     +icon('eye-off')
 
     .o-form-group
-        .o-form-group__label
-            label(for="selectId") Preference
+        .o-form-group__label-wrapper
+            label.o-form-group__label(for="selectId") Preference
             +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="preference-tooltip" data-tooltip-placement="right") Show info
             .c-tooltip(role="tooltip" id="preference-tooltip")
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 .c-tooltip__arrow(data-popper-arrow)
-
         .c-select-holder
             select.c-select(id="selectId")
                 option Option A
