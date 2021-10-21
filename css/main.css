@@ -510,13 +510,18 @@ abbr[title] {
 .o-form-group-layout--standard .o-form-group__controls {
   flex: 1 1 auto; }
 
-.o-form-group-layout--standard .o-form-group__label {
+.o-form-group-layout--standard label.o-form-group__label,
+.o-form-group-layout--standard .o-form-group__label label {
   padding: 0.8rem 0;
   color: #333333;
-  flex: none;
   font-size: 1.6rem;
   font-weight: 500;
-  display: block; }
+  display: block;
+  flex: none; }
+
+.o-form-group-layout--standard .o-form-group__label--with-helper {
+  display: flex;
+  align-items: center; }
 
 /* o-form-horizontal
    Affect form groups
@@ -524,10 +529,15 @@ abbr[title] {
 .o-form-group-layout--horizontal .o-form-group {
   margin-bottom: 1.2rem; }
 
-.o-form-group-layout--horizontal .o-form-group__label {
-  padding: 0.8rem 0;
+.o-form-group-layout--horizontal label.o-form-group__label,
+.o-form-group-layout--horizontal .o-form-group__label label {
+  padding: 0.6rem 0;
   font-weight: 500;
   display: block; }
+
+.o-form-group-layout--horizontal .o-form-group__label--with-helper {
+  display: flex;
+  align-items: center; }
 
 @media (min-width: 400px) {
   .o-form-group-layout--horizontal .o-form-group {
@@ -562,13 +572,6 @@ abbr[title] {
     flex: 1 0 auto; }
   .o-form-group-layout--inline .o-form-group--inline-shrink {
     flex: 0 1 auto; }
-
-/* o-form-group label wrapper
-   For labels with helper tooltip
-   ========================================================================== */
-.o-form-group__label-wrapper {
-  display: flex;
-  align-items: center; }
 
 /* ==========================================================================
   Grid
