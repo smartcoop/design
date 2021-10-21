@@ -1,33 +1,33 @@
 .o-form-group-layout.o-form-group-layout--horizontal
 
     .o-form-group
-        label.o-form-group__label(for="nameId") Name
+        label.o-form-group__label(for="horizontalFormNameId") Name
         .o-form-group__controls
-            input.c-input(type="email" value="John Doe" id="nameId")
+            input.c-input(type="email" value="John Doe" id="horizontalFormNameId")
 
     .o-form-group
-        label.o-form-group__label(for="emailId") Email address
+        label.o-form-group__label(for="horizontalFormEmailId") Email address
         .o-form-group__controls
-            input.c-input(type="email" value="user@name.com" id="emailId")
+            input.c-input(type="email" value="user@name.com" id="horizontalFormEmailId")
 
     .o-form-group
-        label.o-form-group__label(for="passwordId") Password
+        label.o-form-group__label(for="horizontalFormPasswordId") Password
         .o-form-group__controls
             .c-input-with-icon
-                input.c-input#passwordId(type="password")
+                input.c-input(type="password" id="horizontalFormPasswordId")
                 button.c-input-with-icon__toggle(data-password-toggle)
                     +icon('eye')
                     +icon('eye-off')
 
     .o-form-group
         .o-form-group__label.o-form-group__label--with-helper
-            label(for="selectId") Preference
+            label(for="horizontalFormSelectId") Preference
             +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="preference-tooltip-2" data-tooltip-placement="right") Show info
             .c-tooltip(role="tooltip" id="preference-tooltip-2")
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 .c-tooltip__arrow(data-popper-arrow)
         .c-select-holder
-            select.c-select(id="selectId")
+            select.c-select(id="horizontalFormSelectId")
                 option Option A
                 option Option B
                 option Option C

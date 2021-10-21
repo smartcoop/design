@@ -1,14 +1,14 @@
 .o-form-group-layout.o-form-group-layout--standard
 
     .o-form-group.o-form-group--error
-        label.o-form-group__label(for="nameId") Name
+        label.o-form-group__label(for="formValidationnameId") Name
         .o-form-group__controls
-            input.c-input(type="email" value="John Doe" id="nameId")
+            input.c-input(type="email" value="John Doe" id="formValidationnameId")
             .c-form-help-text.c-form-help-text--error Please enter a valid name
     .o-form-group.o-form-group--error
-        label.o-form-group__label(for="emailId") Email address
+        label.o-form-group__label(for="formValidationEmailId") Email address
         .o-form-group__controls
-            input.c-input(type="email" value="user@name.com" id="emailId")
+            input.c-input(type="email" value="user@name.com" id="formValidationEmailId")
             .c-form-help-text.c-form-help-text--error Please enter a valid email address
 
     .o-form-group.o-form-group--error
@@ -30,9 +30,9 @@
             .c-form-help-text.c-form-help-text--error Please enter another option.
 
     .o-form-group.o-form-group--error
-        label.o-form-group__label(for="selectId") Preference
+        label.o-form-group__label(for="formValidationSelectId") Preference
         .c-select-holder
-            select.c-select(id="selectId")
+            select.c-select(id="formValidationSelectId")
                 option Option A
                 option Option B
                 option Option C

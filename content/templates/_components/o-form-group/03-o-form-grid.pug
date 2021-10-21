@@ -3,29 +3,29 @@
         .o-grid
             .o-grid-col-6
                 .o-form-group
-                    label.o-form-group__label(for="nameId") Name
+                    label.o-form-group__label(for="formGridNameId") Name
                     .o-form-group__controls
-                        input.c-input(type="email" value="John Doe" id="nameId")
+                        input.c-input(type="email" value="John Doe" id="formGridNameId")
 
                 .o-form-group
-                    label.o-form-group__label(for="emailId") Email address
+                    label.o-form-group__label(for="formGridEmailId") Email address
                     .o-form-group__controls
-                        input.c-input(type="email" value="user@name.com" id="emailId")
+                        input.c-input(type="email" value="user@name.com" id="formGridEmailId")
 
             .o-grid-col-6
                 .o-form-group
-                    label.o-form-group__label(for="passwordId") Password
+                    label.o-form-group__label(for="formGridPasswordId") Password
                     .o-form-group__controls
                         .c-input-with-icon
-                            input.c-input#passwordId(type="password")
+                            input.c-input(type="password" id="formGridPasswordId")
                             button.c-input-with-icon__toggle(data-password-toggle)
                                 +icon('eye')
                                 +icon('eye-off')
 
                 .o-form-group
-                    label.o-form-group__label(for="selectId") Preference
+                    label.o-form-group__label(for="formGridSelectId") Preference
                     .c-select-holder
-                        select.c-select(id="selectId")
+                        select.c-select(id="formGridSelectId")
                             option Option A
                             option Option B
                             option Option C

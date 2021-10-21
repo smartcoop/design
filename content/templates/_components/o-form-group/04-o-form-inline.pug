@@ -1,15 +1,15 @@
 .o-form-group-layout.o-form-group-layout--inline
 
     .o-form-group
-        label.o-form-group__label(for="emailId") Email address
+        label.o-form-group__label(for="inlineFormEmailId") Email address
         .o-form-group__controls
-            input.c-input(type="email" value="user@name.com" id="emailId")
+            input.c-input(type="email" value="user@name.com" id="inlineFormEmailId")
 
     .o-form-group
-        label.o-form-group__label Password
+        label.o-form-group__label(for="inlineFormPasswordId") Password
         .o-form-group__controls
             .c-input-with-icon
-                input.c-input(type="password")
+                input.c-input(type="password" id="inlineFormPasswordId")
                 button.c-input-with-icon__toggle(data-password-toggle)
                     +icon('eye')
                     +icon('eye-off')
