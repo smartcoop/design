@@ -1876,10 +1876,10 @@ input.c-button {
     color: #1A1A1A;
     background: transparent; }
   .c-button--borderless-muted:active, .c-button--borderless-muted:active:focus, .c-button--borderless-muted.c-button--active {
-    color: #FF4054;
+    color: #1A1A1A;
     background: transparent; }
   .c-button--borderless-muted:focus {
-    color: #FF4054;
+    color: #1A1A1A;
     background: transparent; }
   .c-button--borderless-muted[disabled], .c-button--borderless-muted:disabled, .c-button--borderless-muted.c-button-disabled {
     color: #999999; }
@@ -3530,7 +3530,9 @@ textarea.c-input--h-large {
   color: #FFF;
   padding: .8rem 1.2rem;
   font-size: 1.3rem;
-  border-radius: 0.4rem; }
+  border-radius: 0.4rem;
+  max-width: 24rem;
+  z-index: 1; }
 
 .c-tooltip--size-m {
   min-width: 24rem; }
