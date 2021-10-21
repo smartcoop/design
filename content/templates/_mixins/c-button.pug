@@ -8,18 +8,21 @@
     @param {string} href - if href
     @param {string} icon - icon name
     @param {string} skin - the skin of the button (primary, secondary, tertiary, danger-primary, danger-hover, borderless, muted)
+    @param {string} size - the size of the button
     @param {string} layout - the layout of the button (text-icon, icon-only, default)
     @param {boolean} isBlock - if block
     @param {boolean} isLink - if link button
 
-mixin c-button({type = "button", href, icon, skin = "secondary", layout, isBlock = false, isLink = false})
+mixin c-button({type = "button", href, icon, skin = "secondary", layout, size, isBlock = false, isLink = false})
     - var iconOnlyClass = ""
     - if (layout == "icon-only") iconOnlyClass = " c-button--icon"
     - var blockClass = ""
     - if (isBlock) blockClass = " c-button--block"
     - var linkClass = ""
     - if (isLink) linkClass = "-link"
-    - var classListing = "c-button"+linkClass+" c-button--"+skin+iconOnlyClass+blockClass
+    - var sizeClass = ""
+    - if (size) sizeClass =  " c-button--"+size
+    - var classListing = "c-button"+linkClass+" c-button--"+skin+sizeClass+iconOnlyClass+blockClass
     if href
         a(href=href class=classListing)&attributes(attributes)
             span.c-button__content
