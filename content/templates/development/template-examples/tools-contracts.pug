@@ -10,24 +10,24 @@ block content
             .c-toolbar__left
                 .c-toolbar__item
                         h2.c-toolbar__title Contracts to be validated
-    .c-navbar.c-navbar--bordered-bottom
+    .c-navbar.c-navbar--scrollable.c-navbar--bordered-bottom
         .c-toolbar
             .c-toolbar__left
                 .c-toolbar__item
                     ul.c-filter-pill-list
                         li.c-filter-pill-list__item
                             +c-filter-pill({counter: '1'})(data-popover="startDateFilter" data-popover-placement="bottom-start") Start date
+
                             .c-popover(role="popover" id="startDateFilter")
                                 h4.c-h4 Start date
-
-                                .o-form-group-layout.o-form-group-layout--standard
-                                    .o-form-group
-                                        label.o-form-group__label.u-sr-accessible(for="filterCriteriaStartDate") Criteria
-                                        .o-form-group__controls.o-form-group__controls--full-width
-                                            +c-select( { id: 'filterCriteriaStartDate', value: ['Equal to', 'After', 'After or equal to', 'Before', 'Before or equal to', 'not equal to']})
-                                    .o-form-group
-                                        +c-input-group-after({ id: 'startDate', icon: 'calendar'})
-
+                                .u-padding-vertical-s
+                                    .o-form-group-layout.o-form-group-layout--standard
+                                        .o-form-group
+                                            label.o-form-group__label.u-sr-accessible(for="filterCriteriaStartDate") Criteria
+                                            .o-form-group__controls.o-form-group__controls--full-width
+                                                +c-select( { id: 'filterCriteriaStartDate', value: ['Equal to', 'Not equal to', 'After', 'After or equal to', 'Before', 'Before or equal to']})
+                                        .o-form-group
+                                            +c-input-group-after({ id: 'startDate', icon: 'calendar'})
                                 .c-toolbar.c-toolbar--auto
                                     .c-toolbar__right
                                         .c-toolbar__item
@@ -49,7 +49,7 @@ block content
 
     .u-scroll-wrapper-body
         .u-spacer-l
-            .o-panel-grid.small-up-2
+            .o-panel-grid.medium-up-2
                 each val in [1,2,3,4,5,6,7,8,9,10]
                     +c-contract-card({
                             title: 'Amet minim mollit',
