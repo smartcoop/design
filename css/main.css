@@ -1351,8 +1351,8 @@ abbr[title] {
   line-height: 3.2rem;
   border-radius: 50%;
   text-align: center;
-  background-color: #808080;
-  color: #FFF;
+  background-color: #E5E5E5;
+  color: #595959;
   display: inline-flex;
   align-items: center;
   justify-content: center; }
@@ -1372,7 +1372,7 @@ abbr[title] {
   background-color: #FF4054; }
 
 .c-avatar--muted {
-  background-color: #808080; }
+  background-color: #E5E5E5; }
 
 /* Sizes
    ========================================================================== */
@@ -1422,6 +1422,11 @@ abbr[title] {
   min-height: 6.4rem;
   line-height: 6.4rem;
   font-size: 2.4rem; }
+  .c-avatar--large .o-svg-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    position: relative;
+    top: -0.1rem; }
 
 /* Image variant
    ========================================================================== */
@@ -1491,44 +1496,22 @@ abbr[title] {
   overflow: auto; }
 
 /* ==========================================================================
-  c-blankslate
+  c-blank-slate
    ========================================================================== */
-.c-blankslate {
-  border: 0.1rem solid #D9D9D9;
-  background: #FFF;
-  border-radius: 0.4rem;
-  padding: 4.8rem;
+/* Variables
+   ========================================================================== */
+/* Component
+   ========================================================================== */
+.c-blank-slate {
+  border-radius: 0.3rem;
+  padding: 3.2rem 2.4rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-.c-blankslate__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 9.6rem;
-  height: 9.6rem;
-  background-color: #CCCCCC;
-  border-radius: 50%;
-  margin: 0 auto; }
-
-.c-blankslate--spacious {
-  padding: 9.6rem 4.8rem;
-  text-align: center; }
-
-.c-blankslate > .c-h3 {
-  margin: 0.8rem; }
-
-.c-blankslate > .c-h4 {
-  margin-bottom: 0.8rem; }
-
-.c-blankslate > .c-body-1 {
-  margin: 0 auto;
-  max-width: 65rem; }
-
-.c-blankslate > .o-svg-icon {
-  opacity: 0.5; }
+.c-blank-slate--bg-alt {
+  background-color: #F2F2F2; }
 
 /* ==========================================================================
     Component: Bordered list
@@ -2252,18 +2235,6 @@ input.c-button {
     opacity: 1;
     transition-delay: 0s;
     visibility: visible; }
-
-.c-empty-state {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5.6rem 4.8rem; }
-  .c-empty-state p:last-child {
-    margin: 0; }
-
-.c-empty-state--bg-alt {
-  background-color: #F2F2F2; }
 
 /* ==========================================================================
   c-file-upload
@@ -3104,6 +3075,23 @@ textarea.c-input--h-large {
     left: 0;
     bottom: 0;
     background: #FF4054; }
+
+/* ==========================================================================
+  c-spinner
+ ========================================================================== */
+.c-spinner {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  vertical-align: text-bottom;
+  border: 0.4rem solid #000000;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner 1.3s linear infinite; }
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg); } }
 
 /* ==========================================================================
   Component: Status Pill
