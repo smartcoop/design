@@ -594,8 +594,8 @@
                                 </div>
                             </div>
                             <div class="o-form-group">
-                                <div class="o-form-group__label">
-                                    <label for="selectId">Preference</label>
+                                <div class="o-form-group__label-wrapper">
+                                    <label class="o-form-group__label" for="selectId">Preference</label>
                                     <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="preference-tooltip" data-tooltip-placement="right">
                                         <span class="c-button__content">
                                             <div class="o-svg-icon o-svg-icon-circle-help  ">
@@ -676,8 +676,8 @@
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;div class=&quot;o-form-group__label&quot;&gt;
-            &lt;label for=&quot;selectId&quot;&gt;Preference&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__label-wrapper&quot;&gt;
+            &lt;label class=&quot;o-form-group__label&quot; for=&quot;selectId&quot;&gt;Preference&lt;/label&gt;
             &lt;button class=&quot;c-button c-button--borderless-muted c-button--small c-button--icon&quot; type=&quot;button&quot; data-tooltip=&quot;preference-tooltip&quot; data-tooltip-placement=&quot;right&quot;&gt;
                 &lt;span class=&quot;c-button__content&quot;&gt;
                     &lt;div class=&quot;o-svg-icon o-svg-icon-circle-help  &quot;&gt;
@@ -732,13 +732,12 @@
                     +icon('eye-off')
 
     .o-form-group
-        .o-form-group__label
-            label(for=&quot;selectId&quot;) Preference
+        .o-form-group__label-wrapper
+            label.o-form-group__label(for=&quot;selectId&quot;) Preference
             +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type=&quot;button&quot; data-tooltip=&quot;preference-tooltip&quot; data-tooltip-placement=&quot;right&quot;) Show info
             .c-tooltip(role=&quot;tooltip&quot; id=&quot;preference-tooltip&quot;)
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 .c-tooltip__arrow(data-popper-arrow)
-
         .c-select-holder
             select.c-select(id=&quot;selectId&quot;)
                 option Option A

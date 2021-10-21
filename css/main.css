@@ -563,6 +563,13 @@ abbr[title] {
   .o-form-group-layout--inline .o-form-group--inline-shrink {
     flex: 0 1 auto; }
 
+/* o-form-group label wrapper
+   For labels with helper tooltip
+   ========================================================================== */
+.o-form-group__label-wrapper {
+  display: flex;
+  align-items: center; }
+
 /* ==========================================================================
   Grid
   ---
