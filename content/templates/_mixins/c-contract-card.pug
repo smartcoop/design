@@ -5,16 +5,15 @@ mixin c-contract-card({ title, ref, month, days=[], client, status })
     .c-panel
         .c-panel__content
             .u-spacer-l
-                .c-toolbar.c-toolbar--auto
-                    .c-toolbar__left
-                        .c-toolbar__item
-                            h3.c-panel__title= title
-                    .c-toolbar__right
-                        .c-toolbar__item
-                            .c-button-toolbar
-                                +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
-                                +c-button({ layout: 'icon-only', icon: 'print', skin: 'borderless' }) Print
-                                +c-button({ layout: 'icon-only', icon: 'delete', skin: 'borderless' }) Delete
+                .o-flex.o-flex--justify-between
+                    .o-flex__item
+                        h3.c-panel__title= title
+                    .o-flex__item.o-flex__item--shrink
+                        .c-button-toolbar
+                            +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
+                            +c-button({ layout: 'icon-only', icon: 'print', skin: 'borderless' }) Print
+                            +c-button({ layout: 'icon-only', icon: 'delete', skin: 'borderless' }) Delete
+
 
                 .u-padding-vertical-l
                     .o-flex.o-flex--vertical-center.u-spacer-bottom-s
