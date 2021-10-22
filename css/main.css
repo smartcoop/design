@@ -2721,8 +2721,7 @@ textarea.c-input--h-large {
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
-  z-index: 61;
-  position: relative; }
+  z-index: 61; }
   .c-navbar--scrollable .c-toolbar__left,
   .c-navbar--scrollable .c-toolbar__right {
     z-index: initial; }
