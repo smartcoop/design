@@ -11,7 +11,7 @@ block content
                 .c-toolbar__item
                         h2.c-toolbar__title Simulation
 
-    .c-app-layout-inner
+    .c-app-layout-inner.c-app-layout-inner--split-view
         .c-app-layout-inner__split
             .u-spacer-l
                 .c-panel
@@ -28,9 +28,9 @@ block content
                                             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
                                             .c-tooltip__arrow(data-popper-arrow)
                                     .o-form-group__controls
-                                        +c-select({ id: 'vatType', value: ['Included', 'Not included', 'No VAT']})(aria-labelledby="vatLabel")
-                                    .o-form-group__controls.u-spacer-left
-                                        +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true })(aria-labelledby="vatLabel")
+                                        .o-flex.o-flex--spaced
+                                            +c-select({ id: 'vatType', value: ['Included', 'Not included', 'No VAT']})(aria-labelledby="vatLabel")
+                                            +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true })(aria-labelledby="vatLabel")
 
                             hr.c-hr
 
@@ -75,24 +75,115 @@ block content
                                             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
                                             .c-tooltip__arrow(data-popper-arrow)
                                     .o-form-group__controls
-                                        +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary']})(aria-labelledby="amountLabel")
-                                    .o-form-group__controls.u-spacer-left
-                                        +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number'})(aria-labelledby="amountLabel")
+                                        .o-flex.o-flex--spaced
+                                            +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary']})(aria-labelledby="amountLabel")
+                                            +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number'})(aria-labelledby="amountLabel")
 
                                 +c-form-group({ label: 'Number of days', type: 'text', id: 'numberOfDays', inputType: 'number' })
                                 +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
                                 +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
 
                                 .c-toolbar
-                                        .c-toolbar__right
-                                            .c-toolbar__item
-                                                +c-button({}) Cancel
-                                                input.c-button.c-button--primary(type="submit" value="Calculate")
+                                    .c-toolbar__right
+                                        .c-toolbar__item
+                                            +c-button({}) Reset
+                                            input.c-button.c-button--primary(type="submit" value="Calculate")
 
 
         .c-app-layout-inner__split
-            .o-flex.o-flex--center.u-maximize-height
+            if isEmpty
+                .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
+                    .u-spacer-l
+                        .c-blank-slate
+                            +c-avatar({icon: 'document', size: 'large'})
+                            p.u-text-muted.c-body-1 Fill in the form to view a calculation
+            else if isLoading
+                .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
+                    .u-spacer-l
+                        .o-flex.o-flex--vertical.o-flex--center
+                            .c-spinner
+                            p.u-text-muted.c-body-1 Calculating simulation...
+
+            else
                 .u-spacer-l
-                    .c-blank-slate
-                        +c-avatar({icon: 'document', size: 'large'})
-                        p.u-text-muted.c-body-1 Fill in the form to view a calculation
+                    .u-spacer-bottom-l
+                        +c-alert({
+                            skin: 'warning',
+                            message: "The calculation displayed in this simulation is theoretical and given as an indication. Only the salary details proposed at the end of the contract encoding will be applied by Smart."
+                        })
+
+                    .u-spacer-bottom-l
+                        table.c-table.c-table--styled.c-table--bordered
+                            thead
+                                tr
+                                    th.u-bg-gray-50 Invoice
+                                    th.u-bg-gray-50
+                                        span.u-sr-accessible Amount
+                            tbody
+                                tr
+                                    td Amount (without VAT)
+                                    td.u-text-right € 200,00
+                                tr
+                                    td VAT (21%)
+                                    td.u-text-right € 12,00
+                            tfoot
+                                tr
+                                    td Total amount (with VAT)
+                                    td.u-text-right € 212,00
+
+                    .u-spacer-bottom-l
+                        table.c-table.c-table--styled.c-table--bordered
+                            thead
+                                tr
+                                    th.u-bg-gray-50 Details invoiced amount
+                                    th.u-bg-gray-50
+                                        span.u-sr-accessible Amount
+                            tbody
+                                tr
+                                    td Management fees
+                                    td.u-text-right € 13,00
+                                tr
+                                    td Costs to be borne by the employer
+                                    td.u-text-right € 12,00
+                            tfoot
+                                tr
+                                    td Salary budget
+                                    td.u-text-right € 182,00
+
+                    .u-spacer-bottom-l
+                        table.c-table.c-table--styled.c-table--bordered
+                            thead
+                                tr
+                                    th.u-bg-gray-50 Details salary budget
+                                    th.u-bg-gray-50
+                                        span.u-sr-accessible Amount
+                            tbody
+                                tr
+                                    td Wage costs
+                                    td.u-text-right € 74,31
+                            tfoot
+                                tr
+                                    td Total gross
+                                    td.u-text-right € 107,69
+
+                    .u-spacer-bottom-l
+                        table.c-table.c-table--styled.c-table--bordered
+                            thead
+                                tr
+                                    th.u-bg-gray-50 Worker
+                                    th.u-bg-gray-50
+                                        span.u-sr-accessible Amount
+                            tbody
+                                tr
+                                    td Social security contributions
+                                    td.u-text-right € 12,51
+                                tr
+                                    td Total taxable amount
+                                    td.u-text-right € 95,18
+                            tfoot
+                                tr
+                                    td Net salary
+                                    td.u-text-right € 83,05
+                                tr
+                                    td Gross vacation pay
+                                    td.u-text-right € 17,89

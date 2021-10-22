@@ -29,13 +29,26 @@
   flex: 1;
 }
 
+.c-app-layout-inner--split-view {
+  overflow: auto;
+  flex-wrap: wrap;
+}
+
 .c-app-layout-inner__split {
-  width: 50%;
-  height: 100%;
-  flex: 1;
+  width: 100%;
+  flex: 1 0 auto;
   overflow: auto;
 
   + .c-app-layout-inner__split {
-    border-left: 1px solid $color-border;
+    border-top: 1px solid $color-border;
+  }
+
+  @media (min-width: $g-bp3) {
+    width: 50%;
+    height: 100%;
+    + .c-app-layout-inner__split {
+      border-top: none;
+      border-left: 1px solid $color-border;
+    }
   }
 }

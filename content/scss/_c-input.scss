@@ -105,6 +105,7 @@ textarea.c-input--h-large { height: 20rem; }
 .c-input-group__prepend {
   height: 3.6rem;
   width: 3.6rem;
+  min-width: 3.6rem;
   color: $color-gray-500;
   background: $color-gray-50;
   display: flex;

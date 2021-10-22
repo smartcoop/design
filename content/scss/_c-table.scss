@@ -42,10 +42,10 @@ $c-table-row-selected-bg: $color-primary !default;
   th {
     font-weight: 500;
     height: 5.6rem;
-    border-radius: 0.4rem 0.4rem 0 0;
     border-bottom: 0.1rem solid $c-table-border-color;
     vertical-align: middle;
   }
+
   // Styles for table row headers
   tbody th {
     background: none;
@@ -56,13 +56,25 @@ $c-table-row-selected-bg: $color-primary !default;
     border: none;
   }
 
+  thead th {
+    border-width: 0.2rem;
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+
+  tfoot td,
+  tfoot th {
+    border-top: 0.2rem solid $c-table-border-color;
+    border-bottom: none;
+    font-weight: 500;
+  }
+
   td {
     border-bottom: 0.1rem solid $c-table-border-color;
   }
 
   tr:last-child {
     td {
-      border: none;
+      border-bottom: none;
     }
   }
 
