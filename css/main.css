@@ -1282,11 +1282,11 @@ abbr[title] {
     color: #FF4054; }
 
 .c-alert--warning {
-  border-color: #F0F096; }
+  border-color: #F4C95D; }
   .c-alert--warning:before {
-    background: #F0F096; }
+    background: #F4C95D; }
   .c-alert--warning > .o-svg-icon {
-    color: #F0F096; }
+    color: #F4C95D; }
 
 /* ==========================================================================
   c-alert-stack
@@ -1332,13 +1332,23 @@ abbr[title] {
   height: 100%;
   flex: 1; }
 
+.c-app-layout-inner--split-view {
+  overflow: auto;
+  flex-wrap: wrap; }
+
 .c-app-layout-inner__split {
-  width: 50%;
-  height: 100%;
-  flex: 1;
+  width: 100%;
+  flex: 1 0 auto;
   overflow: auto; }
   .c-app-layout-inner__split + .c-app-layout-inner__split {
-    border-left: 1px solid #E5E5E5; }
+    border-top: 1px solid #E5E5E5; }
+  @media (min-width: 900px) {
+    .c-app-layout-inner__split {
+      width: 50%;
+      height: 100%; }
+      .c-app-layout-inner__split + .c-app-layout-inner__split {
+        border-top: none;
+        border-left: 1px solid #E5E5E5; } }
 
 /* ==========================================================================
   c-avatar
@@ -2513,6 +2523,7 @@ textarea.c-input--h-large {
 .c-input-group__prepend {
   height: 3.6rem;
   width: 3.6rem;
+  min-width: 3.6rem;
   color: #808080;
   background: #F2F2F2;
   display: flex;
@@ -3175,7 +3186,6 @@ textarea.c-input--h-large {
 .c-table--styled th {
   font-weight: 500;
   height: 5.6rem;
-  border-radius: 0.4rem 0.4rem 0 0;
   border-bottom: 0.1rem solid #D9D9D9;
   vertical-align: middle; }
 
@@ -3187,11 +3197,21 @@ textarea.c-input--h-large {
 .c-table--styled tbody tr:last-child th {
   border: none; }
 
+.c-table--styled thead th {
+  border-width: 0.2rem;
+  border-radius: 0.4rem 0.4rem 0 0; }
+
+.c-table--styled tfoot td,
+.c-table--styled tfoot th {
+  border-top: 0.2rem solid #D9D9D9;
+  border-bottom: none;
+  font-weight: 500; }
+
 .c-table--styled td {
   border-bottom: 0.1rem solid #D9D9D9; }
 
 .c-table--styled tr:last-child td {
-  border: none; }
+  border-bottom: none; }
 
 .c-table--styled td,
 .c-table--styled th {
