@@ -1332,6 +1332,14 @@ abbr[title] {
   height: 100%;
   flex: 1; }
 
+.c-app-layout-inner__split {
+  width: 50%;
+  height: 100%;
+  flex: 1;
+  overflow: auto; }
+  .c-app-layout-inner__split + .c-app-layout-inner__split {
+    border-left: 1px solid #E5E5E5; }
+
 /* ==========================================================================
   c-avatar
   ---
