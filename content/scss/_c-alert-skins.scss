@@ -30,37 +30,37 @@
 }
 
 .c-alert--success {
-  border-color: $color-green-500;
+  border-color: $color-success;
 
   &:before {
-    background: $color-green-500;
+    background: $color-success;
   }
 
   > .o-svg-icon {
-    color: $color-green-500;
+    color: $color-success;
   }
 }
 
 .c-alert--error {
-  border-color: $color-red-500;
+  border-color: $color-error;
 
   &:before {
-    background: $color-red-500;
+    background: $color-error;
   }
 
   > .o-svg-icon {
-    color: $color-red-500;
+    color: $color-error;
   }
 }
 
 .c-alert--warning {
-  border-color: $color-yellow-500;
+  border-color: $color-warning;
 
   &:before {
-    background: $color-yellow-500;
+    background: $color-warning;
   }
 
   > .o-svg-icon {
-    color: $color-yellow-500;
+    color: $color-warning;
   }
 }
