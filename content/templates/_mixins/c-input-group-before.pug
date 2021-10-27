@@ -1,7 +1,7 @@
 //-
     Mixin Input - Create an input group with icon before
 
-mixin c-input-group-before({ id, type = "text", placeholder, icon })
+mixin c-input-group-before({ id, type = "text", placeholder, value, icon })
     .c-input-group
         .c-input-group__prepend
             +icon(icon)
