@@ -38,7 +38,7 @@ block body
                         .o-grid-col-6
                             +c-form-group({ label: 'Postal code', id: 'registerFormAddressOfficalZipCode'})
                         .o-grid-col-6
-                            +c-form-group({ label: 'Country', id: 'registerFormAddressOfficalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+                            +c-form-group({ label: 'Country', id: 'registerFormAddressOfficalCountry', type: 'select', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode' })
                     hr.c-hr
                     h3.c-h3 Mailing address
                     .o-grid
@@ -51,7 +51,7 @@ block body
                         .o-grid-col-6
                             +c-form-group({ label: 'Postal code', id: 'registerFormAddressPostalZipCode'})
                         .o-grid-col-6
-                            +c-form-group({ label: 'Country', id: 'registerFormAddressPostalCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+                            +c-form-group({ label: 'Country', id: 'registerFormAddressPostalCountry', type: 'select', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode' })
                     hr.c-hr
                     .o-grid
                         .o-grid-col-6
@@ -63,7 +63,7 @@ block body
                         .o-grid-col-6
                             +c-form-group({ label: 'Birthdate', id: 'registerFormfieldBirthdate', type: 'date'})
                         .o-grid-col-6
-                            +c-form-group({ label: 'Native country', id: 'registerFormNativeCountry', type: 'select', value: contentData.countries.all, key: 'countryName' })
+                            +c-form-group({ label: 'Native country', id: 'registerFormNativeCountry', type: 'select', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode' })
                         .o-grid-col-6
                             +c-form-group({ label: 'Marital status', id: 'registerFormfieldMaritalStatus', type: 'select', value: ['Select', 'Single', 'Married', 'Officially divorced', 'Divorced in fact', 'Widowed'] })
                         .o-grid-col-6
