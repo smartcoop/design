@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Tools - Contracts - Smart Design System
+    <title>Tools - Simulation - Smart Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -175,9 +175,10 @@
                                             <div class="o-form-group__controls o-form-group__controls--full-width">
                                                 <div class="c-select-holder">
                                                     <select class="c-select" id="servicesSmart">
+                                                        <option>Select</option>
                                                         <option>I provide a service in exchange for a salary</option>
                                                         <option>I continue my Smart activity</option>
-                                                        <option>I carry out an interim assignment on behalf of a client </option>
+                                                        <option selected="selected">I carry out an interim assignment on behalf of a client</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -187,7 +188,8 @@
                                             <div class="o-form-group__controls">
                                                 <div class="c-select-holder">
                                                     <select class="c-select" id="contractType">
-                                                        <option>Artistic</option>
+                                                        <option>Select</option>
+                                                        <option selected="selected">Artistic</option>
                                                         <option>Non-artistic</option>
                                                         <option>Student</option>
                                                     </select>
@@ -220,13 +222,13 @@
                                                         <select class="c-select" id="vatType">
                                                             <option>Included</option>
                                                             <option>Not included</option>
-                                                            <option>No VAT</option>
+                                                            <option selected="selected">No VAT</option>
                                                         </select>
                                                     </div>
                                                     <div class="c-radio-group c-radio-group--inline">
                                                         <div class="c-radio">
                                                             <label>
-                                                                <input type="radio" name="vatRate" />6%
+                                                                <input type="radio" name="vatRate" checked="checked" />6%
                                                             </label>
                                                         </div>
                                                         <div class="c-radio">
@@ -264,6 +266,7 @@
                                             <div class="o-form-group__controls o-form-group__controls--full-width">
                                                 <div class="c-select-holder">
                                                     <select class="c-select" id="jointCommission">
+                                                        <option>Select</option>
                                                         <option>Performing arts - CP304 (CCT performing arts)</option>
                                                         <option>Music - CP 304 (CCT music)</option>
                                                         <option>Dramatic Art - CP 304 (CCT Dramatic Performing Arts)</option>
@@ -272,7 +275,7 @@
                                                         <option>Dubbing - CCT dubbing</option>
                                                         <option>Audiovisual other - CP 227</option>
                                                         <option>Sociocultural Flemish Community - CP 329.01</option>
-                                                        <option>Sociocultural Walloon Region and French and German-speaking Community - CP 329.02</option>
+                                                        <option selected="selected">Sociocultural Walloon Region and French and German-speaking Community - CP 329.02</option>
                                                         <option>Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03</option>
                                                         <option>Auxiliary joint committee for employees - CP 200</option>
                                                         <option>Other</option>
@@ -287,8 +290,9 @@
                                             <div class="o-form-group__controls">
                                                 <div class="c-select-holder">
                                                     <select class="c-select" id="subCommittee">
+                                                        <option>Select</option>
                                                         <option>Sociocultural work</option>
-                                                        <option>Integration centers and social animation</option>
+                                                        <option selected="selected">Integration centers and social animation</option>
                                                         <option>Socio-professional integration</option>
                                                         <option>Work, employment, socio-professional integration in the Walloon Region</option>
                                                         <option>Continuing education sub-committee in the French Community</option>
@@ -324,13 +328,13 @@
                                                 <div class="o-flex o-flex--spaced">
                                                     <div class="c-select-holder">
                                                         <select class="c-select" id="amountType">
-                                                            <option>Billing amount</option>
+                                                            <option selected="selected">Billing amount</option>
                                                             <option>Net to pay</option>
                                                             <option>Gross salary</option>
                                                         </select>
                                                     </div>
                                                     <div class="c-input-group">
-                                                        <input class="c-input" type="text" id="amountValue" />
+                                                        <input class="c-input" type="text" id="amountValue" value="200" />
                                                         <div class="c-input-group__append">
                                                             <span>€</span>
                                                         </div>
@@ -341,7 +345,7 @@
                                         <div class="o-form-group">
                                             <label class="o-form-group__label" for="numberOfDays">Number of days</label>
                                             <div class="o-form-group__controls">
-                                                <input class="c-input" type="number" id="numberOfDays" />
+                                                <input class="c-input" type="number" id="numberOfDays" value="1" />
                                             </div>
                                         </div>
                                         <div class="o-form-group">
@@ -366,7 +370,7 @@
                                             </div>
                                             <div class="o-form-group__controls">
                                                 <div class="c-input-group">
-                                                    <input class="c-input" type="number" id="defrayalPerDay" />
+                                                    <input class="c-input" type="number" id="defrayalPerDay" value="5" />
                                                     <div class="c-input-group__append">
                                                         <span>€</span>
                                                     </div>
@@ -395,7 +399,7 @@
                                             </div>
                                             <div class="o-form-group__controls">
                                                 <div class="c-input-group">
-                                                    <input class="c-input" type="number" id="withHoldingTax" />
+                                                    <input class="c-input" type="number" id="withHoldingTax" value="18" />
                                                     <div class="c-input-group__append">
                                                         <div class="o-svg-icon o-svg-icon-percent  ">
                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
