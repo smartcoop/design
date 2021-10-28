@@ -2,6 +2,7 @@ extends /templates/_layouts/default
 
 block append pageVariables
     - var moduleTitle = "Tools - Simulation"
+    - var state = "filled"
     - var data = contentData.simulation
 
 block content
@@ -17,7 +18,8 @@ block content
             .u-spacer-l
                 .c-panel
                     .c-panel__content
-                        - var input = isEmpty || isLoading? '' : data.input
+                        - var input = {}
+                        - if (state == "filled") input = data.input
                         .o-form-group-layout.o-form-group-layout--horizontal
                             .u-spacer-l
                                 -
@@ -118,20 +120,20 @@ block content
 
 
         .c-app-layout-inner__split
-            if isEmpty
+            if (state == "empty")
                 .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
                     .u-spacer-l
                         .c-blank-slate
                             +c-avatar({icon: 'document', size: 'large'})
                             p.u-text-muted.c-body-1 Fill in the form to view a calculation
-            else if isLoading
+            else if (state == "loading")
                 .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
                     .u-spacer-l
                         .o-flex.o-flex--vertical.o-flex--center
                             .c-spinner
                             p.u-text-muted.c-body-1 Calculating simulation...
 
-            else
+            else if (state == "filled")
                 .u-spacer-l
                     .u-spacer-bottom-l
                         +c-alert({
