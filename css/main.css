@@ -1318,14 +1318,18 @@ abbr[title] {
 
 .c-app-layout-inner {
   display: flex;
-  height: 100%; }
+  height: 100%;
+  flex-wrap: wrap; }
 
 .c-app-layout-inner__sidebar {
-  width: 32rem;
-  height: 100%;
+  width: 100%;
   flex: 0 0 auto;
   padding: 2.4rem;
   overflow: auto; }
+  @media (min-width: 900px) {
+    .c-app-layout-inner__sidebar {
+      height: 100%;
+      width: 32rem; } }
 
 .c-app-layout-inner__main {
   width: 100%;
