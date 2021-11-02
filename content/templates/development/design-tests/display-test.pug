@@ -1,0 +1,109 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Display styles test"
+
+block body
+    .o-container.o-container--medium
+        .o-container-vertical
+
+            .c-display
+                h1 This is a display test page
+
+                h2 Typography
+                h1 This is a heading level 1
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis itaque, ad debitis non mollitia reiciendis quasi repellat nihil aperiam assumenda.
+                h2 This is a heading level 2
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis itaque, ad debitis non mollitia reiciendis quasi repellat nihil aperiam assumenda.
+                h3 This is a heading level 3
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis itaque, ad debitis non mollitia reiciendis quasi repellat nihil aperiam assumenda.
+                h4 This is a heading level 4
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis itaque, ad debitis non mollitia reiciendis quasi repellat nihil aperiam assumenda.
+
+                hr.c-hr
+
+                p This is an example of a bold sentence: <strong> Lorem ipsum dolor sit amet consectetur adipisicing elit</strong>.
+                p This is an example of an italic sentence: <em>Lorem ipsum dolor sit amet consectetur adipisicing elit</em>.
+                p This is an example of a link <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a>.
+
+                p This is an example of <span class="u-text-underline">underlined<span> text.
+                p This is an example of <s>strikethrough</s> text.
+                p This text contains <sup>superscript</sup>.
+                p This text contains <sub>subscript</sub>.
+
+                hr.c-hr
+                h2 Lists
+                h3 Unordered list example
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, ullam error magnam exercitationem quas quasi iste consequatur doloribus, quod vero beatae omnis officiis explicabo, ratione voluptates ducimus et officia libero.
+                ul
+                    li This is a list item.
+                    li This is a list item.
+                    li This is a list item.
+                    li This is a list item.
+                    li This is a list item.
+                h3 Ordered list example
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, ullam error magnam exercitationem quas quasi iste consequatur doloribus, quod vero beatae omnis officiis explicabo, ratione voluptates ducimus et officia libero.
+                ol
+                    li This is a list item.
+                    li This is a list item.
+                    li This is a list item.
+                    li This is a list item.
+                    li This is a list item.
+
+                h2 Text alignment
+                p These are text alignment examples.
+                p.u-text-left This text is left aligned.
+                p.u-text-center This text is center aligned.
+                p.u-text-right This text is right aligned.
+
+                h2 Code
+                    pre
+                        code.
+                            &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
+                                &lt;span class=&quot;c-button__content&quot;&gt;
+                                    &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
+                                &lt;/span&gt;
+                            &lt;/button&gt;
+                h2 Image
+                p This is an image example.
+
+                figure.c-figure
+                    img(src="http://placehold.it/1200x600")
+                    figcaption.c-figure__figcaption This is a caption to the image.
+
+                h2 Quotes
+                p This is a blockquote example.
+                blockquote
+                    p Nostrud dolor cupidatat duis dolore sint tempor aliquip aliquip esse nisi. Non consequat eiusmod qui laboris laborum officia amet voluptate sunt in. Id proident incididunt commodo minim sit fugiat esse irure in eu deserunt.
+                    cite Lawrence Hicks, Founder
+
+                h2 Data
+                h3 Table
+                p This is a table example.
+                table
+                    thead
+                        tr
+                            th Header
+                            th Header
+                            th Header
+                            th Header
+                    tbody
+                        each val in [1,2,3,4,5]
+                            tr
+                                td Data punt
+                                td Data punt
+                                td Data punt
+                                td Data punt
+
+                h3 Definition list
+                p This is a definition list example.
+                dl
+                    dt Item
+                    dd Item description
+                    dt Item
+                    dd Item description
+                    dt Item
+                    dd Item description
+                h2 Video
+                .c-video-wrapper.c-video-wrapper--aspect-16-9
+                    iframe(width='560' height='315' src='https://www.youtube.com/embed/kevqiiYNFrc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)

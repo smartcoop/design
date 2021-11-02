@@ -49,23 +49,26 @@
 
   pre {
     background: $color-gray-50;
-    padding: 1.5rem;
-    margin: 0 0 1rem;
-    font-size: 85%;
-    white-space: pre-wrap;
+    padding: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    overflow: auto;
   }
 
-  pre, code {
+  pre,
+  code {
     font-family: $g-code-font-family;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
   }
 
   code {
-    font-size: 85%;
     background: $color-gray-50;
     padding: 0.2rem;
     border-radius: 0.2rem;
-    color: $color-red-500;
-    white-space: nowrap;
+    color: $color-text;
   }
 
 }
@@ -109,15 +112,15 @@
   // Inline quotes
 
   * {
-    quotes: "“" "”";
+    quotes: "“""”";
   }
 
   *[lang="fr"] * {
-    quotes: "«" "»";
+    quotes: "«""»";
   }
 
   *[lang="de"] * {
-    quotes: "»" "«";
+    quotes: "»""«";
   }
 
   q:before {
@@ -128,4 +131,45 @@
     content: close-quote;
   }
 
+}
+
+/* Definition list
+   ========================================================================== */
+
+.c-display,
+.c-content {
+  dl {
+    margin: 3.2rem 0;
+
+    dt {
+      font-weight: 500;
+      margin: 0 0 0.8rem;
+    }
+
+    dd {
+      margin: 0 0 3.2rem 3.2rem;
+    }
+  }
+}
+
+/* Superscript and subscript
+   ========================================================================== */
+
+.c-display,
+.c-content {
+
+  sup,
+  sub {
+    font-size: 1.2rem;
+    line-height: 0;
+    position: relative;
+  }
+
+  sup {
+    top: -1rem;
+  }
+
+  sub {
+    bottom: -.6rem;
+  }
 }
