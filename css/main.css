@@ -942,45 +942,44 @@ abbr[title] {
 
 .c-d-h1, .c-display h1 {
   font-size: 3.8rem;
-  margin: 0 0 3.2rem;
+  margin: 4.8rem 0 3.2rem;
   line-height: 1.25;
   font-weight: 700; }
 
 .c-d-h2, .c-display h2 {
   font-size: 3rem;
-  margin: 0 0 2.4rem;
+  margin: 4.8rem 0 2.4rem;
   line-height: 1.36;
   font-weight: 600; }
 
 .c-d-h3, .c-display h3 {
   font-size: 2.6rem;
-  margin: 0 0 1.8rem;
+  margin: 3.2rem 0 1.8rem;
   line-height: 1.36;
   font-weight: 600; }
 
 .c-d-h4, .c-display h4 {
   font-size: 2.2rem;
-  margin: 0 0 2.2rem;
+  margin: 2.4rem 0 1.6rem;
   line-height: 1.36;
   font-weight: 600; }
 
-.c-d-body-1, .c-display p {
+.c-d-body-1 {
   font-size: 1.8rem;
-  margin: 1.4rem 0; }
+  margin: 1.8rem 0; }
 
-.c-d-body-2, .c-display p small {
+.c-d-body-2 {
   font-size: 1.6rem;
   margin: 1.6rem 0;
   line-height: 1.72; }
 
-.c-display figure {
-  margin: 1.8rem 0; }
-
-.c-display figcaption {
-  color: #808080; }
-
 .c-display p {
   margin: 1.8rem 0; }
+
+.c-display small {
+  font-size: 1.6rem;
+  margin: 1.6rem 0;
+  line-height: 1.72; }
 
 .c-display a {
   text-decoration: none;
@@ -998,6 +997,15 @@ abbr[title] {
 
 .c-display ol {
   list-style: decimal; }
+
+.c-display pre {
+  margin: 1.6rem 0; }
+
+.c-display figure {
+  margin: 1.8rem 0; }
+
+.c-display figcaption {
+  color: #808080; }
 
 /* ==========================================================================
   Shared styles between c-display and c-content
@@ -1041,24 +1049,27 @@ abbr[title] {
 .c-display pre,
 .c-content pre {
   background: #F2F2F2;
-  padding: 1.5rem;
-  margin: 0 0 1rem;
-  font-size: 85%;
-  white-space: pre-wrap; }
+  padding: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  overflow: auto; }
 
-.c-display pre, .c-display code,
+.c-display pre,
+.c-display code,
 .c-content pre,
 .c-content code {
-  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal; }
 
 .c-display code,
 .c-content code {
-  font-size: 85%;
   background: #F2F2F2;
   padding: 0.2rem;
   border-radius: 0.2rem;
-  color: #FF4054;
-  white-space: nowrap; }
+  color: #333333; }
 
 /* Block and inline quotes
    ========================================================================== */
@@ -1111,6 +1122,37 @@ abbr[title] {
 .c-display q:after,
 .c-content q:after {
   content: close-quote; }
+
+/* Definition list
+   ========================================================================== */
+.c-display dl,
+.c-content dl {
+  margin: 3.2rem 0; }
+  .c-display dl dt,
+  .c-content dl dt {
+    font-weight: 500;
+    margin: 0 0 0.8rem; }
+  .c-display dl dd,
+  .c-content dl dd {
+    margin: 0 0 3.2rem 3.2rem; }
+
+/* Superscript and subscript
+   ========================================================================== */
+.c-display sup,
+.c-display sub,
+.c-content sup,
+.c-content sub {
+  font-size: 1.2rem;
+  line-height: 0;
+  position: relative; }
+
+.c-display sup,
+.c-content sup {
+  top: -1rem; }
+
+.c-display sub,
+.c-content sub {
+  bottom: -.6rem; }
 
 /* ==========================================================================
   Component: video-wrapper
