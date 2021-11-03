@@ -26,23 +26,19 @@ block subContent
 
             p These are the links for the files:
 
-            ul
-                li
+            dl
+                dt
                     a(href="https://www.figma.com/file/Zp551KO9VgmqSIouXQahlA/Smart-Screens-v2?node-id=0%3A1") Screens v1.1
-                    ul
-                        li This file is versioned.
-                li
+                dd This file is versioned
+                dt
                     a(href="https://www.figma.com/file/xzzLf5aoluyutuX6Vhpt47/Smart-Library?node-id=0%3A1") Library
-                    ul
-                        li This file contains the source for all styles and components used in the design system. Any changes should be made here. When enough significant changes have been done, we will release a new community version.
-                li
+                dd This file contains the source for all styles and components used in the design system. Any changes should be made here. When enough significant changes have been done, we will release a new community version
+                dt
                     a(href="https://www.figma.com/file/Yplkarb43Is8M2aBXFPY5l/Smart-Design-System-website?node-id=2%3A349") Design System website
-                    ul
-                        li The design of this website
-                li
+                dd The design of this website
+                dt
                     a(href="https://www.figma.com/file/9gjbtr35pTKLvQlYyYdueY/Smart-Design-process?node-id=0%3A1") Design process
-                    ul
-                        li Parts of the design process - Early iterations and paths we diverged from
+                dd Parts of the design process - Early iterations and paths we diverged from
 
             +c-alert({
                 message: `Note that you need Smart approval to access these. We are still working out how this should work exactly. Please contribute to the discussion in <a href="https://github.com/smartcoop/design/issues/113">#113</a>.`
