@@ -981,6 +981,21 @@ abbr[title] {
   margin: 1.6rem 0;
   line-height: 1.72; }
 
+.c-display small.c-sidenote {
+  color: #808080;
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.6; }
+  @media (min-width: 1200px) {
+    .c-display small.c-sidenote {
+      float: right;
+      clear: right;
+      width: 32rem;
+      margin: 0 -32rem 0 0;
+      padding: 0 2.4rem;
+      position: relative;
+      vertical-align: baseline; } }
+
 .c-display a {
   text-decoration: none;
   color: #1267FB;
@@ -1132,6 +1147,9 @@ abbr[title] {
   .c-content dl dt {
     font-weight: 500;
     margin: 0 0 0.8rem; }
+    .c-display dl dt a,
+    .c-content dl dt a {
+      font-weight: 400; }
   .c-display dl dd,
   .c-content dl dd {
     margin: 0 0 3.2rem 3.2rem; }
