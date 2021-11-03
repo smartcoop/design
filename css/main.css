@@ -981,13 +981,13 @@ abbr[title] {
   margin: 1.6rem 0;
   line-height: 1.72; }
 
-.c-display small.c-sidenote {
+.c-display .c-sidenote {
   color: #808080;
   display: block;
   font-size: 1.4rem;
   line-height: 1.6; }
   @media (min-width: 1200px) {
-    .c-display small.c-sidenote {
+    .c-display .c-sidenote {
       float: right;
       clear: right;
       width: 32rem;
