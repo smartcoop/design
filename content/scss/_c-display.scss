@@ -77,6 +77,24 @@
     line-height: 1.72;
   }
 
+
+  small.c-sidenote {
+    color: $color-muted;
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.6;
+
+    @media (min-width: $g-bp4) {
+      float: right;
+      clear: right;
+      width: 32rem;
+      margin: 0 -32rem 0 0;
+      padding: 0 2.4rem;
+      position: relative;
+      vertical-align: baseline;
+    }
+  }
+
   a {
     text-decoration: none;
     color: $color-blue-500;
