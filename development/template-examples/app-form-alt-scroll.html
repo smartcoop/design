@@ -13,7 +13,7 @@
 </head>
 
 <body class="u-maximize-height u-overflow-hidden">
-    <div class="c-app-layout">
+    <div class="c-app-layout u-scroll">
         <header class="u-position-relative">
             <div class="c-navbar c-navbar--scrollable c-navbar--bordered-bottom">
                 <div class="c-toolbar">
@@ -135,7 +135,7 @@
                 </div>
             </div>
         </header>
-        <main class="u-maximize-width u-scroll-wrapper">
+        <main class="u-maximize-width">
             <div class="c-navbar c-navbar--bordered-bottom">
                 <div class="c-toolbar">
                     <div class="c-toolbar__left">
@@ -168,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <div class="u-scroll-wrapper-body">
+            <div>
                 <div class="o-container o-container--large">
                     <div class="o-container-vertical">
                         <div class="c-panel u-spacer-bottom-l">
@@ -306,89 +306,6 @@
                 </div>
             </div>
         </main>
-    </div>
-    <div class="c-dialog-context c-dialog-context--visible">
-        <div class="c-dialog-backdrop c-dialog-backdrop--visible"></div>
-        <div class="c-dialog c-dialog--medium" role="dialog" aria-labelledby="dialogTitle-01">
-            <div class="c-dialog__push"></div>
-            <div class="c-dialog__header c-dialog__header--bordered">
-                <div class="c-toolbar c-toolbar--spaced">
-                    <div class="c-toolbar__left">
-                        <div class="c-toolbar__item">
-                            <h2 class="c-dialog__title" id="dialogTitle-01">Dialog title</h2>
-                        </div>
-                    </div>
-                    <div class="c-toolbar__item">
-                        <button class="c-button c-button--borderless c-button--icon" data-dialog-close aria-label="Close dialog">
-                            <div class="c-button__content">
-                                <div class="o-svg-icon o-svg-icon-close  ">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="c-dialog__body">
-                <div class="u-spacer-l">
-                    <div class="o-form-group-layout o-form-group-layout--standard">
-                        <div class="o-form-group">
-                            <label class="o-form-group__label" for="input">Input</label>
-                            <div class="o-form-group__controls">
-                                <input class="c-input" type="text" id="input" />
-                            </div>
-                        </div>
-                        <div class="o-form-group">
-                            <label class="o-form-group__label" for="select">Select</label>
-                            <div class="o-form-group__controls">
-                                <div class="c-select-holder">
-                                    <select class="c-select" id="select">
-                                        <option>Choose an item</option>
-                                        <option>A</option>
-                                        <option>B</option>
-                                        <option>C</option>
-                                    </select>
-                                </div>
-                                <p class="c-form-help-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.</p>
-                            </div>
-                        </div>
-                        <div class="o-form-group">
-                            <label class="o-form-group__label" for="textarea">Textarea</label>
-                            <div class="o-form-group__controls">
-                                <textarea class="c-textarea" rows="5" id="textarea"></textarea>
-                                <p class="c-form-help-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="c-dialog__footer c-dialog__footer--bordered">
-                <div class="c-toolbar c-toolbar--spaced">
-                    <div class="c-toolbar__left">
-                        <div class="c-toolbar__item"></div>
-                    </div>
-                    <div class="c-toolbar__right">
-                        <div class="c-toolbar__item">
-                            <div class="c-button-toolbar">
-                                <button class="c-button c-button--secondary" data-dialog-close>
-                                    <div class="c-button__content">
-                                        <div class="c-button__label">Cancel</div>
-                                    </div>
-                                </button>
-                                <button class="c-button c-button--primary" data-dialog-close>
-                                    <div class="c-button__content">
-                                        <div class="c-button__label">Save</div>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="c-dialog__push"></div>
-        </div>
     </div>
 
     <script src="/js/bundle-prototype.js"></script>
