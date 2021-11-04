@@ -72,6 +72,7 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "@popperjs/core": "^2.9.2"
+    "@popperjs/core": "^2.9.2",
+    "htmx.org": "^1.6.0"
   }
 }
