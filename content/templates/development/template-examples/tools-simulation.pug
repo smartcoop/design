@@ -12,209 +12,209 @@ block content
             .c-toolbar__left
                 .c-toolbar__item
                         h2.c-toolbar__title Simulation
-
-    .c-app-layout-inner.c-app-layout-inner--split-view
-        .c-app-layout-inner__split
-            .u-spacer-l
-                .c-panel
-                    .c-panel__content
-                        - var input = {}
-                        - if (state == "filled") input = data.input
-                        .o-form-group-layout.o-form-group-layout--horizontal
-                            .u-spacer-l
-                                -
-                                    var smartServices = [
-                                        'Select',
-                                        'I provide a service in exchange for a salary',
-                                        'I continue my Smart activity',
-                                        'I carry out an interim assignment on behalf of a client'
-                                    ]
-
-                                +c-form-group({ label: 'Service Smart', type: 'select', id: 'servicesSmart', value: smartServices, valueKey: index, selected: input.serviceSmart, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
-
-                                -
-                                    var contractTypes = [
-                                        'Select',
-                                        'Artistic',
-                                        'Non-artistic',
-                                        'Student'
-                                    ]
-
-                                +c-form-group({ label: 'Contract type', type: 'select', id: 'contractType', value: contractTypes, selected: input.contractType })
-
-                                .o-form-group
-                                    .o-form-group__label.o-form-group__label--with-helper
-                                        label(id='vatLabel') VAT
-                                        +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-vat" data-tooltip-placement="right") Show info
-                                        .c-tooltip(role="tooltip" id="helper-vat")
-                                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                            .c-tooltip__arrow(data-popper-arrow)
-                                    .o-form-group__controls
-                                        .o-flex.o-flex--spaced
-                                            +c-select({ id: 'vatType', value: ['Included', 'Not included', 'No VAT'], selected: input.vatType})(aria-labelledby="vatLabel")
-                                            +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true, selected: input.vatRate })(aria-labelledby="vatLabel")
-
-                            hr.c-hr
-
-                            .u-spacer-l
-                                -
-                                    var jointCommissions = [
-                                        'Select',
-                                        'Performing arts - CP304 (CCT performing arts)',
-                                        'Music - CP 304 (CCT music)',
-                                        'Dramatic Art - CP 304 (CCT Dramatic Performing Arts)',
-                                        'Film industry (feature films) - CP 303.01',
-                                        'Operation of cinemas - CP 303.03',
-                                        'Dubbing - CCT dubbing',
-                                        'Audiovisual other - CP 227',
-                                        'Sociocultural Flemish Community - CP 329.01',
-                                        'Sociocultural Walloon Region and French and German-speaking Community - CP 329.02',
-                                        'Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03',
-                                        'Auxiliary joint committee for employees - CP 200',
-                                        'Other',
-                                        'Work carried out abroad for a principal established abroad',
-                                        'Public authorities (no PC)'
-                                    ]
-
-                                +c-form-group({ label: 'Joint commission', type: 'select', id: 'jointCommission', value: jointCommissions, selected: input.jointCommission, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
-
-                                -
-                                    var subCommittees = [
-                                        'Select',
-                                        'Sociocultural work',
-                                        'Integration centers and social animation',
-                                        'Socio-professional integration',
-                                        'Work, employment, socio-professional integration in the Walloon Region',
-                                        'Continuing education sub-committee in the French Community',
-                                        'Professional integration in the Brussels Region',
-                                    ]
-
-                                +c-form-group({ label: 'Subcommittee', type: 'select', id: 'subCommittee', value: subCommittees, selected: input.subComittee })
-
-                            hr.c-hr
-
-                            .u-spacer-l
-                                .o-form-group
-                                    .o-form-group__label.o-form-group__label--with-helper
-                                        label(id="amountLabel") Amount
-                                        +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-amount" data-tooltip-placement="right") Show info
-                                        .c-tooltip(role="tooltip" id="helper-amount")
-                                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                            .c-tooltip__arrow(data-popper-arrow)
-                                    .o-form-group__controls
-                                        .o-flex.o-flex--spaced
-                                            +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary'], selected: input.amountType})(aria-labelledby="amountLabel")
-                                            +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number', value: input.amountValue})(aria-labelledby="amountLabel")
-
-                                +c-form-group({ label: 'Number of days', type: 'text', id: 'numberOfDays', inputType: 'number', value: input.numberOfDays })
-
-                                +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', value: input.defrayalPerDay, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
-
-                                +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', value: input.withHoldingTax, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
-
-                                .c-toolbar
-                                    .c-toolbar__right
-                                        .c-toolbar__item
-                                            +c-button({}) Reset
-                                            input.c-button.c-button--primary(type="submit" value="Calculate")
-
-
-        .c-app-layout-inner__split
-            if (state == "empty")
-                .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
-                    .u-spacer-l
-                        .c-blank-slate
-                            +c-avatar({icon: 'document', size: 'large'})
-                            p.u-text-muted.c-body-1 Fill in the form to view a calculation
-            else if (state == "loading")
-                .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
-                    .u-spacer-l
-                        .o-flex.o-flex--vertical.o-flex--center
-                            .c-spinner
-                            p.u-text-muted.c-body-1 Calculating simulation...
-
-            else if (state == "filled")
+    .u-scroll-wrapper-body
+        .o-grid
+            .o-grid-col-bp3-6
                 .u-spacer-l
-                    .u-spacer-bottom-l
-                        +c-alert({
-                            skin: 'warning',
-                            message: "The calculation displayed in this simulation is theoretical and given as an indication. Only the salary details proposed at the end of the contract encoding will be applied by Smart."
-                        })
+                    .c-panel
+                        .c-panel__content
+                            - var input = {}
+                            - if (state == "filled") input = data.input
+                            .o-form-group-layout.o-form-group-layout--horizontal
+                                .u-spacer-l
+                                    -
+                                        var smartServices = [
+                                            'Select',
+                                            'I provide a service in exchange for a salary',
+                                            'I continue my Smart activity',
+                                            'I carry out an interim assignment on behalf of a client'
+                                        ]
 
-                    .u-spacer-bottom-l
-                        - var result = contentData.simulation.result
+                                    +c-form-group({ label: 'Service Smart', type: 'select', id: 'servicesSmart', value: smartServices, valueKey: index, selected: input.serviceSmart, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
 
-                        table.c-table.c-table--styled.c-table--bordered
-                            thead
-                                tr
-                                    th.u-bg-gray-50 Invoice
-                                    th.u-bg-gray-50
-                                        span.u-sr-accessible Amount
-                            tbody
-                                tr
-                                    td Amount (without VAT)
-                                    td.u-text-right € #{result.invoiceAmount}
-                                tr
-                                    td VAT (21%)
-                                    td.u-text-right € #{result.invoiceVat}
-                            tfoot
-                                tr
-                                    td Total amount (with VAT)
-                                    td.u-text-right € #{result.invoiceTotalAmount}
+                                    -
+                                        var contractTypes = [
+                                            'Select',
+                                            'Artistic',
+                                            'Non-artistic',
+                                            'Student'
+                                        ]
 
-                    .u-spacer-bottom-l
-                        table.c-table.c-table--styled.c-table--bordered
-                            thead
-                                tr
-                                    th.u-bg-gray-50 Details invoiced amount
-                                    th.u-bg-gray-50
-                                        span.u-sr-accessible Amount
-                            tbody
-                                tr
-                                    td Management fees
-                                    td.u-text-right € #{result.managementFees}
-                                tr
-                                    td Costs to be borne by the employer
-                                    td.u-text-right € #{result.costsEmployer}
-                            tfoot
-                                tr
-                                    td Salary budget
-                                    td.u-text-right € #{result.salaryBudget}
+                                    +c-form-group({ label: 'Contract type', type: 'select', id: 'contractType', value: contractTypes, selected: input.contractType })
 
-                    .u-spacer-bottom-l
-                        table.c-table.c-table--styled.c-table--bordered
-                            thead
-                                tr
-                                    th.u-bg-gray-50 Details salary budget
-                                    th.u-bg-gray-50
-                                        span.u-sr-accessible Amount
-                            tbody
-                                tr
-                                    td Wage costs
-                                    td.u-text-right € #{result.wageCosts}
-                            tfoot
-                                tr
-                                    td Total gross
-                                    td.u-text-right € #{result.totalGross}
+                                    .o-form-group
+                                        .o-form-group__label.o-form-group__label--with-helper
+                                            label(id='vatLabel') VAT
+                                            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-vat" data-tooltip-placement="right") Show info
+                                            .c-tooltip(role="tooltip" id="helper-vat")
+                                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                .c-tooltip__arrow(data-popper-arrow)
+                                        .o-form-group__controls
+                                            .o-flex.o-flex--spaced
+                                                +c-select({ id: 'vatType', value: ['Included', 'Not included', 'No VAT'], selected: input.vatType})(aria-labelledby="vatLabel")
+                                                +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true, selected: input.vatRate })(aria-labelledby="vatLabel")
 
-                    .u-spacer-bottom-l
-                        table.c-table.c-table--styled.c-table--bordered
-                            thead
-                                tr
-                                    th.u-bg-gray-50 Worker
-                                    th.u-bg-gray-50
-                                        span.u-sr-accessible Amount
-                            tbody
-                                tr
-                                    td Social security contributions
-                                    td.u-text-right € #{result.socialSecurityContribitions}
-                                tr
-                                    td Total taxable amount
-                                    td.u-text-right € #{result.totalTaxableAmount}
-                            tfoot
-                                tr
-                                    td Net salary
-                                    td.u-text-right € #{result.netSalary}
-                                tr
-                                    td Gross vacation pay
-                                    td.u-text-right € #{result.grossVacationPay}
+                                hr.c-hr
+
+                                .u-spacer-l
+                                    -
+                                        var jointCommissions = [
+                                            'Select',
+                                            'Performing arts - CP304 (CCT performing arts)',
+                                            'Music - CP 304 (CCT music)',
+                                            'Dramatic Art - CP 304 (CCT Dramatic Performing Arts)',
+                                            'Film industry (feature films) - CP 303.01',
+                                            'Operation of cinemas - CP 303.03',
+                                            'Dubbing - CCT dubbing',
+                                            'Audiovisual other - CP 227',
+                                            'Sociocultural Flemish Community - CP 329.01',
+                                            'Sociocultural Walloon Region and French and German-speaking Community - CP 329.02',
+                                            'Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03',
+                                            'Auxiliary joint committee for employees - CP 200',
+                                            'Other',
+                                            'Work carried out abroad for a principal established abroad',
+                                            'Public authorities (no PC)'
+                                        ]
+
+                                    +c-form-group({ label: 'Joint commission', type: 'select', id: 'jointCommission', value: jointCommissions, selected: input.jointCommission, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
+
+                                    -
+                                        var subCommittees = [
+                                            'Select',
+                                            'Sociocultural work',
+                                            'Integration centers and social animation',
+                                            'Socio-professional integration',
+                                            'Work, employment, socio-professional integration in the Walloon Region',
+                                            'Continuing education sub-committee in the French Community',
+                                            'Professional integration in the Brussels Region',
+                                        ]
+
+                                    +c-form-group({ label: 'Subcommittee', type: 'select', id: 'subCommittee', value: subCommittees, selected: input.subComittee })
+
+                                hr.c-hr
+
+                                .u-spacer-l
+                                    .o-form-group
+                                        .o-form-group__label.o-form-group__label--with-helper
+                                            label(id="amountLabel") Amount
+                                            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-amount" data-tooltip-placement="right") Show info
+                                            .c-tooltip(role="tooltip" id="helper-amount")
+                                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                .c-tooltip__arrow(data-popper-arrow)
+                                        .o-form-group__controls
+                                            .o-flex.o-flex--spaced
+                                                +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary'], selected: input.amountType})(aria-labelledby="amountLabel")
+                                                +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number', value: input.amountValue})(aria-labelledby="amountLabel")
+
+                                    +c-form-group({ label: 'Number of days', type: 'text', id: 'numberOfDays', inputType: 'number', value: input.numberOfDays })
+
+                                    +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', value: input.defrayalPerDay, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
+
+                                    +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', value: input.withHoldingTax, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
+
+                                    .c-toolbar
+                                        .c-toolbar__right
+                                            .c-toolbar__item
+                                                +c-button({}) Reset
+                                                input.c-button.c-button--primary(type="submit" value="Calculate")
+
+
+            .o-grid-col-bp3-6
+                if (state == "empty")
+                    .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
+                        .u-spacer-l
+                            .c-blank-slate
+                                +c-avatar({icon: 'document', size: 'large'})
+                                p.u-text-muted.c-body-1 Fill in the form to view a calculation
+                else if (state == "loading")
+                    .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
+                        .u-spacer-l
+                            .o-flex.o-flex--vertical.o-flex--center
+                                .c-spinner
+                                p.u-text-muted.c-body-1 Calculating simulation...
+
+                else if (state == "filled")
+                    .u-spacer-l
+                        .u-spacer-bottom-l
+                            +c-alert({
+                                skin: 'warning',
+                                message: "The calculation displayed in this simulation is theoretical and given as an indication. Only the salary details proposed at the end of the contract encoding will be applied by Smart."
+                            })
+
+                        .u-spacer-bottom-l
+                            - var result = contentData.simulation.result
+
+                            table.c-table.c-table--styled.c-table--bordered
+                                thead
+                                    tr
+                                        th Invoice
+                                        th
+                                            span.u-sr-accessible Amount
+                                tbody
+                                    tr
+                                        td Amount (without VAT)
+                                        td.u-text-right € #{result.invoiceAmount}
+                                    tr
+                                        td VAT (21%)
+                                        td.u-text-right € #{result.invoiceVat}
+                                tfoot
+                                    tr
+                                        td Total amount (with VAT)
+                                        td.u-text-right € #{result.invoiceTotalAmount}
+
+                        .u-spacer-bottom-l
+                            table.c-table.c-table--styled.c-table--bordered
+                                thead
+                                    tr
+                                        th Details invoiced amount
+                                        th
+                                            span.u-sr-accessible Amount
+                                tbody
+                                    tr
+                                        td Management fees
+                                        td.u-text-right € #{result.managementFees}
+                                    tr
+                                        td Costs to be borne by the employer
+                                        td.u-text-right € #{result.costsEmployer}
+                                tfoot
+                                    tr
+                                        td Salary budget
+                                        td.u-text-right € #{result.salaryBudget}
+
+                        .u-spacer-bottom-l
+                            table.c-table.c-table--styled.c-table--bordered
+                                thead
+                                    tr
+                                        th Details salary budget
+                                        th
+                                            span.u-sr-accessible Amount
+                                tbody
+                                    tr
+                                        td Wage costs
+                                        td.u-text-right € #{result.wageCosts}
+                                tfoot
+                                    tr
+                                        td Total gross
+                                        td.u-text-right € #{result.totalGross}
+
+                        .u-spacer-bottom-l
+                            table.c-table.c-table--styled.c-table--bordered
+                                thead
+                                    tr
+                                        th Worker
+                                        th
+                                            span.u-sr-accessible Amount
+                                tbody
+                                    tr
+                                        td Social security contributions
+                                        td.u-text-right € #{result.socialSecurityContribitions}
+                                    tr
+                                        td Total taxable amount
+                                        td.u-text-right € #{result.totalTaxableAmount}
+                                tfoot
+                                    tr
+                                        td Net salary
+                                        td.u-text-right € #{result.netSalary}
+                                    tr
+                                        td Gross vacation pay
+                                        td.u-text-right € #{result.grossVacationPay}
