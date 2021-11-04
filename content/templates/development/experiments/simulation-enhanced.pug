@@ -1,0 +1,133 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Tools - Simulation"
+    - var state = "filled"
+    - var data = contentData.simulation
+
+block content
+
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                        h2.c-toolbar__title Simulation
+    .u-scroll-wrapper-body
+        .o-grid(hx-boost="true")
+            .o-grid-col-bp3-6
+                .u-spacer-l
+                    .c-panel
+                        .c-panel__content
+                            - var input = {}
+                            - if (state == "filled") input = data.input
+                            form.o-form-group-layout.o-form-group-layout--horizontal(hx-get="/development/experiments/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator")
+                                .u-spacer-l
+                                    -
+                                        var smartServices = [
+                                            'Select',
+                                            'I provide a service in exchange for a salary',
+                                            'I continue my Smart activity',
+                                            'I carry out an interim assignment on behalf of a client'
+                                        ]
+
+                                    +c-form-group({ label: 'Service Smart', type: 'select', id: 'servicesSmart', value: smartServices, valueKey: index, selected: input.serviceSmart, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
+
+                                    -
+                                        var contractTypes = [
+                                            'Select',
+                                            'Artistic',
+                                            'Non-artistic',
+                                            'Student'
+                                        ]
+
+                                    +c-form-group({ label: 'Contract type', type: 'select', id: 'contractType', value: contractTypes, selected: input.contractType })
+
+                                    .o-form-group
+                                        .o-form-group__label.o-form-group__label--with-helper
+                                            label(id='vatLabel') VAT
+                                            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-vat" data-tooltip-placement="right") Show info
+                                            .c-tooltip(role="tooltip" id="helper-vat")
+                                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                .c-tooltip__arrow(data-popper-arrow)
+                                        .o-form-group__controls
+                                            .o-flex.o-flex--spaced
+                                                +c-select({ id: 'vatType', value: ['Included', 'Not included', 'No VAT'], selected: input.vatType})(aria-labelledby="vatLabel")
+                                                +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true, selected: input.vatRate })(aria-labelledby="vatLabel")
+
+                                hr.c-hr
+
+                                .u-spacer-l
+                                    -
+                                        var jointCommissions = [
+                                            'Select',
+                                            'Performing arts - CP304 (CCT performing arts)',
+                                            'Music - CP 304 (CCT music)',
+                                            'Dramatic Art - CP 304 (CCT Dramatic Performing Arts)',
+                                            'Film industry (feature films) - CP 303.01',
+                                            'Operation of cinemas - CP 303.03',
+                                            'Dubbing - CCT dubbing',
+                                            'Audiovisual other - CP 227',
+                                            'Sociocultural Flemish Community - CP 329.01',
+                                            'Sociocultural Walloon Region and French and German-speaking Community - CP 329.02',
+                                            'Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03',
+                                            'Auxiliary joint committee for employees - CP 200',
+                                            'Other',
+                                            'Work carried out abroad for a principal established abroad',
+                                            'Public authorities (no PC)'
+                                        ]
+
+                                    +c-form-group({ label: 'Joint commission', type: 'select', id: 'jointCommission', value: jointCommissions, selected: input.jointCommission, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
+
+                                    -
+                                        var subCommittees = [
+                                            'Select',
+                                            'Sociocultural work',
+                                            'Integration centers and social animation',
+                                            'Socio-professional integration',
+                                            'Work, employment, socio-professional integration in the Walloon Region',
+                                            'Continuing education sub-committee in the French Community',
+                                            'Professional integration in the Brussels Region',
+                                        ]
+
+                                    +c-form-group({ label: 'Subcommittee', type: 'select', id: 'subCommittee', value: subCommittees, selected: input.subComittee })
+
+                                hr.c-hr
+
+                                .u-spacer-l
+                                    .o-form-group
+                                        .o-form-group__label.o-form-group__label--with-helper
+                                            label(id="amountLabel") Amount
+                                            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-amount" data-tooltip-placement="right") Show info
+                                            .c-tooltip(role="tooltip" id="helper-amount")
+                                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                .c-tooltip__arrow(data-popper-arrow)
+                                        .o-form-group__controls
+                                            .o-flex.o-flex--spaced
+                                                +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary'], selected: input.amountType})(aria-labelledby="amountLabel")
+                                                +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number', value: input.amountValue})(aria-labelledby="amountLabel")
+
+                                    +c-form-group({ label: 'Number of days', type: 'text', id: 'numberOfDays', inputType: 'number', value: input.numberOfDays })
+
+                                    +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', value: input.defrayalPerDay, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
+
+                                    +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', value: input.withHoldingTax, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
+
+                                    .c-toolbar
+                                        .c-toolbar__right
+                                            .c-toolbar__item
+                                                +c-button({}) Reset
+                                                input.c-button.c-button--primary(type="submit" value="Calculate")
+
+
+            .o-grid-col-bp3-6
+                .u-maximize-height(id="simulationResult")
+                    .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
+                        .u-spacer-l
+                            div(id="indicator" class="htmx-indicator")
+                                .o-flex.o-flex--vertical.o-flex--center
+                                    .c-spinner
+                                    p.u-text-muted.c-body-1 Calculating simulation...
+                            .c-blank-slate
+                                +c-avatar({icon: 'document', size: 'large'})
+                                p.u-text-muted.c-body-1 Fill in the form to view a calculation
+
