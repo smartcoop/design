@@ -964,6 +964,16 @@ abbr[title] {
   line-height: 1.36;
   font-weight: 600; }
 
+.c-d-h1:first-child,
+.c-d-h2:first-child,
+.c-d-h3:first-child,
+.c-d-h4:first-child,
+.c-display h1:first-child,
+.c-display h2:first-child,
+.c-display h3:first-child,
+.c-display h4:first-child {
+  margin-top: 0; }
+
 .c-d-body-1 {
   font-size: 1.8rem;
   margin: 1.8rem 0; }
