@@ -20,7 +20,7 @@ block content
                         .c-panel__content
                             - var input = {}
                             - if (state == "filled") input = data.input
-                            form.o-form-group-layout.o-form-group-layout--horizontal(hx-get="/development/experiments/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator")
+                            form.o-form-group-layout.o-form-group-layout--horizontal(hx-get="/_partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator")
                                 .u-spacer-l
                                     -
                                         var smartServices = [
