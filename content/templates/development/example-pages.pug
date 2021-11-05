@@ -1,0 +1,50 @@
+extends getting-started
+
+block append pageVariables
+    - var moduleTitle = "Example pages"
+
+block subContent
+
+    .c-display
+
+
+        h2 Example pages
+
+        h3 Templates
+
+        p You can reference the following example templates to see how to use the components in practice.
+
+        ul
+            li: a(href="/development/template-examples/sign-in-form.html") Sign in form
+            li: a(href="/development/template-examples/register-form.html") Register form
+            li: a(href="/development/template-examples/contact-form.html") Contact form
+            li: a(href="/development/template-examples/horizontal-form.html") Horizontal form
+            li: a(href="/development/template-examples/app-datagrid.html") Application index page with datagrid
+            li: a(href="/development/template-examples/app-form.html") Application form
+            li: a(href="/development/template-examples/wizard.html") Application form with wizard
+            li: a(href="/development/template-examples/global-banner.html") Application form with global banner
+            li: a(href="/development/template-examples/app-side-menu.html") Application form with side menu
+            li: a(href="/development/template-examples/dialog.html") Application form with dialog
+
+
+        h3 Tools
+
+        p Following pages are a recreation of existing screens from Tools
+        ul
+            li: a(href="/development/tools/contracts.html") Contracts
+            li: a(href="/development/tools/contracts-empty.html") Contracts (empty)
+            li: a(href="/development/tools/simulation.html") Compensation simulation
+            li: a(href="/development/tools/simulation-empty.html") Compensation simulation (empty)
+            li: a(href="/development/tools/simulation-loading.html") Compensation simulation (loading)
+
+        h3 Tests
+
+        p These tests are mostly used as “design unit tests” to see if the system is functioning correctly. If you are not actively developing the design system, feel free to ignore this.
+
+        ul
+            li: a(href="/development/design-tests/figure-figcaption.html") Figure/figcaption
+            li: a(href="/development/design-tests/video.html") Responsive video and images
+            li: a(href="/development/design-tests/quotations.html") Quotations
+            li: a(href="/development/design-tests/tables.html") Tables in content
+            li: a(href="/development/design-tests/type-test.html") Type test
+            li: a(href="/development/design-tests/display-test.html") Display test
