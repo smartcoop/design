@@ -4,7 +4,6 @@ block append pageVariables
     - var moduleTitle = "Dashboard"
 
 block content
-
     .c-navbar.c-navbar--bordered-bottom
         .c-toolbar
             .c-toolbar__left
@@ -21,7 +20,7 @@ block content
                     .c-button-toolbar
                         +c-button({ skin: 'primary' }) Save
 
-    .u-scroll-wrapper-body
+    div(class=!fullScroll? "u-scroll-wrapper-body" : "")
         .o-container.o-container--large
             .o-container-vertical
                 .c-panel.u-spacer-bottom-l

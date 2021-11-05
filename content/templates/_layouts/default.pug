@@ -4,11 +4,11 @@ block append pageVariables
     - var bodyClass = "u-maximize-height u-overflow-hidden"
 
 block body
-    .c-app-layout
+    .c-app-layout(class=fullScroll? "u-scroll" : "")
         block global-banner
         header.u-position-relative
             include /templates/_includes/main-header
-        main.u-scroll-wrapper.u-maximize-width
+        main.u-maximize-width(class=!fullScroll? "u-scroll-wrapper" : "")
             block content
 
     block dialogs
