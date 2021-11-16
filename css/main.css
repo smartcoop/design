@@ -1677,13 +1677,16 @@ abbr[title] {
   cursor: pointer;
   vertical-align: middle;
   border-radius: 0.3rem;
-  padding: 0.5rem 1.6rem;
+  padding: 0.7rem 1.6rem;
   font-size: 1.6rem;
   text-align: center;
   align-items: center;
   justify-content: center;
   font-weight: 600;
   display: inline-flex; }
+  .c-button .o-svg-icon {
+    height: 2rem;
+    width: 2rem; }
 
 a.c-button {
   display: inline-flex;
@@ -1709,7 +1712,7 @@ input.c-button {
   pointer-events: none; }
 
 .c-button__label {
-  line-height: 2.4rem;
+  line-height: 2rem;
   white-space: nowrap; }
 
 .c-button__logo {
@@ -1747,7 +1750,7 @@ input.c-button {
     width: 1.8rem; }
   .c-button--small .o-svg-icon + .c-button__label,
   .c-button--small .c-button__label + .o-svg-icon {
-    margin-left: 0; }
+    margin-left: 0.4rem; }
   .c-button--small.c-button--icon {
     padding: 0.4rem; }
   .c-button--small:not(.c-button--icon) .o-svg-icon:first-child {
@@ -1758,7 +1761,7 @@ input.c-button {
 /* Icon-only Button (Square)
     ========================================================================== */
 .c-button--icon {
-  padding: 0.6rem; }
+  padding: 0.7rem; }
   .c-button--icon.c-button--small {
     padding: 0.4rem; }
 
