@@ -12,12 +12,7 @@ const server = require('./core/tasks/server');
 const iconFont = require('./core/tasks/icon-font');
 
 // Configs
-let config;
-if (process.env.NODE_ENV == "production") {
-  config = require('./core/discovery/prod-config');
-} else {
-  config = require('./core/discovery/config');
-}
+const config = require('./core/discovery/config');
 
 // Sass is used to render core templates so is needed, even if you use postcss in your content part
 const sass = require('./core/tasks/sass');
@@ -44,21 +39,22 @@ gulp.task('copy:resources', copy.resources);
 gulp.task('copy:scripts', copy.scripts);
 gulp.task('copy:compiledToDist', copy.compiledToDist);
 gulp.task('bundle:clientBundle', bundle.clientBundle);
-gulp.task('bundle:prototypeBundle', bundle.prototypeBundle);
+gulp.task('bundle:corePrototypeNavBundle', bundle.corePrototypeNavBundle);
+gulp.task('bundle:coreStyleguideBundle', bundle.coreStyleguideBundle);
 gulp.task('icon-font', iconFont);
 
 gulp.task('templates:compile:content', templates.compile.content);
 gulp.task('templates:compile:styleguide', templates.compile.styleguide);
-//gulp.task('templates:compile:docs', templates.compile.docs);
+gulp.task('templates:compile:docs', templates.compile.docs);
 
 gulp.task('templates:compile', config.styleguide ?
-  gulp.parallel('templates:compile:content', 'templates:compile:styleguide') :
+  gulp.parallel('templates:compile:content', 'templates:compile:styleguide', 'templates:compile:docs') :
   gulp.series('templates:compile:content')
 );
 
 gulp.task('watch', watch);
 gulp.task('copy', gulp.parallel('copy:images', 'copy:fonts', 'copy:resources', 'copy:scripts', 'copy:favicon'));
-gulp.task('compile-all', gulp.parallel('templates:clean', 'icon-font', 'bundle:clientBundle', 'bundle:prototypeBundle', 'sass', 'postcss', 'copy'));
+gulp.task('compile-all', gulp.parallel('templates:clean', 'icon-font', 'bundle:clientBundle', config.pageTree ? 'bundle:corePrototypeNavBundle' : 'dummy', config.styleguide ? 'bundle:coreStyleguideBundle' : 'dummy', 'sass', 'postcss', 'copy'));
 
 gulp.task('build', gulp.series('compile-all', 'templates:compile', 'copy:compiledToDist', config.css.purge ? 'purgeCSS' : 'dummy', config.css.minify ? 'minifyCSS': 'dummy'), function (done) {
   console.log('------------\n');

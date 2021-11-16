@@ -1,37 +1,45 @@
 const gulp = require('gulp');
-const bro = require('gulp-bro');
+
+const browserify = require('browserify');
+
 const rename = require('gulp-rename');
 const babelify = require('babelify');
+
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+
 const terser = require('gulp-terser');
 const gulpif = require('gulp-if');
 const paths = require('../paths');
 
-let config;
-if (process.env.NODE_ENV == "production") {
-  config = require('../discovery/prod-config');
-} else {
-  config = require('../discovery/config');
-}
+const babelConfig = require('../../babel.config.json');
+const config = require('../discovery/config');
 
-let babelConfig = {
-  transform: [
-    babelify.configure({ presets: ['@babel/preset-env'] }),
-  ]
-}
+const glob = require('glob');
+
+var clientEntryFile = browserify({ entries: paths.content.js.entryFile }).transform("babelify", babelConfig);
+
+var styleguideEntryFile = browserify({ entries: paths.core.js.styleguideEntryFile }).transform("babelify", babelConfig);
+var prototypeNavEntryFile = browserify({ entries: paths.core.js.prototypeNavEntryFile }).transform("babelify", babelConfig);
 
 module.exports = {
   clientBundle() {
-    return gulp.src(paths.content.js.entryFile)
-      .pipe(bro(babelConfig))
-      .pipe(rename('bundle-client.js'))
+    return clientEntryFile.bundle()
+      .pipe(source('bundle-client.js'))
       .pipe(gulpif(config.js.minify,terser()))
       .pipe(gulp.dest(paths.compiled.js))
   },
-  prototypeBundle() {
-    return gulp.src(paths.core.js.entryFile)
-      .pipe(bro(babelConfig))
-      .pipe(rename('bundle-prototype.js'))
+  corePrototypeNavBundle() {
+    return prototypeNavEntryFile.bundle()
+      .pipe(source('core-prototype-nav.js'))
+      .pipe(gulpif(config.js.minify,terser()))
+      .pipe(gulp.dest(paths.compiled.js))
+  },
+  coreStyleguideBundle() {
+    return styleguideEntryFile.bundle()
+      .pipe(source('core-style-guide.js'))
       .pipe(gulpif(config.js.minify,terser()))
       .pipe(gulp.dest(paths.compiled.js))
   }
+
 };

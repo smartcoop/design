@@ -2,7 +2,7 @@ extends index
 
 block append pageVariables
     - var pageTitle = componentGroup.docs && componentGroup.docs.attributes.title || componentGroup.group.id
-    - var moduleTitle = pageTitle + ' - Component documentation'
+    - var moduleTitle = pageTitle + ' - ' + config.styleguide.pageTitle
 
 block subContent
 
@@ -19,7 +19,6 @@ block subContent
 
         .br-content(class=styleguideRichContentClass)
             != componentGroup.docs.body
-
     each component in componentGroup.components
         +sample(component)
 
