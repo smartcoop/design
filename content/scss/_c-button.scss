@@ -17,7 +17,7 @@ $c-button-font-size-small: 1.4rem;
 
 // Line height
 
-$c-button-line-height: 2.4rem;
+$c-button-line-height: 2rem;
 $c-button-line-height-small: 1.8rem;
 
 // Horizontal padding (border included)
@@ -28,7 +28,7 @@ $c-button-padding-horizontal-small: 1rem !default;
 // Spacing between icon and label
 
 $c-button-icon-spacing: 0.6rem !default;
-$c-button-icon-spacing-small: 0 !default;
+$c-button-icon-spacing-small: 0.4rem !default;
 
 /* Default size
    ========================================================================== */
@@ -47,6 +47,11 @@ $c-button-icon-spacing-small: 0 !default;
   justify-content: center;
   font-weight: 600;
   display: inline-flex;
+
+  .o-svg-icon {
+    height: $c-button-line-height;
+    width: $c-button-line-height;
+  }
 }
 
 a.c-button {
@@ -151,7 +156,7 @@ input.c-button {
     ========================================================================== */
 
 .c-button--icon {
-  padding: ($c-button-height - $c-button-line-height) / 2;
+  padding: (($c-button-height - $c-button-line-height - 0.2rem) / 2);
 
   &.c-button--small {
     padding: ($c-button-height-small - $c-button-line-height-small) / 2;
