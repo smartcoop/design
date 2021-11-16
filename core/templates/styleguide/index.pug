@@ -1,24 +1,41 @@
-extends /templates/index
+extends /templates/_layouts/master
 
 block append pageVariables
     - var htmlClass = 'br-styleguide br-styleguide-default-styles-active'
+    - var moduleTitle = config.styleguide.pageTitle
 
-block content
+block body
 
-    .u-padding-bottom-l
-        h1.c-d-h2 Component documentation
+    .br-styleguide-container
 
-    .o-grid
-    
-        .o-grid-col-bp3-3
+        .br-styleguide-navigation-wrapper-ie
+
+            .br-styleguide-header
+                if styleguideBrandCustomTemplate
+                    include ../../../content/docs/templates/styleguide-custom-brand-template
+                else
+                    if styleguideLogoAsImage
+                        a(href=styleguideBrandLink?styleguideBrandLink:"")
+                            img.br-styleguide-logo(src=styleguideLogoAsImagePath alt=styleguideLogoAsImageAlt width=styleguideLogoAsImageForceWidth)
+                    else
+                        h1.br-styleguide-brand-heading(class=styleguideBrandClass)
+                            a.br-reset-link-styling(href=styleguideBrandLink?styleguideBrandLink:config.styleguide.url class=styleguideResetLinkStylingClass) #{projectTitle}
+
             if config.styleguide.search
-                .u-spacer-bottom-l
-                    .c-input-with-icon
-                        +icon('search')
+                .br-styleguide-search
+                    if styleguideSearchCustomTemplate
+                        include ../../../content/docs/templates/styleguide-custom-search-template
+                    else
                         input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
 
-            block nav
-                include ../includes/styleguide-nav
+            .br-styleguide-navigation-holder
 
-        .o-grid-col-bp3-9
-            block subContent
+                block nav
+                    include ../includes/styleguide-nav
+
+        .br-styleguide-content
+            .br-styleguide-content-inner
+                block content
+                    .br-demo-content
+                        .br-demo-content-inner
+                            +contentStyleguideHomePage

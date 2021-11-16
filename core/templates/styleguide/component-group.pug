@@ -1,4 +1,4 @@
-extends index
+extends ../../../content/templates/development/component-documentation
 
 block append pageVariables
     - var pageTitle = componentGroup.docs && componentGroup.docs.attributes.title || componentGroup.group.id
@@ -19,6 +19,7 @@ block subContent
 
         .br-content(class=styleguideRichContentClass)
             != componentGroup.docs.body
+
     each component in componentGroup.components
         +sample(component)
 
