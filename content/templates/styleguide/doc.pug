@@ -1,0 +1,7 @@
+extends ../../../content/templates/development/component-documentation
+
+block append pageVariables
+    - var moduleTitle = doc.attributes.title + ' - ' + config.styleguide.pageTitle
+
+block subContent
+    != doc.body
