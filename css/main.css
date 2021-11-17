@@ -3541,6 +3541,9 @@ textarea.c-input--h-large {
   justify-content: space-around;
   height: 6.4rem; }
 
+.c-toolbar--small {
+  height: 4.8rem; }
+
 .c-toolbar--medium {
   height: 5.6rem; }
 
