@@ -2840,6 +2840,9 @@ textarea.c-input--h-large {
 /* Sizes
    ========================================================================== */
 .c-navbar--small {
+  height: 4.8rem; }
+
+.c-navbar--medium {
   height: 5.6rem; }
 
 .c-navbar--large {
@@ -3453,13 +3456,11 @@ textarea.c-input--h-large {
    ========================================================================== */
 /* Component
    ========================================================================== */
-.c-tabs ul {
-  margin-bottom: 1.6rem; }
-  @media screen and (min-width: 400px) {
-    .c-tabs ul {
-      display: flex;
-      height: 4.8rem;
-      max-height: 4.8rem; } }
+@media screen and (min-width: 400px) {
+  .c-tabs ul {
+    display: flex;
+    height: 4.8rem;
+    max-height: 4.8rem; } }
 
 .c-tabs li {
   flex-basis: auto;
@@ -3498,6 +3499,9 @@ textarea.c-input--h-large {
 
 .c-tabs.c-tabs--border-bottom ul {
   border-bottom: 1px solid #CCCCCC; }
+
+.c-tabs__section {
+  margin-top: 1.6rem; }
 
 /* ==========================================================================
   c-textarea
