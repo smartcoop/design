@@ -116,7 +116,7 @@ block content
                                         .c-toolbar__right
                                             .c-toolbar__item
                                                 +c-button({}) Reset
-                                                +c-button-loading({ })(id="indicator" class="htmx-indicator") Calculate
+                                                +c-button({ isLoading: true })(id="indicator" class="htmx-indicator") Calculate
                                                 +c-button({ skin: 'primary', href: '/development/tools/simulation.html'})(hx-get="/_partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator" hx-boost="true") Calculate
 
 

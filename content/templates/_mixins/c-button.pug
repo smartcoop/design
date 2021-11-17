@@ -13,7 +13,7 @@
     @param {boolean} isBlock - if block
     @param {boolean} isLink - if link button
 
-mixin c-button({type = "button", href, icon, skin = "secondary", layout, size, isBlock = false, isLink = false})
+mixin c-button({type = "button", href, icon, skin = "secondary", layout, size, isBlock = false, isLink = false, isLoading = false})
     - var iconOnlyClass = ""
     - if (layout == "icon-only") iconOnlyClass = " c-button--icon"
     - var blockClass = ""
@@ -21,10 +21,14 @@ mixin c-button({type = "button", href, icon, skin = "secondary", layout, size, i
     - var linkClass = ""
     - if (isLink) linkClass = "-link"
     - var sizeClass = ""
+    - var loadingClass = ""
+    - if (isLoading) loadingClass = " c-button--loading"
     - if (size) sizeClass =  " c-button--"+size
-    - var classListing = "c-button"+linkClass+" c-button--"+skin+sizeClass+iconOnlyClass+blockClass
+    - var classListing = "c-button"+linkClass+" c-button--"+skin+sizeClass+iconOnlyClass+blockClass+loadingClass
     if href
         a(href=href class=classListing)&attributes(attributes)
+            if isLoading
+                .c-loader
             span.c-button__content
                 +c-button-inner-layout(icon, layout)
                     if block
@@ -32,7 +36,9 @@ mixin c-button({type = "button", href, icon, skin = "secondary", layout, size, i
                     else
                         |
     else
-        button(type=type class=classListing)&attributes(attributes)
+        button(type=type class=classListing disabled=isLoading)&attributes(attributes)
+            if isLoading
+                .c-loader
             span.c-button__content
                 +c-button-inner-layout(icon, layout)
                     if block

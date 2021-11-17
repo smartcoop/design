@@ -169,6 +169,32 @@ $c-button-link-color: $color-red-500 !default;
   }
 }
 
+
+/* Shared loading state for primary and secondary buttons
+   ========================================================================== */
+
+.c-button--primary,
+.c-button--secondary {
+  &.c-button--loading {
+    background: $color-gray-100;
+    border-color: $color-gray-100;
+    color: $color-disabled;
+    pointer-events: none;
+    position: relative;
+
+    .c-button__content {
+      visibility: hidden;
+    }
+
+    .c-loader {
+      position: absolute;
+      left: calc(50% - 1.5rem);
+      top: calc(50% - 0.8rem)
+    }
+  }
+}
+
+
 /* Borderless
    ========================================================================== */
 
