@@ -20,7 +20,7 @@ block content
                         .c-panel__content
                             - var input = {}
                             - if (state == "filled") input = data.input
-                            form.o-form-group-layout.o-form-group-layout--horizontal(hx-get="/_partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator")
+                            form.o-form-group-layout.o-form-group-layout--horizontal
                                 .u-spacer-l
                                     -
                                         var smartServices = [
@@ -116,17 +116,14 @@ block content
                                         .c-toolbar__right
                                             .c-toolbar__item
                                                 +c-button({}) Reset
-                                                input.c-button.c-button--primary(type="submit" value="Calculate")
+                                                +c-button-loading({ })(id="indicator" class="htmx-indicator") Calculate
+                                                +c-button({ skin: 'primary', href: '/development/tools/simulation.html'})(hx-get="/_partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator" hx-boost="true") Calculate
 
 
             .o-grid-col-bp3-6
                 .u-maximize-height(id="simulationResult")
                     .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
                         .u-spacer-l
-                            div(id="indicator" class="htmx-indicator")
-                                .o-flex.o-flex--vertical.o-flex--center
-                                    .c-loader
-                                    p.u-text-muted.c-body-1 Calculating simulation...
                             .c-blank-slate
                                 +c-avatar({icon: 'document', size: 'large'})
                                 p.u-text-muted.c-body-1 Fill in the form to view a calculation

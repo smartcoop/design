@@ -1,87 +1,88 @@
 extends ../../../core/templates/layouts/sample
 
 block content
-    .u-spacer-l
-        .u-spacer-bottom-l
-            +c-alert({
-                skin: 'warning',
-                message: "The calculation displayed in this simulation is theoretical and given as an indication. Only the salary details proposed at the end of the contract encoding will be applied by Smart."
-            })
+    div(id="simulationResult")
+        .u-spacer-l
+            .u-spacer-bottom-l
+                +c-alert({
+                    skin: 'warning',
+                    message: "The calculation displayed in this simulation is theoretical and given as an indication. Only the salary details proposed at the end of the contract encoding will be applied by Smart."
+                })
 
-        .u-spacer-bottom-l
-            - var result = contentData.simulation.result
+            .u-spacer-bottom-l
+                - var result = contentData.simulation.result
 
-            table.c-table.c-table--styled.c-table--bordered
-                thead
-                    tr
-                        th Invoice
-                        th
-                            span.u-sr-accessible Amount
-                tbody
-                    tr
-                        td Amount (without VAT)
-                        td.u-text-right € #{result.invoiceAmount}
-                    tr
-                        td VAT (21%)
-                        td.u-text-right € #{result.invoiceVat}
-                tfoot
-                    tr
-                        td Total amount (with VAT)
-                        td.u-text-right € #{result.invoiceTotalAmount}
+                table.c-table.c-table--styled.c-table--bordered
+                    thead
+                        tr
+                            th Invoice
+                            th
+                                span.u-sr-accessible Amount
+                    tbody
+                        tr
+                            td Amount (without VAT)
+                            td.u-text-right € #{result.invoiceAmount}
+                        tr
+                            td VAT (21%)
+                            td.u-text-right € #{result.invoiceVat}
+                    tfoot
+                        tr
+                            td Total amount (with VAT)
+                            td.u-text-right € #{result.invoiceTotalAmount}
 
-        .u-spacer-bottom-l
-            table.c-table.c-table--styled.c-table--bordered
-                thead
-                    tr
-                        th Details invoiced amount
-                        th
-                            span.u-sr-accessible Amount
-                tbody
-                    tr
-                        td Management fees
-                        td.u-text-right € #{result.managementFees}
-                    tr
-                        td Costs to be borne by the employer
-                        td.u-text-right € #{result.costsEmployer}
-                tfoot
-                    tr
-                        td Salary budget
-                        td.u-text-right € #{result.salaryBudget}
+            .u-spacer-bottom-l
+                table.c-table.c-table--styled.c-table--bordered
+                    thead
+                        tr
+                            th Details invoiced amount
+                            th
+                                span.u-sr-accessible Amount
+                    tbody
+                        tr
+                            td Management fees
+                            td.u-text-right € #{result.managementFees}
+                        tr
+                            td Costs to be borne by the employer
+                            td.u-text-right € #{result.costsEmployer}
+                    tfoot
+                        tr
+                            td Salary budget
+                            td.u-text-right € #{result.salaryBudget}
 
-        .u-spacer-bottom-l
-            table.c-table.c-table--styled.c-table--bordered
-                thead
-                    tr
-                        th Details salary budget
-                        th
-                            span.u-sr-accessible Amount
-                tbody
-                    tr
-                        td Wage costs
-                        td.u-text-right € #{result.wageCosts}
-                tfoot
-                    tr
-                        td Total gross
-                        td.u-text-right € #{result.totalGross}
+            .u-spacer-bottom-l
+                table.c-table.c-table--styled.c-table--bordered
+                    thead
+                        tr
+                            th Details salary budget
+                            th
+                                span.u-sr-accessible Amount
+                    tbody
+                        tr
+                            td Wage costs
+                            td.u-text-right € #{result.wageCosts}
+                    tfoot
+                        tr
+                            td Total gross
+                            td.u-text-right € #{result.totalGross}
 
-        .u-spacer-bottom-l
-            table.c-table.c-table--styled.c-table--bordered
-                thead
-                    tr
-                        th Worker
-                        th
-                            span.u-sr-accessible Amount
-                tbody
-                    tr
-                        td Social security contributions
-                        td.u-text-right € #{result.socialSecurityContribitions}
-                    tr
-                        td Total taxable amount
-                        td.u-text-right € #{result.totalTaxableAmount}
-                tfoot
-                    tr
-                        td Net salary
-                        td.u-text-right € #{result.netSalary}
-                    tr
-                        td Gross vacation pay
-                        td.u-text-right € #{result.grossVacationPay}
+            .u-spacer-bottom-l
+                table.c-table.c-table--styled.c-table--bordered
+                    thead
+                        tr
+                            th Worker
+                            th
+                                span.u-sr-accessible Amount
+                    tbody
+                        tr
+                            td Social security contributions
+                            td.u-text-right € #{result.socialSecurityContribitions}
+                        tr
+                            td Total taxable amount
+                            td.u-text-right € #{result.totalTaxableAmount}
+                    tfoot
+                        tr
+                            td Net salary
+                            td.u-text-right € #{result.netSalary}
+                        tr
+                            td Gross vacation pay
+                            td.u-text-right € #{result.grossVacationPay}

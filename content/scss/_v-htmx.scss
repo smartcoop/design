@@ -17,6 +17,10 @@
   display:inline;
 }
 
+.htmx-request ~ .c-button[hx-indicator]  {
+  display: none;
+}
+
 // Remove blankslate when loading
 .htmx-request ~ .c-blank-slate {
   display: none;
