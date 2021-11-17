@@ -5,11 +5,11 @@
 /* Variables
    ========================================================================== */
 
-$c-tabs-item-color: $color-muted !default;
+$c-tabs-item-color: $color-header !default;
 $c-tabs-item-active-color: $color-header !default;
 $c-tabs-item-border-color: $color-gray-200 !default;
 $c-tabs-item-hover-border-color: $color-gray-200 !default;
-$c-tabs-active-border-width: 0.2rem !default;
+$c-tabs-active-border-width: 0.3rem !default;
 
 /* Component
    ========================================================================== */
@@ -36,6 +36,10 @@ $c-tabs-active-border-width: 0.2rem !default;
     }
 
     & + li {
+      @media screen and (min-width: $g-bp1) {
+        margin-left: $g-spacer-unit * 3;
+      }
+
       @media screen and (max-width: ($g-bp1 - 1px)) {
         margin-top: $g-spacer-unit;
       }
@@ -49,8 +53,6 @@ $c-tabs-active-border-width: 0.2rem !default;
   align-items: center;
   text-decoration: none;
   font-weight: 500;
-  letter-spacing: 0.08rem;
-  padding: 0 $g-spacer-unit;
   height: 100%;
 
   &:hover {
@@ -66,7 +68,7 @@ $c-tabs-active-border-width: 0.2rem !default;
   }
 
   &[aria-selected="true"] {
-    box-shadow: inset 0 -#{$c-tabs-active-border-width} 0 $color-red-500;
+    box-shadow: inset 0 -#{$c-tabs-active-border-width} 0 $color-black;
     color: $c-tabs-item-active-color;
     position: relative; // makes box-shadow to be on top of the global border
     z-index: $g-c-tabs-z;
@@ -77,3 +79,4 @@ $c-tabs-active-border-width: 0.2rem !default;
 .c-tabs.c-tabs--border-bottom ul {
   border-bottom: 1px solid $c-tabs-item-border-color;
 }
+
