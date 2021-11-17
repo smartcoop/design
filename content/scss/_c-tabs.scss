@@ -16,7 +16,6 @@ $c-tabs-active-border-width: 0.3rem !default;
 
 .c-tabs {
   ul {
-    margin-bottom: $g-spacer-unit * 2;
 
     @media screen and (min-width: $g-bp1) {
       display: flex;
@@ -80,3 +79,6 @@ $c-tabs-active-border-width: 0.3rem !default;
   border-bottom: 1px solid $c-tabs-item-border-color;
 }
 
+.c-tabs__section {
+  margin-top: $g-spacer-unit * 2;
+}
