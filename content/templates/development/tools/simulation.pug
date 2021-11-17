@@ -31,7 +31,7 @@ block content
                                             'I carry out an interim assignment on behalf of a client'
                                         ]
 
-                                    +c-form-group({ label: 'Service Smart', type: 'select', id: 'servicesSmart', value: smartServices, valueKey: index, selected: input.serviceSmart, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
+                                    +c-form-group({ label: 'Service Smart', type: 'select', id: 'servicesSmart', value: smartServices, valueKey: index, selected: input.serviceSmart,  tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
 
                                     -
                                         var contractTypes = [
@@ -77,7 +77,7 @@ block content
                                             'Public authorities (no PC)'
                                         ]
 
-                                    +c-form-group({ label: 'Joint commission', type: 'select', id: 'jointCommission', value: jointCommissions, selected: input.jointCommission, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
+                                    +c-form-group({ label: 'Joint commission', type: 'select', id: 'jointCommission', value: jointCommissions, selected: input.jointCommission,  tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
 
                                     -
                                         var subCommittees = [
@@ -109,9 +109,9 @@ block content
 
                                     +c-form-group({ label: 'Number of days', type: 'text', id: 'numberOfDays', inputType: 'number', value: input.numberOfDays })
 
-                                    +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', value: input.defrayalPerDay, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
+                                    +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', value: input.defrayalPerDay, tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
 
-                                    +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', value: input.withHoldingTax, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
+                                    +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', value: input.withHoldingTax, tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
 
                                     .c-toolbar
                                         .c-toolbar__right
