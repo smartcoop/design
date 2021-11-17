@@ -3175,21 +3175,48 @@ textarea.c-input--h-large {
     background: #FF4054; }
 
 /* ==========================================================================
-  c-spinner
+  c-loader
  ========================================================================== */
-.c-spinner {
+/* Variables
+   ========================================================================== */
+/* Component
+   ========================================================================== */
+.c-loader {
   display: inline-block;
-  width: 4rem;
-  height: 4rem;
-  vertical-align: text-bottom;
-  border: 0.4rem solid #000000;
-  border-right-color: transparent;
-  border-radius: 50%;
-  animation: spinner 1.3s linear infinite; }
+  position: relative;
+  width: 3rem;
+  height: 1.6rem; }
+  .c-loader:before {
+    animation: loader-wave infinite 1s linear;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    box-shadow: 1rem 0 #B3B3B3, 2rem 0 #B3B3B3, 3rem 0 #B3B3B3;
+    border-radius: 50%;
+    margin-top: -0.2rem;
+    margin-left: -2.2rem;
+    top: 50%;
+    left: 50%; }
 
-@keyframes spinner {
-  to {
-    transform: rotate(360deg); } }
+@keyframes loader-wave {
+  0% {
+    box-shadow: 1rem 0 #B3B3B3, 2rem 0 #B3B3B3, 3rem 0 #B3B3B3; }
+  10% {
+    box-shadow: 1rem -0.3rem #B3B3B3, 2rem 0 #B3B3B3, 3rem 0 #B3B3B3; }
+  20% {
+    box-shadow: 1rem -0.6rem #B3B3B3, 2rem -0.3rem #B3B3B3, 3rem 0 #B3B3B3; }
+  30% {
+    box-shadow: 1rem -0.3rem #B3B3B3, 2rem -0.6rem #B3B3B3, 3rem -0.3rem #B3B3B3; }
+  40% {
+    box-shadow: 1rem 0 #B3B3B3, 2rem -0.3rem #B3B3B3, 3rem -0.6rem #B3B3B3; }
+  50% {
+    box-shadow: 1rem 0 #B3B3B3, 2rem 0 #B3B3B3, 3rem -0.3rem #B3B3B3; }
+  60% {
+    box-shadow: 1rem 0 #B3B3B3, 2rem 0 #B3B3B3, 3rem 0 #B3B3B3; }
+  100% {
+    box-shadow: 1rem 0 #B3B3B3, 2rem 0 #B3B3B3, 3rem 0 #B3B3B3; } }
 
 /* ==========================================================================
   Component: Status Pill
@@ -3442,18 +3469,19 @@ textarea.c-input--h-large {
   @media screen and (min-width: 400px) {
     .c-tabs li {
       justify-content: center; } }
+  @media screen and (min-width: 400px) {
+    .c-tabs li + li {
+      margin-left: 2.4rem; } }
   @media screen and (max-width: 399px) {
     .c-tabs li + li {
       margin-top: 0.8rem; } }
 
 .c-tabs__item {
-  color: #808080;
+  color: #000000;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   font-weight: 500;
-  letter-spacing: 0.08rem;
-  padding: 0 0.8rem;
   height: 100%; }
   .c-tabs__item:hover {
     color: #000000; }
@@ -3462,7 +3490,7 @@ textarea.c-input--h-large {
   .c-tabs__item:focus:not(:focus-visible) {
     outline: none; }
   .c-tabs__item[aria-selected="true"] {
-    box-shadow: inset 0 -0.2rem 0 #FF4054;
+    box-shadow: inset 0 -0.3rem 0 #000000;
     color: #000000;
     position: relative;
     z-index: 10;
