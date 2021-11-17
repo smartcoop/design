@@ -1,0 +1,95 @@
+/* ==========================================================================
+  c-button-loading
+ ========================================================================== */
+
+// Border radius
+$c-button-border-radius: 0.3rem !default;
+
+// Sizes (heights)
+
+$c-button-height: 3.6rem !default;
+$c-button-height-small: 2.6rem !default;
+
+// Font size
+
+$c-button-font-size: 1.6rem;
+$c-button-font-size-small: 1.4rem;
+
+// Line height
+
+$c-button-line-height: 2rem;
+$c-button-line-height-small: 1.8rem;
+
+// Horizontal padding (border included)
+
+$c-button-padding-horizontal: 1.6rem !default;
+$c-button-padding-horizontal-small: 1rem !default;
+
+
+/* Component
+   ========================================================================== */
+
+.c-button-loading {
+  appearance: none; // Fix for Mobile Safari
+  text-decoration: none; // to reset <a> element
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  border-radius: $c-button-border-radius;
+  padding: (($c-button-height - $c-button-line-height - 0.2rem) / 2)
+    $c-button-padding-horizontal;
+  font-size: $c-button-font-size;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  display: inline-flex;
+  margin: 0;
+  background: $color-gray-100;
+  color: $color-disabled;
+  pointer-events: none;
+  border: 1px solid  $color-gray-100;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  .c-loader {
+    position: absolute;
+    left: calc(50% - 1.5rem);
+    top: calc(50% - 0.8rem)
+  }
+}
+
+.c-button-loading__label {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+
+/* Small size
+   ========================================================================== */
+
+.c-button-loader--small {
+  font-size: $c-button-font-size-small;
+  padding: (($c-button-height-small - $c-button-line-height-small) / 2)
+    $c-button-padding-horizontal-small;
+
+  .c-button-loader__label {
+    line-height: $c-button-line-height-small;
+  }
+}
+
+/* Block button
+    ========================================================================== */
+
+.c-button-loader--block {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}

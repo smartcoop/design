@@ -1,0 +1,13 @@
+mixin c-button-loading()
+    - var blockClass = ""
+    - if (isBlock) blockClass = " c-button-loading--block"
+    - var sizeClass = ""
+    - if (size) sizeClass =  " c-button--"+size
+    - var classListing = "c-button-loading"+sizeClass+blockClass
+
+    button(type="button" class=classListing isBlock = false disabled)&attributes(attributes)
+        .c-loader
+
+        //- Label to preserve same space inside button
+        .c-button-loading__label
+            block

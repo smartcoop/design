@@ -24,7 +24,7 @@ mixin c-button({type = "button", href, icon, skin = "secondary", layout, size, i
     - if (size) sizeClass =  " c-button--"+size
     - var classListing = "c-button"+linkClass+" c-button--"+skin+sizeClass+iconOnlyClass+blockClass
     if href
-        a(href=href class=classListing class=layout=="loader"? "c-button--disabled": "")&attributes(attributes)
+        a(href=href class=classListing)&attributes(attributes)
             span.c-button__content
                 +c-button-inner-layout(icon, layout)
                     if block
@@ -32,7 +32,7 @@ mixin c-button({type = "button", href, icon, skin = "secondary", layout, size, i
                     else
                         |
     else
-        button(type=type class=classListing disabled=layout=="loader")&attributes(attributes)
+        button(type=type class=classListing)&attributes(attributes)
             span.c-button__content
                 +c-button-inner-layout(icon, layout)
                     if block
@@ -49,8 +49,6 @@ mixin c-button-inner-layout(icon, layout)
         else
             span.c-button__label
                 block
-    else if layout === "loader"
-        .c-loader
     else if layout === "text-icon"
         span.c-button__label
             block
