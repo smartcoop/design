@@ -56,7 +56,7 @@ $c-tabs-active-border-width: 0.3rem !default;
   height: 100%;
 
   &:hover {
-    color: $c-tabs-item-active-color;
+    box-shadow: inset 0 -#{$c-tabs-active-border-width} 0 $color-border;
   }
 
   &:focus {
