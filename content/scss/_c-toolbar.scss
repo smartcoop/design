@@ -22,6 +22,10 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   height: $g-bar-size-regular;
 }
 
+.c-toolbar--small {
+  height: $g-bar-size-small;
+}
+
 .c-toolbar--medium {
   height: $g-bar-size-medium;
 }
