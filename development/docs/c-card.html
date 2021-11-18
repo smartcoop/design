@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Navbar - Component documentation - Smart Design System
+    <title>Card - Component documentation - Smart Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -558,54 +558,21 @@
             </div>
             <div class="o-grid-col-bp3-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-d-h2">Navbar</h1>
+                    <h1 class="br-componentgroup-header c-d-h2">Card</h1>
                 </div>
                 <div class="br-content c-content">
-                    <p>A navbar is a container element that typically holds an <a href="/development/docs/c-toolbar.html">toolbar</a>. Navbars can be combined and can be placed top or bottom of the screen.</p>
-
                 </div>
-                <div class="br-sample" id="component-01-c-navbar-top">
+                <div class="br-sample" id="component-01-c-card">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Navbar top</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-navbar-top">#</a>
+                        <h3 class="br-sample-heading c-h3">Card</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-card">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div style="margin-bottom: 150px;">
-                            <div class="c-navbar c-navbar--bordered-bottom">
-                                <div class="c-toolbar">
-                                    <div class="c-toolbar__left">
-                                        <div class="c-toolbar__item">
-                                            <h2 class="c-toolbar__title">Toolbar title</h2>
-                                        </div>
-                                    </div>
-                                    <div class="c-toolbar__right">
-                                        <div class="c-toolbar__item">
-                                            <div class="c-button-toolbar">
-                                                <button class="c-button c-button--secondary" type="button">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-add  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                        <span class="c-button__label">Button label</span>
-                                                    </span>
-                                                </button>
-                                                <button class="c-button c-button--secondary" type="button">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-edit  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                        <span class="c-button__label">Button label</span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="c-card">
+                            <div class="c-card__body">
+                                <h4 class="c-card__title">Card title</h4>
+                                <p class="u-text-muted"> Subline</p>
                             </div>
                         </div>
                     </div>
@@ -614,231 +581,107 @@
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div style=&quot;margin-bottom: 150px;&quot;&gt;
-    &lt;div class=&quot;c-navbar c-navbar--bordered-bottom&quot;&gt;
-        &lt;div class=&quot;c-toolbar&quot;&gt;
-            &lt;div class=&quot;c-toolbar__left&quot;&gt;
-                &lt;div class=&quot;c-toolbar__item&quot;&gt;
-                    &lt;h2 class=&quot;c-toolbar__title&quot;&gt;Toolbar title&lt;/h2&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;c-toolbar__right&quot;&gt;
-                &lt;div class=&quot;c-toolbar__item&quot;&gt;
-                    &lt;div class=&quot;c-button-toolbar&quot;&gt;
-                        &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
-                            &lt;span class=&quot;c-button__content&quot;&gt;
-                                &lt;div class=&quot;o-svg-icon o-svg-icon-add  &quot;&gt;
-                                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                                        &lt;path d=&quot;M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z&quot; fill=&quot;#595959&quot; /&gt;
-                                    &lt;/svg&gt;
-                                &lt;/div&gt;
-                                &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
-                            &lt;/span&gt;
-                        &lt;/button&gt;
-                        &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
-                            &lt;span class=&quot;c-button__content&quot;&gt;
-                                &lt;div class=&quot;o-svg-icon o-svg-icon-edit  &quot;&gt;
-                                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                                        &lt;path d=&quot;M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z&quot; fill=&quot;#595959&quot; /&gt;
-                                    &lt;/svg&gt;
-                                &lt;/div&gt;
-                                &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
-                            &lt;/span&gt;
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-card&quot;&gt;
+    &lt;div class=&quot;c-card__body&quot;&gt;
+        &lt;h4 class=&quot;c-card__title&quot;&gt;Card title&lt;/h4&gt;
+        &lt;p class=&quot;u-text-muted&quot;&gt; Subline&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">div(style=&quot;margin-bottom: 150px;&quot;)
-    .c-navbar.c-navbar--bordered-bottom
-        .c-toolbar
-            .c-toolbar__left
-                .c-toolbar__item
-                    h2.c-toolbar__title Toolbar title
-            .c-toolbar__right
-                .c-toolbar__item
-                    .c-button-toolbar
-                        +c-button({ icon: 'add' }) Button label
-                        +c-button({ icon: 'edit' }) Button label
+                            <pre class="br-sample-markup br-sample-markup-pug">.c-card
+    .c-card__body
+        h4.c-card__title Card title
+        p.u-text-muted  Subline
 </pre>
                         </div>
                     </div>
                 </div>
-                <div class="br-sample" id="component-02-c-navbar-bottom">
+                <div class="br-sample" id="component-02-c-card-user">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Navbar bottom</h3>
-                        <a class="br-sample-header-link" href="#component-02-c-navbar-bottom">#</a>
+                        <h3 class="br-sample-heading c-h3">Card user</h3>
+                        <a class="br-sample-header-link" href="#component-02-c-card-user">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div style="margin-top: 120px;">
-                            <div class="c-navbar c-navbar--bordered-top">
-                                <div class="c-toolbar">
-                                    <div class="c-toolbar__left">
-                                        <div class="c-toolbar__item">
-                                            <h2 class="c-toolbar__title">Toolbar title</h2>
-                                        </div>
-                                    </div>
-                                    <div class="c-toolbar__right">
-                                        <div class="c-toolbar__item">
-                                            <div class="c-button-toolbar">
-                                                <button class="c-button c-button--secondary" type="button">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-add  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                        <span class="c-button__label">Button label</span>
-                                                    </span>
-                                                </button>
-                                                <button class="c-button c-button--secondary" type="button">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-edit  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                        <span class="c-button__label">Button label</span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
+                        <a class="c-card" href="#">
+                            <div class="c-card__body">
+                                <div class="c-avatar-and-text">
+                                    <div class="c-avatar c-avatar--medium">JD</div>
+                                    <div class="c-avatar-and-text__text">
+                                        <h4 class="c-h4">Team member</h4>
+                                        <p class="u-text-muted">Subline</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div style=&quot;margin-top: 120px;&quot;&gt;
-    &lt;div class=&quot;c-navbar c-navbar--bordered-top&quot;&gt;
-        &lt;div class=&quot;c-toolbar&quot;&gt;
-            &lt;div class=&quot;c-toolbar__left&quot;&gt;
-                &lt;div class=&quot;c-toolbar__item&quot;&gt;
-                    &lt;h2 class=&quot;c-toolbar__title&quot;&gt;Toolbar title&lt;/h2&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;c-toolbar__right&quot;&gt;
-                &lt;div class=&quot;c-toolbar__item&quot;&gt;
-                    &lt;div class=&quot;c-button-toolbar&quot;&gt;
-                        &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
-                            &lt;span class=&quot;c-button__content&quot;&gt;
-                                &lt;div class=&quot;o-svg-icon o-svg-icon-add  &quot;&gt;
-                                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                                        &lt;path d=&quot;M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z&quot; fill=&quot;#595959&quot; /&gt;
-                                    &lt;/svg&gt;
-                                &lt;/div&gt;
-                                &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
-                            &lt;/span&gt;
-                        &lt;/button&gt;
-                        &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
-                            &lt;span class=&quot;c-button__content&quot;&gt;
-                                &lt;div class=&quot;o-svg-icon o-svg-icon-edit  &quot;&gt;
-                                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                                        &lt;path d=&quot;M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z&quot; fill=&quot;#595959&quot; /&gt;
-                                    &lt;/svg&gt;
-                                &lt;/div&gt;
-                                &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
-                            &lt;/span&gt;
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;a class=&quot;c-card&quot; href=&quot;#&quot;&gt;
+    &lt;div class=&quot;c-card__body&quot;&gt;
+        &lt;div class=&quot;c-avatar-and-text&quot;&gt;
+            &lt;div class=&quot;c-avatar c-avatar--medium&quot;&gt;JD&lt;/div&gt;
+            &lt;div class=&quot;c-avatar-and-text__text&quot;&gt;
+                &lt;h4 class=&quot;c-h4&quot;&gt;Team member&lt;/h4&gt;
+                &lt;p class=&quot;u-text-muted&quot;&gt;Subline&lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/a&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">div(style=&quot;margin-top: 120px;&quot;)
-    .c-navbar.c-navbar--bordered-top
-        .c-toolbar
-            .c-toolbar__left
-                .c-toolbar__item
-                    h2.c-toolbar__title Toolbar title
-            .c-toolbar__right
-                .c-toolbar__item
-                    .c-button-toolbar
-                        +c-button({ icon: 'add' }) Button label
-                        +c-button({ icon: 'edit' }) Button label
+                            <pre class="br-sample-markup br-sample-markup-pug">a.c-card(href=&quot;#&quot;)
+    .c-card__body
+        .c-avatar-and-text
+            .c-avatar.c-avatar--medium JD
+            .c-avatar-and-text__text
+                h4.c-h4 Team member
+                p.u-text-muted Subline
 </pre>
                         </div>
                     </div>
                 </div>
-                <div class="br-sample" id="component-03-c-navbar-tabs">
+                <div class="br-sample" id="component-03-c-card-image">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Navbar tabs</h3>
-                        <a class="br-sample-header-link" href="#component-03-c-navbar-tabs">#</a>
+                        <h3 class="br-sample-heading c-h3">Card image</h3>
+                        <a class="br-sample-header-link" href="#component-03-c-card-image">#</a>
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="c-navbar c-navbar--small c-navbar--bordered-bottom">
-                            <div class="c-toolbar c-toolbar--small">
-                                <div class="c-toolbar__left">
-                                    <nav class="c-tabs">
-                                        <ul>
-                                            <li>
-                                                <a class="c-tabs__item" href="#" aria-selected="true">Item</a>
-                                            </li>
-                                            <li>
-                                                <a class="c-tabs__item" href="#">Item</a>
-                                            </li>
-                                            <li>
-                                                <a class="c-tabs__item" href="#">Item</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
+                        <a class="c-card" href="#">
+                            <img src="https://via.placeholder.com/1600x900" alt="" />
+                            <div class="c-card__body">
+                                <h4 class="c-card__title">Card title</h4>
+                                <p class="u-text-muted">Subtitle</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-navbar c-navbar--small c-navbar--bordered-bottom&quot;&gt;
-    &lt;div class=&quot;c-toolbar c-toolbar--small&quot;&gt;
-        &lt;div class=&quot;c-toolbar__left&quot;&gt;
-            &lt;nav class=&quot;c-tabs&quot;&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;
-                        &lt;a class=&quot;c-tabs__item&quot; href=&quot;#&quot; aria-selected=&quot;true&quot;&gt;Item&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;a class=&quot;c-tabs__item&quot; href=&quot;#&quot;&gt;Item&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;a class=&quot;c-tabs__item&quot; href=&quot;#&quot;&gt;Item&lt;/a&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/nav&gt;
-        &lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;a class=&quot;c-card&quot; href=&quot;#&quot;&gt;
+    &lt;img src=&quot;https://via.placeholder.com/1600x900&quot; alt=&quot;&quot; /&gt;
+    &lt;div class=&quot;c-card__body&quot;&gt;
+        &lt;h4 class=&quot;c-card__title&quot;&gt;Card title&lt;/h4&gt;
+        &lt;p class=&quot;u-text-muted&quot;&gt;Subtitle&lt;/p&gt;
     &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/a&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.c-navbar.c-navbar--small.c-navbar--bordered-bottom
-    .c-toolbar.c-toolbar--small
-        .c-toolbar__left
-            nav.c-tabs
-                ul
-                    li
-                        a.c-tabs__item(href='#' aria-selected=&quot;true&quot;) Item
-                    li
-                        a.c-tabs__item(href='#') Item
-                    li
-                        a.c-tabs__item(href='#') Item
+                            <pre class="br-sample-markup br-sample-markup-pug">a.c-card(href=&quot;#&quot;)
+    img(src=&quot;https://via.placeholder.com/1600x900&quot; alt=&quot;&quot;)
+    .c-card__body
+        h4.c-card__title Card title
+        p.u-text-muted Subtitle
 </pre>
                         </div>
                     </div>

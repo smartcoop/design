@@ -103,6 +103,11 @@
   padding: 1rem;
   text-align: center; }
 
+/* Cards
+   ========================================================================== */
+#component-03-c-card-image .c-card {
+  max-width: 48rem; }
+
 /* Footer margins
    ========================================================================== */
 .br-componentgroup-footer-wrapper {
