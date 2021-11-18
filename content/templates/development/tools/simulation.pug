@@ -11,7 +11,7 @@ block content
         .c-toolbar
             .c-toolbar__left
                 .c-toolbar__item
-                        h2.c-toolbar__title Simulation
+                    h2.c-toolbar__title Simulation
 
     .u-scroll-wrapper-body
         .o-grid
@@ -21,8 +21,9 @@ block content
                         .c-panel__content
                             - var input = {}
                             - if (state == "filled") input = data.input
-                            .o-form-group-layout.o-form-group-layout--horizontal
+                            form.o-form-group-layout.o-form-group-layout--horizontal
                                 .u-spacer-l
+                                    h4.c-h4.u-spacer-bottom-l Service
                                     -
                                         var smartServices = [
                                             'Select',
@@ -31,7 +32,7 @@ block content
                                             'I carry out an interim assignment on behalf of a client'
                                         ]
 
-                                    +c-form-group({ label: 'Service Smart', type: 'select', id: 'servicesSmart', value: smartServices, valueKey: index, selected: input.serviceSmart,  tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+                                    +c-form-group({ label: 'Service Smart', type: 'select', id: 'servicesSmart', value: smartServices, valueKey: index, tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
 
                                     -
                                         var contractTypes = [
@@ -41,7 +42,7 @@ block content
                                             'Student'
                                         ]
 
-                                    +c-form-group({ label: 'Contract type', type: 'select', id: 'contractType', value: contractTypes, selected: input.contractType })
+                                    +c-form-group({ label: 'Contract type', type: 'select', id: 'contractType', value: contractTypes })
 
                                     .o-form-group
                                         .o-form-group__label.o-form-group__label--with-helper
@@ -52,12 +53,14 @@ block content
                                                 .c-tooltip__arrow(data-popper-arrow)
                                         .o-form-group__controls
                                             .o-flex.o-flex--spaced
-                                                +c-select({ id: 'vatType', value: ['Included', 'Not included', 'No VAT'], selected: input.vatType})(aria-labelledby="vatLabel")
+                                                +c-select({ id: 'vatType', value: ['Select', 'Included', 'Not included', 'No VAT'], selected: input.vatType})(aria-labelledby="vatLabel")
                                                 +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true, selected: input.vatRate })(aria-labelledby="vatLabel")
-
+                                            p.c-form-help-text Leave blank when continuing a Smart service
                                 hr.c-hr
 
                                 .u-spacer-l
+                                    h4.c-h4 Joint comission
+                                    p.u-spacer-bottom-l Please fill in when carrying out an interim assignment on behalf of a client.
                                     -
                                         var jointCommissions = [
                                             'Select',
@@ -77,7 +80,7 @@ block content
                                             'Public authorities (no PC)'
                                         ]
 
-                                    +c-form-group({ label: 'Joint commission', type: 'select', id: 'jointCommission', value: jointCommissions, selected: input.jointCommission,  tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+                                    +c-form-group({ label: 'Joint commission', type: 'select', id: 'jointCommission', value: jointCommissions, tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
 
                                     -
                                         var subCommittees = [
@@ -90,11 +93,12 @@ block content
                                             'Professional integration in the Brussels Region',
                                         ]
 
-                                    +c-form-group({ label: 'Subcommittee', type: 'select', id: 'subCommittee', value: subCommittees, selected: input.subComittee })
+                                    +c-form-group({ label: 'Subcommittee', type: 'select', id: 'subCommittee', value: subCommittees, helper: 'Please fill in when joint commission is Sociocultural Flemish Community or Sociocultural Walloon Region and French and German-speaking Community' })
 
                                 hr.c-hr
 
                                 .u-spacer-l
+                                    h4.c-h4.u-spacer-bottom-l Contract data
                                     .o-form-group
                                         .o-form-group__label.o-form-group__label--with-helper
                                             label(id="amountLabel") Amount
@@ -105,18 +109,17 @@ block content
                                         .o-form-group__controls
                                             .o-flex.o-flex--spaced
                                                 +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary'], selected: input.amountType})(aria-labelledby="amountLabel")
-                                                +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number', value: input.amountValue})(aria-labelledby="amountLabel")
+                                                +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number'})(aria-labelledby="amountLabel")
 
-                                    +c-form-group({ label: 'Number of days', type: 'text', id: 'numberOfDays', inputType: 'number', value: input.numberOfDays })
+                                    +c-form-group({ label: 'Number of days', type: 'text', id: 'numberOfDays', inputType: 'number' })
 
-                                    +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', value: input.defrayalPerDay, tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+                                    +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
 
-                                    +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', value: input.withHoldingTax, tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
-
+                                    +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
                                     .c-toolbar
                                         .c-toolbar__right
                                             .c-toolbar__item
-                                                +c-button({}) Reset
+                                                input.c-button.c-button--secondary(type="reset" value="Reset")
                                                 input.c-button.c-button--primary(type="submit" value="Calculate")
 
 
