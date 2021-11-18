@@ -30,6 +30,10 @@ $c-loader-color: $color-gray-300 !default;
     margin-left: -2.2rem;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
