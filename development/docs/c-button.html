@@ -864,6 +864,39 @@
                         </div>
                     </div>
                 </div>
+                <div class="br-sample" id="component-09-c-button-loading">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Button loading</h3>
+                        <a class="br-sample-header-link" href="#component-09-c-button-loading">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <button class="c-button c-button--secondary c-button--loading" type="button" disabled="disabled">
+                            <div class="c-loader"></div>
+                            <span class="c-button__content">
+                                <span class="c-button__label">Button label</span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;button class=&quot;c-button c-button--secondary c-button--loading&quot; type=&quot;button&quot; disabled=&quot;disabled&quot;&gt;
+    &lt;div class=&quot;c-loader&quot;&gt;&lt;/div&gt;
+    &lt;span class=&quot;c-button__content&quot;&gt;
+        &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">+c-button({ isLoading: true }) Button label
+</pre>
+                        </div>
+                    </div>
+                </div>
                 <div class="br-componentgroup-footer-wrapper">
                     <h1 class="br-componentgroup-footer c-d-h2">Possible parameters for button</h1>
                     <div class="br-content c-content">
@@ -937,6 +970,15 @@
                                         <code>true</code>, <code>false</code>
                                     </td>
                                     <td>Determines if the button is a link button. The default state is <code>false</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>isLoading</td>
+                                    <td>boolean</td>
+                                    <td>
+                                        <code>true</code>, <code>false</code>
+                                    </td>
+                                    <td>Determines if the button has a loading state. The default state is <code>false</code>
                                     </td>
                                 </tr>
                             </tbody>
