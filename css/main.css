@@ -810,8 +810,8 @@ abbr[title] {
   height: 4.8rem; }
 
 .o-svg-icon--small {
-  width: 1.6rem;
-  height: 1.6rem; }
+  width: 2rem;
+  height: 2rem; }
 
 /**
  * Color Variations
@@ -884,9 +884,8 @@ abbr[title] {
   margin: 1.4rem 0; }
 
 .c-subline {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06rem; }
+  font-size: 1.4rem;
+  color: #808080; }
 
 .c-content p {
   margin: 1.5rem 0; }
@@ -2090,6 +2089,24 @@ a.c-card:hover {
 .c-card__body {
   padding: 2.4rem; }
 
+@media (min-width: 700px) {
+  .c-card__body--with-actions {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; } }
+
+.c-card__content {
+  flex: 1; }
+
+.c-card__actions {
+  display: flex;
+  align-items: center; }
+  .c-card__actions .c-button-toolbar {
+    margin-left: auto; }
+  @media (max-width: 700px) {
+    .c-card__actions {
+      margin-bottom: 1.6rem; } }
+
 /* ==========================================================================
   Component: Checkbox and Radio
   ---
@@ -2571,6 +2588,25 @@ a.c-card:hover {
   margin: 3.2rem 0;
   border: none;
   border-bottom: 1px solid #D9D9D9; }
+
+/* ==========================================================================
+  Component: c-icon-list
+   ========================================================================== */
+.c-icon-list .c-icon-list__item + .c-icon-list__item {
+  margin: 1.6rem 0 0 0; }
+
+.c-icon-list--horizontal {
+  display: flex;
+  align-items: center; }
+  .c-icon-list--horizontal .c-icon-list__item + .c-icon-list__item {
+    margin: 0 0 0 2.4rem; }
+
+.c-icon-list__item {
+  display: flex;
+  align-items: center; }
+  .c-icon-list__item .o-svg-icon {
+    color: #999999;
+    margin-right: 0.8rem; }
 
 /* ==========================================================================
   Component: Text Field
