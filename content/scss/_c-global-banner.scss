@@ -8,13 +8,10 @@
   min-height: 5.6rem;
   display: flex;
   align-items: center;
-  
+
   &.c-global-banner--default {
     background-color: $color-blue-500;
-
-    .c-global-banner__label {
-      color: $color-white;
-    }
+    color: $color-white;
 
     .c-button--icon,
     .o-svg-icon {
@@ -30,6 +27,7 @@
   }
 
   .o-svg-icon {
+    margin-right: 1.6rem;
     flex-shrink: 0;
   }
 
@@ -41,10 +39,4 @@
     margin: auto;
     height: 2.4rem;
   }
-}
-
-.c-global-banner__label {
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-left: 1.6rem;
 }
