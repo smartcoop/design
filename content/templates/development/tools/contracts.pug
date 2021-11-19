@@ -39,12 +39,13 @@ block content
                                 li.c-filter-pill-list__item
                                     +c-filter-pill({}) Description
                 .c-toolbar__right
-                    .c-toolbar__item
-                        .o-form-group-layout.o-form-group-layout--inline.u-spacer-left
-                            .o-form-group
-                                label.o-form-group__label(for="sortOrder") Sort by
-                                .o-form-group__controls
-                                    +c-select({ id: 'sortOrder', value: ['Start date ascending', 'Start date descending', 'Client ascending', 'Client descending']})
+                    if !isEmpty
+                        .c-toolbar__item
+                            .o-form-group-layout.o-form-group-layout--inline.u-spacer-left
+                                .o-form-group
+                                    label.o-form-group__label(for="sortOrder") Sort by
+                                    .o-form-group__controls
+                                        +c-select({ id: 'sortOrder', value: ['Start date ascending', 'Start date descending', 'Client ascending', 'Client descending']})
                     .c-toolbar__item
                         .u-spacer-left
                             +c-button({skin: 'primary', icon: 'add'}) Add item
