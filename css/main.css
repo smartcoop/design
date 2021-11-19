@@ -2554,9 +2554,8 @@ a.c-card:hover {
   display: flex;
   align-items: center; }
   .c-global-banner.c-global-banner--default {
-    background-color: #1267FB; }
-    .c-global-banner.c-global-banner--default .c-global-banner__label {
-      color: #FFFFFF; }
+    background-color: #1267FB;
+    color: #FFFFFF; }
     .c-global-banner.c-global-banner--default .c-button--icon,
     .c-global-banner.c-global-banner--default .o-svg-icon {
       color: #FFFFFF; }
@@ -2565,6 +2564,7 @@ a.c-card:hover {
     .c-global-banner.c-global-banner--warning .o-svg-icon {
       color: #595959; }
   .c-global-banner .o-svg-icon {
+    margin-right: 1.6rem;
     flex-shrink: 0; }
   .c-global-banner .c-button--icon {
     position: absolute;
@@ -2573,11 +2573,6 @@ a.c-card:hover {
     bottom: 0;
     margin: auto;
     height: 2.4rem; }
-
-.c-global-banner__label {
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-left: 1.6rem; }
 
 /* ==========================================================================
   Component: hr
