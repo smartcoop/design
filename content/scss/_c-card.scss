@@ -41,3 +41,28 @@ a.c-card:hover {
   padding: $c-card-padding;
 }
 
+.c-card__body--with-actions {
+
+  @media (min-width: $g-bp2) {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+
+.c-card__content {
+  flex: 1;
+}
+
+.c-card__actions {
+  display: flex;
+  align-items: center;
+
+  .c-button-toolbar {
+    margin-left: auto;
+  }
+
+  @media (max-width: $g-bp2) {
+    margin-bottom: 1.6rem;
+  }
+}

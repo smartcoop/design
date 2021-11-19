@@ -63,7 +63,7 @@ block content
                         +c-button({skin: 'primary', icon: 'add'}) Add item
         else
             .u-spacer-l
-                .o-card-grid.medium-up-2
+                .o-card-grid.small-up-1
                     each val in [1,2,3,4,5,6,7,8,9,10]
                         +c-contract-card({
                                 title: 'Amet minim mollit',
@@ -71,7 +71,8 @@ block content
                                 month: 'September 2021',
                                 days: ['10','12','13'],
                                 client: 'Client name',
-                                status: 'Pending'
+                                status: 'Pending',
+                                amount: "1000"
 
                         })
 
