@@ -1,0 +1,28 @@
+/* ==========================================================================
+  Component: c-icon-list
+   ========================================================================== */
+
+.c-icon-list {
+  .c-icon-list__item + .c-icon-list__item {
+    margin: 1.6rem 0 0 0;
+  }
+}
+
+.c-icon-list--horizontal {
+  display: flex;
+  align-items: center;
+
+  .c-icon-list__item + .c-icon-list__item {
+    margin: 0 0 0 $g-spacer-unit * 3;
+  }
+}
+
+.c-icon-list__item {
+  display: flex;
+  align-items: center;
+
+  .o-svg-icon {
+    color: $color-gray-400;
+    margin-right: 0.8rem;
+  }
+}
