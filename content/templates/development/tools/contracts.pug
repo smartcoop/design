@@ -47,8 +47,7 @@ block content
                                     .o-form-group__controls
                                         +c-select({ id: 'sortOrder', value: ['Start date ascending', 'Start date descending', 'Client ascending', 'Client descending']})
                     .c-toolbar__item
-                        .u-spacer-left
-                            +c-button({skin: 'primary', icon: 'add'}) Add item
+                        +c-button({skin: 'primary', icon: 'add'}) Add item
 
     .u-scroll-wrapper-body
         if isEmpty
