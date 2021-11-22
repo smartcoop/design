@@ -1451,7 +1451,6 @@ abbr[title] {
   line-height: 3.2rem;
   border-radius: 50%;
   text-align: center;
-  background-color: #E5E5E5;
   color: #595959;
   display: inline-flex;
   align-items: center;
@@ -1464,15 +1463,16 @@ abbr[title] {
     margin: auto; }
 
 /* Skins
-   ========================================================================== */
+========================================================================== */
+.c-avatar--default {
+  background-color: #F2F2F2;
+  mix-blend-mode: multiply; }
+
 .c-avatar--success {
   background-color: #00A57D; }
 
 .c-avatar--primary {
   background-color: #FF4054; }
-
-.c-avatar--muted {
-  background-color: #E5E5E5; }
 
 /* Sizes
    ========================================================================== */
