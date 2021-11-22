@@ -50,7 +50,7 @@ block append headerStyles
             display: block;
             padding: .8rem 1.6rem;
             color: #333
-            
+
         }
         #component-docs img {
             background: #F2F2F2;
@@ -73,7 +73,7 @@ block content
                     .c-input-group__prepend
                         +icon('search')
                     input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
-            
+
             .c-navbar-components.u-padding-bottom-xl
                 .c-navbar-components__header
                     .c-toolbar
@@ -123,10 +123,9 @@ block content
                 .c-display
                     p(style="margin-top: 0;") Please choose an item in the navigation. Or choose one of the popular components:
 
-                ul.o-panel-grid#component-docs
+                ul.o-card-grid#component-docs
                     each item in obj
                         li
-                            a.c-panel(href="/development/docs/c-"+item.ref+".html")
-                                .c-panel__content
-                                    img(src="/images/component-illustrations/"+item.ref+".png" alt="")
-                                    span #{item.name}
+                            a.c-card(href="/development/docs/c-"+item.ref+".html")
+                                img(src="/images/component-illustrations/"+item.ref+".png" alt="")
+                                span #{item.name}
