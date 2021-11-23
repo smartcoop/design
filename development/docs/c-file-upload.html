@@ -581,27 +581,22 @@
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <label class="o-form-group__label" for="fileUpload">Label</label>
-                                <div class="c-file-upload">
-                                    <input type="file" id="fileUpload" />
-                                    <div class="c-file-upload__content">
-                                        <div class="u-spacer-bottom">
-                                            <button class="c-button c-button--secondary" type="button">
-                                                <span class="c-button__content">
-                                                    <div class="o-svg-icon o-svg-icon-attachment  ">
-                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M19.463 5.57572C18.7758 4.82596 17.5346 4.77976 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.69289C16.3836 7.30237 17.0168 7.30237 17.4073 7.69289C17.7978 8.08342 17.7978 8.71658 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.19289C16.8606 2.62536 19.408 2.57435 20.9225 4.2082C22.4748 5.77661 22.5205 8.31156 20.8931 9.82132L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.39289C12.0836 3.00237 12.7168 3.00237 13.1073 3.39289C13.4978 3.78342 13.4978 4.41658 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.39289C19.5033 8.38265 19.5138 8.37263 19.5245 8.36284C20.2742 7.67556 20.3204 6.43445 19.4931 5.60711C19.4828 5.59686 19.4728 5.5864 19.463 5.57572Z" fill="#595959" />
-                                                        </svg>
-                                                    </div>
-                                                    <span class="c-button__label">Upload document</span>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <p>Drag your file here or click the button to select a file</p>
-                                    </div>
+                        <div class="c-file-upload">
+                            <input type="file" />
+                            <div class="c-file-upload__content">
+                                <div class="u-spacer-bottom">
+                                    <button class="c-button c-button--secondary" type="button">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-attachment  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M19.463 5.57572C18.7758 4.82596 17.5346 4.77976 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.69289C16.3836 7.30237 17.0168 7.30237 17.4073 7.69289C17.7978 8.08342 17.7978 8.71658 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.19289C16.8606 2.62536 19.408 2.57435 20.9225 4.2082C22.4748 5.77661 22.5205 8.31156 20.8931 9.82132L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.39289C12.0836 3.00237 12.7168 3.00237 13.1073 3.39289C13.4978 3.78342 13.4978 4.41658 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.39289C19.5033 8.38265 19.5138 8.37263 19.5245 8.36284C20.2742 7.67556 20.3204 6.43445 19.4931 5.60711C19.4828 5.59686 19.4728 5.5864 19.463 5.57572Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <span class="c-button__label">Upload document</span>
+                                        </span>
+                                    </button>
                                 </div>
+                                <p>Drag your file here or click the button to select a file</p>
                             </div>
                         </div>
                     </div>
@@ -610,41 +605,226 @@
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot; for=&quot;fileUpload&quot;&gt;Label&lt;/label&gt;
-        &lt;div class=&quot;c-file-upload&quot;&gt;
-            &lt;input type=&quot;file&quot; id=&quot;fileUpload&quot; /&gt;
-            &lt;div class=&quot;c-file-upload__content&quot;&gt;
-                &lt;div class=&quot;u-spacer-bottom&quot;&gt;
-                    &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
-                        &lt;span class=&quot;c-button__content&quot;&gt;
-                            &lt;div class=&quot;o-svg-icon o-svg-icon-attachment  &quot;&gt;
-                                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-                                    &lt;path d=&quot;M19.463 5.57572C18.7758 4.82596 17.5346 4.77976 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.69289C16.3836 7.30237 17.0168 7.30237 17.4073 7.69289C17.7978 8.08342 17.7978 8.71658 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.19289C16.8606 2.62536 19.408 2.57435 20.9225 4.2082C22.4748 5.77661 22.5205 8.31156 20.8931 9.82132L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.39289C12.0836 3.00237 12.7168 3.00237 13.1073 3.39289C13.4978 3.78342 13.4978 4.41658 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.39289C19.5033 8.38265 19.5138 8.37263 19.5245 8.36284C20.2742 7.67556 20.3204 6.43445 19.4931 5.60711C19.4828 5.59686 19.4728 5.5864 19.463 5.57572Z&quot; fill=&quot;#595959&quot; /&gt;
-                                &lt;/svg&gt;
-                            &lt;/div&gt;
-                            &lt;span class=&quot;c-button__label&quot;&gt;Upload document&lt;/span&gt;
-                        &lt;/span&gt;
-                    &lt;/button&gt;
-                &lt;/div&gt;
-                &lt;p&gt;Drag your file here or click the button to select a file&lt;/p&gt;
-            &lt;/div&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-file-upload&quot;&gt;
+    &lt;input type=&quot;file&quot; /&gt;
+    &lt;div class=&quot;c-file-upload__content&quot;&gt;
+        &lt;div class=&quot;u-spacer-bottom&quot;&gt;
+            &lt;button class=&quot;c-button c-button--secondary&quot; type=&quot;button&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-attachment  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M19.463 5.57572C18.7758 4.82596 17.5346 4.77976 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.69289C16.3836 7.30237 17.0168 7.30237 17.4073 7.69289C17.7978 8.08342 17.7978 8.71658 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.19289C16.8606 2.62536 19.408 2.57435 20.9225 4.2082C22.4748 5.77661 22.5205 8.31156 20.8931 9.82132L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.39289C12.0836 3.00237 12.7168 3.00237 13.1073 3.39289C13.4978 3.78342 13.4978 4.41658 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.39289C19.5033 8.38265 19.5138 8.37263 19.5245 8.36284C20.2742 7.67556 20.3204 6.43445 19.4931 5.60711C19.4828 5.59686 19.4728 5.5864 19.463 5.57572Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;c-button__label&quot;&gt;Upload document&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/button&gt;
         &lt;/div&gt;
+        &lt;p&gt;Drag your file here or click the button to select a file&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label(for=&quot;fileUpload&quot;) Label
-        .c-file-upload
-            input(type=&quot;file&quot; id=&quot;fileUpload&quot;)
-            .c-file-upload__content
-                .u-spacer-bottom
-                    +c-button({ icon: 'attachment'}) Upload document
-                p Drag your file here or click the button to select a file
+                            <pre class="br-sample-markup br-sample-markup-pug">.c-file-upload
+    input(type=&quot;file&quot;)
+    .c-file-upload__content
+        .u-spacer-bottom
+            +c-button({ icon: 'attachment'}) Upload document
+        p Drag your file here or click the button to select a file
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-02-c-file-upload-dropping">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">File upload (dropping)</h3>
+                        <a class="br-sample-header-link" href="#component-02-c-file-upload-dropping">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <div class="c-file-upload c-file-upload--gray-30">
+                            <input type="file" />
+                            <div class="c-file-upload__content">
+                                <p>Release file here...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-file-upload c-file-upload--gray-30&quot;&gt;
+    &lt;input type=&quot;file&quot; /&gt;
+    &lt;div class=&quot;c-file-upload__content&quot;&gt;
+        &lt;p&gt;Release file here...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.c-file-upload.c-file-upload--gray-30
+    input(type=&quot;file&quot;)
+    .c-file-upload__content
+        p Release file here...
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-03-c-file-upload-loading">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">File upload (loading)</h3>
+                        <a class="br-sample-header-link" href="#component-03-c-file-upload-loading">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <div class="c-file-upload">
+                            <input type="file" disabled="disabled" />
+                            <div class="c-file-upload__content">
+                                <div class="c-file-upload__status">Uploading...</div>
+                                <div class="c-progress-bar" style="--value: 0.6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-file-upload&quot;&gt;
+    &lt;input type=&quot;file&quot; disabled=&quot;disabled&quot; /&gt;
+    &lt;div class=&quot;c-file-upload__content&quot;&gt;
+        &lt;div class=&quot;c-file-upload__status&quot;&gt;Uploading...&lt;/div&gt;
+        &lt;div class=&quot;c-progress-bar&quot; style=&quot;--value: 0.6&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.c-file-upload
+    input(type=&quot;file&quot; disabled)
+    .c-file-upload__content
+        .c-file-upload__status Uploading...
+        .c-progress-bar(style=&quot;--value: 0.6&quot;)
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-04-c-file-upload-success">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">File upload (success)</h3>
+                        <a class="br-sample-header-link" href="#component-04-c-file-upload-success">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <div class="c-file-upload">
+                            <input type="file" disabled="disabled" />
+                            <div class="c-file-upload__content">
+                                <div class="c-file-upload__status">
+                                    <span>Upload complete</span>
+                                    <div class="o-svg-icon o-svg-icon-circle-check o-svg-icon--green ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM16.664 8.753C16.862 8.92918 16.9819 9.17675 16.9975 9.44132C17.0131 9.70589 16.923 9.96582 16.747 10.164L11.414 16.164C11.3202 16.2696 11.2051 16.3541 11.0762 16.412C10.9474 16.4698 10.8077 16.4997 10.6665 16.4997C10.5253 16.4997 10.3856 16.4698 10.2568 16.412C10.1279 16.3541 10.0128 16.2696 9.919 16.164L7.253 13.164C7.08712 12.9645 7.0053 12.7083 7.02482 12.4495C7.04434 12.1907 7.16368 11.9497 7.35762 11.7773C7.55156 11.6049 7.80492 11.5147 8.06418 11.5256C8.32344 11.5366 8.56828 11.6479 8.747 11.836L10.667 13.995L15.253 8.835C15.4293 8.63716 15.677 8.51739 15.9415 8.50202C16.2061 8.48664 16.4659 8.57691 16.664 8.753Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="c-progress-bar c-progress-bar--success" style="--value: 1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-file-upload&quot;&gt;
+    &lt;input type=&quot;file&quot; disabled=&quot;disabled&quot; /&gt;
+    &lt;div class=&quot;c-file-upload__content&quot;&gt;
+        &lt;div class=&quot;c-file-upload__status&quot;&gt;
+            &lt;span&gt;Upload complete&lt;/span&gt;
+            &lt;div class=&quot;o-svg-icon o-svg-icon-circle-check o-svg-icon--green &quot;&gt;
+                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                    &lt;path d=&quot;M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM16.664 8.753C16.862 8.92918 16.9819 9.17675 16.9975 9.44132C17.0131 9.70589 16.923 9.96582 16.747 10.164L11.414 16.164C11.3202 16.2696 11.2051 16.3541 11.0762 16.412C10.9474 16.4698 10.8077 16.4997 10.6665 16.4997C10.5253 16.4997 10.3856 16.4698 10.2568 16.412C10.1279 16.3541 10.0128 16.2696 9.919 16.164L7.253 13.164C7.08712 12.9645 7.0053 12.7083 7.02482 12.4495C7.04434 12.1907 7.16368 11.9497 7.35762 11.7773C7.55156 11.6049 7.80492 11.5147 8.06418 11.5256C8.32344 11.5366 8.56828 11.6479 8.747 11.836L10.667 13.995L15.253 8.835C15.4293 8.63716 15.677 8.51739 15.9415 8.50202C16.2061 8.48664 16.4659 8.57691 16.664 8.753Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;c-progress-bar c-progress-bar--success&quot; style=&quot;--value: 1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.c-file-upload
+    input(type=&quot;file&quot; disabled)
+    .c-file-upload__content
+        .c-file-upload__status
+            span Upload complete
+            +icon('circle-check', 'o-svg-icon--green')
+        .c-progress-bar.c-progress-bar--success(style=&quot;--value: 1&quot;)
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-05-c-file-upload-error">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">File upload (error)</h3>
+                        <a class="br-sample-header-link" href="#component-05-c-file-upload-error">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <div class="c-file-upload c-file-upload--error">
+                            <input type="file" disabled="disabled" />
+                            <div class="c-file-upload__content">
+                                <div class="c-file-upload__status">
+                                    <span>Something went wrong while uploading.</span>
+                                    <div class="o-svg-icon o-svg-icon-circle-error o-svg-icon--red ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM7.793 7.793C7.98053 7.60553 8.23484 7.50021 8.5 7.50021C8.76516 7.50021 9.01947 7.60553 9.207 7.793L12 10.586L14.793 7.793C14.8852 7.69749 14.9956 7.62131 15.1176 7.5689C15.2396 7.51649 15.3708 7.4889 15.5036 7.48775C15.6364 7.4866 15.7681 7.5119 15.891 7.56218C16.0139 7.61246 16.1255 7.68671 16.2194 7.7806C16.3133 7.8745 16.3875 7.98615 16.4378 8.10905C16.4881 8.23194 16.5134 8.36362 16.5123 8.4964C16.5111 8.62918 16.4835 8.7604 16.4311 8.8824C16.3787 9.00441 16.3025 9.11475 16.207 9.207L13.414 12L16.207 14.793C16.3892 14.9816 16.49 15.2342 16.4877 15.4964C16.4854 15.7586 16.3802 16.0094 16.1948 16.1948C16.0094 16.3802 15.7586 16.4854 15.4964 16.4877C15.2342 16.49 14.9816 16.3892 14.793 16.207L12 13.414L9.207 16.207C9.0184 16.3892 8.7658 16.49 8.5036 16.4877C8.2414 16.4854 7.99059 16.3802 7.80518 16.1948C7.61977 16.0094 7.5146 15.7586 7.51233 15.4964C7.51005 15.2342 7.61084 14.9816 7.793 14.793L10.586 12L7.793 9.207C7.60553 9.01947 7.50021 8.76516 7.50021 8.5C7.50021 8.23484 7.60553 7.98053 7.793 7.793Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button class="c-button c-button--danger-secondary" type="button">
+                                    <span class="c-button__content">
+                                        <span class="c-button__label">Try again</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-file-upload c-file-upload--error&quot;&gt;
+    &lt;input type=&quot;file&quot; disabled=&quot;disabled&quot; /&gt;
+    &lt;div class=&quot;c-file-upload__content&quot;&gt;
+        &lt;div class=&quot;c-file-upload__status&quot;&gt;
+            &lt;span&gt;Something went wrong while uploading.&lt;/span&gt;
+            &lt;div class=&quot;o-svg-icon o-svg-icon-circle-error o-svg-icon--red &quot;&gt;
+                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                    &lt;path d=&quot;M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM7.793 7.793C7.98053 7.60553 8.23484 7.50021 8.5 7.50021C8.76516 7.50021 9.01947 7.60553 9.207 7.793L12 10.586L14.793 7.793C14.8852 7.69749 14.9956 7.62131 15.1176 7.5689C15.2396 7.51649 15.3708 7.4889 15.5036 7.48775C15.6364 7.4866 15.7681 7.5119 15.891 7.56218C16.0139 7.61246 16.1255 7.68671 16.2194 7.7806C16.3133 7.8745 16.3875 7.98615 16.4378 8.10905C16.4881 8.23194 16.5134 8.36362 16.5123 8.4964C16.5111 8.62918 16.4835 8.7604 16.4311 8.8824C16.3787 9.00441 16.3025 9.11475 16.207 9.207L13.414 12L16.207 14.793C16.3892 14.9816 16.49 15.2342 16.4877 15.4964C16.4854 15.7586 16.3802 16.0094 16.1948 16.1948C16.0094 16.3802 15.7586 16.4854 15.4964 16.4877C15.2342 16.49 14.9816 16.3892 14.793 16.207L12 13.414L9.207 16.207C9.0184 16.3892 8.7658 16.49 8.5036 16.4877C8.2414 16.4854 7.99059 16.3802 7.80518 16.1948C7.61977 16.0094 7.5146 15.7586 7.51233 15.4964C7.51005 15.2342 7.61084 14.9816 7.793 14.793L10.586 12L7.793 9.207C7.60553 9.01947 7.50021 8.76516 7.50021 8.5C7.50021 8.23484 7.60553 7.98053 7.793 7.793Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;c-button c-button--danger-secondary&quot; type=&quot;button&quot;&gt;
+            &lt;span class=&quot;c-button__content&quot;&gt;
+                &lt;span class=&quot;c-button__label&quot;&gt;Try again&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.c-file-upload.c-file-upload--error
+    input(type=&quot;file&quot; disabled)
+    .c-file-upload__content
+        .c-file-upload__status
+            span Something went wrong while uploading.
+            +icon('circle-error', 'o-svg-icon--red')
+        +c-button({skin: 'danger-secondary'}) Try again
 </pre>
                         </div>
                     </div>

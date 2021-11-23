@@ -1689,7 +1689,7 @@ abbr[title] {
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 500;
   display: inline-flex; }
   .c-button .o-svg-icon {
     height: 2rem;
@@ -2416,20 +2416,8 @@ a.c-card:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center; }
-
-.c-file-upload__content {
-  border: 0.1rem dashed #B3B3B3;
-  border-radius: .3rem;
-  width: 100%;
-  padding: 3rem;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  min-height: 12rem; }
+  .c-file-upload .c-progress-bar {
+    width: 60%; }
 
 .c-file-upload input[type="file"] {
   position: absolute;
@@ -2446,6 +2434,33 @@ a.c-card:hover {
 
 .c-file-upload input[type="file"]:hover:not([disabled]) ~ .c-file-upload__content {
   background-color: #F6F6F6; }
+
+.c-file-upload--gray-30 .c-file-upload__content {
+  background-color: #F6F6F6; }
+
+.c-file-upload--error .c-file-upload__content {
+  border-color: #FF4054; }
+
+.c-file-upload__content {
+  border: 0.1rem dashed #B3B3B3;
+  border-radius: .3rem;
+  width: 100%;
+  padding: 3rem;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 12rem; }
+
+.c-file-upload__status {
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center; }
+  .c-file-upload__status span + .o-svg-icon {
+    margin-left: 0.4rem; }
 
 /* ==========================================================================
   c-filter-pill
@@ -3197,7 +3212,7 @@ textarea.c-input--h-large {
    ========================================================================== */
 .c-progress-bar {
   display: flex;
-  flex: 1;
+  width: 100%;
   height: 0.4rem;
   background-color: #CCCCCC;
   border-radius: .3rem;
