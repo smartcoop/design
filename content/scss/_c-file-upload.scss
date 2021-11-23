@@ -22,6 +22,7 @@
   top: 0;
   left: 0;
   opacity: 0.0001;
+  z-index: -1;
 }
 
 .c-file-upload input[type="file"]:focus:not([disabled]) ~ .c-file-upload__content {
@@ -45,7 +46,7 @@
 
 .c-file-upload__content {
   border: 0.1rem dashed $color-gray-300;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   width: 100%;
   padding: 3rem;
   height: 100%;
