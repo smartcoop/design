@@ -38,12 +38,6 @@ containsCustom: true
             <td>Determines the size of the avatar</td>
         </tr>
         <tr>
-            <td>skin</td>
-            <td>string</td>
-            <td><code>default</code>, <code>success</code>, <code>primary</code></td>
-            <td>Determines the skin of an avatar. The default skin is set to <code>default</code>.</td>
-        </tr>
-        <tr>
             <td>href</td>
             <td>string</td>
             <td>This can be any url or id.</td>
