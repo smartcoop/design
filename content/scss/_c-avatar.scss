@@ -26,6 +26,8 @@ $c-avatar-dimensions-xs: 1.8rem !default;
   min-width: $c-avatar-dimensions;
   min-height: $c-avatar-dimensions;
   line-height: $c-avatar-dimensions;
+  background-color: $c-avatar-default-bg;
+  mix-blend-mode: multiply;
   border-radius: 50%;
   text-align: center;
   color: $color-icon;
@@ -40,22 +42,6 @@ $c-avatar-dimensions-xs: 1.8rem !default;
     top: -0.1rem;
     margin: auto;
   }
-}
-
-/* Skins
-========================================================================== */
-
-.c-avatar--default {
-  background-color: $c-avatar-default-bg;
-  mix-blend-mode: multiply;
-}
-
-.c-avatar--success {
-  background-color: $color-green-500;
-}
-
-.c-avatar--primary {
-  background-color: $color-primary;
 }
 
 /* Sizes
