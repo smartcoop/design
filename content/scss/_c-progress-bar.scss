@@ -17,7 +17,7 @@
   &:before {
     content: "";
     width: calc(var(--value) * 100%);
-    background: $color-primary;
+    background: $color-blue-500;
     animation: fillBar 250ms linear 1;
   }
 }
