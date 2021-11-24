@@ -1455,6 +1455,8 @@ abbr[title] {
   min-width: 3.2rem;
   min-height: 3.2rem;
   line-height: 3.2rem;
+  background-color: #F2F2F2;
+  mix-blend-mode: multiply;
   border-radius: 50%;
   text-align: center;
   color: #595959;
@@ -1467,18 +1469,6 @@ abbr[title] {
     position: relative;
     top: -0.1rem;
     margin: auto; }
-
-/* Skins
-========================================================================== */
-.c-avatar--default {
-  background-color: #F2F2F2;
-  mix-blend-mode: multiply; }
-
-.c-avatar--success {
-  background-color: #00A57D; }
-
-.c-avatar--primary {
-  background-color: #1267FB; }
 
 /* Sizes
    ========================================================================== */
