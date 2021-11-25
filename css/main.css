@@ -1034,10 +1034,14 @@ abbr[title] {
   margin: 1.6rem 0; }
 
 .c-display figure {
-  margin: 1.8rem 0; }
+  margin: 3.2rem 0; }
+
+.c-display figure img {
+  border: 0.1rem solid #E5E5E5; }
 
 .c-display figcaption {
-  color: #808080; }
+  color: #808080;
+  font-size: 1.4rem; }
 
 /* ==========================================================================
   Shared styles between c-display and c-content
