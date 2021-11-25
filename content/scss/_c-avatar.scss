@@ -7,7 +7,7 @@
 /* Variables
    ========================================================================== */
 
-$c-avatar-default-bg: $color-gray-100 !default;
+$c-avatar-default-bg: $color-gray-50 !default;
 $c-avatar-dimensions-xl: 9.6rem !default;
 $c-avatar-dimensions-l: 6.4rem !default;
 $c-avatar-dimensions-m: 4.8rem !default;
@@ -26,9 +26,10 @@ $c-avatar-dimensions-xs: 1.8rem !default;
   min-width: $c-avatar-dimensions;
   min-height: $c-avatar-dimensions;
   line-height: $c-avatar-dimensions;
+  background-color: $c-avatar-default-bg;
+  mix-blend-mode: multiply;
   border-radius: 50%;
   text-align: center;
-  background-color: $c-avatar-default-bg;
   color: $color-icon;
   display: inline-flex;
   align-items: center;
@@ -41,21 +42,6 @@ $c-avatar-dimensions-xs: 1.8rem !default;
     top: -0.1rem;
     margin: auto;
   }
-}
-
-/* Skins
-   ========================================================================== */
-
-.c-avatar--success {
-  background-color: $color-green-500;
-}
-
-.c-avatar--primary {
-  background-color: $color-red-500;
-}
-
-.c-avatar--muted {
-  background-color: $c-avatar-default-bg;
 }
 
 /* Sizes

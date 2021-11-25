@@ -4,22 +4,15 @@ block append pageVariables
     - var moduleTitle = "Dashboard"
 
 block content
-
     .c-app-layout-inner
-        .c-app-layout-inner__sidebar.u-bg-gray-50
+        .c-app-layout-inner__sidebar
             ul.c-side-menu
                 li.c-side-menu__item.c-side-menu__item--active
-                    a.c-side-menu__link(href="#")
-                        +icon('document')
-                        .c-sidebar-item__label Quotes &amp; invoices
+                    a.c-side-menu__link(href="#") Quotes &amp; invoices
                 li.c-side-menu__item
-                    a.c-side-menu__link(href="#")
-                        +icon('bills')
-                        .c-sidebar-item__label Funding
+                    a.c-side-menu__link(href="#") Funding
                 li.c-side-menu__item
-                    a.c-side-menu__link(href="#")
-                        +icon('tag')
-                        .c-sidebar-item__label Expenses
+                    a.c-side-menu__link(href="#") Expenses
 
         .c-app-layout-inner__main
             .u-scroll-wrapper
@@ -76,3 +69,4 @@ block content
                                         +c-form-group({ label: 'Input', id: 'input'})
                                         +c-form-group({ label: 'Select', id: 'select', type: 'select', value: ['Choose an item','A','B', 'C'], helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
                                         +c-form-group({ label: 'Textarea', id: 'textarea', type: 'textarea', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+

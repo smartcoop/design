@@ -26,15 +26,16 @@ mixin c-contract-card({ title, ref, month, days=[], client, amount, status })
                                         | #{day},
                                         |
                         h3.c-panel__title= title
+                        .u-spacer-top-s
+                            span.c-body-2.u-text-muted= ref
 
-                    .o-grid-col-bp3-4.u-spacer-top-l
-                        ul.c-icon-list
-                            li.c-icon-list__item
-                                +icon('user')
-                                span= client
-                            li.c-icon-list__item
-                                +icon('bills')
-                                span € #{amount}
+                    .o-grid-col-bp3-4
+                        .o-flex.o-flex--vertical-center.u-maximize-height
+                            ul.c-icon-list.u-padding-vertical
+                                li.c-icon-list__item
+                                    +icon('user')
+                                    span= client
+                                li.c-icon-list__item
+                                    +icon('bills')
+                                    span € #{amount}
 
-                .u-spacer-top-s
-                    span.c-body-2.u-text-muted= ref

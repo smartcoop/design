@@ -1,0 +1,7 @@
+.c-file-upload.c-file-upload--error
+    input(type="file" disabled)
+    .c-file-upload__content
+        .c-file-upload__status
+            span Something went wrong while uploading.
+            +icon('circle-error', 'o-svg-icon--red')
+        +c-button({skin: 'danger-secondary'}) Try again
