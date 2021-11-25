@@ -32,12 +32,12 @@
 }
 
 .c-file-upload input[type="file"]:hover:not([disabled]) ~ .c-file-upload__content {
-  background-color: $color-gray-30;
+  background-color: $color-gray-25;
 }
 
 
-.c-file-upload--gray-30 .c-file-upload__content {
-  background-color: $color-gray-30;
+.c-file-upload--gray-25 .c-file-upload__content {
+  background-color: $color-gray-25;
 }
 
 .c-file-upload--error .c-file-upload__content {
