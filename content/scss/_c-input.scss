@@ -94,11 +94,12 @@ textarea.c-input--h-large { height: 20rem; }
 
 .c-input-group {
   display: flex;
-  align-items: flex-start;
+  position: relative;
+
 }
 
-.c-input-group__item {
-  flex: 1;
+.c-input-group__input {
+  width: calc(100% - 3.6rem + 1px);
 }
 
 .c-input-group__append,
@@ -113,16 +114,21 @@ textarea.c-input--h-large { height: 20rem; }
   align-items: center;
   padding: 0 0.8rem;
   border: 1px solid $color-gray-200;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .c-input-group__prepend {
   border-radius: 0.4rem 0 0 0.4rem;
   margin-right: -1px;
+  left: 0;
 }
 
 .c-input-group__append {
   border-radius: 0 0.4rem 0.4rem 0;
   margin-left: -1px;
+  right: 0;
 }
 
 .c-input-group > .c-input:not(:last-child) {
