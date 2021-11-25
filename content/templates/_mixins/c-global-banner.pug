@@ -9,5 +9,5 @@
 mixin c-global-banner({skin="default", icon, message})
     .c-global-banner(class="c-global-banner--"+skin)&attributes(attributes)
         +icon(icon? icon : 'circle-information', 'o-svg-icon--'+skin)
-        .c-global-banner__label!= marked(message)
+        p.c-body-1!= marked(message)
         +c-button({skin: 'borderless', layout: 'icon-only', icon: 'close'})(data-banner-close) Close

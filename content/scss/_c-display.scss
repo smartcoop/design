@@ -134,10 +134,15 @@
   }
 
   figure {
-    margin: 1.8rem 0;
+    margin: 3.2rem 0;
+  }
+  
+  figure img {
+    border: .1rem solid $color-gray-100;
   }
 
   figcaption {
     color: $color-muted;
+    font-size: 1.4rem;
   }
 }

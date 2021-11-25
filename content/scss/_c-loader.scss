@@ -1,0 +1,72 @@
+/* ==========================================================================
+  c-loader
+ ========================================================================== */
+
+
+/* Variables
+   ========================================================================== */
+
+$c-loader-color: $color-gray-300 !default;
+
+/* Component
+   ========================================================================== */
+
+.c-loader {
+  display: inline-block;
+  position: relative;
+  width: 3rem;
+  height: 1.6rem;
+
+  &:before {
+    animation: loader-wave infinite 1s linear;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    box-shadow: 1rem 0 $c-loader-color, 2rem 0 $c-loader-color, 3rem 0 $c-loader-color;
+    border-radius: 50%;
+    margin-top: -0.2rem;
+    margin-left: -2.2rem;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes #{loader-wave} {
+  0% {
+    box-shadow: 1rem -0 $c-loader-color, 2rem -0 $c-loader-color, 3rem 0 $c-loader-color;
+  }
+
+  10% {
+    box-shadow: 1rem -0.3rem $c-loader-color, 2rem -0 $c-loader-color, 3rem -0 $c-loader-color;
+  }
+
+  20% {
+    box-shadow: 1rem -0.6rem $c-loader-color, 2rem -0.3rem $c-loader-color, 3rem -0 $c-loader-color;
+  }
+
+  30% {
+    box-shadow: 1rem -0.3rem $c-loader-color, 2rem -0.6rem $c-loader-color, 3rem -0.3rem $c-loader-color;
+  }
+
+  40% {
+    box-shadow: 1rem -0 $c-loader-color, 2rem -0.3rem $c-loader-color, 3rem -0.6rem $c-loader-color;
+  }
+
+  50% {
+    box-shadow: 1rem -0 $c-loader-color, 2rem -0 $c-loader-color, 3rem -0.3rem $c-loader-color;
+  }
+
+  60% {
+    box-shadow: 1rem -0 $c-loader-color, 2rem -0 $c-loader-color, 3rem -0 $c-loader-color;
+  }
+
+  100% {
+    box-shadow: 1rem -0 $c-loader-color, 2rem -0 $c-loader-color, 3rem -0 $c-loader-color;
+  }
+}

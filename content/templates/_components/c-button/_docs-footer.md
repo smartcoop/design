@@ -61,5 +61,11 @@ containsCustom: true
             <td><code>true</code>, <code>false</code></td>
             <td>Determines if the button is a link button. The default state is <code>false</code></td>
         </tr>
+        <tr>
+            <td>isLoading</td>
+            <td>boolean</td>
+            <td><code>true</code>, <code>false</code></td>
+            <td>Determines if the button has a loading state. The default state is <code>false</code></td>
+        </tr>
     </tbody>
 </table>

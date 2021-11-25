@@ -2,15 +2,18 @@
     Mixin Avatar - Create a avatar
     @param {Object} props
     @param {string} size - the size of a avatar (regular, small)
+    @param {string} skin - the skin of the avatar (default, success, primary)
     @param {string} href - if href
     @param {string} img - image reference
     @param {string} alt - alt tag of an image
     @param {string} icon - icon name
 
-mixin c-avatar({img, href, alt = "avatar-image", icon, size = "regular"})
+mixin c-avatar({img, href, alt = "avatar-image", icon, size})
     - var imgClass = ""
     - if (img) imgClass = " c-avatar--img"
-    - var classListing = "c-avatar"+imgClass+" c-avatar--"+size
+    - var sizeClass = ""
+    - if (size) sizeClass = " c-avatar--"+size
+    - var classListing = "c-avatar"+imgClass+sizeClass
 
     if href
         a(href=href class=classListing)&attributes(attributes)

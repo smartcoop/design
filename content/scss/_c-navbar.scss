@@ -84,7 +84,11 @@
 /* Sizes
    ========================================================================== */
 
-.c-navbar--small {
+.c-navbar--small{
+  height: $g-bar-size-small;
+}
+
+.c-navbar--medium {
   height: $g-bar-size-medium;
 }
 
