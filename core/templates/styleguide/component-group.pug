@@ -1,10 +1,10 @@
-extends ../../../content/templates/development/component-documentation
+extends index
 
 block append pageVariables
     - var pageTitle = componentGroup.docs && componentGroup.docs.attributes.title || componentGroup.group.id
     - var moduleTitle = pageTitle + ' - ' + config.styleguide.pageTitle
 
-block subContent
+block content
 
     if !componentGroup.docs
         h1.br-componentgroup-header(class=styleguideComponentGroupHeaderClass)= componentGroup.group.id
