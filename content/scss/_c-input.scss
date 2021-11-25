@@ -99,7 +99,7 @@ textarea.c-input--h-large { height: 20rem; }
 }
 
 .c-input-group__input {
-  width: calc(100% - 3.6rem + 1px);
+  width: calc(100% - 3.6rem);
 }
 
 .c-input-group__append,
@@ -115,27 +115,27 @@ textarea.c-input--h-large { height: 20rem; }
   padding: 0 0.8rem;
   border: 1px solid $color-gray-200;
   position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .c-input-group__prepend {
   border-radius: 0.4rem 0 0 0.4rem;
-  margin-right: -1px;
-  left: 0;
+  border-right: none;
+  ~ .c-input-group__input {
+    margin-left: 36px;
+  }
 }
 
 .c-input-group__append {
   border-radius: 0 0.4rem 0.4rem 0;
-  margin-left: -1px;
+  border-left: none;
   right: 0;
 }
 
-.c-input-group > .c-input:not(:last-child) {
+.c-input-group > .c-input-group__input:not(:last-child) .c-input {
   border-radius: 0.4rem 0 0 0.4rem;
 }
 
-.c-input-group > .c-input:not(:first-child) {
+.c-input-group > .c-input-group__input:not(:first-child) .c-input {
   border-radius: 0 0.4rem 0.4rem 0;
 }
 
