@@ -1,0 +1,81 @@
+extends ../../../index
+
+block append pageVariables
+    - var moduleTitle = "Smart announces an open design system"
+
+block content
+
+    .o-container.o-container--medium
+        .o-container-vertical
+
+            article.c-blog-article
+                .c-blog-article__header
+                    h1.c-d-h1 Smart Design System: Figma Library 1.1 released
+                    p November 25, 2021
+
+                .c-blog-article__content
+                    .c-display
+
+                        p Hi there, this is Johan. I'm a designer working on the design system for Smart from Belgium.
+
+                        p With this blog post I'd like to give an update on Smart's open design system, and more specifically on the new Figma library that we just released.
+
+                        h3 Usage
+
+                        p We're happy to hear that different Smart organisations across Europe have started using the design system, but we haven't heard much chatter on <a href="https://github.com/smartcoop/design/issues">GitHub issues</a>. Feel free to post new issues. Don't be afraid to start a new issue, and just talk about what you want — as long as it's related to the design system we are happy to discuss your comments, thoughts or ideas.
+
+                        h3 Updated Figma files
+
+                        p When we released the design system about 2 months ago we released the code and the Figma designs at the same time. We tagged the design files with “1.0” in Figma whereas the code does not have a specific versioning scheme at the moment.
+
+                        p We've been designing new screens and iterated on the design files for the past two months, but those files were under wraps up until now. Today we released the <a href="https://www.figma.com/community/file/1045654082538933026">update on Figma community</a>.
+
+                        p One change is that the screen designs and the library are in the same file, so that components are linked together. This was not the case with the initial release.
+
+                        p Once again, if you have any comments, feel free to voice them on <a href="https://github.com/smartcoop/design/issues">GitHub issues</a>.
+
+                        h3 What has changed?
+
+                        p A design system is always in flux. You can see the development changelog <a href="/changelog.html">here</a>. The design changelog lives inside the Figma library file. New designs inform what happens on development and vice versa.
+
+                        p Overall, most changes followed the creation of new types of screens.
+
+                        figure
+                            img(src="/images/blogpost-assets/tools-simulation-calculated.jpg" alt="Screenshot of an application layout showing a compensation simulation screen.")
+                            figcaption The compensation simulation screen.
+
+                        p For example, for a compensation simulation tool, we created a left/right layout where the left side of the screens contains a form and the right side contains a result. You can view the template of said page <a href="https://design.smart.coop/development/tools/simulation.html">here</a>.
+
+                        figure
+                            img(src="/images/blogpost-assets/tools-contract-list.jpg" alt="Screenshot of an application layout showing a list of contracts displayed as cards")
+                            figcaption A list of contracts, displayed as cards
+
+                        p Another example is a card list, which has instigated some discussions about what would be the best solution for this type of view. As you can see in the <a href="https://design.smart.coop/development/tools/contracts.html">implementation</a>, we have resorted to a single column for now to make it easier to scan the page.
+
+                        p If you look closely in the newly released design files, we are also working on screens that display a sort of public profile for an application related to trainings and courses.
+
+
+                        figure
+                            img(src="/images/blogpost-assets/public-profile.jpg" alt="Screenshot of an application layout showing a public profile")
+                            figcaption Public profile mockup
+
+                        p These mockups inform new components, such as changes to the side navigation or the addition of a rich text component in Figma (which we don’t have an implementation for yet).
+
+                        figure
+                            img(src="/images/blogpost-assets/public-profile.jpg" alt="Screenshot of an application layout showing a public profile")
+                            figcaption Rich text component used in “Edit training” screen
+
+                        h3 Wrapping up
+
+                        p We hope that by publicly talking about our design work, we can inspire other Smart organisations — and others in general — to improve their front-end and design work.
+
+                        p As noted, once again, feel free to leave a <a href="https://github.com/smartcoop/design/issues">GitHub issue</a> - whether it's about the design files or the development. We really want to start a conversation to make this the best system possible.
+
+                    .o-container-vertical.o-container-vertical--padding-mini
+                        .c-content
+                            p Written by
+                        ul.c-avatar-and-text-list
+                            li.c-avatar-and-text
+                                +c-avatar({ href: "https://github.com/Wolfr/", img: "https://avatars.githubusercontent.com/u/12690?v=4" })
+                                .c-avatar-and-text__text
+                                    p Wolfr
