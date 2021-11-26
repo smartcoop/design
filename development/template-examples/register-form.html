@@ -85,10 +85,10 @@
                         </div>
                         <div class="o-grid-col-6">
                             <div class="o-form-group">
-                                <label class="o-form-group__label" for="registerFormLangue">Language</label>
+                                <label class="o-form-group__label" for="registerFormLanguage">Language</label>
                                 <div class="o-form-group__controls">
                                     <div class="c-select-holder">
-                                        <select class="c-select" id="registerFormLangue">
+                                        <select class="c-select" id="registerFormLanguage">
                                             <option>Français</option>
                                             <option>Nederlands</option>
                                             <option>Deutsch</option>
@@ -697,7 +697,7 @@
                             <div class="o-form-group">
                                 <label class="o-form-group__label" for="registerFormCellPhoneNumber">Mobile number</label>
                                 <div class="o-form-group__controls">
-                                    <input class="c-input" type="text" id="registerFormCellPhoneNumber" />
+                                    <input class="c-input" type="tel" id="registerFormCellPhoneNumber" />
                                 </div>
                             </div>
                         </div>
@@ -705,7 +705,7 @@
                             <div class="o-form-group">
                                 <label class="o-form-group__label" for="registerFormHomePhoneNumber">Home phone number</label>
                                 <div class="o-form-group__controls">
-                                    <input class="c-input" type="text" id="registerFormHomePhoneNumber" />
+                                    <input class="c-input" type="tel" id="registerFormHomePhoneNumber" />
                                 </div>
                             </div>
                         </div>
@@ -713,6 +713,7 @@
                             <div class="o-form-group">
                                 <label class="o-form-group__label" for="registerFormfieldEmail">Email</label>
                                 <div class="o-form-group__controls">
+                                    <input class="c-input" type="email" id="registerFormfieldEmail" />
                                 </div>
                             </div>
                         </div>
@@ -720,7 +721,7 @@
                             <div class="o-form-group">
                                 <label class="o-form-group__label" for="registerFormfieldBirthdate">Birthdate</label>
                                 <div class="o-form-group__controls">
-                                    <input class="c-input" type="date" id="registerFormfieldBirthdate" />
+                                    <input class="c-input" type="date" placeholder="dd/mm/yyyy" id="registerFormfieldBirthdate" />
                                 </div>
                             </div>
                         </div>
@@ -989,7 +990,7 @@
                                 <label class="o-form-group__label" for="registerFormfieldMaritalStatus">Marital status</label>
                                 <div class="o-form-group__controls">
                                     <div class="c-select-holder">
-                                        <select class="c-select" id="registerFormfieldMaritalStatus">
+                                        <select class="c-select" id="registerFormNativeCountry">
                                             <option>Select</option>
                                             <option>Single</option>
                                             <option>Married</option>
@@ -1035,9 +1036,20 @@
                         </div>
                         <div class="o-grid-col-6">
                             <div class="o-form-group">
-                                <label class="o-form-group__label" for="registerFormfieldProfessionalWithholdingTax">Professional withholding tax</label>
+                                <label class="o-form-group__label">Professional withholding tax</label>
                                 <div class="o-form-group__controls">
-                                    <input class="c-input" type="text" id="registerFormfieldProfessionalWithholdingTax" />
+                                    <div class="c-input-group">
+                                        <input class="c-input" type="text" id="registerFormfieldProfessionalWithholdingTax" />
+                                        <div class="c-input-group__append">
+                                            <div class="o-svg-icon o-svg-icon-percent  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="#595959" />
+                                                    <path d="M17 19C18.1046 19 19 18.1046 19 17C19 15.8954 18.1046 15 17 15C15.8954 15 15 15.8954 15 17C15 18.1046 15.8954 19 17 19Z" fill="#595959" />
+                                                    <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
