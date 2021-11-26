@@ -30,7 +30,8 @@ block content
                                         'I carry out an interim assignment on behalf of a client'
                                     ]
 
-                                +c-form-group({ label: 'Service Smart', type: 'select', id: 'servicesSmart', value: smartServices, valueKey: index, selected: input.serviceSmart, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
+                                +c-form-group({label: 'Smart service',id: 'smartService', helperText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+                                    +c-select({id: 'smartService', value: smartServices, valueKey: index})
 
                                 -
                                     var contractTypes = [
@@ -40,7 +41,8 @@ block content
                                         'Student'
                                     ]
 
-                                +c-form-group({ label: 'Contract type', type: 'select', id: 'contractType', value: contractTypes, selected: input.contractType })
+                                +c-form-group({label: 'Contract type', id: 'contractType'})
+                                    +c-select({id: 'contractType', value: contractTypes })
 
                                 .o-form-group
                                     .o-form-group__label.o-form-group__label--with-helper
@@ -52,7 +54,7 @@ block content
                                     .o-form-group__controls
                                         .o-flex.o-flex--spaced
                                             +c-select({ id: 'vatType', value: ['Included', 'Not included', 'No VAT'], selected: input.vatType})(aria-labelledby="vatLabel")
-                                            +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true, selected: input.vatRate })(aria-labelledby="vatLabel")
+                                            +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true, checked: input.vatRate })(aria-labelledby="vatLabel")
 
                             hr.c-hr
 
@@ -76,8 +78,8 @@ block content
                                         'Public authorities (no PC)'
                                     ]
 
-                                +c-form-group({ label: 'Joint commission', type: 'select', id: 'jointCommission', value: jointCommissions, selected: input.jointCommission, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true, isFullWidth: true })
-
+                                +c-form-group({label: 'Joint commission', id: 'jointCommission', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
+                                    +c-select({id: 'jointCommission', value: jointCommissions, selected: input.jointCommission})
                                 -
                                     var subCommittees = [
                                         'Select',
@@ -89,7 +91,8 @@ block content
                                         'Professional integration in the Brussels Region',
                                     ]
 
-                                +c-form-group({ label: 'Subcommittee', type: 'select', id: 'subCommittee', value: subCommittees, selected: input.subComittee })
+                                +c-form-group({label: 'Subcommittee', id: 'subCommittee'})
+                                    +c-select({id: 'subCommittee', value: subCommittees, selected: input.subComittee})
 
                             hr.c-hr
 
@@ -106,12 +109,14 @@ block content
                                             +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary'], selected: input.amountType})(aria-labelledby="amountLabel")
                                             +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number', value: input.amountValue})(aria-labelledby="amountLabel")
 
-                                +c-form-group({ label: 'Number of days', type: 'text', id: 'numberOfDays', inputType: 'number', value: input.numberOfDays })
+                                +c-form-group({label: 'Number of days', id: 'numberOfDays'})
+                                    +c-input({id: 'numberOfDays', type: 'number', value: input.numberOfDays})
 
-                                +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', value: input.defrayalPerDay, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
+                                +c-form-group({ label: 'Defrayal (per day)', id: 'defrayalPerDay', helperText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                    +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€', value: input.defrayalPerDay})
 
-                                +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', value: input.withHoldingTax, helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: true })
-
+                                +c-form-group({ label: 'Withholding tax', id: 'withHoldingTax', helperText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+                                    +c-input-group-after({id: 'withHoldingTax', type: 'number', icon: 'percent', value: input.withHoldingTax})
                                 .c-toolbar
                                     .c-toolbar__right
                                         .c-toolbar__item

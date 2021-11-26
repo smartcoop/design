@@ -20,9 +20,12 @@ block append dialogs
             .c-dialog__body
                 .u-spacer-l
                     .o-form-group-layout.o-form-group-layout--standard
-                        +c-form-group({ label: 'Input', id: 'input'})
-                        +c-form-group({ label: 'Select', id: 'select', type: 'select', value: ['Choose an item','A','B', 'C'], helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
-                        +c-form-group({ label: 'Textarea', id: 'textarea', type: 'textarea', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+                        +c-form-group({label: 'Input', id: 'input'})
+                            +c-input({id: 'input'})
+                        +c-form-group({label: 'Select', id: 'select', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                            +c-select({id: 'select', value: ['Choose an item','A','B', 'C']})
+                        +c-form-group({label: 'Textarea', id: 'textarea', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                            +c-textarea({id: 'textarea'})
 
             .c-dialog__footer.c-dialog__footer--bordered
                 .c-toolbar.c-toolbar--spaced
