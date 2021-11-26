@@ -10,8 +10,9 @@
   font-size: 1.4rem;
   margin-top: 0.8rem;
   strong {
-    color: $color-gray-650;
-    font-weight: 500;
+    background-color: $color-gray-50;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.3rem;
   }
 }
 
