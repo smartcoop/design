@@ -5,4 +5,5 @@ mixin c-input-group-before({ id, type = "text", placeholder, value, icon })
     .c-input-group
         .c-input-group__prepend
             +icon(icon)
-        +c-input({ id, value, type, placeholder })
+        .c-input-group__input
+            +c-input({ id, value, type, placeholder })
