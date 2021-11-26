@@ -14,7 +14,7 @@ block content
                         h2.c-toolbar__title Simulation
 
     .c-app-layout-inner.c-app-layout-inner--split-view
-        .c-app-layout-inner__split
+        form.c-app-layout-inner__split
             .u-spacer-l
                 .c-panel
                     .c-panel__content
@@ -78,7 +78,7 @@ block content
                                         'Public authorities (no PC)'
                                     ]
 
-                                +c-form-group({label: 'Joint commission', id: 'jointCommission', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
+                                +c-form-group({label: 'Joint commission', id: 'jointCommission', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
                                     +c-select({id: 'jointCommission', value: jointCommissions, selected: input.jointCommission})
                                 -
                                     var subCommittees = [
@@ -112,10 +112,10 @@ block content
                                 +c-form-group({label: 'Number of days', id: 'numberOfDays'})
                                     +c-input({id: 'numberOfDays', type: 'number', value: input.numberOfDays})
 
-                                +c-form-group({ label: 'Defrayal (per day)', id: 'defrayalPerDay', helperText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                +c-form-group({ label: 'Defrayal (per day)', id: 'defrayalPerDay', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
                                     +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€', value: input.defrayalPerDay})
 
-                                +c-form-group({ label: 'Withholding tax', id: 'withHoldingTax', helperText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+                                +c-form-group({ label: 'Withholding tax', id: 'withHoldingTax', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
                                     +c-input-group-after({id: 'withHoldingTax', type: 'number', icon: 'percent', value: input.withHoldingTax})
                                 .c-toolbar
                                     .c-toolbar__right
