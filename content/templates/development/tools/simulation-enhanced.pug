@@ -29,7 +29,7 @@ block content
                                 .c-toolbar__item
                                     input.c-button.c-button--secondary(type="reset" value="Reset")
                                     +c-button({ isLoading: true })(id="indicator" class="htmx-indicator") Calculate
-                                    +c-button({ skin: 'primary', href: '/development/tools/simulation.html'})(hx-get="/_partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator" hx-boost="true") Calculate
+                                    +c-button({ skin: 'primary', href: '/development/tools/simulation.html'})(hx-get="/partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator" hx-boost="true") Calculate
 
 
             .o-grid-col-bp3-6

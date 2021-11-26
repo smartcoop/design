@@ -252,7 +252,7 @@ block content
                                 .c-toolbar__item
                                     input.c-button.c-button--secondary(type="reset" value="Reset" x-on:click="showVat = false, showJointCommission = false")
                                     +c-button({ isLoading: true })(x-show="isLoading") Calculate
-                                    +c-button({ skin: 'primary'})(x-show="!isLoading" @click="isLoading = true; fetch('/_partials/simulation-result.html').then(response => response.text()).then(html => {isLoading = false; $refs.result.innerHTML = html })")
+                                    +c-button({ skin: 'primary'})(x-show="!isLoading" @click="isLoading = true; fetch('/partials/simulation-result.html').then(response => response.text()).then(html => {isLoading = false; $refs.result.innerHTML = html })")
                                         | Calculate
 
 
