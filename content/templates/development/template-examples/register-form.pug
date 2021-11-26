@@ -47,7 +47,7 @@ block body
                                 +c-input({id: 'registerFormAddressOfficalZipCode'})
                         .o-grid-col-6
                             +c-form-group({label: 'Country', id: 'registerFormAddressOfficalCountry'})
-                                +c-select({id: 'registerFormAddressOfficalCountry', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode'})
+                                +c-select({id: 'registerFormAddressOfficalCountry', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode', selected: contentData.countries.popular[4].countryCode})
                     hr.c-hr
                     h3.c-h3 Mailing address
                     .o-grid
@@ -65,7 +65,7 @@ block body
                                 +c-input({id: 'registerFormAddressPostalZipCode'})
                         .o-grid-col-6
                             +c-form-group({label: 'Country', id: 'registerFormAddressPostalCountry'})
-                                +c-select({id: 'registerFormAddressPostalCountry', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode'})
+                                +c-select({id: 'registerFormAddressPostalCountry', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode', selected: contentData.countries.popular[4].countryCode})
                     hr.c-hr
                     .o-grid
                         .o-grid-col-6
@@ -82,7 +82,7 @@ block body
                                 +c-input({id: 'registerFormfieldBirthdate', type: 'date', placeholder: 'dd/mm/yyyy' })
                         .o-grid-col-6
                             +c-form-group({label: 'Native country', id: 'registerFormNativeCountry'})
-                                +c-select({id: 'registerFormNativeCountry', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode'})
+                                +c-select({id: 'registerFormNativeCountry', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode', selected: contentData.countries.popular[4].countryCode})
                         .o-grid-col-6
                             +c-form-group({label: 'Marital status', id: 'registerFormfieldMaritalStatus'})
                                 +c-select({id: 'registerFormNativeCountry', value: ['Select', 'Single', 'Married', 'Officially divorced', 'Divorced in fact', 'Widowed']})
