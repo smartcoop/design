@@ -1,35 +1,19 @@
 //-
     Mixin Form field - Create a form group, which wraps an input by default
 
-mixin c-form-group({ label = 'Default label', id, type = 'text', inputType = 'text', value, key = null, valueKey, placeholder, selected, icon, text, name, isInline = false, helper, tooltipHelper, isFullWidth = false })
+mixin c-form-group({ label = 'Default label', id, helperText, helperTooltip, isFullWidth = false })
     .o-form-group
-        if tooltipHelper
+        if helperTooltip
             .o-form-group__label.o-form-group__label--with-helper
-                label(for=id)= label
+                label(for=id? id : '')= label
                 +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-"+id data-tooltip-placement="right") Show info
                 .c-tooltip(role="tooltip" id="helper-"+id)
-                    | #{tooltipHelper}
+                    | #{helperTooltip}
                     .c-tooltip__arrow(data-popper-arrow)
         else
             label.o-form-group__label(for=id)= label
 
         .o-form-group__controls(class=isFullWidth? "o-form-group__controls--full-width" : "")
-            if type == 'text'
-                +c-input({ id, type: inputType, value, placeholder })
-            if type == 'input-group-before'
-                +c-input-group-before({ id, value, type: inputType, placeholder, icon, text })
-            if type == 'input-group-after'
-                +c-input-group-after({ id, value, type: inputType, placeholder, icon, text })
-            if type == 'date'
-                +c-input({ id, value, type: 'date' })
-            if type == 'time'
-                +c-input({ id, value, type: 'time' })
-            if type == 'textarea'
-                +c-textarea({ id })
-            if type == 'select'
-                +c-select({ id, value, key, valueKey, selected })
-            if type == 'radio-group'
-                +c-radio-group({ name, value, key, isInline })
-
-            if helper && !helperTooltip
-                p.c-form-help-text !{helper}
+            block
+            if helperText
+                p.c-form-help-text=helperText

@@ -22,7 +22,6 @@
   top: 0;
   left: 0;
   opacity: 0.0001;
-  z-index: -1;
 }
 
 .c-file-upload input[type="file"]:focus:not([disabled]) ~ .c-file-upload__content {
@@ -32,12 +31,12 @@
 }
 
 .c-file-upload input[type="file"]:hover:not([disabled]) ~ .c-file-upload__content {
-  background-color: $color-gray-30;
+  background-color: $color-gray-25;
 }
 
 
-.c-file-upload--gray-30 .c-file-upload__content {
-  background-color: $color-gray-30;
+.c-file-upload--gray-25 .c-file-upload__content {
+  background-color: $color-gray-25;
 }
 
 .c-file-upload--error .c-file-upload__content {
@@ -57,6 +56,10 @@
   justify-content: center;
   text-decoration: none;
   min-height: 12rem;
+
+  .c-button {
+    position: relative; // To make interactive elements appear on top and clickable
+  }
 }
 
 .c-file-upload__status {
@@ -68,5 +71,3 @@
     margin-left: 0.4rem;
   }
 }
-
-

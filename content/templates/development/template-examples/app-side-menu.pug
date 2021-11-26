@@ -48,25 +48,29 @@ block content
                                                     +c-button({icon: 'add'}) Add new client
                                                     +c-button({icon: 'add'}) Add existing client
 
-                                        .o-form-group
-                                            label.o-form-group__label Radio
-                                            .o-form-group__controls
-                                                .c-radio-group
-                                                    .c-radio
-                                                        label
-                                                            input(type="radio" name="radio1"  checked)
-                                                            | Lorem ipsum dolor sit amet.
-                                                    .c-radio
-                                                        label
-                                                            input(type="radio" name="radio1")
-                                                            | Lorem ipsum dolor sit amet.
+                                        -
+                                            var radioOptions = [
+                                                {
+                                                    id: 0,
+                                                    name: 'Lorem ipsum dolor sit amet.'
+                                                },
+                                                {
+                                                    id: 1,
+                                                    name: 'Lorem ipsum dolor sit amet.'
+                                                },
+                                            ]
+
+                                        +c-form-group({label: 'Radio'})
+                                            +c-radio-group({name: 'radio1', value: radioOptions, valueKey: 'id', key: 'name', checked: 0})
 
                             .c-panel.u-spacer-bottom-l
                                 .c-panel__header
                                     h2.c-panel__title Form grouping
                                 .c-panel__body
                                     .o-form-group-layout.o-form-group-layout--standard
-                                        +c-form-group({ label: 'Input', id: 'input'})
-                                        +c-form-group({ label: 'Select', id: 'select', type: 'select', value: ['Choose an item','A','B', 'C'], helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
-                                        +c-form-group({ label: 'Textarea', id: 'textarea', type: 'textarea', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
-
+                                        +c-form-group({label: 'Input', id: 'input'})
+                                            +c-input({id: 'input'})
+                                        +c-form-group({label: 'Select', id: 'select', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                            +c-select({id: 'select', value: ['Choose an item','A','B', 'C']})
+                                        +c-form-group({label: 'Textarea', id: 'textarea', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                            +c-textarea({id: 'textarea'})
