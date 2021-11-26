@@ -16,4 +16,4 @@ mixin c-form-group({ label = 'Default label', id, helperText, helperTooltip, isF
         .o-form-group__controls(class=isFullWidth? "o-form-group__controls--full-width" : "")
             block
             if helperText
-                p.c-form-help-text=helperText
+                p.c-form-help-text !{helperText}
