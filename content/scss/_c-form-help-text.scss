@@ -5,10 +5,14 @@
    ========================================================================== */
 
 .c-form-help-text {
-  color: $color-gray-400;
+  color: $color-muted;
   display: block;
   font-size: 1.4rem;
   margin-top: 0.8rem;
+  strong {
+    color: $color-gray-650;
+    font-weight: 500;
+  }
 }
 
 .c-form-help-text--error {

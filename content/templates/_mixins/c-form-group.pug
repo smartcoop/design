@@ -32,4 +32,4 @@ mixin c-form-group({ label = 'Default label', id, type = 'text', inputType = 'te
                 +c-radio-group({ name, value, key, isInline })
 
             if helper && !helperTooltip
-                p.c-form-help-text=helper
+                p.c-form-help-text !{helper}
