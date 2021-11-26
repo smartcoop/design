@@ -2425,8 +2425,7 @@ a.c-card:hover {
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 0.0001;
-  z-index: -1; }
+  opacity: 0.0001; }
 
 .c-file-upload input[type="file"]:focus:not([disabled]) ~ .c-file-upload__content {
   outline: 0;
@@ -2455,6 +2454,8 @@ a.c-card:hover {
   justify-content: center;
   text-decoration: none;
   min-height: 12rem; }
+  .c-file-upload__content .c-button {
+    position: relative; }
 
 .c-file-upload__status {
   margin-bottom: 1.6rem;
