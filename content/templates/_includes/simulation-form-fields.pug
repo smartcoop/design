@@ -1,0 +1,99 @@
+.u-spacer-l
+    h3.c-h3.u-spacer-bottom-l Smart service
+    -
+        var smartServices = [
+            'Select',
+            'I provide a service in exchange for a salary',
+            'I continue my Smart activity',
+            'I carry out an interim assignment on behalf of a client'
+        ]
+
+    +c-form-group({ label: 'Smart service', type: 'select', id: 'servicesSmart', value: smartServices, valueKey: index, tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+
+    -
+        var contractTypes = [
+            'Select',
+            'Artistic',
+            'Non-artistic',
+            'Student'
+        ]
+
+    +c-form-group({ label: 'Contract type', type: 'select', id: 'contractType', value: contractTypes })
+
+    .o-form-group
+        .o-form-group__label.o-form-group__label--with-helper
+            label(id='vatLabel') VAT
+            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-vat" data-tooltip-placement="right") Show info
+            .c-tooltip(role="tooltip" id="helper-vat")
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                .c-tooltip__arrow(data-popper-arrow)
+        .o-form-group__controls
+            .o-flex.o-flex--spaced
+                +c-select({ id: 'vatType', value: ['Select', 'Included', 'Not included', 'No VAT'] })(aria-labelledby="vatLabel")
+                +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true })(aria-labelledby="vatLabel")
+            p.c-form-help-text Ignore when you selected <strong>continue my Smart activity</strong> for the <strong>Smart Service</strong> field.
+hr.c-hr
+
+.u-spacer-l
+    h3.c-h3 Joint commission
+    .u-spacer-bottom-l
+        .o-flex.o-flex--vertical-center
+            .u-spacer-right-s
+                +icon('circle-information', 'o-svg-icon--subtle')
+            p Required when carrying out an interim assignment on behalf of a client.
+
+    -
+        var jointCommissions = [
+            'Select',
+            'Performing arts - CP304 (CCT performing arts)',
+            'Music - CP 304 (CCT music)',
+            'Dramatic Art - CP 304 (CCT Dramatic Performing Arts)',
+            'Film industry (feature films) - CP 303.01',
+            'Operation of cinemas - CP 303.03',
+            'Dubbing - CCT dubbing',
+            'Audiovisual other - CP 227',
+            'Sociocultural Flemish Community - CP 329.01',
+            'Sociocultural Walloon Region and French and German-speaking Community - CP 329.02',
+            'Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03',
+            'Auxiliary joint committee for employees - CP 200',
+            'Other',
+            'Work carried out abroad for a principal established abroad',
+            'Public authorities (no PC)'
+        ]
+
+    +c-form-group({ label: 'Joint commission', type: 'select', id: 'jointCommission', value: jointCommissions, tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+
+    -
+        var subCommittees = [
+            'Select',
+            'Sociocultural work',
+            'Integration centers and social animation',
+            'Socio-professional integration',
+            'Work, employment, socio-professional integration in the Walloon Region',
+            'Continuing education sub-committee in the French Community',
+            'Professional integration in the Brussels Region',
+        ]
+
+    +c-form-group({ label: 'Subcommittee', type: 'select', id: 'subCommittee', value: subCommittees, helper: 'Required when you selected <strong>Sociocultural Flemish Community </strong> or <strong>Sociocultural Walloon Region and French and German-speaking Community</strong> for the <strong>Joint commission</strong> field.' })
+
+hr.c-hr
+
+.u-spacer-l
+    h3.c-h3.u-spacer-bottom-l Contract data
+    .o-form-group
+        .o-form-group__label.o-form-group__label--with-helper
+            label(id="amountLabel") Amount
+            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-amount" data-tooltip-placement="right") Show info
+            .c-tooltip(role="tooltip" id="helper-amount")
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                .c-tooltip__arrow(data-popper-arrow)
+        .o-form-group__controls
+            .o-flex.o-flex--spaced
+                +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary'] })(aria-labelledby="amountLabel")
+                +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number'})(aria-labelledby="amountLabel")
+
+    +c-form-group({ label: 'Number of days', type: 'text', id: 'numberOfDays', inputType: 'number' })
+
+    +c-form-group({ label: 'Defrayal (per day)', type: 'input-group-after', text: '€', id: 'defrayalPerDay', inputType: 'number', tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+
+    +c-form-group({ label: 'Withholding tax', type: 'input-group-after', icon: 'percent', id: 'withHoldingTax', inputType: 'number', tooltipHelper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
