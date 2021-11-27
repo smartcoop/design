@@ -1,8 +1,9 @@
 //- Globally expose mixins without output, needed for Bedrock to work
-include ../../../core/templates/mixins/icon
-include ../../../core/templates/mixins/render-page-tree
-include ../../../core/templates/mixins/sample
-include ../../../core/templates/mixins/styleguide-settings
+include /core/templates/mixins/icon
+include /core/templates/mixins/render-page-tree
+//- Override core's sample.pug mixin.
+include /templates/_mixins/sample
+include /core/templates/mixins/styleguide-settings
 //- Use this include to add your own mixins
 include ../_mixins/all
 
@@ -62,14 +63,14 @@ html(dir="ltr" lang="en" class=htmlClass ? htmlClass : '')
 
         if config.pageTree && config.pageTree.layoutStyle == 'sidebar'
             .br-prototype-wrapper
-                include ../../../core/templates/includes/prototype-nav
+                include /templates/_includes/prototype-nav
                 .br-prototype-content
                     block body
         else
             block body
             if config.pageTree && config.pageTree.layoutStyle == 'fixed'
                 .br-pagetree-fixed-wrapper
-                    include ../../../core/templates/includes/prototype-nav
+                    include /templates/_includes/prototype-nav
 
         = "\n"
 

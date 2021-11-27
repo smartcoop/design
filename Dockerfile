@@ -4,7 +4,9 @@ RUN mkdir /bedrock
 
 WORKDIR /bedrock
 
-RUN npm install 'git+https://github.com/thusc/bedrock.git#cli'
+RUN npm install 'git+https://github.com/thusc/bedrock.git#additional-subcommands'
+# Custom dependencies for smartcoop/design.
+RUN npm install @popperjs/core@2.9.2
 
 ENV PATH=/bedrock/node_modules/.bin:$PATH
 
