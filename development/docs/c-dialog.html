@@ -573,7 +573,18 @@
                     <h1 class="br-componentgroup-header c-d-h2">Dialog</h1>
                 </div>
                 <div class="br-content c-content">
-                    <p>This page documents the Dialog component. Please choose the dialog size that is appropriate for the form or content it contains.</p>
+                    <p>This page documents the Dialog component.</p>
+                    <h3 id="sizes">Sizes</h3>
+                    <p>Please choose the dialog size that is appropriate for the form or content it contains. Available sizes are <code>large</code>, <code>medium</code>, <code>small</code> and <code>fullscreen</code>.</p>
+                    <h3 id="implementation-tips">Implementation tips</h3>
+                    <p>These dialogs are implemented with <code>dialogs.js</code>. This is a vanilla JS script intended to serve as an example for a real implementation.</p>
+                    <p>For a full-page example. see <a href="/development/template-examples/dialog.html">here</a>.</p>
+                    <p>When implementing dialogs, please make sure the dialog code is one of the last elements of the page, right before the end of the <code>&lt;body&gt;</code> tag.</p>
+                    <h3 id="triggering-dialogs">Triggering dialogs</h3>
+                    <p>You can trigger a dialog on any element. To do so add the data-dialog attribute and specify the id of the target dialog context. You can write the dialog context mark-up anywhere in your DOM structure, the JS will automatically move it to the document root.</p>
+                    <h3 id="dialog-closing">Dialog closing</h3>
+                    <p>You can add the data-dialog-close attribute to any child of the dialog. Clicking it will close the dialog. Clicking outside of a dialog window or pressing the esc key will also close the active modal.</p>
+                    <h3 id="related-components">Related components</h3>
                     <p>Also see: <a href="/development/docs/c-alert-dialog.html">AlertDialog</a>.</p>
 
                 </div>
