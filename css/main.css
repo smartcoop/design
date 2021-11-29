@@ -1581,6 +1581,10 @@ abbr[title] {
   flex: 1;
   min-width: 0; }
 
+.c-avatar-and-text__title {
+  font-size: 1.8rem;
+  font-weight: 500; }
+
 .c-avatar-and-text__text p,
 .c-avatar-and-text__text h3 {
   text-overflow: ellipsis;
@@ -1722,13 +1726,6 @@ input.c-button {
   line-height: 2rem;
   white-space: nowrap; }
 
-.c-button__logo {
-  width: 2.4rem;
-  height: 2.4rem; }
-
-.c-button__logo + * {
-  margin-left: 1.2rem; }
-
 .o-svg-icon + .c-button__label {
   margin-left: 0.6rem; }
 
@@ -1736,10 +1733,10 @@ input.c-button {
   margin-left: 0.6rem; }
 
 .c-button:not(.c-button--icon) .o-svg-icon:first-child {
-  margin-left: -0.9rem; }
+  margin-left: -0.2rem; }
 
 .c-button:not(.c-button--icon) .o-svg-icon:last-child {
-  margin-right: -0.9rem; }
+  margin-right: -0.2rem; }
 
 .c-button:not(.c-button--icon) [class*='o-svg-icon-arrows-caret']:last-child {
   margin-left: 0;
@@ -2076,7 +2073,8 @@ input.c-button {
   background-color: #fff; }
 
 a.c-card:hover {
-  border-color: #000000; }
+  border-color: #B3B3B3;
+  background: #F9F9F9; }
 
 .c-card--background-gray {
   background: #F2F2F2; }
