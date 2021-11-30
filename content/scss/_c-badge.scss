@@ -1,0 +1,103 @@
+/* ==========================================================================
+  c-badge
+   ========================================================================== */
+
+/* Component
+   ========================================================================== */
+
+.c-badge {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: $color-icon;
+
+  .o-svg-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 1.6rem;
+  }
+}
+
+/* Sizes
+   ========================================================================== */
+
+.c-badge--small {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  .o-svg-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1.2rem;
+  }
+}
+
+.c-badge--large {
+  width: 4rem;
+  height: 4rem;
+
+  .o-svg-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+  }
+}
+
+/* Skins
+   ========================================================================== */
+
+.c-badge--default {
+  background: $color-blue-500;
+  color: $color-white;
+}
+
+.c-badge--success {
+  background: $color-success;
+  color: $color-white;
+}
+
+.c-badge--error {
+  background: $color-error;
+  color: $color-white;
+}
+
+.c-badge--warning {
+  background: $color-warning;
+}
+
+.c-badge--help {
+  background: $color-background;
+}
+
+/* Badge and text
+   ========================================================================== */
+
+.c-badge-and-text {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+
+  .c-badge {
+    margin-right: 1.2rem;
+  }
+}
+
+.c-badge-and-text__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.c-badge-and-text__text p,
+.c-badge-and-text__text h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c-badge-and-text__text h4 {
+  margin-bottom: 0.2rem;
+}

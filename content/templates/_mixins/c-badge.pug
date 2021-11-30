@@ -1,0 +1,26 @@
+//-
+    Mixin Badge - Create a badge
+    @param {Object} props
+    @param {string} size - the size of a badge (regular, small, large)
+    @param {string} icon - icon name
+    @param {string} skin - the skin of the badge (default, success, error, warning, help)
+
+mixin c-badge({icon, skin = "default", size})
+    - var sizeClass = ""
+    - if (size) sizeClass = " c-badge--"+size
+    - var classListing = "c-badge"+" c-badge--"+skin+sizeClass
+
+    div(class=classListing)&attributes(attributes)
+        if icon
+            +icon(icon)
+        else
+            if skin == "success"
+                +icon('check')
+            else if skin == "warning"
+                +icon('warning')
+            else if skin == "error"
+                +icon('close')
+            else if skin == "help"
+                +icon('circle-help')
+            else
+                +icon('circle-information')
