@@ -1,0 +1,120 @@
+/* ==========================================================================
+  Localized Bedrock styles
+   ========================================================================== */
+
+$br-background: #FFF !default;
+$br-default-border-color: #DDD !default;
+$br-default-hover-bg-color: #F0F0F0 !default;
+$br-code-background: $br-default-hover-bg-color !default;
+$br-code-border-color: #DDD !default;
+$br-sample-border-color: $br-default-border-color !default;
+
+
+/* br-sample
+   ========================================================================== */
+
+.br-sample {
+  padding: 1.2rem 0;
+}
+
+.br-sample-clearfix:before,
+.br-sample-clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.br-sample-clearfix:after {
+  clear: both;
+}
+
+.br-sample-btn {
+  background: #FFF;
+  border: 1px solid $br-sample-border-color;
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  &:hover {
+    background: #FFF;
+  }
+}
+
+.br-sample-footer {
+  position: relative;
+}
+
+
+/* br-component
+   ========================================================================== */
+
+.br-component-header {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+/* Code related
+   ========================================================================== */
+
+.br-sample-code {
+  position: relative;
+}
+.br-sample-copy-code-btn {
+  position: absolute;
+  z-index: 3;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  .br-sample-code:hover & {
+    display: block;
+  }
+}
+
+.br-sample-markup {
+  margin-top: 1rem;
+  background: $br-code-background;
+  border: 1px solid $br-code-border-color;
+  padding: 1rem;
+}
+
+.br-sample-content {
+  background: #FFF;
+  padding: 3rem;
+  border: 1px solid $br-sample-border-color;
+  margin: 1rem 0;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: auto;
+  resize: both;
+}
+
+.br-sample-markup.br-sample-markup code[class*="language-"],
+.br-sample-markup.br-sample-markup pre[class*="language-"] {
+  font-size: 1.3rem;
+  font-family: monospace;
+}
+
+.br-sample-content-is-layout {
+  min-height: 500px;
+}
+
+.br-sample-header .br-sample-header-link {
+  float: right;
+  color: rgba(0,0,0,0.45);
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  padding: 0 0.2rem 0 0;
+}
+
+.br-sample-header .br-sample-heading {
+  float: left;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+/* Hide the 2nd render of code, so that we can paste it cleanly without Prism's classes
+   ========================================================================== */
+
+.br-copy-paste {
+  display: none;
+}

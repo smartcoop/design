@@ -47,12 +47,11 @@ html(dir="ltr" lang="en" class=htmlClass ? htmlClass : '')
                 | #{projectTitle}
 
         link(rel="stylesheet" href="/css/main.css")
-
-        if ( config.styleguide || config.pageTree)
-            link(rel="stylesheet" href="/css/prototype.css")
+        link(rel="stylesheet" href="/css/prism-styleguide.css")
 
         if config.styleguide
             link(rel="stylesheet" href="/css/styleguide-customizations.css")
+        link(rel="stylesheet" href="/css/bedrock.css")
 
         block headerStyles
             //- Use this block to add scripts to the footer
