@@ -86,15 +86,6 @@ input.c-button {
   white-space: nowrap;
 }
 
-.c-button__logo {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
-.c-button__logo + * {
-  margin-left: 1.2rem;
-}
-
 .o-svg-icon + .c-button__label {
   margin-left: $c-button-icon-spacing;
 }
@@ -104,11 +95,11 @@ input.c-button {
 }
 
 .c-button:not(.c-button--icon) .o-svg-icon:first-child {
-  margin-left: -0.9rem;
+  margin-left: -0.2rem;
 }
 
 .c-button:not(.c-button--icon) .o-svg-icon:last-child {
-  margin-right: -0.9rem;
+  margin-right: -0.2rem;
 }
 
 // Different spacing for carets

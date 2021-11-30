@@ -1,43 +1,98 @@
-extends /templates/development/template-examples/app-form
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+
+block body
+
+    .u-spacer
+        button.c-button.c-button--secondary(data-dialog="dialogId") Use me to trigger a modal...
+        button.c-button.c-button--secondary(data-dialog="dialogId2") Use me to trigger another modal...
+        button.c-button.c-button--secondary(data-dialog="dialogId3") Use me to trigger another modal...
+
+
 
 block append dialogs
-    .c-dialog-context.c-dialog-context--visible
 
-        .c-dialog-backdrop.c-dialog-backdrop--visible
 
-        .c-dialog.c-dialog--medium(role="dialog" aria-labelledby="dialogTitle-01")
+
+    .c-dialog-backdrop
+    .c-dialog-context.o-flex--center(id="dialogId3")
+        .c-dialog.c-dialog--small(role="dialog" aria-labelledby="dialogTitle-03")
+            .c-dialog__push
+
+            .c-dialog__body
+                .u-spacer
+                    h3.c-h3 A title
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            .c-dialog__footer.c-dialog__footer--bordered
+                .c-toolbar.c-toolbar--spaced
+                  .c-toolbar__right
+                      .c-toolbar__item
+                          .c-button-toolbar
+                              button.c-button.c-button--secondary(data-dialog-close)
+                                      .c-button__content
+                                          .c-button__label Cancel
+                              button.c-button.c-button--primary(data-dialog-close)
+                                      .c-button__content
+                                          .c-button__label Save
+            .c-dialog__push
+    
+    
+    .c-dialog-context.o-flex--center(id="dialogId")
+        .c-dialog.c-dialog--large(role="dialog" aria-labelledby="dialogTitle-02")
             .c-dialog__push
             .c-dialog__header.c-dialog__header--bordered
                 .c-toolbar.c-toolbar--spaced
                     .c-toolbar__left
                         .c-toolbar__item
-                            h2#dialogTitle-01.c-dialog__title Dialog title
-                    .c-toolbar__item
-                        button.c-button.c-button--borderless.c-button--icon(data-dialog-close aria-label="Close dialog")
-                            .c-button__content
-                                +icon('close')
+                            h2#dialogTitle-02.c-dialog__title Title
+
 
             .c-dialog__body
-                .u-spacer-l
-                    .o-form-group-layout.o-form-group-layout--standard
-                        +c-form-group({label: 'Input', id: 'input'})
-                            +c-input({id: 'input'})
-                        +c-form-group({label: 'Select', id: 'select', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
-                            +c-select({id: 'select', value: ['Choose an item','A','B', 'C']})
-                        +c-form-group({label: 'Textarea', id: 'textarea', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
-                            +c-textarea({id: 'textarea'})
+                .u-spacer
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
             .c-dialog__footer.c-dialog__footer--bordered
                 .c-toolbar.c-toolbar--spaced
-                    .c-toolbar__left
-                        .c-toolbar__item
-                    .c-toolbar__right
-                        .c-toolbar__item
-                            .c-button-toolbar
-                                button.c-button.c-button--secondary(data-dialog-close)
-                                        .c-button__content
-                                            .c-button__label Cancel
-                                button.c-button.c-button--primary(data-dialog-close)
-                                        .c-button__content
-                                            .c-button__label Save
+                  .c-toolbar__right
+                      .c-toolbar__item
+                          .c-button-toolbar
+                              button.c-button.c-button--secondary(data-dialog-close)
+                                      .c-button__content
+                                          .c-button__label Cancel
+                              button.c-button.c-button--primary(data-dialog-close)
+                                      .c-button__content
+                                          .c-button__label Save
             .c-dialog__push
+
+
+        .c-dialog-context.o-flex--center(id="dialogId2")
+            .c-dialog.c-dialog--medium(role="dialog" aria-labelledby="dialogTitle-01")
+                .c-dialog__push
+                .c-dialog__header.c-dialog__header--bordered
+                    .c-toolbar.c-toolbar--spaced
+                        .c-toolbar__left
+                            .c-toolbar__item
+                                h2#dialogTitle-01.c-dialog__title Title 2 (Medium size)
+
+                .c-dialog__body
+                    .u-spacer
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                .c-dialog__footer.c-dialog__footer--bordered
+                    .c-toolbar.c-toolbar--spaced
+                      .c-toolbar__right
+                          .c-toolbar__item
+                              .c-button-toolbar
+                                  button.c-button.c-button--secondary(data-dialog-close)
+                                          .c-button__content
+                                              .c-button__label Cancel
+                                  button.c-button.c-button--primary(data-dialog-close)
+                                          .c-button__content
+                                              .c-button__label Save
+                .c-dialog__push
+

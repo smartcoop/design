@@ -120,6 +120,7 @@ textarea.c-input--h-large { height: 20rem; }
 .c-input-group__prepend {
   border-radius: 0.4rem 0 0 0.4rem;
   border-right: none;
+
   ~ .c-input-group__input {
     margin-left: 36px;
   }
@@ -138,5 +139,3 @@ textarea.c-input--h-large { height: 20rem; }
 .c-input-group > .c-input-group__input:not(:first-child) .c-input {
   border-radius: 0 0.4rem 0.4rem 0;
 }
-
-

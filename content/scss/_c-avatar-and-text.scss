@@ -18,6 +18,11 @@
   min-width: 0;
 }
 
+.c-avatar-and-text__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
 .c-avatar-and-text__text p,
 .c-avatar-and-text__text h3 {
   text-overflow: ellipsis;
