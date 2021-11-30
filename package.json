@@ -12,6 +12,10 @@
   "bugs": {
     "url": "https://github.com/smartcoop/design"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:smartcoop/design.git"
+  },
   "homepage": "https://design.smart.coop/",
   "devDependencies": {},
   "dependencies": {
