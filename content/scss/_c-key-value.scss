@@ -4,12 +4,12 @@
 
 .c-key-value {
   .c-key-value-item + .c-key-value-item {
-    margin-top: 1.6rem;
+    margin-top: 2.4rem;
   }
 }
 
 .c-key-value-item__key {
-  padding: .8rem 0;
+  padding: 0.4em 0;
   color: $color-text;
   font-weight: 500;
 }
@@ -28,4 +28,8 @@
   .c-key-value-item + .c-key-value-item {
     margin-top: 0.4rem;
   }
+}
+
+.c-key-value-item__value--muted {
+  color: $color-muted;
 }
