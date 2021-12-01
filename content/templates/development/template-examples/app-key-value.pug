@@ -1,0 +1,134 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar
+            ul.c-side-menu
+                li.c-side-menu__item.c-side-menu__item--active
+                    a.c-side-menu__link(href="#") Administrative profile
+                li.c-side-menu__item
+                    a.c-side-menu__link(href="#") Public profile
+
+            ul.c-side-menu
+                li.c-side-menu__item
+                    a.c-side-menu__link(href="#") Trainings
+
+
+        .c-app-layout-inner__main
+            .u-scroll-wrapper
+                .c-navbar.c-navbar--bordered-bottom
+                    .c-toolbar
+                        .c-toolbar__left
+                            .c-toolbar__item
+                                    h2.c-toolbar__title Administrative profile
+
+                .u-scroll-wrapper-body
+                    .o-container
+                        .o-container-vertical
+                            .u-spacer-bottom-l
+                                +c-alert({title: 'Information locked', message: 'This information was added when you applied for your Smart profile, you can not change it. If you would like to change it, please contact us at support@smart.coop.'})
+
+                            .u-padding-vertical-xl
+                                h3.c-h3 Identity information
+                                .o-grid
+                                    .o-grid-col-bp3-4
+                                        dl.c-key-value
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Name
+                                                dd.c-key-value-item__value Pierre Dumoulin
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Birth date
+                                                dd.c-key-value-item__value 15/03/1984
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key National number
+                                                dd.c-key-value-item__value 84031520321
+
+                                    .o-grid-col-bp3-4
+                                        dl.c-key-value
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Gender
+                                                dd.c-key-value-item__value Male
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Marital status
+                                                dd.c-key-value-item__value Not married
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key City of birth
+                                                dd.c-key-value-item__value Schoten
+
+                                    .o-grid-col-bp3-4
+                                        dl.c-key-value
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Language
+                                                dd.c-key-value-item__value English
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Native country
+                                                dd.c-key-value-item__value Belgium
+
+                            hr.c-hr
+
+                            .u-padding-vertical-xl
+                                h3.c-h3 Contact information
+                                .o-grid
+                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                        dl.c-key-value
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Address
+                                                dd.c-key-value-item__value
+                                                    | Akkergemstraat 77
+                                                    br
+                                                    | 2600 Berchem
+                                                    br
+                                                    | Belgium
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Mobile number
+                                                dd.c-key-value-item__value +32 480 29 86 XX
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Email
+                                                dd.c-key-value-item__value
+                                                    a(href="mailto:pierredm@gmail.com") pierredm@gmail.com
+
+                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                        dl.c-key-value
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Mailing address
+                                                dd.c-key-value-item__value.c-key-value-item__value--muted Same as official address
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Home phone number
+                                                dd.c-key-value-item__value.c-key-value-item__value--muted Not married
+
+                            hr.c-hr
+
+                            .u-padding-vertical-xl
+                                h3.c-h3 Financial information
+                                .o-grid
+                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                        dl.c-key-value
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key IBAN number
+                                                dd.c-key-value-item__value BE327330449836XX
+
+                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                        dl.c-key-value
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Professional withholding tax
+                                                dd.c-key-value-item__value 980 EUR
+
+                            hr.c-hr
+
+                            .u-padding-vertical-xl
+                                h3.c-h3 Professional information
+                                .o-grid
+                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                        dl.c-key-value
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Main function
+                                                dd.c-key-value-item__value Designer
+
+                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                        dl.c-key-value
+                                            .c-key-value-item
+                                                dt.c-key-value-item__key Other function
+                                                dd.c-key-value-item__value Front-end developer

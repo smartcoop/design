@@ -7,6 +7,10 @@
   border-radius: 0.3rem;
 }
 
+.c-side-menu + .c-side-menu {
+  margin-top: 2.4rem;
+}
+
 .c-side-menu__item + .c-side-menu__item {
   border-top: 0.1rem solid $color-border;
 }
