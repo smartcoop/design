@@ -771,6 +771,10 @@ abbr[title] {
 .o-grid-col-static {
   flex: none; }
 
+@media (min-width: 900px) {
+  .o-grid-col-bp3-static {
+    flex: none; } }
+
 .o-grid-col-flex {
   flex: 1 1 auto; }
 
@@ -2860,10 +2864,10 @@ textarea.c-input--h-large {
   Component: Key value list
    ========================================================================== */
 .c-key-value .c-key-value-item + .c-key-value-item {
-  margin-top: 1.6rem; }
+  margin-top: 2.4rem; }
 
 .c-key-value-item__key {
-  padding: .8rem 0;
+  padding: 0.4em 0;
   color: #333333;
   font-weight: 500; }
 
@@ -2877,6 +2881,9 @@ textarea.c-input--h-large {
 
 .c-key-value--horizontal .c-key-value-item + .c-key-value-item {
   margin-top: 0.4rem; }
+
+.c-key-value-item__value--muted {
+  color: #808080; }
 
 /* ==========================================================================
    Component: Menu
@@ -3364,6 +3371,9 @@ textarea.c-input--h-large {
 .c-side-menu {
   border: 0.1rem solid #E5E5E5;
   border-radius: 0.3rem; }
+
+.c-side-menu + .c-side-menu {
+  margin-top: 2.4rem; }
 
 .c-side-menu__item + .c-side-menu__item {
   border-top: 0.1rem solid #E5E5E5; }
