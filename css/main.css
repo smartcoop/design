@@ -2871,6 +2871,11 @@ textarea.c-input--h-large {
   color: #333333;
   font-weight: 500; }
 
+.c-key-value-item__value a {
+  text-decoration: none;
+  color: #1267FB;
+  border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
+
 .c-key-value--horizontal .c-key-value-item {
   display: flex;
   align-items: center; }
@@ -2881,9 +2886,6 @@ textarea.c-input--h-large {
 
 .c-key-value--horizontal .c-key-value-item + .c-key-value-item {
   margin-top: 0.4rem; }
-
-.c-key-value-item__value--muted {
-  color: #808080; }
 
 /* ==========================================================================
    Component: Menu
