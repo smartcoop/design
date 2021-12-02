@@ -26,109 +26,77 @@ block content
                                     h2.c-toolbar__title Administrative profile
 
                 .u-scroll-wrapper-body
-                    .o-container
-                        .o-container-vertical
-                            .u-spacer-bottom-l
-                                +c-alert({title: 'Information locked', message: 'This information was added when you applied for your Smart profile, you can not change it. If you would like to change it, please contact us at support@smart.coop.'})
+                    .u-spacer-xl
+                        .u-spacer-bottom-l
+                            +c-alert({title: 'Information locked', message: 'This information was added when you applied for your Smart profile, you can not change it. If you would like to change it, please contact us at support@smart.coop.'})
 
-                            .u-padding-vertical-xl
-                                h3.c-h3 Identity information
-                                .o-grid
-                                    .o-grid-col-bp3-4
-                                        dl.c-key-value
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Name
-                                                dd.c-key-value-item__value Pierre Dumoulin
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Birth date
-                                                dd.c-key-value-item__value 15/03/1984
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key National number
-                                                dd.c-key-value-item__value 84031520321
+                        .u-padding-vertical-xl
+                            h3.c-h3 Identity information
+                            .o-grid
+                                .o-grid-col-bp3-4
+                                    dl.c-key-value
+                                        +c-key-value({key: 'Name'}) Pierre Dumoulin
+                                        +c-key-value({key: 'Birth date'}) 15/03/1984
+                                        +c-key-value({key: 'National number'}) 84031520321
 
-                                    .o-grid-col-bp3-4
-                                        dl.c-key-value
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Gender
-                                                dd.c-key-value-item__value Male
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Marital status
-                                                dd.c-key-value-item__value Not married
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key City of birth
-                                                dd.c-key-value-item__value Schoten
 
-                                    .o-grid-col-bp3-4
-                                        dl.c-key-value
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Language
-                                                dd.c-key-value-item__value English
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Native country
-                                                dd.c-key-value-item__value Belgium
+                                .o-grid-col-bp3-4
+                                    dl.c-key-value
+                                        +c-key-value({key: 'Gender'}) Male
+                                        +c-key-value({key: 'Marital status'}) Not married
+                                        +c-key-value({key: 'City of birth'}) Schoten
 
-                            hr.c-hr
+                                .o-grid-col-bp3-4
+                                    dl.c-key-value
+                                        +c-key-value({key: 'Language'}) English
+                                        +c-key-value({key: 'Native country'}) Belgium
 
-                            .u-padding-vertical-xl
-                                h3.c-h3 Contact information
-                                .o-grid
-                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
-                                        dl.c-key-value
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Address
-                                                dd.c-key-value-item__value
-                                                    | Akkergemstraat 77
-                                                    br
-                                                    | 2600 Berchem
-                                                    br
-                                                    | Belgium
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Mobile number
-                                                dd.c-key-value-item__value +32 480 29 86 XX
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Email
-                                                dd.c-key-value-item__value
-                                                    a(href="mailto:pierredm@gmail.com") pierredm@gmail.com
 
-                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
-                                        dl.c-key-value
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Mailing address
-                                                dd.c-key-value-item__value.c-key-value-item__value--muted Same as official address
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Home phone number
-                                                dd.c-key-value-item__value.c-key-value-item__value--muted Not married
+                        hr.c-hr
 
-                            hr.c-hr
+                        .u-padding-vertical-xl
+                            h3.c-h3 Contact information
+                            .o-grid
+                                .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                    dl.c-key-value
+                                        +c-key-value({key: 'Language'})
+                                            | Akkergemstraat 77
+                                            br
+                                            | 2600 Berchem
+                                            br
+                                            | Belgium
+                                        +c-key-value({key: 'Mobile number'}) +32 480 29 86 XX
+                                        +c-key-value({key: 'Email'})
+                                            a(href="mailto:pierredm@gmail.com") pierredm@gmail.com
 
-                            .u-padding-vertical-xl
-                                h3.c-h3 Financial information
-                                .o-grid
-                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
-                                        dl.c-key-value
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key IBAN number
-                                                dd.c-key-value-item__value BE327330449836XX
+                                .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                    dl.c-key-value
+                                        +c-key-value({key: 'Mailing address', placeholder: 'Same as official address'})
+                                        +c-key-value({key: 'Home phone number'})
 
-                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
-                                        dl.c-key-value
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Professional withholding tax
-                                                dd.c-key-value-item__value 980 EUR
 
-                            hr.c-hr
+                        hr.c-hr
 
-                            .u-padding-vertical-xl
-                                h3.c-h3 Professional information
-                                .o-grid
-                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
-                                        dl.c-key-value
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Main function
-                                                dd.c-key-value-item__value Designer
+                        .u-padding-vertical-xl
+                            h3.c-h3 Financial information
+                            .o-grid
+                                .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                    dl.c-key-value
+                                        +c-key-value({key: 'IBAN number'}) BE327330449836XX
 
-                                    .o-grid-col-bp3-4.o-grid-col-bp3-static
-                                        dl.c-key-value
-                                            .c-key-value-item
-                                                dt.c-key-value-item__key Other function
-                                                dd.c-key-value-item__value Front-end developer
+                                .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                    dl.c-key-value
+                                        +c-key-value({key: 'Professional withholding tax'}) 980 EUR
+
+                        hr.c-hr
+
+                        .u-padding-vertical-xl
+                            h3.c-h3 Professional information
+                            .o-grid
+                                .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                    dl.c-key-value
+                                        +c-key-value({key: 'Main function'}) Designer
+
+                                .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                    dl.c-key-value
+                                        +c-key-value({key: 'Other function'}) Front-end developer
