@@ -1,0 +1,10 @@
+//-
+    Mixin File attachment - Create a file attachment
+
+mixin c-file-attachment({ href })
+    li.c-file-attachment
+        a(href=href)
+            .c-file-attachment__icon
+                +icon('document')
+            span.c-file-attachment__name
+                block

@@ -14,14 +14,6 @@
   font-weight: 500;
 }
 
-.c-key-value-item__value {
-  a {
-    text-decoration: none;
-    color: $color-blue-500;
-    border-bottom: .1rem solid rgba($color-blue-500,.33);
-  }
-}
-
 .c-key-value--horizontal {
   .c-key-value-item {
     display: flex;

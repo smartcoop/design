@@ -52,6 +52,14 @@ block content
                                         +c-key-value({key: 'Native country'}) Belgium
 
 
+                            .u-spacer-top-l
+                                dl.c-key-value
+                                    +c-key-value({key: 'Documents'})
+                                        ul.c-file-attachment-list
+                                            +c-file-attachment({href: '#'}) Front of Identity card
+                                            +c-file-attachment({href: '#'}) Back of Identity card
+                                            +c-file-attachment({href: '#'}) Copy of bank card
+
                         hr.c-hr
 
                         .u-padding-vertical-xl
@@ -67,7 +75,8 @@ block content
                                             | Belgium
                                         +c-key-value({key: 'Mobile number'}) +32 480 29 86 XX
                                         +c-key-value({key: 'Email'})
-                                            a(href="mailto:pierredm@gmail.com") pierredm@gmail.com
+                                            .c-content
+                                                a(href="mailto:pierredm@gmail.com") pierredm@gmail.com
 
                                 .o-grid-col-bp3-4.o-grid-col-bp3-static
                                     dl.c-key-value

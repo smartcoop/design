@@ -1,0 +1,20 @@
+/* ==========================================================================
+  c-file-attachment-list
+  ========================================================================== */
+
+/* Component
+  ========================================================================== */
+
+.c-file-attachment-list {
+  margin: -0.4rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .c-file-attachment {
+    margin: 0.4rem;
+    a {
+      overflow: hidden;
+    }
+  }
+}
