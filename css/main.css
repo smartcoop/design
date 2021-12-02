@@ -2488,6 +2488,53 @@ a.c-card:hover {
     visibility: visible; }
 
 /* ==========================================================================
+  auk-document
+  ========================================================================== */
+/* Component
+  ========================================================================== */
+.c-file-attachment a {
+  background: #F2F2F2;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.6rem 0.6rem 1rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border-radius: 4rem;
+  color: #333333;
+  text-decoration: none;
+  width: 100%;
+  align-items: center; }
+  .c-file-attachment a:hover {
+    background-color: #E5E5E5; }
+
+.c-file-attachment__icon {
+  background: #FFFFFF;
+  border-radius: 2.8rem;
+  padding: 0.4rem; }
+  .c-file-attachment__icon .o-svg-icon {
+    width: 2rem;
+    height: 2rem; }
+
+.c-file-attachment__name {
+  margin-left: .6rem;
+  transition: color .2s ease-in-out; }
+
+/* ==========================================================================
+  c-file-attachment-list
+  ========================================================================== */
+/* Component
+  ========================================================================== */
+.c-file-attachment-list {
+  margin: -0.4rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .c-file-attachment-list .c-file-attachment {
+    margin: 0.4rem; }
+    .c-file-attachment-list .c-file-attachment a {
+      overflow: hidden; }
+
+/* ==========================================================================
   c-file-upload
    ========================================================================== */
 .c-file-upload {
@@ -2870,11 +2917,6 @@ textarea.c-input--h-large {
   padding: 0.4em 0;
   color: #333333;
   font-weight: 500; }
-
-.c-key-value-item__value a {
-  text-decoration: none;
-  color: #1267FB;
-  border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
 
 .c-key-value--horizontal .c-key-value-item {
   display: flex;
