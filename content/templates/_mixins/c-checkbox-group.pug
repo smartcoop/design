@@ -1,0 +1,13 @@
+//-
+    Mixin checkbox group - Create a checkbox group
+
+mixin c-checkbox-group({ name, value = [A, B, C], valueKey, key, isInline = false, checked })
+    .c-checkbox-group(class=isInline? "c-checkbox-group--inline" : "")
+        each item in value
+            .c-checkbox
+                label
+                    input(type="checkbox" value=item[valueKey] name=name checked=(item[valueKey]==checked) || (item==checked))
+                    if key
+                        | #{item[key]}
+                    else
+                        | #{item}
