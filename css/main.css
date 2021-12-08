@@ -1971,18 +1971,24 @@ input.c-button {
 
 /* Shared disabled state for primary and secondary buttons
    ========================================================================== */
-.c-button--primary[disabled], .c-button--primary:disabled, .c-button--primary.c-button--disabled,
+*[disabled] .c-button--primary,
+*[disabled] .c-button--secondary,
+.c-button--primary[disabled],
 .c-button--secondary[disabled],
+.c-button--primary:disabled,
 .c-button--secondary:disabled,
-.c-button--secondary.c-button--disabled {
+.c-button--disabled {
   background: #E5E5E5;
   border-color: #E5E5E5;
   color: #999999;
   pointer-events: none; }
-  .c-button--primary[disabled] svg *, .c-button--primary:disabled svg *, .c-button--primary.c-button--disabled svg *,
+  *[disabled] .c-button--primary svg *,
+  *[disabled] .c-button--secondary svg *,
+  .c-button--primary[disabled] svg *,
   .c-button--secondary[disabled] svg *,
+  .c-button--primary:disabled svg *,
   .c-button--secondary:disabled svg *,
-  .c-button--secondary.c-button--disabled svg * {
+  .c-button--disabled svg * {
     fill: #999999; }
 
 /* Shared loading state for primary and secondary buttons
@@ -2268,20 +2274,28 @@ a.c-card:hover {
   .c-checkbox input[type='checkbox'][data-indeterminate]:before {
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;'%3E%3Cpath id='Rectangle' d='M12,8c0,-0.552 -0.448,-1 -1,-1l-6,0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l6,0c0.552,0 1,-0.448 1,-1Z' style='fill:%23fff;'/%3E%3C/svg%3E") no-repeat; }
 
-.c-checkbox input[type='checkbox'][disabled] {
-  border: 1px solid #D4D4D4;
-  background: #F2F2F2; }
-  .c-checkbox input[type='checkbox'][disabled]:focus, .c-checkbox input[type='checkbox'][disabled]:active {
-    box-shadow: none; }
-  .c-checkbox input[type='checkbox'][disabled]:checked:before {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23B3B3B3'/%3E%3C/g%3E%3C/svg%3E") no-repeat; }
-
 .c-checkbox input[type='checkbox'][disabled][data-indeterminate]:checked:before {
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;'%3E%3Cpath id='Rectangle' d='M12,8c0,-0.552 -0.448,-1 -1,-1l-6,0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l6,0c0.552,0 1,-0.448 1,-1Z' style='fill:%23B3B3B3;'/%3E%3C/svg%3E") no-repeat; }
 
-.c-checkbox input[type='checkbox']:checked:not([disabled]),
-.c-checkbox input[type='checkbox'][data-indeterminate]:checked:not([disabled]) {
+.c-checkbox input[type='checkbox']:checked,
+.c-checkbox input[type='checkbox'][data-indeterminate]:checked {
   background-color: #1267FB; }
+
+*[disabled] .c-checkbox input[type='checkbox'],
+*[disabled] .c-checkbox input[type='checkbox']:disabled,
+.c-checkbox input[type='checkbox'][disabled] {
+  border-color: #D4D4D4;
+  background-color: #F2F2F2; }
+  *[disabled] .c-checkbox input[type='checkbox']:focus, *[disabled] .c-checkbox input[type='checkbox']:active,
+  *[disabled] .c-checkbox input[type='checkbox']:disabled:focus,
+  *[disabled] .c-checkbox input[type='checkbox']:disabled:active,
+  .c-checkbox input[type='checkbox'][disabled]:focus,
+  .c-checkbox input[type='checkbox'][disabled]:active {
+    box-shadow: none; }
+  *[disabled] .c-checkbox input[type='checkbox']:checked:before,
+  *[disabled] .c-checkbox input[type='checkbox']:disabled:checked:before,
+  .c-checkbox input[type='checkbox'][disabled]:checked:before {
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23B3B3B3'/%3E%3C/g%3E%3C/svg%3E") no-repeat; }
 
 /* Radio specific
    @todo document disabled state
@@ -2303,10 +2317,15 @@ a.c-card:hover {
   left: 3px;
   border-radius: 100%; }
 
+*[disabled] .c-radio input[type='radio'],
 .c-radio input[type='radio'][disabled] {
-  border-color: 1px solid #D4D4D4; }
+  border-color: #D4D4D4;
+  background: #F2F2F2;
+  pointer-events: none; }
+  *[disabled] .c-radio input[type='radio']:before,
   .c-radio input[type='radio'][disabled]:before {
-    background: #FFF; }
+    background: #B3B3B3; }
+  *[disabled] .c-radio input[type='radio']:checked:before,
   .c-radio input[type='radio'][disabled]:checked:before {
     background: 1px solid #D4D4D4; }
 
@@ -2774,8 +2793,12 @@ a.c-card:hover {
     outline: 0;
     border-color: #1267FB;
     box-shadow: inset 0 0 0 0.1rem #1267FB; }
-  .c-input[disabled] {
-    background: #E5E5E5; }
+
+*[disabled] .c-input,
+.c-input[disabled] {
+  background: #E5E5E5;
+  color: #808080;
+  pointer-events: none; }
 
 .o-form-group--error {
   border-color: #FF4054; }
@@ -2860,6 +2883,12 @@ textarea.c-input--h-large {
 
 .c-input-group > .c-input-group__input:not(:first-child) .c-input {
   border-radius: 0 0.4rem 0.4rem 0; }
+
+*[disabled] .c-input-group__append,
+*[disabled] .c-input-group__prepend,
+.c-input-group--disabled .c-input-group__append,
+.c-input-group--disabled .c-input-group__prepend {
+  background-color: #D9D9D9; }
 
 /* ==========================================================================
   Input With Icon
@@ -3389,9 +3418,12 @@ textarea.c-input--h-large {
     outline: 0;
     border-color: #1267FB;
     box-shadow: inset 0 0 0 0.1rem #1267FB; }
-  .c-select[disabled] {
-    background: #E5E5E5;
-    color: #808080; }
+
+*[disabled] .c-select,
+.c-select[disabled] {
+  background: #E5E5E5;
+  color: #808080;
+  pointer-events: none; }
 
 .c-select-holder {
   position: relative; }
@@ -3804,6 +3836,12 @@ textarea.c-input--h-large {
     outline: 0;
     border-color: #1267FB;
     box-shadow: inset 0 0 0 0.1rem #1267FB; }
+
+*[disabled] .c-textarea,
+.c-textarea[disabled] {
+  background: #E5E5E5;
+  color: #808080;
+  pointer-events: none; }
 
 /* ==========================================================================
   Component: Toolbar
