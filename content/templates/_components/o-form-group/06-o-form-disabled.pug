@@ -1,0 +1,32 @@
+form.o-form-group-layout.o-form-group-layout--standard
+    fieldset(disabled)
+        +c-form-group({label: 'Name', id: 'disabledFormNameId'})
+            +c-input({id: 'disabledFormNameId', value: 'John Doe'})
+
+        +c-form-group({label: 'Email', id: 'disabledFormEmailId'})
+            +c-input({id: 'disabledFormEmailId', value: 'user@name.com'})
+
+        +c-form-group({label: 'Password', id: 'disabledFormPasswordId'})
+            .c-input-with-icon
+                +c-input({type: 'password', id: 'disabledFormPasswordId', value: 'password'})
+                button.c-input-with-icon__toggle(data-password-toggle)
+                    +icon('eye')
+                    +icon('eye-off')
+
+        +c-form-group({label: 'Preference', id: 'disabledFormPreferenceId', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+            +c-select({id: 'disabledFormPreferenceId', value: ['Option A', 'Option B', 'Option C']})
+
+        +c-form-group({label: 'Price', id: 'disabledFormTextareaId'})
+             +c-textarea({id: 'textarea'})
+
+        +c-form-group({label: 'Price', id: 'disabledFormPriceId'})
+            +c-input-group-after({id: 'disabledFormPriceId', type: 'number', text: '€', value: 1000})
+
+        +c-form-group({label: 'Radio'})
+            +c-radio-group({name: 'disabledFormRadio', value: ['Option A', 'Option B', 'Option C'], isInline: true, checked: 'Option A'})
+
+        +c-form-group({label: 'Checkbox'})
+            +c-checkbox-group({name: 'disabledFormCheckbox', value: ['Value 1', 'Value 2'], isInline: true, checked: 'Value 1'})
+
+        .o-form-group
+            input.c-button.c-button--primary(type="submit" value="Save")

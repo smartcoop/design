@@ -1,10 +1,10 @@
 //-
     Mixin Input - Create an input group with icon after
 
-mixin c-input-group-after({ id, type = "text", placeholder, value, icon, text })
-    .c-input-group
+mixin c-input-group-after({ id, type = "text", placeholder, value, icon, text, disabled })
+    .c-input-group(class=disabled? 'c-input-group--disabled' : '')
         .c-input-group__input
-            +c-input({ id, value, type, placeholder })
+            +c-input({ id, value, type, placeholder })(disabled=disabled)
         .c-input-group__append
             if icon
                 +icon(icon)

@@ -19,10 +19,13 @@
   width: 100%;
 
   @include textfield-focus;
-  &[disabled] {
-    background: $color-gray-100;
-    color: $color-gray-500;
-  }
+}
+
+*[disabled] .c-select,
+.c-select[disabled] {
+  background: $color-gray-100;
+  color: $color-gray-500;
+  pointer-events: none;
 }
 
 // A wrapper, so we can position a CSS created arrow

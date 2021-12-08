@@ -41,10 +41,13 @@ $c-input-padding: 0.8rem !default;
   width: 100%;
   appearance: none;
   @include textfield-focus;
+}
 
-  &[disabled] {
-    background: $color-gray-100;
-  }
+*[disabled] .c-input,
+.c-input[disabled] {
+  background: $color-gray-100;
+  color: $color-gray-500;
+  pointer-events: none;
 }
 
 .o-form-group--error {
@@ -138,4 +141,11 @@ textarea.c-input--h-large { height: 20rem; }
 
 .c-input-group>.c-input-group__input:not(:first-child) .c-input {
   border-radius: 0 0.4rem 0.4rem 0;
+}
+
+*[disabled] .c-input-group__append,
+*[disabled] .c-input-group__prepend,
+.c-input-group--disabled .c-input-group__append,
+.c-input-group--disabled .c-input-group__prepend {
+  background-color: $color-gray-150;
 }

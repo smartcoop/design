@@ -152,21 +152,22 @@ $c-button-link-color: $color-red-500 !default;
 /* Shared disabled state for primary and secondary buttons
    ========================================================================== */
 
-.c-button--primary,
-.c-button--secondary {
+*[disabled] .c-button--primary,
+*[disabled] .c-button--secondary,
+.c-button--primary[disabled],
+.c-button--secondary[disabled],
+.c-button--primary:disabled,
+.c-button--secondary:disabled,
+.c-button--disabled {
+  background: $color-gray-100;
+  border-color: $color-gray-100;
+  color: $color-disabled;
+  pointer-events: none;
 
-  &[disabled],
-  &:disabled,
-  &.c-button--disabled {
-    background: $color-gray-100;
-    border-color: $color-gray-100;
-    color: $color-disabled;
-    pointer-events: none;
-
-    svg * {
-      fill: $color-disabled;
-    }
+  svg * {
+    fill: $color-disabled;
   }
+
 }
 
 
