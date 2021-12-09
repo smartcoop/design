@@ -63,6 +63,8 @@ function create(triggerEl, targetEl) {
   });
 
   popperInstances.push(popperInstance);
+
+  
 }
 
 function showPopper(trigger, targetEl) {
@@ -95,8 +97,15 @@ const findPopperInstance = (target) =>
 
 // Add or remove classes on clicking a trigger
 const handleClick = (event) => {
-  event.stopPropagation();
 
+  // Detect if we are clicking another menu
+  if (event.target.dataset.menu) {
+    [...popperInstances].map((instance) => {
+      hidePopper(instance);
+    });
+  }
+
+  event.stopPropagation();
   const trigger = event.currentTarget;
   const targetEl = findDropdown(trigger);
   const instance = findPopperInstance(targetEl.id);
