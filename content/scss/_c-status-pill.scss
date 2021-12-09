@@ -37,18 +37,18 @@
 }
 
 .c-status-pill--pending {
-  border-color: $color-blue-500;
+  border-color: $color-blue-600;
 
   .c-status-pill__circle {
-    background: $color-blue-500;
+    background: $color-blue-600;
   }
 }
 
 .c-status-pill--danger {
-  border: 0.1rem solid $color-red-500;
+  border: 0.1rem solid $color-red-600;
 
   .c-status-pill__circle {
-    background: $color-red-500;
+    background: $color-red-600;
   }
 }
 
@@ -61,9 +61,9 @@
 }
 
 .c-status-pill--warning {
-  border: 0.1rem solid $color-yellow-500;
+  border: 0.1rem solid $color-yellow-600;
 
   .c-status-pill__circle {
-    background: $color-yellow-500;
+    background: $color-yellow-600;
   }
 }

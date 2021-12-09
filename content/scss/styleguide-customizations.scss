@@ -49,12 +49,12 @@
     color: $color-semantic-body-text;
 
     &:hover {
-      color: $color-red-500;
+      color: $color-red-600;
     }
   }
 
   li.c-styleguide-list__item--active a {
-    color: $color-red-500;
+    color: $color-red-600;
   }
 }
 
