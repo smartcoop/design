@@ -1,5 +1,10 @@
 /* ==========================================================================
   Utility: spacing
+
+  t = tiny
+  l = large
+  xl = extra large
+
    ========================================================================== */
 
 /* Resets
@@ -90,6 +95,10 @@ $g-spacer-unit: 0.8rem !default;
 
 /* Right side only
      ========================================================================== */
+
+.u-spacer-right-t {
+  margin-right: $g-spacer-unit/2 !important;
+}
 
 .u-spacer-right-s {
   margin-right: $g-spacer-unit !important;
