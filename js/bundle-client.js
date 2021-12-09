@@ -496,11 +496,6 @@ if (passwordsInputs.length) {
 },{}],8:[function(require,module,exports){
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.findSelect = exports.findDropdown = void 0;
-
 var _core = require("@popperjs/core");
 
 var _util = require("./util");
@@ -530,17 +525,8 @@ var popperInstances = []; // Find target dropdown element
 var findDropdown = function findDropdown(triggerEl) {
   var targetId = triggerEl.getAttribute('data-menu');
   return document.getElementById(targetId);
-}; // find Select for clicked option
-
-
-exports.findDropdown = findDropdown;
-
-var findSelect = function findSelect(element) {
-  return document.querySelector("[data-menu=\"".concat(element.parentElement.id));
 }; // Position dropdown
 
-
-exports.findSelect = findSelect;
 
 function create(triggerEl, targetEl) {
   var placement = triggerEl.dataset.menuPlacement || 'bottom-start';
@@ -603,6 +589,13 @@ var findPopperInstance = function findPopperInstance(target) {
 
 
 var handleClick = function handleClick(event) {
+  // Detect if we are clicking another menu
+  if (event.target.dataset.menu) {
+    [].concat(popperInstances).map(function (instance) {
+      hidePopper(instance);
+    });
+  }
+
   event.stopPropagation();
   var trigger = event.currentTarget;
   var targetEl = findDropdown(trigger);
