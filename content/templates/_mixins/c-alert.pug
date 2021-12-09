@@ -15,7 +15,7 @@ mixin c-alert({skin="default", icon, message, title, isLight=false, isClosable=f
     - if (isLight) lightClass = " c-alert--light"
     - var classListing = "c-alert"+skinClass+lightClass
     div(class=classListing data-alert-closable=isClosable || false)&attributes(attributes)
-        +icon(icon? icon : 'circle-information')
+        +icon(icon? icon : (skin == "error")? "circle-error" : (skin == "warning")? "warning" : (skin == "success")? "circle-check" : "circle-information" )
         .c-alert__body
             .c-alert__text
                 if title
