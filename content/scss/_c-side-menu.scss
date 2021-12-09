@@ -23,8 +23,13 @@
   display: flex;
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $color-gray-25;
+  }
+
+  &:focus {
+    z-index: 2;
   }
 }
 
