@@ -3306,6 +3306,11 @@ textarea.c-input--h-large {
   padding: .8rem 1.6rem;
   color: #333333;
   font-weight: 500; }
+  .c-pill-navigation__item > a:hover, .c-pill-navigation__item > a:active, .c-pill-navigation__item > a:focus,
+  .c-pill-navigation__item > button:hover,
+  .c-pill-navigation__item > button:active,
+  .c-pill-navigation__item > button:focus {
+    background: #F9F9F9; }
 
 .c-pill-navigation__item--has-child-menu > button {
   padding: .8rem 2.8rem .8rem 1.6rem;
@@ -3482,8 +3487,10 @@ textarea.c-input--h-large {
   align-items: center;
   display: flex;
   position: relative; }
-  .c-side-menu__link:hover {
+  .c-side-menu__link:hover, .c-side-menu__link:focus {
     background: #F9F9F9; }
+  .c-side-menu__link:focus {
+    z-index: 2; }
 
 .c-side-menu__item--active > .c-side-menu__link {
   background: #fff;
