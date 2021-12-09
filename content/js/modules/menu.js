@@ -1,5 +1,7 @@
 /* ==========================================================================
   Mono menus JS 0.2
+  * 0.3 "Smart version"
+    * (Johan Ronsse)
   * 0.2 "TB version"
     * (Erik Gelderblom)
   * 0.1 "NGD version"
