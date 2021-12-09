@@ -5,8 +5,8 @@
 /* Variables
    ========================================================================== */
 
-$c-tabs-item-color: $color-header !default;
-$c-tabs-item-active-color: $color-header !default;
+$c-tabs-item-color: $color-semantic-header-text !default;
+$c-tabs-item-active-color: $color-semantic-header-text !default;
 $c-tabs-item-border-color: $color-gray-200 !default;
 $c-tabs-item-hover-border-color: $color-gray-200 !default;
 $c-tabs-active-border-width: 0.3rem !default;
@@ -55,7 +55,7 @@ $c-tabs-active-border-width: 0.3rem !default;
   height: 100%;
 
   &:hover {
-    box-shadow: inset 0 -#{$c-tabs-active-border-width} 0 $color-border;
+    box-shadow: inset 0 -#{$c-tabs-active-border-width} 0 $color-semantic-border;
   }
 
   &:focus {

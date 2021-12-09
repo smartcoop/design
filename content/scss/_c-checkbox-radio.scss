@@ -7,7 +7,7 @@
 /* Variables
    ========================================================================== */
 
-$c-checkbox-input-border-color: $color-input-border !default;
+$c-checkbox-input-border-color: $color-semantic-input-border !default;
 
 $c-checkbox-input-border: 1px solid $c-checkbox-input-border-color !default;
 $c-radio-input-border: 1px solid $c-checkbox-input-border-color !default;
@@ -138,7 +138,7 @@ $c-radio-checked-color: $color-blue-500 !default;
 *[disabled] .c-checkbox input[type='checkbox']:disabled,
 .c-checkbox input[type='checkbox'][disabled] {
   border-color: $c-checkbox-input-border-color;
-  background-color: $color-background;
+  background-color: $color-semantic-background;
 
   &:focus,
   &:active {

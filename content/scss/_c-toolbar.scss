@@ -115,7 +115,7 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   display: flex;
   align-items: center;
   .o-svg-icon {
-    color: $color-icon;
+    color: $color-semantic-icon;
     margin-left: 0.8rem;
     .c-navbar--inverse & {
       color: #FFF;

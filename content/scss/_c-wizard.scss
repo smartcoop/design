@@ -8,7 +8,7 @@
   }
 
   &.c-wizard--bordered {
-    border-bottom: .1rem solid $color-border;
+    border-bottom: .1rem solid $color-semantic-border;
   }
 }
 
@@ -27,7 +27,7 @@
 }
 
 .c-wizard__item {
-  color: $color-muted;
+  color: $color-semantic-muted-text;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -68,7 +68,7 @@
   border-radius: 100%;
   background: $color-gray-100;
   border: 0.2rem solid $color-gray-100;
-  color: $color-icon;
+  color: $color-semantic-icon;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,11 +86,11 @@
 }
 
 .c-wizard--complete {
-  color: $color-muted;
+  color: $color-semantic-muted-text;
 
   .c-wizard__indicator {
-    background: $color-success;
-    border-color: $color-success;
+    background: $color-semantic-success;
+    border-color: $color-semantic-success;
 
     &:before {
       content: "";
@@ -108,7 +108,7 @@
 
 
 .c-wizard--active {
-  color: $color-text;
+  color: $color-semantic-body-text;
 
   &:after {
     background-color: $color-black;

@@ -86,7 +86,7 @@ $g-c-menu-z: 60 !default;
 }
 
 .c-menu__item--danger {
-  color: $color-error;
+  color: $color-semantic-error;
 
   .c-menu__label:focus {
     box-shadow: inset 0 0 0 0.2rem $color-red-200;

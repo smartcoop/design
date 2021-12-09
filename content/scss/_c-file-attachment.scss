@@ -7,14 +7,14 @@
 
 .c-file-attachment {
   a {
-    background: $color-background;
+    background: $color-semantic-background;
     display: inline-flex;
     align-items: center;
     padding: 0.6rem 1.6rem 0.6rem 1rem;
     font-size: 1.4rem;
     line-height: 2rem;
     border-radius: 4rem;
-    color: $color-text;
+    color: $color-semantic-body-text;
     text-decoration: none;
     width: 100%;
     align-items: center;

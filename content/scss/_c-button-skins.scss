@@ -56,10 +56,10 @@ $c-button-link-color: $color-red-500 !default;
 .c-button--secondary {
   border: 1px solid $color-gray-500;
   background: #fff;
-  color: $color-text;
+  color: $color-semantic-body-text;
 
   svg * {
-    fill: $color-icon;
+    fill: $color-semantic-icon;
   }
 
   &:hover,
@@ -161,11 +161,11 @@ $c-button-link-color: $color-red-500 !default;
 .c-button--disabled {
   background: $color-gray-100;
   border-color: $color-gray-100;
-  color: $color-disabled;
+  color: $color-semantic-disabled;
   pointer-events: none;
 
   svg * {
-    fill: $color-disabled;
+    fill: $color-semantic-disabled;
   }
 
 }
@@ -179,7 +179,7 @@ $c-button-link-color: $color-red-500 !default;
   &.c-button--loading {
     background: $color-gray-100;
     border-color: $color-gray-100;
-    color: $color-disabled;
+    color: $color-semantic-disabled;
     pointer-events: none;
     position: relative;
 
@@ -248,16 +248,16 @@ $c-button-link-color: $color-red-500 !default;
   &[disabled],
   &:disabled,
   &.c-button-disabled {
-    color: $color-disabled;
+    color: $color-semantic-disabled;
 
     svg * {
-      fill: $color-disabled;
+      fill: $color-semantic-disabled;
     }
   }
 }
 
 .c-button--borderless {
-  color: $color-text;
+  color: $color-semantic-body-text;
 
   &:hover,
   &.c-button--hover {
@@ -280,16 +280,16 @@ $c-button-link-color: $color-red-500 !default;
   &[disabled],
   &:disabled,
   &.c-button-disabled {
-    color: $color-disabled;
+    color: $color-semantic-disabled;
 
     svg * {
-      fill: $color-disabled;
+      fill: $color-semantic-disabled;
     }
   }
 }
 
 .c-button--borderless-muted {
-  color: $color-muted;
+  color: $color-semantic-muted-text;
 
   &:hover,
   &.c-button--hover {
@@ -312,10 +312,10 @@ $c-button-link-color: $color-red-500 !default;
   &[disabled],
   &:disabled,
   &.c-button-disabled {
-    color: $color-disabled;
+    color: $color-semantic-disabled;
 
     svg * {
-      fill: $color-disabled;
+      fill: $color-semantic-disabled;
     }
   }
 }

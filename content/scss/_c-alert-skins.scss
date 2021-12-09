@@ -30,37 +30,37 @@
 }
 
 .c-alert--success {
-  border-color: $color-success;
+  border-color: $color-semantic-success;
 
   &:before {
-    background: $color-success;
+    background: $color-semantic-success;
   }
 
   > .o-svg-icon {
-    color: $color-success;
+    color: $color-semantic-success;
   }
 }
 
 .c-alert--error {
-  border-color: $color-error;
+  border-color: $color-semantic-error;
 
   &:before {
-    background: $color-error;
+    background: $color-semantic-error;
   }
 
   > .o-svg-icon {
-    color: $color-error;
+    color: $color-semantic-error;
   }
 }
 
 .c-alert--warning {
-  border-color: $color-warning;
+  border-color: $color-semantic-warning;
 
   &:before {
-    background: $color-warning;
+    background: $color-semantic-warning;
   }
 
   > .o-svg-icon {
-    color: $color-warning;
+    color: $color-semantic-warning;
   }
 }
