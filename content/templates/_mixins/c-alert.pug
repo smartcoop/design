@@ -7,14 +7,19 @@
     @param {string} message - the alert message
     @param {string} title - the alert title
     @param {boolean} isClosable - makes alert closable
+    @param {boolean} isLight - a lighter version of the alert for longer content
 
-mixin c-alert({skin="default", icon, message, title, isClosable=false})
-    .c-alert(class="c-alert--"+skin data-alert-closable=isClosable || false)&attributes(attributes)
+mixin c-alert({skin="default", icon, message, title, isLight=false, isClosable=false})
+    - var skinClass = " c-alert--"+skin
+    - var lightClass = ""
+    - if (isLight) lightClass = " c-alert--light"
+    - var classListing = "c-alert"+skinClass+lightClass
+    div(class=classListing data-alert-closable=isClosable || false)&attributes(attributes)
         +icon(icon? icon : 'circle-information')
         .c-alert__body
             .c-alert__text
                 if title
-                    h4.c-alert__title= title
+                    h4.c-h4= title
                 if message
                     .c-alert__message
                         .c-content!= marked(message)

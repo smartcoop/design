@@ -37,11 +37,6 @@ $c-alert-border-radius: 0.3rem !default;
   }
 }
 
-.c-alert__title {
-  font-weight: 500;
-  color: $g-headings-color;
-}
-
 .c-alert__body {
   display: flex;
   flex: 1;
@@ -53,10 +48,6 @@ $c-alert-border-radius: 0.3rem !default;
   &:not(:last-child) {
     margin-right: $g-spacer-unit * 2;
   }
-}
-
-.c-alert__title + .c-alert__message {
-  margin-top: 0.8rem;
 }
 
 .c-alert.c-alert--medium {
