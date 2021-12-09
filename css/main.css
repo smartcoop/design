@@ -1913,7 +1913,7 @@ input.c-button {
     border-color: #595959;
     background: #333333; }
   .c-button--primary:focus {
-    outline: #E7EFFE auto 1px; }
+    outline: #8AB5FF auto 1px; }
   .c-button--primary:focus:not(:focus-visible) {
     outline: none; }
 
@@ -1933,7 +1933,7 @@ input.c-button {
     border-color: #808080;
     outline: none; }
   .c-button--secondary:focus {
-    outline: #E7EFFE auto 1px; }
+    outline: #8AB5FF auto 1px; }
   .c-button--secondary:focus:not(:focus-visible) {
     outline: none; }
 
@@ -1951,7 +1951,7 @@ input.c-button {
     border-color: #B32D3B;
     outline: none; }
   .c-button--danger:focus {
-    outline: #E7EFFE auto 1px; }
+    outline: #8AB5FF auto 1px; }
   .c-button--danger:focus:not(:focus-visible) {
     outline: none; }
 
@@ -1969,7 +1969,7 @@ input.c-button {
     background: #F2F2F2;
     outline: none; }
   .c-button--danger-secondary:focus {
-    outline: #E7EFFE auto 1px; }
+    outline: #8AB5FF auto 1px; }
   .c-button--danger-secondary:focus:not(:focus-visible) {
     outline: none; }
 
@@ -2032,7 +2032,7 @@ input.c-button {
   .c-button--borderless:focus,
   .c-button--borderless-i:focus,
   .c-button--borderless-muted:focus {
-    outline: #E7EFFE auto 1px;
+    outline: #8AB5FF auto 1px;
     background: transparent; }
   .c-button--borderless:focus:not(:focus-visible),
   .c-button--borderless-i:focus:not(:focus-visible),
@@ -3549,6 +3549,7 @@ textarea.c-input--h-large {
   display: inline-flex;
   align-items: center;
   font-size: 1.2rem;
+  font-weight: 500;
   border: 0.1rem solid transparent; }
 
 .c-status-pill__circle {
@@ -3563,29 +3564,34 @@ textarea.c-input--h-large {
 /* Skins
    ========================================================================== */
 .c-status-pill--default {
-  border: 0.1rem solid #1A1A1A; }
+  border: 0.1rem solid #CCCCCC;
+  background: #F9F9F9; }
   .c-status-pill--default .c-status-pill__circle {
     background: #595959; }
 
 .c-status-pill--pending {
-  border-color: #1267FB; }
+  border-color: #8AB5FF;
+  background: #E7EFFE; }
   .c-status-pill--pending .c-status-pill__circle {
     background: #1267FB; }
 
 .c-status-pill--danger {
-  border: 0.1rem solid #FF4054; }
+  border: 0.1rem solid #FFB0B9;
+  background: #FEE7E9; }
   .c-status-pill--danger .c-status-pill__circle {
     background: #FF4054; }
 
 .c-status-pill--success {
-  border: 0.1rem solid #00A57D; }
+  border: 0.1rem solid #85C8B8;
+  background: #ECF9F6; }
   .c-status-pill--success .c-status-pill__circle {
     background: #00A57D; }
 
 .c-status-pill--warning {
-  border: 0.1rem solid #F4C95D; }
+  border: 0.1rem solid #F4C95D;
+  background: #FCF7E8; }
   .c-status-pill--warning .c-status-pill__circle {
-    background: #F4C95D; }
+    background: #C28D0A; }
 
 /* ==========================================================================
   Component: table
