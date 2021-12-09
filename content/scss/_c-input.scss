@@ -41,6 +41,9 @@ $c-input-padding: 0.8rem !default;
   width: 100%;
   appearance: none;
   @include textfield-focus;
+  &::placeholder {
+    color: $color-gray-400;
+  }
 }
 
 *[disabled] .c-input,
@@ -98,7 +101,6 @@ textarea.c-input--h-large { height: 20rem; }
 .c-input-group {
   display: flex;
   position: relative;
-
 }
 
 .c-input-group__input {
