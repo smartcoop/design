@@ -31,11 +31,6 @@ const findDropdown = (triggerEl) => {
   return document.getElementById(targetId);
 };
 
-// find Select for clicked option
-const findSelect = (element) => {
-  return document.querySelector(`[data-menu="${element.parentElement.id}`);
-};
-
 // Position dropdown
 function create(triggerEl, targetEl) {
   const placement = triggerEl.dataset.menuPlacement || 'bottom-start';
@@ -144,4 +139,3 @@ selectOptions.forEach((option) =>
 // Add click listener on outside
 document.addEventListener('click', handleOutsideClick);
 
-export { findDropdown, findSelect };
