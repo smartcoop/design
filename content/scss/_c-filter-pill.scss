@@ -3,41 +3,32 @@
    ========================================================================== */
 
 .c-filter-pill {
+  border-radius: 2.4rem;
+  padding: 0.5rem 0.8rem 0.5rem 1.2rem;
+  display: inline-flex;
+  align-items: center;
   font-size: 1.4rem;
   font-weight: 500;
-  align-items: center;
-  padding: 0.2rem 0;
-  border-radius: .5rem;
-  height: 2.4rem;
-  background: $color-gray-50;
-  border: .1rem solid $color-gray-200;
+  border: 0.1rem solid transparent;
   width: fit-content;
-  display: flex;
+  border: 0.1rem solid $color-gray-200;
+  background: $color-gray-25;
 
-  &:active,
-  ~ .c-menu--visible {
-    background-color: $color-blue-600;
-    border-color: $color-blue-700;
-
-    .c-filter-pill__label,
-    .c-filter-pill__append {
-      color: #FFF;
-    }
-
-    .c-filter-pill__append {
-      &:before {
-        background-color: $color-blue-700;
-      }
-    }
-
-    .c-filter-pill__counter {
-      background: $color-blue-700;
-    }
+  .o-svg-icon {
+    width: 0.8rem;
+    height: 1.6rem;
+    color: $color-gray-600;
   }
+
 }
 
+.c-filter-pill:active,
+.c-filter-pill-list__item .c-popover[data-show] ~ .c-filter-pill {
+  border-color: $color-blue-400;
+  background: $color-blue-50;
+}
 .c-filter-pill__label {
-  margin: 0 0.8rem;
+  line-height: 1;
   color: $color-semantic-body-text;
 }
 
@@ -52,31 +43,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0.8rem;
+  margin: 0 0.6rem;
 }
 
-.c-filter-pill__append {
-  width: 2.4rem;
-  height: 2.4rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.4rem;
-
-  .o-svg-icon {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0rem;
-    height: 2.4rem;
-    width: 0.1rem;
-    background-color: $color-gray-200;
-  }
+.c-filter-pill__label + .o-svg-icon {
+  margin-left: 0.6rem;
 }
