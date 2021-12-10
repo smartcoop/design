@@ -2618,36 +2618,30 @@ a.c-card:hover {
   c-filter-pill
    ========================================================================== */
 .c-filter-pill {
+  border-radius: 2.4rem;
+  padding: 0.5rem 0.8rem 0.5rem 1.2rem;
+  display: inline-flex;
+  align-items: center;
   font-size: 1.4rem;
   font-weight: 500;
-  align-items: center;
-  padding: 0.2rem 0;
-  border-radius: .5rem;
-  height: 2.4rem;
-  background: #F2F2F2;
-  border: 0.1rem solid #CCCCCC;
+  border: 0.1rem solid transparent;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  display: flex; }
-  .c-filter-pill:active,
-  .c-filter-pill ~ .c-menu--visible {
-    background-color: #1267FB;
-    border-color: #154EB1; }
-    .c-filter-pill:active .c-filter-pill__label,
-    .c-filter-pill:active .c-filter-pill__append,
-    .c-filter-pill ~ .c-menu--visible .c-filter-pill__label,
-    .c-filter-pill ~ .c-menu--visible .c-filter-pill__append {
-      color: #FFF; }
-    .c-filter-pill:active .c-filter-pill__append:before,
-    .c-filter-pill ~ .c-menu--visible .c-filter-pill__append:before {
-      background-color: #154EB1; }
-    .c-filter-pill:active .c-filter-pill__counter,
-    .c-filter-pill ~ .c-menu--visible .c-filter-pill__counter {
-      background: #154EB1; }
+  border: 0.1rem solid #CCCCCC;
+  background: #F9F9F9; }
+  .c-filter-pill .o-svg-icon {
+    width: 0.8rem;
+    height: 1.6rem;
+    color: #595959; }
+
+.c-filter-pill:active,
+.c-filter-pill-list__item .c-popover[data-show] ~ .c-filter-pill {
+  border-color: #8AB5FF;
+  background: #E7EFFE; }
 
 .c-filter-pill__label {
-  margin: 0 0.8rem;
+  line-height: 1;
   color: #333333; }
 
 .c-filter-pill__counter {
@@ -2661,28 +2655,10 @@ a.c-card:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0.8rem; }
+  margin: 0 0.6rem; }
 
-.c-filter-pill__append {
-  width: 2.4rem;
-  height: 2.4rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.4rem; }
-  .c-filter-pill__append .o-svg-icon {
-    width: 1.6rem;
-    height: 1.6rem; }
-  .c-filter-pill__append:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0rem;
-    height: 2.4rem;
-    width: 0.1rem;
-    background-color: #CCCCCC; }
+.c-filter-pill__label + .o-svg-icon {
+  margin-left: 0.6rem; }
 
 /* ==========================================================================
   c-filter-pill-list
