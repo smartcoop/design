@@ -139,6 +139,13 @@ $c-table-row-selected-bg: $color-semantic-primary !default;
   }
 }
 
+.c-table--header-bg {
+  th {
+    background: $color-gray-25;
+  }
+}
+
+
 /* Invisible table structure
    ========================================================================== */
 
