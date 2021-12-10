@@ -3707,6 +3707,9 @@ textarea.c-input--h-large {
 .c-table--horizontal th {
   width: 18rem; }
 
+.c-table--header-bg th {
+  background: #F9F9F9; }
+
 /* Invisible table structure
    ========================================================================== */
 .c-table.c-table--invisible {
