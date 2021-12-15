@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
     <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
 <body class="u-maximize-height">
@@ -592,18 +594,18 @@
                     </div>
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="c-loader" role="alert" aria-busy="true"></div>
+                        <div class="c-loader"></div>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-loader&quot; role=&quot;alert&quot; aria-busy=&quot;true&quot;&gt;&lt;/div&gt;</pre>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-loader&quot;&gt;&lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.c-loader(role='alert' aria-busy='true')
+                            <pre class="br-sample-markup br-sample-markup-pug">.c-loader
 </pre>
                         </div>
                     </div>

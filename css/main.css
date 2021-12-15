@@ -1431,24 +1431,6 @@ abbr[title] {
     .c-app-layout-inner__main .u-scroll-wrapper-body {
       overflow: initial; } }
 
-.c-app-layout-inner--split-view {
-  overflow: auto;
-  flex-wrap: wrap; }
-
-.c-app-layout-inner__split {
-  width: 100%;
-  flex: 1 0 auto;
-  overflow: auto; }
-  .c-app-layout-inner__split + .c-app-layout-inner__split {
-    border-top: 1px solid #E5E5E5; }
-  @media (min-width: 900px) {
-    .c-app-layout-inner__split {
-      width: 50%;
-      height: 100%; }
-      .c-app-layout-inner__split + .c-app-layout-inner__split {
-        border-top: none;
-        border-left: 1px solid #E5E5E5; } }
-
 /* ==========================================================================
   c-avatar
   ---
@@ -2633,7 +2615,7 @@ a.c-card:hover {
   .c-filter-pill .o-svg-icon {
     width: 0.8rem;
     height: 1.6rem;
-    color: #595959; }
+    color: #666666; }
 
 .c-filter-pill:active,
 .c-filter-pill-list__item .c-popover[data-show] ~ .c-filter-pill {
@@ -2676,10 +2658,12 @@ a.c-card:hover {
   Help text + Errors on forms
    ========================================================================== */
 .c-form-help-text {
-  color: #999999;
+  color: #808080;
   display: block;
   font-size: 1.4rem;
   margin-top: 0.8rem; }
+  .c-form-help-text strong {
+    font-weight: 600; }
 
 .c-form-help-text--error {
   color: #FF4054; }
@@ -4632,5 +4616,28 @@ textarea.c-input--h-large {
 
 .u-text-uc {
   text-transform: uppercase; }
+
+/* Vendor
+  3rd party code
+  ========================================================================== */
+/* ==========================================================================
+    Htmx styles
+   ========================================================================== */
+/* Additions
+   ========================================================================== */
+.htmx-indicator {
+  display: none; }
+
+.htmx-request .htmx-indicator {
+  display: inline; }
+
+.htmx-request.htmx-indicator {
+  display: inline; }
+
+.htmx-request ~ .c-button[hx-indicator] {
+  display: none; }
+
+.htmx-request ~ .c-blank-slate {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */
