@@ -166,9 +166,10 @@ hr.c-hr
     h3.c-h3 Joint commission
 
     .u-spacer-bottom-l
-        .c-badge-and-text
-            +c-badge({skin: 'help'})
-            .c-badge-and-text__text Only required when you selected <strong>carrying out an interim assignment on behalf of a client</strong> as <strong>Smart service</strong>.
+        +c-alert({
+            message: 'Required when carrying out an interim assignment on behalf of a client.',
+            isLight: true
+        })
 
     +c-form-group({label: 'Joint commission', id: 'jointCommission', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
         +c-select({id: 'jointCommission', value: jointCommissions, key: 'name', valueKey: 'id'})
