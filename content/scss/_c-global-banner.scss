@@ -10,7 +10,7 @@
   align-items: center;
 
   &.c-global-banner--default {
-    background-color: $color-blue-500;
+    background-color: $color-blue-600;
     color: $color-white;
 
     .c-button--icon,
@@ -19,10 +19,10 @@
     }
   }
   &.c-global-banner--warning {
-    background-color: $color-warning;
+    background-color: $color-semantic-warning;
 
     .o-svg-icon {
-      color: $color-icon;
+      color: $color-semantic-icon;
     }
   }
 

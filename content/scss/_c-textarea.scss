@@ -7,7 +7,7 @@
   border-radius: 0.3rem;
   padding: 1rem 1.2rem;
   display: block;
-  color: $color-text;
+  color: $color-semantic-body-text;
   font-size: 1.6rem;
   line-height: 1.5;
   width: 100%;
@@ -17,4 +17,12 @@
   }
 
   @include textfield-focus;
+}
+
+
+*[disabled] .c-textarea,
+.c-textarea[disabled] {
+  background: $color-gray-100;
+  color: $color-gray-500;
+  pointer-events: none;
 }

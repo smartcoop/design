@@ -31,7 +31,7 @@
   top: 0;
   left: 0;
   z-index: $g-c-global-navbar-z;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid $color-semantic-border;
 }
 
 .c-navbar--main {
@@ -74,11 +74,11 @@
    ========================================================================== */
 
 .c-navbar--bordered-top {
-  border-top: 0.1rem solid $color-border;
+  border-top: 0.1rem solid $color-semantic-border;
 }
 
 .c-navbar--bordered-bottom {
-  border-bottom: 0.1rem solid $color-border;
+  border-bottom: 0.1rem solid $color-semantic-border;
 }
 
 /* Sizes

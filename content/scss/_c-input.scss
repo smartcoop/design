@@ -8,13 +8,13 @@
    ========================================================================== */
 
 $c-input-border-radius: 0.3rem !default;
-$c-input-dark-text-color: $color-text !default;
-$c-input-focus-icon-color: $color-icon !default;
+$c-input-dark-text-color: $color-semantic-body-text !default;
+$c-input-focus-icon-color: $color-semantic-icon !default;
 $c-input-bg-color: #fff !default;
 $c-input-border-color: $color-gray-200 !default;
 $c-input-readonly-border-color: $color-gray-200 !default;
-$c-input-accent-color: $color-blue-500 !default;
-$c-input-error-accent-color: $color-red-500 !default;
+$c-input-accent-color: $color-blue-600 !default;
+$c-input-error-accent-color: $color-red-600 !default;
 $c-input-padding: 0.8rem !default;
 
 /* Mixins
@@ -41,10 +41,16 @@ $c-input-padding: 0.8rem !default;
   width: 100%;
   appearance: none;
   @include textfield-focus;
-
-  &[disabled] {
-    background: $color-gray-100;
+  &::placeholder {
+    color: $color-gray-400;
   }
+}
+
+*[disabled] .c-input,
+.c-input[disabled] {
+  background: $color-gray-100;
+  color: $color-gray-500;
+  pointer-events: none;
 }
 
 .o-form-group--error {
@@ -95,7 +101,6 @@ textarea.c-input--h-large { height: 20rem; }
 .c-input-group {
   display: flex;
   position: relative;
-
 }
 
 .c-input-group__input {
@@ -138,4 +143,11 @@ textarea.c-input--h-large { height: 20rem; }
 
 .c-input-group > .c-input-group__input:not(:first-child) .c-input {
   border-radius: 0 0.4rem 0.4rem 0;
+}
+
+*[disabled] .c-input-group__append,
+*[disabled] .c-input-group__prepend,
+.c-input-group--disabled .c-input-group__append,
+.c-input-group--disabled .c-input-group__prepend {
+  background-color: $color-gray-150;
 }

@@ -25,7 +25,7 @@
   width: 100%;
   flex: 0 0 auto;
   padding: 2.4rem;
-  border-right: 0.1rem solid $color-border;
+  border-right: 0.1rem solid $color-semantic-border;
 
   @media (min-width: $g-bp2) {
     height: 100%;
@@ -44,4 +44,3 @@
     }
   }
 }
-

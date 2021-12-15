@@ -43,5 +43,11 @@ containsCustom: true
             <td><code>true</code>, <code>false</code></td>
             <td>Determines if the alert is closable. The default state is <code>false</code></td>
         </tr>
+        <tr>
+            <td>isLight</td>
+            <td>boolean</td>
+            <td><code>true</code>, <code>false</code></td>
+            <td>Determines if the alert has a lighter, more neutral skin. The default state is <code>false</code></code></td>
+        </tr>
     </tbody>
 </table>

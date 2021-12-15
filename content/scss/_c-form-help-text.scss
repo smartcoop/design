@@ -5,7 +5,7 @@
    ========================================================================== */
 
 .c-form-help-text {
-  color: $color-muted;
+  color: $color-semantic-muted-text;
   display: block;
   font-size: 1.4rem;
   margin-top: 0.8rem;
@@ -15,7 +15,7 @@
 }
 
 .c-form-help-text--error {
-  color: $color-red-500;
+  color: $color-red-600;
 }
 
 .c-form-help-text + .c-form-help-text {

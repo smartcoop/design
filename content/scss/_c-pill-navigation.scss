@@ -14,8 +14,13 @@
 .c-pill-navigation__item > button {
   display: block;
   padding: .8rem 1.6rem;
-  color: $color-text;
+  color: $color-semantic-body-text;
   font-weight: 500;
+  &:hover,
+  &:active,
+  &:focus {
+    background: $color-gray-25;
+  }
 }
 
 .c-pill-navigation__item--has-child-menu > button {

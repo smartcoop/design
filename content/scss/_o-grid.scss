@@ -122,6 +122,12 @@ $i: 0;
   flex: none;
 }
 
+@media (min-width: $o-grid-bp3) {
+  .o-grid-col-bp3-static {
+    flex: none;
+  }
+}
+
 .o-grid-col-flex {
   flex: 1 1 auto;
 }

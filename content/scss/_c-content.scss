@@ -59,7 +59,7 @@
 
 .c-subline {
   font-size: 1.4rem;
-  color: $color-muted;
+  color: $color-semantic-muted-text;
 }
 
 .c-content {
@@ -70,8 +70,8 @@
 
   a {
     text-decoration: none;
-    color: $color-blue-500;
-    border-bottom: .1rem solid rgba($color-blue-500,.33);
+    color: $color-blue-600;
+    border-bottom: .1rem solid rgba($color-blue-600,.33);
   }
 
   dl {

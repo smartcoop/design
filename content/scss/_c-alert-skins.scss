@@ -8,9 +8,9 @@
    ========================================================================== */
 
 .c-alert {
-  background: #FFF;
   border-radius: 0.3rem;
-  border: 0.1rem solid $color-blue-500;
+  border: 0.1rem solid $color-blue-400;
+  background: $color-blue-25;
   position: relative;
 
   &:before {
@@ -21,46 +21,53 @@
     position: absolute;
     left: -.1rem;
     bottom: -.05rem;
-    background: $color-blue-500;
+    background: $color-blue-400;
   }
 
   > .o-svg-icon {
-    color: $color-blue-500;
+    color: $color-blue-600;
   }
 }
 
 .c-alert--success {
-  border-color: $color-success;
+  background: $color-green-50;
+  border-color: $color-green-300;
 
   &:before {
-    background: $color-success;
+    background: $color-green-300;
   }
 
   > .o-svg-icon {
-    color: $color-success;
+    color: $color-semantic-success;
   }
 }
 
 .c-alert--error {
-  border-color: $color-error;
+  background: $color-red-50;
+  border-color: $color-red-400;
 
   &:before {
-    background: $color-error;
+    background: $color-red-400;
   }
 
   > .o-svg-icon {
-    color: $color-error;
+    color: $color-semantic-error;
   }
 }
 
 .c-alert--warning {
-  border-color: $color-warning;
+  background: $color-yellow-50;
+  border-color: $color-yellow-300;
 
   &:before {
-    background: $color-warning;
+    background: $color-yellow-300;
   }
 
   > .o-svg-icon {
-    color: $color-warning;
+    color: $color-yellow-800;
   }
+}
+
+.c-alert--light {
+  background: $color-white;
 }

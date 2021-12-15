@@ -14,15 +14,18 @@
   border-radius: $c-input-border-radius; // We use properties from textfield here
   font-size: inherit;
   height: 3.6rem;
-  color: $color-text;
+  color: $color-semantic-body-text;
   padding: 0.8rem 2.8rem 0.8rem 0.8rem;
   width: 100%;
 
   @include textfield-focus;
-  &[disabled] {
-    background: $color-gray-100;
-    color: $color-gray-500;
-  }
+}
+
+*[disabled] .c-select,
+.c-select[disabled] {
+  background: $color-gray-100;
+  color: $color-gray-500;
+  pointer-events: none;
 }
 
 // A wrapper, so we can position a CSS created arrow

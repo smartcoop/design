@@ -1,5 +1,7 @@
 /* ==========================================================================
   Mono menus JS 0.2
+  * 0.3 "Smart version"
+    * (Johan Ronsse)
   * 0.2 "TB version"
     * (Erik Gelderblom)
   * 0.1 "NGD version"
@@ -29,11 +31,6 @@ let popperInstances = [];
 const findDropdown = (triggerEl) => {
   const targetId = triggerEl.getAttribute('data-menu');
   return document.getElementById(targetId);
-};
-
-// find Select for clicked option
-const findSelect = (element) => {
-  return document.querySelector(`[data-menu="${element.parentElement.id}`);
 };
 
 // Position dropdown
@@ -68,6 +65,8 @@ function create(triggerEl, targetEl) {
   });
 
   popperInstances.push(popperInstance);
+
+  
 }
 
 function showPopper(trigger, targetEl) {
@@ -100,8 +99,15 @@ const findPopperInstance = (target) =>
 
 // Add or remove classes on clicking a trigger
 const handleClick = (event) => {
-  event.stopPropagation();
 
+  // Detect if we are clicking another menu
+  if (event.target.dataset.menu) {
+    [...popperInstances].map((instance) => {
+      hidePopper(instance);
+    });
+  }
+
+  event.stopPropagation();
   const trigger = event.currentTarget;
   const targetEl = findDropdown(trigger);
   const instance = findPopperInstance(targetEl.id);
@@ -144,4 +150,3 @@ selectOptions.forEach((option) =>
 // Add click listener on outside
 document.addEventListener('click', handleOutsideClick);
 
-export { findDropdown, findSelect };

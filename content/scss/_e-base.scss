@@ -5,7 +5,7 @@
    ========================================================================== */
 
 $base-line-height: 1.5 !default;
-$base-color: $color-text !default;
+$base-color: $color-semantic-body-text !default;
 $g-base-background: #FFF !default;
 
 /* Elements
@@ -53,7 +53,7 @@ select {
 }
 
 a {
-  color: $color-link;
+  color: $color-semantic-link;
   text-decoration: none;
 }
 

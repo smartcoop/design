@@ -1,0 +1,42 @@
+/* ==========================================================================
+  auk-document
+  ========================================================================== */
+
+/* Component
+  ========================================================================== */
+
+.c-file-attachment {
+  a {
+    background: $color-semantic-background;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.6rem 0.6rem 1rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    border-radius: 4rem;
+    color: $color-semantic-body-text;
+    text-decoration: none;
+    width: 100%;
+    align-items: center;
+
+    &:hover {
+      background-color: $color-gray-100;
+    }
+  }
+
+}
+
+.c-file-attachment__icon {
+  background: $color-white;
+  border-radius: 2.8rem;
+  padding: 0.4rem;
+  .o-svg-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.c-file-attachment__name {
+  margin-left: .6rem;
+  transition: color .2s ease-in-out;
+}

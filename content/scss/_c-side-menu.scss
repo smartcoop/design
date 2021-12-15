@@ -3,24 +3,33 @@
   ========================================================================== */
 
 .c-side-menu {
-  border: 0.1rem solid $color-border;
+  border: 0.1rem solid $color-semantic-border;
   border-radius: 0.3rem;
 }
 
+.c-side-menu + .c-side-menu {
+  margin-top: 2.4rem;
+}
+
 .c-side-menu__item + .c-side-menu__item {
-  border-top: 0.1rem solid $color-border;
+  border-top: 0.1rem solid $color-semantic-border;
 }
 
 .c-side-menu__link {
   text-decoration: none;
   padding: 1.2rem 2.4rem;
-  color: $color-text;
+  color: $color-semantic-body-text;
   align-items: center;
   display: flex;
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $color-gray-25;
+  }
+
+  &:focus {
+    z-index: 2;
   }
 }
 
@@ -37,7 +46,7 @@
       left: -0.1rem;
       top: -0.1rem;
       bottom: -0.1rem;
-      background: $color-red-500;
+      background: $color-red-600;
     }
   }
 }

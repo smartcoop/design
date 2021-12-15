@@ -7,7 +7,7 @@
   .c-design-system-nav__desktop {
     display: block;
   }
-  
+
   // Hide the button on desktop
   #c-design-system-nav-open {
     display: none;
@@ -20,7 +20,7 @@
   height: 100%;
   width: 100%;
   overflow: auto;
-  
+
   li[role="presentational"] {
     height: .1rem;
     margin: .4rem 0;
@@ -29,7 +29,7 @@
   > ul {
     margin-top: 2.4rem;
     margin-bottom: 2.4rem;
-    
+
     ul {
       margin-left: 1.2rem;
     }
@@ -38,7 +38,7 @@
     display: block;
     padding: .8rem 1.2rem .8rem 1.2rem;
     position: relative;
-    color: $color-text;
+    color: $color-semantic-body-text;
   }
   li.selected a {
     &:before {
@@ -49,7 +49,7 @@
       border-radius: 0.3rem 0 0 0.3rem;
       left: 0;
       bottom: 0;
-      background: $color-red-500;
+      background: $color-red-600;
     }
   }
   a:hover,

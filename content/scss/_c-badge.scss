@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  color: $color-icon;
+  color: $color-semantic-icon;
 
   .o-svg-icon {
     width: 1.6rem;
@@ -51,26 +51,26 @@
    ========================================================================== */
 
 .c-badge--default {
-  background: $color-blue-500;
+  background: $color-blue-600;
   color: $color-white;
 }
 
 .c-badge--success {
-  background: $color-success;
+  background: $color-semantic-success;
   color: $color-white;
 }
 
 .c-badge--error {
-  background: $color-error;
+  background: $color-semantic-error;
   color: $color-white;
 }
 
 .c-badge--warning {
-  background: $color-warning;
+  background: $color-semantic-warning;
 }
 
 .c-badge--help {
-  background: $color-background;
+  background: $color-semantic-background;
 }
 
 /* Badge and text

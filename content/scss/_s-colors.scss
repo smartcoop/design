@@ -23,42 +23,63 @@ $color-gray-900: #1A1A1A;
 $color-black: #000000;
 
 
-/* Primary colors
+/* Reds
  ========================================================================== */
 
-$color-red-800: #B32D3B;
-$color-red-500: #FF4054;
-$color-red-200: #FFB0B9;
+$color-red-50: #FEE7E9;
+$color-red-150: #FFB0B9;
+$color-red-300: #FF8F9A;
+$color-red-400: #FF6979;
+$color-red-600: #FF4054;
+$color-red-700: #B32D3B;
 
-/* Secondary colors
+
+/* Yellows
+========================================================================== */
+
+$color-yellow-50: #FCF7E8;
+$color-yellow-300: #F8DB94;
+$color-yellow-400: #F3CC69;
+$color-yellow-500: #F4C95D;
+$color-yellow-800: #C28D0A;
+$color-yellow-900: #6B4F0A;
+
+
+/* Greens
  ========================================================================== */
 
+$color-green-50: #ECF9F6;
+$color-green-200: #ADDACF;
+$color-green-300: #85C8B8;
+$color-green-400: #33A388;
 $color-green-500: #00A57D;
-$color-blue-500: #1267FB;
+
+
+/* Blues
+ ========================================================================== */
+
+$color-blue-25: #F3F7FE;
+$color-blue-50: #E7EFFE;
+$color-blue-300: #A7C8FF;
+$color-blue-400: #8AB5FF;
+$color-blue-600: #1267FB;
 $color-blue-700: #154EB1;
-$color-blue-200: #8AB5FF;
-$color-yellow-500: #F0F096;
-$color-orange-500: #FF8700;
-$color-brown-500: #A29490;
-$color-mauve-500: #744DFF;
-$color-mint-500: #8AFFC2;
-$color-beige-500: #FFFAE7;
+
 
 /* Semantic colors
  ========================================================================== */
 
-$color-primary: #FF4054;
-$color-header: #000000;
-$color-text: #333333;
-$color-icon: #595959;
-$color-muted: #808080;
-$color-input-border: #D4D4D4;
-$color-border: #E5E5E5;
-$color-disabled: #999999;
-$color-background: #F2F2F2;
-$color-background-light: #F6F6F6;
-$color-error: #FF4054;
-$color-success: #00A57D;
-$color-warning: #F4C95D;
-$color-link: #1267FB;
+$color-semantic-primary: #FF4054;
+$color-semantic-header-text: #000000;
+$color-semantic-body-text: #333333;
+$color-semantic-icon: #595959;
+$color-semantic-muted-text: #808080;
+$color-semantic-input-border: #D4D4D4;
+$color-semantic-border: #E5E5E5;
+$color-semantic-disabled: #999999;
+$color-semantic-background: #F2F2F2;
+$color-semantic-error: #FF4054;
+$color-semantic-success: #00A57D;
+$color-semantic-warning: #F4C95D;
+$color-semantic-link: #1267FB;
 
