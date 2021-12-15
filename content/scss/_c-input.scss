@@ -126,7 +126,7 @@ textarea.c-input--h-large { height: 20rem; }
   border-radius: 0.4rem 0 0 0.4rem;
   border-right: none;
 
-  ~.c-input-group__input {
+  ~ .c-input-group__input {
     margin-left: 36px;
   }
 }
@@ -137,11 +137,11 @@ textarea.c-input--h-large { height: 20rem; }
   right: 0;
 }
 
-.c-input-group>.c-input-group__input:not(:last-child) .c-input {
+.c-input-group > .c-input-group__input:not(:last-child) .c-input {
   border-radius: 0.4rem 0 0 0.4rem;
 }
 
-.c-input-group>.c-input-group__input:not(:first-child) .c-input {
+.c-input-group > .c-input-group__input:not(:first-child) .c-input {
   border-radius: 0 0.4rem 0.4rem 0;
 }
 

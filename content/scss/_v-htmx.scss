@@ -1,0 +1,27 @@
+/* ==========================================================================
+    Htmx styles
+   ========================================================================== */
+
+/* Additions
+   ========================================================================== */
+
+.htmx-indicator {
+  display: none;
+}
+
+.htmx-request .htmx-indicator {
+  display: inline;
+}
+
+.htmx-request.htmx-indicator{
+  display:inline;
+}
+
+.htmx-request ~ .c-button[hx-indicator]  {
+  display: none;
+}
+
+// Remove blankslate when loading
+.htmx-request ~ .c-blank-slate {
+  display: none;
+}

@@ -11,17 +11,16 @@ block content
         .c-toolbar
             .c-toolbar__left
                 .c-toolbar__item
-                    h2.c-toolbar__title Simulation
-
+                        h2.c-toolbar__title Simulation
     .u-scroll-wrapper-body
-        form.o-grid
+        .o-grid(hx-boost="true")
             .o-grid-col-bp3-6
                 .u-spacer-l
                     .c-panel
                         .c-panel__content
                             - var input = {}
                             - if (state == "filled") input = data.input
-                            .o-form-group-layout.o-form-group-layout--horizontal
+                            form.o-form-group-layout.o-form-group-layout--horizontal
                                 include /templates/_includes/simulation-form-fields
 
                     .u-spacer-top
@@ -29,22 +28,15 @@ block content
                             .c-toolbar__right
                                 .c-toolbar__item
                                     input.c-button.c-button--secondary(type="reset" value="Reset")
-                                    input.c-button.c-button--primary(type="submit" value="Calculate")
+                                    +c-button({ isLoading: true })(id="indicator" class="htmx-indicator") Calculate
+                                    +c-button({ skin: 'primary', href: '/development/tools/simulation.html'})(hx-get="/partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator" hx-boost="true") Calculate
 
 
             .o-grid-col-bp3-6
-                if (state == "empty")
+                .u-maximize-height(id="simulationResult")
                     .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
                         .u-spacer-l
                             .c-blank-slate
                                 +c-avatar({icon: 'document', size: 'large'})
                                 p.u-text-muted.c-body-1 Fill in the form to view a calculation
-                else if (state == "loading")
-                    .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
-                        .u-spacer-l
-                            .o-flex.o-flex--vertical.o-flex--center
-                                .c-loader
-                                p.u-text-muted.c-body-1 Calculating simulation...
 
-                else if (state == "filled")
-                    include /templates/partials/simulation-result

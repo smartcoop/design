@@ -91,7 +91,7 @@ input.c-button {
 }
 
 .c-button__label + .o-svg-icon {
-  margin-left: 0.6rem;
+  margin-left: $c-button-icon-spacing;
 }
 
 .c-button:not(.c-button--icon) .o-svg-icon:first-child {

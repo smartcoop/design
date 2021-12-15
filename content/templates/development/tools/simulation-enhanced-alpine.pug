@@ -1,0 +1,266 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Tools - Simulation"
+    - var state = "filled"
+    - var data = contentData.simulation
+    -
+        var smartServices = [
+            {
+                id: 0,
+                name: 'Select'
+            },
+            {
+                id: 1,
+                name: 'I provide a service in exchange for a salary'
+            },
+            {
+                id: 2,
+                name: 'I continue my Smart activity'
+            },
+            {
+                id: 3,
+                name: 'I carry out an interim assignment on behalf of a client'
+            },
+        ]
+
+        var contractTypes = [
+            {
+                id: 0,
+                name: 'Select'
+            },
+            {
+                id: 1,
+                name: 'Artistic'
+            },
+            {
+                id: 2,
+                name: 'Non-artistic',
+            },
+            {
+                id: 3,
+                name: 'Student'
+            },
+        ]
+
+        var jointCommissions = [
+            {
+                id: 0,
+                name: 'Select',
+            },
+            {
+                id: 1,
+                name: 'Performing arts - CP304 (CCT performing arts)',
+            },
+            {
+                id: 2,
+                name: 'Music - CP 304 (CCT music)',
+            },
+            {
+                id: 3,
+                name: 'Dramatic Art - CP 304 (CCT Dramatic Performing Arts)',
+            },
+            {
+                id: 4,
+                name: 'Film industry (feature films) - CP 303.01',
+            },
+            {
+                id: 5,
+                name: 'Operation of cinemas - CP 303.03',
+            },
+            {
+                id: 6,
+                name: 'Dubbing - CCT dubbing',
+            },
+            {
+                id: 7,
+                name: 'Audiovisual other - CP 227',
+            },
+            {
+                id: 8,
+                name: 'Sociocultural Flemish Community - CP 329.01',
+                subCommittees: [
+                    {
+                        id: 0,
+                        name: 'Select',
+                    },
+                    {
+                        id: 1,
+                        name: 'Sociocultural work',
+                    },
+                    {
+                        id: 2,
+                        name: 'Integration centers and social animation',
+                    },
+                    {
+                        id: 3,
+                        name: 'Socio-professional integration',
+                    },
+                ]
+            },
+            {
+                id: 9,
+                name: 'Sociocultural Walloon Region and French and German-speaking Community - CP 329.02',
+                subCommittees: [
+                    {
+                        id: 0,
+                        name: 'Select',
+                    },
+                    {
+                        id: 1,
+                        name: 'Work, employment, socio-professional integration in the Walloon Region'
+                    },
+                    {
+                        id: 2,
+                        name: 'Continuing education sub-committee in the French Community',
+                    },
+                    {
+                        id: 3,
+                        name: 'Professional integration in the Brussels Region',
+                    },
+                ]
+            },
+            {
+                id: 10,
+                name: 'Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03',
+            },
+            {
+                id: 11,
+                name: 'Auxiliary joint committee for employees - CP 200',
+            },
+            {
+                id: 12,
+                name: 'Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03',
+            },
+            {
+                id: 13,
+                name: 'Other',
+            },
+            {
+                id: 14,
+                name: 'Work carried out abroad for a principal established abroad',
+            },
+            {
+                id: 15,
+                name: 'Public authorities (no PC)'
+            }
+        ]
+
+block content
+
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    h2.c-toolbar__title Simulation
+    .u-scroll-wrapper-body
+
+        form.o-grid(x-data="{ service:'', jointCommission: '', showVat: false, showJointCommission: false, showSubCommittees: false, isLoading: false }")
+            .o-grid-col-bp3-6
+                .u-spacer-l
+                    .c-panel
+                        .c-panel__content
+                            - var input = {}
+                            - if (state == "filled") input = data.input
+                            .o-form-group-layout.o-form-group-layout--horizontal
+                                .u-spacer-l
+                                    h3.c-h3.u-spacer-bottom-l Smart service
+
+                                    .o-form-group
+                                        label.o-form-group__label(for="smartServiceId") Smart service
+                                        .o-form-group__controls.o-form-group__controls--full-width
+                                            .c-select-holder
+                                                select.c-select(x-model="service" x-ref="service" id="smartServiceId" x-on:change="showVat = ($event.target.value == 1 || $event.target.value == 3), showJointCommission = ($event.target.value == 3)")
+                                                    each item, index in smartServices
+                                                        option(value=index)= item.name
+
+                                    div(x-show="showVat")
+                                        .o-form-group
+                                            .o-form-group__label.o-form-group__label--with-helper
+                                                label(id='vatLabel') VAT
+                                                +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helperVat" data-tooltip-placement="right") Show info
+                                                .c-tooltip(role="tooltip" id="helperVat")
+                                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                    .c-tooltip__arrow(data-popper-arrow)
+
+                                            .o-form-group__controls
+                                                .o-flex.o-flex--spaced
+                                                    +c-select({ id: 'vatType', value: ['Select', 'Included', 'Not included', 'No VAT'] })(aria-labelledby="vatLabel")
+                                                    +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true })(aria-labelledby="vatLabel")
+
+
+                                    +c-form-group({label: 'Contract type', id: 'contractType'})
+                                        +c-select({id: 'contractType', value: contractTypes, key: 'name', valueKey: 'id' })
+
+                                div(x-show="showJointCommission")
+                                    hr.c-hr
+                                    .u-spacer-l
+                                        h3.c-h3 Joint commission
+
+                                        .o-form-group
+                                            .o-form-group__label.o-form-group__label--with-helper
+                                                label(for='jointCommissionId') Joint commission
+                                                +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helperJointCommission" data-tooltip-placement="right") Show info
+                                                .c-tooltip(role="tooltip" id="helperJointCommission")
+                                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                    .c-tooltip__arrow(data-popper-arrow)
+
+                                            .o-form-group__controls
+                                                .c-select-holder
+                                                    select.c-select(x-model="jointCommission" x-ref="jointCommission" id="jointCommissionId" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ")
+                                                        each commission, index in jointCommissions
+                                                            option(value=index)= commission.name
+                                        div(x-show="showSubCommittees")
+                                            div(x-show="jointCommission == 8")
+                                                +c-form-group({label: 'Joint commission', id: 'jointCommission', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
+                                                    +c-select({id: 'jointCommission', value: jointCommissions[8].subCommittees, key: 'name', valueKey: 'id'})
+
+
+                                            div(x-show="jointCommission == 9")
+                                                +c-form-group({label: 'Joint commission', id: 'jointCommission', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
+                                                    +c-select({id: 'jointCommission', value: jointCommissions[9].subCommittees, key: 'name', valueKey: 'id'})
+
+                                hr.c-hr
+
+                                .u-spacer-l
+                                    h3.c-h3.u-spacer-bottom-l Contract data
+                                    .o-form-group
+                                        .o-form-group__label.o-form-group__label--with-helper
+                                            label(id="amountLabel") Amount
+                                            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-Amount" data-tooltip-placement="right") Show info
+                                            .c-tooltip(role="tooltip" id="helperAmount")
+                                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                .c-tooltip__arrow(data-popper-arrow)
+
+                                        .o-form-group__controls
+                                            .o-flex.o-flex--spaced
+                                                +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary'] })(aria-labelledby="amountLabel")
+                                                +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number'})(aria-labelledby="amountLabel")
+
+                                    +c-form-group({label: 'Number of days', id: 'numberOfDays'})
+                                        +c-input({id: 'numberOfDays', type: 'number'})
+
+                                    +c-form-group({label: 'Defrayal (per day)', id: 'defrayalPerDay', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                        +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€'})
+
+                                    +c-form-group({ label: 'Withholding tax', id: 'withHoldingTax', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+                                        +c-input-group-after({id: 'withHoldingTax', type: 'number', icon: 'percent'})
+
+                    .u-spacer-top
+                        .c-toolbar
+                            .c-toolbar__right
+                                .c-toolbar__item
+                                    input.c-button.c-button--secondary(type="reset" value="Reset" x-on:click="showVat = false, showJointCommission = false")
+                                    +c-button({ isLoading: true })(x-show="isLoading") Calculate
+                                    +c-button({ skin: 'primary'})(x-show="!isLoading" @click="isLoading = true; fetch('/partials/simulation-result.html').then(response => response.text()).then(html => {isLoading = false; $refs.result.innerHTML = html })")
+                                        | Calculate
+
+
+            .o-grid-col-bp3-6
+                .u-maximize-height(x-ref="result")
+                    .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
+                        .u-spacer-l
+                            .c-blank-slate
+                                +c-avatar({icon: 'document', size: 'large'})
+                                p.u-text-muted.c-body-1 Fill in the form to view a calculation
+
