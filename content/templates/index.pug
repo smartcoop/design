@@ -2,6 +2,7 @@ extends /templates/_layouts/master
 
 block append pageVariables
     - var moduleTitle = "Home"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
 
 block body
 
@@ -88,7 +89,7 @@ block body
                                         li.c-pill-navigation__item
                                             a(href="/changelog.html") Changelog
 
-    main.o-container
+    main.o-container.o-container--flex
 
         block content
 

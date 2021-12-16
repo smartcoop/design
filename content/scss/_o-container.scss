@@ -51,6 +51,10 @@ $o-container-side-gap: 1.2rem !default; // Should be 1/2 of grid col gap
   max-width: $o-container-max-width-large;
 }
 
+.o-container--flex {
+  flex: 1;
+}
+
 @media (min-width: $g-bp2) {
 
   .o-container-bp2 {
@@ -70,6 +74,7 @@ $o-container-side-gap: 1.2rem !default; // Should be 1/2 of grid col gap
   }
 
 }
+
 
 /* ==========================================================================
   Container vertical
