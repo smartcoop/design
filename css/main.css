@@ -226,6 +226,9 @@ abbr[title] {
   margin: 0 auto;
   max-width: 94rem; }
 
+.o-container--flex {
+  flex: 1; }
+
 @media (min-width: 700px) {
   .o-container-bp2 {
     max-width: 130rem; }
