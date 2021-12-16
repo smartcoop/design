@@ -72,6 +72,11 @@
     text-decoration: none;
     color: $color-blue-600;
     border-bottom: .1rem solid rgba($color-blue-600,.33);
+
+    &.u-text-muted {
+      color: $color-semantic-muted-text;
+      border-color: rgba($color-gray-500, .33);
+    }
   }
 
   dl {
