@@ -5,11 +5,11 @@ block append pageVariables
 
 block body
 
-    .o-container-vertical
+    header.o-container-vertical
         .o-container
             +c-brand({size: "small"})
 
-    .o-container-vertical
+    main.o-container-vertical
         .o-container.o-container--small
             .c-panel
                 .c-panel__body
@@ -47,3 +47,19 @@ block body
 
             .c-content.u-text-center.u-spacer-top-l
                 a.u-text-muted(href="#") Forgot password
+
+    footer#footer
+        .o-container-vertical
+            .o-container
+                hr.c-hr
+
+                .c-toolbar.c-toolbar--auto
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            .o-flex.o-flex--vertical-center
+                                span.u-spacer-right-s Don't have an account yet?
+                                a.u-text-muted(href="") Sign up
+                    .c-toolbar__right
+                        ul.c-bordered-list-horizontal.c-bordered-list-horizontal--muted
+                            li: a.u-text-muted(href="#") Footer link
+                            li: a.u-text-muted(href="#") Footer link
