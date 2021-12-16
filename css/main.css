@@ -905,6 +905,9 @@ abbr[title] {
   text-decoration: none;
   color: #1267FB;
   border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
+  .c-content a.u-text-muted {
+    color: #808080;
+    border-color: rgba(128, 128, 128, 0.33); }
 
 .c-content dl {
   border: 1px solid #E5E5E5;
