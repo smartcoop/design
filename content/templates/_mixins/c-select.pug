@@ -1,9 +1,9 @@
 //-
     Mixin select - Create a native <select> element for usage in forms. The outside is styled, but inside (dropdown itself) is native to OS.
 
-mixin c-select({ id, value = [A, B, C], valueKey, key, selected })
+mixin c-select({ id, value = [A, B, C], valueKey, key, selected, state })
     .c-select-holder
-        select.c-select(id=id)
+        select.c-select(id=id class=state=="error"? 'c-select--error' : '')
             each item in value
                 if key
                     option(value=item[valueKey] selected=(item[valueKey]==selected))= item[key]

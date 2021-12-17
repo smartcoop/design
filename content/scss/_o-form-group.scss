@@ -63,6 +63,12 @@ $o-form-group-label-font-weight: 500 !default;
     align-items: center;
   }
 
+  .o-form-group__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   @media(min-width: $g-bp1) {
     .o-form-group {
       display: flex;
@@ -79,7 +85,6 @@ $o-form-group-label-font-weight: 500 !default;
       flex: 0 0 auto;
     }
   }
-
 }
 
 .o-form-group-layout--inline {

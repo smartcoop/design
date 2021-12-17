@@ -136,7 +136,6 @@
     ]
 
 
-
 .u-spacer-l
     h3.c-h3.u-spacer-bottom-l Smart service
 
@@ -144,7 +143,9 @@
         +c-select({id: 'smartService', value: smartServices, key: 'name', valueKey: 'id'})
 
     +c-form-group({label: 'Contract type', id: 'contractType'})
-        +c-select({id: 'contractType', value: contractTypes, key: 'name', valueKey: 'id' })
+        +c-select({id: 'contractType', value: contractTypes, key: 'name', valueKey: 'id', state: state == 'error'? 'error' : '' })
+        if state == 'error'
+            p.c-form-help-text.c-form-help-text--error Contract type is required
 
     .o-form-group
         .o-form-group__label.o-form-group__label--with-helper
@@ -156,8 +157,10 @@
 
         .o-form-group__controls
             .o-flex.o-flex--spaced
-                +c-select({id: 'vatType', value: ['Select', 'Included', 'Not included', 'No VAT']})(aria-labelledby="vatLabel")
+                +c-select({id: 'vatType', value: ['Select', 'Included', 'Not included', 'No VAT'], state: state == 'error'? 'error' : ''})(aria-labelledby="vatLabel")
                 +c-radio-group({name: 'vatRate', value: ['6%', '21%'], isInline: true})(aria-labelledby="vatLabel")
+            if state == 'error'
+                p.c-form-help-text.c-form-help-text--error VAT type is required for the Smart activity you have chosen
             p.c-form-help-text Ignore when you selected <strong>continue my Smart activity</strong> for the <strong>Smart Service</strong> field.
 
 hr.c-hr
@@ -171,11 +174,12 @@ hr.c-hr
             isLight: true
         })
 
-    +c-form-group({label: 'Joint commission', id: 'jointCommission', helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
+    +c-form-group({label: 'Joint commission', id: 'jointCommission', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
         +c-select({id: 'jointCommission', value: jointCommissions, key: 'name', valueKey: 'id'})
 
-    +c-form-group({label: 'Subcommittee', id: 'subCommittee', helperText: 'Only required when you selected <strong>Sociocultural Flemish Community </strong> or <strong>Sociocultural Walloon Region and French and German-speaking Community</strong> for the <strong>Joint commission</strong> field.'})
+    +c-form-group({label: 'Subcommittee', id: 'subCommittee'})
         +c-select({id: 'subCommittee', value: subCommittees, key: 'name', valueKey: 'id'})
+        p.c-form-help-text Only required when you selected <strong>Sociocultural Flemish Community </strong> or <strong>Sociocultural Walloon Region and French and German-speaking Community</strong> for the <strong>Joint commission</strong> field.
 hr.c-hr
 
 .u-spacer-l
@@ -197,7 +201,8 @@ hr.c-hr
         +c-input({id: 'numberOfDays', type: 'number'})
 
     +c-form-group({label: 'Defrayal (per day)', id: 'defrayalPerDay', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
-        +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€'})
-
+        +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€', value: -1, state: state == 'error'? 'error' : ''})
+        if state == 'error'
+            p.c-form-help-text.c-form-help-text--error Please enter a valid defrayal value
     +c-form-group({ label: 'Withholding tax', id: 'withHoldingTax', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
         +c-input-group-after({id: 'withHoldingTax', type: 'number', icon: 'percent'})

@@ -28,6 +28,7 @@
   pointer-events: none;
 }
 
+
 // A wrapper, so we can position a CSS created arrow
 .c-select-holder {
   position: relative;
@@ -44,5 +45,16 @@
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
+  }
+}
+
+.c-select--error,
+.o-form-group--error .c-select {
+  border-color: $c-input-error-accent-color;
+
+  &:focus {
+    outline: 0;
+    border-color: $c-input-error-accent-color;
+    box-shadow: 0 0 0 2px $color-red-150;
   }
 }

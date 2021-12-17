@@ -1,8 +1,8 @@
 //-
     Mixin Form field - Create a form group, which wraps an input by default
 
-mixin c-form-group({ label = 'Default label', id, helperText, helperTooltip, isFullWidth = false })
-    .o-form-group
+mixin c-form-group({ label = 'Default label', id, helperTooltip, isFullWidth = false, state })
+    .o-form-group(class=(state == "error" ? "o-form-group--error" : ""))
         if helperTooltip
             .o-form-group__label.o-form-group__label--with-helper
                 label(for=id? id : '')= label
@@ -15,5 +15,3 @@ mixin c-form-group({ label = 'Default label', id, helperText, helperTooltip, isF
 
         .o-form-group__controls(class=isFullWidth? "o-form-group__controls--full-width" : "")
             block
-            if helperText
-                p.c-form-help-text !{helperText}

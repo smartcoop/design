@@ -17,6 +17,12 @@ block content
         form.o-grid
             .o-grid-col-bp3-6
                 .u-spacer-l
+                    if state == "error"
+                        .u-spacer-bottom-l
+                            +c-alert({
+                                skin: 'error',
+                                message: 'The simulation form couldn\'t be submitted, please correct the errors below.'
+                            })
                     .c-panel
                         .c-panel__content
                             - var input = {}
@@ -28,12 +34,13 @@ block content
                         .c-toolbar
                             .c-toolbar__right
                                 .c-toolbar__item
-                                    input.c-button.c-button--secondary(type="reset" value="Reset")
-                                    input.c-button.c-button--primary(type="submit" value="Calculate")
+                                    .c-button-toolbar
+                                        input.c-button.c-button--secondary(type="reset" value="Reset")
+                                        input.c-button.c-button--primary(type="submit" value="Calculate")
 
 
             .o-grid-col-bp3-6
-                if (state == "empty")
+                if (state == "empty" || "error")
                     .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
                         .u-spacer-l
                             .c-blank-slate

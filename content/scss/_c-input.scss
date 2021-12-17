@@ -53,13 +53,14 @@ $c-input-padding: 0.8rem !default;
   pointer-events: none;
 }
 
-.o-form-group--error {
+.c-input--error,
+.o-form-group--error .c-input {
   border-color: $c-input-error-accent-color;
 
   &:focus {
     outline: 0;
     border-color: $c-input-error-accent-color;
-    box-shadow: 0 0 0 2px rgba($c-input-error-accent-color, 0.2);
+    box-shadow: 0 0 0 2px $color-red-150;
   }
 }
 
@@ -143,6 +144,23 @@ textarea.c-input--h-large { height: 20rem; }
 
 .c-input-group > .c-input-group__input:not(:first-child) .c-input {
   border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.c-input-group--error,
+.o-form-group--error .c-input-group {
+  .c-input-group__append,
+  .c-input-group__prepend {
+    border-color: $c-input-error-accent-color;
+  }
+
+  &:focus-within {
+    .c-input-group__append,
+    .c-input-group__prepend {
+      outline: 0;
+      border-color: $c-input-error-accent-color;
+      box-shadow: 0 0 0 2px $color-red-150;
+    }
+  }
 }
 
 *[disabled] .c-input-group__append,
