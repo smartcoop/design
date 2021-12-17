@@ -6,7 +6,6 @@ block append pageVariables
 block content
     .c-error-page
         span.c-error-page__code 404
-        .c-error-page__content
-            h4.c-error-page__title Page not found
-            p.c-error-page__desc Sorry, we couldn’t find the page you are looking for.
-            +c-button({ icon: 'arrow-left', href: '/' }) Go back home
+        h4.c-error-page__title Page not found
+        p.c-error-page__desc Sorry, we couldn’t find the page you are looking for.
+        +c-button({ icon: 'arrow-left', href: '/' }) Go back home
