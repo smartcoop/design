@@ -148,12 +148,30 @@
                 </div>
             </div>
             <div class="u-scroll-wrapper-body">
-                <div class="o-grid" hx-boost="true">
+                <form class="o-grid">
                     <div class="o-grid-col-bp3-6">
                         <div class="u-spacer-l">
+                            <div class="u-spacer-bottom-l">
+                                <div class="c-alert c-alert--error">
+                                    <div class="o-svg-icon o-svg-icon-circle-error  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12ZM7.793 7.793C7.98053 7.60553 8.23484 7.50021 8.5 7.50021C8.76516 7.50021 9.01947 7.60553 9.207 7.793L12 10.586L14.793 7.793C14.8852 7.69749 14.9956 7.62131 15.1176 7.5689C15.2396 7.51649 15.3708 7.4889 15.5036 7.48775C15.6364 7.4866 15.7681 7.5119 15.891 7.56218C16.0139 7.61246 16.1255 7.68671 16.2194 7.7806C16.3133 7.8745 16.3875 7.98615 16.4378 8.10905C16.4881 8.23194 16.5134 8.36362 16.5123 8.4964C16.5111 8.62918 16.4835 8.7604 16.4311 8.8824C16.3787 9.00441 16.3025 9.11475 16.207 9.207L13.414 12L16.207 14.793C16.3892 14.9816 16.49 15.2342 16.4877 15.4964C16.4854 15.7586 16.3802 16.0094 16.1948 16.1948C16.0094 16.3802 15.7586 16.4854 15.4964 16.4877C15.2342 16.49 14.9816 16.3892 14.793 16.207L12 13.414L9.207 16.207C9.0184 16.3892 8.7658 16.49 8.5036 16.4877C8.2414 16.4854 7.99059 16.3802 7.80518 16.1948C7.61977 16.0094 7.5146 15.7586 7.51233 15.4964C7.51005 15.2342 7.61084 14.9816 7.793 14.793L10.586 12L7.793 9.207C7.60553 9.01947 7.50021 8.76516 7.50021 8.5C7.50021 8.23484 7.60553 7.98053 7.793 7.793Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <div class="c-alert__body">
+                                        <div class="c-alert__text">
+                                            <div class="c-alert__message">
+                                                <div class="c-content">
+                                                    <p>The simulation form couldn&#39;t be submitted, please correct the errors below.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="c-panel">
                                 <div class="c-panel__content">
-                                    <form class="o-form-group-layout o-form-group-layout--horizontal">
+                                    <div class="o-form-group-layout o-form-group-layout--horizontal">
                                         <div class="u-spacer-l">
                                             <h3 class="c-h3 u-spacer-bottom-l">Smart service</h3>
                                             <div class="o-form-group">
@@ -191,13 +209,14 @@
                                                 <label class="o-form-group__label" for="contractType">Contract type</label>
                                                 <div class="o-form-group__controls">
                                                     <div class="c-select-holder">
-                                                        <select class="c-select" id="contractType">
+                                                        <select class="c-select c-select--error" id="contractType">
                                                             <option value="0">Select</option>
                                                             <option value="1">Artistic</option>
                                                             <option value="2">Non-artistic</option>
                                                             <option value="3">Student</option>
                                                         </select>
                                                     </div>
+                                                    <p class="c-form-help-text c-form-help-text--error">Contract type is required</p>
                                                 </div>
                                             </div>
                                             <div class="o-form-group">
@@ -223,7 +242,7 @@
                                                 <div class="o-form-group__controls">
                                                     <div class="o-flex o-flex--spaced">
                                                         <div class="c-select-holder">
-                                                            <select class="c-select" id="vatType">
+                                                            <select class="c-select c-select--error" id="vatType">
                                                                 <option>Select</option>
                                                                 <option>Included</option>
                                                                 <option>Not included</option>
@@ -243,6 +262,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <p class="c-form-help-text c-form-help-text--error">VAT type is required for the Smart activity you have chosen</p>
                                                     <p class="c-form-help-text">Ignore when you selected <strong>continue my Smart activity</strong> for the <strong>Smart Service</strong> field.</p>
                                                 </div>
                                             </div>
@@ -401,14 +421,15 @@
                                                     </div>
                                                 </div>
                                                 <div class="o-form-group__controls">
-                                                    <div class="c-input-group">
+                                                    <div class="c-input-group c-input-group--error">
                                                         <div class="c-input-group__input">
-                                                            <input class="c-input" type="number" id="defrayalPerDay" value="-1" />
+                                                            <input class="c-input c-input--error" type="number" id="defrayalPerDay" value="-1" />
                                                         </div>
                                                         <div class="c-input-group__append">
                                                             <span>€</span>
                                                         </div>
                                                     </div>
+                                                    <p class="c-form-help-text c-form-help-text--error">Please enter a valid defrayal value</p>
                                                 </div>
                                             </div>
                                             <div class="o-form-group">
@@ -449,25 +470,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                             <div class="u-spacer-top">
                                 <div class="c-toolbar">
                                     <div class="c-toolbar__right">
                                         <div class="c-toolbar__item">
-                                            <input class="c-button c-button--secondary" type="reset" value="Reset">
-                                            <button class="c-button c-button--secondary c-button--loading htmx-indicator" type="button" disabled="disabled" id="indicator">
-                                                <div class="c-loader"></div>
-                                                <span class="c-button__content">
-                                                    <span class="c-button__label">Calculate</span>
-                                                </span>
-                                            </button>
-                                            <a class="c-button c-button--primary" href="/development/tools/simulation.html" hx-get="/partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator" hx-boost="true">
-                                                <span class="c-button__content">
-                                                    <span class="c-button__label">Calculate</span>
-                                                </span>
-                                            </a>
+                                            <div class="c-button-toolbar">
+                                                <input class="c-button c-button--secondary" type="reset" value="Reset">
+                                                <input class="c-button c-button--primary" type="submit" value="Calculate">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -475,26 +488,24 @@
                         </div>
                     </div>
                     <div class="o-grid-col-bp3-6">
-                        <div class="u-maximize-height" id="simulationResult">
-                            <div class="o-flex o-flex--vertical o-flex--center u-maximize-height">
-                                <div class="u-spacer-l">
-                                    <div class="c-blank-slate">
-                                        <div class="c-avatar c-avatar--large">
-                                            <div class="o-svg-icon o-svg-icon-document o-svg-icon--undefined ">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6 2C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8C20 7.73478 19.8946 7.48043 19.7071 7.29289L14.7071 2.29289C14.5196 2.10536 14.2652 2 14 2H6ZM12 4V9C12 9.55228 12.4477 10 13 10H18V20H6V4L12 4ZM17.5858 8H14V4.41421L17.5858 8Z" fill="#595959" />
-                                                    <path d="M8 13C8 13.5523 8.44772 14 9 14H15C15.5523 14 16 13.5523 16 13C16 12.4477 15.5523 12 15 12H9C8.44772 12 8 12.4477 8 13Z" fill="#595959" />
-                                                    <path d="M8 17C8 16.4477 8.44772 16 9 16H15C15.5523 16 16 16.4477 16 17C16 17.5523 15.5523 18 15 18H9C8.44772 18 8 17.5523 8 17Z" fill="#595959" />
-                                                </svg>
-                                            </div>
+                        <div class="o-flex o-flex--vertical o-flex--center u-maximize-height">
+                            <div class="u-spacer-l">
+                                <div class="c-blank-slate">
+                                    <div class="c-avatar c-avatar--large">
+                                        <div class="o-svg-icon o-svg-icon-document o-svg-icon--undefined ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 2C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8C20 7.73478 19.8946 7.48043 19.7071 7.29289L14.7071 2.29289C14.5196 2.10536 14.2652 2 14 2H6ZM12 4V9C12 9.55228 12.4477 10 13 10H18V20H6V4L12 4ZM17.5858 8H14V4.41421L17.5858 8Z" fill="#595959" />
+                                                <path d="M8 13C8 13.5523 8.44772 14 9 14H15C15.5523 14 16 13.5523 16 13C16 12.4477 15.5523 12 15 12H9C8.44772 12 8 12.4477 8 13Z" fill="#595959" />
+                                                <path d="M8 17C8 16.4477 8.44772 16 9 16H15C15.5523 16 16 16.4477 16 17C16 17.5523 15.5523 18 15 18H9C8.44772 18 8 17.5523 8 17Z" fill="#595959" />
+                                            </svg>
                                         </div>
-                                        <p class="u-text-muted c-body-1">Fill in the form to view a calculation</p>
                                     </div>
+                                    <p class="u-text-muted c-body-1">Fill in the form to view a calculation</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </main>
     </div>

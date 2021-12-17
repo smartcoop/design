@@ -403,7 +403,7 @@
                                                 <div class="o-form-group__controls">
                                                     <div class="c-input-group">
                                                         <div class="c-input-group__input">
-                                                            <input class="c-input" type="number" id="defrayalPerDay" />
+                                                            <input class="c-input" type="number" id="defrayalPerDay" value="-1" />
                                                         </div>
                                                         <div class="c-input-group__append">
                                                             <span>€</span>
@@ -456,8 +456,10 @@
                                 <div class="c-toolbar">
                                     <div class="c-toolbar__right">
                                         <div class="c-toolbar__item">
-                                            <input class="c-button c-button--secondary" type="reset" value="Reset">
-                                            <input class="c-button c-button--primary" type="submit" value="Calculate">
+                                            <div class="c-button-toolbar">
+                                                <input class="c-button c-button--secondary" type="reset" value="Reset">
+                                                <input class="c-button c-button--primary" type="submit" value="Calculate">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
