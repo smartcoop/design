@@ -2509,31 +2509,20 @@ a.c-card:hover {
   width: 100%;
   height: 100%;
   padding: 2.4rem; }
-  @media (min-width: 700px) {
-    .c-error-page {
-      flex-direction: row;
-      text-align: left; } }
 
 .c-error-page__code {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 500;
   color: #999999; }
-  @media (min-width: 700px) {
-    .c-error-page__code {
-      margin-right: 2.4rem; } }
-
-@media (min-width: 700px) {
-  .c-error-page__content {
-    padding-left: 2.4rem;
-    border-left: 1px solid #E5E5E5; } }
 
 .c-error-page__title {
   color: #1A1A1A;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
   margin: 0 0 0.8rem; }
 
-.c-error-page__desc + .c-button {
+.c-error-page__desc + .c-button,
+.c-error-page__desc + .c-button-toolbar {
   margin-top: 2.4rem; }
 
 /* ==========================================================================
