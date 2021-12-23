@@ -155,9 +155,15 @@ block content
                     h2.c-toolbar__title Simulation
     .u-scroll-wrapper-body
 
-        form.o-grid(x-data="{ service:'', jointCommission: '', showVat: false, showJointCommission: false, showSubCommittees: false, isLoading: false }")
+        form.o-grid(x-data="validateForm()" x-init="$watch('service', value => { validate('service') })"  x-on:submit.prevent="submit();")
             .o-grid-col-bp3-6
                 .u-spacer-l
+                    template(x-if="hasErrors")
+                        .u-spacer-bottom-l
+                            +c-alert({
+                                skin: 'error',
+                                message: 'The simulation form couldn\'t be submitted, please correct the errors below.'
+                            })
                     .c-panel
                         .c-panel__content
                             - var input = {}
@@ -166,15 +172,12 @@ block content
                                 .u-spacer-l
                                     h3.c-h3.u-spacer-bottom-l Smart service
 
-                                    .o-form-group
-                                        label.o-form-group__label(for="smartServiceId") Smart service
-                                        .o-form-group__controls.o-form-group__controls--full-width
-                                            .c-select-holder
-                                                select.c-select(x-model="service" x-ref="service" id="smartServiceId" x-on:change="showVat = ($event.target.value == 1 || $event.target.value == 3), showJointCommission = ($event.target.value == 3)")
-                                                    each item, index in smartServices
-                                                        option(value=index)= item.name
+                                    +c-form-group({label: 'Smart service',id: 'smartService', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+                                        +c-select({id: 'smartService', value: smartServices, key: 'name', valueKey: 'id'})(x-model="service" x-ref="service" id="smartServiceId" x-on:change="showVat = ($event.target.value == 1 || $event.target.value == 3), showJointCommission = ($event.target.value == 3)")
+                                        template(x-if="validation.service.error")
+                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.service.message")
 
-                                    div(x-show="showVat")
+                                    template(x-if="showVat")
                                         .o-form-group
                                             .o-form-group__label.o-form-group__label--with-helper
                                                 label(id='vatLabel') VAT
@@ -250,9 +253,9 @@ block content
                         .c-toolbar
                             .c-toolbar__right
                                 .c-toolbar__item
-                                    input.c-button.c-button--secondary(type="reset" value="Reset" x-on:click="showVat = false, showJointCommission = false")
+                                    input.c-button.c-button--secondary(type="reset" value="Reset" x-on:click="reset()")
                                     +c-button({ isLoading: true })(x-show="isLoading") Calculate
-                                    +c-button({ skin: 'primary'})(x-show="!isLoading" @click="isLoading = true; fetch('/partials/simulation-result.html').then(response => response.text()).then(html => {isLoading = false; $refs.result.innerHTML = html })")
+                                    +c-button({ skin: 'primary', type: 'submit'})(x-show="!isLoading")
                                         | Calculate
 
 
@@ -264,3 +267,64 @@ block content
                                 +c-avatar({icon: 'document', size: 'large'})
                                 p.u-text-muted.c-body-1 Fill in the form to view a calculation
 
+
+    script.
+        window.validateForm = function () {
+            return {
+                service: '',
+                jointCommission: '',
+                showVat: false,
+                showJointCommission: false,
+                showSubCommittees: false,
+                isLoading: false,
+                hasErrors: false,
+                validation: {
+                    service: {
+                        rule: {
+                        required: function (field) {
+                            if (field && field != 0) {
+                            return { error: false, hasErrors: false, message: '' }
+                            } else {
+                                return { error: true, hasErrors: true, message: 'This field is required.' }
+                            }
+                        },
+                        },
+                        error: false,
+                        message: ''
+                    },
+                },
+                validate(field) {
+                    for (const key in this.validation[field].rule) {
+                        const validationResult = this.validation[field].rule[key](this[field])
+                        if (validationResult.error) {
+                        this.validation[field].error = true
+                        this.validation[field].message = validationResult.message
+                        break
+                        }
+                        this.validation[field].error = false
+                        this.validation[field].message = ''
+                        continue
+                    }
+                },
+                reset: function () {
+                    this.showVat = false;
+                    this.showJointCommission = false;
+                    this.showSubCommittees = false;
+                    this.hasErrors = false;
+                    this.validation.service.error = false;
+                    fetch('/partials/simulation-empty.html').then(response => response.text()).then(html => {isLoading = false; this.$refs.result.innerHTML = html });
+                },
+                submit: function() {
+                    this.validate('service');
+                    if (this.validation.service.error) {
+                        this.hasErrors = true;
+                        fetch('/partials/simulation-empty.html').then(response => response.text()).then(html => {isLoading = false; this.$refs.result.innerHTML = html });
+                        return;
+                    } else {
+                        this.hasErrors = false;
+                    }
+                    isLoading = true;
+                    fetch('/partials/simulation-result.html').then(response => response.text()).then(html => {isLoading = false; this.$refs.result.innerHTML = html });
+                }
+            }
+         }

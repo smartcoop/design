@@ -3,7 +3,7 @@
 
 mixin c-select({ id, value = [A, B, C], valueKey, key, selected, state })
     .c-select-holder
-        select.c-select(id=id class=state=="error"? 'c-select--error' : '')
+        select.c-select(id=id class=state=="error"? 'c-select--error' : '')&attributes(attributes)
             each item in value
                 if key
                     option(value=item[valueKey] selected=(item[valueKey]==selected))= item[key]

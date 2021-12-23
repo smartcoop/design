@@ -1,0 +1,9 @@
+extends ../../../core/templates/layouts/sample
+
+block content
+    .u-maximize-height(id="simulationResult" x-ref="result")
+        .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
+            .u-spacer-l
+                .c-blank-slate
+                    +c-avatar({icon: 'document', size: 'large'})
+                    p.u-text-muted.c-body-1 Fill in the form to view a calculation
