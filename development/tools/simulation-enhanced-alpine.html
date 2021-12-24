@@ -300,7 +300,7 @@
                                                     </div>
                                                     <div class="o-form-group__controls o-form-group__controls--full-width">
                                                         <div class="c-select-holder">
-                                                            <select class="c-select" id="contractType" x-model="jointCommission" :class="{'c-select--error': validation.contractType.error}" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ">
+                                                            <select class="c-select" id="contractType" x-model="jointCommission" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ">
                                                                 <option value="0">Select</option>
                                                                 <option value="1">Performing arts - CP304 (CCT performing arts)</option>
                                                                 <option value="2">Music - CP 304 (CCT music)</option>
@@ -417,7 +417,7 @@
                                                 <div class="o-form-group__controls">
                                                     <div class="o-flex o-flex--spaced">
                                                         <div class="c-select-holder">
-                                                            <select class="c-select" id="amountType" x-model="amountType">
+                                                            <select class="c-select" id="amountType" x-model="amountType" :class="{'c-select--error': validation.amountType.error}">
                                                                 <option>Select</option>
                                                                 <option>Billing amount</option>
                                                                 <option>Net to pay</option>
@@ -426,7 +426,7 @@
                                                         </div>
                                                         <div class="c-input-group">
                                                             <div class="c-input-group__input">
-                                                                <input class="c-input" type="number" id="amountValue" x-model="amountValue" />
+                                                                <input class="c-input" type="number" id="amountValue" x-model="amountValue" :class="{'c-input--error': validation.amountValue.error}" />
                                                             </div>
                                                             <div class="c-input-group__append">
                                                                 <span>€</span>
@@ -444,7 +444,7 @@
                                             <div class="o-form-group">
                                                 <label class="o-form-group__label" for="numberOfDays">Number of days</label>
                                                 <div class="o-form-group__controls">
-                                                    <input class="c-input" type="number" id="numberOfDays" x-model="numberOfDays" />
+                                                    <input class="c-input" type="number" id="numberOfDays" x-model="numberOfDays" :class="{'c-input--error': validation.numberOfDays.error}" />
                                                     <template x-if="validation.numberOfDays.error">
                                                         <p class="c-form-help-text c-form-help-text--error" x-text="validation.numberOfDays.message"></p>
                                                     </template>
