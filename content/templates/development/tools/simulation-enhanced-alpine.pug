@@ -195,7 +195,7 @@ block content
                                         h3.c-h3 Joint commission
 
                                         +c-form-group({label: 'Joint commission',id: 'jointCommission', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
-                                            +c-select({id: 'contractType', value: jointCommissions, key: 'name', valueKey: 'id' })(x-model="jointCommission" :class="{'c-select--error': validation.contractType.error}" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ")
+                                            +c-select({id: 'contractType', value: jointCommissions, key: 'name', valueKey: 'id' })(x-model="jointCommission" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ")
 
                                         div(x-show="showSubCommittees")
                                             div(x-show="jointCommission == 8")
@@ -213,15 +213,15 @@ block content
 
                                     +c-form-group({label: 'Amount', id: 'amount', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
                                         .o-flex.o-flex--spaced
-                                            +c-select({ id: 'amountType', value: ['Select', 'Billing amount', 'Net to pay', 'Gross salary'] })(x-model="amountType")
-                                            +c-input-group-after({ type: 'number', id: 'amountValue', text: '€', inputType: 'number'})(x-model="amountValue")
+                                            +c-select({ id: 'amountType', value: ['Select', 'Billing amount', 'Net to pay', 'Gross salary'] })(x-model="amountType" :class="{'c-select--error': validation.amountType.error}" )
+                                            +c-input-group-after({ type: 'number', id: 'amountValue', text: '€', inputType: 'number' })(x-model="amountValue" :class="{'c-input--error': validation.amountValue.error}" )
                                         template(x-if="validation.amountType.error")
                                             p.c-form-help-text.c-form-help-text--error(x-text="validation.amountType.message")
                                         template(x-if="validation.amountValue.error")
                                             p.c-form-help-text.c-form-help-text--error(x-text="validation.amountValue.message")
 
                                     +c-form-group({label: 'Number of days', id: 'numberOfDays'})
-                                        +c-input({id: 'numberOfDays', type: 'number'})(x-model="numberOfDays")
+                                        +c-input({id: 'numberOfDays', type: 'number'})(x-model="numberOfDays" :class="{'c-input--error': validation.numberOfDays.error}" )
                                         template(x-if="validation.numberOfDays.error")
                                             p.c-form-help-text.c-form-help-text--error(x-text="validation.numberOfDays.message")
 
