@@ -155,7 +155,7 @@ block content
                     h2.c-toolbar__title Simulation
     .u-scroll-wrapper-body
 
-        form.o-grid(x-data="validateForm()" x-init="$watch('service', value => { validate('service') })"  x-on:submit.prevent="submit();")
+        form.o-grid(x-data="validateForm()" x-init="init()"  x-on:submit.prevent="submit();" id="form")
             .o-grid-col-bp3-6
                 .u-spacer-l
                     template(x-if="hasErrors")
@@ -166,82 +166,64 @@ block content
                             })
                     .c-panel
                         .c-panel__content
-                            - var input = {}
-                            - if (state == "filled") input = data.input
+
                             .o-form-group-layout.o-form-group-layout--horizontal
                                 .u-spacer-l
                                     h3.c-h3.u-spacer-bottom-l Smart service
 
                                     +c-form-group({label: 'Smart service',id: 'smartService', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
-                                        +c-select({id: 'smartService', value: smartServices, key: 'name', valueKey: 'id'})(x-model="service" x-ref="service" id="smartServiceId" x-on:change="showVat = ($event.target.value == 1 || $event.target.value == 3), showJointCommission = ($event.target.value == 3)")
+                                        +c-select({id: 'smartService', value: smartServices, key: 'name', valueKey: 'id'})(x-model="service" :class="{'c-select--error': validation.service.error}" x-on:change="showVat = ($event.target.value == 1 || $event.target.value == 3), showJointCommission = ($event.target.value == 3)")
                                         template(x-if="validation.service.error")
                                             p.c-form-help-text.c-form-help-text--error(x-text="validation.service.message")
 
+                                    //- Only show this set of fields if Smart service is I provide a service in exchange for a salary || I carry out an interim assignment on behalf of a client
                                     template(x-if="showVat")
-                                        .o-form-group
-                                            .o-form-group__label.o-form-group__label--with-helper
-                                                label(id='vatLabel') VAT
-                                                +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helperVat" data-tooltip-placement="right") Show info
-                                                .c-tooltip(role="tooltip" id="helperVat")
-                                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                    .c-tooltip__arrow(data-popper-arrow)
-
-                                            .o-form-group__controls
-                                                .o-flex.o-flex--spaced
-                                                    +c-select({ id: 'vatType', value: ['Select', 'Included', 'Not included', 'No VAT'] })(aria-labelledby="vatLabel")
-                                                    +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true })(aria-labelledby="vatLabel")
-
+                                        +c-form-group({label: 'VAT', id: 'vatId', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+                                            .o-flex.o-flex--spaced
+                                                +c-select({ id: 'vatType', value: ['Select', 'Included', 'Not included', 'No VAT'] })
+                                                +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true })
 
                                     +c-form-group({label: 'Contract type', id: 'contractType'})
-                                        +c-select({id: 'contractType', value: contractTypes, key: 'name', valueKey: 'id' })
+                                        +c-select({id: 'contractType', value: contractTypes, key: 'name', valueKey: 'id' })(x-model="contractType" :class="{'c-select--error': validation.contractType.error}")
+                                        template(x-if="validation.contractType.error")
+                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.contractType.message")
 
+                                //- Only show this set of fields if Smart service is I carry out an interim assignment on behalf of a client
                                 div(x-show="showJointCommission")
                                     hr.c-hr
                                     .u-spacer-l
                                         h3.c-h3 Joint commission
 
-                                        .o-form-group
-                                            .o-form-group__label.o-form-group__label--with-helper
-                                                label(for='jointCommissionId') Joint commission
-                                                +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helperJointCommission" data-tooltip-placement="right") Show info
-                                                .c-tooltip(role="tooltip" id="helperJointCommission")
-                                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                    .c-tooltip__arrow(data-popper-arrow)
+                                        +c-form-group({label: 'Joint commission',id: 'jointCommission', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+                                            +c-select({id: 'contractType', value: jointCommissions, key: 'name', valueKey: 'id' })(x-model="jointCommission" :class="{'c-select--error': validation.contractType.error}" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ")
 
-                                            .o-form-group__controls
-                                                .c-select-holder
-                                                    select.c-select(x-model="jointCommission" x-ref="jointCommission" id="jointCommissionId" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ")
-                                                        each commission, index in jointCommissions
-                                                            option(value=index)= commission.name
                                         div(x-show="showSubCommittees")
                                             div(x-show="jointCommission == 8")
-                                                +c-form-group({label: 'Joint commission', id: 'jointCommission', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
-                                                    +c-select({id: 'jointCommission', value: jointCommissions[8].subCommittees, key: 'name', valueKey: 'id'})
-
+                                                +c-form-group({label: 'Subcommittee', id: 'subCommittee', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
+                                                    +c-select({id: 'subCommittee', value: jointCommissions[8].subCommittees, key: 'name', valueKey: 'id'})
 
                                             div(x-show="jointCommission == 9")
-                                                +c-form-group({label: 'Joint commission', id: 'jointCommission', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
-                                                    +c-select({id: 'jointCommission', value: jointCommissions[9].subCommittees, key: 'name', valueKey: 'id'})
+                                                +c-form-group({label: 'Subcommittee', id: 'subCommittee', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
+                                                    +c-select({id: 'subCommittee', value: jointCommissions[9].subCommittees, key: 'name', valueKey: 'id'})
 
                                 hr.c-hr
 
                                 .u-spacer-l
                                     h3.c-h3.u-spacer-bottom-l Contract data
-                                    .o-form-group
-                                        .o-form-group__label.o-form-group__label--with-helper
-                                            label(id="amountLabel") Amount
-                                            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type="button" data-tooltip="helper-Amount" data-tooltip-placement="right") Show info
-                                            .c-tooltip(role="tooltip" id="helperAmount")
-                                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                .c-tooltip__arrow(data-popper-arrow)
 
-                                        .o-form-group__controls
-                                            .o-flex.o-flex--spaced
-                                                +c-select({ id: 'amountType', value: ['Billing amount', 'Net to pay', 'Gross salary'] })(aria-labelledby="amountLabel")
-                                                +c-input-group-after({ id: 'amountValue', text: '€', inputType: 'number'})(aria-labelledby="amountLabel")
+                                    +c-form-group({label: 'Amount', id: 'amount', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                        .o-flex.o-flex--spaced
+                                            +c-select({ id: 'amountType', value: ['Select', 'Billing amount', 'Net to pay', 'Gross salary'] })(x-model="amountType")
+                                            +c-input-group-after({ type: 'number', id: 'amountValue', text: '€', inputType: 'number'})(x-model="amountValue")
+                                        template(x-if="validation.amountType.error")
+                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.amountType.message")
+                                        template(x-if="validation.amountValue.error")
+                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.amountValue.message")
 
                                     +c-form-group({label: 'Number of days', id: 'numberOfDays'})
-                                        +c-input({id: 'numberOfDays', type: 'number'})
+                                        +c-input({id: 'numberOfDays', type: 'number'})(x-model="numberOfDays")
+                                        template(x-if="validation.numberOfDays.error")
+                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.numberOfDays.message")
 
                                     +c-form-group({label: 'Defrayal (per day)', id: 'defrayalPerDay', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
                                         +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€'})
@@ -271,21 +253,96 @@ block content
     script.
         window.validateForm = function () {
             return {
+                //- Data
                 service: '',
+                vatRate: '',
+                contractType: '',
                 jointCommission: '',
+                subCommittee: '',
+                amountType: '',
+                amountValue: '',
+                numberOfDays: '',
                 showVat: false,
                 showJointCommission: false,
                 showSubCommittees: false,
                 isLoading: false,
                 hasErrors: false,
+
+                //- Validation rules for each input
                 validation: {
                     service: {
                         rule: {
                         required: function (field) {
                             if (field && field != 0) {
-                            return { error: false, hasErrors: false, message: '' }
+                            return { error: false, message: '' }
                             } else {
-                                return { error: true, hasErrors: true, message: 'This field is required.' }
+                                return { error: true, message: 'The Smart service is required.' }
+                            }
+                        },
+                        },
+                        error: false,
+                        message: ''
+                    },
+                    contractType: {
+                        rule: {
+                        required: function (field) {
+                            if (field && field != 0) {
+                            return { error: false, message: '' }
+                            } else {
+                                return { error: true, message: 'The contract type is required.' }
+                            }
+                        },
+                        },
+                        error: false,
+                        message: ''
+                    },
+                    amountType: {
+                        rule: {
+                        required: function (field) {
+                            if (field && field != 'Select') {
+                            return { error: false, message: '' }
+                            } else {
+                                return { error: true, message: 'The amount type is required.' }
+                            }
+                        },
+                        },
+                        error: false,
+                        message: ''
+                    },
+                    amountValue: {
+                        rule: {
+                        required: function (field) {
+                            if (field && field.length > 0) {
+                            return { error: false, message: '' }
+                            } else {
+                                return { error: true, message: 'The amount is required.' }
+                            }
+                        },
+                        minValue: function (field) {
+                            if (field > 0) {
+                            return { error: false, message: '' }
+                            } else {
+                                return { error: true, message: 'The amount should be greater than 0.' }
+                            }
+                        },
+                        },
+                        error: false,
+                        message: ''
+                    },
+                    numberOfDays: {
+                        rule: {
+                        required: function (field) {
+                            if (field.length > 0) {
+                            return { error: false, message: '' }
+                            } else {
+                                return { error: true, message: 'The number of days is required.' }
+                            }
+                        },
+                        minValue: function (field) {
+                            if (field > 0) {
+                            return { error: false, message: '' }
+                            } else {
+                                return { error: true, message: 'The number of days should be greater than 0.' }
                             }
                         },
                         },
@@ -306,17 +363,38 @@ block content
                         continue
                     }
                 },
+
+                //- Reset function
                 reset: function () {
                     this.showVat = false;
                     this.showJointCommission = false;
                     this.showSubCommittees = false;
                     this.hasErrors = false;
                     this.validation.service.error = false;
+                    this.validation.contractType.error = false;
+                    this.validation.amountType.error = false;
+                    this.validation.amountValue.error = false;
+                    this.validation.numberOfDays.error = false;
                     fetch('/partials/simulation-empty.html').then(response => response.text()).then(html => {isLoading = false; this.$refs.result.innerHTML = html });
                 },
+
+                //- Watch fields
+                init: function() {
+                    this.$watch('service', value => { this.validate('service') });
+                    this.$watch('contractType', value => { this.validate('contractType') });
+                    this.$watch('amountType', value => { this.validate('amountType') });
+                    this.$watch('amountValue', value => { this.validate('amountValue') });
+                    this.$watch('numberOfDays', value => { this.validate('numberOfDays') });
+                },
+
+                //- Validation when submitting
                 submit: function() {
                     this.validate('service');
-                    if (this.validation.service.error) {
+                    this.validate('contractType');
+                    this.validate('amountType');
+                    this.validate('amountValue');
+                    this.validate('numberOfDays');
+                    if (this.validation.service.error || this.validation.contractType.error || this.validation.amountType.error || this.validation.amountValue.error || this.validation.numberOfDays.error) {
                         this.hasErrors = true;
                         fetch('/partials/simulation-empty.html').then(response => response.text()).then(html => {isLoading = false; this.$refs.result.innerHTML = html });
                         return;

@@ -11,4 +11,4 @@ mixin c-input-group-before({ id, type, placeholder, value, icon, disabled, state
         .c-input-group__prepend
             +icon(icon)
         .c-input-group__input
-            +c-input({ id, value, type, placeholder, state })(disabled=disabled)
+            +c-input({ id, value, type, placeholder, state })(disabled=disabled)&attributes(attributes)

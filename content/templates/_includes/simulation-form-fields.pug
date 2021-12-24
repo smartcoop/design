@@ -201,8 +201,12 @@ hr.c-hr
         +c-input({id: 'numberOfDays', type: 'number'})
 
     +c-form-group({label: 'Defrayal (per day)', id: 'defrayalPerDay', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
-        +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€', value: -1, state: state == 'error'? 'error' : ''})
+        +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€', value: state=="error"? -1 : '', state: state == 'error'? 'error' : ''})
         if state == 'error'
             p.c-form-help-text.c-form-help-text--error Please enter a valid defrayal value
     +c-form-group({ label: 'Withholding tax', id: 'withHoldingTax', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
         +c-input-group-after({id: 'withHoldingTax', type: 'number', icon: 'percent'})
+
+
+    script.
+          htmx.logAll();

@@ -9,7 +9,7 @@ mixin c-input-group-after({ id, type, placeholder, value, icon, text, disabled, 
     - var classListing = "c-input-group"+stateClass+disabledClass
     div(class=classListing)
         .c-input-group__input
-            +c-input({ id, value, type, placeholder, state })(disabled=disabled)
+            +c-input({ id, value, type, placeholder, state })(disabled=disabled)&attributes(attributes)
         .c-input-group__append
             if icon
                 +icon(icon)
