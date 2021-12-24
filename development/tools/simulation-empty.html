@@ -365,7 +365,7 @@
                                                         </div>
                                                         <div class="c-input-group">
                                                             <div class="c-input-group__input">
-                                                                <input class="c-input" type="text" id="amountValue" />
+                                                                <input class="c-input" type="text" id="amountValue" aria-labelledby="amountLabel" />
                                                             </div>
                                                             <div class="c-input-group__append">
                                                                 <span>€</span>
@@ -403,7 +403,7 @@
                                                 <div class="o-form-group__controls">
                                                     <div class="c-input-group">
                                                         <div class="c-input-group__input">
-                                                            <input class="c-input" type="number" id="defrayalPerDay" value="-1" />
+                                                            <input class="c-input" type="number" id="defrayalPerDay" value="" />
                                                         </div>
                                                         <div class="c-input-group__append">
                                                             <span>€</span>
@@ -448,6 +448,9 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <script>
+                                                htmx.logAll();
+                                            </script>
                                         </div>
                                     </div>
                                 </div>

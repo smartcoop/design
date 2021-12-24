@@ -148,7 +148,7 @@
                 </div>
             </div>
             <div class="u-scroll-wrapper-body">
-                <form class="o-grid" x-data="validateForm()" x-init="$watch('service', value =&gt; { validate('service') })" x-on:submit.prevent="submit();">
+                <form class="o-grid" x-data="validateForm()" x-init="init()" x-on:submit.prevent="submit();" id="form">
                     <div class="o-grid-col-bp3-6">
                         <div class="u-spacer-l">
                             <template x-if="hasErrors">
@@ -198,7 +198,7 @@
                                                 </div>
                                                 <div class="o-form-group__controls o-form-group__controls--full-width">
                                                     <div class="c-select-holder">
-                                                        <select class="c-select" id="smartServiceId" x-model="service" x-ref="service" x-on:change="showVat = ($event.target.value == 1 || $event.target.value == 3), showJointCommission = ($event.target.value == 3)">
+                                                        <select class="c-select" id="smartService" x-model="service" :class="{'c-select--error': validation.service.error}" x-on:change="showVat = ($event.target.value == 1 || $event.target.value == 3), showJointCommission = ($event.target.value == 3)">
                                                             <option value="0">Select</option>
                                                             <option value="1">I provide a service in exchange for a salary</option>
                                                             <option value="2">I continue my Smart activity</option>
@@ -213,8 +213,8 @@
                                             <template x-if="showVat">
                                                 <div class="o-form-group">
                                                     <div class="o-form-group__label o-form-group__label--with-helper">
-                                                        <label id="vatLabel">VAT</label>
-                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helperVat" data-tooltip-placement="right">
+                                                        <label for="vatId">VAT</label>
+                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-vatId" data-tooltip-placement="right">
                                                             <span class="c-button__content">
                                                                 <div class="o-svg-icon o-svg-icon-circle-help  ">
                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -227,14 +227,14 @@
                                                                 </div>
                                                             </span>
                                                         </button>
-                                                        <div class="c-tooltip" role="tooltip" id="helperVat">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                            <div class="c-tooltip__arrow" data-popper-arrow></div>
+                                                        <div class="c-tooltip" role="tooltip" id="helper-vatId">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                            <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="o-form-group__controls">
+                                                    <div class="o-form-group__controls o-form-group__controls--full-width">
                                                         <div class="o-flex o-flex--spaced">
                                                             <div class="c-select-holder">
-                                                                <select class="c-select" id="vatType" aria-labelledby="vatLabel">
+                                                                <select class="c-select" id="vatType">
                                                                     <option>Select</option>
                                                                     <option>Included</option>
                                                                     <option>Not included</option>
@@ -261,13 +261,16 @@
                                                 <label class="o-form-group__label" for="contractType">Contract type</label>
                                                 <div class="o-form-group__controls">
                                                     <div class="c-select-holder">
-                                                        <select class="c-select" id="contractType">
+                                                        <select class="c-select" id="contractType" x-model="contractType" :class="{'c-select--error': validation.contractType.error}">
                                                             <option value="0">Select</option>
                                                             <option value="1">Artistic</option>
                                                             <option value="2">Non-artistic</option>
                                                             <option value="3">Student</option>
                                                         </select>
                                                     </div>
+                                                    <template x-if="validation.contractType.error">
+                                                        <p class="c-form-help-text c-form-help-text--error" x-text="validation.contractType.message"></p>
+                                                    </template>
                                                 </div>
                                             </div>
                                         </div>
@@ -277,8 +280,8 @@
                                                 <h3 class="c-h3">Joint commission</h3>
                                                 <div class="o-form-group">
                                                     <div class="o-form-group__label o-form-group__label--with-helper">
-                                                        <label for="jointCommissionId">Joint commission</label>
-                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helperJointCommission" data-tooltip-placement="right">
+                                                        <label for="jointCommission">Joint commission</label>
+                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-jointCommission" data-tooltip-placement="right">
                                                             <span class="c-button__content">
                                                                 <div class="o-svg-icon o-svg-icon-circle-help  ">
                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -291,13 +294,13 @@
                                                                 </div>
                                                             </span>
                                                         </button>
-                                                        <div class="c-tooltip" role="tooltip" id="helperJointCommission">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                            <div class="c-tooltip__arrow" data-popper-arrow></div>
+                                                        <div class="c-tooltip" role="tooltip" id="helper-jointCommission">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                            <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="o-form-group__controls">
+                                                    <div class="o-form-group__controls o-form-group__controls--full-width">
                                                         <div class="c-select-holder">
-                                                            <select class="c-select" x-model="jointCommission" x-ref="jointCommission" id="jointCommissionId" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ">
+                                                            <select class="c-select" id="contractType" x-model="jointCommission" :class="{'c-select--error': validation.contractType.error}" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ">
                                                                 <option value="0">Select</option>
                                                                 <option value="1">Performing arts - CP304 (CCT performing arts)</option>
                                                                 <option value="2">Music - CP 304 (CCT music)</option>
@@ -322,8 +325,8 @@
                                                     <div x-show="jointCommission == 8">
                                                         <div class="o-form-group">
                                                             <div class="o-form-group__label o-form-group__label--with-helper">
-                                                                <label for="jointCommission">Joint commission</label>
-                                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-jointCommission" data-tooltip-placement="right">
+                                                                <label for="subCommittee">Subcommittee</label>
+                                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-subCommittee" data-tooltip-placement="right">
                                                                     <span class="c-button__content">
                                                                         <div class="o-svg-icon o-svg-icon-circle-help  ">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -336,13 +339,13 @@
                                                                         </div>
                                                                     </span>
                                                                 </button>
-                                                                <div class="c-tooltip" role="tooltip" id="helper-jointCommission">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                                <div class="c-tooltip" role="tooltip" id="helper-subCommittee">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
                                                                     <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="o-form-group__controls o-form-group__controls--full-width">
                                                                 <div class="c-select-holder">
-                                                                    <select class="c-select" id="jointCommission">
+                                                                    <select class="c-select" id="subCommittee">
                                                                         <option value="0">Select</option>
                                                                         <option value="1">Sociocultural work</option>
                                                                         <option value="2">Integration centers and social animation</option>
@@ -355,8 +358,8 @@
                                                     <div x-show="jointCommission == 9">
                                                         <div class="o-form-group">
                                                             <div class="o-form-group__label o-form-group__label--with-helper">
-                                                                <label for="jointCommission">Joint commission</label>
-                                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-jointCommission" data-tooltip-placement="right">
+                                                                <label for="subCommittee">Subcommittee</label>
+                                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-subCommittee" data-tooltip-placement="right">
                                                                     <span class="c-button__content">
                                                                         <div class="o-svg-icon o-svg-icon-circle-help  ">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -369,13 +372,13 @@
                                                                         </div>
                                                                     </span>
                                                                 </button>
-                                                                <div class="c-tooltip" role="tooltip" id="helper-jointCommission">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                                <div class="c-tooltip" role="tooltip" id="helper-subCommittee">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
                                                                     <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="o-form-group__controls o-form-group__controls--full-width">
                                                                 <div class="c-select-holder">
-                                                                    <select class="c-select" id="jointCommission">
+                                                                    <select class="c-select" id="subCommittee">
                                                                         <option value="0">Select</option>
                                                                         <option value="1">Work, employment, socio-professional integration in the Walloon Region</option>
                                                                         <option value="2">Continuing education sub-committee in the French Community</option>
@@ -393,8 +396,8 @@
                                             <h3 class="c-h3 u-spacer-bottom-l">Contract data</h3>
                                             <div class="o-form-group">
                                                 <div class="o-form-group__label o-form-group__label--with-helper">
-                                                    <label id="amountLabel">Amount</label>
-                                                    <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-Amount" data-tooltip-placement="right">
+                                                    <label for="amount">Amount</label>
+                                                    <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-amount" data-tooltip-placement="right">
                                                         <span class="c-button__content">
                                                             <div class="o-svg-icon o-svg-icon-circle-help  ">
                                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -407,14 +410,15 @@
                                                             </div>
                                                         </span>
                                                     </button>
-                                                    <div class="c-tooltip" role="tooltip" id="helperAmount">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                        <div class="c-tooltip__arrow" data-popper-arrow></div>
+                                                    <div class="c-tooltip" role="tooltip" id="helper-amount">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                        <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
                                                     </div>
                                                 </div>
                                                 <div class="o-form-group__controls">
                                                     <div class="o-flex o-flex--spaced">
                                                         <div class="c-select-holder">
-                                                            <select class="c-select" id="amountType" aria-labelledby="amountLabel">
+                                                            <select class="c-select" id="amountType" x-model="amountType">
+                                                                <option>Select</option>
                                                                 <option>Billing amount</option>
                                                                 <option>Net to pay</option>
                                                                 <option>Gross salary</option>
@@ -422,19 +426,28 @@
                                                         </div>
                                                         <div class="c-input-group">
                                                             <div class="c-input-group__input">
-                                                                <input class="c-input" type="text" id="amountValue" />
+                                                                <input class="c-input" type="number" id="amountValue" x-model="amountValue" />
                                                             </div>
                                                             <div class="c-input-group__append">
                                                                 <span>€</span>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <template x-if="validation.amountType.error">
+                                                        <p class="c-form-help-text c-form-help-text--error" x-text="validation.amountType.message"></p>
+                                                    </template>
+                                                    <template x-if="validation.amountValue.error">
+                                                        <p class="c-form-help-text c-form-help-text--error" x-text="validation.amountValue.message"></p>
+                                                    </template>
                                                 </div>
                                             </div>
                                             <div class="o-form-group">
                                                 <label class="o-form-group__label" for="numberOfDays">Number of days</label>
                                                 <div class="o-form-group__controls">
-                                                    <input class="c-input" type="number" id="numberOfDays" />
+                                                    <input class="c-input" type="number" id="numberOfDays" x-model="numberOfDays" />
+                                                    <template x-if="validation.numberOfDays.error">
+                                                        <p class="c-form-help-text c-form-help-text--error" x-text="validation.numberOfDays.message"></p>
+                                                    </template>
                                                 </div>
                                             </div>
                                             <div class="o-form-group">
@@ -556,13 +569,22 @@
             <script>
                 window.validateForm = function() {
                     return {
+                        //- Data
                         service: '',
+                        vatRate: '',
+                        contractType: '',
                         jointCommission: '',
+                        subCommittee: '',
+                        amountType: '',
+                        amountValue: '',
+                        numberOfDays: '',
                         showVat: false,
                         showJointCommission: false,
                         showSubCommittees: false,
                         isLoading: false,
                         hasErrors: false,
+
+                        //- Validation rules for each input
                         validation: {
                             service: {
                                 rule: {
@@ -570,14 +592,114 @@
                                         if (field && field != 0) {
                                             return {
                                                 error: false,
-                                                hasErrors: false,
                                                 message: ''
                                             }
                                         } else {
                                             return {
                                                 error: true,
-                                                hasErrors: true,
-                                                message: 'This field is required.'
+                                                message: 'The Smart service is required.'
+                                            }
+                                        }
+                                    },
+                                },
+                                error: false,
+                                message: ''
+                            },
+                            contractType: {
+                                rule: {
+                                    required: function(field) {
+                                        if (field && field != 0) {
+                                            return {
+                                                error: false,
+                                                message: ''
+                                            }
+                                        } else {
+                                            return {
+                                                error: true,
+                                                message: 'The contract type is required.'
+                                            }
+                                        }
+                                    },
+                                },
+                                error: false,
+                                message: ''
+                            },
+                            amountType: {
+                                rule: {
+                                    required: function(field) {
+                                        if (field && field != 'Select') {
+                                            return {
+                                                error: false,
+                                                message: ''
+                                            }
+                                        } else {
+                                            return {
+                                                error: true,
+                                                message: 'The amount type is required.'
+                                            }
+                                        }
+                                    },
+                                },
+                                error: false,
+                                message: ''
+                            },
+                            amountValue: {
+                                rule: {
+                                    required: function(field) {
+                                        if (field && field.length > 0) {
+                                            return {
+                                                error: false,
+                                                message: ''
+                                            }
+                                        } else {
+                                            return {
+                                                error: true,
+                                                message: 'The amount is required.'
+                                            }
+                                        }
+                                    },
+                                    minValue: function(field) {
+                                        if (field > 0) {
+                                            return {
+                                                error: false,
+                                                message: ''
+                                            }
+                                        } else {
+                                            return {
+                                                error: true,
+                                                message: 'The amount should be greater than 0.'
+                                            }
+                                        }
+                                    },
+                                },
+                                error: false,
+                                message: ''
+                            },
+                            numberOfDays: {
+                                rule: {
+                                    required: function(field) {
+                                        if (field.length > 0) {
+                                            return {
+                                                error: false,
+                                                message: ''
+                                            }
+                                        } else {
+                                            return {
+                                                error: true,
+                                                message: 'The number of days is required.'
+                                            }
+                                        }
+                                    },
+                                    minValue: function(field) {
+                                        if (field > 0) {
+                                            return {
+                                                error: false,
+                                                message: ''
+                                            }
+                                        } else {
+                                            return {
+                                                error: true,
+                                                message: 'The number of days should be greater than 0.'
                                             }
                                         }
                                     },
@@ -599,20 +721,51 @@
                                 continue
                             }
                         },
+
+                        //- Reset function
                         reset: function() {
                             this.showVat = false;
                             this.showJointCommission = false;
                             this.showSubCommittees = false;
                             this.hasErrors = false;
                             this.validation.service.error = false;
+                            this.validation.contractType.error = false;
+                            this.validation.amountType.error = false;
+                            this.validation.amountValue.error = false;
+                            this.validation.numberOfDays.error = false;
                             fetch('/partials/simulation-empty.html').then(response => response.text()).then(html => {
                                 isLoading = false;
                                 this.$refs.result.innerHTML = html
                             });
                         },
+
+                        //- Watch fields
+                        init: function() {
+                            this.$watch('service', value => {
+                                this.validate('service')
+                            });
+                            this.$watch('contractType', value => {
+                                this.validate('contractType')
+                            });
+                            this.$watch('amountType', value => {
+                                this.validate('amountType')
+                            });
+                            this.$watch('amountValue', value => {
+                                this.validate('amountValue')
+                            });
+                            this.$watch('numberOfDays', value => {
+                                this.validate('numberOfDays')
+                            });
+                        },
+
+                        //- Validation when submitting
                         submit: function() {
                             this.validate('service');
-                            if (this.validation.service.error) {
+                            this.validate('contractType');
+                            this.validate('amountType');
+                            this.validate('amountValue');
+                            this.validate('numberOfDays');
+                            if (this.validation.service.error || this.validation.contractType.error || this.validation.amountType.error || this.validation.amountValue.error || this.validation.numberOfDays.error) {
                                 this.hasErrors = true;
                                 fetch('/partials/simulation-empty.html').then(response => response.text()).then(html => {
                                     isLoading = false;
