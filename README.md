@@ -42,6 +42,14 @@ $ nix-shell -p nodejs-14_x --run 'npm run-script build'
 $ nix-shell -p busybox --run 'httpd -f -p 5000 -h dist'
 ```
 
+With the development server, the browser will automatically refresh the current
+page whenever its source changes. The development server can be run on port
+3000 with the following command:
+
+```
+$ nix-shell -p nodejs-14_x --run 'npm start'
+```
+
 ## Contributing
 
 You can contribute to this project in several ways.
