@@ -4,7 +4,7 @@ This repository contains the design system website hosted at <a href="https://de
 
 This website uses Bedrock in the background, which is a static site generator specialized in showing design systems. For instructions, view the README <a href="https://github.com/usebedrock/bedrock">here</a>.
 
-### Get started
+## Getting started
 
     git clone git@github.com:smartcoop/design.git
     cd design
@@ -13,7 +13,22 @@ This website uses Bedrock in the background, which is a static site generator sp
 
 (Make sure you are using a recent version of Node.)
 
-### Contributing
+
+## Using Docker
+
+Docker is not necessary to develop or build the design system but a
+`Dockerfile` is present in this repository for your convenience. It is also
+useful to document a somewhat reproducible build.
+
+The following commands show how to build a Docker image named `design` and
+serve the design system on port 5000:
+
+```
+$ docker build -t design -f Dockerfile .
+$ docker run -p 5000:80 design
+```
+
+## Contributing
 
 You can contribute to this project in several ways.
 
@@ -22,10 +37,8 @@ You can contribute to this project in several ways.
     * Discuss an open issue if you need more information to solve it
 * Create an issue that describes a comment you have, a problem or bug
 
-### License
+## License
 
 License to be determined, see https://github.com/smartcoop/design/issues/64
 
 This text to be updated when we have a licensing logic.
-
-
