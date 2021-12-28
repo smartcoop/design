@@ -10,5 +10,5 @@ compiled
 tmp
 .bedrock-tmp
 .idea
-
 .vercel
+.*.swp
