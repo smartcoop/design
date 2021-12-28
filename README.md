@@ -28,6 +28,20 @@ $ docker build -t design -f Dockerfile .
 $ docker run -p 5000:80 design
 ```
 
+## Using Nix
+
+Just like Docker, Nix is not necessary to develop or build the design system.
+The instructions here are provided for your convenience.
+
+The following commands show how to build the design system as a static site in
+the `dist/` directory and serve it on port 5000:
+
+```
+$ nix-shell -p nodejs-14_x --run 'npm install'
+$ nix-shell -p nodejs-14_x --run 'npm run-script build'
+$ nix-shell -p busybox --run 'httpd -f -p 5000 -h dist'
+```
+
 ## Contributing
 
 You can contribute to this project in several ways.
