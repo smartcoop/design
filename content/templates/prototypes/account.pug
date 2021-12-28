@@ -6,13 +6,7 @@ block append pageVariables
 block content
     .c-app-layout-inner
         .c-app-layout-inner__sidebar
-            ul.c-side-menu
-                li.c-side-menu__item.c-side-menu__item--active
-                    a.c-side-menu__link(href="#") Quotes &amp; invoices
-                li.c-side-menu__item
-                    a.c-side-menu__link(href="#") Funding
-                li.c-side-menu__item
-                    a.c-side-menu__link(href="#") Expenses
+            include /templates/prototypes/partials/side-menu
 
         .c-app-layout-inner__main
             .u-scroll-wrapper
