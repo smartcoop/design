@@ -1,0 +1,111 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Tools - Contracts"
+    - var view = "list"
+
+block content
+
+    .u-position-relative
+        .c-navbar.c-navbar--bordered-bottom.c-navbar--scrollable
+            .c-toolbar
+                .c-toolbar__left
+                    .c-toolbar__item
+                            h2.c-toolbar__title Detachments
+                    if !isEmpty
+                        .c-toolbar__item
+                            ul.c-filter-pill-list
+                                li.c-filter-pill-list__item
+                                    .c-popover(role="popover" id="startDateFilter")
+                                        h4.c-h4 Start date
+                                        .u-padding-vertical-s
+                                            .o-form-group-layout.o-form-group-layout--standard
+                                                .o-form-group
+                                                    label.o-form-group__label.u-sr-accessible(for="filterCriteriaStartDate") Criteria
+                                                    .o-form-group__controls.o-form-group__controls--full-width
+                                                        +c-select( { id: 'filterCriteriaStartDate', value: ['Equal to', 'Not equal to', 'After', 'After or equal to', 'Before', 'Before or equal to']})
+                                                .o-form-group
+                                                    +c-input-group-after({ id: 'startDate', icon: 'calendar'})
+                                        .c-toolbar.c-toolbar--auto
+                                            .c-toolbar__right
+                                                .c-toolbar__item
+                                                    .c-button-toolbar
+                                                        +c-button({}) Reset
+                                                        +c-button({skin: 'primary'}) Apply filter
+
+                                    +c-filter-pill({})(data-popover="startDateFilter" data-popover-placement="bottom-start") Start date
+
+                                li.c-filter-pill-list__item
+                                    +c-filter-pill({counter: '2'}) Client
+                                li.c-filter-pill-list__item
+                                    +c-filter-pill({}) Description
+                .c-toolbar__right
+                    if !isEmpty && view == "list"
+                        .c-toolbar__item
+                            .o-form-group-layout.o-form-group-layout--inline.u-spacer-left
+                                .o-form-group
+                                    label.o-form-group__label(for="sortOrder") Sort by
+                                    .o-form-group__controls
+                                        +c-select({ id: 'sortOrder', value: ['Start date ascending', 'Start date descending', 'Client ascending', 'Client descending']})
+                    if !isEmpty
+                        .c-toolbar__item
+                            .c-button-toolbar.c-button-toolbar--compact
+                                +c-button({ skin: (view == "list"? 'primary' : 'secondary'), icon: 'three-rows', layout: 'icon-only', href: '/development/tools/contracts.html'}) List view
+                                +c-button({ skin: (view == "grid"? 'primary' : 'secondary'), icon: 'table', layout: 'icon-only', href: '/development/tools/contracts-grid.html'}) Grid view ​
+
+    .u-scroll-wrapper-body
+            if isEmpty
+                .o-flex.o-flex--center.u-maximize-height
+                    .u-spacer-l
+                        .c-blank-slate
+                            +c-avatar({icon: 'document', size: 'large'})
+                            p.u-text-muted.c-body-1 Please add search criteria.
+            else
+                block contracts
+                    .u-spacer-l
+                        .o-card-grid.small-up-1
+                            - var n = 0;
+                            while n < 15
+                                +c-contract-card({
+                                        title: 'Amet minim mollit',
+                                        ref: '2021.NET.000000',
+                                        month: 'September 2021',
+                                        days: ['10','12','13'],
+                                        client: 'Client name',
+                                        status: 'Pending',
+                                        amount: "1000"
+
+                                })
+                                - n++
+
+
+    if !isEmpty
+        .u-position-relative
+            .c-navbar.c-navbar--scrollable.c-navbar--bordered-top
+                .c-toolbar
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            p.c-body-2.u-text-muted
+                                | 1 - 15 of 248 items
+                    .c-toolbar__right
+                        .c-toolbar__item
+                            nav.c-pagination(aria-label='Page navigation')
+                                ul.c-pagination__nav
+                                    li.c-pagination__item
+                                        +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-left', skin: 'borderless'})(disabled)
+                                    li.c-pagination__item.c-pagination__item--active
+                                        a.c-pagination__link(href='#') 1
+                                    li.c-pagination__item
+                                        a.c-pagination__link(href='#') 2
+                                    li.c-pagination__item
+                                        a.c-pagination__link(href='#') 3
+                                    li.c-pagination__item
+                                        a.c-pagination__link(href='#') 4
+                                    li.c-pagination__item
+                                        a.c-pagination__link(href='#') 5
+                                    li.c-pagination__item
+                                        span.c-pagination__dots ...
+                                    li.c-pagination__item
+                                        a.c-pagination__link(href='#') 17
+                                    li.c-pagination__item
+                                        +c-button({ href: '#', layout: 'icon-only', icon: 'chevron-right', skin: 'borderless'})
