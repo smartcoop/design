@@ -1,0 +1,186 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "New Desk - Detachment"
+
+block content
+    .u-scroll-wrapper
+        .c-navbar.c-navbar--bordered-bottom
+            .c-toolbar
+                .c-toolbar__left
+                    .c-toolbar__item
+                            h2.c-toolbar__title Detachment 2022.NET.012345
+ 
+        .u-scroll-wrapper-body
+            .u-spacer-xl
+                nav.c-tabs.c-tabs--border-bottom
+                        ul
+                            li
+                                a.c-tabs__item(href="#a1") A1
+                            li
+                                a.c-tabs__item(href="#dpd") DPD
+    
+                        .c-tabs__section#a1
+                            .u-spacer-xl
+                                .u-spacer-bottom-l
+                                    +c-alert({
+                                        title: "History",
+                                        message: `<ul>
+                                                <li>2022-01-01 — To ask — ABC</li>
+                                                <li>2022-01-02 — To check — ABC</li>
+                                            </ul>`,
+                                    })
+                         
+                                .u-padding-vertical-xl
+                                    .o-grid
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Smart entity'}) Productions Associées ASBL
+                                                +c-key-value({key: 'NISS'}) 89.01.23-456.78
+                                                +c-key-value({key: 'Work dates'}) 01, 02 January 2022
+                         
+                         
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Joint committee'}) 304 A
+                                                +c-key-value({key: 'Workplace type'}) Enterprise/worksite
+                                                +c-key-value({key: 'Name'}) Charlie
+                         
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Street and number'}) Roland Ruart Street, 123
+                                                +c-key-value({key: 'Zip code'}) 45000
+                                                +c-key-value({key: 'City'}) Saint Rémy
+                                                +c-key-value({key: 'Language'}) French
+
+                        .c-tabs__section#dpd
+                            .u-spacer-xl
+                                .u-spacer-bottom-l
+                                    +c-alert({
+                                        title: "History",
+                                        message: `<ul>
+                                                <li>2022-01-01 — To ask — ABC</li>
+                                                <li>2022-01-02 — To check — ABC</li>
+                                            </ul>`,
+                                    })
+                         
+                                .u-padding-vertical-xl
+                                    h3.c-h3 Foreign enterprise
+                                    .o-grid
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Smart entity'}) Productions Associées ASBL
+                         
+                                hr.c-hr
+                         
+                                .u-padding-vertical-xl
+                                    h3.c-h3 Client
+                                    .o-grid
+                                        .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Country'}) FRANCE
+                                                +c-key-value({key: 'VAT number'}) FR01234567890
+                                                +c-key-value({key: 'Contact email'})
+                                                    .c-content
+                                                        a(href="mailto:client@example.com") client@example.com
+                         
+                                        .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Name or corporate name'}) Celsius Corp
+                                                +c-key-value({key: 'Street and number'}) Creation Street, 789
+                                                +c-key-value({key: 'Zip code'}) 12345
+                                                +c-key-value({key: 'City'}) Old Common
+                         
+                         
+                                hr.c-hr
+                         
+                                .u-padding-vertical-xl
+                                    h3.c-h3 Work dates and places
+                                    .o-grid
+                                        .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Work dates'}) 01, 02 January 2022
+                                                +c-key-value({key: 'Workplace type'}) Worksite or temporary worksite
+                                                +c-key-value({key: 'Worksite name'}) Charlie
+                         
+                                        .o-grid-col-bp3-4.o-grid-col-bp3-static
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Street and number'}) Work Street, 12A
+                                                +c-key-value({key: 'Zip code'}) 987654
+                                                +c-key-value({key: 'City'}) Woodland
+                         
+                                hr.c-hr
+                         
+                                .u-padding-vertical-xl
+                                    h3.c-h3 Work information
+                                    .o-grid
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Role'}) Other
+                         
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Work start time'}) 09:30
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Work end time'}) 16:30
+
+                                hr.c-hr
+                         
+                                .u-padding-vertical-xl
+                                    h3.c-h3 Expenses
+                                    .o-grid
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Travel expenses'}) XXX
+                         
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Eating expenses'}) XXX
+
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Accomodation expenses'}) XXX
+
+                                hr.c-hr
+                         
+                                .u-padding-vertical-xl
+                                    h3.c-h3 Detachment employee information
+                                    .o-grid
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'First name'}) XXX
+                                                +c-key-value({key: 'Last name'}) XXX
+                                                +c-key-value({key: 'Sex'}) XXX
+                         
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Birth date'}) XXX
+                                                +c-key-value({key: 'City of birth'}) XXX
+                                                +c-key-value({key: 'Country of birth'}) XXX
+                                                +c-key-value({key: 'Nationality'}) XXX
+
+                                hr.c-hr
+                         
+                                .u-padding-vertical-xl
+                                    h3.c-h3 Employee address
+                                    .o-grid
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Street and number'}) XXX
+                                                +c-key-value({key: 'Zip code'}) XXX
+                                                +c-key-value({key: 'City'}) XXX
+                                                +c-key-value({key: 'Country'}) XXX
+
+                                hr.c-hr
+                         
+                                .u-padding-vertical-xl
+                                    h3.c-h3 Detachment nature
+                                    .o-grid
+                                        .o-grid-col-bp3-4
+                                            dl.c-key-value
+                                                +c-key-value({key: 'Role'}) Other
+                                                +c-key-value({key: 'Hourly rate'})
+                                                    | 10.28
+                                                    br
+                                                    | XXX
