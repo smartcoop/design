@@ -9,7 +9,15 @@ block content
             .c-toolbar
                 .c-toolbar__left
                     .c-toolbar__item
+                        a.c-button.c-button--icon.c-button--borderless(href="detachment-search.html")
+                            .c-button__content
+                                +icon('arrow-left')
+                                .u-sr-accessible Back
+                    .c-toolbar__item
                             h2.c-toolbar__title Detachment 2022.NET.012345
+                .c-toolbar__right
+                    .c-toolbar__item
+                        +c-button({skin: 'primary', icon: 'user'}) ABC
  
         .u-scroll-wrapper-body
             .u-spacer-xl
