@@ -1,0 +1,9 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Main header"
+
+block body
+    .c-app-layout
+        header.u-position-relative
+            include /templates/_includes/main-header
