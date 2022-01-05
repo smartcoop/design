@@ -1,0 +1,62 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Toolbar"
+
+block body
+    .c-app-layout
+        main.u-maximize-width(class=!fullScroll? "u-scroll-wrapper" : "")
+            .c-app-layout-inner
+                .c-app-layout-inner__sidebar
+                    ul.c-side-menu
+                        li.c-side-menu__item.c-side-menu__item--active
+                            a.c-side-menu__link(href="#") Quotes &amp; invoices
+                        li.c-side-menu__item
+                            a.c-side-menu__link(href="#") Funding
+                        li.c-side-menu__item
+                            a.c-side-menu__link(href="#") Expenses
+  
+                .c-app-layout-inner__main
+                    .u-scroll-wrapper
+                        .c-navbar.c-navbar--bordered-bottom
+                            .c-toolbar
+                                .c-toolbar__left
+                                    .c-toolbar__item
+                                        a.c-button.c-button--icon.c-button--borderless(href="#")
+                                            .c-button__content
+                                                +icon('arrow-left')
+                                                .u-sr-accessible Back
+                                    .c-toolbar__item
+                                            h2.c-toolbar__title Toolbar title
+  
+                                .c-toolbar__right
+                                    .c-toolbar__item
+                                        .c-button-toolbar
+                                            +c-button({ skin: 'primary' }) Save
+
+                        .c-navbar.c-navbar--bordered-bottom
+                            .c-toolbar
+                                .c-toolbar__left
+                                    .c-toolbar__item
+                                        a.c-button.c-button--icon.c-button--borderless(href="#")
+                                            .c-button__content
+                                                +icon('arrow-left')
+                                                .u-sr-accessible Back
+                                    .c-toolbar__item
+                                            h2.c-toolbar__title Toolbar title
+  
+                                .c-toolbar__right
+                                    .c-toolbar__item
+                                        .c-button-toolbar
+                                            +c-button({ skin: 'primary' }) Save
+  
+                        .u-scroll-wrapper-body
+                            .o-container.o-container--large
+                                .o-container-vertical
+                                    .c-panel.u-spacer-bottom-l
+                                        .c-panel__header
+                                            h2.c-panel__title Form grouping
+                                        .c-panel__body
+                                            .o-form-group-layout.o-form-group-layout--standard
+                                                .o-form-group
+                                                    label.o-form-group__label Add client

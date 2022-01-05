@@ -1,0 +1,26 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Toolbar"
+
+block body
+    .c-app-layout
+        header.u-position-relative
+            include /templates/_includes/main-header
+
+        main.u-maximize-width(class=!fullScroll? "u-scroll-wrapper" : "")
+            .c-navbar.c-navbar--bordered-bottom
+                .c-toolbar
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            a.c-button.c-button--icon.c-button--borderless(href="#")
+                                .c-button__content
+                                    +icon('arrow-left')
+                                    .u-sr-accessible Back
+                        .c-toolbar__item
+                                h2.c-toolbar__title Toolbar title
+  
+                    .c-toolbar__right
+                        .c-toolbar__item
+                            .c-button-toolbar
+                                +c-button({ skin: 'primary' }) Save
