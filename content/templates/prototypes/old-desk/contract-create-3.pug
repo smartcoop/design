@@ -1,0 +1,86 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+    - var bodyClass = "u-maximize-height u-overflow-hidden"
+
+block body
+    .c-app-layout(class=fullScroll? "u-scroll" : "")
+        main.u-maximize-width(class=!fullScroll? "u-scroll-wrapper" : "")
+            .c-navbar.c-navbar--bordered-bottom
+                .c-toolbar
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            a.c-button.c-button--icon.c-button--borderless(href="/prototypes/index.html")
+                                .c-button__content
+                                    +icon('arrow-left')
+                                    .u-sr-accessible Back
+                        .c-toolbar__item
+                            h2.c-toolbar__title New contract
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            nav.c-wizard
+                                ul
+                                    li
+                                        a.c-wizard__item.c-wizard--complete(href="contract-create-1.html")
+                                            .c-wizard__indicator
+                                            .c-wizard__label General info
+                                    li
+                                        a.c-wizard__item(href="contract-create-2.html")
+                                            .c-wizard__indicator 2
+                                            .c-wizard__label Location and dates
+                                    li
+                                        a.c-wizard__item.c-wizard--active(href="#")
+                                            .c-wizard__indicator 3
+                                            .c-wizard__label Function and risks
+                                    li
+                                        a.c-wizard__item(href="contract-create-4.html")
+                                            .c-wizard__indicator 4
+                                            .c-wizard__label Contract type
+                                    li
+                                        a.c-wizard__item(href="contract-create-5.html")
+                                            .c-wizard__indicator 5
+                                            .c-wizard__label Confirm
+                    .c-toolbar__right
+                        .c-toolbar__item
+                            .c-button-toolbar
+                                +c-button({icon: 'arrow-left'}) Back
+                                +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
+  
+            .u-scroll-wrapper-body
+                .o-container.o-container--large
+                    .o-container-vertical
+                        .o-container.o-container--medium
+                            .o-form-group-layout.o-form-group-layout--horizontal
+                                .o-form-group
+                                    label.o-form-group__label(for="worker") Role
+                                    .o-form-group__controls.o-form-group__controls--full-width
+                                        label Art and craft creation > Entertainment arts > Dancer
+                                        +c-button({icon: 'edit'}) Edit
+                                        p.c-form-help-text Your most frequently used role has been automatically selected. Click "Edit" if you want to select a different role for this work.
+
+                                .o-form-group
+                                    label.o-form-group__label(for="worker") Work type
+                                    .o-form-group__controls.o-form-group__controls--full-width
+                                        label Artistic
+
+                                hr.c-hr
+
+                                .o-form-group
+                                    label.o-form-group__label Work risks
+                                    .o-form-group__controls
+                                        .c-radio-group
+                                            .c-radio
+                                                label
+                                                    input(type="radio" name="radio1")
+                                                    | Without risks
+                                            .c-radio
+                                                label
+                                                    input(type="radio" name="radio1")
+                                                    | With risks
+                                                p.c-form-help-text For your safety and your colleagues safety, if your role involves risks, you have to select "With risks".
+                                                +c-button({icon: 'circle-information'}) Learn more about risks
+
+                                .o-form-group
+                                    .u-spacer-left-auto
+                                        +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
