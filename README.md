@@ -50,6 +50,19 @@ page whenever its source changes. The development server can be run on port
 $ nix-shell -p nodejs-14_x --run 'npm start'
 ```
 
+## Pandoc
+
+The repository contains a Pandoc template and an example Markdown file. The
+Markdown can be converted to HTML using something like:
+
+```
+pandoc --standalone --template template.html display-test.md > output.html
+```
+
+The resulting file should render in the browser exactly as the `c-display`
+[example
+page](https://design.smart.coop/development/design-tests/display-test.html).
+
 ## Contributing
 
 You can contribute to this project in several ways.
