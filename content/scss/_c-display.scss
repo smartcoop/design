@@ -145,4 +145,11 @@
     color: $color-semantic-muted-text;
     font-size: 1.4rem;
   }
+
+  hr {
+    margin: 3.2rem 0;
+    border: none;
+    border-bottom: 1px solid $color-gray-150;
+  }
+
 }
