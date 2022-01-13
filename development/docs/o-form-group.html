@@ -1390,6 +1390,10 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="o-form-group o-form-group--error">
+                                <label class="o-form-group__label" for="textareaId">Label</label>
+                                <textarea class="c-textarea" rows="5" id="textareaId"></textarea>
+                            </div>
                             <div class="o-form-group">
                                 <input class="c-button c-button--primary" type="submit" value="Save" />
                             </div>
@@ -1448,6 +1452,10 @@
             &lt;/select&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+    &lt;div class=&quot;o-form-group o-form-group--error&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textareaId&quot;&gt;Label&lt;/label&gt;
+        &lt;textarea class=&quot;c-textarea&quot; rows=&quot;5&quot; id=&quot;textareaId&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
     &lt;div class=&quot;o-form-group&quot;&gt;
         &lt;input class=&quot;c-button c-button--primary&quot; type=&quot;submit&quot; value=&quot;Save&quot; /&gt;
     &lt;/div&gt;
@@ -1493,6 +1501,10 @@
                 option Option A
                 option Option B
                 option Option C
+
+    .o-form-group.o-form-group--error
+        label.o-form-group__label(for=&quot;textareaId&quot;) Label
+        textarea.c-textarea(rows=&quot;5&quot; id=&quot;textareaId&quot;)
 
     .o-form-group
         input.c-button.c-button--primary(type=&quot;submit&quot; value=&quot;Save&quot;)

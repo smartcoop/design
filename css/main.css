@@ -3914,6 +3914,15 @@ textarea.c-input--h-large {
   color: #808080;
   pointer-events: none; }
 
+.c-textarea--error,
+.o-form-group--error .c-textarea {
+  border-color: #FF4054; }
+  .c-textarea--error:focus,
+  .o-form-group--error .c-textarea:focus {
+    outline: 0;
+    border-color: #FF4054;
+    box-shadow: 0 0 0 2px #FFB0B9; }
+
 /* ==========================================================================
   Component: Toolbar
   ---
