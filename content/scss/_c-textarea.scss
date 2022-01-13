@@ -26,3 +26,14 @@
   color: $color-gray-500;
   pointer-events: none;
 }
+
+.c-textarea--error,
+.o-form-group--error .c-textarea {
+  border-color: $c-input-error-accent-color;
+
+  &:focus {
+    outline: 0;
+    border-color: $c-input-error-accent-color;
+    box-shadow: 0 0 0 2px $color-red-150;
+  }
+}
