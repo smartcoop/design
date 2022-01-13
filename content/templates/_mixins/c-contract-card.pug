@@ -3,39 +3,38 @@
 
 mixin c-contract-card({ title, ref, month, days=[], client, amount, status })
     .c-card
-        .c-card__body.c-card__body--with-actions
-            .c-card__actions
-                .u-spacer-right
-                    +c-status-pill({skin: status.toLowerCase() })= status
+        .c-card__body
+            .o-grid
+                .o-grid-col-bp3-8
+                    .c-subline.o-flex.o-flex--vertical-center.u-spacer-bottom-s
+                        +icon('calendar', 'o-svg-icon--small')
+                        span.u-spacer-left-s #{month} - Days
+                            each day, index in days
+                                if (index + 1 == days.length)
+                                    | #{day}
+                                else
+                                    |
+                                    | #{day},
+                                    |
+                    h4.c-card__title= title
+                    .u-spacer-top-s
+                        span.c-body-2.u-text-muted= ref
+
+                .o-grid-col-bp3-4
+                    .o-flex.o-flex--vertical-center.u-maximize-height
+                        ul.c-icon-list.u-padding-vertical
+                            li.c-icon-list__item
+                                +icon('user')
+                                span= client
+                            li.c-icon-list__item
+                                +icon('bills')
+                                span € #{amount}
+
+        .c-card__actions
+            .o-flex.o-flex--vertical-center.o-flex--justify-between.o-flex--spaced-wide
+                +c-status-pill({skin: status.toLowerCase() })= status
                 .c-button-toolbar
                     +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
                     +c-button({ layout: 'icon-only', icon: 'print', skin: 'borderless' }) Print
                     +c-button({ layout: 'icon-only', icon: 'delete', skin: 'borderless' }) Delete
-
-            .c-card__content
-                .o-grid
-                    .o-grid-col-bp3-8
-                        .c-subline.o-flex.o-flex--vertical-center.u-spacer-bottom-s
-                            +icon('calendar', 'o-svg-icon--small')
-                            span.u-spacer-left-s #{month} - Days
-                                each day, index in days
-                                    if (index + 1 == days.length)
-                                        | #{day}
-                                    else
-                                        |
-                                        | #{day},
-                                        |
-                        h4.c-card__title= title
-                        .u-spacer-top-s
-                            span.c-body-2.u-text-muted= ref
-
-                    .o-grid-col-bp3-4
-                        .o-flex.o-flex--vertical-center.u-maximize-height
-                            ul.c-icon-list.u-padding-vertical
-                                li.c-icon-list__item
-                                    +icon('user')
-                                    span= client
-                                li.c-icon-list__item
-                                    +icon('bills')
-                                    span € #{amount}
 

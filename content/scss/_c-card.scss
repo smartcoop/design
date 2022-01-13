@@ -21,6 +21,12 @@ $c-card-border-color: $color-gray-150 !default;
   border: .1rem solid $c-card-border-color;
   border-radius: $c-card-border-radius;
   background-color: #fff;
+
+  @media (min-width: $g-bp2) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 a.c-card:hover {
@@ -40,30 +46,26 @@ a.c-card:hover {
 
 .c-card__body {
   padding: $c-card-padding;
-}
-
-.c-card__body--with-actions {
-
-  @media (min-width: $g-bp2) {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
+  flex: 1;
+  @media (min-width: $g-bp1) {
+    padding: $c-card-padding
   }
 }
 
-.c-card__content {
-  flex: 1;
+.c-card__img {
+  width: 100%;
 }
 
 .c-card__actions {
-  display: flex;
-  align-items: center;
+  padding: $c-card-padding;
+  flex: 0;
+}
 
-  .c-button-toolbar {
-    margin-left: auto;
-  }
-
+.c-card__body + .c-card__actions {
   @media (max-width: $g-bp2) {
-    margin-bottom: 1.6rem;
+    margin-top: -2.4rem;
+  }
+  @media (min-width: $g-bp2) {
+    margin-left: -2.4rem;
   }
 }

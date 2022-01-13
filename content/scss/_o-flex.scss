@@ -24,6 +24,10 @@ $o-flex-gutter-width: 0.8rem !default;
   flex-direction: column;
 }
 
+.o-flex--reverse {
+  flex-direction: row-reverse;
+}
+
 .o-flex--vertical-center {
   align-items: center;
 }
