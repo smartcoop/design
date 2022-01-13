@@ -463,6 +463,9 @@ abbr[title] {
 .o-flex--vertical {
   flex-direction: column; }
 
+.o-flex--reverse {
+  flex-direction: row-reverse; }
+
 .o-flex--vertical-center {
   align-items: center; }
 
@@ -2156,6 +2159,11 @@ input.c-button {
   border: 0.1rem solid #D9D9D9;
   border-radius: 0.4rem;
   background-color: #fff; }
+  @media (min-width: 700px) {
+    .c-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; } }
 
 a.c-card:hover {
   border-color: #B3B3B3;
@@ -2170,25 +2178,26 @@ a.c-card:hover {
   font-weight: 500; }
 
 .c-card__body {
-  padding: 2.4rem; }
-
-@media (min-width: 700px) {
-  .c-card__body--with-actions {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse; } }
-
-.c-card__content {
+  padding: 2.4rem;
   flex: 1; }
+  @media (min-width: 400px) {
+    .c-card__body {
+      padding: 2.4rem; } }
+
+.c-card__img {
+  width: 100%; }
 
 .c-card__actions {
-  display: flex;
-  align-items: center; }
-  .c-card__actions .c-button-toolbar {
-    margin-left: auto; }
-  @media (max-width: 700px) {
-    .c-card__actions {
-      margin-bottom: 1.6rem; } }
+  padding: 2.4rem;
+  flex: 0; }
+
+@media (max-width: 700px) {
+  .c-card__body + .c-card__actions {
+    margin-top: -2.4rem; } }
+
+@media (min-width: 700px) {
+  .c-card__body + .c-card__actions {
+    margin-left: -2.4rem; } }
 
 /* ==========================================================================
   Component: Checkbox and Radio

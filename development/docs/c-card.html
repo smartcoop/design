@@ -697,7 +697,9 @@
                     <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
                         <a class="c-card" href="#">
-                            <img src="https://via.placeholder.com/1600x900" alt="" />
+                            <div class="c-card__img">
+                                <img src="https://via.placeholder.com/1600x900" alt="" />
+                            </div>
                             <div class="c-card__body">
                                 <h4 class="c-card__title">Card title</h4>
                                 <p class="u-text-muted">Subtitle</p>
@@ -710,7 +712,9 @@
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-html">&lt;a class=&quot;c-card&quot; href=&quot;#&quot;&gt;
-    &lt;img src=&quot;https://via.placeholder.com/1600x900&quot; alt=&quot;&quot; /&gt;
+    &lt;div class=&quot;c-card__img&quot;&gt;
+        &lt;img src=&quot;https://via.placeholder.com/1600x900&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
     &lt;div class=&quot;c-card__body&quot;&gt;
         &lt;h4 class=&quot;c-card__title&quot;&gt;Card title&lt;/h4&gt;
         &lt;p class=&quot;u-text-muted&quot;&gt;Subtitle&lt;/p&gt;
@@ -720,10 +724,104 @@
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
                             <pre class="br-sample-markup br-sample-markup-pug">a.c-card(href=&quot;#&quot;)
-    img(src=&quot;https://via.placeholder.com/1600x900&quot; alt=&quot;&quot;)
+    .c-card__img
+        img(src=&quot;https://via.placeholder.com/1600x900&quot; alt=&quot;&quot;)
     .c-card__body
         h4.c-card__title Card title
         p.u-text-muted Subtitle
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-04-c-card-with-actions">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Card with actions</h3>
+                        <a class="br-sample-header-link" href="#component-04-c-card-with-actions">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <div class="c-card">
+                            <div class="c-card__body">
+                                <h4 class="c-card__title">Card title</h4>
+                                <p class="u-text-muted">Subtitle</p>
+                            </div>
+                            <div class="c-card__actions">
+                                <div class="c-button-toolbar">
+                                    <button class="c-button c-button--borderless c-button--icon" type="button">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-edit  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">Edit
+                                            </div>
+                                        </span>
+                                    </button>
+                                    <button class="c-button c-button--borderless c-button--icon" type="button">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-delete  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7 4C7 2.89543 7.89543 2 9 2H15C16.1046 2 17 2.89543 17 4V6H18.9897C18.9959 5.99994 19.0021 5.99994 19.0083 6H21C21.5523 6 22 6.44772 22 7C22 7.55228 21.5523 8 21 8H19.9311L19.0638 20.1425C18.989 21.1891 18.1182 22 17.0689 22H6.93112C5.88184 22 5.01096 21.1891 4.9362 20.1425L4.06888 8H3C2.44772 8 2 7.55228 2 7C2 6.44772 2.44772 6 3 6H4.99174C4.99795 5.99994 5.00414 5.99994 5.01032 6H7V4ZM9 6H15V4H9V6ZM6.07398 8L6.93112 20H17.0689L17.926 8H6.07398ZM10 10C10.5523 10 11 10.4477 11 11V17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17V11C9 10.4477 9.44772 10 10 10ZM14 10C14.5523 10 15 10.4477 15 11V17C15 17.5523 14.5523 18 14 18C13.4477 18 13 17.5523 13 17V11C13 10.4477 13.4477 10 14 10Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">Delete
+                                            </div>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-card&quot;&gt;
+    &lt;div class=&quot;c-card__body&quot;&gt;
+        &lt;h4 class=&quot;c-card__title&quot;&gt;Card title&lt;/h4&gt;
+        &lt;p class=&quot;u-text-muted&quot;&gt;Subtitle&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-card__actions&quot;&gt;
+        &lt;div class=&quot;c-button-toolbar&quot;&gt;
+            &lt;button class=&quot;c-button c-button--borderless c-button--icon&quot; type=&quot;button&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-edit  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;Edit
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;c-button c-button--borderless c-button--icon&quot; type=&quot;button&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-delete  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M7 4C7 2.89543 7.89543 2 9 2H15C16.1046 2 17 2.89543 17 4V6H18.9897C18.9959 5.99994 19.0021 5.99994 19.0083 6H21C21.5523 6 22 6.44772 22 7C22 7.55228 21.5523 8 21 8H19.9311L19.0638 20.1425C18.989 21.1891 18.1182 22 17.0689 22H6.93112C5.88184 22 5.01096 21.1891 4.9362 20.1425L4.06888 8H3C2.44772 8 2 7.55228 2 7C2 6.44772 2.44772 6 3 6H4.99174C4.99795 5.99994 5.00414 5.99994 5.01032 6H7V4ZM9 6H15V4H9V6ZM6.07398 8L6.93112 20H17.0689L17.926 8H6.07398ZM10 10C10.5523 10 11 10.4477 11 11V17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17V11C9 10.4477 9.44772 10 10 10ZM14 10C14.5523 10 15 10.4477 15 11V17C15 17.5523 14.5523 18 14 18C13.4477 18 13 17.5523 13 17V11C13 10.4477 13.4477 10 14 10Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;Delete
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.c-card
+    .c-card__body
+        h4.c-card__title Card title
+        p.u-text-muted Subtitle
+    .c-card__actions
+        .c-button-toolbar
+            +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
+            +c-button({ layout: 'icon-only', icon: 'delete', skin: 'borderless' }) Delete
+
 </pre>
                         </div>
                     </div>
