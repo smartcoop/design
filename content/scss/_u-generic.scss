@@ -45,6 +45,11 @@
   -webkit-overflow-scrolling: touch;
 }
 
+.u-scroll-vertical {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
 .u-overflow-hidden,
 .u-kill-scroll {
   overflow: hidden !important;
