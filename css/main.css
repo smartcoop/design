@@ -159,9 +159,6 @@ body {
   color: #333333;
   background: #FFF; }
 
-body.c-body-compensate-header {
-  margin: 6.4rem 0 0; }
-
 img,
 video {
   max-width: 100%; }
@@ -1064,6 +1061,11 @@ abbr[title] {
 .c-display figcaption {
   color: #808080;
   font-size: 1.4rem; }
+
+.c-display hr {
+  margin: 3.2rem 0;
+  border: none;
+  border-bottom: 1px solid #D9D9D9; }
 
 /* ==========================================================================
   Shared styles between c-display and c-content
