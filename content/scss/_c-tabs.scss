@@ -53,6 +53,7 @@ $c-tabs-active-border-width: 0.3rem !default;
   text-decoration: none;
   font-weight: 500;
   height: 100%;
+  padding: 0.8rem 0;
 
   &:hover {
     box-shadow: inset 0 -#{$c-tabs-active-border-width} 0 $color-semantic-border;
@@ -71,12 +72,15 @@ $c-tabs-active-border-width: 0.3rem !default;
     color: $c-tabs-item-active-color;
     position: relative; // makes box-shadow to be on top of the global border
     z-index: $g-c-tabs-z;
-    margin-bottom: -0.1rem;
   }
 }
 
 .c-tabs.c-tabs--border-bottom ul {
   border-bottom: 1px solid $c-tabs-item-border-color;
+
+  li {
+    margin-top: 0.1rem;
+  }
 }
 
 .c-tabs__section {
