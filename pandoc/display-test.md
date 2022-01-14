@@ -34,7 +34,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
 itaque, ad debitis non mollitia reiciendis quasi repellat nihil aperiam
 assumenda.
 
-<hr class="c-hr">
+----
 
 This is an example of a bold sentence: **Lorem ipsum dolor sit amet
 consectetur adipisicing elit**.
@@ -53,7 +53,7 @@ This text contains ^superscript^.
 
 This text contains ~subscript~.
 
-<hr class="c-hr">
+----
 
 Sidenotes
 ---------
