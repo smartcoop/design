@@ -16,6 +16,26 @@ block content
                             .c-toolbar__item
                                     h2.c-toolbar__title Activities
 
+                            .c-toolbar__item
+                                ul.c-filter-pill-list
+                                    li.c-filter-pill-list__item
+                                        +c-filter-pill({}) Activity name
+                                    li.c-filter-pill-list__item
+                                        +c-filter-pill({}) Administrator name
+
                 .u-scroll-wrapper-body
                     .o-container.o-container--large
                         .o-container-vertical
+                            table.c-table.c-table--styled.js-data-table
+                                thead
+                                    tr
+                                        th.o-table-col-6 Activity
+                                        th Administrator
+                                tbody
+                                    - var n = 0;
+                                    while n < 10
+                                        tr
+                                            td
+                                                a(href='activity.html') Manfred Design
+                                            td Manfred
+                                        - n++
