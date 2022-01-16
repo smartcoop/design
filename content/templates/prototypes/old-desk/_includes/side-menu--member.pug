@@ -1,0 +1,11 @@
+-
+  function activeIf(pattern) {
+    return pathname.match(pattern) ? "c-side-menu__item--active" : "";
+  }
+
+h1 Manfred
+ul.c-side-menu
+    li.c-side-menu__item(class=activeIf(/\/member\/activities/))
+        a.c-side-menu__link(href="/prototypes/old-desk/member/activities.html") Activities
+    li.c-side-menu__item(class=activeIf(/\/member\/contracts/))
+        a.c-side-menu__link(href="/prototypes/old-desk/member/contracts.html") Contracts
