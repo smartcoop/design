@@ -1,0 +1,17 @@
+-
+  function activeIf(pattern) {
+    return pathname.match(pattern) ? "c-side-menu__item--active" : "";
+  }
+
+h1 Manfred Design
+ul.c-side-menu
+    li.c-side-menu__item(class=activeIf(/\/activity\/index/))
+        a.c-side-menu__link(href="/prototypes/old-desk/activity/index.html") Dashboard
+    li.c-side-menu__item(class=activeIf(/\/activity\/invoices/))
+        a.c-side-menu__link(href="/prototypes/old-desk/activity/invoices.html") Quotes and invoices
+    li.c-side-menu__item(class=activeIf(/\/activity\/contracts/))
+        a.c-side-menu__link(href="/prototypes/old-desk/activity/contracts.html") Contracts
+    li.c-side-menu__item(class=activeIf(/\/activity\/expenses/))
+        a.c-side-menu__link(href="/prototypes/old-desk/activity/expenses.html") Expenses
+    li.c-side-menu__item(class=activeIf(/\/activity\/funding/))
+        a.c-side-menu__link(href="/prototypes/old-desk/activity/funding.html") Funding
