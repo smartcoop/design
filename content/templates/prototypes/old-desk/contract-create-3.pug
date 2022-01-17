@@ -46,7 +46,7 @@ block body
                             .c-button-toolbar
                                 +c-button({icon: 'arrow-left'}) Back
                                 +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
-  
+
             .u-scroll-wrapper-body
                 .o-container.o-container--large
                     .o-container-vertical
@@ -78,8 +78,10 @@ block body
                                                 label
                                                     input(type="radio" name="radio1")
                                                     | With risks
-                                                p.c-form-help-text For your safety and your colleagues safety, if your role involves risks, you have to select "With risks".
-                                                +c-button({icon: 'circle-information'}) Learn more about risks
+                                                p.c-form-help-text
+                                                    | For your safety and your colleagues safety, if your role involves risks, you have to select "With risks".
+                                                    |
+                                                    a.c-link(href="#") Learn more about risks
 
                                 .o-form-group
                                     .u-spacer-left-auto

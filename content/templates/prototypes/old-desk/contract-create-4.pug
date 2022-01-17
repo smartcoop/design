@@ -46,7 +46,7 @@ block body
                             .c-button-toolbar
                                 +c-button({icon: 'arrow-left'}) Back
                                 +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
-  
+
             .u-scroll-wrapper-body
                 .o-container.o-container--large
                     .o-container-vertical
@@ -60,19 +60,19 @@ block body
                                                 label
                                                     input(type="radio" name="radio1")
                                                     | Artistic contract, paid based on duration
-                                                p.c-form-help-text.u-spacer-left-l Your work will be covered by an employment contract.
+                                                p.c-form-help-text.u-spacer-left-xl Your work will be covered by an employment contract.
                                             .c-radio
                                                 label
                                                     input(type="radio" name="radio1")
                                                     | Other type of contract
-                                                p.c-form-help-text.u-spacer-left-l Contrat artistique au cachet, contrat d'engagement artistique 1er bis, contrat étudiant
+                                                p.c-form-help-text.u-spacer-left-xl Contrat artistique au cachet, contrat d'engagement artistique 1er bis, contrat étudiant
 
                                 hr.c-hr
 
                                 .o-form-group
                                     label.o-form-group__label Is your fiscal residence abroad
                                     .o-form-group__controls
-                                        .c-radio-group
+                                        .c-radio-group.c-radio-group--inline
                                             .c-radio
                                                 label
                                                     input(type="radio" name="radio1")
@@ -81,8 +81,11 @@ block body
                                                 label
                                                     input(type="radio" name="radio1")
                                                     | No
-                                                p.c-form-help-text State if you are a Belgian fiscal resident or foreigner.
-                                                +c-button({icon: 'circle-information'}) Learn more about fiscal residence
+                                            p.c-form-help-text
+                                                | State if you are a Belgian fiscal resident or foreigner.
+                                                |
+                                                a.c-link(href="#") Learn more about fiscal residence
+
 
                                 hr.c-hr
 
@@ -90,8 +93,11 @@ block body
                                     label.o-form-group__label(for="domain") Withholding rate
                                     .o-form-group__controls.o-form-group__controls--full-width
                                         +c-select( { id: 'domain', value: ['Select a rate', '11.11%', '21%']})
-                                        p.c-form-help-text The selected rate is the one you entered on your registration form. You can change the rate by using the dropdown.
-                                        +c-button({icon: 'circle-information'}) Learn more about withholding rate
+                                        p.c-form-help-text
+                                            | The selected rate is the one you entered on your registration form. You can change the rate by using the dropdown.
+                                            |
+                                            a.c-link(href="#") Learn more about withholding rate
+
 
                                 .o-form-group
                                     .u-spacer-left-auto
