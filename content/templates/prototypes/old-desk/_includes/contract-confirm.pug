@@ -1,55 +1,70 @@
 include ../../../../../core/templates/mixins/icon
 include /templates/_mixins/all
 
-.u-padding-vertical-xl
-    h3.c-h3 General information
-    .o-grid
-        .o-grid-col-bp3-4
-            dl.c-key-value.c-key-value--horizontal
+.u-padding-vertical-l
+    .c-panel
+        .c-panel__header
+            .c-toolbar
+                .c-toolbar__left
+                    h2.c-panel__title General information
+                .c-toolbar__right
+                    +c-button({ icon: 'edit', href: "#" }) Edit
+        .c-panel__body
+            dl.c-key-value.c-key-value--horizontal.c-key-value--short
                 +c-key-value({key: 'Worker'}) Manfred
                 +c-key-value({key: 'Work setting'}) The work is mainly performed in places and at times freely chosen
                 +c-key-value({key: 'Compensation budget'}) 1000.00 EUR
                 +c-key-value({key: 'Project'}) Unspecified
                 +c-key-value({key: 'Description'}) Some description.
-                ul.c-file-attachment-list
-                    +c-file-attachment({href: '#'}) Edit
 
-hr.c-hr
 
-.u-padding-vertical-xl
-    h3.c-h3 Location and dates
-    .o-grid
-        .o-grid-col-bp3-4
-            dl.c-key-value.c-key-value--horizontal
-                +c-key-value({key: 'Work country'}) Belgium
-                +c-key-value({key: 'Work dates'}) 2022 January 7
-                +c-key-value({key: ''}) XX Checkbox COVID-19 stuff.
-                ul.c-file-attachment-list
-                    +c-file-attachment({href: '#'}) Edit
+.u-padding-vertical-l
+    .c-panel
+        .c-panel__header
+            .c-toolbar
+                .c-toolbar__left
+                    h2.c-panel__title Location and dates
+                .c-toolbar__right
+                    +c-button({ icon: 'edit', href: "#" }) Edit
+        .c-panel__body
+            .u-spacer-bottom
+                dl.c-key-value.c-key-value--horizontal.c-key-value--short
+                    +c-key-value({key: 'Work country'}) Belgium
+                    +c-key-value({key: 'Work dates'}) 2022 January 7
+            .o-form-group
+                .o-form-group__controls.o-form-group__controls--full-width
+                    .c-checkbox
+                        label
+                            input(type="checkbox")
+                            | By ticking this checkbox, you confirm COVID-19 dolore excepteur excepteur consequat ullamco dolore consequat.
 
-hr.c-hr
 
-.u-padding-vertical-xl
-    h3.c-h3 Role and risks
-    .o-grid
-        .o-grid-col-bp3-4
-            dl.c-key-value.c-key-value--horizontal
+.u-padding-vertical-l
+    .c-panel
+        .c-panel__header
+            .c-toolbar
+                .c-toolbar__left
+                    h2.c-panel__title Role and risks
+                .c-toolbar__right
+                    +c-button({ icon: 'edit', href: "#" }) Edit
+        .c-panel__body
+            dl.c-key-value.c-key-value--horizontal.c-key-value--short
                 +c-key-value({key: 'Role'}) Art and craft creation > Entertainment arts > Dancer
                 +c-key-value({key: 'Work type'}) Artistic
                 +c-key-value({key: 'Work risks'}) None
-                ul.c-file-attachment-list
-                    +c-file-attachment({href: '#'}) Edit
 
-hr.c-hr
 
-.u-padding-vertical-xl
-    h3.c-h3 Contract type
-    .o-grid
-        .o-grid-col-bp3-4
-            dl.c-key-value.c-key-value--horizontal
+.u-padding-vertical-l
+    .c-panel
+        .c-panel__header
+            .c-toolbar
+                .c-toolbar__left
+                    h2.c-panel__title Contract type
+                .c-toolbar__right
+                    +c-button({ icon: 'edit', href: "#" }) Edit
+        .c-panel__body
+            dl.c-key-value.c-key-value--horizontal.c-key-value--short
                 +c-key-value({key: 'Contract type'}) Artistic contract, paid based on duration
                 +c-key-value({key: 'Is your fiscal residence abroad'}) No
                 +c-key-value({key: 'Withholding rate'}) 11.11%
                 +c-key-value({key: 'Daily schedule'}) Full time
-                ul.c-file-attachment-list
-                    +c-file-attachment({href: '#'}) Edit
