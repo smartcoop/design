@@ -46,7 +46,7 @@ block body
                             .c-button-toolbar
                                 +c-button({icon: 'arrow-left'}) Back
                                 +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
-  
+
             .u-scroll-wrapper-body
                 .o-container.o-container--large
                     .o-container-vertical
@@ -55,13 +55,11 @@ block body
                                 +c-alert({title: 'Declaration of work dates', message: 'Legal obligation: declare your work dates before you start to work.'})
 
                             .o-form-group-layout.o-form-group-layout--horizontal
-                                .o-form-group
-                                    label.o-form-group__label(for="domain") Work country
-                                    .o-form-group__controls.o-form-group__controls--full-width
-                                        +c-select( { id: 'domain', value: ['Select a country', 'Belgium', 'France', 'Germany']})
+                                +c-form-group({label: 'Work country', id: 'domain', isFullWidth: true})
+                                    +c-select( { id: 'domain', value: ['Select a country', 'Belgium', 'France', 'Germany'], width: 'medium'})
                                 +c-form-group({label: 'Work date', id: 'registerFormfieldBirthdate', type: 'date'})
-                                    +c-input({id: 'registerFormfieldBirthdate', type: 'date', placeholder: 'dd/mm/yyyy' })
-                     
+                                    +c-input({id: 'registerFormfieldBirthdate', type: 'date', placeholder: 'dd/mm/yyyy', width: "medium" })
+
                                 hr.c-hr
 
                                 .o-form-group
