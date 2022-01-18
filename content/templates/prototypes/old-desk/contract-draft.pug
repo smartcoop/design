@@ -1,0 +1,45 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Contract"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar
+            include /templates/prototypes/old-desk/_includes/side-menu
+
+        .c-app-layout-inner__main
+            .u-scroll-wrapper
+                .c-navbar.c-navbar--bordered-bottom
+                    .c-toolbar
+                        .c-toolbar__left
+                            .c-toolbar__item
+                                a.c-button.c-button--icon.c-button--borderless(href="#")
+                                    .c-button__content
+                                        +icon('arrow-left')
+                                        .u-sr-accessible Back
+                            .c-toolbar__item
+                                h2.c-toolbar__title Contract 2022.NET.012345 2022.PRS.000789
+                            .c-toolbar__item
+                                +c-status-pill({skin: 'pending'}) Draft
+                        .c-toolbar__right
+                            .c-toolbar__item
+                                +c-button({skin: 'primary', icon: 'download'}) Download
+
+                .u-scroll-wrapper-body
+                    .u-spacer-xl
+                        .u-spacer-bottom-l
+                            +c-alert({title: 'Contract saved', message: 'This contract has been first saved on 2022-01-02. Last update on 2022-01-02.'})
+
+                        include /templates/prototypes/old-desk/_includes/contract-confirm
+
+                        .u-spacer-top
+                            .c-toolbar
+                                .c-toolbar__right
+                                    .c-toolbar__item
+                                        .c-button-toolbar
+                                            +c-button({icon: 'send', skin: 'primary'}) Finalize
+                                            +c-button({icon: 'edit'}) Edit
+                                            +c-button({icon: 'circle-error', skin: 'danger-secondary'}) Cancel
+                                            +c-button({icon: 'add'}) Duplicate
+                                            +c-button({icon: 'bills'}) Simulate salary

@@ -15,21 +15,21 @@ $c-radio-input-border: 1px solid $c-checkbox-input-border-color !default;
 $c-checkbox-input-border-radius: 0.3rem !default;
 
 // Pixel unit to avoid rounding rendering2px
-$c-checkbox-size: 16px !default;
-$c-checkbox-small-size: 12px !default;
-$c-radio-size: 16px !default;
+$c-checkbox-size: 20px !default;
+$c-checkbox-small-size: 16px !default;
+$c-radio-size: 20px !default;
 $c-radio-dot-size: $c-radio-size / 2 !default;
 
-$c-checkbox-icon-size: 16px !default;
+$c-checkbox-icon-size: 20px !default;
 
 $c-checkbox-background-color: #FFF !default;
 $c-radio-background-color: #FFF !default;
 
-$c-checkbox-spacing: 8px !default;
-$c-radio-spacing: 8px !default;
+$c-checkbox-spacing: 12px !default;
+$c-radio-spacing: 12px !default;
 
-$c-checkbox-spacing-inline: 8px !default;
-$c-radio-spacing-inline: 8px !default;
+$c-checkbox-spacing-inline: 16px !default;
+$c-radio-spacing-inline: 16px !default;
 
 $c-checkbox-checked-color: $color-blue-600 !default;
 $c-radio-checked-color: $color-blue-600 !default;
@@ -58,6 +58,8 @@ $c-radio-checked-color: $color-blue-600 !default;
     flex: 1 1 auto;
     line-height: $c-checkbox-size;
     width: 100%;
+    color: $color-semantic-body-text;
+    font-size: $g-base-font-size;
   }
 }
 

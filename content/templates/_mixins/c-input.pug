@@ -1,8 +1,10 @@
 //-
     Mixin Input - Create an input
 
-mixin c-input({ id, type = "text", placeholder, value, state})
+mixin c-input({ id, type = "text", placeholder, value, state, width})
     - var stateClass = ""
     - if (state) stateClass = " c-input--"+state
-    - var classListing = "c-input"+stateClass
+    - var widthClass = ""
+    - if (width) widthClass = " c-input--w-"+width
+    - var classListing = "c-input"+stateClass+widthClass
     input(type=type class=classListing placeholder=placeholder id=id value=value)&attributes(attributes)

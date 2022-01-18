@@ -1,0 +1,12 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var bodyClass = "u-maximize-height u-overflow-hidden"
+
+block body
+    .c-app-layout(class=fullScroll? "u-scroll" : "")
+        block global-banner
+        header.u-position-relative
+            include /templates/prototypes/_includes/main-header
+        main.u-maximize-width(class=!fullScroll? "u-scroll-wrapper" : "")
+            block content

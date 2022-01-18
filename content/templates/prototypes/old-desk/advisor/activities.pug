@@ -1,0 +1,41 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar
+            include /templates/prototypes/old-desk/_includes/side-menu--advisor
+
+        .c-app-layout-inner__main
+            .u-scroll-wrapper
+                .c-navbar.c-navbar--bordered-bottom
+                    .c-toolbar
+                        .c-toolbar__left
+                            .c-toolbar__item
+                                    h2.c-toolbar__title Activities
+
+                            .c-toolbar__item
+                                ul.c-filter-pill-list
+                                    li.c-filter-pill-list__item
+                                        +c-filter-pill({}) Activity name
+                                    li.c-filter-pill-list__item
+                                        +c-filter-pill({}) Administrator name
+
+                .u-scroll-wrapper-body
+                    .o-container.o-container--large
+                        .o-container-vertical
+                            table.c-table.c-table--styled.js-data-table
+                                thead
+                                    tr
+                                        th.o-table-col-6 Activity
+                                        th Administrator
+                                tbody
+                                    - var n = 0;
+                                    while n < 10
+                                        tr
+                                            td
+                                                a(href='activity.html') Manfred Design
+                                            td Manfred
+                                        - n++

@@ -1,0 +1,39 @@
+extends detachment-base
+
+block append pageVariables
+    - var moduleTitle = "Detachments"
+    - var view = "grid"
+
+block contracts
+    .u-padding-horizontal-s
+        table.c-table.c-table--styled.js-data-table
+            thead
+                tr
+                    th.o-table-col-3 Reference
+                    th Employee
+                    th Year
+                    th Month
+                    th Days
+                    th Advisor
+                    th Status A1
+                    th Status DPD
+            tbody
+                - var n = 0;
+                while n < 10
+                    tr
+                        td
+                            a(href='detachment-item.html') 2022.NET.012345
+                        td Manfred
+                        td 2022
+                        td January
+                        td 2, 3
+                        td
+                            .c-avatar-and-text
+                                +c-avatar({size: 'small'})
+                                .c-avatar-and-text__text
+                                    p ABC
+                        td
+                            +c-status-pill({skin: 'pending'}) Pending
+                        td
+                            +c-status-pill({skin: 'pending'}) Pending
+                    - n++

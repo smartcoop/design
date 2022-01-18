@@ -1,0 +1,16 @@
+-
+  function activeIf(pattern) {
+    return pathname.match(pattern) ? "c-side-menu__item--active" : "";
+  }
+
+ul.c-side-menu
+    li.c-side-menu__item(class=activeIf(/\/account\/user-homepage-with-menu/))
+        a.c-side-menu__link(href="/prototypes/account/user-homepage-with-menu.html") Home
+    li.c-side-menu__item(class=activeIf(/\/account\/contracts/))
+        a.c-side-menu__link(href="/prototypes/account/contracts.html") Contracts
+    li.c-side-menu__item(class=activeIf(/\/account\/expenses/))
+        a.c-side-menu__link(href="/prototypes/account/expenses.html") Invoices
+    li.c-side-menu__item(class=activeIf(/\/account\/funding/))
+        a.c-side-menu__link(href="/prototypes/account/funding.html") Documents
+    li.c-side-menu__item(class=activeIf(/\/account\/funding/))
+        a.c-side-menu__link(href="/prototypes/account/funding.html") Activities and projects

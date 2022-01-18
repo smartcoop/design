@@ -1,0 +1,22 @@
+-
+  function activeIf(pattern) {
+    return pathname.match(pattern) ? "c-side-menu__item--active" : "";
+  }
+
+ul.c-side-menu
+    li.c-side-menu__item(class=activeIf(/\/advisor\/activities/))
+        a.c-side-menu__link(href="/prototypes/old-desk/advisor/activities.html") Activities
+    li.c-side-menu__item(class=activeIf(/\/advisor\/invoices/))
+        a.c-side-menu__link(href="/prototypes/old-desk/advisor/invoices.html") Quotes and invoices
+    li.c-side-menu__item(class=activeIf(/\/advisor\/contracts$/))
+        a.c-side-menu__link(href="/prototypes/old-desk/advisor/contracts.html") Contracts
+    li.c-side-menu__item(class=activeIf(/\/advisor\/expenses/))
+        a.c-side-menu__link(href="/prototypes/old-desk/advisor/expenses.html") Expenses
+    li.c-side-menu__item(class=activeIf(/\/advisor\/funding/))
+        a.c-side-menu__link(href="/prototypes/old-desk/advisor/funding.html") Financement
+    li.c-side-menu__item(class=activeIf(/\/advisor\/contracts-covid-19/))
+        a.c-side-menu__link(href="/prototypes/new-desk/advisor/contracts-covid-19.html") Contracts in COVID-19 period
+    li.c-side-menu__item(class=activeIf(/\/advisor\/members/))
+        a.c-side-menu__link(href="/prototypes/old-desk/advisor/members.html") Members
+    li.c-side-menu__item(class=activeIf(/\/advisor\/archives/))
+        a.c-side-menu__link(href="/prototypes/old-desk/advisor/archives.html") Archives
