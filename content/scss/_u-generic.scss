@@ -95,6 +95,21 @@
   color: $color-semantic-body-text;
 }
 
+.u-border-top {
+  border-top: 1px solid $color-semantic-border;
+}
+
+.u-border-bottom {
+  border-bottom: 1px solid $color-semantic-border;
+}
+
+.u-border-left {
+  border-left: 1px solid $color-semantic-border;
+}
+
+.u-border-right {
+  border-right: 1px solid $color-semantic-border;
+}
 
 // Sticky footer with flexbox
 // https://css-tricks.com/couple-takes-sticky-footer/#article-header-id-3

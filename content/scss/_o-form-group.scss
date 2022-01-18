@@ -81,9 +81,22 @@ $o-form-group-label-font-weight: 500 !default;
 
     .o-form-group__label {
       width: 45%;
-      max-width: 24rem;
+      max-width: 22rem;
       flex: 0 0 auto;
     }
+  }
+}
+
+.o-form-group-layout--horizontal-long {
+  .o-form-group__label {
+    width: 65%;
+  }
+}
+
+.o-form-group-layout--horizontal-short {
+  .o-form-group__label {
+    width: 35%;
+    max-width: 16rem;
   }
 }
 
