@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html class="u-maximize-height" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Detachments - Smart Design System
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="u-maximize-height u-overflow-hidden">
+    <div class="c-app-layout">
+        <header class="u-position-relative">
+            <div class="c-navbar c-navbar--scrollable c-navbar--bordered-bottom">
+                <div class="c-toolbar">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <div class="c-brand c-brand--xsmall">
+                                <a href="/prototypes/account/super-user-homepage.html">
+                                    <img src="/images/logo.svg" alt="Smart">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-toolbar__item">
+                            <nav>
+                                <ul class="c-pill-navigation">
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <nav>
+                                <ul class="c-pill-navigation">
+                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                        <button type="button" data-menu="helpMenu">
+                                            <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                    <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                    <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <span class="u-sr-accessible">Help</span>
+                                        </button>
+                                        <ul class="c-menu c-menu--large" id="helpMenu">
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">About this page</a>
+                                            </li>
+                                            <li class="c-menu__divider" role="presentational"></li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">Select French</a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">Select Dutch</a>
+                                            </li>
+                                            <li class="c-menu__divider" role="presentational"></li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="/prototypes/index.html">
+                                                    <span>Documentation</span>
+                                                    <div class="o-svg-icon o-svg-icon-external-link  ">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M14 5C13.7348 5 13.4804 4.89464 13.2929 4.70711C13.1054 4.51957 13 4.26522 13 4C13 3.73478 13.1054 3.48043 13.2929 3.29289C13.4804 3.10536 13.7348 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V10C21 10.2652 20.8946 10.5196 20.7071 10.7071C20.5196 10.8946 20.2652 11 20 11C19.7348 11 19.4804 10.8946 19.2929 10.7071C19.1054 10.5196 19 10.2652 19 10V6.414L9.707 15.707C9.5184 15.8892 9.2658 15.99 9.0036 15.9877C8.7414 15.9854 8.49059 15.8802 8.30518 15.6948C8.11977 15.5094 8.0146 15.2586 8.01233 14.9964C8.01005 14.7342 8.11084 14.4816 8.293 14.293L17.586 5H14ZM3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H10C10.2652 5 10.5196 5.10536 10.7071 5.29289C10.8946 5.48043 11 5.73478 11 6C11 6.26522 10.8946 6.51957 10.7071 6.70711C10.5196 6.89464 10.2652 7 10 7H5V19H17V14C17 13.7348 17.1054 13.4804 17.2929 13.2929C17.4804 13.1054 17.7348 13 18 13C18.2652 13 18.5196 13.1054 18.7071 13.2929C18.8946 13.4804 19 13.7348 19 14V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V7Z" fill="#595959" />
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="https://smartbe.be/fr/contact/" target="_blank">
+                                                    <span>Contact an advisor</span>
+                                                    <div class="o-svg-icon o-svg-icon-external-link  ">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M14 5C13.7348 5 13.4804 4.89464 13.2929 4.70711C13.1054 4.51957 13 4.26522 13 4C13 3.73478 13.1054 3.48043 13.2929 3.29289C13.4804 3.10536 13.7348 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V10C21 10.2652 20.8946 10.5196 20.7071 10.7071C20.5196 10.8946 20.2652 11 20 11C19.7348 11 19.4804 10.8946 19.2929 10.7071C19.1054 10.5196 19 10.2652 19 10V6.414L9.707 15.707C9.5184 15.8892 9.2658 15.99 9.0036 15.9877C8.7414 15.9854 8.49059 15.8802 8.30518 15.6948C8.11977 15.5094 8.0146 15.2586 8.01233 14.9964C8.01005 14.7342 8.11084 14.4816 8.293 14.293L17.586 5H14ZM3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H10C10.2652 5 10.5196 5.10536 10.7071 5.29289C10.8946 5.48043 11 5.73478 11 6C11 6.26522 10.8946 6.51957 10.7071 6.70711C10.5196 6.89464 10.2652 7 10 7H5V19H17V14C17 13.7348 17.1054 13.4804 17.2929 13.2929C17.4804 13.1054 17.7348 13 18 13C18.2652 13 18.5196 13.1054 18.7071 13.2929C18.8946 13.4804 19 13.7348 19 14V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V7Z" fill="#595959" />
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">Report a bug</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="c-toolbar__item">
+                            <a class="c-user-navigation" href="#" data-menu="userMenu">
+                                <div class="c-avatar c-avatar--img">
+                                    <img src="/images/avatars/1.jpg" alt="avatar">
+                                </div>
+                            </a>
+                            <ul class="c-menu c-menu--large" id="userMenu">
+                                <!-- @todo add correct user menu items-->
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="#">My profile</a>
+                                </li>
+                                <li class="c-menu__divider" role="presentational"></li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="/prototypes/account/as-member.html">Act as a member</a>
+                                </li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="/prototypes/account/as-client.html">Act as a client</a>
+                                </li>
+                                <li class="c-menu__divider" role="presentational"></li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="#">Sign out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="u-maximize-width u-scroll-wrapper">
+            <div class="u-position-relative">
+                <div class="c-navbar c-navbar--bordered-bottom c-navbar--scrollable">
+                    <div class="c-toolbar">
+                        <div class="c-toolbar__left">
+                            <div class="c-toolbar__item">
+                                <a class="c-button c-button--icon c-button--borderless" href="/prototypes/index.html">
+                                    <div class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-arrow-left  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L7.41421 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H7.41421L11.7071 17.2929C12.0976 17.6834 12.0976 18.3166 11.7071 18.7071C11.3166 19.0976 10.6834 19.0976 10.2929 18.7071L4.29289 12.7071C4.10536 12.5196 4 12.2652 4 12C4 11.7348 4.10536 11.4804 4.29289 11.2929L10.2929 5.29289C10.6834 4.90237 11.3166 4.90237 11.7071 5.29289Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Back</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="c-toolbar__item">
+                                <h2 class="c-toolbar__title">Detachments in France</h2>
+                            </div>
+                        </div>
+                        <div class="c-toolbar__right">
+                            <div class="c-toolbar__item">
+                                <button class="c-button c-button--secondary" type="button" id="filterButton">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-filter  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 5C8.44772 5 8 5.44772 8 6C8 6.55228 8.44772 7 9 7C9.55228 7 10 6.55228 10 6C10 5.44772 9.55228 5 9 5ZM6.17071 5C6.58254 3.83481 7.69378 3 9 3C10.3062 3 11.4175 3.83481 11.8293 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H11.8293C11.4175 8.16519 10.3062 9 9 9C7.69378 9 6.58254 8.16519 6.17071 7H5C4.44772 7 4 6.55228 4 6C4 5.44772 4.44772 5 5 5H6.17071ZM15 11C14.4477 11 14 11.4477 14 12C14 12.5523 14.4477 13 15 13C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11ZM12.1707 11C12.5825 9.83481 13.6938 9 15 9C16.3062 9 17.4175 9.83481 17.8293 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H17.8293C17.4175 14.1652 16.3062 15 15 15C13.6938 15 12.5825 14.1652 12.1707 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H12.1707ZM9 17C8.44772 17 8 17.4477 8 18C8 18.5523 8.44772 19 9 19C9.55228 19 10 18.5523 10 18C10 17.4477 9.55228 17 9 17ZM6.17071 17C6.58254 15.8348 7.69378 15 9 15C10.3062 15 11.4175 15.8348 11.8293 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H11.8293C11.4175 20.1652 10.3062 21 9 21C7.69378 21 6.58254 20.1652 6.17071 19H5C4.44772 19 4 18.5523 4 18C4 17.4477 4.44772 17 5 17H6.17071Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <span class="c-button__label">Filter</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="u-hidden u-border-bottom" id="filters">
+                <div class="u-spacer-l">
+                    <div class="o-form-group-layout o-form-group-layout--horizontal o-form-group-layout--horizontal-short">
+                        <div class="o-grid">
+                            <div class="o-grid-col-bp2-3">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="referenceId">Reference</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="referenceId">
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="employeeId">Employee</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select c-select--w-medium" id="employeeId">
+                                                <option>Manfred</option>
+                                                <option>John</option>
+                                                <option>Jane</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-bp2-3">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="yearId">Year</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select c-select--w-medium" id="yearId">
+                                                <option>2021</option>
+                                                <option>2020</option>
+                                                <option>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                                <option>2016</option>
+                                                <option>2015</option>
+                                                <option>2014</option>
+                                                <option>2013</option>
+                                                <option>2012</option>
+                                                <option>2011</option>
+                                                <option>2010</option>
+                                                <option>2009</option>
+                                                <option>2008</option>
+                                                <option>2007</option>
+                                                <option>2006</option>
+                                                <option>2005</option>
+                                                <option>2004</option>
+                                                <option>2003</option>
+                                                <option>2002</option>
+                                                <option>2001</option>
+                                                <option>2000</option>
+                                                <option>1999</option>
+                                                <option>1998</option>
+                                                <option>1997</option>
+                                                <option>1996</option>
+                                                <option>1995</option>
+                                                <option>1994</option>
+                                                <option>1993</option>
+                                                <option>1992</option>
+                                                <option>1991</option>
+                                                <option>1990</option>
+                                                <option>1989</option>
+                                                <option>1988</option>
+                                                <option>1987</option>
+                                                <option>1986</option>
+                                                <option>1985</option>
+                                                <option>1984</option>
+                                                <option>1983</option>
+                                                <option>1982</option>
+                                                <option>1981</option>
+                                                <option>1980</option>
+                                                <option>1979</option>
+                                                <option>1978</option>
+                                                <option>1977</option>
+                                                <option>1976</option>
+                                                <option>1975</option>
+                                                <option>1974</option>
+                                                <option>1973</option>
+                                                <option>1972</option>
+                                                <option>1971</option>
+                                                <option>1970</option>
+                                                <option>1969</option>
+                                                <option>1968</option>
+                                                <option>1967</option>
+                                                <option>1966</option>
+                                                <option>1965</option>
+                                                <option>1964</option>
+                                                <option>1963</option>
+                                                <option>1962</option>
+                                                <option>1961</option>
+                                                <option>1960</option>
+                                                <option>1959</option>
+                                                <option>1958</option>
+                                                <option>1957</option>
+                                                <option>1956</option>
+                                                <option>1955</option>
+                                                <option>1954</option>
+                                                <option>1953</option>
+                                                <option>1952</option>
+                                                <option>1951</option>
+                                                <option>1950</option>
+                                                <option>1949</option>
+                                                <option>1948</option>
+                                                <option>1947</option>
+                                                <option>1946</option>
+                                                <option>1945</option>
+                                                <option>1944</option>
+                                                <option>1943</option>
+                                                <option>1942</option>
+                                                <option>1941</option>
+                                                <option>1940</option>
+                                                <option>1939</option>
+                                                <option>1938</option>
+                                                <option>1937</option>
+                                                <option>1936</option>
+                                                <option>1935</option>
+                                                <option>1934</option>
+                                                <option>1933</option>
+                                                <option>1932</option>
+                                                <option>1931</option>
+                                                <option>1930</option>
+                                                <option>1929</option>
+                                                <option>1928</option>
+                                                <option>1927</option>
+                                                <option>1926</option>
+                                                <option>1925</option>
+                                                <option>1924</option>
+                                                <option>1923</option>
+                                                <option>1922</option>
+                                                <option>1921</option>
+                                                <option>1920</option>
+                                                <option>1919</option>
+                                                <option>1918</option>
+                                                <option>1917</option>
+                                                <option>1916</option>
+                                                <option>1915</option>
+                                                <option>1914</option>
+                                                <option>1913</option>
+                                                <option>1912</option>
+                                                <option>1911</option>
+                                                <option>1910</option>
+                                                <option>1909</option>
+                                                <option>1908</option>
+                                                <option>1907</option>
+                                                <option>1906</option>
+                                                <option>1905</option>
+                                                <option>1904</option>
+                                                <option>1903</option>
+                                                <option>1902</option>
+                                                <option>1901</option>
+                                                <option>1900</option>
+                                                <option>1899</option>
+                                                <option>1898</option>
+                                                <option>1897</option>
+                                                <option>1896</option>
+                                                <option>1895</option>
+                                                <option>1894</option>
+                                                <option>1893</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="monthId">Month</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select c-select--w-medium" id="monthId">
+                                                <option>January</option>
+                                                <option>February</option>
+                                                <option>March</option>
+                                                <option>April</option>
+                                                <option>May</option>
+                                                <option>June</option>
+                                                <option>July</option>
+                                                <option>August</option>
+                                                <option>September</option>
+                                                <option>October</option>
+                                                <option>November</option>
+                                                <option>December</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-bp2-3">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="statusDpdId">Status DPD</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select c-select--w-medium" id="statusDpdId">
+                                                <option>Pending</option>
+                                                <option>Validated</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="statusA1Id">Status A1</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select c-select--w-medium" id="statusA1Id">
+                                                <option>Pending</option>
+                                                <option>Validated</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-bp2-3">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="advisorId">Advisor</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select c-select--w-medium" id="advisorId">
+                                                <option>ABC</option>
+                                                <option>DEF</option>
+                                                <option>GHI</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="u-scroll-wrapper-body">
+                <div class="u-padding-horizontal-s">
+                    <table class="c-table c-table--styled js-data-table">
+                        <thead>
+                            <tr>
+                                <th class="o-table-col-3">Reference</th>
+                                <th>Employee</th>
+                                <th>Year</th>
+                                <th>Month</th>
+                                <th>Days</th>
+                                <th>Advisor</th>
+                                <th>Status A1</th>
+                                <th>Status DPD</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="detachment-item.html">2022.NET.012345</a>
+                                </td>
+                                <td>Manfred</td>
+                                <td>2022</td>
+                                <td>January</td>
+                                <td>2, 3</td>
+                                <td>
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--small">
+                                            <div class="o-svg-icon o-svg-icon-user o-svg-icon--undefined ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>ABC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="c-status-pill c-status-pill--pending">
+                                        <span class="c-status-pill__circle"></span>
+                                        <span class="c-status-pill__label">Pending</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="c-navbar c-navbar--scrollable c-navbar--bordered-top">
+                    <div class="c-toolbar">
+                        <div class="c-toolbar__left">
+                            <div class="c-toolbar__item">
+                                <p class="c-body-2 u-text-muted">1 - 10 of 18 items</p>
+                            </div>
+                        </div>
+                        <div class="c-toolbar__right">
+                            <div class="c-toolbar__item">
+                                <nav class="c-pagination" aria-label="Page navigation">
+                                    <ul class="c-pagination__nav">
+                                        <li class="c-pagination__item">
+                                            <a class="c-button c-button--borderless c-button--icon" href="#" disabled>
+                                                <span class="c-button__content">
+                                                    <div class="o-svg-icon o-svg-icon-chevron-left  ">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="u-sr-accessible">
+                                                    </div>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="c-pagination__item c-pagination__item--active">
+                                            <a class="c-pagination__link" href="#">1</a>
+                                        </li>
+                                        <li class="c-pagination__item">
+                                            <a class="c-pagination__link" href="#">2</a>
+                                        </li>
+                                        <li class="c-pagination__item">
+                                            <a class="c-button c-button--borderless c-button--icon" href="#">
+                                                <span class="c-button__content">
+                                                    <div class="o-svg-icon o-svg-icon-chevron-right  ">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z" fill="#595959" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="u-sr-accessible">
+                                                    </div>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const filters = document.querySelector('#filters');
+                const filterButton = document.querySelector('#filterButton');
+
+                filterButton.addEventListener('click', event => {
+                    filters.classList.toggle('u-hidden');
+                });
+            </script>
+        </main>
+    </div>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>
