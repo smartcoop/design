@@ -1,43 +1,8 @@
-extends contracts
+extends /templates/_layouts/default
 
 block append pageVariables
     - var moduleTitle = "Tools - Contracts"
     - var view = "grid"
 
-block contracts
-    .u-padding-horizontal-s
-        table.c-table.c-table--styled.js-data-table
-            thead
-                tr
-                    th.o-table-col-4 Label
-                    th Month
-                    th Days
-                    th Reference
-                    th Amount
-                    th Client
-                    th Status
-                    th
-                        // Actions
-            tbody
-                - var n = 0;
-                while n < 15
-                    tr
-                        td Amet minim mollit
-                        td September
-                        td 14,15,16
-                        td 2021.NET.000000
-                        td €150,00
-                        td
-                            .c-avatar-and-text
-                                +c-avatar({size: 'small'})
-                                .c-avatar-and-text__text
-                                    p John Doe
-                        td
-                            +c-status-pill({skin: 'pending'}) Pending
-
-                        td
-                            .c-button-toolbar
-                                +c-button({skin: 'borderless', icon: 'print', layout: 'icon-only'}) Print
-                                +c-button({skin: 'borderless', icon: 'edit', layout: 'icon-only'}) Edit
-                                +c-button({skin: 'borderless', icon: 'delete', layout: 'icon-only'}) Delete
-                    - n++
+block content
+    include /templates/prototypes/tools/_includes/contracts

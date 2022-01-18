@@ -1,5 +1,8 @@
-extends contracts
+extends /templates/_layouts/default
 
 block append pageVariables
     - var moduleTitle = "Tools - Contracts"
-    - var isEmpty = true
+    - var view = "empty"
+
+block content
+    include /templates/prototypes/tools/_includes/contracts

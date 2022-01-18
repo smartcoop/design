@@ -1,0 +1,27 @@
+
+.c-toolbar__item
+    ul.c-filter-pill-list
+        li.c-filter-pill-list__item
+            .c-popover(role="popover" id="startDateFilter")
+                h4.c-h4 Start date
+                .u-padding-vertical-s
+                    .o-form-group-layout.o-form-group-layout--standard
+                        .o-form-group
+                            label.o-form-group__label.u-sr-accessible(for="filterCriteriaStartDate") Criteria
+                            .o-form-group__controls.o-form-group__controls--full-width
+                                +c-select( { id: 'filterCriteriaStartDate', value: ['Equal to', 'Not equal to', 'After', 'After or equal to', 'Before', 'Before or equal to']})
+                        .o-form-group
+                            +c-input-group-after({ id: 'startDate', icon: 'calendar'})
+                .c-toolbar.c-toolbar--auto
+                    .c-toolbar__right
+                        .c-toolbar__item
+                            .c-button-toolbar
+                                +c-button({}) Reset
+                                +c-button({skin: 'primary'}) Apply filter
+
+            +c-filter-pill({})(data-popover="startDateFilter" data-popover-placement="bottom-start") Start date
+
+        li.c-filter-pill-list__item
+            +c-filter-pill({counter: '2'}) Client
+        li.c-filter-pill-list__item
+            +c-filter-pill({}) Description

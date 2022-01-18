@@ -1,0 +1,16 @@
+
+.u-spacer-l
+    .o-card-grid.small-up-1
+        - var n = 0;
+        while n < 15
+            +c-contract-card({
+                    title: 'Amet minim mollit',
+                    ref: '2021.NET.000000',
+                    month: 'September 2021',
+                    days: ['10','12','13'],
+                    client: 'Client name',
+                    status: 'Pending',
+                    amount: "1000"
+
+            })
+            - n++
