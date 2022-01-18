@@ -3,18 +3,13 @@ include /templates/_mixins/all
 
 .u-padding-vertical-l
     .c-panel
-        .c-panel__header
-            .c-toolbar
-                .c-toolbar__left
-                    h2.c-panel__title Welcome
         .c-panel__body
-            .o-form-group-layout.o-form-group-layout--standard
-                .o-form-group
-                    .c-blank-slate.c-blank-slate--bg-alt
-                        p.u-text-muted.c-body-1 Any question ? You can contact one of our advisors. You can also buy a share.
-                        .c-button-toolbar
-                            +c-button({layout: 'text-icon', icon: 'external-link'}) Contact an advisor
-                            +c-button({layout: 'text-icon', icon: 'external-link'}) Buy a share
+            .c-content
+                h4 Welcome
+                p Do you have any question ? You can contact one of our advisors. You can also buy a share.
+                .c-button-toolbar
+                    +c-button({layout: 'text-icon', icon: 'external-link'}) Contact an advisor
+                    +c-button({layout: 'text-icon', icon: 'external-link'}) Buy a share
 
 .u-padding-vertical-l
     .c-panel
@@ -23,7 +18,7 @@ include /templates/_mixins/all
                 .c-toolbar__left
                     h2.c-panel__title News
         .c-panel__body
-            .c-display
+            .c-content
                 h4 Taux réduits de TVA
                 p
                     | De nouveaux taux réduits de TVA sont disponibles à l’encodage dans les outils Activité et Contrat. Votre prestation rentre-t-elle dans le cadre d’une TVA réduite? Comment l'encoder? 
@@ -123,7 +118,7 @@ include /templates/_mixins/all
                 .c-toolbar__left
                     h2.c-panel__title News activités
         .c-panel__body
-            .c-display
+            .c-content
                 h4 Du nouveau dans les devis et les contrats – première étape d’un projet plus vaste
                 p
                     | Depuis le 7 juin 2021, lorsque vous encodez un devis en activité, deux questions vous sont posées (“cadre de la prestation”). Celles-ci permettent de déterminer si la commande impose un lieu et/ou des horaires précis et/ou si elle a lieu dans un espace public; ou bien si elle est réalisée dans un lieu/à un horaire choisi(s) librement. Depuis le 17 juin, les mêmes questions sont posées lors de l’encodage d’un contrat.
