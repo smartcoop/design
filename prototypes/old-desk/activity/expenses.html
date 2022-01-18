@@ -90,6 +90,41 @@
                             </nav>
                         </div>
                         <div class="c-toolbar__item">
+                            <nav>
+                                <ul class="c-pill-navigation">
+                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                        <button type="button" data-menu="createMenu">
+                                            <div class="o-svg-icon o-svg-icon-add  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <span class="u-sr-accessible">Create</span>
+                                        </button>
+                                        <ul class="c-menu c-menu--large" id="createMenu">
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">New quote / invoice</a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">New contract</a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">New expense</a>
+                                            </li>
+                                            <li class="c-menu__divider" role="presentational"></li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">New funding demand</a>
+                                            </li>
+                                            <li class="c-menu__divider" role="presentational"></li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">Buy shares</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="c-toolbar__item">
                             <a class="c-user-navigation" href="#" data-menu="userMenu">
                                 <div class="c-avatar c-avatar--img">
                                     <img src="/images/avatars/1.jpg" alt="avatar">
@@ -98,7 +133,7 @@
                             <ul class="c-menu c-menu--large" id="userMenu">
                                 <!-- @todo add correct user menu items-->
                                 <li class="c-menu__item">
-                                    <a class="c-menu__label" href="#">My profile</a>
+                                    <div class="c-menu__label">Signed in as Alice</div>
                                 </li>
                                 <li class="c-menu__divider" role="presentational"></li>
                                 <li class="c-menu__item">
@@ -106,6 +141,10 @@
                                 </li>
                                 <li class="c-menu__item">
                                     <a class="c-menu__label" href="/prototypes/account/as-client.html">Act as a client</a>
+                                </li>
+                                <li class="c-menu__divider" role="presentational"></li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="#">My profile</a>
                                 </li>
                                 <li class="c-menu__divider" role="presentational"></li>
                                 <li class="c-menu__item">
