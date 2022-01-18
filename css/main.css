@@ -903,16 +903,18 @@ abbr[title] {
   font-size: 1.4rem;
   color: #808080; }
 
-.c-content p {
-  margin: 1.5rem 0; }
-
+.c-link,
 .c-content a {
   text-decoration: none;
   color: #1267FB;
   border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
+  .c-link.u-text-muted,
   .c-content a.u-text-muted {
     color: #808080;
     border-color: rgba(128, 128, 128, 0.33); }
+
+.c-content p {
+  margin: 1.5rem 0; }
 
 .c-content dl {
   border: 1px solid #E5E5E5;
@@ -2227,8 +2229,10 @@ a.c-card:hover {
   .c-radio label {
     display: flex;
     flex: 1 1 auto;
-    line-height: 16px;
-    width: 100%; }
+    line-height: 20px;
+    width: 100%;
+    color: #333333;
+    font-size: 1.6rem; }
 
 /* Shared styles
    ========================================================================== */
@@ -2268,12 +2272,12 @@ a.c-card:hover {
   background: #FFF;
   border: 1px solid #D4D4D4;
   border-radius: 0.3rem;
-  height: 16px;
-  width: 16px;
-  margin: 0 8px 0 0; }
+  height: 20px;
+  width: 20px;
+  margin: 0 12px 0 0; }
   .c-checkbox input[type='checkbox']:before {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     left: -1px;
     top: -1px;
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
@@ -2311,17 +2315,17 @@ a.c-card:hover {
   background: #FFF;
   border: 1px solid #D4D4D4;
   border-radius: 100%;
-  height: 16px;
-  width: 16px;
-  margin: 0 8px 0 0; }
+  height: 20px;
+  width: 20px;
+  margin: 0 12px 0 0; }
 
 .c-radio input[type='radio']:checked:before,
 .c-radio input[type='radio'][disabled]:before {
   background: #1267FB;
-  height: 8px;
-  width: 8px;
-  top: 3px;
-  left: 3px;
+  height: 10px;
+  width: 10px;
+  top: 4px;
+  left: 4px;
   border-radius: 100%; }
 
 *[disabled] .c-radio input[type='radio'],
@@ -2340,13 +2344,13 @@ a.c-card:hover {
    ========================================================================== */
 .c-radio-group--inline .c-radio {
   display: inline-block;
-  height: 16px;
-  margin-right: 8px; }
+  height: 20px;
+  margin-right: 16px; }
 
 .c-checkbox-group--inline .c-checkbox {
   display: inline-block;
-  height: 16px;
-  margin-right: 8px; }
+  height: 20px;
+  margin-right: 16px; }
 
 /* Checkbox / Radio without label
    @todo document this
@@ -2840,13 +2844,13 @@ textarea.c-input--h-large {
   height: 20rem; }
 
 .c-input--w-xsmall {
-  width: 4rem; }
+  width: 6.4rem; }
 
 .c-input--w-small {
-  width: 9.6rem; }
+  width: 12rem; }
 
 .c-input--w-medium {
-  width: 16rem; }
+  width: 20rem; }
 
 .c-input--w-large {
   width: 44rem; }
@@ -2990,19 +2994,31 @@ textarea.c-input--h-large {
 
 .c-key-value-item__key {
   padding: 0.4em 0;
-  color: #333333;
+  color: #808080;
   font-weight: 500; }
 
 .c-key-value--horizontal .c-key-value-item {
   display: flex;
-  align-items: center; }
+  align-items: flex-start; }
+
+.c-key-value--horizontal .c-key-value-item__value {
+  padding: 0.4em 0; }
 
 .c-key-value--horizontal .c-key-value-item__key {
-  width: 45%;
+  flex: 0 0 45%;
   margin-bottom: 0; }
 
 .c-key-value--horizontal .c-key-value-item + .c-key-value-item {
   margin-top: 0.4rem; }
+
+.c-key-value--short .c-key-value-item__key {
+  flex: 0 0 35%; }
+
+.c-key-value--long .c-key-value-item__key {
+  flex: 0 0 65%; }
+
+.c-key-value--very-long .c-key-value-item__key {
+  flex: 0 0 75%; }
 
 /* ==========================================================================
    Component: Menu
@@ -3501,6 +3517,18 @@ textarea.c-input--h-large {
     border-color: #FF4054;
     box-shadow: 0 0 0 2px #FFB0B9; }
 
+.c-select--w-xsmall {
+  width: 6.4rem; }
+
+.c-select--w-small {
+  width: 12rem; }
+
+.c-select--w-medium {
+  width: 20rem; }
+
+.c-select--w-large {
+  width: 44rem; }
+
 /* ==========================================================================
   c-side-menu
   ========================================================================== */
@@ -3841,24 +3869,24 @@ textarea.c-input--h-large {
 /* Component
    ========================================================================== */
 @media screen and (min-width: 400px) {
-  .c-tabs ul {
+  .c-tabs > ul {
     display: flex;
     height: 4.8rem;
     max-height: 4.8rem; } }
 
-.c-tabs li {
+.c-tabs > ul > li {
   flex-basis: auto;
   height: 100%;
   display: flex;
   align-items: center; }
   @media screen and (min-width: 400px) {
-    .c-tabs li {
+    .c-tabs > ul > li {
       justify-content: center; } }
   @media screen and (min-width: 400px) {
-    .c-tabs li + li {
+    .c-tabs > ul > li + li {
       margin-left: 2.4rem; } }
   @media screen and (max-width: 399px) {
-    .c-tabs li + li {
+    .c-tabs > ul > li + li {
       margin-top: 0.8rem; } }
 
 .c-tabs__item {
@@ -3881,9 +3909,9 @@ textarea.c-input--h-large {
     position: relative;
     z-index: 10; }
 
-.c-tabs.c-tabs--border-bottom ul {
+.c-tabs.c-tabs--border-bottom > ul {
   border-bottom: 1px solid #CCCCCC; }
-  .c-tabs.c-tabs--border-bottom ul li {
+  .c-tabs.c-tabs--border-bottom > ul li {
     margin-top: 0.1rem; }
 
 .c-tabs__section {
