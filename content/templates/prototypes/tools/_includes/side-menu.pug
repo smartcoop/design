@@ -1,0 +1,12 @@
+-
+  function activeIf(pattern) {
+    return pathname.match(pattern) ? "c-side-menu__item--active" : "";
+  }
+
+ul.c-side-menu
+    li.c-side-menu__item(class=activeIf(/\/tools\/empty/))
+        a.c-side-menu__link(href="/prototypes/tools/empty.html") Home
+    li.c-side-menu__item(class=activeIf(/\/tools\/contracts/))
+        a.c-side-menu__link(href="/prototypes/tools/contracts.html") Contracts
+    li.c-side-menu__item(class=activeIf(/\/tools\/funding/))
+        a.c-side-menu__link(href="/prototypes/tools/funding.html") Compensation simulation
