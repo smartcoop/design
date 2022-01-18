@@ -1,0 +1,13 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+    - var view = "grid"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar
+            include /templates/prototypes/tools/_includes/side-menu
+
+        .c-app-layout-inner__main
+            include /templates/prototypes/tools/_includes/contracts

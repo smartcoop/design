@@ -4,7 +4,7 @@
 //-   development/tools/contracts-grid.pug
 //-   development/tools/contracts.pug
 
-.u-position-relative
+.u-scroll-wrapper
     .c-navbar.c-navbar--bordered-bottom.c-navbar--scrollable
         .c-toolbar
             .c-toolbar__left
@@ -21,7 +21,7 @@
                 .c-toolbar__item
                     +c-button({skin: 'primary', icon: 'add'}) Add item
 
-.u-scroll-wrapper-body
+    .u-scroll-wrapper-body
         if view == "empty"
             .o-flex.o-flex--center.u-maximize-height
                 .u-spacer-l
@@ -35,5 +35,5 @@
             include /templates/prototypes/tools/_includes/contracts-list
 
 
-if view != "empty"
-    include /templates/prototypes/tools/_includes/contracts-pagination
+    if view != "empty"
+        include /templates/prototypes/tools/_includes/contracts-pagination
