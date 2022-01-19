@@ -11,13 +11,15 @@
 }
 
 .c-app-layout-inner {
-  display: flex;
   height: 100%;
-  flex-wrap: wrap;
 
   @media (max-width: ($g-bp2 - 1px)) {
     // Make full screen scrollable on mobile, mobile navigation pattern needs to be revised in the future
-    overflow: auto;
+    overflow-y: auto;
+  }
+
+  @media (min-width: $g-bp2) {
+    display: flex;
   }
 }
 
@@ -25,11 +27,15 @@
   width: 100%;
   flex: 0 0 auto;
   padding: 2.4rem;
-  border-right: 0.1rem solid $color-semantic-border;
 
   @media (min-width: $g-bp2) {
     height: 100%;
     width: 32rem;
+    border-right: 0.1rem solid $color-semantic-border;
+  }
+
+  @media (max-width: ($g-bp2 - 1px)) {
+    border-bottom: 0.1rem solid $color-semantic-border;
   }
 }
 
@@ -39,8 +45,11 @@
   flex: 1;
   @media (max-width: ($g-bp2 - 1px)) {
     // Make full screen scrollable on mobile, mobile navigation pattern needs to be revised in the future
+    .u-scroll-wrapper {
+      display: block;
+    }
     .u-scroll-wrapper-body {
-      overflow: initial;
+      height: auto;
     }
   }
 }
