@@ -1,0 +1,67 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+    - var bodyClass = "u-maximize-height u-overflow-hidden"
+
+block body
+    .c-app-layout(class=fullScroll? "u-scroll" : "")
+        main.u-maximize-width(class=!fullScroll? "u-scroll-wrapper" : "")
+            .c-navbar.c-navbar--bordered-bottom
+                .c-toolbar
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            a.c-button.c-button--icon.c-button--borderless(href="/prototypes/index.html")
+                                .c-button__content
+                                    +icon('arrow-left')
+                                    .u-sr-accessible Back
+                        .c-toolbar__item
+                            h2.c-toolbar__title Activity budget transfer
+  
+            .u-scroll-wrapper-body
+                .o-container.o-container--large
+                    .o-container-vertical
+                        .o-container.o-container--medium
+                            .o-form-group-layout.o-form-group-layout--horizontal
+
+                                .o-form-group
+                                    label.o-form-group__label(for="yearOfCreation") Debiting activity
+                                    .o-form-group__controls.o-form-group__controls--full-width
+                                        .c-input-group
+                                            .c-input-group__input
+                                                input.c-input(id="debiting-ref")
+
+                                +c-form-group({label: 'Project', id: 'debiting-project'})
+                                    +c-select({id: 'select', value: ['Choose a  project', 'Unspecified']})
+                                    p.c-form-help-text Enter an activity reference and a project within the activity
+
+                                hr.c-hr
+
+                                .o-form-group
+                                    label.o-form-group__label(for="yearOfCreation") Crediting activity
+                                    .o-form-group__controls.o-form-group__controls--full-width
+                                        .c-input-group
+                                            .c-input-group__input
+                                                input.c-input(id="crediting-ref")
+
+                                +c-form-group({label: 'Project', id: 'crediting-project'})
+                                    +c-select({id: 'select', value: ['Choose a  project', 'Unspecified']})
+                                    p.c-form-help-text Enter an activity reference and a project within the activity
+
+                                hr.c-hr
+
+                                .o-form-group
+                                    label.o-form-group__label(for="yearOfCreation") Amount to transfer
+                                    .o-form-group__controls.o-form-group__controls--full-width
+                                        .c-input-group
+                                            .c-input-group__input
+                                                input.c-input(type="number" id="amount")
+                                            .c-input-group__append €
+
+                                +c-form-group({label: 'Date', id: 'group-date', type: 'date'})
+                                    +c-input({id: 'date', type: 'date', placeholder: 'dd/mm/yyyy' })
+
+                                .o-form-group
+                                    .u-spacer-left-auto
+                                        +c-button({skin: 'secondary', icon: 'remove'}) Clear
+                                        +c-button({skin: 'primary', icon: 'check'}) Validate

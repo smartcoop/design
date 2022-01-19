@@ -1,0 +1,23 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Portal"
+
+block content
+    .u-scroll-wrapper-body
+        .o-container.o-container--large
+            .o-container-vertical
+                .o-container.o-container--medium
+                    .u-padding-vertical-l
+                        .c-panel
+                            .c-panel__body
+                                .c-content
+                                    h4 Welcome
+                                    p Blah.
+                                    +c-button({layout: 'text-icon', icon: 'external-link'}) CTQ
+                                    br
+                                    br
+                                    +c-button({layout: 'text-icon', icon: 'external-link', href: '/prototypes/portal/budgets.html'}) Activity budget
+                                    br
+                                    br
+                                    +c-button({layout: 'text-icon', icon: 'external-link'}) Admin
