@@ -21,31 +21,31 @@ block content
                     .c-toolbar__item
                         +c-button({icon: 'filter'})(id="filterButton") Filter
 
-    .u-hidden.u-border-bottom(id="filters")
-        .u-spacer-l
-            .o-form-group-layout.o-form-group-layout--horizontal.o-form-group-layout--horizontal-short
-                .o-grid
-                    .o-grid-col-bp2-3
-                        +c-form-group({label: 'Reference', id: 'referenceId'})
-                            +c-input({id: 'referenceId'})
-                        +c-form-group({label: 'Employee', id: 'employeeId'})
-                            +c-select({id: 'employeeId', value: ['Manfred', 'John', 'Jane'], width: 'medium'})
-                    .o-grid-col-bp2-3
-                        +c-form-group({label: 'Year', id: 'yearId'})
-                            +c-select({id: 'yearId', value: contentData.years, width: 'medium'})
-                        +c-form-group({label: 'Month', id: 'monthId'})
-                            +c-select({id: 'monthId', value: contentData.months, width: 'medium'})
-                    .o-grid-col-bp2-3
-                        +c-form-group({label: 'Status DPD', id: 'statusDpdId'})
-                            +c-select({id: 'statusDpdId', value: ['Pending', 'Validated'], width: 'medium'})
-                        +c-form-group({label: 'Status A1', id: 'statusA1Id'})
-                            +c-select({id: 'statusA1Id', value: ['Pending', 'Validated'], width: 'medium'})
-                    .o-grid-col-bp2-3
-                        +c-form-group({ label: 'Advisor', id: 'advisorId'})
-                            +c-select({id: 'advisorId', value: ['ABC', 'DEF', 'GHI'], width: 'medium'})
 
 
     .u-scroll-wrapper-body
+        .u-hidden.u-border-bottom(id="filters")
+            .u-spacer-l
+                .o-form-group-layout.o-form-group-layout--horizontal.o-form-group-layout--horizontal-short
+                    .o-grid
+                        .o-grid-col-bp2-3
+                            +c-form-group({label: 'Reference', id: 'referenceId'})
+                                +c-input({id: 'referenceId'})
+                            +c-form-group({label: 'Employee', id: 'employeeId'})
+                                +c-select({id: 'employeeId', value: ['Manfred', 'John', 'Jane'], width: 'medium'})
+                        .o-grid-col-bp2-3
+                            +c-form-group({label: 'Year', id: 'yearId'})
+                                +c-select({id: 'yearId', value: contentData.years, width: 'medium'})
+                            +c-form-group({label: 'Month', id: 'monthId'})
+                                +c-select({id: 'monthId', value: contentData.months, width: 'medium'})
+                        .o-grid-col-bp2-3
+                            +c-form-group({label: 'Status DPD', id: 'statusDpdId'})
+                                +c-select({id: 'statusDpdId', value: ['Pending', 'Validated'], width: 'medium'})
+                            +c-form-group({label: 'Status A1', id: 'statusA1Id'})
+                                +c-select({id: 'statusA1Id', value: ['Pending', 'Validated'], width: 'medium'})
+                        .o-grid-col-bp2-3
+                            +c-form-group({ label: 'Advisor', id: 'advisorId'})
+                                +c-select({id: 'advisorId', value: ['ABC', 'DEF', 'GHI'], width: 'medium'})
         block contracts
 
         .c-navbar.c-navbar--scrollable.c-navbar--bordered-top
