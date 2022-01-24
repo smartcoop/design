@@ -63,9 +63,8 @@
 }
 
 .c-link,
-.c-content a {
+.c-content a:not(.c-button) {
   text-decoration: none;
-  color: $color-semantic-link;
   border-bottom: .1rem solid rgba($color-blue-600,.33);
 
   &.u-text-muted {
@@ -73,10 +72,6 @@
     border-color: rgba($color-gray-500, .33);
   }
 }
-
-
-
-
 
 .c-content {
 
