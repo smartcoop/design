@@ -3095,6 +3095,15 @@ textarea.c-input--h-large {
   .c-menu__label:focus {
     box-shadow: inset 0 0 0 0.2rem #E7EFFE; }
 
+.c-menu__label--2-lines {
+  flex-direction: column;
+  align-items: start; }
+
+.c-menu__subline {
+  font-size: 1.4rem;
+  color: #808080;
+  margin-top: 0.2rem; }
+
 .c-menu__info {
   padding: 0.8rem 1.6rem;
   color: inherit; }
