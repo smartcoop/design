@@ -137,39 +137,45 @@
                                 <div class="o-form-group">
                                     <label class="o-form-group__label" for="yearOfCreation">Compensation budget</label>
                                     <div class="o-form-group__controls o-form-group__controls--full-width">
-                                        <div class="c-input-group">
-                                            <div class="c-input-group__input">
-                                                <input class="c-input" type="number" id="saleAmount">
+                                        <div class="o-flex-bp2 o-flex--spaced-wide o-flex--vertical-center">
+                                            <div class="c-input-group">
+                                                <div class="c-input-group__input">
+                                                    <input class="c-input" type="number" id="saleAmount">
+                                                </div>
+                                                <div class="c-input-group__append">€</div>
                                             </div>
-                                            <div class="c-input-group__append">€</div>
-                                        </div>
-                                        <div class="c-checkbox">
-                                            <label>
-                                                <input type="checkbox">Unknown amount
-                                            </label>
+                                            <div class="c-checkbox">
+                                                <label>
+                                                    <input type="checkbox">Unknown amount
+                                                </label>
+                                            </div>
                                         </div>
                                         <p class="c-form-help-text">Enter a compensation budget or select "Unknown amount"</p>
                                     </div>
                                 </div>
                                 <div class="o-form-group">
-                                    <label class="o-form-group__label" for="select">Project</label>
-                                    <div class="o-form-group__controls">
-                                        <div class="c-select-holder">
-                                            <select class="c-select" id="select">
-                                                <option>Choose an existing project</option>
-                                                <option>Unspecified</option>
-                                            </select>
-                                        </div>
-                                        <button class="c-button c-button--secondary" type="button">
-                                            <span class="c-button__content">
-                                                <div class="o-svg-icon o-svg-icon-add  ">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
-                                                    </svg>
+                                    <label class="o-form-group__label" for="project">Project</label>
+                                    <div class="o-form-group__controls o-form-group__controls--full-width">
+                                        <div class="o-flex-bp2 o-flex--vertical-center u-maximize-width">
+                                            <div class="o-flex__item u-spacer-right-s">
+                                                <div class="c-select-holder">
+                                                    <select class="c-select" id="project">
+                                                        <option>Choose an existing project</option>
+                                                        <option>Unspecified</option>
+                                                    </select>
                                                 </div>
-                                                <span class="c-button__label">Add a project</span>
-                                            </span>
-                                        </button>
+                                            </div>
+                                            <button class="c-button c-button--borderless" type="button">
+                                                <span class="c-button__content">
+                                                    <div class="o-svg-icon o-svg-icon-add  ">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
+                                                        </svg>
+                                                    </div>
+                                                    <span class="c-button__label">Add new project</span>
+                                                </span>
+                                            </button>
+                                        </div>
                                         <p class="c-form-help-text">Enter an existing project or create new one</p>
                                     </div>
                                 </div>

@@ -454,6 +454,10 @@ abbr[title] {
 .o-flex {
   display: flex; }
 
+@media (min-width: 700px) {
+  .o-flex-bp2 {
+    display: flex; } }
+
 .o-flex-inline {
   display: inline-flex; }
 
