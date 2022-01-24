@@ -3095,6 +3095,10 @@ textarea.c-input--h-large {
   .c-menu__label:focus {
     box-shadow: inset 0 0 0 0.2rem #E7EFFE; }
 
+.c-menu__info {
+  padding: 0.8rem 1.6rem;
+  color: inherit; }
+
 .c-menu__divider {
   border-top: 0.1rem solid #CCCCCC;
   display: block;
@@ -4734,6 +4738,9 @@ textarea.c-input--h-large {
    ========================================================================== */
 .u-text-muted {
   color: #808080; }
+
+.u-text-small {
+  font-size: 1.4rem; }
 
 .u-text-primary {
   color: #FF4054; }
