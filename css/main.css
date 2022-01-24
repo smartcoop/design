@@ -915,12 +915,11 @@ abbr[title] {
   color: #808080; }
 
 .c-link,
-.c-content a {
+.c-content a:not(.c-button) {
   text-decoration: none;
-  color: #1267FB;
   border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
   .c-link.u-text-muted,
-  .c-content a.u-text-muted {
+  .c-content a:not(.c-button).u-text-muted {
     color: #808080;
     border-color: rgba(128, 128, 128, 0.33); }
 
