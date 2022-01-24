@@ -78,6 +78,11 @@ $g-c-menu-z: 60 !default;
   }
 }
 
+.c-menu__info {
+  padding: 0.8rem 1.6rem;
+  color: inherit;
+}
+
 .c-menu__divider {
   border-top: 0.1rem solid $color-gray-200;
   display: block;

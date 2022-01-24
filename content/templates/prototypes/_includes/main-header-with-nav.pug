@@ -97,8 +97,13 @@ include /templates/_mixins/all
                     +c-avatar({img: '/images/avatars/1.jpg', alt: 'avatar'})
                 ul.c-menu.c-menu--large(id="userMenu")
                     // @todo add correct user menu items
-                    li.c-menu__item
-                        .c-menu__label Signed in as Alice
+                    li.c-menu__info
+                        .c-avatar-and-text
+                            +c-avatar({img: '/images/avatars/1.jpg', alt: 'avatar'})
+                            .c-avatar-and-text__text
+                                p Alice
+                                p.u-text-small.u-text-muted alice@example.com
+
                     li.c-menu__divider(role="presentational")
                     li.c-menu__item
                         a.c-menu__label(href="/prototypes/account/as-member.html") Act as a member
