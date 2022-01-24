@@ -55,9 +55,10 @@ block body
                                 .o-form-group
                                     label.o-form-group__label(for="worker") Role
                                     .o-form-group__controls.o-form-group__controls--full-width
-                                        label Art and craft creation > Entertainment arts > Dancer
-                                        +c-button({icon: 'edit'}) Edit
-                                        p.c-form-help-text Your most frequently used role has been automatically selected. Click "Edit" if you want to select a different role for this work.
+                                        .o-flex.o-flex--vertical-center.u-maximize-width
+                                            span.u-spacer-right-s Art and craft creation > Entertainment arts > Dancer
+                                            +c-button({layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
+                                        p.c-form-help-text Your most frequently used role has been automatically selected. Click the edit button if you want to select a different role for this work.
 
                                 .o-form-group
                                     label.o-form-group__label(for="worker") Work type
@@ -69,7 +70,7 @@ block body
                                 .o-form-group
                                     label.o-form-group__label Work risks
                                     .o-form-group__controls
-                                        .c-radio-group
+                                        .c-radio-group.c-radio-group--inline
                                             .c-radio
                                                 label
                                                     input(type="radio" name="radio1")
@@ -78,10 +79,10 @@ block body
                                                 label
                                                     input(type="radio" name="radio1")
                                                     | With risks
-                                                p.c-form-help-text
-                                                    | For your safety and your colleagues safety, if your role involves risks, you have to select "With risks".
-                                                    |
-                                                    a.c-link(href="#") Learn more about risks
+                                            p.c-form-help-text
+                                                | For your safety and your colleagues safety, if your role involves risks, you have to select "With risks".
+                                                |
+                                                a.c-link(href="#") Learn more about risks
 
                                 .o-form-group
                                     .u-spacer-left-auto
