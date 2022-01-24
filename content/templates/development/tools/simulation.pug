@@ -24,11 +24,10 @@ block content
                                 message: 'The simulation form couldn\'t be submitted, please correct the errors below.'
                             })
                     .c-panel
-                        .c-panel__content
-                            - var input = {}
-                            - if (state == "filled") input = data.input
-                            .o-form-group-layout.o-form-group-layout--horizontal
-                                include /templates/_includes/simulation-form-fields
+                        - var input = {}
+                        - if (state == "filled") input = data.input
+                        .o-form-group-layout.o-form-group-layout--horizontal
+                            include /templates/_includes/simulation-form-fields
 
                     .u-spacer-top
                         .c-toolbar

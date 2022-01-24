@@ -17,11 +17,10 @@ block content
             .o-grid-col-bp3-6
                 .u-spacer-l
                     .c-panel
-                        .c-panel__content
-                            - var input = {}
-                            - if (state == "filled") input = data.input
-                            form.o-form-group-layout.o-form-group-layout--horizontal
-                                include /templates/_includes/simulation-form-fields
+                        - var input = {}
+                        - if (state == "filled") input = data.input
+                        form.o-form-group-layout.o-form-group-layout--horizontal
+                            include /templates/_includes/simulation-form-fields
 
                     .u-spacer-top
                         .c-toolbar

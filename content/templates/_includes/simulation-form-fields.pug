@@ -136,9 +136,7 @@
     ]
 
 
-.u-spacer-l
-    h3.c-h3.u-spacer-bottom-l Smart service
-
+.c-panel__body
     +c-form-group({label: 'Smart service',id: 'smartService', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
         +c-select({id: 'smartService', value: smartServices, key: 'name', valueKey: 'id'})
 
@@ -163,11 +161,8 @@
                 p.c-form-help-text.c-form-help-text--error VAT type is required for the Smart activity you have chosen
             p.c-form-help-text Ignore when you selected <strong>continue my Smart activity</strong> for the <strong>Smart Service</strong> field.
 
-hr.c-hr
 
-.u-spacer-l
-    h3.c-h3 Joint commission
-
+.c-panel__body
     .u-spacer-bottom-l
         +c-alert({
             message: 'Required when carrying out an interim assignment on behalf of a client.',
@@ -180,10 +175,9 @@ hr.c-hr
     +c-form-group({label: 'Subcommittee', id: 'subCommittee'})
         +c-select({id: 'subCommittee', value: subCommittees, key: 'name', valueKey: 'id'})
         p.c-form-help-text Only required when you selected <strong>Sociocultural Flemish Community </strong> or <strong>Sociocultural Walloon Region and French and German-speaking Community</strong> for the <strong>Joint commission</strong> field.
-hr.c-hr
 
-.u-spacer-l
-    h3.c-h3.u-spacer-bottom-l Contract data
+
+.c-panel__body
     .o-form-group
         .o-form-group__label.o-form-group__label--with-helper
             label(id="amountLabel") Amount

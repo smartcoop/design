@@ -165,71 +165,60 @@ block content
                                 message: 'The simulation form couldn\'t be submitted, please correct the errors below.'
                             })
                     .c-panel
-                        .c-panel__content
 
-                            .o-form-group-layout.o-form-group-layout--horizontal
-                                .u-spacer-l
-                                    h3.c-h3.u-spacer-bottom-l Smart service
+                        .o-form-group-layout.o-form-group-layout--horizontal
+                            .c-panel__body
+                                +c-form-group({label: 'Smart service',id: 'smartService', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+                                    +c-select({id: 'smartService', value: smartServices, key: 'name', valueKey: 'id'})(x-model="service" :class="{'c-select--error': validation.service.error}" x-on:change="showVat = ($event.target.value == 1 || $event.target.value == 3), showJointCommission = ($event.target.value == 3)")
+                                    template(x-if="validation.service.error")
+                                        p.c-form-help-text.c-form-help-text--error(x-text="validation.service.message")
 
-                                    +c-form-group({label: 'Smart service',id: 'smartService', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
-                                        +c-select({id: 'smartService', value: smartServices, key: 'name', valueKey: 'id'})(x-model="service" :class="{'c-select--error': validation.service.error}" x-on:change="showVat = ($event.target.value == 1 || $event.target.value == 3), showJointCommission = ($event.target.value == 3)")
-                                        template(x-if="validation.service.error")
-                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.service.message")
-
-                                    //- Only show this set of fields if Smart service is I provide a service in exchange for a salary || I carry out an interim assignment on behalf of a client
-                                    template(x-if="showVat")
-                                        +c-form-group({label: 'VAT', id: 'vatId', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
-                                            .o-flex.o-flex--spaced
-                                                +c-select({ id: 'vatType', value: ['Select', 'Included', 'Not included', 'No VAT'] })
-                                                +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true })
-
-                                    +c-form-group({label: 'Contract type', id: 'contractType'})
-                                        +c-select({id: 'contractType', value: contractTypes, key: 'name', valueKey: 'id' })(x-model="contractType" :class="{'c-select--error': validation.contractType.error}")
-                                        template(x-if="validation.contractType.error")
-                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.contractType.message")
-
-                                //- Only show this set of fields if Smart service is I carry out an interim assignment on behalf of a client
-                                div(x-show="showJointCommission")
-                                    hr.c-hr
-                                    .u-spacer-l
-                                        h3.c-h3 Joint commission
-
-                                        +c-form-group({label: 'Joint commission',id: 'jointCommission', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
-                                            +c-select({id: 'contractType', value: jointCommissions, key: 'name', valueKey: 'id' })(x-model="jointCommission" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ")
-
-                                        div(x-show="showSubCommittees")
-                                            div(x-show="jointCommission == 8")
-                                                +c-form-group({label: 'Subcommittee', id: 'subCommittee', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
-                                                    +c-select({id: 'subCommittee', value: jointCommissions[8].subCommittees, key: 'name', valueKey: 'id'})
-
-                                            div(x-show="jointCommission == 9")
-                                                +c-form-group({label: 'Subcommittee', id: 'subCommittee', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
-                                                    +c-select({id: 'subCommittee', value: jointCommissions[9].subCommittees, key: 'name', valueKey: 'id'})
-
-                                hr.c-hr
-
-                                .u-spacer-l
-                                    h3.c-h3.u-spacer-bottom-l Contract data
-
-                                    +c-form-group({label: 'Amount', id: 'amount', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                //- Only show this set of fields if Smart service is I provide a service in exchange for a salary || I carry out an interim assignment on behalf of a client
+                                template(x-if="showVat")
+                                    +c-form-group({label: 'VAT', id: 'vatId', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
                                         .o-flex.o-flex--spaced
-                                            +c-select({ id: 'amountType', value: ['Select', 'Billing amount', 'Net to pay', 'Gross salary'] })(x-model="amountType" :class="{'c-select--error': validation.amountType.error}" )
-                                            +c-input-group-after({ type: 'number', id: 'amountValue', text: '€', inputType: 'number' })(x-model="amountValue" :class="{'c-input--error': validation.amountValue.error}" )
-                                        template(x-if="validation.amountType.error")
-                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.amountType.message")
-                                        template(x-if="validation.amountValue.error")
-                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.amountValue.message")
+                                            +c-select({ id: 'vatType', value: ['Select', 'Included', 'Not included', 'No VAT'] })
+                                            +c-radio-group({ name: 'vatRate', value: ['6%', '21%'], isInline: true })
 
-                                    +c-form-group({label: 'Number of days', id: 'numberOfDays'})
-                                        +c-input({id: 'numberOfDays', type: 'number'})(x-model="numberOfDays" :class="{'c-input--error': validation.numberOfDays.error}" )
-                                        template(x-if="validation.numberOfDays.error")
-                                            p.c-form-help-text.c-form-help-text--error(x-text="validation.numberOfDays.message")
+                                +c-form-group({label: 'Contract type', id: 'contractType'})
+                                    +c-select({id: 'contractType', value: contractTypes, key: 'name', valueKey: 'id' })(x-model="contractType" :class="{'c-select--error': validation.contractType.error}")
+                                    template(x-if="validation.contractType.error")
+                                        p.c-form-help-text.c-form-help-text--error(x-text="validation.contractType.message")
 
-                                    +c-form-group({label: 'Defrayal (per day)', id: 'defrayalPerDay', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
-                                        +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€'})
+                            //- Only show this set of fields if Smart service is I carry out an interim assignment on behalf of a client
+                            .c-panel__body(x-show="showJointCommission")
+                                +c-form-group({label: 'Joint commission',id: 'jointCommission', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true })
+                                    +c-select({id: 'contractType', value: jointCommissions, key: 'name', valueKey: 'id' })(x-model="jointCommission" x-on:change="showSubCommittees = ($event.target.value == 8) || ($event.target.value == 9) ")
 
-                                    +c-form-group({ label: 'Withholding tax', id: 'withHoldingTax', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
-                                        +c-input-group-after({id: 'withHoldingTax', type: 'number', icon: 'percent'})
+                                div(x-show="showSubCommittees")
+                                    div(x-show="jointCommission == 8")
+                                        +c-form-group({label: 'Subcommittee', id: 'subCommittee', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
+                                            +c-select({id: 'subCommittee', value: jointCommissions[8].subCommittees, key: 'name', valueKey: 'id'})
+
+                                    div(x-show="jointCommission == 9")
+                                        +c-form-group({label: 'Subcommittee', id: 'subCommittee', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.', isFullWidth: true})
+                                            +c-select({id: 'subCommittee', value: jointCommissions[9].subCommittees, key: 'name', valueKey: 'id'})
+
+                            .c-panel__body
+                                +c-form-group({label: 'Amount', id: 'amount', helperTooltip:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                    .o-flex.o-flex--spaced
+                                        +c-select({ id: 'amountType', value: ['Select', 'Billing amount', 'Net to pay', 'Gross salary'] })(x-model="amountType" :class="{'c-select--error': validation.amountType.error}" )
+                                        +c-input-group-after({ type: 'number', id: 'amountValue', text: '€', inputType: 'number' })(x-model="amountValue" :class="{'c-input--error': validation.amountValue.error}" )
+                                    template(x-if="validation.amountType.error")
+                                        p.c-form-help-text.c-form-help-text--error(x-text="validation.amountType.message")
+                                    template(x-if="validation.amountValue.error")
+                                        p.c-form-help-text.c-form-help-text--error(x-text="validation.amountValue.message")
+
+                                +c-form-group({label: 'Number of days', id: 'numberOfDays'})
+                                    +c-input({id: 'numberOfDays', type: 'number'})(x-model="numberOfDays" :class="{'c-input--error': validation.numberOfDays.error}" )
+                                    template(x-if="validation.numberOfDays.error")
+                                        p.c-form-help-text.c-form-help-text--error(x-text="validation.numberOfDays.message")
+
+                                +c-form-group({label: 'Defrayal (per day)', id: 'defrayalPerDay', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                    +c-input-group-after({id: 'defrayalPerDay', type: 'number', text: '€'})
+
+                                +c-form-group({ label: 'Withholding tax', id: 'withHoldingTax', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.' })
+                                    +c-input-group-after({id: 'withHoldingTax', type: 'number', icon: 'percent'})
 
                     .u-spacer-top
                         .c-toolbar
