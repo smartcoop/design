@@ -46,7 +46,7 @@ block body
                             .c-button-toolbar
                                 +c-button({icon: 'arrow-left'}) Back
                                 +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
-  
+
             .u-scroll-wrapper-body
                 .o-container.o-container--large
                     .o-container-vertical
@@ -79,19 +79,26 @@ block body
                                 .o-form-group
                                     label.o-form-group__label(for="yearOfCreation") Compensation budget
                                     .o-form-group__controls.o-form-group__controls--full-width
-                                        .c-input-group
-                                            .c-input-group__input
-                                                input.c-input(type="number" id="saleAmount")
-                                            .c-input-group__append €
-                                        .c-checkbox
-                                            label
-                                                input(type="checkbox")
-                                                | Unknown amount
+                                        .o-flex-bp2.o-flex--spaced-wide.o-flex--vertical-center
+                                            .c-input-group
+                                                .c-input-group__input
+                                                    input.c-input(type="number" id="saleAmount")
+                                                .c-input-group__append €
+                                            .c-checkbox
+                                                label
+                                                    input(type="checkbox")
+                                                    | Unknown amount
                                         p.c-form-help-text Enter a compensation budget or select "Unknown amount"
-                                +c-form-group({label: 'Project', id: 'select'})
-                                    +c-select({id: 'select', value: ['Choose an existing  project', 'Unspecified']})
-                                    +c-button({icon: 'add'}) Add a project
-                                    p.c-form-help-text Enter an existing project or create new one
+
+                                .o-form-group
+                                    label.o-form-group__label(for="project") Project
+                                    .o-form-group__controls.o-form-group__controls--full-width
+                                        .o-flex-bp2.o-flex--vertical-center.u-maximize-width
+                                            .o-flex__item.u-spacer-right-s
+                                                +c-select({id: 'project', value: ['Choose an existing  project', 'Unspecified']})
+
+                                            +c-button({icon: 'add', skin: 'borderless'}) Add new project
+                                        p.c-form-help-text Enter an existing project or create new one
                                 .o-form-group
                                     label.o-form-group__label(for="description") Description
                                     .o-form-group__controls.o-form-group__controls--full-width

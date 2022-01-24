@@ -16,6 +16,12 @@ $o-flex-gutter-width: 0.8rem !default;
   display: flex;
 }
 
+.o-flex-bp2 {
+  @media (min-width: $g-bp2) {
+    display: flex;
+  }
+}
+
 .o-flex-inline {
   display: inline-flex;
 }
