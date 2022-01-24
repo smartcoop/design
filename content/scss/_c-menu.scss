@@ -78,6 +78,17 @@ $g-c-menu-z: 60 !default;
   }
 }
 
+.c-menu__label--2-lines {
+  flex-direction: column;
+  align-items: start;
+}
+
+.c-menu__subline {
+  font-size: 1.4rem;
+  color: $color-semantic-muted-text;
+  margin-top: 0.2rem;
+}
+
 .c-menu__info {
   padding: 0.8rem 1.6rem;
   color: inherit;

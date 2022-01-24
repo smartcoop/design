@@ -1,5 +1,6 @@
 include ../../../../core/templates/mixins/icon
 include /templates/_mixins/all
+
 .c-navbar.c-navbar--scrollable.c-navbar--bordered-bottom
     .c-toolbar
         .c-toolbar__left
@@ -62,11 +63,13 @@ include /templates/_mixins/all
                                         span Documentation
                                         +icon('external-link', 'o-svg-icon--small o-svg-icon--subtle')
                                 li.c-menu__item
-                                    a.c-menu__label(
+                                    a.c-menu__label.c-menu__label--2-lines(
                                             href="https://smartbe.be/fr/contact/",
                                             target="_blank")
-                                        span Contact an advisor
-                                        +icon('external-link', 'o-svg-icon--small o-svg-icon--subtle')
+                                        .o-flex.o-flex--vertical-center
+                                            span Contact my advisor
+                                            +icon('external-link', 'o-svg-icon--small o-svg-icon--subtle')
+                                        .c-menu__subline alice@example.com
                                 li.c-menu__item
                                     a.c-menu__label(href="#") Report a bug
 
@@ -101,8 +104,7 @@ include /templates/_mixins/all
                         .c-avatar-and-text
                             +c-avatar({img: '/images/avatars/1.jpg', alt: 'avatar'})
                             .c-avatar-and-text__text
-                                p Alice
-                                p.u-text-small.u-text-muted alice@example.com
+                                p Signed in as <strong>Alice</strong>
 
                     li.c-menu__divider(role="presentational")
                     li.c-menu__item
