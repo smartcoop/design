@@ -2732,8 +2732,6 @@ a.c-card:hover {
   display: block;
   font-size: 1.4rem;
   margin-top: 0.6rem; }
-  .c-form-help-text strong {
-    color: #595959; }
 
 .c-form-help-text--error {
   color: #FF4054; }
