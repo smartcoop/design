@@ -525,6 +525,11 @@ var popperInstances = []; // Find target dropdown element
 var findDropdown = function findDropdown(triggerEl) {
   var targetId = triggerEl.getAttribute('data-menu');
   return document.getElementById(targetId);
+}; // find Select for clicked option
+
+
+var findSelect = function findSelect(element) {
+  return document.querySelector("[data-menu=\"".concat(element.parentElement.id));
 }; // Position dropdown
 
 
@@ -606,6 +611,19 @@ var handleClick = function handleClick(event) {
   } else {
     hidePopper(instance);
   }
+}; // Custom select
+
+
+var handleSelectClick = function handleSelectClick(event) {
+  var selectedItem = event.currentTarget.querySelector('.c-menu__label').cloneNode(true);
+  var targetSelect = findSelect(event.currentTarget);
+  var previousItem = targetSelect.querySelector('.c-select-custom__value');
+  selectedItem.classList.replace('c-menu__label', 'c-select-custom__value');
+  previousItem.parentNode.replaceChild(selectedItem, previousItem);
+  var popper = findPopperInstance(targetSelect.dataset.menu);
+  popper.state.elements.popper.removeAttribute('data-show');
+  popper.state.elements.popper.classList.remove(menuActiveClass);
+  destroy(popper);
 }; // Hide all menus when clicking outside
 
 

@@ -156,26 +156,31 @@
                                 <div class="o-form-group">
                                     <label class="o-form-group__label" for="project">Project</label>
                                     <div class="o-form-group__controls o-form-group__controls--full-width">
-                                        <div class="o-flex-bp2 o-flex--vertical-center u-maximize-width">
-                                            <div class="o-flex__item u-spacer-right-s">
-                                                <div class="c-select-holder">
-                                                    <select class="c-select" id="project">
-                                                        <option>Choose an existing project</option>
-                                                        <option>Unspecified</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <button class="c-button c-button--borderless" type="button">
-                                                <span class="c-button__content">
+                                        <button class="c-select-custom" aria-haspopup="listbox" data-menu="projects" data-menu-samewidth="true" aria-expanded="false">
+                                            <div class="c-select-custom__value">Select project</div>
+                                        </button>
+                                        <ul class="c-menu c-menu--select-custom" role="listbox" id="projects">
+                                            <li class="c-menu__item" role="option">
+                                                <div class="c-menu__label">Project 1</div>
+                                            </li>
+                                            <li class="c-menu__item" role="option">
+                                                <div class="c-menu__label">Project 2</div>
+                                            </li>
+                                            <li class="c-menu__item" role="option">
+                                                <div class="c-menu__label">Project 3</div>
+                                            </li>
+                                            <li class="c-menu__divider"></li>
+                                            <li class="c-menu__item">
+                                                <div class="c-menu__label">
                                                     <div class="o-svg-icon o-svg-icon-add  ">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
                                                         </svg>
                                                     </div>
-                                                    <span class="c-button__label">Add new project</span>
-                                                </span>
-                                            </button>
-                                        </div>
+                                                    <span>Add new project</span>
+                                                </div>
+                                            </li>
+                                        </ul>
                                         <p class="c-form-help-text">Enter an existing project or create new one</p>
                                     </div>
                                 </div>
