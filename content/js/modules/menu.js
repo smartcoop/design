@@ -33,6 +33,11 @@ const findDropdown = (triggerEl) => {
   return document.getElementById(targetId);
 };
 
+// find Select for clicked option
+const findSelect = (element) => {
+  return document.querySelector(`[data-menu="${element.parentElement.id}`);
+};
+
 // Position dropdown
 function create(triggerEl, targetEl) {
   const placement = triggerEl.dataset.menuPlacement || 'bottom-start';
@@ -66,7 +71,7 @@ function create(triggerEl, targetEl) {
 
   popperInstances.push(popperInstance);
 
-  
+
 }
 
 function showPopper(trigger, targetEl) {
@@ -119,6 +124,23 @@ const handleClick = (event) => {
   }
 };
 
+// Custom select
+const handleSelectClick = (event) => {
+  const selectedItem = event.currentTarget
+    .querySelector('.c-menu__label')
+    .cloneNode(true);
+
+  const targetSelect = findSelect(event.currentTarget);
+  const previousItem = targetSelect.querySelector('.c-select-custom__value');
+
+  selectedItem.classList.replace('c-menu__label', 'c-select-custom__value');
+  previousItem.parentNode.replaceChild(selectedItem, previousItem);
+  let popper = findPopperInstance(targetSelect.dataset.menu);
+  popper.state.elements.popper.removeAttribute('data-show');
+  popper.state.elements.popper.classList.remove(menuActiveClass);
+  destroy(popper);
+};
+
 // Hide all menus when clicking outside
 const handleOutsideClick = (event) => {
   if (!popperInstances.length) return;
@@ -149,4 +171,5 @@ selectOptions.forEach((option) =>
 
 // Add click listener on outside
 document.addEventListener('click', handleOutsideClick);
+
 

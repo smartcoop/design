@@ -1,0 +1,40 @@
+/* ==========================================================================
+  Component Custom select
+  ---
+  Styles for a custom select dropdown
+   ========================================================================== */
+
+/* Component
+   ========================================================================== */
+
+.c-select-custom {
+  color: $color-semantic-body-text;
+  appearance: none;
+  text-align: left;
+  background: $c-input-bg-color; // We use properties from textfield here
+  border: 1px solid $c-input-border-color;
+  border-radius: $c-input-border-radius; // We use properties from textfield here
+  position: relative;
+  height: 3.6rem;
+  font-size: inherit;
+  padding: 0.8rem 2.8rem 0.8rem 0.8rem;
+  width: 100%;
+  max-height: 66vh;
+  overflow: auto;
+  @include textfield-focus;
+
+  &:after {
+    pointer-events: none;
+    content: ' ';
+    position: absolute;
+    right: 1rem;
+    top: calc(50% - 0.25rem);
+    width: 0;
+    height: 0;
+    border-width: 1rem;
+    border: 0.5rem solid $color-gray-600;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+}

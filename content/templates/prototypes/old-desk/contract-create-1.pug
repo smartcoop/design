@@ -93,11 +93,18 @@ block body
                                 .o-form-group
                                     label.o-form-group__label(for="project") Project
                                     .o-form-group__controls.o-form-group__controls--full-width
-                                        .o-flex-bp2.o-flex--vertical-center.u-maximize-width
-                                            .o-flex__item.u-spacer-right-s
-                                                +c-select({id: 'project', value: ['Choose an existing  project', 'Unspecified']})
 
-                                            +c-button({icon: 'add', skin: 'borderless'}) Add new project
+                                        button.c-select-custom(aria-haspopup="listbox" data-menu="projects" data-menu-samewidth="true" aria-expanded="false")
+                                            .c-select-custom__value Select project
+                                        ul.c-menu.c-menu--select-custom(role="listbox" id="projects")
+                                            each item, index in [1,2,3]
+                                                li.c-menu__item(role="option")
+                                                    .c-menu__label Project #{index+1}
+                                            li.c-menu__divider
+                                            li.c-menu__item
+                                                .c-menu__label
+                                                    +icon('add')
+                                                    span Add new project
                                         p.c-form-help-text Enter an existing project or create new one
                                 .o-form-group
                                     label.o-form-group__label(for="description") Description

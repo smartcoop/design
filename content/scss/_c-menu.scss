@@ -61,6 +61,7 @@ $g-c-menu-z: 60 !default;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
 
   .c-avatar + span,
   .o-svg-icon + span,
