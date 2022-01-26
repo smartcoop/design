@@ -14,10 +14,41 @@ block content
                                 +icon('arrow-left')
                                 .u-sr-accessible Back
                     .c-toolbar__item
-                            h2.c-toolbar__title Detachment 2022.NET.012345
+                            h2.c-toolbar__title
+                                | Detachment:
+                                |
+                                span.u-text-muted 2022.NET.012345
                 .c-toolbar__right
                     .c-toolbar__item
-                        +c-button({skin: 'primary', icon: 'user'}) ABC
+                        .o-form-group-layout.o-form-group-layout--inline
+                            .o-form-group
+                                label.o-form-group__label Assigned to
+                                .o-form-group__controls
+                                    button.c-select-custom.c-select-custom--w-medium(aria-haspopup="listbox" data-menu="users" data-menu-samewidth="true" aria-expanded="false")
+                                        .c-select-custom__value
+                                            +c-avatar({size: 'small', img: '/images/avatars/3.jpg'})
+                                            span Jacob Jones
+                                    -
+                                        var users = [
+                                            {
+                                                name: 'Jane Cooper',
+                                                imgSrc: '/images/avatars/1.jpg'
+                                            },
+                                            {
+                                                name: 'John Doe',
+                                                imgSrc: '/images/avatars/2.jpg'
+                                            },
+                                            {
+                                                name: 'Jacob Jones',
+                                                imgSrc: '/images/avatars/3.jpg'
+                                            },
+                                        ]
+                                    ul.c-menu.c-menu--select-custom(role="listbox" id="users")
+                                        each user in users
+                                            li.c-menu__item(role="option")
+                                                .c-menu__label
+                                                    +c-avatar({size: 'small', img: user.imgSrc})
+                                                    span= user.name
 
         .u-scroll-wrapper-body
             .u-spacer-xl

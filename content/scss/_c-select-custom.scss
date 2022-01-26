@@ -17,9 +17,10 @@
   position: relative;
   height: 3.6rem;
   font-size: inherit;
+  display: flex;
+  align-items: center;
   padding: 0.8rem 2.8rem 0.8rem 0.8rem;
   width: 100%;
-  max-height: 66vh;
   overflow: auto;
   @include textfield-focus;
 
@@ -38,3 +39,27 @@
     border-right-color: transparent;
   }
 }
+
+.c-select-custom__value {
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .c-avatar + span,
+  .o-svg-icon + span,
+    span + .o-svg-icon {
+      margin-left: $g-spacer-unit;
+    }
+}
+
+
+// Widths
+.c-select-custom--w-xsmall { width: 6.4rem; }
+.c-select-custom--w-small { width: 12rem; }
+.c-select-custom--w-medium { width: 20rem; }
+.c-select-custom--w-large { width: 44rem; }
