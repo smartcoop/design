@@ -3576,9 +3576,10 @@ textarea.c-input--h-large {
   position: relative;
   height: 3.6rem;
   font-size: inherit;
+  display: flex;
+  align-items: center;
   padding: 0.8rem 2.8rem 0.8rem 0.8rem;
   width: 100%;
-  max-height: 66vh;
   overflow: auto; }
   .c-select-custom:focus {
     outline: 0;
@@ -3597,6 +3598,32 @@ textarea.c-input--h-large {
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent; }
+
+.c-select-custom__value {
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .c-select-custom__value .c-avatar + span,
+  .c-select-custom__value .o-svg-icon + span,
+  .c-select-custom__value span + .o-svg-icon {
+    margin-left: 0.8rem; }
+
+.c-select-custom--w-xsmall {
+  width: 6.4rem; }
+
+.c-select-custom--w-small {
+  width: 12rem; }
+
+.c-select-custom--w-medium {
+  width: 20rem; }
+
+.c-select-custom--w-large {
+  width: 44rem; }
 
 /* ==========================================================================
   c-side-menu
