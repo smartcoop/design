@@ -28,6 +28,15 @@ $ docker build -t design -f Dockerfile .
 $ docker run -p 5000:80 design
 ```
 
+With the development server, the browser will automatically refresh the current
+page whenever its source changes. The development server can be run on port
+3000 with the following commands:
+
+```
+$ ./init.sh     # This is running 'npm install', so can be done once.
+$ ./develop.sh  # This is running 'npm start'.
+```
+
 ## Using Nix
 
 Just like Docker, Nix is not necessary to develop or build the design system.
@@ -44,9 +53,10 @@ $ nix-shell -p busybox --run 'httpd -f -p 5000 -h dist'
 
 With the development server, the browser will automatically refresh the current
 page whenever its source changes. The development server can be run on port
-3000 with the following command:
+3000 with the following commands:
 
 ```
+$ nix-shell -p nodejs-14_x --run 'npm install'
 $ nix-shell -p nodejs-14_x --run 'npm start'
 ```
 
