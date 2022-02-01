@@ -17,6 +17,8 @@ block body
                                     .u-sr-accessible Back
                         .c-toolbar__item
                             h2.c-toolbar__title New contract
+            .c-navbar.c-navbar--bordered-bottom
+                .c-toolbar
                     .c-toolbar__left
                         .c-toolbar__item
                             nav.c-wizard
@@ -26,16 +28,16 @@ block body
                                             .c-wizard__indicator
                                             .c-wizard__label General info
                                     li
-                                        a.c-wizard__item(href="contract-create-2.html")
-                                            .c-wizard__indicator 2
+                                        a.c-wizard__item.c-wizard--complete(href="contract-create-2.html")
+                                            .c-wizard__indicator
                                             .c-wizard__label Location and dates
                                     li
-                                        a.c-wizard__item(href="contract-create-3.html")
-                                            .c-wizard__indicator 3
+                                        a.c-wizard__item.c-wizard--complete(href="contract-create-3.html")
+                                            .c-wizard__indicator
                                             .c-wizard__label Function and risks
                                     li
-                                        a.c-wizard__item(href="contract-create-4.html")
-                                            .c-wizard__indicator 4
+                                        a.c-wizard__item.c-wizard--complete(href="contract-create-4.html")
+                                            .c-wizard__indicator
                                             .c-wizard__label Contract type
                                     li
                                         a.c-wizard__item.c-wizard--active(href="#")
@@ -45,24 +47,19 @@ block body
                         .c-toolbar__item
                             .c-button-toolbar
                                 +c-button({icon: 'arrow-left'}) Back
-  
-            .u-scroll-wrapper-body
-                .o-container.o-container--large
-                    .o-container-vertical
-                        .o-container.o-container--medium
-                            .u-spacer-bottom
-                                +c-alert({
-                                    skin: 'warning',
-                                    title: 'Please review and save your form to complete it.',
-                                    message: 'Before saving your form, it is possible to edit it and simulate your compensation.'
-                                })
+                                +c-button({icon: 'edit'}) Edit
+                                +c-button({icon: 'bills'}) Simulate salary
+                                +c-button({skin: 'primary'}) Save
 
-                            include /templates/prototypes/old-desk/_includes/contract-confirm
-                            .u-spacer-top
-                                .c-toolbar
-                                    .c-toolbar__right
-                                        .c-toolbar__item
-                                            .c-button-toolbar
-                                                +c-button({icon: 'save', skin: 'primary'}) Save
-                                                +c-button({icon: 'edit'}) Edit
-                                                +c-button({icon: 'bills'}) Simulate salary
+            .u-scroll-wrapper-body
+                .o-container-vertical
+                    .o-container.o-container--large
+                        .u-spacer-bottom
+                            +c-alert({
+                                skin: 'warning',
+                                title: 'Please review and save your form to complete it.',
+                                message: 'Before saving your form, it is possible to edit it and simulate your compensation.'
+                            })
+
+                        include /templates/prototypes/old-desk/_includes/contract-confirm
+
