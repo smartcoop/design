@@ -26,8 +26,14 @@ block content
                             .c-toolbar__item
                                 +c-status-pill({skin: 'pending'}) Draft
                         .c-toolbar__right
-                            .c-toolbar__item
-                                +c-button({skin: 'primary', icon: 'download'}) Download
+                            .c-button-toolbar
+                                +c-button({icon: 'circle-error', skin: 'danger-secondary'}) Cancel
+                                +c-button({icon: 'copy'}) Duplicate
+                                +c-button({icon: 'download'}) Download
+                                +c-button({icon: 'bills'}) Simulate salary
+                                +c-button({icon: 'edit'}) Edit
+                                +c-button({icon: 'send', skin: 'primary'}) Finalize
+
 
                 .u-scroll-wrapper-body
                     .u-spacer-xl
@@ -35,14 +41,3 @@ block content
                             +c-alert({title: 'Contract saved', message: 'This contract has been first saved on 2022-01-02. Last update on 2022-01-02.'})
 
                         include /templates/prototypes/old-desk/_includes/contract-confirm
-
-                        .u-spacer-top
-                            .c-toolbar
-                                .c-toolbar__right
-                                    .c-toolbar__item
-                                        .c-button-toolbar
-                                            +c-button({icon: 'send', skin: 'primary'}) Finalize
-                                            +c-button({icon: 'edit'}) Edit
-                                            +c-button({icon: 'circle-error', skin: 'danger-secondary'}) Cancel
-                                            +c-button({icon: 'add'}) Duplicate
-                                            +c-button({icon: 'bills'}) Simulate salary
