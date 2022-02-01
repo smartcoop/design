@@ -1,0 +1,59 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Contract"
+    - var fullScroll = true
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar
+            include /templates/prototypes/old-desk/_includes/side-menu
+
+        .c-app-layout-inner__main
+            .u-scroll-wrapper
+                .c-navbar.c-navbar--bordered-bottom
+                    .c-toolbar
+                        .c-toolbar__left
+                            .c-toolbar__item
+                                a.c-button.c-button--icon.c-button--borderless(href="#")
+                                    .c-button__content
+                                        +icon('arrow-left')
+                                        .u-sr-accessible Back
+                            .c-toolbar__item
+                                h2.c-toolbar__title
+                                    | Contract:
+                                    |
+                                    span.u-text-muted 2022.NET.012345 2022.PRS.000789
+                            .c-toolbar__item
+                                +c-status-pill({skin: 'pending'}) Draft
+                        .c-toolbar__right
+                            .c-toolbar__item
+                                .c-button-toolbar
+                                    +c-button({layout: 'icon-only', icon: 'options-horizontal'})(data-menu="dropdownActions") More options
+                                    +c-button({icon: 'edit'}) Edit
+                                    +c-button({icon: 'send', skin: 'primary'}) Finalize
+
+                                ul.c-menu(id="dropdownActions")
+                                    li.c-menu__item
+                                        a.c-menu__label(href="#")
+                                            +icon('download')
+                                            span Download
+                                    li.c-menu__item
+                                        a.c-menu__label(href="#")
+                                            +icon('copy')
+                                            span Duplicate
+                                    li.c-menu__item
+                                        a.c-menu__label(href="#")
+                                            +icon('bills')
+                                            span Simulate salary
+                                    li.c-menu__divider
+                                    li.c-menu__item.c-menu__item--danger
+                                        a.c-menu__label(href="#")
+                                            +icon('delete')
+                                            span Delete
+
+                .u-spacer-xl
+                    .u-spacer-bottom-l
+                        +c-alert({title: 'Contract saved', message: 'This contract has been first saved on 2022-01-02. Last update on 2022-01-02.'})
+                    include /templates/prototypes/old-desk/_includes/contract-confirm
+
