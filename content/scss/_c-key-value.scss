@@ -21,11 +21,12 @@
   }
 
   .c-key-value-item__value {
-    padding: 0.4em 0;
+    padding: 0.6rem 0;
   }
 
   .c-key-value-item__key {
     flex: 0 0 45%;
+    max-width: 25rem;
     margin-bottom: 0;
   }
 
