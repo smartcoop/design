@@ -5,7 +5,6 @@
 # Use ./develop.sh to run the development server.
 
 if [[ $OSTYPE == "msys" ]]; then
-    MSYS_NO_PATHCONV=1 docker run -it -w /bedrock -v $(pwd):/bedrock node:14.15.0-buster npm install
-else
-    docker run -it -w /bedrock -v $(pwd):/bedrock node:14.15.0-buster npm install
+    export MSYS_NO_PATHCONV=1 
 fi
+docker run -it -w /bedrock -v $(pwd):/bedrock node:14.15.0-buster npm install
