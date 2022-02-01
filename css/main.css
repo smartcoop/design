@@ -531,7 +531,7 @@ abbr[title] {
 .o-form-group-layout--standard label.o-form-group__label,
 .o-form-group-layout--standard .o-form-group__label label {
   padding: 0.8rem 0;
-  color: #333333;
+  color: #000000;
   font-size: 1.6rem;
   font-weight: 500;
   display: block;
@@ -550,6 +550,7 @@ abbr[title] {
 .o-form-group-layout--horizontal label.o-form-group__label,
 .o-form-group-layout--horizontal .o-form-group__label label {
   padding: 0.6rem 0;
+  color: #000000;
   font-weight: 500;
   display: block; }
 
@@ -570,11 +571,12 @@ abbr[title] {
     flex: 1 1 auto; }
   .o-form-group-layout--horizontal .o-form-group__label {
     width: 45%;
-    max-width: 22rem;
+    max-width: 25rem;
     flex: 0 0 auto; } }
 
 .o-form-group-layout--horizontal-long .o-form-group__label {
-  width: 65%; }
+  width: 65%;
+  color: #000000; }
 
 .o-form-group-layout--horizontal-short .o-form-group__label {
   width: 35%;
@@ -3008,7 +3010,7 @@ textarea.c-input--h-large {
 
 .c-key-value-item__key {
   padding: 0.4em 0;
-  color: #808080;
+  color: #000000;
   font-weight: 500; }
 
 .c-key-value--horizontal .c-key-value-item {
@@ -3016,10 +3018,11 @@ textarea.c-input--h-large {
   align-items: flex-start; }
 
 .c-key-value--horizontal .c-key-value-item__value {
-  padding: 0.4em 0; }
+  padding: 0.6rem 0; }
 
 .c-key-value--horizontal .c-key-value-item__key {
   flex: 0 0 45%;
+  max-width: 25rem;
   margin-bottom: 0; }
 
 .c-key-value--horizontal .c-key-value-item + .c-key-value-item {
@@ -3312,7 +3315,8 @@ textarea.c-input--h-large {
 
 .c-panel__title {
   font-size: 1.8rem;
-  font-weight: 500; }
+  font-weight: 500;
+  color: #000000; }
 
 /* When panels meet tables
    ========================================================================== */
@@ -3986,7 +3990,7 @@ textarea.c-input--h-large {
       margin-top: 0.8rem; } }
 
 .c-tabs__item {
-  color: #000000;
+  color: #808080;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -4131,7 +4135,11 @@ textarea.c-input--h-large {
    ========================================================================== */
 .c-toolbar__title {
   font-weight: 500;
+  color: #000000;
   font-size: 2.2rem; }
+
+.c-toolbar__title--small {
+  font-size: 2rem; }
 
 .c-toolbar__dropdown {
   display: flex;
