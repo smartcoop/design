@@ -108,7 +108,12 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
 
 .c-toolbar__title {
   font-weight: 500;
+  color: $color-semantic-header-text;
   font-size: 2.2rem;
+}
+
+.c-toolbar__title--small {
+  font-size: 2rem;
 }
 
 .c-toolbar__dropdown {
