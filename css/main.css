@@ -4242,15 +4242,23 @@ textarea.c-input--h-large {
 .c-user-navigation {
   display: flex;
   align-items: center;
-  padding: .4rem 3rem .4rem 0.8rem;
-  border: none;
+  padding: .4rem 2.8rem .4rem 1.6rem;
   color: #333333;
-  position: relative; }
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  margin: 0;
+  cursor: pointer; }
+  .c-user-navigation .c-avatar {
+    margin-right: 0.4rem; }
   .c-user-navigation:after {
     pointer-events: none;
     content: ' ';
     position: absolute;
-    right: 0.8rem;
+    right: 1.4rem;
     top: 1.8rem;
     width: 0;
     height: 0;
@@ -4259,9 +4267,8 @@ textarea.c-input--h-large {
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent; }
-
-.c-user-navigation .o-svg-icon {
-  opacity: 0.5; }
+  .c-user-navigation:hover, .c-user-navigation:active, .c-user-navigation:focus {
+    background: #F9F9F9; }
 
 /* ==========================================================================
   c-wizard
