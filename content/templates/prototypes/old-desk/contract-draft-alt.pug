@@ -9,7 +9,6 @@ block content
         .c-app-layout-inner__sidebar
             include /templates/prototypes/old-desk/_includes/side-menu
 
-        .c-app-layout-inner__main
             .u-scroll-wrapper
                 .c-navbar.c-navbar--bordered-bottom
                     .c-toolbar
@@ -32,6 +31,7 @@ block content
                                     +c-button({layout: 'icon-only', icon: 'options-horizontal'})(data-menu="dropdownActions") More options
                                     +c-button({icon: 'edit'}) Edit
                                     +c-button({icon: 'send', skin: 'primary'}) Finalize
+        .c-app-layout-inner__content
 
                                 ul.c-menu(id="dropdownActions")
                                     li.c-menu__item
