@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="u-maximize-height" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Dashboard - Smart Design System
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="u-maximize-height u-overflow-hidden">
+    <div class="c-app-layout">
+        <main class="u-maximize-width u-scroll-wrapper">
+            <div class="c-navbar c-navbar--bordered-bottom">
+                <div class="c-toolbar">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <a class="c-button c-button--icon c-button--borderless" href="/prototypes/index.html">
+                                <div class="c-button__content">
+                                    <div class="o-svg-icon o-svg-icon-arrow-left  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L7.41421 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H7.41421L11.7071 17.2929C12.0976 17.6834 12.0976 18.3166 11.7071 18.7071C11.3166 19.0976 10.6834 19.0976 10.2929 18.7071L4.29289 12.7071C4.10536 12.5196 4 12.2652 4 12C4 11.7348 4.10536 11.4804 4.29289 11.2929L10.2929 5.29289C10.6834 4.90237 11.3166 4.90237 11.7071 5.29289Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <div class="u-sr-accessible">Back</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="c-toolbar__item">
+                            <h2 class="c-toolbar__title">New contract</h2>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <nav class="c-wizard">
+                                <ul>
+                                    <li>
+                                        <a class="c-wizard__item c-wizard--complete" href="contract-create-1.html">
+                                            <div class="c-wizard__indicator"></div>
+                                            <div class="c-wizard__label">General info</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="c-wizard__item" href="contract-create-2.html">
+                                            <div class="c-wizard__indicator">2</div>
+                                            <div class="c-wizard__label">Location and dates</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="c-wizard__item" href="contract-create-3.html">
+                                            <div class="c-wizard__indicator">3</div>
+                                            <div class="c-wizard__label">Function and risks</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="c-wizard__item" href="contract-create-4.html">
+                                            <div class="c-wizard__indicator">4</div>
+                                            <div class="c-wizard__label">Contract type</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="c-wizard__item c-wizard--active" href="#">
+                                            <div class="c-wizard__indicator">5</div>
+                                            <div class="c-wizard__label">Confirm</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <div class="c-button-toolbar">
+                                <button class="c-button c-button--secondary" type="button">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-arrow-left  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L7.41421 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H7.41421L11.7071 17.2929C12.0976 17.6834 12.0976 18.3166 11.7071 18.7071C11.3166 19.0976 10.6834 19.0976 10.2929 18.7071L4.29289 12.7071C4.10536 12.5196 4 12.2652 4 12C4 11.7348 4.10536 11.4804 4.29289 11.2929L10.2929 5.29289C10.6834 4.90237 11.3166 4.90237 11.7071 5.29289Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <span class="c-button__label">Back</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="u-scroll-wrapper-body">
+                <div class="o-container o-container--large">
+                    <div class="o-container-vertical">
+                        <div class="o-container o-container--medium">
+                            <div class="u-spacer-bottom">
+                                <div class="c-alert c-alert--warning">
+                                    <div class="o-svg-icon o-svg-icon-warning  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.0002 14C11.4479 14 11.0002 13.5523 11.0002 13V10C11.0002 9.44772 11.4479 9 12.0002 9C12.5525 9 13.0002 9.44772 13.0002 10V13C13.0002 13.5523 12.5525 14 12.0002 14Z" fill="#595959" />
+                                            <path d="M10.5002 16.5C10.5002 15.6716 11.1717 15 12.0002 15C12.8286 15 13.5002 15.6716 13.5002 16.5C13.5002 17.3284 12.8286 18 12.0002 18C11.1717 18 10.5002 17.3284 10.5002 16.5Z" fill="#595959" />
+                                            <path d="M10.2303 3.2156C10.9802 1.79093 13.0202 1.79092 13.77 3.2156L22.1136 19.0685C22.8146 20.4003 21.8488 22 20.3438 22H3.65653C2.15151 22 1.18574 20.4003 1.8867 19.0685L10.2303 3.2156ZM20.3438 20L12.0002 4.14709L3.65653 20L20.3438 20Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <div class="c-alert__body">
+                                        <div class="c-alert__text">
+                                            <h4 class="c-h4">Please review and save your form to complete it.</h4>
+                                            <div class="c-alert__message">
+                                                <div class="c-content">
+                                                    <p>Before saving your form, it is possible to edit it and simulate your compensation.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-padding-vertical-l">
+                                <div class="c-panel">
+                                    <div class="c-panel__header">
+                                        <div class="c-toolbar">
+                                            <div class="c-toolbar__left">
+                                                <h2 class="c-panel__title">General information</h2>
+                                            </div>
+                                            <div class="c-toolbar__right">
+                                                <a class="c-button c-button--secondary" href="#">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <span class="c-button__label">Edit</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-panel__body">
+                                        <dl class="c-key-value c-key-value--horizontal c-key-value--short">
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Worker</dt>
+                                                <dd class="c-key-value-item__value">Manfred
+                                                </dd>
+                                            </div>
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Work setting</dt>
+                                                <dd class="c-key-value-item__value">The work is mainly performed in places and at times freely chosen
+                                                </dd>
+                                            </div>
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Compensation budget</dt>
+                                                <dd class="c-key-value-item__value">1000.00 EUR
+                                                </dd>
+                                            </div>
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Project</dt>
+                                                <dd class="c-key-value-item__value">Unspecified
+                                                </dd>
+                                            </div>
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Description</dt>
+                                                <dd class="c-key-value-item__value">Some description.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-padding-vertical-l">
+                                <div class="c-panel">
+                                    <div class="c-panel__header">
+                                        <div class="c-toolbar">
+                                            <div class="c-toolbar__left">
+                                                <h2 class="c-panel__title">Location and dates</h2>
+                                            </div>
+                                            <div class="c-toolbar__right">
+                                                <a class="c-button c-button--secondary" href="#">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <span class="c-button__label">Edit</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-panel__body">
+                                        <div class="u-spacer-bottom">
+                                            <dl class="c-key-value c-key-value--horizontal c-key-value--short">
+                                                <div class="c-key-value-item">
+                                                    <dt class="c-key-value-item__key">Work country</dt>
+                                                    <dd class="c-key-value-item__value">Belgium
+                                                    </dd>
+                                                </div>
+                                                <div class="c-key-value-item">
+                                                    <dt class="c-key-value-item__key">Work dates</dt>
+                                                    <dd class="c-key-value-item__value">2022 January 7
+                                                    </dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="o-form-group">
+                                            <div class="o-form-group__controls o-form-group__controls--full-width">
+                                                <div class="c-checkbox">
+                                                    <label>
+                                                        <input type="checkbox">By ticking this checkbox, you confirm COVID-19 dolore excepteur excepteur consequat ullamco dolore consequat.
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-padding-vertical-l">
+                                <div class="c-panel">
+                                    <div class="c-panel__header">
+                                        <div class="c-toolbar">
+                                            <div class="c-toolbar__left">
+                                                <h2 class="c-panel__title">Role and risks</h2>
+                                            </div>
+                                            <div class="c-toolbar__right">
+                                                <a class="c-button c-button--secondary" href="#">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <span class="c-button__label">Edit</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-panel__body">
+                                        <dl class="c-key-value c-key-value--horizontal c-key-value--short">
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Role</dt>
+                                                <dd class="c-key-value-item__value">Art and craft creation > Entertainment arts > Dancer
+                                                </dd>
+                                            </div>
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Work type</dt>
+                                                <dd class="c-key-value-item__value">Artistic
+                                                </dd>
+                                            </div>
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Work risks</dt>
+                                                <dd class="c-key-value-item__value">None
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-padding-vertical-l">
+                                <div class="c-panel">
+                                    <div class="c-panel__header">
+                                        <div class="c-toolbar">
+                                            <div class="c-toolbar__left">
+                                                <h2 class="c-panel__title">Contract type</h2>
+                                            </div>
+                                            <div class="c-toolbar__right">
+                                                <a class="c-button c-button--secondary" href="#">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <span class="c-button__label">Edit</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-panel__body">
+                                        <dl class="c-key-value c-key-value--horizontal c-key-value--short">
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Contract type</dt>
+                                                <dd class="c-key-value-item__value">Artistic contract, paid based on duration
+                                                </dd>
+                                            </div>
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Is your fiscal residence abroad</dt>
+                                                <dd class="c-key-value-item__value">No
+                                                </dd>
+                                            </div>
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Withholding rate</dt>
+                                                <dd class="c-key-value-item__value">11.11%
+                                                </dd>
+                                            </div>
+                                            <div class="c-key-value-item">
+                                                <dt class="c-key-value-item__key">Daily schedule</dt>
+                                                <dd class="c-key-value-item__value">Full time
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="u-spacer-top">
+                                <div class="c-toolbar">
+                                    <div class="c-toolbar__right">
+                                        <div class="c-toolbar__item">
+                                            <div class="c-button-toolbar">
+                                                <button class="c-button c-button--primary" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-save  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3 5C3 3.89543 3.89543 3 5 3H9H15H16.5858C17.1162 3 17.6249 3.21071 18 3.58579L20.7071 6.29289C20.8946 6.48043 21 6.73478 21 7V19C21 20.1046 20.1046 21 19 21H15H9H5C3.89543 21 3 20.1046 3 19V5ZM9 19H15V13H9V19ZM17 19H19V7.41421L17 5.41421V7C17 8.10457 16.1046 9 15 9H9C7.89543 9 7 8.10457 7 7V5H5V19H7V13C7 11.8954 7.89543 11 9 11H15C16.1046 11 17 11.8954 17 13V19ZM9 5V7H15V5H9Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <span class="c-button__label">Save</span>
+                                                    </span>
+                                                </button>
+                                                <button class="c-button c-button--secondary" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <span class="c-button__label">Edit</span>
+                                                    </span>
+                                                </button>
+                                                <button class="c-button c-button--secondary" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-bills  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 4.89543 2.89543 4 4 4H18C19.1046 4 20 4.89543 20 6V8C21.1046 8 22 8.89543 22 10V18C22 19.1046 21.1046 20 20 20H6C4.89543 20 4 19.1046 4 18V16C2.89543 16 2 15.1046 2 14V6ZM18 16C19.1046 16 20 15.1046 20 14V18H6V16H18ZM18 6L4 6V14H18V6ZM10 10C10 9.44772 10.4477 9 11 9C11.5523 9 12 9.44772 12 10C12 10.5523 11.5523 11 11 11C10.4477 11 10 10.5523 10 10ZM11 7C9.34315 7 8 8.34315 8 10C8 11.6569 9.34315 13 11 13C12.6569 13 14 11.6569 14 10C14 8.34315 12.6569 7 11 7Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <span class="c-button__label">Simulate salary</span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>

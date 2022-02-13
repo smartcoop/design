@@ -1457,14 +1457,14 @@ abbr[title] {
     .c-app-layout-inner__sidebar {
       border-bottom: 0.1rem solid #E5E5E5; } }
 
-.c-app-layout-inner__content {
+.c-app-layout-inner__main {
   width: 100%;
   height: 100%;
   flex: 1; }
   @media (max-width: 699px) {
-    .c-app-layout-inner__content .u-scroll-wrapper {
+    .c-app-layout-inner__main .u-scroll-wrapper {
       display: block; }
-    .c-app-layout-inner__content .u-scroll-wrapper-body {
+    .c-app-layout-inner__main .u-scroll-wrapper-body {
       height: auto; } }
 
 /* ==========================================================================
