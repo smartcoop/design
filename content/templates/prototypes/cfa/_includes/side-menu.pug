@@ -1,0 +1,10 @@
+-
+  function activeIf(pattern) {
+    return pathname.match(pattern) ? "c-side-menu__item--active" : "";
+  }
+
+ul.c-side-menu
+    li.c-side-menu__item(class=activeIf(/profile/))
+        a.c-side-menu__link(href="/prototypes/cfa/my-profile.html") My profile
+    li.c-side-menu__item(class=activeIf(/training/))
+        a.c-side-menu__link(href="/prototypes/cfa/my-trainings.html") My trainings
