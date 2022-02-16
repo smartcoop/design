@@ -1,0 +1,40 @@
+include /templates/_mixins/all
+
+.u-spacer-l
+    .o-card-grid.small-up-1.medium-up-1.large-up-1.extra-large-up-2
+        +c-training-card({
+                title: 'Créez votre site web en utilisant WordPress',
+                status: 'published',
+                skin: 'success',
+                sectors: ['Communication', 'Finances']
+        })
+        +c-training-card({
+                title: 'Subsides et sources alternatives de financement de projets créatifs...',
+                status: 'waiting for validation',
+                skin: 'pending',
+                sectors: ['Marketing', 'Finances']
+        })
+        +c-training-card({
+                title: 'Notions de base en comptabilité et création de votre plan financier',
+                status: 'rejected',
+                skin: 'danger',
+                sectors: ['Finances']
+        })
+        +c-training-card({
+                title: 'Diversifier les ressources associatives',
+                status: 'draft',
+                skin: 'default',
+                sectors: ['Communication', 'Finances']
+        })
+
+        - var n = 0;
+        while n < 9
+            +c-training-card({
+                    title: 'Training title',
+                    status: 'success',
+                    skin: 'success',
+                    sectors: ['Communication', 'Finances']
+            })
+            - n++
+
+
