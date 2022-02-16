@@ -1,0 +1,32 @@
+//-
+    Mixin Training Card - Create a training card
+    @param {Object} props
+    @param {string} title - the title of the training
+    @param {string} message - the banner message
+
+//- mixin c-training-card({ title, ref, month, days=[], client, amount, status })
+mixin c-training-card({ title, status, skin, sectors })
+    .c-card.o-flex.o-flex--justify-between
+
+        .c-card__body
+            h4.c-card__title= title
+            //- a.u-text-muted(href="#") Read more...
+            p.u-text-muted
+                each sector, index in sectors
+                    if (index + 1 == sectors.length)
+                        | #{sector}
+                    else
+                        |
+                        | #{sector},
+                        |
+            
+            
+        .c-card__actions
+            .c-button-toolbar
+                - var eyeIcon = "eye"
+                - if (skin != "success") eyeIcon = "eye-off"
+                +c-button({ layout: 'icon-only', icon: eyeIcon, skin: 'borderless' }) View
+                +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
+                +c-button({ layout: 'icon-only', icon: 'delete', skin: 'borderless' }) Delete
+            .u-spacer-s
+            +c-status-pill({skin: skin.toLowerCase() })= status
