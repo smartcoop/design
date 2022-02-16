@@ -1,0 +1,20 @@
+extends /templates/prototypes/_layouts/cfa-default
+
+block append pageVariables
+    - var moduleTitle = "Edit training"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar
+            include /templates/prototypes/cfa/_includes/side-menu
+
+        .c-app-layout-inner__main
+            .u-scroll-wrapper
+                .c-navbar.c-navbar--bordered-bottom
+                    .c-toolbar
+                        .c-toolbar__left
+                            .c-toolbar__item
+                                    h2.c-toolbar__title Edit training
+
+                .u-scroll-wrapper-body
+
