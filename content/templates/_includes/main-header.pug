@@ -1,101 +1,102 @@
 .c-navbar.c-navbar--scrollable.c-navbar--bordered-bottom
-    .c-toolbar
-        .c-toolbar__left
-            .c-toolbar__item
-                +c-brand({size: "xsmall"})
-            .c-toolbar__item
-                nav
-                    ul.c-pill-navigation
-                        -
-                            var navItems = [
-                                {
-                                    pathName: '#',
-                                    name: 'Activities'
-                                },
-                                {
-                                    pathName: '#',
-                                    name: 'Management',
-                                    subMenu: [
-                                        {
-                                            pathName: '#',
-                                            name: 'Nav item'
-                                        },
-                                        {
-                                            pathName: '#',
-                                            name: 'Nav item'
-                                        },
-                                        {
-                                            pathName: '#',
-                                            name: 'Nav item'
-                                        },
-                                    ]
-                                },
-                                {
-                                    pathName: '#',
-                                    name: 'Documents',
-                                    subMenu: [
-                                        {
-                                            pathName: '#',
-                                            name: 'Nav item'
-                                        },
-                                        {
-                                            pathName: '#',
-                                            name: 'Nav item'
-                                        },
-                                    ]
-                                },
-                                {
-                                    pathName: '#',
-                                    name: 'Members',
-                                },
-                                {
-                                    pathName: '#',
-                                    name: 'Archive',
-                                },
-                            ]
+    .c-navbar-scroll-wrapper
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    +c-brand({size: "xsmall"})
+                .c-toolbar__item
+                    nav
+                        ul.c-pill-navigation
+                            -
+                                var navItems = [
+                                    {
+                                        pathName: '#',
+                                        name: 'Activities'
+                                    },
+                                    {
+                                        pathName: '#',
+                                        name: 'Management',
+                                        subMenu: [
+                                            {
+                                                pathName: '#',
+                                                name: 'Nav item'
+                                            },
+                                            {
+                                                pathName: '#',
+                                                name: 'Nav item'
+                                            },
+                                            {
+                                                pathName: '#',
+                                                name: 'Nav item'
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        pathName: '#',
+                                        name: 'Documents',
+                                        subMenu: [
+                                            {
+                                                pathName: '#',
+                                                name: 'Nav item'
+                                            },
+                                            {
+                                                pathName: '#',
+                                                name: 'Nav item'
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        pathName: '#',
+                                        name: 'Members',
+                                    },
+                                    {
+                                        pathName: '#',
+                                        name: 'Archive',
+                                    },
+                                ]
 
-                        each item, index in navItems
-                            li.c-pill-navigation__item(class=item.subMenu? 'c-pill-navigation__item--has-child-menu' : '')
-                                if item.subMenu
-                                    button(type="button" data-menu="subMenu-"+index data-menu-samewidth="true") #{item.name}
-                                    ul.c-menu.c-menu--large(id="subMenu-"+index)
-                                        each subItem in item.subMenu
-                                            li.c-menu__item
-                                                a.c-menu__label(href=subItem.pathName) #{subItem.name}
-                                else
-                                    a(href=item.pathName) #{item.name}
+                            each item, index in navItems
+                                li.c-pill-navigation__item(class=item.subMenu? 'c-pill-navigation__item--has-child-menu' : '')
+                                    if item.subMenu
+                                        button(type="button" data-menu="subMenu-"+index data-menu-samewidth="true") #{item.name}
+                                        ul.c-menu.c-menu--large(id="subMenu-"+index)
+                                            each subItem in item.subMenu
+                                                li.c-menu__item
+                                                    a.c-menu__label(href=subItem.pathName) #{subItem.name}
+                                    else
+                                        a(href=item.pathName) #{item.name}
 
-        .c-toolbar__right
-            .c-toolbar__item
-                nav
-                    ul.c-pill-navigation
-                        li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu
-                            button(type="button" data-menu="helpMenu")
-                                +icon('circle-help')
-                                span.u-sr-accessible Help
+            .c-toolbar__right
+                .c-toolbar__item
+                    nav
+                        ul.c-pill-navigation
+                            li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu
+                                button(type="button" data-menu="helpMenu")
+                                    +icon('circle-help')
+                                    span.u-sr-accessible Help
 
-                            ul.c-menu.c-menu--large(id="helpMenu")
-                                li.c-menu__item
-                                    a.c-menu__label(href="#") About this page
-                                li.c-menu__divider(role="presentational")
-                                li.c-menu__item
-                                    a.c-menu__label(href="#")
-                                        span Documentation
-                                        +icon('external-link', 'o-svg-icon--small o-svg-icon--subtle')
-                                li.c-menu__item
-                                    a.c-menu__label(href="#") Report a bug
-            .c-toolbar__item
-                .c-input-with-icon
-                    +icon('search')
-                    input.c-input(type="text" placeholder="Search...")
+                                ul.c-menu.c-menu--large(id="helpMenu")
+                                    li.c-menu__item
+                                        a.c-menu__label(href="#") About this page
+                                    li.c-menu__divider(role="presentational")
+                                    li.c-menu__item
+                                        a.c-menu__label(href="#")
+                                            span Documentation
+                                            +icon('external-link', 'o-svg-icon--small o-svg-icon--subtle')
+                                    li.c-menu__item
+                                        a.c-menu__label(href="#") Report a bug
+                .c-toolbar__item
+                    .c-input-with-icon
+                        +icon('search')
+                        input.c-input(type="text" placeholder="Search...")
 
-            .c-toolbar__item
-                a.c-user-navigation(href="#" data-menu="userMenu")
-                    +c-avatar({img: '/images/avatars/1.jpg', alt: 'avatar'})
-                ul.c-menu.c-menu--large(id="userMenu")
-                    // @todo add correct user menu items
-                    li.c-menu__item
-                        a.c-menu__label(href="#") My profile
-                    li.c-menu__divider(role="presentational")
-                    li.c-menu__item
-                        a.c-menu__label(href="#") Sign out
+                .c-toolbar__item
+                    a.c-user-navigation(href="#" data-menu="userMenu")
+                        +c-avatar({img: '/images/avatars/1.jpg', alt: 'avatar'})
+                    ul.c-menu.c-menu--large(id="userMenu")
+                        // @todo add correct user menu items
+                        li.c-menu__item
+                            a.c-menu__label(href="#") My profile
+                        li.c-menu__divider(role="presentational")
+                        li.c-menu__item
+                            a.c-menu__label(href="#") Sign out

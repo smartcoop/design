@@ -26,22 +26,30 @@
   background: $color-gray-50;
 }
 
-.c-navbar--fixed {
+.c-navbar--fixed,
+.c-navbar--fixed-top,
+.c-navbar--fixed-bottom {
   position: sticky;
-  top: 0;
   left: 0;
   z-index: $g-c-global-navbar-z;
-  border-bottom: 1px solid $color-semantic-border;
+}
+
+.c-navbar--fixed {
+  top: 6.4rem;
+}
+
+.c-navbar--fixed-top {
+  top: 0;
+}
+
+.c-navbar--fixed-bottom {
+  bottom: 0;
 }
 
 .c-navbar--main {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 1.6rem;
-
-  .c-toolbar__right {
-    z-index: 61;
-  }
 
   @media (min-width: $g-bp3) {
     margin: 3.2rem 0;
@@ -50,10 +58,16 @@
 }
 
 .c-navbar--scrollable {
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: flex;
-  z-index: 61;
+  width: 100%;
+  padding: 0;
+
+  .c-navbar-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 2.4rem;
+    width: 100%;
+    display: flex;
+  }
 
   .c-toolbar__left,
   .c-toolbar__right {

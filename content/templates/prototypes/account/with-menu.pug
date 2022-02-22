@@ -1,4 +1,4 @@
-extends /templates/prototypes/_layouts/default
+extends /templates/prototypes/_layouts/default-alt
 
 block append pageVariables
     - var moduleTitle = "Dashboard"
@@ -9,62 +9,61 @@ block content
             include /templates/prototypes/partials/side-menu
 
         .c-app-layout-inner__content
-            .u-scroll-wrapper
-                .c-navbar.c-navbar--bordered-bottom
-                    .c-toolbar
-                        .c-toolbar__left
-                            .c-toolbar__item
-                                a.c-button.c-button--icon.c-button--borderless(href="#")
-                                    .c-button__content
-                                        +icon('arrow-left')
-                                        .u-sr-accessible Back
-                            .c-toolbar__item
-                                    h2.c-toolbar__title Toolbar title
+            .c-navbar.c-navbar--fixed.c-navbar--white.c-navbar--bordered-bottom
+                .c-toolbar
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            a.c-button.c-button--icon.c-button--borderless(href="#")
+                                .c-button__content
+                                    +icon('arrow-left')
+                                    .u-sr-accessible Back
+                        .c-toolbar__item
+                                h2.c-toolbar__title Toolbar title
 
-                        .c-toolbar__right
-                            .c-toolbar__item
-                                .c-button-toolbar
-                                    +c-button({ skin: 'primary' }) Save
+                    .c-toolbar__right
+                        .c-toolbar__item
+                            .c-button-toolbar
+                                +c-button({ skin: 'primary' }) Save
 
-                .u-scroll-wrapper-body
-                    .o-container.o-container--large
-                        .o-container-vertical
-                            .c-panel.u-spacer-bottom-l
-                                .c-panel__header
-                                    h2.c-panel__title Form grouping
-                                .c-panel__body
-                                    .o-form-group-layout.o-form-group-layout--standard
-                                        .o-form-group
-                                            label.o-form-group__label Add client
-                                            .c-blank-slate.c-blank-slate--bg-alt
-                                                p.u-text-muted.c-body-1 Please add a client for this quote.
-                                                .c-button-toolbar
-                                                    +c-button({icon: 'add'}) Add new client
-                                                    +c-button({icon: 'add'}) Add existing client
 
-                                        -
-                                            var radioOptions = [
-                                                {
-                                                    id: 0,
-                                                    name: 'Lorem ipsum dolor sit amet.'
-                                                },
-                                                {
-                                                    id: 1,
-                                                    name: 'Lorem ipsum dolor sit amet.'
-                                                },
-                                            ]
+            .o-container.o-container--large
+                .o-container-vertical
+                    .c-panel.u-spacer-bottom-l
+                        .c-panel__header
+                            h2.c-panel__title Form grouping
+                        .c-panel__body
+                            .o-form-group-layout.o-form-group-layout--standard
+                                .o-form-group
+                                    label.o-form-group__label Add client
+                                    .c-blank-slate.c-blank-slate--bg-alt
+                                        p.u-text-muted.c-body-1 Please add a client for this quote.
+                                        .c-button-toolbar
+                                            +c-button({icon: 'add'}) Add new client
+                                            +c-button({icon: 'add'}) Add existing client
 
-                                        +c-form-group({label: 'Radio'})
-                                            +c-radio-group({name: 'radio1', value: radioOptions, valueKey: 'id', key: 'name', checked: 0})
+                                -
+                                    var radioOptions = [
+                                        {
+                                            id: 0,
+                                            name: 'Lorem ipsum dolor sit amet.'
+                                        },
+                                        {
+                                            id: 1,
+                                            name: 'Lorem ipsum dolor sit amet.'
+                                        },
+                                    ]
 
-                            .c-panel.u-spacer-bottom-l
-                                .c-panel__header
-                                    h2.c-panel__title Form grouping
-                                .c-panel__body
-                                    .o-form-group-layout.o-form-group-layout--standard
-                                        +c-form-group({label: 'Input', id: 'input'})
-                                            +c-input({id: 'input'})
-                                        +c-form-group({label: 'Select', id: 'select', helperText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
-                                            +c-select({id: 'select', value: ['Choose an item','A','B', 'C']})
-                                        +c-form-group({label: 'Textarea', id: 'textarea', helperText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
-                                            +c-textarea({id: 'textarea'})
+                                +c-form-group({label: 'Radio'})
+                                    +c-radio-group({name: 'radio1', value: radioOptions, valueKey: 'id', key: 'name', checked: 0})
+
+                    .c-panel.u-spacer-bottom-l
+                        .c-panel__header
+                            h2.c-panel__title Form grouping
+                        .c-panel__body
+                            .o-form-group-layout.o-form-group-layout--standard
+                                +c-form-group({label: 'Input', id: 'input'})
+                                    +c-input({id: 'input'})
+                                +c-form-group({label: 'Select', id: 'select', helperText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                    +c-select({id: 'select', value: ['Choose an item','A','B', 'C']})
+                                +c-form-group({label: 'Textarea', id: 'textarea', helperText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+                                    +c-textarea({id: 'textarea'})

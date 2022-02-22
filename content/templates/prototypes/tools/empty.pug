@@ -1,4 +1,4 @@
-extends /templates/prototypes/_layouts/default
+extends /templates/prototypes/_layouts/default-alt
 
 block append pageVariables
     - var moduleTitle = "Dashboard"
@@ -9,7 +9,5 @@ block content
             include /templates/prototypes/tools/_includes/side-menu
 
         .c-app-layout-inner__content
-            .u-scroll-wrapper
-                .u-scroll-wrapper-body
-                    .o-container.o-container--large
-                        .o-container-vertical
+                .o-container.o-container--large
+                    .o-container-vertical

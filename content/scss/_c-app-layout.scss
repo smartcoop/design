@@ -10,16 +10,23 @@
   overflow: hidden;
 }
 
+/* Inner layout (for sidebars)
+   ========================================================================== */
+
 .c-app-layout-inner {
   height: 100%;
 
-  @media (max-width: ($g-bp2 - 1px)) {
-    // Make full screen scrollable on mobile, mobile navigation pattern needs to be revised in the future
-    overflow-y: auto;
-  }
+    @media (min-width: $g-bp2) {
+      display: flex;
+    }
+}
 
-  @media (min-width: $g-bp2) {
-    display: flex;
+.c-app-layout:not(.c-app-layout-alt) {
+  .c-app-layout-inner {
+    @media (max-width: ($g-bp2 - 1px)) {
+      // Make full screen scrollable on mobile, mobile navigation pattern needs to be revised in the future
+      overflow-y: auto;
+    }
   }
 }
 
@@ -51,5 +58,52 @@
     .u-scroll-wrapper-body {
       height: auto;
     }
+  }
+}
+
+
+/* Alternative app layout
+   --
+   With sticky header instead of flexbox column layout to keep
+   keyboard scrolling working. TBD if it can be merged in code above
+   ========================================================================== */
+
+.c-app-layout-alt {
+  flex: 1;
+  width: 100%;
+
+  .c-app-layout-alt__main {
+    height: auto;
+  }
+
+  .c-app-layout-inner {
+    align-items: flex-start;
+  }
+
+  .c-app-layout-inner__sidebar {
+    height: auto;
+
+    @media (min-width: $g-bp2) {
+      min-height: calc(100vh - 6.4rem);
+      position: sticky;
+      top: 6.4rem;
+      left: 0;
+    }
+  }
+
+  .c-app-layout-inner__content {
+    min-width: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    min-height: calc(100vh - 6.4rem);
+  }
+
+  .c-app-layout-inner__body,
+  .c-app-layout-alt__body {
+    flex: 1;
+    overflow: hidden;
   }
 }
