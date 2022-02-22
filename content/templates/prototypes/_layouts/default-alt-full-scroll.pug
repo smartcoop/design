@@ -1,0 +1,15 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var bodyClass = "c-body"
+    - var htmlClass = "u-maximize-width u-maximize-height"
+
+block body
+    .c-app-layout-alt.c-app-layout-alt--full-scroll
+        block global-banner
+
+        header
+            include /templates/prototypes/_includes/main-header
+
+        main.c-app-layout-alt__main
+            block content

@@ -107,3 +107,14 @@
     overflow: hidden;
   }
 }
+
+
+.c-app-layout-alt--full-scroll {
+  .c-app-layout-inner__sidebar {
+    position: static;
+  }
+
+  .c-app-layout-inner {
+    align-items: stretch;
+  }
+}
