@@ -49,6 +49,9 @@ $g-spacer-unit: 0.8rem !default;
 
 /* All sides
      ========================================================================== */
+.u-spacer-xs {
+  margin: $g-spacer-unit / 2 !important;
+}
 
 .u-spacer-s {
   margin: $g-spacer-unit !important;
@@ -69,9 +72,16 @@ $g-spacer-unit: 0.8rem !default;
 .u-spacer-padding-l {
   padding: $g-spacer-unit * 3 !important;
 }
+  
+.u-spacer-auto {
+  margin: auto;
+}
 
 /* Left side only
      ========================================================================== */
+.u-spacer-left-xs {
+  margin-left: $g-spacer-unit / 2 !important;
+}
 
 .u-spacer-left-s {
   margin-left: $g-spacer-unit !important;
@@ -96,8 +106,8 @@ $g-spacer-unit: 0.8rem !default;
 /* Right side only
      ========================================================================== */
 
-.u-spacer-right-t {
-  margin-right: $g-spacer-unit/2 !important;
+.u-spacer-right-xs {
+  margin-right: $g-spacer-unit / 2 !important;
 }
 
 .u-spacer-right-s {
@@ -150,6 +160,9 @@ $g-spacer-unit: 0.8rem !default;
 /* Bottom side only
      ========================================================================== */
 
+.u-spacer-bottom-xs {
+  margin-bottom: $g-spacer-unit / 2 !important;
+}
 .u-spacer-bottom-s {
   margin-bottom: $g-spacer-unit !important;
 }
