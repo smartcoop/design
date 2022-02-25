@@ -69,10 +69,6 @@ $g-spacer-unit: 0.8rem !default;
   margin: $g-spacer-unit * 4 !important;
 }
 
-.u-spacer-padding-l {
-  padding: $g-spacer-unit * 3 !important;
-}
-  
 .u-spacer-auto {
   margin: auto;
 }
@@ -181,6 +177,12 @@ $g-spacer-unit: 0.8rem !default;
 
 .u-spacer-bottom-auto {
   margin-bottom: auto !important;
+}
+
+/* All padding sides
+     ========================================================================== */
+.u-spacer-padding-l {
+  padding: $g-spacer-unit * 3 !important;
 }
 
 /* Top and Bottom padding only
