@@ -38,11 +38,13 @@ $c-table-row-selected-bg: $color-semantic-primary !default;
 }
 
 .c-table--styled {
+  border-collapse: separate;
 
   th {
     font-weight: 500;
     height: 5.6rem;
     border-bottom: 0.1rem solid $c-table-border-color;
+
     vertical-align: middle;
   }
 

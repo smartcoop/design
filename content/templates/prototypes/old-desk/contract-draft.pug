@@ -1,4 +1,4 @@
-extends /templates/_layouts/default
+extends /templates/prototypes/_layouts/default-alt
 
 block append pageVariables
     - var moduleTitle = "Contract"
@@ -9,8 +9,8 @@ block content
             include /templates/prototypes/old-desk/_includes/side-menu
 
         .c-app-layout-inner__content
-            .u-scroll-wrapper
-                .c-navbar.c-navbar--bordered-bottom
+            .c-navbar.c-navbar--white.c-navbar--scrollable.c-navbar--fixed.c-navbar--bordered-bottom
+                .c-navbar-scroll-wrapper
                     .c-toolbar
                         .c-toolbar__left
                             .c-toolbar__item
@@ -35,9 +35,9 @@ block content
                                 +c-button({icon: 'send', skin: 'primary'}) Finalize
 
 
-                .u-scroll-wrapper-body
-                    .u-spacer-xl
-                        .u-spacer-bottom-l
-                            +c-alert({title: 'Contract saved', message: 'This contract has been first saved on 2022-01-02. Last update on 2022-01-02.'})
 
-                        include /templates/prototypes/old-desk/_includes/contract-confirm
+            .u-spacer-xl
+                .u-spacer-bottom-l
+                    +c-alert({title: 'Contract saved', message: 'This contract has been first saved on 2022-01-02. Last update on 2022-01-02.'})
+
+                include /templates/prototypes/old-desk/_includes/contract-confirm

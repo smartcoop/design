@@ -1,11 +1,11 @@
-extends /templates/prototypes/_layouts/default
+extends /templates/prototypes/_layouts/default-alt
 
 block append pageVariables
     - var moduleTitle = "Portal"
 
 block content
-    .u-scroll-wrapper-body
-        .o-container.o-container--large
+    .c-app-layout-inner
+        .c-app-layout-inner__content
             .o-container-vertical
                 .o-container.o-container--medium
                     .u-padding-vertical-l
@@ -14,6 +14,7 @@ block content
                                 .c-content
                                     h4 Welcome
                                     p Blah.
+
                                     +c-button({layout: 'text-icon', icon: 'external-link'}) CTQ
                                     br
                                     br

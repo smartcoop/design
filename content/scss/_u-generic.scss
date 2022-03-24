@@ -50,6 +50,11 @@
   -webkit-overflow-scrolling: touch;
 }
 
+.u-scroll-horizontal {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
 .u-overflow-hidden,
 .u-kill-scroll {
   overflow: hidden !important;
@@ -111,22 +116,6 @@
   border-right: 1px solid $color-semantic-border;
 }
 
-// Sticky footer with flexbox
-// https://css-tricks.com/couple-takes-sticky-footer/#article-header-id-3
-
-.u-body-flex {
-  display: flex;
-  flex-direction: column;
-}
-
 .u-content-flex {
-  flex: 1 0 auto;
-}
-
-.u-footer-flex {
-  flex-shrink: 0;
-}
-
-.u-link-muted {
-  color: inherit;
+  flex: 1;
 }

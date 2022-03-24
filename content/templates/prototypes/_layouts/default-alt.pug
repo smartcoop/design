@@ -1,13 +1,16 @@
 extends /templates/_layouts/master
 
 block append pageVariables
-    - var bodyClass = "c-body"
+    - var bodyClass = "c-body c-body--compensate-header"
     - var htmlClass = "u-maximize-width u-maximize-height"
 
 block body
     .c-app-layout-alt
         block global-banner
+
         header.c-header
-            include /templates/prototypes/_includes/main-header-with-nav
+            include /templates/prototypes/_includes/main-header
+
         main.c-app-layout-alt__main
             block content
+
