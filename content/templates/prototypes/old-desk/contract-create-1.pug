@@ -17,101 +17,98 @@ block body
                                     .u-sr-accessible Back
                         .c-toolbar__item
                             h2.c-toolbar__title New contract
-                    .c-toolbar__left
-                        .c-toolbar__item
-                            nav.c-wizard
-                                ul
-                                    li
-                                        a.c-wizard__item.c-wizard--active(href="#")
-                                            .c-wizard__indicator 1
-                                            .c-wizard__label General info
-                                    li
-                                        a.c-wizard__item(href="contract-create-2.html")
-                                            .c-wizard__indicator 2
-                                            .c-wizard__label Location and dates
-                                    li
-                                        a.c-wizard__item(href="contract-create-3.html")
-                                            .c-wizard__indicator 3
-                                            .c-wizard__label Function and risks
-                                    li
-                                        a.c-wizard__item(href="contract-create-4.html")
-                                            .c-wizard__indicator 4
-                                            .c-wizard__label Contract type
-                                    li
-                                        a.c-wizard__item(href="contract-create-5.html")
-                                            .c-wizard__indicator 5
-                                            .c-wizard__label Confirm
+            .c-navbar.c-navbar--bordered-bottom
+                .c-toolbar__left
+                    .c-toolbar__item
+                        nav.c-wizard
+                            ul
+                                li
+                                    a.c-wizard__item.c-wizard--active(href="#")
+                                        .c-wizard__indicator 1
+                                        .c-wizard__label General info
+                                li
+                                    a.c-wizard__item(href="contract-create-2.html")
+                                        .c-wizard__indicator 2
+                                        .c-wizard__label Location and dates
+                                li
+                                    a.c-wizard__item(href="contract-create-3.html")
+                                        .c-wizard__indicator 3
+                                        .c-wizard__label Function and risks
+                                li
+                                    a.c-wizard__item(href="contract-create-4.html")
+                                        .c-wizard__indicator 4
+                                        .c-wizard__label Contract type
+                                li
+                                    a.c-wizard__item(href="contract-create-5.html")
+                                        .c-wizard__indicator 5
+                                        .c-wizard__label Confirm
                     .c-toolbar__right
                         .c-toolbar__item
                             .c-button-toolbar
-                                +c-button({icon: 'arrow-left'}) Back
-                                +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
+                                +c-button({href: 'contract-create-2.html', skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
 
             .u-scroll-wrapper-body
-                .o-container.o-container--large
-                    .o-container-vertical
-                        .o-container.o-container--medium
+                .o-container-vertical
+                    .o-container.o-container--large
+                        .c-panel
                             .o-form-group-layout.o-form-group-layout--horizontal
-                                .o-form-group
-                                    label.o-form-group__label(for="worker") Worker
-                                    .o-form-group__controls.o-form-group__controls--full-width
-                                        label Manfred
+                                .c-panel__body
+                                    dl.c-key-value.c-key-value--horizontal
+                                        +c-key-value({key: 'Worker'})
+                                            .c-avatar-and-text
+                                                +c-avatar({size: 'small'})
+                                                .c-avatar-and-text__text
+                                                    p Manfred
 
-                                hr.c-hr
+                                .c-panel__body
+                                    .o-form-group
+                                        label.o-form-group__label Work setting
+                                        .o-form-group__controls
+                                            .c-radio-group
+                                                .c-radio
+                                                    label
+                                                        input(type="radio" name="radio1")
+                                                        | Agreed
+                                                    p.c-form-help-text.u-spacer-left-xl The work is performed in agreed upon places and/or schedules
+                                                .c-radio
+                                                    label
+                                                        input(type="radio" name="radio1")
+                                                        | Free
+                                                    p.c-form-help-text.u-spacer-left-xl The work is mainly performed in places and at times freely chosen
 
-                                .o-form-group
-                                    label.o-form-group__label Work setting
-                                    .o-form-group__controls
-                                        .c-radio-group
-                                            .c-radio
-                                                label
-                                                    input(type="radio" name="radio1")
-                                                    | Agreed
-                                                p.c-form-help-text.u-spacer-left-xl The work is performed in agreed upon places and/or schedules
-                                            .c-radio
-                                                label
-                                                    input(type="radio" name="radio1")
-                                                    | Free
-                                                p.c-form-help-text.u-spacer-left-xl The work is mainly performed in places and at times freely chosen
+                                .c-panel__body
+                                    .o-form-group
+                                        label.o-form-group__label(for="yearOfCreation") Compensation budget
+                                        .o-form-group__controls.o-form-group__controls--full-width
+                                            .o-flex-bp2.o-flex--spaced-wide.o-flex--vertical-center
+                                                .c-input-group
+                                                    .c-input-group__input
+                                                        input.c-input(type="number" id="saleAmount")
+                                                    .c-input-group__append €
+                                                .c-checkbox
+                                                    label
+                                                        input(type="checkbox")
+                                                        | Unknown amount
+                                            p.c-form-help-text Enter a compensation budget or select "Unknown amount"
 
-                                hr.c-hr
+                                    .o-form-group
+                                        label.o-form-group__label(for="project") Project
+                                        .o-form-group__controls.o-form-group__controls--full-width
 
-                                .o-form-group
-                                    label.o-form-group__label(for="yearOfCreation") Compensation budget
-                                    .o-form-group__controls.o-form-group__controls--full-width
-                                        .o-flex-bp2.o-flex--spaced-wide.o-flex--vertical-center
-                                            .c-input-group
-                                                .c-input-group__input
-                                                    input.c-input(type="number" id="saleAmount")
-                                                .c-input-group__append €
-                                            .c-checkbox
-                                                label
-                                                    input(type="checkbox")
-                                                    | Unknown amount
-                                        p.c-form-help-text Enter a compensation budget or select "Unknown amount"
-
-                                .o-form-group
-                                    label.o-form-group__label(for="project") Project
-                                    .o-form-group__controls.o-form-group__controls--full-width
-
-                                        button.c-select-custom(aria-haspopup="listbox" data-menu="projects" data-menu-samewidth="true" aria-expanded="false")
-                                            .c-select-custom__value Select project
-                                        ul.c-menu.c-menu--select-custom(role="listbox" id="projects")
-                                            each item, index in [1,2,3]
-                                                li.c-menu__item(role="option")
-                                                    .c-menu__label Project #{index+1}
-                                            li.c-menu__divider
-                                            li.c-menu__item
-                                                .c-menu__label
-                                                    +icon('add')
-                                                    span Add new project
-                                        p.c-form-help-text Enter an existing project or create new one
-                                .o-form-group
-                                    label.o-form-group__label(for="description") Description
-                                    .o-form-group__controls.o-form-group__controls--full-width
-                                        +c-textarea({ id: 'description' })
-                                        p.c-form-help-text Describe your work (minimum 10 characters)
-
-                                .o-form-group
-                                    .u-spacer-left-auto
-                                        +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
+                                            button.c-select-custom(aria-haspopup="listbox" data-menu="projects" data-menu-samewidth="true" aria-expanded="false")
+                                                .c-select-custom__value Select project
+                                            ul.c-menu.c-menu--select-custom(role="listbox" id="projects")
+                                                each item, index in [1,2,3]
+                                                    li.c-menu__item(role="option")
+                                                        .c-menu__label Project #{index+1}
+                                                li.c-menu__divider
+                                                li.c-menu__item
+                                                    .c-menu__label
+                                                        +icon('add')
+                                                        span Add new project
+                                            p.c-form-help-text Enter an existing project or create new one
+                                    .o-form-group
+                                        label.o-form-group__label(for="description") Description
+                                        .o-form-group__controls.o-form-group__controls--full-width
+                                            +c-textarea({ id: 'description' })
+                                            p.c-form-help-text Describe your work (minimum 10 characters)

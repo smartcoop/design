@@ -17,6 +17,8 @@ block body
                                     .u-sr-accessible Back
                         .c-toolbar__item
                             h2.c-toolbar__title New contract
+            .c-navbar.c-navbar--bordered-bottom
+                .c-toolbar
                     .c-toolbar__left
                         .c-toolbar__item
                             nav.c-wizard
@@ -26,8 +28,8 @@ block body
                                             .c-wizard__indicator
                                             .c-wizard__label General info
                                     li
-                                        a.c-wizard__item(href="contract-create-2.html")
-                                            .c-wizard__indicator 2
+                                        a.c-wizard__item.c-wizard--complete(href="contract-create-2.html")
+                                            .c-wizard__indicator
                                             .c-wizard__label Location and dates
                                     li
                                         a.c-wizard__item.c-wizard--active(href="#")
@@ -44,46 +46,40 @@ block body
                     .c-toolbar__right
                         .c-toolbar__item
                             .c-button-toolbar
-                                +c-button({icon: 'arrow-left'}) Back
-                                +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
+                                +c-button({href: 'contract-create-2.html', icon: 'arrow-left'}) Back
+                                +c-button({href: 'contract-create-4.html', skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
 
             .u-scroll-wrapper-body
-                .o-container.o-container--large
-                    .o-container-vertical
-                        .o-container.o-container--medium
-                            .o-form-group-layout.o-form-group-layout--horizontal
-                                .o-form-group
-                                    label.o-form-group__label(for="worker") Role
-                                    .o-form-group__controls.o-form-group__controls--full-width
-                                        .o-flex.o-flex--vertical-center.u-maximize-width
-                                            span.u-spacer-right-s Art and craft creation > Entertainment arts > Dancer
-                                            +c-button({layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
-                                        p.c-form-help-text Your most frequently used role has been automatically selected. Click the edit button if you want to select a different role for this work.
+                .o-container-vertical
+                    .o-container.o-container--large
+                        .o-form-group-layout.o-form-group-layout--horizontal
+                            .c-panel
+                                .c-panel__body
+                                    .o-form-group
+                                        label.o-form-group__label(for="worker") Role
+                                        .o-form-group__controls.o-form-group__controls--full-width
+                                            .o-flex.o-flex--vertical-center.u-maximize-width
+                                                span.u-spacer-right-s Art and craft creation > Entertainment arts > Dancer
+                                                +c-button({layout: 'icon-only', icon: 'edit', skin: 'borderless' }) Edit
+                                            p.c-form-help-text Your most frequently used role has been automatically selected. Click the edit button if you want to select a different role for this work.
 
-                                .o-form-group
-                                    label.o-form-group__label(for="worker") Work type
-                                    .o-form-group__controls.o-form-group__controls--full-width
-                                        label Artistic
+                                    dl.c-key-value.c-key-value--horizontal
+                                        +c-key-value({key: 'Work type'}) Artistic
+                                .c-panel__body
+                                    .o-form-group
+                                        label.o-form-group__label Work risks
+                                        .o-form-group__controls
+                                            .c-radio-group.c-radio-group--inline
+                                                .c-radio
+                                                    label
+                                                        input(type="radio" name="radio1")
+                                                        | Without risks
+                                                .c-radio
+                                                    label
+                                                        input(type="radio" name="radio1")
+                                                        | With risks
+                                                p.c-form-help-text
+                                                    | For your safety and your colleagues safety, if your role involves risks, you have to select "With risks".
+                                                    |
+                                                    a.c-link(href="#") Learn more about risks
 
-                                hr.c-hr
-
-                                .o-form-group
-                                    label.o-form-group__label Work risks
-                                    .o-form-group__controls
-                                        .c-radio-group.c-radio-group--inline
-                                            .c-radio
-                                                label
-                                                    input(type="radio" name="radio1")
-                                                    | Without risks
-                                            .c-radio
-                                                label
-                                                    input(type="radio" name="radio1")
-                                                    | With risks
-                                            p.c-form-help-text
-                                                | For your safety and your colleagues safety, if your role involves risks, you have to select "With risks".
-                                                |
-                                                a.c-link(href="#") Learn more about risks
-
-                                .o-form-group
-                                    .u-spacer-left-auto
-                                        +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next

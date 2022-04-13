@@ -17,6 +17,9 @@ block body
                                     .u-sr-accessible Back
                         .c-toolbar__item
                             h2.c-toolbar__title New contract
+
+            .c-navbar.c-navbar--bordered-bottom
+                .c-toolbar
                     .c-toolbar__left
                         .c-toolbar__item
                             nav.c-wizard
@@ -44,35 +47,31 @@ block body
                     .c-toolbar__right
                         .c-toolbar__item
                             .c-button-toolbar
-                                +c-button({icon: 'arrow-left'}) Back
-                                +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
+                                +c-button({href: 'contract-create-1.html', icon: 'arrow-left'}) Back
+                                +c-button({href: 'contract-create-3.html', skin: 'primary', layout: 'text-icon', icon: 'arrow-right'}) Next
 
             .u-scroll-wrapper-body
-                .o-container.o-container--large
-                    .o-container-vertical
-                        .o-container.o-container--medium
-                            .u-spacer-bottom-l
-                                +c-alert({title: 'Declaration of work dates', message: 'Legal obligation: declare your work dates before you start to work.'})
+                .o-container-vertical
+                    .o-container.o-container--large
+                        .u-spacer-bottom-l
+                            +c-alert({title: 'Declaration of work dates', message: 'Legal obligation: declare your work dates before you start to work.'})
 
-                            .o-form-group-layout.o-form-group-layout--horizontal
-                                +c-form-group({label: 'Work country', id: 'domain', isFullWidth: true})
-                                    +c-select( { id: 'domain', value: ['Select a country', 'Belgium', 'France', 'Germany'], width: 'medium'})
-                                +c-form-group({label: 'Work date', id: 'registerFormfieldBirthdate', type: 'date'})
-                                    +c-input({id: 'registerFormfieldBirthdate', type: 'date', placeholder: 'dd/mm/yyyy', width: "medium" })
+                        .o-form-group-layout.o-form-group-layout--horizontal
+                            .c-panel
+                                .c-panel__body
+                                        +c-form-group({label: 'Work country', id: 'domain', isFullWidth: true})
+                                            +c-select( { id: 'domain', value: ['Select a country', 'Belgium', 'France', 'Germany'], width: 'medium'})
+                                        +c-form-group({label: 'Work date', id: 'registerFormfieldBirthdate', type: 'date'})
+                                            +c-input({id: 'registerFormfieldBirthdate', type: 'date', placeholder: 'dd/mm/yyyy', width: "medium" })
 
-                                hr.c-hr
-
-                                .o-form-group
-                                    .o-form-group__controls.o-form-group__controls--full-width
-                                        .c-checkbox
-                                            label
-                                                input(type="checkbox")
-                                                | By ticking this checkbox, you confirm the work has not started.
-                                        .c-checkbox
-                                            label
-                                                input(type="checkbox")
-                                                | By ticking this checkbox, COVID-19 stuff.
-
-                                .o-form-group
-                                    .u-spacer-left-auto
-                                        +c-button({skin: 'primary', layout: 'text-icon', icon: 'arrow-right'})(disabled) Next
+                                .c-panel__body
+                                        .o-form-group
+                                            .o-form-group__controls.o-form-group__controls--full-width
+                                                .c-checkbox
+                                                    label
+                                                        input(type="checkbox")
+                                                        | By ticking this checkbox, you confirm the work has not started.
+                                                .c-checkbox
+                                                    label
+                                                        input(type="checkbox")
+                                                        | By ticking this checkbox, COVID-19 stuff.
