@@ -159,6 +159,7 @@ $g-spacer-unit: 0.8rem !default;
 .u-spacer-bottom-xs {
   margin-bottom: $g-spacer-unit / 2 !important;
 }
+
 .u-spacer-bottom-s {
   margin-bottom: $g-spacer-unit !important;
 }
@@ -181,8 +182,29 @@ $g-spacer-unit: 0.8rem !default;
 
 /* All padding sides
      ========================================================================== */
-.u-spacer-padding-l {
+
+.u-padding-xs {
+  padding: $g-spacer-unit / 2 !important;
+}
+
+.u-padding-s {
+  padding: $g-spacer-unit !important;
+}
+
+.u-padding {
+  padding: $g-spacer-unit * 2 !important;
+}
+
+.u-padding-l {
   padding: $g-spacer-unit * 3 !important;
+}
+
+.u-padding-xl {
+  padding: $g-spacer-unit * 4 !important;
+}
+
+.u-spacer-auto {
+  padding: auto !important;
 }
 
 /* Top and Bottom padding only
