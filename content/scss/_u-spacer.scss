@@ -181,24 +181,8 @@ $g-spacer-unit: 0.8rem !default;
 
 /* All padding sides
      ========================================================================== */
-.u-padding-s {
-  padding-top: $g-spacer-unit !important;
-  padding-bottom: $g-spacer-unit !important;
-}
-
-.u-padding {
-  padding-top: $g-spacer-unit * 2 !important;
-  padding-bottom: $g-spacer-unit * 2 !important;
-}
-
-.u-padding-l {
-  padding-top: $g-spacer-unit * 3 !important;
-  padding-bottom: $g-spacer-unit * 3 !important;
-}
-
-.u-padding-xl {
-  padding-top: $g-spacer-unit * 4 !important;
-  padding-bottom: $g-spacer-unit * 4 !important;
+.u-spacer-padding-l {
+  padding: $g-spacer-unit * 3 !important;
 }
 
 /* Top and Bottom padding only
