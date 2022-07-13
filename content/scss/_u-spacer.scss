@@ -50,6 +50,10 @@ $g-spacer-unit: 0.8rem !default;
 /* All sides
      ========================================================================== */
 
+.u-spacer-xs {
+  margin: $g-spacer-unit / 2 !important;
+}
+
 .u-spacer-s {
   margin: $g-spacer-unit !important;
 }
@@ -66,12 +70,16 @@ $g-spacer-unit: 0.8rem !default;
   margin: $g-spacer-unit * 4 !important;
 }
 
-.u-spacer-padding-l {
-  padding: $g-spacer-unit * 3 !important;
+.u-spacer-auto {
+  margin: auto;
 }
 
 /* Left side only
      ========================================================================== */
+
+.u-spacer-left-xs {
+  margin-left: $g-spacer-unit / 2 !important;
+}
 
 .u-spacer-left-s {
   margin-left: $g-spacer-unit !important;
@@ -96,8 +104,8 @@ $g-spacer-unit: 0.8rem !default;
 /* Right side only
      ========================================================================== */
 
-.u-spacer-right-t {
-  margin-right: $g-spacer-unit/2 !important;
+.u-spacer-right-xs {
+  margin-right: $g-spacer-unit / 2 !important;
 }
 
 .u-spacer-right-s {
@@ -150,6 +158,10 @@ $g-spacer-unit: 0.8rem !default;
 /* Bottom side only
      ========================================================================== */
 
+.u-spacer-bottom-xs {
+  margin-bottom: $g-spacer-unit / 2 !important;
+}
+
 .u-spacer-bottom-s {
   margin-bottom: $g-spacer-unit !important;
 }
@@ -170,8 +182,40 @@ $g-spacer-unit: 0.8rem !default;
   margin-bottom: auto !important;
 }
 
+/* All padding sides
+     ========================================================================== */
+
+.u-padding-xs {
+  padding: $g-spacer-unit / 2 !important;
+}
+
+.u-padding-s {
+  padding: $g-spacer-unit !important;
+}
+
+.u-padding {
+  padding: $g-spacer-unit * 2 !important;
+}
+
+.u-padding-l {
+  padding: $g-spacer-unit * 3 !important;
+}
+
+.u-padding-xl {
+  padding: $g-spacer-unit * 4 !important;
+}
+
+.u-spacer-auto {
+  padding: auto !important;
+}
+
 /* Top and Bottom padding only
      ========================================================================== */
+
+.u-padding-vertical-xs {
+  padding-top: $g-spacer-unit / 2 !important;
+  padding-bottom: $g-spacer-unit / 2 !important;
+}
 
 .u-padding-vertical-s {
   padding-top: $g-spacer-unit !important;
@@ -196,6 +240,11 @@ $g-spacer-unit: 0.8rem !default;
 /* Left and Right padding only
      ========================================================================== */
 
+.u-padding-horizontal-xs {
+  padding-left: $g-spacer-unit / 2 !important;
+  padding-right: $g-spacer-unit / 2 !important;
+}
+
 .u-padding-horizontal-s {
   padding-left: $g-spacer-unit !important;
   padding-right: $g-spacer-unit !important;
@@ -219,6 +268,10 @@ $g-spacer-unit: 0.8rem !default;
 
 /* Bottom padding only
      ========================================================================== */
+
+.u-padding-bottom-xs {
+  padding-bottom: $g-spacer-unit / 2 !important;
+}
 
 .u-padding-bottom-s {
   padding-bottom: $g-spacer-unit !important;
