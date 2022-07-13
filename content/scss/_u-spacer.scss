@@ -210,6 +210,11 @@ $g-spacer-unit: 0.8rem !default;
 /* Top and Bottom padding only
      ========================================================================== */
 
+.u-padding-vertical-xs {
+  padding-top: $g-spacer-unit / 2 !important;
+  padding-bottom: $g-spacer-unit / 2 !important;
+}
+
 .u-padding-vertical-s {
   padding-top: $g-spacer-unit !important;
   padding-bottom: $g-spacer-unit !important;
@@ -232,6 +237,11 @@ $g-spacer-unit: 0.8rem !default;
 
 /* Left and Right padding only
      ========================================================================== */
+
+.u-padding-horizontal-xs {
+  padding-left: $g-spacer-unit / 2 !important;
+  padding-right: $g-spacer-unit / 2 !important;
+}
 
 .u-padding-horizontal-s {
   padding-left: $g-spacer-unit !important;
@@ -256,6 +266,10 @@ $g-spacer-unit: 0.8rem !default;
 
 /* Bottom padding only
      ========================================================================== */
+
+.u-padding-bottom-xs {
+  padding-bottom: $g-spacer-unit / 2 !important;
+}
 
 .u-padding-bottom-s {
   padding-bottom: $g-spacer-unit !important;
