@@ -4663,6 +4663,9 @@ textarea.c-input--h-large {
      ========================================================================== */
 /* All sides
      ========================================================================== */
+.u-spacer-xs {
+  margin: 0.4rem !important; }
+
 .u-spacer-s {
   margin: 0.8rem !important; }
 
@@ -4675,11 +4678,14 @@ textarea.c-input--h-large {
 .u-spacer-xl {
   margin: 3.2rem !important; }
 
-.u-spacer-padding-l {
-  padding: 2.4rem !important; }
+.u-spacer-auto {
+  margin: auto; }
 
 /* Left side only
      ========================================================================== */
+.u-spacer-left-xs {
+  margin-left: 0.4rem !important; }
+
 .u-spacer-left-s {
   margin-left: 0.8rem !important; }
 
@@ -4697,7 +4703,7 @@ textarea.c-input--h-large {
 
 /* Right side only
      ========================================================================== */
-.u-spacer-right-t {
+.u-spacer-right-xs {
   margin-right: 0.4rem !important; }
 
 .u-spacer-right-s {
@@ -4737,6 +4743,9 @@ textarea.c-input--h-large {
 
 /* Bottom side only
      ========================================================================== */
+.u-spacer-bottom-xs {
+  margin-bottom: 0.4rem !important; }
+
 .u-spacer-bottom-s {
   margin-bottom: 0.8rem !important; }
 
@@ -4752,8 +4761,32 @@ textarea.c-input--h-large {
 .u-spacer-bottom-auto {
   margin-bottom: auto !important; }
 
+/* All padding sides
+     ========================================================================== */
+.u-padding-xs {
+  padding: 0.4rem !important; }
+
+.u-padding-s {
+  padding: 0.8rem !important; }
+
+.u-padding {
+  padding: 1.6rem !important; }
+
+.u-padding-l {
+  padding: 2.4rem !important; }
+
+.u-padding-xl {
+  padding: 3.2rem !important; }
+
+.u-spacer-auto {
+  padding: auto !important; }
+
 /* Top and Bottom padding only
      ========================================================================== */
+.u-padding-vertical-xs {
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important; }
+
 .u-padding-vertical-s {
   padding-top: 0.8rem !important;
   padding-bottom: 0.8rem !important; }
@@ -4772,6 +4805,10 @@ textarea.c-input--h-large {
 
 /* Left and Right padding only
      ========================================================================== */
+.u-padding-horizontal-xs {
+  padding-left: 0.4rem !important;
+  padding-right: 0.4rem !important; }
+
 .u-padding-horizontal-s {
   padding-left: 0.8rem !important;
   padding-right: 0.8rem !important; }
@@ -4790,6 +4827,9 @@ textarea.c-input--h-large {
 
 /* Bottom padding only
      ========================================================================== */
+.u-padding-bottom-xs {
+  padding-bottom: 0.4rem !important; }
+
 .u-padding-bottom-s {
   padding-bottom: 0.8rem !important; }
 
