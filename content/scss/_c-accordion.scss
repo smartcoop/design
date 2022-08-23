@@ -22,7 +22,9 @@ $c-accordion-border: $color-gray-100 !default;
   }
 
   .c-accordion__item-title {
-    font-weight: 500;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-semantic-header-text;
   }
 
   .c-accordion__item-header .c-button {
@@ -33,7 +35,7 @@ $c-accordion-border: $color-gray-100 !default;
     margin-left: 4rem;
     max-height: 0px;
     overflow: hidden;
-    line-height: 1.6; 
+    line-height: 1.6;
     transition: max-height 200ms ease-in-out;
   }
 
