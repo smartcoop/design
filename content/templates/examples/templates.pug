@@ -1,0 +1,42 @@
+extends ../index
+
+block append pageVariables
+    - var moduleTitle = "Templates"
+
+block content
+
+    .o-container-vertical
+        h1.c-d-h1 Templates
+
+        .o-grid
+            .o-grid-col-bp3-3
+                .u-spacer-bottom
+                    .u-spacer-right-bp3
+                        ul.c-side-menu
+                            li.c-side-menu__item(class=pathname.match(/examples\/templates/) ? "c-side-menu__item--active" : "")
+                                a.c-side-menu__link(href="/examples/templates.html") Example templates
+                            li.c-side-menu__item(class=pathname.match(/prototypes\/index/) ? "c-side-menu__item--active" : "")
+                                a.c-side-menu__link(href="/prototypes/index.html") Prototypes
+                            li.c-side-menu__item(class=pathname.match(/examples\/design-tests/) ? "c-side-menu__item--active" : "")
+                                a.c-side-menu__link(href="/examples/design-tests.html") Design tests
+
+            .o-grid-col-bp3-9
+                block subContent
+                    .c-display
+
+                        h2 Example templates
+
+                        p You can reference the following example templates to see how to use the components in practice.
+
+                        ul
+                            li: a(href="/examples/template-examples/sign-in-form.html") Sign in form
+                            li: a(href="/examples/template-examples/register-form.html") Register form
+                            li: a(href="/examples/template-examples/contact-form.html") Contact form
+                            li: a(href="/examples/template-examples/horizontal-form.html") Horizontal form
+                            li: a(href="/examples/template-examples/app-datagrid.html") Application index page with datagrid
+                            li: a(href="/examples/template-examples/app-form.html") Application form
+                            li: a(href="/examples/template-examples/wizard.html") Application form with wizard
+                            li: a(href="/examples/template-examples/global-banner.html") Application form with global banner
+                            li: a(href="/examples/template-examples/app-side-menu.html") Application form with side menu
+                            li: a(href="/examples/template-examples/dialog.html") Dialog example
+                            li: a(href="/examples/template-examples/404.html") Application 404 error

@@ -61,20 +61,15 @@
 /* Colors
    ========================================================================== */
 
-.br-color-swatch-preview {
-  border-radius: 100%;
-  border: .1rem solid $color-gray-25;
+
+/* Typography
+   ========================================================================== */
+
+.br-typography-sample-name {
+  font-size: 1.4rem;
+  color: $color-semantic-muted-text;
 }
 
-.br-color-swatch-item {
-  width: 20rem;
-}
-
-#component-colors h4 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 0 0 1.6rem;
-}
 
 /* Icons
    ========================================================================== */
