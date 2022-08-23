@@ -1,0 +1,150 @@
+extends /templates/_layouts/master
+
+block body
+    .u-spacer-l
+        .o-container-vertical
+            .o-container.o-container--medium
+                .u-spacer-bottom
+                    +c-brand({size: "small"})
+                hr.c-hr
+                h1.c-h2 Register your account
+                .c-content
+                    p For optimal use of the Smart services, it is highly recommended to attend a Smart session: view our <a href="#">user manual</a>.
+                .u-spacer-bottom
+                    +c-alert({
+                        title: "Important",
+                        message: `<ul><li>You will receive your personal codes to access your “Smart account” (and to fill in your contracts) by email within 48 working hours of sending your registration documents. Do not hesitate to contact the nearest Smart office in case of emergency.</li><li>Remember to always declare your working days in advance. It is not allowed to backdate your services.</li>`,
+                    })
+
+                .o-form-group-layout.o-form-group-layout--standard
+                    .o-grid
+                        .o-grid-col-6
+                            +c-form-group({label: 'Name', id: 'registerFormName'})
+                                +c-input({id: 'registerFormName'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'First name', id: 'registerFormFirstName'})
+                                +c-input({id: 'registerFormFirstName'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Gender', id: 'registerFormGender'})
+                                +c-select({id: 'registerFormGender', value: ['Male','Female','X']})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Language', id: 'registerFormLanguage'})
+                                +c-select({id: 'registerFormLanguage', value: ['Français','Nederlands','Deutsch','Espanol']})
+                    hr.c-hr
+                    h3.c-h3 Official address
+                    .o-grid
+                        .o-grid-col-8
+                            +c-form-group({label: 'Street', id: 'registerFormAddressOfficalStreet'})
+                                +c-input({id: 'registerFormAddressOfficalStreet'})
+                        .o-grid-col-2
+                            +c-form-group({label: 'Number', id: 'registerFormAddressOfficalStreetNo'})
+                                +c-input({id: 'registerFormAddressOfficalStreetNo'})
+                        .o-grid-col-2
+                            +c-form-group({label: 'Addition', id: 'registerFormAddressOfficalStreetBuildingAddition'})
+                                +c-input({id: 'registerFormAddressOfficalStreetBuildingAddition'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Postal code', id: 'registerFormAddressOfficalZipCode'})
+                                +c-input({id: 'registerFormAddressOfficalZipCode'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Country', id: 'registerFormAddressOfficalCountry'})
+                                +c-select({id: 'registerFormAddressOfficalCountry', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode', selected: contentData.countries.popular[4].countryCode})
+                    hr.c-hr
+                    h3.c-h3 Mailing address
+                    .o-grid
+                        .o-grid-col-8
+                            +c-form-group({label: 'Street', id: 'registerFormAddressPostalStreet'})
+                                +c-input({id: 'registerFormAddressPostalStreet'})
+                        .o-grid-col-2
+                            +c-form-group({label: 'Number', id: 'registerFormAddressPostalStreetNo'})
+                                +c-input({id: 'registerFormAddressPostalStreetNo'})
+                        .o-grid-col-2
+                            +c-form-group({label: 'Addition', id: 'registerFormAddressPostalStreetBuildingAddition'})
+                                +c-input({id: 'registerFormAddressPostalStreetBuildingAddition'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Postal code', id: 'registerFormAddressPostalZipCode'})
+                                +c-input({id: 'registerFormAddressPostalZipCode'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Country', id: 'registerFormAddressPostalCountry'})
+                                +c-select({id: 'registerFormAddressPostalCountry', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode', selected: contentData.countries.popular[4].countryCode})
+                    hr.c-hr
+                    .o-grid
+                        .o-grid-col-6
+                            +c-form-group({label: 'Mobile number', id: 'registerFormCellPhoneNumber'})
+                                +c-input({id: 'registerFormCellPhoneNumber', type: 'tel'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Home phone number', id: 'registerFormHomePhoneNumber'})
+                                +c-input({id: 'registerFormHomePhoneNumber', type: 'tel'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Email', id: 'registerFormfieldEmail'})
+                                +c-input({id: 'registerFormfieldEmail', type: 'email' })
+                        .o-grid-col-6
+                            +c-form-group({label: 'Birthdate', id: 'registerFormfieldBirthdate', type: 'date'})
+                                +c-input({id: 'registerFormfieldBirthdate', type: 'date', placeholder: 'dd/mm/yyyy' })
+                        .o-grid-col-6
+                            +c-form-group({label: 'Native country', id: 'registerFormNativeCountry'})
+                                +c-select({id: 'registerFormNativeCountry', value: contentData.countries.all, key: 'countryName', valueKey: 'countryCode', selected: contentData.countries.popular[4].countryCode})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Marital status', id: 'registerFormfieldMaritalStatus'})
+                                +c-select({id: 'registerFormNativeCountry', value: ['Select', 'Single', 'Married', 'Officially divorced', 'Divorced in fact', 'Widowed']})
+                        .o-grid-col-6
+                            +c-form-group({label: 'City of birth', id: 'registerFormfieldCityOfBirth'})
+                                +c-input({id: 'registerFormfieldCityOfBirth'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'National register number', id: 'registerFormfieldNationalRegisterNo'})
+                                +c-input({id: 'registerFormfieldNationalRegisterNo'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Identity card number', id: 'registerFormfieldIdentityCardNumber'})
+                                +c-input({id: 'registerFormfieldIdentityCardNumber'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'IBAN number', id: 'registerFormfieldIbanNo'})
+                                +c-input({id: 'registerFormfieldIbanNo'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Professional withholding tax'})
+                                +c-input-group-after({id: 'registerFormfieldProfessionalWithholdingTax', icon: 'percent'})
+                        .o-grid-col-6
+                            +c-form-group({label: 'Main function', id: 'registerFormfieldMainFunction' })
+                                +c-input({id: 'registerFormfieldMainFunction'})
+                        .o-grid-col-6.o-grid-col-static
+                            +c-form-group({label: 'Other function', id: 'registerFormfieldOtherFunction' })
+                                +c-input({id: 'registerFormfieldOtherFunction'})
+                    hr.c-hr
+                    h3.c-h3 Documents
+                    .u-spacer-bottom-l
+                        p Please upload a copy of your identity card (front and back)
+
+                    +c-form-group({label: 'Front of identity card', id: 'registerFormFrontIdCard'})
+                        .c-file-upload
+                            input(type="file" id="registerFormFrontIdCard")
+                            .c-file-upload__content
+                                .u-spacer-bottom
+                                    +c-button({ icon: 'attachment'}) Upload document
+                                p Drag your file here or click the button to select a file
+
+                    +c-form-group({label: 'Back of identity card', id: 'registerFormBackIdCard'})
+                        .c-file-upload
+                            input(type="file" id="registerFormBackIdCard")
+                            .c-file-upload__content
+                                .u-spacer-bottom
+                                    +c-button({ icon: 'attachment'}) Upload document
+                                p Drag your file here or click the button to select a file
+
+                    +c-form-group({label: 'Please upload a copy of your bank card', id: 'registerFormBackIdCard'})
+                        .c-file-upload
+                            input(type="file" id="registerFormBankCard")
+                            .c-file-upload__content
+                                .u-spacer-bottom
+                                    +c-button({ icon: 'attachment'}) Upload document
+                                p Drag your file here or click the button to select a file
+                    hr.c-hr
+
+                    .o-form-group
+                        .c-checkbox
+                            label
+                                input(type="checkbox" checked)
+                                div
+                                    | I authorise Smart to transmit my data to third parties for professional purposes only.
+                                    a.o-flex-inline.o-flex--vertical-center(href="#")
+                                        .c-link.u-spacer-right-xs Read more here
+                                        +icon('external-link', 'o-svg-icon--small')
+                    .o-form-group
+                        input.c-button.c-button--primary.c-button--block(type="submit" value="Continue")

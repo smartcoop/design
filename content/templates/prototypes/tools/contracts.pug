@@ -1,13 +1,8 @@
-extends /templates/prototypes/_layouts/default
+extends /templates/_layouts/default
 
 block append pageVariables
-    - var moduleTitle = "Dashboard"
-    - var view = "grid"
+    - var moduleTitle = "Tools - Contracts"
+    - var view = "list"
 
 block content
-    .c-app-layout-inner
-        .c-app-layout-inner__sidebar
-            include /templates/prototypes/tools/_includes/side-menu
-
-        .c-app-layout-inner__main
-            include /templates/prototypes/tools/_includes/contracts
+    include /templates/prototypes/tools/_includes/contracts

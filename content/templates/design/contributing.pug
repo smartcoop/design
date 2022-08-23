@@ -1,0 +1,69 @@
+extends how-it-works
+
+block append pageVariables
+    - var moduleTitle = "How it works"
+
+block subContent
+
+    .c-display
+        h2 Contributing
+        h3 Making design improvement proposals
+        ul
+            li
+                | Create a new Figma file, and link it to the design system library.
+
+                figure.c-figure.c-figure--boxed
+                    img(src="/images/library-link@2x.png" srcset="/images/library-link.png 1x, /images/library-link@2x.png 2x" sizes="(min-width: 900px) 626w, 80vw")
+                    figcaption Currently, please enable the library and disable all other libraries for the best user experience.
+
+            li
+                | Propose your changes using a <a href="https://github.com/smartcoop/design/issues">GitHub issue</a>. Make sure you set file sharing options to “anyone with the link” to make sure everyone can see your proposal without having to gain specific viewer/editor access.
+
+                figure.c-figure.c-figure--boxed
+                    img(src="/images/sharing-link@2x.png" srcset="/images/sharing-link.png 1x, /images/sharing-link@2x.png 2x" sizes="(min-width: 900px) 626w, 80vw")
+
+            li To help make the link between the GitHub issue and your design file, reference the GitHub issue number with a # in the name of your design file.
+            li Make sure your design file does not contain any customer data.
+            li Describe your proposal to the design system.
+            li A reviewer will review your work. A discussion might ensue; when the work is approved, it will be merged into the greater whole*.
+
+        h3 How to deprecate a Figma component
+
+        ul
+            li Add [DEPRECATED] to the artboard name
+            li Give the layers a pink-ish background so people can see in their design files that the component has been deprecated
+            li Move it to the Deprecated components page
+            li In time, deprecated components should be cleaned up. The timing of this needs to be determined as the project gets continued.
+
+        h3 Releasing a new community version
+
+        p This is a guideline how to publish a new verson of the community file. This is intended for people who have access to the Smart Coop Figma account and are working on it as a designer.
+        p Go to the Smart Coop account and look in the Design System project.
+        ul
+          li Make a copy of the file
+            code Smart - Library + Screens 1.X.
+          li Put it in the Community published files project
+          li Clean out any private information from the file before publishing
+          li Change the title of the file from
+            code Smart - Library + Screens 1.X (Copy)
+            | to
+            code Smart - Library + Screens 1.X (Community edition)
+          li Also apply this text in the cover image - example:
+        p
+          img(src='https://user-images.githubusercontent.com/12690/143428225-26f39591-de23-474d-b14f-b093a2e0b7a2.png' alt='image')
+        ul
+          li
+              | Here is a text you can use:
+              pre.
+                  Components library file + screens for the Smart Design System.
+
+                  This file contains the source for all styles and components used in the design system as well as example screens.
+
+                  For more information, see our design system website at https://design.smart.coop/
+
+        ul
+          li Tags:
+            code smart
+            code letscoop
+            code design-system
+          li Creators: Smart (You have to be an admin on the SmartCoop account to publish)

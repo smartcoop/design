@@ -1,4 +1,4 @@
-extends /templates/development/getting-started
+extends /templates/examples/templates
 
 block append pageVariables
     - var moduleTitle = "Prototype pages"
@@ -17,8 +17,8 @@ block subContent
         p These pages try to imagine what Account could be.
 
         ul
-            li: a(href="/prototypes/account/user-homepage.html") User homepage
-            li: a(href="/prototypes/account/user-homepage-with-menu.html") User homepage (with menu)
+            li: a(href="/prototypes/account/user-homepage.html") User homepage (with nav. bar)
+            li: a(href="/prototypes/account/user-homepage-with-menu.html") User homepage (with side menu)
             li: a(href="/prototypes/account/super-user-homepage.html") Super User homepage
             li: a(href="/prototypes/account/with-menu.html") Super User homepage (with menu)
             li: a(href="/prototypes/account/as-member.html") Select a member
@@ -78,5 +78,17 @@ block subContent
         p These pages try to imagine what Tools could look like.
 
         ul
-            li: a(href="/prototypes/tools/empty.html") Empty
-            li: a(href="/prototypes/tools/contracts.html") Contracts
+            li: a(href="/prototypes/tools/contracts.html") Contracts (list)
+            li: a(href="/prototypes/tools/contracts-grid.html") Contracts (grid)
+            li: a(href="/prototypes/tools/contracts-empty.html") Contracts (empty)
+            li: a(href="/prototypes/tools/simulation.html") Compensation simulation
+            li: a(href="/prototypes/tools/simulation-empty.html") Compensation simulation (empty)
+            li: a(href="/prototypes/tools/simulation-error.html") Compensation simulation (error)
+            li: a(href="/prototypes/tools/simulation-loading.html") Compensation simulation (loading)
+            li: a(href="/prototypes/tools/simulation-enhanced.html") Compensation simulation (enhanced with htmx)
+            li: a(href="/prototypes/tools/simulation-enhanced-alpine.html") Compensation simulation (enhanced with alpine)
+
+        h3 Trainings
+        p Following pages are new designs for an application related to trainings and courses.
+        ul
+            li: a(href="/examples/trainings/administrative-profile.html") Administrative profile

@@ -8,13 +8,15 @@
     - samples.push({name: 'Display Intro', code: '<p class="c-display-intro">' + mediumContent + '</p>', extraClass: contentClass})
     - samples.push({name: 'Display Body 1', code: '<p class="c-display-body-1">' + mediumContent + '</p>', extraClass: contentClass})
     - samples.push({name: 'Display Body 2', code: '<p class="c-display-body-2">' + mediumContent + '</p>', extraClass: contentClass})
+    - samples.push({name: 'Unordered lists', code: '<ul><li>' + shortContent + '</li><li>' + shortContent + "</li><li>" + shortContent + "</li></ul>", extraClass: contentClass})
+    - samples.push({name: 'Ordered lists', code: '<ol><li>' + shortContent + '</li><li>' + shortContent + "</li><li>" + shortContent + "</li></ol>", extraClass: contentClass})
 
     .u-spacer-bottom-l.u-spacer-top-l
         table.c-table.c-table.c-styleguide-table-typography
             each sample in samples
                 tr
                     td.o-table-col-4
-                        = sample.name
+                        span.br-typography-sample-name= sample.name
                         br
                         span.br-typography-sample-size= sample.size
                     td.o-table-col-12
