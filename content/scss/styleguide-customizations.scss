@@ -142,3 +142,18 @@
   border: 0.1rem solid $color-gray-200;
   white-space: nowrap;
 }
+
+
+/* Container documentation styles
+   ========================================================================== */
+
+[id*="component-"][id*="-o-container"] .o-container {
+  background-color: $color-gray-500;
+  color: $color-white;
+  padding: 1.6rem;
+  text-align: center;
+}
+
+[id*="component-"][id*="-o-container"] .o-container-vertical {
+  background-color: $color-gray-100;
+}

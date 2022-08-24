@@ -7,7 +7,7 @@ block append pageVariables
 block body
 
     header#header
-        .o-container
+        .o-container.o-container--large
             .c-navbar.c-navbar--bordered-bottom.c-navbar--main
                 .c-toolbar
                     .c-toolbar__left
@@ -107,7 +107,7 @@ block body
                                         li.c-pill-navigation__item
                                             a(href="/changelog.html") Changelog
 
-    main.o-container.o-container--flex
+    main.o-container.o-container--large.o-container--flex
 
         block content
 
@@ -148,7 +148,7 @@ block body
 
     footer#footer
         .o-container-vertical
-            .o-container
+            .o-container.o-container--large
                 hr.c-hr
                 ul.c-bordered-list-horizontal.c-bordered-list-horizontal--muted
                      li: a(href="https://github.com/smartcoop/design")

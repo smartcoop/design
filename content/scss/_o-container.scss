@@ -14,8 +14,8 @@ $o-container-width-bp4: calc(100% - 6.4rem);
 
 $o-container-max-width-small: 56rem;
 $o-container-max-width-medium: 72rem;
-$o-container-max-width-large: 94rem;
-$o-container-max-width: 130rem;
+$o-container-max-width: 94rem;
+$o-container-max-width-large: 130rem;
 $o-container-side-gap: 1.2rem !default; // Should be 1/2 of grid col gap
 
 /* Object
@@ -23,8 +23,8 @@ $o-container-side-gap: 1.2rem !default; // Should be 1/2 of grid col gap
 
 .o-container {
   margin: 0 auto;
-  max-width: $o-container-max-width;
   width: $o-container-width-bp1;
+  max-width: $o-container-max-width;
   @media (min-width: $g-bp2) {
     width: $o-container-width-bp2;
   }
@@ -83,23 +83,23 @@ $o-container-side-gap: 1.2rem !default; // Should be 1/2 of grid col gap
 /* Block spacing
    ========================================================================== */
 
-.o-container-vertical--padding-mini {
-  padding: 1.2rem 0;
-}
-
-.o-container-vertical--padding-small {
-  padding: 2.4rem 0;
-}
-
 .o-container-vertical { // Standard padding
   padding: 3.6rem 0;
 }
 
-.o-container-vertical--padding-medium {
+.o-container-vertical--mini {
+  padding: 1.2rem 0;
+}
+
+.o-container-vertical--small {
+  padding: 2.4rem 0;
+}
+
+.o-container-vertical--medium {
    padding: 4.8rem 0;
 }
 
-.o-container-vertical--padding-large {
+.o-container-vertical--large {
    padding: 6.4rem 0;
 }
 
