@@ -98,18 +98,47 @@
   }
 
   ul, ol {
-    padding-left: 3rem;
+    position: relative;
+    list-style: none;
     margin: 1.5rem 0;
     ul, ol {
       margin: 0;
     }
+    li{
+      margin-bottom: .8rem;
+      position: relative;
+    }
   }
 
   ul {
-    list-style: disc;
+    padding-left: 3rem;
+    li{
+      &:before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: .8rem;
+        height: .8rem;
+        top: .8rem;
+        left: -2.4rem;
+        border-radius: 100%;
+        background-color: $base-color;
+      }
+    }
   }
 
   ol {
-    list-style: decimal;
+    padding-left: 1.2rem;
+    li{
+      counter-increment: li;
+      &:before{
+        content:  counter(li) ".  ";
+        position: relative;
+        display: inline-block;
+        width: 1.8rem;
+        left: -.8rem;
+        font-weight: bold;
+      }
+    }
   }
 }
