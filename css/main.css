@@ -879,21 +879,21 @@ abbr[title] {
 
 .c-h1, .c-content h1 {
   font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 2.4rem;
   margin: 0 0 3.2rem;
   line-height: 1.25; }
 
 .c-h2, .c-content h2 {
   font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 2.2rem;
   margin: 0 0 2.4rem;
   line-height: 1.3; }
 
 .c-h3, .c-content h3 {
   font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 2rem;
   margin: 0 0 1.6rem;
   line-height: 1.4; }
@@ -901,7 +901,7 @@ abbr[title] {
 .c-h4, .c-content h4 {
   font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 0.8rem; }
 
 .c-body-1 {
@@ -1290,7 +1290,9 @@ abbr[title] {
   cursor: pointer; }
 
 .c-accordion__item .c-accordion__item-title {
-  font-weight: 500; }
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000; }
 
 .c-accordion__item .c-accordion__item-header .c-button {
   margin-right: .4rem; }
@@ -3315,7 +3317,7 @@ textarea.c-input--h-large {
 
 .c-panel__title {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #000000; }
 
 /* When panels meet tables
@@ -4134,7 +4136,7 @@ textarea.c-input--h-large {
 /* Specific children
    ========================================================================== */
 .c-toolbar__title {
-  font-weight: 500;
+  font-weight: 600;
   color: #000000;
   font-size: 2.2rem; }
 
