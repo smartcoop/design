@@ -13,6 +13,9 @@
 
 header .c-navbar, header.c-navbar{
   border-top: 4px solid $color-red-600;
+  .c-toolbar{
+    height: 6rem;
+  }
 }
 
 .c-navbar--entry {
