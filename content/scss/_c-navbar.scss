@@ -8,6 +8,10 @@
   padding: 0 2.4rem;
   height: $g-bar-size-regular;
   width: 100%;
+  background-color: $color-white;
+}
+
+header .c-navbar, header.c-navbar{
   border-top: 4px solid $color-red-600;
 }
 
@@ -45,6 +49,9 @@
   padding-right: 0;
   margin-bottom: 1.6rem;
   border-top: none;
+  header &{
+    border-top: none;
+  }
 
   .c-toolbar__right {
     z-index: 61;
