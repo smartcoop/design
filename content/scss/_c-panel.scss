@@ -5,11 +5,12 @@
 /* Variables
    ========================================================================== */
 
-$c-panel-padding-all: 2.4rem !default;
+$c-panel-padding-all: 3.2rem !default;
+$c-panel-padding-all-mobile: 2.2rem !default;
 $c-panel-padding-horizontal: 2.4rem !default;
 $c-panel-padding-vertical: 2.4rem !default;
 $c-panel-border-color: $color-gray-150 !default;
-$c-panel-border-radius: 0.4rem !default;
+$c-panel-border-radius: 1rem !default;
 
 /* Standard component construction
    ========================================================================== */
@@ -17,7 +18,6 @@ $c-panel-border-radius: 0.4rem !default;
 .c-panel {
   background-color: #FFF;
   border-radius: $c-panel-border-radius;
-  border: 1px solid $c-panel-border-color;
 }
 
 .c-panel__body {
@@ -105,17 +105,20 @@ $c-panel-border-radius: 0.4rem !default;
 }
 
 @media (max-width: 800px) {
- .c-panel--grid {
-   .c-panel__body {
-     width: 100%;
-   }
-
-   .c-panel__body:nth-child(even) {
-    border-right: none;
+  .c-panel--grid {
+    .c-panel__body {
+      width: 100%;
+    }
+    
+    .c-panel__body{
+      padding: $c-panel-padding-all-mobile;
+      &:nth-child(even) {
+        border-right: none;
+      }
+    }
+    
+    .c-panel__body + .c-panel__body {
+      border-top: 1px solid $color-gray-150;
+    }
   }
-
-   .c-panel__body + .c-panel__body {
-     border-top: 1px solid $color-gray-150;
-   }
- }
 }
