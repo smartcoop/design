@@ -47,6 +47,8 @@ $c-button-icon-spacing-small: 0.4rem !default;
   justify-content: center;
   font-weight: 500;
   display: inline-flex;
+  border-radius: 1.8rem;
+
   .o-svg-icon {
     height: $c-button-line-height;
     width: $c-button-line-height;
