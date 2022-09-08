@@ -47,7 +47,7 @@ header .c-navbar, header.c-navbar{
   border-bottom: 1px solid $color-semantic-border;
 }
 
-.c-navbar--main { // DSW only !!
+.c-navbar--main { // DSW only ! TOFIX - Perf!!
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 1.6rem;

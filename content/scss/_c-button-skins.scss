@@ -54,7 +54,7 @@ $c-button-link-color: $color-red-600 !default;
    ========================================================================== */
 
 .c-button--secondary {
-  border: 1px solid $color-gray-500;
+  border: 2px solid $color-semantic-body-text;
   background: #fff;
   color: $color-semantic-body-text;
 
@@ -65,7 +65,8 @@ $c-button-link-color: $color-red-600 !default;
   &:hover,
   &.c-button--hover {
     background: $color-gray-50;
-    border-color: $color-gray-500;
+    border-color: $color-gray-900;
+    color: $color-gray-900;
   }
 
   &:active,
