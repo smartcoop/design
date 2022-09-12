@@ -258,12 +258,14 @@ $c-button-link-color: $color-red-600 !default;
 }
 
 .c-button--borderless {
-  color: $color-semantic-body-text;
+  color: $color-semantic-link;
+  font-weight: 600;
 
   &:hover,
   &.c-button--hover {
     color: $color-gray-900;
     background: transparent;
+    text-decoration: underline;
   }
 
   &:active,

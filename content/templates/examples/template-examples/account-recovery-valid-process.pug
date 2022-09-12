@@ -21,10 +21,19 @@ block body
                                     a.c-menu__label(href="/nt") Nederlands
     main.o-container-vertical
         .o-container.o-container--small
-            h3.c-h2.u-spacer-bottom-xl Demande de réinitialisation envoyée
+            h3.c-h2.u-spacer-bottom-xl Nom d'utilisateur ou mot de passe oublié ?
             .c-panel.u-shadow-50
                 .c-panel__body.u-padding-vertical-l
-                    .u-flex.u-flex--twins.u-spacer-bottom-l.u-spacer-top-s
-                        +c-badge({skin: 'success', size: 'large'})(class="u-spacer-xs u-m-l-0")
-                        h4.c-h4.u-spacer-left  <span class="u-text-success">Merci.</span> Vous allez recevoir un e-mail contenant les instructions pour réinitialiser votre mot de passe
-                    p.u-spacer-bottom Si vous n'avez pas reçu d'e-mail d'ici 5 minutes, vérifiez votre dossier de courriers indésirables ou demandez un <a href="/examples/template-examples/account-recovery.html">nouvel envoi</a>.
+                    form
+                        .o-form-group-layout.o-form-group-layout--standard
+                            p.u-spacer-top-s Veuillez introduire l'e-mail associé à votre compte et <b>nous vous enverrons un e-mail avec un lien</b> permettant de modifier votre mot de passe.
+                            .o-form-group.u-spacer-top-l
+                                label.o-form-group__label Votre adresse email
+                                .o-form-group__controls
+                                    input.c-input(type="email")
+                            .o-form-group.u-flex.u-flex--twins
+                                +c-button({skin: 'borderless', icon: 'chevron-left', href: '/examples/template-examples/sign-in-form.html'})(class="u-spacer-bottom") Retour à la page de connexion
+                                +c-button({skin: 'primary', isLoading: true, layout: 'text-icon', icon: 'chevron-right', href: '/examples/template-examples/account-recovery-valid-process.html'})(class="u-spacer-bottom") Envoyer
+                                
+    //- For demo only - Remove before flight
+    | <script>setTimeout(function(){ window.location.href = '/examples/template-examples/account-recovery-valid-process-done.html'; }, 3000);</script>

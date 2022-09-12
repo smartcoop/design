@@ -32,9 +32,5 @@ block body
                                 .o-form-group__controls
                                     input.c-input(type="email")
                             .o-form-group.u-flex.u-flex--twins
-                                a.c-button.c-button--primary(href="/examples/template-examples/account-recovery-valid-process.html")
-                                    .c-button__content
-                                        .c-button__label Envoyer
-                                a.c-button.c-button--borderless(href="/examples/template-examples/sign-in-form.html")
-                                    .c-button__content
-                                        .c-button__label Retour à la page de connexion
+                                +c-button({skin: 'borderless', icon: 'chevron-left', href: '/examples/template-examples/sign-in-form.html'})(class="u-spacer-bottom") Retour à la page de connexion
+                                +c-button({skin: 'primary', layout: 'text-icon', icon: 'chevron-right', href: '/examples/template-examples/account-recovery-valid-process.html'})(class="u-spacer-bottom") Envoyer

@@ -1,0 +1,31 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var bodyClass = 'u-bg-gray-25'
+
+block body
+
+    header.o-container-vertical.c-navbar.c-navbar--white.c-navbar--entry
+        .o-container.o-container--small
+            .o-grid
+                .o-grid-col-6
+                    +c-brand({size: "small"})
+                .o-grid-col-6
+                    ul.c-pill-navigation
+                        li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu.u-spacer-left-auto
+                            button(type="button" data-menu="lang-switch"  data-menu-samewidth="true") Français
+                            ul.c-menu.c-menu--large#lang-switch
+                                li.c-menu__item
+                                    a.c-menu__label(href="/fr") Français
+                                li.c-menu__item
+                                    a.c-menu__label(href="/nt") Nederlands
+    main.o-container-vertical
+        .o-container.o-container--small
+            h3.c-h2.u-spacer-bottom-xl Demande de réinitialisation envoyée
+            .c-panel.u-shadow-50
+                .c-panel__body.u-padding-vertical-l
+                    .u-flex.u-flex--twins.u-spacer-bottom-l.u-spacer-top-s
+                        +c-badge({skin: 'success', size: 'large'})(class="u-spacer-xs u-m-l-0")
+                        h4.c-h4.u-spacer-left  <span class="u-text-success">Merci.</span> Vous allez recevoir un e-mail contenant les instructions pour réinitialiser votre mot de passe
+                    p.u-spacer-bottom Si vous n'avez pas reçu d'e-mail d'ici 5 minutes, vérifiez votre dossier de courriers indésirables ou demandez un <a href="/examples/template-examples/account-recovery.html">nouvel envoi</a>.
+                    +c-button({skin: 'borderless', icon: 'chevron-left', href: '/examples/template-examples/sign-in-form.html'})(class="u-spacer-bottom") Retour à la page de connexion
