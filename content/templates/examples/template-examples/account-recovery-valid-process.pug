@@ -23,7 +23,7 @@ block body
         .o-container.o-container--small
             h3.c-h2.u-spacer-bottom-xl Nom d'utilisateur ou mot de passe oublié ?
             .c-panel.u-shadow-50
-                .c-panel__body.u-padding-vertical-l
+                .c-panel__body.u-padding-vertical-l.u-padding-bottom
                     form
                         .o-form-group-layout.o-form-group-layout--standard
                             p.u-spacer-top-s Veuillez introduire l'e-mail associé à votre compte et <b>nous vous enverrons un e-mail avec un lien</b> permettant de modifier votre mot de passe.
@@ -31,7 +31,7 @@ block body
                                 label.o-form-group__label Votre adresse email
                                 .o-form-group__controls
                                     input.c-input(type="email")
-                            .o-form-group.u-flex.u-flex--twins
+                            .o-form-group.u-flex.u-flex--twins.u-spacer-top-l
                                 +c-button({skin: 'borderless', icon: 'chevron-left', href: '/examples/template-examples/sign-in-form.html'})(class="u-spacer-bottom") Retour à la page de connexion
                                 +c-button({skin: 'primary', isLoading: true, layout: 'text-icon', icon: 'chevron-right', href: '/examples/template-examples/account-recovery-valid-process.html'})(class="u-spacer-bottom") Envoyer
                                 
