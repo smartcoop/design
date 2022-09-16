@@ -24,24 +24,24 @@ block body
             h3.c-h2.u-spacer-bottom-xl Connectez-vous
             .c-panel.u-shadow-50
                 .c-panel__body.u-padding-vertical-l.u-padding-bottom
-                    form
+                    form#login_form(onsubmit="alert('Test for eye toggle: you submitted the form');")
                         .o-form-group-layout.o-form-group-layout--standard
                             .o-form-group
                                 label.o-form-group__label Adresse email ou nom d'utilisateur
                                 .o-form-group__controls
-                                    input.c-input(type="email")
+                                    input.c-input(type="text")
 
                             .o-form-group
                                 label.o-form-group__label(for="passwordId") Mot de passe
                                 .o-form-group__controls
                                     .c-input-with-icon
                                         input.c-input#passwordId(type="password")
-                                        button.c-input-with-icon__toggle(data-password-toggle)
+                                        button.c-input-with-icon__toggle(data-password-toggle)(type="button")
                                             +icon('eye')
                                             +icon('eye-off')
 
                             .o-form-group.u-flex.u-flex--twins.u-spacer-top-l
-                                a.c-button.c-button--primary(href="#")
+                                button.c-button.c-button--primary(type="submit")
                                     .c-button__content
                                         .c-button__label Se connecter
                                 
@@ -50,9 +50,14 @@ block body
                                         .c-button__label.u-text-right Nom d'utilisateur ou mot de passe oublié ?
 
                             p.c-or
-                                span or
+                                span ou
 
                             .o-form-group
                                 a.c-button.c-button--borderless.c-button--block(href="#")
                                     .c-button__content
-                                        .c-button__label Register your account
+                                        .c-button__label S’enregistrer en tant que membre
+                            
+                            .o-form-group
+                                a.c-button.c-button--borderless.c-button--block(href="#")
+                                    .c-button__content
+                                        .c-button__label S’enregistrer en tant que donneur d’ordre
