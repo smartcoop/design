@@ -1,0 +1,110 @@
+/* ==========================================================================
+   c-table-of-content
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+$c-table-of-content-item-color: $color-semantic-header-text !default;
+$c-table-of-content-item-active-color: $color-semantic-header-text !default;
+$c-table-of-content-item-border-color: $color-gray-200 !default;
+$c-table-of-content-item-hover-border-color: $color-gray-200 !default;
+$c-table-of-content-active-border-width: 0.3rem !default;
+$c-table-of-content-padding-all: 3.2rem !default;
+$c-table-of-content-border-radius: 1rem !default;
+
+
+/* Component
+   ========================================================================== */
+
+.c-table-of-content {
+  background-color: $color-white;
+  padding: 0 $c-table-of-content-padding-all;
+  border-radius: $c-table-of-content-border-radius;
+  min-width: 45%;
+
+
+  > ol {
+
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding-left: 0;
+  
+  &::after{
+    background-color: $color-blue-50;
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+    border-radius: .4rem;
+  }
+ 
+  li {
+    counter-increment: li;
+    z-index: 11;
+    position: relative;
+      
+      &:before{
+        content:"";
+        display: none;
+      }
+      
+      a{
+        text-decoration: none;
+        font-weight: 400;
+        display: inline-block;
+        padding: .3rem 1.4rem .3rem 2rem;
+        &:not(.c-button){
+          border-bottom: 0;
+        }
+        &:before{
+          content:  counter(li) ".  ";
+          color: $color-gray-500;
+          position: relative;
+          display: inline-block;
+          width: 1.8rem;
+          left: -.8rem;
+          font-weight: 400;
+        }
+      }
+
+
+      & + li {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+}
+
+.c-table-of-content__item {
+
+
+  &:hover {
+      text-decoration: underline;
+  }
+
+  &:focus {
+    color: $c-table-of-content-item-active-color;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &[aria-selected="true"] {
+    color: $c-table-of-content-item-active-color;
+    position: relative; // makes box-shadow to be on top of the global border
+    font-weight: 600;
+    &:before{
+      font-weight: 600;
+      color: $c-table-of-content-item-active-color;
+    }
+
+  }
+}
