@@ -17,8 +17,6 @@ $c-table-of-content-padding-all: 3.2rem !default;
 $c-table-of-content-border-radius: 1rem !default;
 
 
-
-
 /* Component
    ========================================================================== */
 
@@ -38,7 +36,7 @@ $c-table-of-content-border-radius: 1rem !default;
     display: inline-block;
     position: relative;
     padding-left: 0;
-
+  
   
   .current-state{
     display: block;
@@ -78,6 +76,7 @@ $c-table-of-content-border-radius: 1rem !default;
         }
         &:before{
           content:  counter(li) ".  ";
+          color: $color-gray-500;
           position: relative;
           display: inline-block;
           color: $c-table-of-content-item-color-number;
@@ -87,43 +86,45 @@ $c-table-of-content-border-radius: 1rem !default;
         }
       }
 
+
       & + li {
         margin-top: 1rem;
       }
     }
+  }
 
     &.relativeWidth li a{
       width: auto;
     }
-  }
+}
 
   .c-table-of-content__nav__item {
-  
-  
-    &:hover {
+
+
+  &:hover {
         text-decoration: underline !important;
-    }
-  
-    &:focus {
+  }
+
+  &:focus {
       color: $c-table-of-content-item-color;
-    }
-  
-    &:focus:not(:focus-visible) {
-      outline: none;
-    }
-  
-    &[aria-selected="true"] {
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &[aria-selected="true"] {
       color: $c-table-of-content-item-color;
-      position: relative; // makes box-shadow to be on top of the global border
+    position: relative; // makes box-shadow to be on top of the global border
       font-weight: 500;
-      &:before{
+    &:before{
         font-weight: 500;
         color: $c-table-of-content-item-color;
       }
   
     }
   }
-}
+    }
 
 
 .c-table-of-content__content__item{
