@@ -340,8 +340,8 @@ html.br-prototype-nav-is-open {
   border: 1px solid $br-sample-border-color;
   margin: 1rem*$br-rem-multiplier 0;
   position: relative;
-  overflow-y: hidden;
-  overflow-x: auto;
+  // overflow-y: hidden;
+  // overflow-x: auto; // fix sticky
   resize: both;
 }
 

@@ -1,26 +1,27 @@
-div.u-flex.c-content 
-    nav.c-table-of-content
-        ol
+div.c-table-of-content.u-flex.c-content
+    nav.c-table-of-content__nav.fixed(role="navigation")(aria-label="Table of content")
+        ol.relativeWidth.sticky-element
             li
-                a.c-table-of-content__item(href='#') Objet du contrat
+                a.c-table-of-content__nav__item(href='#') Objet du contrat
             li
-                a.c-table-of-content__item(href='#') Définitions
+                a.c-table-of-content__nav__item(href='#') Définitions
             li
-                a.c-table-of-content__item(href='#') Le titulaire
+                a.c-table-of-content__nav__item(href='#') Le titulaire
             li
-                a.c-table-of-content__item(href='#') L'entreprise partagée
+                a.c-table-of-content__nav__item(href='#' aria-selected="true") L'entreprise partagée
             li
-                a.c-table-of-content__item(href='#') Création et vie d'une Activité
+                a.c-table-of-content__nav__item(href='#') Création et vie d'une Activité
             li
-                a.c-table-of-content__item(href='#' aria-selected="true") Droits de l'Entreprise partagée
+                a.c-table-of-content__nav__item(href='#') Droits de l'Entreprise partagée
             li
-                a.c-table-of-content__item(href='#') Droits du Titulaire
+                a.c-table-of-content__nav__item(href='#') Droits du Titulaire
             li
-                a.c-table-of-content__item(href='#') Exclusion
+                a.c-table-of-content__nav__item(href='#') Exclusion
             li
-                a.c-table-of-content__item(href='#') Droit et attribution de compétence
+                a.c-table-of-content__nav__item(href='#') Droit et attribution de compétence
             li
-                a.c-table-of-content__item(href='#') Conclusion
+                a.c-table-of-content__nav__item(href='#') Conclusion
+            .current-state(aria-hidden="true")
 
     div.c-table-of-content__content
         section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
@@ -34,6 +35,9 @@ div.u-flex.c-content
         section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 3
             h3.h3.u-spacer-bottom-xs  Le titulaire
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 4
@@ -55,6 +59,8 @@ div.u-flex.c-content
             p.c-body-2.u-spacer-bottom-s Article 8
             h3.h3.u-spacer-bottom-xs  Exclusion
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 9
             h3.h3.u-spacer-bottom-xs  Droit et attribution de compétence
@@ -70,76 +76,196 @@ script.
         class Toc {
             constructor(el) {
                 this.el = el;
-                this.table_of_content = this.el.querySelector("ol");
-                this.table_of_content__item = this.el.querySelectorAll("a.c-table-of-content__item");
-                this.toc__content = this.el.querySelectorAll(".c-table-of-content__section");
+                this.table_of_content__list = this.el.querySelector("ol");
+                this.table_of_content__items = this.el.querySelectorAll("a.c-table-of-content__nav__item");
+                this.current_state = this.el.querySelector(".current-state");
+                this.toc__content__list = document.querySelector(".c-table-of-content__content");
+                this.toc__content = document.querySelectorAll(".c-table-of-content__section");
+                this.relativeWidth = (this.table_of_content__list.classList.contains('relativeWidth')) ? true : false;
 
                 this.init();
             }
 
             init() {
-               
-            }
+                this.current_item = this.table_of_content__list.querySelector("[aria-selected]");
 
-            attachEvents(tab) {
-                // Handle clicking of tabs for mouse users
-                tab.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    let currentTab = this.tablist.querySelector("[aria-selected]");
-                    if (e.currentTarget !== currentTab) {
-                        this.switchTab(currentTab, e.currentTarget);
+                //- Set current item selected                 
+                let current_index = [...this.table_of_content__items].indexOf(this.current_item)
+                this.scrollTo(this.toc__content[current_index], 600);
+                this.toc__content[current_index].classList.add("active");
+                this.positionTopCurrentState(this.current_item);
+               
+               let itemsProcessed = 0;
+                this.table_of_content__items.forEach((table_of_content__item, i) => {
+                // Attach events to the table_of_content__items if the table_of_content__item have toc__content. Otherwise they just act as links
+                    if (this.toc__content.length) this.attachEvents(table_of_content__item, i);
+
+                    table_of_content__item.setAttribute('data-id', this.convertToSlug(table_of_content__item.textContent));
+                    this.toc__content[i].setAttribute('id', this.convertToSlug(table_of_content__item.textContent));
+
+                    itemsProcessed++;
+                    if(itemsProcessed === this.table_of_content__items.length) {
+                        this.callback(current_index);
                     }
                 });
 
-                // Handle keydown events for keyboard users
-                tab.addEventListener("keydown", (e) => {
-                // Get the index of the current tab in the tabs node list
-                let index = [...this.tabs].indexOf(e.currentTarget);
+                
+            }
 
-                // Work out which key the user is pressing and
-                // Calculate the new tab's index where appropriate
-                let dir =
-                    e.which === 37
-                    ? index - 1
-                    : e.which === 39
-                    ? index + 1
-                    : e.which === 40
-                    ? "down"
-                    : null;
-
-                if (dir !== null) {
-                    e.preventDefault();
-                    // If the down key is pressed, move focus to the open panel,
-                    // otherwise switch to the adjacent tab
-                    dir === "down"
-                    ? this.panels[index].focus()
-                    : this.tabs[dir]
-                    ? this.switchTab(e.currentTarget, this.tabs[dir])
-                    : void 0;
+            callback (current_index) { 
+                //- Get # Hashtag from url (ex: lentreprise-partage)
+                let hash = window.top.location.hash.substr(1);
+                if(hash){
+                    let current_hash_item = this.toc__content__list.querySelector("#" + hash);
+                    let current_hash_nav_item = document.querySelector('[data-id="' + hash + '"]');
+                    this.table_of_content__items[current_index].removeAttribute("aria-selected");
+                    this.toc__content[current_index].classList.remove("active");
+                    
+                    // Go to current #
+                    this.scrollTo(current_hash_item, 600);
+                    current_hash_item.classList.add("active");
+                    current_hash_nav_item.setAttribute("aria-selected", "true");
+                    this.positionTopCurrentState(current_hash_nav_item);
                 }
+             }
+            
+
+            convertToSlug(str) {
+                str = str.replace(/^\s+|\s+$/g, ''); // trim
+                str = str.toLowerCase();
+            
+                // remove accents, swap ñ for n, etc
+                var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+                var to   = "aaaaeeeeiiiioooouuuunc------";
+                for (var i=0, l=from.length ; i<l ; i++) {
+                    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+                }
+
+                str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                    .replace(/-+/g, '-'); // collapse dashes
+
+                return str;
+            }
+
+            positionTopCurrentState(child) {
+                let table_of_content_Y = this.table_of_content__list.getBoundingClientRect().top
+                let relativePosTop =  child.getBoundingClientRect().top  - table_of_content_Y;
+                this.current_state.style.top = relativePosTop + 'px';
+                if(this.relativeWidth){
+                    let childWidth =  child.offsetWidth;
+                    this.current_state.style.width = childWidth + 'px';
+                }
+            }
+            
+            attachEvents(table_of_content__item) {
+                // Handle clicking of tabs for mouse users
+                table_of_content__item.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    let currentToc = this.table_of_content__list.querySelector("[aria-selected]");
+
+                    if (e.currentTarget !== currentToc) {
+                        this.switchToc(currentToc, e.currentTarget);
+                    }
+                });
+
+                window.addEventListener('hashchange', () => {
+                    this.init();
+                });
+
+                // Handle keydown events for keyboard users
+                //- tab.addEventListener("keydown", (e) => {
+                //- // Get the index of the current tab in the tabs node list
+                //- let index = [...this.tabs].indexOf(e.currentTarget);
+
+                //- // Work out which key the user is pressing and
+                //- // Calculate the new tab's index where appropriate
+                //- let dir =
+                //-     e.which === 37
+                //-     ? index - 1
+                //-     : e.which === 39
+                //-     ? index + 1
+                //-     : e.which === 40
+                //-     ? "down"
+                //-     : null;
+
+                //- if (dir !== null) {
+                //-     e.preventDefault();
+                //-     // If the down key is pressed, move focus to the open panel,
+                //-     // otherwise switch to the adjacent tab
+                //-     dir === "down"
+                //-     ? this.panels[index].focus()
+                //-     : this.tabs[dir]
+                //-     ? this.switchToc(e.currentTarget, this.tabs[dir])
+                //-     : void 0;
+                //- }
+                //- });
+            }
+
+            switchToc(oldToc, newToc) {
+                newToc.focus();
+
+                this.positionTopCurrentState(newToc);
+                // Set the selected state
+                newToc.setAttribute("aria-selected", "true");
+                oldToc.removeAttribute("aria-selected");
+                // tab panels to show and hide
+                let index = [...this.table_of_content__items].indexOf(newToc);
+                let oldIndex = [...this.table_of_content__items].indexOf(oldToc);
+                if (this.toc__content[oldIndex]) this.toc__content[oldIndex].classList.remove("active");
+                if (this.toc__content[index]) this.toc__content[index].classList.add("active");
+                this.scrollTo(this.toc__content[index], 600);
+            }
+
+            scrollTo(element, duration) {
+                let elementPosition = element.offsetTop;
+                let parentPosition = this.el.getBoundingClientRect().top + window.scrollY;
+                let offsetPosition = (elementPosition + parentPosition) - 60;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
                 });
             }
 
-            switchTab(oldTab, newTab) {
-                newTab.focus();
-                // Make the active tab focusable by the user (Tab key)
-                newTab.removeAttribute("tabindex");
-                // Set the selected state
-                newTab.setAttribute("aria-selected", "true");
-                oldTab.removeAttribute("aria-selected");
-                oldTab.setAttribute("tabindex", "-1");
-                // Get the indices of the new and old tabs to find the correct
-                // tab panels to show and hide
-                let index = [...this.tabs].indexOf(newTab);
-                let oldIndex = [...this.tabs].indexOf(oldTab);
-                if (this.panels[oldIndex]) this.panels[oldIndex].hidden = true;
-                if (this.panels[index]) this.panels[index].hidden = false;
-            }
-            }
+
+            //- scrollTo(element, to, duration) {
+            //-     if (duration <= 0) return;
+            //-     var difference = to - element.scrollTop;
+            //-     var perTick = difference / duration * 10;
+
+            //-     console.log(difference);
+
+            //-     setTimeout(function() {
+            //-         element.scrollTop = element.scrollTop + perTick;
+            //-         if (element.scrollTop === to) return;
+            //-         scrollTo(element, to, duration - 10);
+            //-     }, 10);
+            //- }
+
+            //- smoothScrollTo(destination, parent, time) {
+            //-     let scroll = init();
+            //-     requestAnimationFrame(shouldScroll);
+
+            //-     function init() {
+            //-         let start = parent.scrollTop;
+            //-         let ticks = time || 30;
+            //-         let i = 0;
+            //-         let positionY = () => (destination - start) * i / ticks + start;
+            //-         let isFinished = () => i++ >= ticks;
+            //-         return { positionY, isFinished };
+            //-     }
+
+            //-     function shouldScroll() {
+            //-         if (scroll.isFinished()) return;
+            //-         parent.scrollTop = scroll.positionY();
+            //-         requestAnimationFrame(shouldScroll);
+            //-     }
+            //- }
+        }
         
         const toclists = document.querySelectorAll(".c-table-of-content");
 
         if (toclists.length) {
-        [...toclists].map((toclist) => new Toc(toclists));
+            [...toclists].map((toclist) => new Toc(toclist));
         }
     });

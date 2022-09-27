@@ -18,6 +18,7 @@ $g-base-background: #FFF !default;
 }
 
 html {
+  scroll-behavior: smooth; 
   font-size: 54.16%; // 13px
   @media (min-width: $g-bp3) {
     font-size: 58.33%; // 14px
