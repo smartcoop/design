@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="u-maximize-height" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Smart Design System
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="u-bg-gray-25">
+    <header class="o-container-vertical c-navbar c-navbar--white c-navbar--entry">
+        <div class="o-container o-container--small">
+            <div class="o-grid">
+                <div class="o-grid-col-6">
+                    <div class="c-brand c-brand--small">
+                        <a href="/">
+                            <img src="/images/logo.svg" alt="Smart" />
+                        </a>
+                    </div>
+                </div>
+                <div class="o-grid-col-6">
+                    <ul class="c-pill-navigation">
+                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu u-spacer-left-auto">
+                            <button type="button" data-menu="lang-switch" data-menu-samewidth="true">Français</button>
+                            <ul class="c-menu c-menu--large" id="lang-switch">
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="/fr">Français</a>
+                                </li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="/nt">Nederlands</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="o-container-vertical">
+        <div class="o-container o-container--small">
+            <h3 class="c-h2 u-spacer-bottom-xl">Demande de réinitialisation envoyée</h3>
+            <div class="c-panel u-shadow-50">
+                <div class="c-panel__body u-padding-vertical-l u-padding-bottom">
+                    <div class="u-flex u-flex--twins u-spacer-bottom-l u-spacer-top-s">
+                        <div class="c-badge c-badge--success c-badge--large u-spacer-xs u-m-l-0">
+                            <div class="o-svg-icon o-svg-icon-check  ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6644 5.25259C21.0772 5.61951 21.1143 6.25158 20.7474 6.66436L10.0808 18.6644C9.89099 18.8779 9.61898 19 9.33334 19C9.04771 19 8.7757 18.8779 8.58593 18.6644L3.2526 12.6644C2.88568 12.2516 2.92286 11.6195 3.33565 11.2526C3.74843 10.8857 4.3805 10.9229 4.74742 11.3356L9.33334 16.4948L19.2526 5.33564C19.6195 4.92285 20.2516 4.88567 20.6644 5.25259Z" fill="#595959" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="c-h4 u-spacer-left">
+                            <span class="u-text-success">Merci.</span> Vous allez recevoir un e-mail contenant les instructions pour réinitialiser votre mot de passe
+                        </h4>
+                    </div>
+                    <p class="u-spacer-bottom">Si vous n'avez pas reçu d'e-mail d'ici 5 minutes, vérifiez votre dossier de courriers indésirables ou demandez un <a href="/examples/template-examples/account-recovery.html">nouvel envoi</a>.</p>
+                    <a class="c-button c-button--borderless u-spacer-bottom" href="/examples/template-examples/sign-in-form.html">
+                        <span class="c-button__content">
+                            <div class="o-svg-icon o-svg-icon-chevron-left  ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
+                                </svg>
+                            </div>
+                            <span class="c-button__label">Retour à la page de connexion</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>

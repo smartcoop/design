@@ -15,34 +15,53 @@
 </head>
 
 <body class="u-bg-gray-25">
-    <header class="o-container-vertical">
-        <div class="o-container">
-            <div class="c-brand c-brand--small">
-                <a href="/">
-                    <img src="/images/logo.svg" alt="Smart" />
-                </a>
+    <header class="o-container-vertical c-navbar c-navbar--white c-navbar--entry">
+        <div class="o-container o-container--small">
+            <div class="o-grid">
+                <div class="o-grid-col-6">
+                    <div class="c-brand c-brand--small">
+                        <a href="/">
+                            <img src="/images/logo.svg" alt="Smart" />
+                        </a>
+                    </div>
+                </div>
+                <div class="o-grid-col-6">
+                    <ul class="c-pill-navigation">
+                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu u-spacer-left-auto">
+                            <button type="button" data-menu="lang-switch" data-menu-samewidth="true">Français</button>
+                            <ul class="c-menu c-menu--large" id="lang-switch">
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="/fr">Français</a>
+                                </li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="/nt">Nederlands</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
     <main class="o-container-vertical">
         <div class="o-container o-container--small">
-            <div class="c-panel">
-                <div class="c-panel__body">
-                    <form>
-                        <h3 class="c-h2">Sign in</h3>
+            <h3 class="c-h2 u-spacer-bottom-xl">Connectez-vous</h3>
+            <div class="c-panel u-shadow-50">
+                <div class="c-panel__body u-padding-vertical-l u-padding-bottom">
+                    <form id="login_form" onsubmit="alert('Test for eye toggle: you submitted the form');">
                         <div class="o-form-group-layout o-form-group-layout--standard">
                             <div class="o-form-group">
-                                <label class="o-form-group__label">Email</label>
+                                <label class="o-form-group__label">Adresse email ou nom d'utilisateur</label>
                                 <div class="o-form-group__controls">
-                                    <input class="c-input" type="email">
+                                    <input class="c-input" type="text">
                                 </div>
                             </div>
                             <div class="o-form-group">
-                                <label class="o-form-group__label" for="passwordId">Password</label>
+                                <label class="o-form-group__label" for="passwordId">Mot de passe</label>
                                 <div class="o-form-group__controls">
                                     <div class="c-input-with-icon">
                                         <input class="c-input" id="passwordId" type="password">
-                                        <button class="c-input-with-icon__toggle" data-password-toggle>
+                                        <button class="c-input-with-icon__toggle" data-password-toggle type="button">
                                             <div class="o-svg-icon o-svg-icon-eye  ">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z" fill="#7A7A7A" />
@@ -68,60 +87,41 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="o-form-group">
-                                <a class="c-button c-button--primary c-button--block" href="#">
+                            <div class="o-form-group u-flex u-flex--twins u-spacer-top-l">
+                                <button class="c-button c-button--primary" type="submit">
                                     <div class="c-button__content">
-                                        <div class="c-button__label">Sign in</div>
+                                        <div class="c-button__label">Se connecter</div>
+                                    </div>
+                                </button>
+                                <a class="c-button c-button--borderless" href="/examples/template-examples/account-recovery.html">
+                                    <div class="c-button__content">
+                                        <div class="c-button__label u-text-right">Nom d'utilisateur ou mot de passe oublié ?</div>
                                     </div>
                                 </a>
                             </div>
                             <p class="c-or">
-                                <span>or</span>
+                                <span>ou</span>
                             </p>
                             <div class="o-form-group">
-                                <a class="c-button c-button--secondary c-button--block" href="#">
+                                <a class="c-button c-button--borderless c-button--block" href="#">
                                     <div class="c-button__content">
-                                        <div class="c-button__label">Register your account</div>
+                                        <div class="c-button__label">S’enregistrer en tant que membre</div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="o-form-group u-ta-center"></div>
+                            <div class="o-form-group">
+                                <a class="c-button c-button--borderless c-button--block" href="#">
+                                    <div class="c-button__content">
+                                        <div class="c-button__label">S’enregistrer en tant que donneur d’ordre</div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="c-content u-text-center u-spacer-top-l">
-                <a class="u-text-muted" href="#">Forgot password</a>
-            </div>
         </div>
     </main>
-    <footer id="footer">
-        <div class="o-container-vertical">
-            <div class="o-container">
-                <hr class="c-hr">
-                <div class="c-toolbar c-toolbar--auto">
-                    <div class="c-toolbar__left">
-                        <div class="c-toolbar__item">
-                            <div class="o-flex o-flex--vertical-center">
-                                <span class="u-spacer-right-s">Don't have an account yet?</span>
-                                <a class="u-text-muted" href="">Sign up</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-toolbar__right">
-                        <ul class="c-bordered-list-horizontal c-bordered-list-horizontal--muted">
-                            <li>
-                                <a class="u-text-muted" href="#">Footer link</a>
-                            </li>
-                            <li>
-                                <a class="u-text-muted" href="#">Footer link</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="/js/bundle-prototype.js"></script>
     <script src="/js/bundle-client.js"></script>

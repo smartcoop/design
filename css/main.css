@@ -171,8 +171,9 @@ select {
   font-size: inherit; }
 
 a {
-  color: #1267FB;
-  text-decoration: none; }
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 600; }
 
 em, i {
   font-style: italic; }
@@ -248,7 +249,7 @@ abbr[title] {
   padding: 2.4rem 0; }
 
 .o-container-vertical {
-  padding: 3.6rem 0; }
+  padding: 3.2rem 0; }
 
 .o-container-vertical--padding-medium {
   padding: 4.8rem 0; }
@@ -944,16 +945,39 @@ abbr[title] {
     width: 70%; }
 
 .c-content ul, .c-content ol {
-  padding-left: 3rem;
+  position: relative;
+  list-style: none;
   margin: 1.5rem 0; }
   .c-content ul ul, .c-content ul ol, .c-content ol ul, .c-content ol ol {
     margin: 0; }
+  .c-content ul li, .c-content ol li {
+    margin-bottom: .8rem;
+    position: relative; }
 
 .c-content ul {
-  list-style: disc; }
+  padding-left: 3rem; }
+  .c-content ul li:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    top: .8rem;
+    left: -2.4rem;
+    border-radius: 100%;
+    background-color: #333333; }
 
 .c-content ol {
-  list-style: decimal; }
+  padding-left: 1.2rem; }
+  .c-content ol li {
+    counter-increment: li; }
+    .c-content ol li:before {
+      content: counter(li) ".  ";
+      position: relative;
+      display: inline-block;
+      width: 1.8rem;
+      left: -.8rem;
+      font-weight: bold; }
 
 /* ==========================================================================
   c-display
@@ -1436,6 +1460,8 @@ abbr[title] {
   height: 100%;
   min-height: 0;
   overflow: hidden; }
+  .c-app-layout main {
+    background-color: #F2F2F2; }
 
 .c-app-layout-inner {
   height: 100%; }
@@ -1449,7 +1475,8 @@ abbr[title] {
 .c-app-layout-inner__sidebar {
   width: 100%;
   flex: 0 0 auto;
-  padding: 2.4rem; }
+  padding: 2.4rem;
+  background-color: #FFFFFF; }
   @media (min-width: 700px) {
     .c-app-layout-inner__sidebar {
       height: 100%;
@@ -1656,12 +1683,12 @@ abbr[title] {
     font-size: 1.2rem; }
 
 .c-badge--large {
-  width: 4rem;
-  height: 4rem; }
+  width: 4.4rem;
+  height: 4.4rem; }
   .c-badge--large .o-svg-icon {
-    width: 2rem;
-    height: 2rem;
-    font-size: 2rem; }
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 2.2rem; }
 
 /* Skins
    ========================================================================== */
@@ -1779,7 +1806,8 @@ abbr[title] {
   height: 3.6rem; }
 
 .c-brand--xsmall {
-  height: 2.6rem; }
+  height: 2.6rem;
+  margin-top: -4px; }
 
 /* ==========================================================================
   c-button
@@ -1793,7 +1821,7 @@ abbr[title] {
   text-decoration: none;
   cursor: pointer;
   vertical-align: middle;
-  border-radius: 0.3rem;
+  border-radius: 2rem;
   padding: 0.7rem 1.6rem;
   font-size: 1.6rem;
   text-align: center;
@@ -1939,14 +1967,15 @@ input.c-button {
 /* Secondary
    ========================================================================== */
 .c-button--secondary {
-  border: 1px solid #808080;
+  border: 2px solid #333333;
   background: #fff;
   color: #333333; }
   .c-button--secondary svg * {
     fill: #595959; }
   .c-button--secondary:hover, .c-button--secondary.c-button--hover {
     background: #F2F2F2;
-    border-color: #808080; }
+    border-color: #1A1A1A;
+    color: #1A1A1A; }
   .c-button--secondary:active, .c-button--secondary:active:focus, .c-button--secondary.c-button--active {
     background: #F2F2F2;
     border-color: #808080;
@@ -2078,10 +2107,12 @@ input.c-button {
       fill: #999999; }
 
 .c-button--borderless {
-  color: #333333; }
+  color: #000000;
+  font-weight: 600; }
   .c-button--borderless:hover, .c-button--borderless.c-button--hover {
     color: #1A1A1A;
-    background: transparent; }
+    background: transparent;
+    text-decoration: underline; }
   .c-button--borderless:active, .c-button--borderless:active:focus, .c-button--borderless.c-button--active {
     color: #1A1A1A;
     background: transparent; }
@@ -2141,12 +2172,12 @@ input.c-button {
   margin-left: 1.6rem; }
 
 .c-button-toolbar--compact .c-button:first-child {
-  border-top-left-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem; }
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem; }
 
 .c-button-toolbar--compact .c-button:last-child {
-  border-top-right-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem; }
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem; }
 
 .c-button-toolbar--compact .c-button + .c-button {
   margin: 0 0 0 -0.1rem; }
@@ -2158,12 +2189,12 @@ input.c-button {
     margin-top: 0.8rem; }
   .c-button-toolbar--vertical .c-button:first-child {
     border-radius: 0;
-    border-top-left-radius: 0.3rem;
-    border-top-right-radius: 0.3rem; }
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem; }
   .c-button-toolbar--vertical .c-button:last-child {
     border-radius: 0;
-    border-bottom-left-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem; }
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem; }
   .c-button-toolbar--vertical.c-button-toolbar--compact .c-button + .c-button {
     margin: -0.2rem 0 0 0; }
 
@@ -2180,8 +2211,7 @@ input.c-button {
   text-decoration: none;
   position: relative;
   height: 100%;
-  border: 0.1rem solid #D9D9D9;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
   background-color: #fff; }
   @media (min-width: 700px) {
     .c-card {
@@ -2553,7 +2583,7 @@ a.c-card:hover {
 .c-error-page__code {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #999999; }
+  color: #666666; }
 
 .c-error-page__title {
   color: #1A1A1A;
@@ -2681,7 +2711,6 @@ a.c-card:hover {
   font-size: 1.4rem;
   font-weight: 500;
   border: 0.1rem solid transparent;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border: 0.1rem solid #CCCCCC;
@@ -3143,7 +3172,17 @@ textarea.c-input--h-large {
 .c-navbar {
   padding: 0 2.4rem;
   height: 6.4rem;
-  width: 100%; }
+  width: 100%;
+  background-color: #FFFFFF; }
+
+header .c-navbar, header.c-navbar {
+  border-top: 4px solid #FF4054; }
+  header .c-navbar .c-toolbar, header.c-navbar .c-toolbar {
+    height: 6rem; }
+
+.c-navbar--entry {
+  padding: 4rem 2.4rem;
+  height: auto; }
 
 .c-navbar--unpadded {
   padding: 0; }
@@ -3167,13 +3206,17 @@ textarea.c-input--h-large {
 .c-navbar--main {
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 1.6rem; }
+  margin-bottom: 1.6rem;
+  border-top: none; }
+  header .c-navbar--main {
+    border-top: none; }
   .c-navbar--main .c-toolbar__right {
     z-index: 61; }
   @media (min-width: 900px) {
     .c-navbar--main {
-      margin: 3.2rem 0;
-      height: 8rem; } }
+      margin: 1.8rem 0 3.2rem;
+      padding-bottom: 1.8rem !important;
+      height: auto; } }
 
 .c-navbar--scrollable {
   overflow-x: auto;
@@ -3297,11 +3340,10 @@ textarea.c-input--h-large {
    ========================================================================== */
 .c-panel {
   background-color: #FFF;
-  border-radius: 0.4rem;
-  border: 1px solid #D9D9D9; }
+  border-radius: 1rem; }
 
 .c-panel__body {
-  padding: 2.4rem; }
+  padding: 3.2rem; }
 
 .c-panel__body + .c-panel__body {
   border-top: 1px solid #D9D9D9; }
@@ -3311,8 +3353,8 @@ textarea.c-input--h-large {
   align-items: center;
   height: 5.6rem;
   padding: 0 2.4rem;
-  background: #F9F9F9;
-  border-radius: 0.4rem 0.4rem 0 0;
+  background: #FFFFFF;
+  border-radius: 1rem 1rem 0 0;
   border-bottom: 1px solid #D9D9D9; }
 
 .c-panel__title {
@@ -3361,8 +3403,10 @@ textarea.c-input--h-large {
 @media (max-width: 800px) {
   .c-panel--grid .c-panel__body {
     width: 100%; }
-  .c-panel--grid .c-panel__body:nth-child(even) {
-    border-right: none; }
+  .c-panel--grid .c-panel__body {
+    padding: 2.2rem; }
+    .c-panel--grid .c-panel__body:nth-child(even) {
+      border-right: none; }
   .c-panel--grid .c-panel__body + .c-panel__body {
     border-top: 1px solid #D9D9D9; } }
 
@@ -3378,6 +3422,7 @@ textarea.c-input--h-large {
 .c-pill-navigation__item > a,
 .c-pill-navigation__item > button {
   display: block;
+  text-decoration: none;
   padding: .8rem 1.6rem;
   color: #333333;
   font-weight: 500; }
@@ -3791,7 +3836,11 @@ textarea.c-input--h-large {
 /* Component
    ========================================================================== */
 .c-table {
-  width: 100%; }
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 3.2rem;
+  border-radius: 1rem;
+  margin: 2rem 0; }
   .c-table th, .c-table td {
     text-align: left; }
   .c-table td,
@@ -3970,26 +4019,29 @@ textarea.c-input--h-large {
    ========================================================================== */
 /* Component
    ========================================================================== */
-@media screen and (min-width: 400px) {
-  .c-tabs > ul {
+.c-tabs {
+  background-color: #FFFFFF;
+  padding: 1.6rem 3.2rem;
+  border-radius: 1rem; }
+  @media screen and (min-width: 400px) {
+    .c-tabs > ul {
+      display: flex;
+      height: 4.8rem;
+      max-height: 4.8rem; } }
+  .c-tabs > ul > li {
+    flex-basis: auto;
+    height: 100%;
     display: flex;
-    height: 4.8rem;
-    max-height: 4.8rem; } }
-
-.c-tabs > ul > li {
-  flex-basis: auto;
-  height: 100%;
-  display: flex;
-  align-items: center; }
-  @media screen and (min-width: 400px) {
-    .c-tabs > ul > li {
-      justify-content: center; } }
-  @media screen and (min-width: 400px) {
-    .c-tabs > ul > li + li {
-      margin-left: 2.4rem; } }
-  @media screen and (max-width: 399px) {
-    .c-tabs > ul > li + li {
-      margin-top: 0.8rem; } }
+    align-items: center; }
+    @media screen and (min-width: 400px) {
+      .c-tabs > ul > li {
+        justify-content: center; } }
+    @media screen and (min-width: 400px) {
+      .c-tabs > ul > li + li {
+        margin-left: 2.4rem; } }
+    @media screen and (max-width: 399px) {
+      .c-tabs > ul > li + li {
+        margin-top: 0.8rem; } }
 
 .c-tabs__item {
   color: #808080;
@@ -4388,10 +4440,6 @@ textarea.c-input--h-large {
 .c-blog-article-list li {
   margin: 0 0 4.8rem; }
 
-.c-design-system-home-illustration {
-  background: #F9F9F9;
-  padding: 2rem; }
-
 .c-design-system-nav__desktop {
   display: none; }
 
@@ -4618,6 +4666,11 @@ textarea.c-input--h-large {
   display: flex;
   flex-direction: column; }
 
+.u-flex {
+  display: flex; }
+  .u-flex--twins {
+    justify-content: space-between; }
+
 .u-content-flex {
   flex: 1 0 auto; }
 
@@ -4635,32 +4688,6 @@ textarea.c-input--h-large {
   xl = extra large
 
    ========================================================================== */
-/* Resets
-   ========================================================================== */
-.u-m-0 {
-  margin: 0 !important; }
-
-.u-m-t-0 {
-  margin-top: 0 !important; }
-
-.u-m-b-0 {
-  margin-bottom: 0 !important; }
-
-.u-m-r-0 {
-  margin-right: 0 !important; }
-
-.u-m-l-0 {
-  margin-right: 0 !important; }
-
-.u-p-0 {
-  padding: 0 !important; }
-
-.u-p-l-0 {
-  padding-left: 0 !important; }
-
-.u-p-r-0 {
-  padding-right: 0 !important; }
-
 /* Variables
      ========================================================================== */
 /* All sides
@@ -4793,7 +4820,7 @@ textarea.c-input--h-large {
   padding-top: 0.8rem !important;
   padding-bottom: 0.8rem !important; }
 
-.u-padding-vertical {
+.u-padding-vertical, .c-tabs__section {
   padding-top: 1.6rem !important;
   padding-bottom: 1.6rem !important; }
 
@@ -4850,6 +4877,32 @@ textarea.c-input--h-large {
   .u-spacer-right-bp3 {
     padding-right: 1.6rem !important; } }
 
+/* Resets
+   ========================================================================== */
+.u-m-0 {
+  margin: 0 !important; }
+
+.u-m-t-0 {
+  margin-top: 0 !important; }
+
+.u-m-b-0 {
+  margin-bottom: 0 !important; }
+
+.u-m-r-0 {
+  margin-right: 0 !important; }
+
+.u-m-l-0 {
+  margin-left: 0 !important; }
+
+.u-p-0 {
+  padding: 0 !important; }
+
+.u-p-l-0 {
+  padding-left: 0 !important; }
+
+.u-p-r-0 {
+  padding-right: 0 !important; }
+
 /* ==========================================================================
   Utility: shadow
    ========================================================================== */
@@ -4860,7 +4913,7 @@ textarea.c-input--h-large {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 0px 16px rgba(0, 0, 0, 0.06); }
 
 .u-shadow-50 {
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 8px rgba(0, 0, 0, 0.16), 0px 0px 16px rgba(0, 0, 0, 0.1), 0px 0px 24px rgba(0, 0, 0, 0.09); }
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.12); }
 
 /* ==========================================================================
   Utility: Text

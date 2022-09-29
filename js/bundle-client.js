@@ -446,44 +446,24 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 /* ==========================================================================
   Input password (view password) toggle
    ========================================================================== */
-var InputPassword = /*#__PURE__*/function () {
-  function InputPassword(el) {
-    _classCallCheck(this, InputPassword);
+var InputPassword = function InputPassword(el) {
+  _classCallCheck(this, InputPassword);
 
-    this.el = el;
-    this.button = el.parentElement.querySelector("button[data-password-toggle]");
-    this.attach();
-  }
+  this.el = el;
+  this.button = el.parentElement.querySelector("button[data-password-toggle]");
+  this.button.addEventListener("click", function (event) {
+    this.el = this.parentElement.querySelector("input");
 
-  _createClass(InputPassword, [{
-    key: "attach",
-    value: function attach() {
-      if (this.button) {
-        this.button.addEventListener("click", this.onClick.bind(this));
-      }
+    if (this.el.type === "password") {
+      this.el.type = "text";
+    } else {
+      this.el.type = "password";
     }
-  }, {
-    key: "onClick",
-    value: function onClick(event) {
-      event.preventDefault();
-
-      if (this.el.type === "password") {
-        this.el.type = "text";
-      } else {
-        this.el.type = "password";
-      }
-    }
-  }]);
-
-  return InputPassword;
-}();
+  });
+};
 
 var passwordsInputs = document.querySelectorAll("input[type=password]");
 
@@ -513,12 +493,13 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 /* Menu JS
-   ========================================================================== */
+========================================================================== */
 // Collect all triggers on the page except for the sidebar
 var menuTriggers = document.querySelectorAll('[data-menu]:not(.js-no-action)');
 var selectOptions = document.querySelectorAll('[role="option"]'); // Global settings
 
 var menuActiveClass = 'c-menu--visible';
+var menuButtonActiveClass = 'c-menu-button-active';
 var dropdownMargin = 8;
 var popperInstances = []; // Find target dropdown element
 
@@ -564,12 +545,15 @@ function create(triggerEl, targetEl) {
 
 function showPopper(trigger, targetEl) {
   create(trigger, targetEl);
+  trigger.classList.add(menuButtonActiveClass);
   targetEl.setAttribute('data-show', '');
   targetEl.classList.add(menuActiveClass);
 }
 
 function hidePopper(instance) {
   var popper = instance.state.elements.popper;
+  var reference = instance.state.elements.reference;
+  reference.classList.remove(menuButtonActiveClass);
   popper.removeAttribute('data-show');
   popper.classList.remove(menuActiveClass);
   destroy(instance);
@@ -595,12 +579,11 @@ var findPopperInstance = function findPopperInstance(target) {
 
 var handleClick = function handleClick(event) {
   // Detect if we are clicking another menu
-  if (event.target.dataset.menu) {
-    [].concat(popperInstances).map(function (instance) {
-      hidePopper(instance);
-    });
-  }
-
+  // if (event.target.dataset.menu) {
+  //   [...popperInstances].map((instance) => {
+  //     hidePopper(instance);
+  //   });
+  // }
   event.stopPropagation();
   var trigger = event.currentTarget;
   var targetEl = findDropdown(trigger);
@@ -610,6 +593,10 @@ var handleClick = function handleClick(event) {
     showPopper(trigger, targetEl);
   } else {
     hidePopper(instance);
+  }
+
+  if (popperInstances.length > 1) {
+    hidePopper(popperInstances[0]);
   }
 }; // Custom select
 
