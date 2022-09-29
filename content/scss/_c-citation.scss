@@ -1,0 +1,46 @@
+/* ==========================================================================
+  Component: c-citation
+  ---
+  Citation windows
+   ========================================================================== */
+
+
+/* Component
+   ========================================================================== */
+
+.c-citation{
+  background-color: $color-gray-25;
+  padding: 2.2rem 2rem 2rem 4rem;
+  border-radius: $g-border-radius-small;
+  h4{
+    position: relative;
+    display: block;
+    margin-bottom: .8rem;
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2.8rem;
+      height: 1px;
+      left: -4.5rem;
+      top: 1.3rem;
+      background-color: $color-blue-600;
+    }
+  }
+  p{
+    margin: .8rem .8rem .4rem 0;
+  }
+
+  @media (min-width: $g-bp1) {
+    padding: 2.2rem 2rem 2rem 6rem;
+    h4{
+      &:after{
+        width: 4rem;
+        left: -6.5rem;
+      }
+    }
+    p{
+      margin: .8rem 2rem .4rem 0;
+    }
+  }
+}
