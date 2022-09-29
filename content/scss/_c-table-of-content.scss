@@ -17,14 +17,32 @@ $c-table-of-content-padding-all: 3.2rem !default;
 $c-table-of-content-border-radius: 1rem !default;
 
 
-
-
 /* Component
    ========================================================================== */
-
+.c-table-of-content{
+  .back-to-top{
+    display: block;
+    position: sticky;
+    bottom: 3rem;
+    width:max-content;
+    margin-left:auto;
+  }
+  @media (min-width: $g-bp3) {
+    .back-to-top{
+      display: none !important;
+    }
+    display: flex;
+    .back-top-top{
+      display: none;
+    }
+    .c-table-of-content-navigation{
+      padding: 0 $c-table-of-content-padding-all 0 0;
+    }
+  }
+}
 .c-table-of-content-navigation {
   background-color: $color-white;
-  padding: 0 $c-table-of-content-padding-all;
+  padding: 0;
   border-radius: $c-table-of-content-border-radius;
   min-width: 45%;
 
@@ -38,7 +56,6 @@ $c-table-of-content-border-radius: 1rem !default;
     display: inline-block;
     position: relative;
     padding-left: 0;
-
   
   .current-state{
     display: block;
@@ -78,6 +95,7 @@ $c-table-of-content-border-radius: 1rem !default;
         }
         &:before{
           content:  counter(li) ".  ";
+          color: $color-gray-500;
           position: relative;
           display: inline-block;
           color: $c-table-of-content-item-color-number;
@@ -87,10 +105,12 @@ $c-table-of-content-border-radius: 1rem !default;
         }
       }
 
+
       & + li {
         margin-top: 1rem;
       }
     }
+  }
 
     &.relativeWidth li a{
       width: auto;
