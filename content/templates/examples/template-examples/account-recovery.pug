@@ -1,0 +1,36 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var bodyClass = 'u-bg-gray-25'
+
+block body
+
+    header.o-container-vertical.c-navbar.c-navbar--white.c-navbar--entry
+        .o-container.o-container--small
+            .o-grid
+                .o-grid-col-6
+                    +c-brand({size: "small"})
+                .o-grid-col-6
+                    ul.c-pill-navigation
+                        li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu.u-spacer-left-auto
+                            button(type="button" data-menu="lang-switch"  data-menu-samewidth="true") Français
+                            ul.c-menu.c-menu--large#lang-switch
+                                li.c-menu__item
+                                    a.c-menu__label(href="/fr") Français
+                                li.c-menu__item
+                                    a.c-menu__label(href="/nt") Nederlands
+    main.o-container-vertical
+        .o-container.o-container--small
+            h3.c-h2.u-spacer-bottom-xl Nom d'utilisateur ou mot de passe oublié ?
+            .c-panel.u-shadow-50
+                .c-panel__body.u-padding-vertical-l.u-padding-bottom
+                    form
+                        .o-form-group-layout.o-form-group-layout--standard
+                            p.u-spacer-top-s Veuillez introduire l'e-mail associé à votre compte et <b>nous vous enverrons un e-mail avec un lien</b> permettant de modifier votre mot de passe.
+                            .o-form-group.u-spacer-top-l
+                                label.o-form-group__label Votre adresse email
+                                .o-form-group__controls
+                                    input.c-input(type="email")
+                            .o-form-group.u-flex.u-flex--twins.u-spacer-top-l
+                                +c-button({skin: 'borderless', icon: 'chevron-left', href: '/examples/template-examples/sign-in-form.html'})(class="u-spacer-bottom") Retour à la page de connexion
+                                +c-button({skin: 'primary', layout: 'text-icon', icon: 'chevron-right', href: '/examples/template-examples/account-recovery-valid-process.html'})(class="u-spacer-bottom") Envoyer

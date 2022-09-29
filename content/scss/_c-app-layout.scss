@@ -8,6 +8,9 @@
   height: 100%;
   min-height: 0;
   overflow: hidden;
+  main{
+    background-color: $color-gray-50;
+  }
 }
 
 .c-app-layout-inner {
@@ -27,6 +30,7 @@
   width: 100%;
   flex: 0 0 auto;
   padding: 2.4rem;
+  background-color: $color-white;
 
   @media (min-width: $g-bp2) {
     height: 100%;

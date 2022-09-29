@@ -6,7 +6,7 @@
    ========================================================================== */
 
 $c-card-padding: 2.4rem !default;
-$c-card-border-radius: 0.4rem !default;
+$c-card-border-radius: 1rem !default;
 $c-card-border-color: $color-gray-150 !default;
 
 /* Component
@@ -18,7 +18,6 @@ $c-card-border-color: $color-gray-150 !default;
   text-decoration: none;
   position: relative;
   height: 100%;
-  border: .1rem solid $c-card-border-color;
   border-radius: $c-card-border-radius;
   background-color: #fff;
 

@@ -7,25 +7,15 @@ class InputPassword {
     this.el = el;
     this.button = el.parentElement.querySelector(
       "button[data-password-toggle]"
-    );
-
-    this.attach();
-  }
-
-  attach() {
-    if (this.button) {
-      this.button.addEventListener("click", this.onClick.bind(this))
-    }
-  }
-
-  onClick(event) {
-    event.preventDefault();
-
-    if (this.el.type === "password") {
-      this.el.type = "text";
-    } else {
-      this.el.type = "password";
-    }
+      );
+    this.button.addEventListener("click", function(event) {
+      this.el = this.parentElement.querySelector("input");
+      if (this.el.type === "password") {
+        this.el.type = "text";
+      } else {
+        this.el.type = "password";
+      }
+    });
   }
 }
 

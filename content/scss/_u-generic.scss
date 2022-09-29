@@ -119,6 +119,13 @@
   flex-direction: column;
 }
 
+.u-flex{
+  display: flex;
+  &--twins{
+    justify-content: space-between;
+  }
+}
+
 .u-content-flex {
   flex: 1 0 auto;
 }

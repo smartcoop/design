@@ -3,7 +3,7 @@
  ========================================================================== */
 
 // Border radius
-$c-button-border-radius: 0.3rem !default;
+$c-button-border-radius: 2rem !default;
 
 // Sizes (heights)
 
@@ -47,7 +47,6 @@ $c-button-icon-spacing-small: 0.4rem !default;
   justify-content: center;
   font-weight: 500;
   display: inline-flex;
-
   .o-svg-icon {
     height: $c-button-line-height;
     width: $c-button-line-height;
