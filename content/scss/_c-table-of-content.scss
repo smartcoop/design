@@ -19,27 +19,32 @@ $c-table-of-content-border-radius: 1rem !default;
 
 /* Component
    ========================================================================== */
-.c-table-of-content{
-  .back-to-top{
+.c-table-of-content {
+  .back-to-top {
     display: block;
     position: sticky;
     bottom: 3rem;
-    width:max-content;
-    margin-left:auto;
+    width: max-content;
+    margin-left: auto;
   }
+
   @media (min-width: $g-bp3) {
-    .back-to-top{
+    .back-to-top {
       display: none !important;
     }
+
     display: flex;
-    .back-top-top{
+
+    .back-top-top {
       display: none;
     }
-    .c-table-of-content-navigation{
+
+    .c-table-of-content-navigation {
       padding: 0 $c-table-of-content-padding-all 0 0;
     }
   }
 }
+
 .c-table-of-content-navigation {
   background-color: $color-white;
   padding: 0;
@@ -47,41 +52,43 @@ $c-table-of-content-border-radius: 1rem !default;
   min-width: 45%;
 
   .c-table-of-content__nav {
-    &.stickyPosition{
+    &.stickyPosition {
       align-self: flex-start;
       position: sticky;
       top: 3rem;
     }
+
     list-style: none;
     display: inline-block;
     position: relative;
     padding-left: 0;
-  
-  .current-state{
-    display: block;
-    position: absolute;
-    background-color: $c-table-of-content-item-active-color-light;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    z-index: 1;
-    border-radius: .4rem;
-    transition: top .4s ease, width .4s ease;
-  }
- 
-  li {
-    counter-increment: li;
-    z-index: 11;
-    position: relative;
-      
-      &:before{
-        content:"";
+
+
+    .current-state {
+      display: block;
+      position: absolute;
+      background-color: $c-table-of-content-item-active-color-light;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      z-index: 1;
+      border-radius: .4rem;
+      transition: top .4s ease, width .4s ease;
+    }
+
+    li {
+      counter-increment: li;
+      z-index: 11;
+      position: relative;
+
+      &:before {
+        content: "";
         display: none;
       }
-      
-      a{
+
+      a {
         width: 100%;
         text-decoration: none;
         font-weight: 500;
@@ -90,12 +97,12 @@ $c-table-of-content-border-radius: 1rem !default;
         transition: all .3s ease;
         color: $c-table-of-content-item-active-text-color;
 
-        &:not(.c-button){
+        &:not(.c-button) {
           border-bottom: 0;
         }
-        &:before{
-          content:  counter(li) ".  ";
-          color: $color-gray-500;
+
+        &:before {
+          content: counter(li) ".  ";
           position: relative;
           display: inline-block;
           color: $c-table-of-content-item-color-number;
@@ -105,50 +112,48 @@ $c-table-of-content-border-radius: 1rem !default;
         }
       }
 
-
       & + li {
         margin-top: 1rem;
       }
     }
-  }
 
-    &.relativeWidth li a{
+    &.relativeWidth li a {
       width: auto;
     }
   }
 
   .c-table-of-content__nav__item {
-  
-  
+
+
     &:hover {
-        text-decoration: underline !important;
+      text-decoration: underline !important;
     }
-  
+
     &:focus {
       color: $c-table-of-content-item-color;
     }
-  
+
     &:focus:not(:focus-visible) {
       outline: none;
     }
-  
+
     &[aria-selected="true"] {
       color: $c-table-of-content-item-color;
       position: relative; // makes box-shadow to be on top of the global border
       font-weight: 500;
-      &:before{
+
+      &:before {
         font-weight: 500;
         color: $c-table-of-content-item-color;
       }
-  
     }
   }
 }
 
 
-.c-table-of-content__content__item{
-  &.active{
-    p:first-child{
+.c-table-of-content__content__item {
+  &.active {
+    p:first-child {
       color: $c-table-of-content-item-active-color-dark;
       transition: color .15s ease;
     }
