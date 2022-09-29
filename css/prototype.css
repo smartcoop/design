@@ -703,8 +703,6 @@ html.br-prototype-nav-is-open {
   border: 1px solid #DDD;
   margin: 1rem 0;
   position: relative;
-  overflow-y: hidden;
-  overflow-x: auto;
   resize: both; }
 
 .br-sample-content-is-layout {

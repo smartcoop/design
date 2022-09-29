@@ -2421,6 +2421,41 @@ a.c-card:hover {
   margin: 0.8rem 0 0 2.4rem; }
 
 /* ==========================================================================
+  Component: c-citation
+  ---
+  Citation windows
+   ========================================================================== */
+/* Component
+   ========================================================================== */
+.c-citation {
+  background-color: #F9F9F9;
+  padding: 2.2rem 2rem 2rem 4rem;
+  border-radius: 0.4rem; }
+  .c-citation h4 {
+    position: relative;
+    display: block;
+    margin-bottom: .8rem; }
+    .c-citation h4:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2.8rem;
+      height: 1px;
+      left: -4.5rem;
+      top: 1.3rem;
+      background-color: #1267FB; }
+  .c-citation p {
+    margin: .8rem .8rem .4rem 0; }
+  @media (min-width: 400px) {
+    .c-citation {
+      padding: 2.2rem 2rem 2rem 6rem; }
+      .c-citation h4:after {
+        width: 4rem;
+        left: -6.5rem; }
+      .c-citation p {
+        margin: .8rem 2rem .4rem 0; } }
+
+/* ==========================================================================
   Component: c-dialog
   ---
   Dialog windows
@@ -3825,6 +3860,86 @@ header .c-navbar, header.c-navbar {
   background: #FCF7E8; }
   .c-status-pill--warning .c-status-pill__circle {
     background: #C28D0A; }
+
+/* ==========================================================================
+   c-table-of-content
+   ========================================================================== */
+/* Variables
+   ========================================================================== */
+/* Component
+   ========================================================================== */
+.c-table-of-content-navigation {
+  background-color: #FFFFFF;
+  padding: 0 3.2rem;
+  border-radius: 1rem;
+  min-width: 45%; }
+  .c-table-of-content-navigation .c-table-of-content__nav {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding-left: 0; }
+    .c-table-of-content-navigation .c-table-of-content__nav.stickyPosition {
+      align-self: flex-start;
+      position: sticky;
+      top: 3rem; }
+    .c-table-of-content-navigation .c-table-of-content__nav .current-state {
+      display: block;
+      position: absolute;
+      background-color: #E7EFFE;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      z-index: 1;
+      border-radius: .4rem;
+      transition: top .4s ease, width .4s ease; }
+    .c-table-of-content-navigation .c-table-of-content__nav li {
+      counter-increment: li;
+      z-index: 11;
+      position: relative; }
+      .c-table-of-content-navigation .c-table-of-content__nav li:before {
+        content: "";
+        display: none; }
+      .c-table-of-content-navigation .c-table-of-content__nav li a {
+        width: 100%;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-block;
+        padding: .3rem 1.4rem .3rem 2rem;
+        transition: all .3s ease;
+        color: #333333; }
+        .c-table-of-content-navigation .c-table-of-content__nav li a:not(.c-button) {
+          border-bottom: 0; }
+        .c-table-of-content-navigation .c-table-of-content__nav li a:before {
+          content: counter(li) ".  ";
+          position: relative;
+          display: inline-block;
+          color: #808080;
+          width: 1.8rem;
+          left: -.8rem;
+          font-weight: 400; }
+      .c-table-of-content-navigation .c-table-of-content__nav li + li {
+        margin-top: 1rem; }
+    .c-table-of-content-navigation .c-table-of-content__nav.relativeWidth li a {
+      width: auto; }
+  .c-table-of-content-navigation .c-table-of-content__nav__item:hover {
+    text-decoration: underline !important; }
+  .c-table-of-content-navigation .c-table-of-content__nav__item:focus {
+    color: #000000; }
+  .c-table-of-content-navigation .c-table-of-content__nav__item:focus:not(:focus-visible) {
+    outline: none; }
+  .c-table-of-content-navigation .c-table-of-content__nav__item[aria-selected="true"] {
+    color: #000000;
+    position: relative;
+    font-weight: 500; }
+    .c-table-of-content-navigation .c-table-of-content__nav__item[aria-selected="true"]:before {
+      font-weight: 500;
+      color: #000000; }
+
+.c-table-of-content__content__item.active p:first-child {
+  color: #154EB1;
+  transition: color .15s ease; }
 
 /* ==========================================================================
   Component: table

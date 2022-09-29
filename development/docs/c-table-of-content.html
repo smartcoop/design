@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html class="br-styleguide br-styleguide-default-styles-active" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Table of content - Component documentation - Smart Design System
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="o-flex o-flex--vertical u-maximize-height">
+    <header id="header">
+        <div class="o-container">
+            <div class="c-navbar c-navbar--bordered-bottom c-navbar--main">
+                <div class="c-toolbar">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <div class="c-brand c-brand--small">
+                                <a href="/">
+                                    <img src="/images/logo.svg" alt="Smart" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <!-- Nav for desktop-->
+                            <nav class="c-design-system-nav">
+                                <button class="c-button c-button--borderless c-button--icon c-design-system-nav-open" type="button" id="c-design-system-nav-open">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-menu  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Open menu
+                                        </div>
+                                    </span>
+                                </button>
+                                <button class="c-button c-button--borderless c-button--icon c-design-system-nav-close" type="button" id="c-design-system-nav-close">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-close  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Close menu
+                                        </div>
+                                    </span>
+                                </button>
+                                <div class="c-design-system-nav__mobile">
+                                    <ul>
+                                        <li>
+                                            <span>Design</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/design/how-it-works.html">Design workflow</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/design/in-practice/copywriting.html">Design system in practice</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>Development</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/development/getting-started.html">Getting started</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/browser-support.html">Browser support</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/writing-css/architecture.html">CSS architecture</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/writing-css/component-structure.html">CSS component structure</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>Examples</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/examples/templates.html">Example templates</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/prototypes/index.html">Prototypes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/examples/design-tests.html">Tests</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/development/component-documentation.html">Components</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/index.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="/changelog.html">Changelog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-design-system-nav__desktop">
+                                    <ul class="c-pill-navigation">
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <!-- @todo now we are using menu.js, which is really meant for dropdowns. Make more accessible with aria-haspopup="true" aria-expanded="false", switch with JS?-->
+                                            <button type="button" data-menu="menu1" data-menu-samewidth="true">Design</button>
+                                            <ul class="c-menu c-menu--large" id="menu1">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/design/how-it-works.html">Design workflow</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/design/in-practice/copywriting.html">Design system in practice</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <button type="button" data-menu="menu2" data-menu-samewidth="true">Development</button>
+                                            <ul class="c-menu c-menu--large" id="menu2">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/getting-started.html">Getting started</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                </li>
+                                                <li class="c-menu__divider" role="presentational"></li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/browser-support.html">Browser support</a>
+                                                </li>
+                                                <li class="c-menu__divider" role="presentational"></li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/writing-css/architecture.html">CSS architecture</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/writing-css/component-structure.html">CSS component structure</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <button type="button" data-menu="menu3" data-menu-samewidth="true">Templates</button>
+                                            <ul class="c-menu c-menu--large" id="menu3">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/examples/templates.html">Example templates</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/prototypes/index.html">Prototypes</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/examples/design-tests.html">Tests</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/development/component-documentation.html">Components</a>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/blog/index.html">Blog</a>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/changelog.html">Changelog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="o-container o-container--flex">
+        <div class="u-padding-bottom-l">
+            <h1 class="c-d-h2">Component documentation</h1>
+        </div>
+        <div class="o-grid">
+            <div class="o-grid-col-bp3-3">
+                <div class="u-spacer-bottom-l">
+                    <div class="c-input-with-icon">
+                        <div class="o-svg-icon o-svg-icon-search  ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="#595959" />
+                            </svg>
+                        </div>
+                        <input class="c-input c-input--max-width" id="styleguideSearch" type="search" placeholder="Search…">
+                    </div>
+                </div>
+                <div class="c-navbar-components u-padding-bottom-xl">
+                    <div class="c-navbar-components__header">
+                        <div class="c-toolbar">
+                            <div class="c-toolbar__left">
+                                <div class="c-toolbar__item">
+                                    <div class="c-toolbar-title">Components</div>
+                                </div>
+                            </div>
+                            <div class="c-toolbar__right">
+                                <div class="c-toolbar__item">
+                                    <button class="c-button c-button--borderless c-button--icon" type="button">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-chevron-down  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">Chevron down
+                                            </div>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-navbar-components__content">
+                        <div class="br-styleguide-nav-holder br-styleguide-nav-holder--mobile u-spacer-top-l u-padding-horizontal-l">
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Basics</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/aov-colors.html"> Colors</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/aov-elevation.html"> Elevation</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/aov-icons.html"> Icons</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/aov-typography.html"> Typography</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Components</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-accordion.html"> Accordion</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-alert-dialog.html"> Alert dialog</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-alert-stack.html"> Alert stack</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-alert.html"> Alert</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-avatar.html"> Avatar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-badge.html"> Badge</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-blank-slate.html"> Blank slate</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-bordered-list.html"> Bordered list</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-brand.html"> Brand</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-button-toolbar.html"> Button toolbar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-button.html"> Button</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-card.html"> Card</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-checkbox.html"> Checkbox</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-citation.html"> Citation</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-dialog.html"> Dialog</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-dropdown.html"> Dropdown</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-error-page.html"> Error page</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-file-attachment.html"> File attachment</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-file-upload.html"> File upload</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-filter-pill.html"> Filter pill</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-global-banner.html"> Global banner</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-hr.html"> Horizontal ruler</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-icon-list.html"> Icon list</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-input-group.html"> Input group</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-input-icon.html"> Input icon</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-input.html"> Input</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-key-value.html"> Key value list</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-loader.html"> Loader</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-multi-select.html"> Multi Select</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-navbar.html"> Navbar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-or.html"> Or</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-pagination.html"> Pagination</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-panel.html"> Panel</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-popover.html"> Popover</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-progress-bar.html"> Progress bar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-radio-button.html"> Radio button</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-select.html"> Select</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-side-menu.html"> Side menu</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-status-pill.html"> Status pill</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-table-of-content.html"> Table of content</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-table.html"> Table</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-tabs.html"> Tabs</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-textarea.html"> Textarea</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-toolbar.html"> Toolbar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-tooltip.html"> Tooltip</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-wizard.html"> Wizard</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Objects</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-card-grid.html"> Card grid</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-container.html"> Container</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-flex.html"> Flexbox Layout</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-form-group.html"> Form group</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-grid.html"> Grid</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Utilities</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/u-spacer.html"> Spacing utility classes</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-styleguide-nav-holder br-styleguide-nav-holder--desktop">
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Basics</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/aov-colors.html"> Colors</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/aov-elevation.html"> Elevation</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/aov-icons.html"> Icons</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/aov-typography.html"> Typography</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Components</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-accordion.html"> Accordion</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-alert-dialog.html"> Alert dialog</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-alert-stack.html"> Alert stack</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-alert.html"> Alert</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-avatar.html"> Avatar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-badge.html"> Badge</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-blank-slate.html"> Blank slate</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-bordered-list.html"> Bordered list</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-brand.html"> Brand</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-button-toolbar.html"> Button toolbar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-button.html"> Button</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-card.html"> Card</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-checkbox.html"> Checkbox</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-citation.html"> Citation</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-dialog.html"> Dialog</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-dropdown.html"> Dropdown</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-error-page.html"> Error page</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-file-attachment.html"> File attachment</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-file-upload.html"> File upload</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-filter-pill.html"> Filter pill</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-global-banner.html"> Global banner</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-hr.html"> Horizontal ruler</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-icon-list.html"> Icon list</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-input-group.html"> Input group</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-input-icon.html"> Input icon</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-input.html"> Input</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-key-value.html"> Key value list</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-loader.html"> Loader</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-multi-select.html"> Multi Select</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-navbar.html"> Navbar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-or.html"> Or</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-pagination.html"> Pagination</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-panel.html"> Panel</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-popover.html"> Popover</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-progress-bar.html"> Progress bar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-radio-button.html"> Radio button</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-select.html"> Select</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-side-menu.html"> Side menu</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-status-pill.html"> Status pill</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-table-of-content.html"> Table of content</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-table.html"> Table</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-tabs.html"> Tabs</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-textarea.html"> Textarea</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-toolbar.html"> Toolbar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-tooltip.html"> Tooltip</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-wizard.html"> Wizard</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Objects</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-card-grid.html"> Card grid</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-container.html"> Container</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-flex.html"> Flexbox Layout</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-form-group.html"> Form group</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-grid.html"> Grid</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Utilities</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/u-spacer.html"> Spacing utility classes</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="o-grid-col-bp3-9">
+                <div class="br-componentgroup-header-wrapper">
+                    <h1 class="br-componentgroup-header c-d-h2">Table of content</h1>
+                </div>
+                <div class="br-content c-content">
+                </div>
+                <div class="br-sample" id="component-01-c-table-of-content">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Table of content</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-table-of-content">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content">
+                        <p>By default, the active-item background is taking the full width. See next example for a different paramater</p>
+                    </div>
+                    <div class="br-sample-content">
+                        <nav class="c-table-of-content-navigation fixed" role="navigation" aria-label="Table of content">
+                            <ol class="c-table-of-content__nav">
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#" aria-selected="true">Objet du contrat</a>
+                                </li>
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#">Définitions</a>
+                                </li>
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#">Le titulaire</a>
+                                </li>
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#">L'entreprise partagée</a>
+                                </li>
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#">Création et vie d'une Activité</a>
+                                </li>
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#">Droits de l'Entreprise partagée</a>
+                                </li>
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#">Droits du Titulaire</a>
+                                </li>
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#">Exclusion</a>
+                                </li>
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#">Droit et attribution de compétence</a>
+                                </li>
+                                <li>
+                                    <a class="c-table-of-content__nav__item" href="#">Conclusion</a>
+                                </li>
+                                <div class="current-state" aria-hidden="true"></div>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;nav class=&quot;c-table-of-content-navigation fixed&quot; role=&quot;navigation&quot; aria-label=&quot;Table of content&quot;&gt;
+    &lt;ol class=&quot;c-table-of-content__nav&quot;&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot; aria-selected=&quot;true&quot;&gt;Objet du contrat&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Définitions&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Le titulaire&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;L'entreprise partagée&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Création et vie d'une Activité&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Droits de l'Entreprise partagée&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Droits du Titulaire&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Exclusion&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Droit et attribution de compétence&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Conclusion&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;div class=&quot;current-state&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">nav.c-table-of-content-navigation.fixed(role=&quot;navigation&quot;)(aria-label=&quot;Table of content&quot;)
+    ol.c-table-of-content__nav
+        li
+            a.c-table-of-content__nav__item(href='#' aria-selected=&quot;true&quot;) Objet du contrat
+        li
+            a.c-table-of-content__nav__item(href='#') Définitions
+        li
+            a.c-table-of-content__nav__item(href='#') Le titulaire
+        li
+            a.c-table-of-content__nav__item(href='#') L'entreprise partagée
+        li
+            a.c-table-of-content__nav__item(href='#') Création et vie d'une Activité
+        li
+            a.c-table-of-content__nav__item(href='#') Droits de l'Entreprise partagée
+        li
+            a.c-table-of-content__nav__item(href='#') Droits du Titulaire
+        li
+            a.c-table-of-content__nav__item(href='#') Exclusion
+        li
+            a.c-table-of-content__nav__item(href='#') Droit et attribution de compétence
+        li
+            a.c-table-of-content__nav__item(href='#') Conclusion
+        .current-state(aria-hidden=&quot;true&quot;)</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-02-c-table-of-content-with-content">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Table of content with content and interactive</h3>
+                        <a class="br-sample-header-link" href="#component-02-c-table-of-content-with-content">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content">
+                        <p>Here&#39;s an example with the related content and the dynamic links that scroll to the right place.</p>
+                        <p>Classes to apply to <code>&lt;ol&gt;</code> tag: </p>
+                        <pre><code>class=&quot;relativeWidth&quot;</code></pre>
+                        <p>This make the active-item background taking his content width (relative to its content)</p>
+                        <pre><code>class=&quot;stickyPosition&quot;</code></pre>
+                        <p>This make the the navigation block sticky </p>
+                        <h3 id="example">Example:</h3>
+                    </div>
+                    <div class="br-sample-content">
+                        <div class="c-table-of-content u-flex c-content">
+                            <nav class="c-table-of-content-navigation fixed" role="navigation" aria-label="Table of content">
+                                <ol class="c-table-of-content__nav relativeWidth stickyPosition">
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#">Objet du contrat</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#">Définitions</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#">Le titulaire</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#">L'entreprise partagée</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#" aria-selected="true">Création et vie d'une Activité</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#">Droits de l'Entreprise partagée</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#">Droits du Titulaire</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#">Exclusion</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#">Droit et attribution de compétence</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-table-of-content__nav__item" href="#">Conclusion</a>
+                                    </li>
+                                    <div class="current-state" aria-hidden="true"></div>
+                                </ol>
+                            </nav>
+                            <div class="c-table-of-content__content">
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 1</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> Objet du contrat</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 2</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> Définitions</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 3</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> Le titulaire</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 4</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> L'entreprise partagée</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 5</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> Création et vie d'une Activité</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 6</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> Droits de l'Entreprise partagée</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 7</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> Droits du Titulaire</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 8</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> Exclusion</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 9</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> Droit et attribution de compétence</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                                <section class="c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s">
+                                    <p class="c-body-2 u-spacer-bottom-s">Article 10</p>
+                                    <h3 class="h3 u-spacer-bottom-xs"> Conclusion</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                </section>
+                            </div>
+                        </div>
+                        <script>
+                            window.addEventListener('load', (event) => {
+                                class Toc {
+                                    constructor(el) {
+                                        this.el = el;
+                                        this.toc__nav__list = this.el.querySelector(".c-table-of-content__nav");
+                                        this.toc__nav__list__items = this.el.querySelectorAll("a.c-table-of-content__nav__item");
+                                        this.toc__content__list = document.querySelector(".c-table-of-content__content");
+                                        this.toc__content__list__items = document.querySelectorAll(".c-table-of-content__content__item");
+                                        this.current_state = this.el.querySelector(".current-state");
+                                        this.relativeWidth = (this.toc__nav__list.classList.contains('relativeWidth')) ? true : false;
+                                        this.toc__content__list__items__posTop_from_parent = [];
+                                        this.lastScrollTop = 0;
+
+                                        this.init();
+                                    }
+
+                                    init() {
+                                        this.current_nav_item = this.toc__nav__list.querySelector("[aria-selected]");
+
+                                        //- Set current item selected                 
+                                        let current_index = [...this.toc__nav__list__items].indexOf(this.current_nav_item)
+
+                                        this.resetActiveToc(null, this.current_nav_item, null, this.toc__content__list__items[current_index]);
+                                        this.scrollTo(this.toc__content__list__items[current_index]);
+
+                                        this.toc__nav__list__items.forEach((table_of_content__item, i) => {
+                                            // Attach events to the toc__nav__list__items if the table_of_content__item have toc__content. Otherwise they just act as links
+
+                                            table_of_content__item.setAttribute('data-id', this.convertToSlug(table_of_content__item.textContent));
+                                            this.toc__content__list__items[i].setAttribute('id', this.convertToSlug(table_of_content__item.textContent));
+                                            if (this.toc__content__list__items.length) this.attachEvents(table_of_content__item, i);
+
+
+                                            if (i === this.toc__nav__list__items.length - 1) {
+                                                this.callback(current_index);
+                                            }
+                                        });
+
+                                    }
+
+                                    attachScrollEvents() {
+                                        window.addEventListener("scroll", this.whatever = this.callBackScrollEvent.bind(this));
+                                    }
+
+
+                                    callBackScrollEvent() {
+                                        let toc__posTop_from_viewport = document.querySelector(".c-table-of-content").getBoundingClientRect().top - 200;
+                                        let window__posTop_from_viewport = window.scrollY;
+                                        var st = window.pageYOffset || document.documentElement.scrollTop;
+
+                                        for (let i = 0; i < this.toc__content__list__items__posTop_from_parent.length; i++) {
+                                            if (st > this.lastScrollTop) {
+                                                //- scrolling-down
+                                                if ((-toc__posTop_from_viewport) > this.toc__content__list__items__posTop_from_parent[i] && (-toc__posTop_from_viewport) < this.toc__content__list__items__posTop_from_parent[i + 1]) {
+                                                    this.resetActiveToc(this.toc__nav__list__items[i - 1], this.toc__nav__list__items[i], this.toc__content__list__items[i - 1], this.toc__content__list__items[i])
+                                                }
+                                            } else {
+                                                //- scrolling-up
+                                                if ((-toc__posTop_from_viewport) > this.toc__content__list__items__posTop_from_parent[i] && (-toc__posTop_from_viewport) < this.toc__content__list__items__posTop_from_parent[i + 1]) {
+                                                    this.resetActiveToc(this.toc__nav__list__items[i + 1], this.toc__nav__list__items[i], this.toc__content__list__items[i + 1], this.toc__content__list__items[i])
+                                                }
+                                            }
+                                        }
+
+                                        this.lastScrollTop = st <= 0 ? 0 : st;
+                                    }
+
+                                    callback(current_index) {
+                                        this.toc__nav__list__items.forEach((table_of_content__item, i) => {
+                                            this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[i].offsetTop));
+                                        });
+                                        this.attachScrollEvents();
+
+                                        //- Get # Hashtag from url (ex: lentreprise-partage)
+                                        let hash = window.top.location.hash.substr(1);
+                                        if (hash.length) {
+                                            let current_hash_content_item = this.toc__content__list.querySelector("#" + hash);
+                                            let current_hash_nav_item = document.querySelector('[data-id="' + hash + '"]');
+                                            this.resetActiveToc(this.toc__nav__list__items[current_index], current_hash_nav_item, this.toc__content__list__items[current_index], current_hash_content_item);
+                                            this.scrollTo(current_hash_content_item);
+                                        }
+                                    }
+
+                                    switchToc(oldTocNavItem, newTocNavItem) {
+                                        newTocNavItem.focus();
+
+                                        // tab panels to show and hide
+                                        let index = [...this.toc__nav__list__items].indexOf(newTocNavItem);
+                                        let oldIndex = [...this.toc__nav__list__items].indexOf(oldTocNavItem);
+
+                                        this.resetActiveToc(oldTocNavItem, newTocNavItem, this.toc__content__list__items[oldIndex], this.toc__content__list__items[index]);
+                                        this.scrollTo(this.toc__content__list__items[index]);
+                                        var that = this;
+                                        setTimeout(function() {
+                                            window.addEventListener("scroll", this.whatever = that.callBackScrollEvent.bind(that));
+                                        }, 500);
+
+                                    }
+
+                                    resetActiveToc(oldTocNavItem, newTocNavItem, oldTocContentItem, newTocContentItem) {
+                                        this.positionTopCurrentState(newTocNavItem);
+                                        if (oldTocNavItem) oldTocNavItem.removeAttribute("aria-selected");
+                                        if (newTocNavItem) newTocNavItem.setAttribute("aria-selected", "true");
+                                        if (oldTocContentItem) oldTocContentItem.classList.remove("active");
+                                        if (newTocContentItem) newTocContentItem.classList.add("active");
+                                    }
+
+                                    positionTopCurrentState(child) {
+                                        // Position of the blue background
+                                        let table_of_content_Y = this.toc__nav__list.getBoundingClientRect().top
+                                        let relativePosTop = child.getBoundingClientRect().top - table_of_content_Y;
+                                        this.current_state.style.top = relativePosTop + 'px';
+                                        if (this.relativeWidth) {
+                                            let childWidth = child.offsetWidth;
+                                            this.current_state.style.width = childWidth + 'px';
+                                        }
+                                    }
+
+                                    scrollTo(element) {
+                                        let elementPosition = element.offsetTop - 55;
+                                        let parentPosition = this.el.getBoundingClientRect().top + window.scrollY;
+                                        let offsetPosition = (elementPosition + parentPosition);
+                                        window.scrollTo({
+                                            top: offsetPosition,
+                                            behavior: "smooth"
+                                        });
+                                    }
+
+                                    attachEvents(table_of_content__item, i) {
+                                        // Handle clicking of tabs for mouse users
+                                        table_of_content__item.addEventListener("click", (e) => {
+                                            window.removeEventListener("scroll", this.whatever);
+                                            e.preventDefault();
+                                            let currentToc = this.toc__nav__list.querySelector("[aria-selected]");
+
+                                            if (e.currentTarget !== currentToc) {
+                                                this.switchToc(currentToc, e.currentTarget);
+                                            }
+                                        });
+
+                                        window.addEventListener('hashchange', () => {
+                                            this.init();
+                                        });
+                                    }
+
+                                    convertToSlug(str) {
+                                        str = str.replace(/^\s+|\s+$/g, ''); // trim
+                                        str = str.toLowerCase();
+
+                                        // remove accents, swap ñ for n, etc
+                                        var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+                                        var to = "aaaaeeeeiiiioooouuuunc------";
+                                        for (var i = 0, l = from.length; i < l; i++) {
+                                            str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+                                        }
+
+                                        str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                                            .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                                            .replace(/-+/g, '-'); // collapse dashes
+
+                                        return str;
+                                    }
+                                }
+
+                                const toclists = document.querySelectorAll(".c-table-of-content");
+
+                                if (toclists.length) {
+                                    [...toclists].map((toclist) => new Toc(toclist));
+                                }
+                            });
+                        </script>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;c-table-of-content u-flex c-content&quot;&gt;
+    &lt;nav class=&quot;c-table-of-content-navigation fixed&quot; role=&quot;navigation&quot; aria-label=&quot;Table of content&quot;&gt;
+        &lt;ol class=&quot;c-table-of-content__nav relativeWidth stickyPosition&quot;&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Objet du contrat&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Définitions&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Le titulaire&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;L'entreprise partagée&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot; aria-selected=&quot;true&quot;&gt;Création et vie d'une Activité&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Droits de l'Entreprise partagée&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Droits du Titulaire&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Exclusion&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Droit et attribution de compétence&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a class=&quot;c-table-of-content__nav__item&quot; href=&quot;#&quot;&gt;Conclusion&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;div class=&quot;current-state&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+        &lt;/ol&gt;
+    &lt;/nav&gt;
+    &lt;div class=&quot;c-table-of-content__content&quot;&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 1&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; Objet du contrat&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 2&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; Définitions&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 3&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; Le titulaire&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 4&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; L'entreprise partagée&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 5&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; Création et vie d'une Activité&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 6&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; Droits de l'Entreprise partagée&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 7&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; Droits du Titulaire&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 8&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; Exclusion&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 9&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; Droit et attribution de compétence&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;c-table-of-content__content__item u-spacer-bottom-xl u-padding-bottom-s&quot;&gt;
+            &lt;p class=&quot;c-body-2 u-spacer-bottom-s&quot;&gt;Article 10&lt;/p&gt;
+            &lt;h3 class=&quot;h3 u-spacer-bottom-xs&quot;&gt; Conclusion&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    window.addEventListener('load', (event) =&gt; {
+        class Toc {
+            constructor(el) {
+                this.el = el;
+                this.toc__nav__list = this.el.querySelector(&quot;.c-table-of-content__nav&quot;);
+                this.toc__nav__list__items = this.el.querySelectorAll(&quot;a.c-table-of-content__nav__item&quot;);
+                this.toc__content__list = document.querySelector(&quot;.c-table-of-content__content&quot;);
+                this.toc__content__list__items = document.querySelectorAll(&quot;.c-table-of-content__content__item&quot;);
+                this.current_state = this.el.querySelector(&quot;.current-state&quot;);
+                this.relativeWidth = (this.toc__nav__list.classList.contains('relativeWidth')) ? true : false;
+                this.toc__content__list__items__posTop_from_parent = [];
+                this.lastScrollTop = 0;
+
+                this.init();
+            }
+
+            init() {
+                this.current_nav_item = this.toc__nav__list.querySelector(&quot;[aria-selected]&quot;);
+
+                //- Set current item selected                 
+                let current_index = [...this.toc__nav__list__items].indexOf(this.current_nav_item)
+
+                this.resetActiveToc(null, this.current_nav_item, null, this.toc__content__list__items[current_index]);
+                this.scrollTo(this.toc__content__list__items[current_index]);
+
+                this.toc__nav__list__items.forEach((table_of_content__item, i) =&gt; {
+                    // Attach events to the toc__nav__list__items if the table_of_content__item have toc__content. Otherwise they just act as links
+
+                    table_of_content__item.setAttribute('data-id', this.convertToSlug(table_of_content__item.textContent));
+                    this.toc__content__list__items[i].setAttribute('id', this.convertToSlug(table_of_content__item.textContent));
+                    if (this.toc__content__list__items.length) this.attachEvents(table_of_content__item, i);
+
+
+                    if (i === this.toc__nav__list__items.length - 1) {
+                        this.callback(current_index);
+                    }
+                });
+
+            }
+
+            attachScrollEvents() {
+                window.addEventListener(&quot;scroll&quot;, this.whatever = this.callBackScrollEvent.bind(this));
+            }
+
+
+            callBackScrollEvent() {
+                let toc__posTop_from_viewport = document.querySelector(&quot;.c-table-of-content&quot;).getBoundingClientRect().top - 200;
+                let window__posTop_from_viewport = window.scrollY;
+                var st = window.pageYOffset || document.documentElement.scrollTop;
+
+                for (let i = 0; i &lt; this.toc__content__list__items__posTop_from_parent.length; i++) {
+                    if (st &gt; this.lastScrollTop) {
+                        //- scrolling-down
+                        if ((-toc__posTop_from_viewport) &gt; this.toc__content__list__items__posTop_from_parent[i] &amp;&amp; (-toc__posTop_from_viewport) &lt; this.toc__content__list__items__posTop_from_parent[i + 1]) {
+                            this.resetActiveToc(this.toc__nav__list__items[i - 1], this.toc__nav__list__items[i], this.toc__content__list__items[i - 1], this.toc__content__list__items[i])
+                        }
+                    } else {
+                        //- scrolling-up
+                        if ((-toc__posTop_from_viewport) &gt; this.toc__content__list__items__posTop_from_parent[i] &amp;&amp; (-toc__posTop_from_viewport) &lt; this.toc__content__list__items__posTop_from_parent[i + 1]) {
+                            this.resetActiveToc(this.toc__nav__list__items[i + 1], this.toc__nav__list__items[i], this.toc__content__list__items[i + 1], this.toc__content__list__items[i])
+                        }
+                    }
+                }
+
+                this.lastScrollTop = st &lt;= 0 ? 0 : st;
+            }
+
+            callback(current_index) {
+                this.toc__nav__list__items.forEach((table_of_content__item, i) =&gt; {
+                    this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[i].offsetTop));
+                });
+                this.attachScrollEvents();
+
+                //- Get # Hashtag from url (ex: lentreprise-partage)
+                let hash = window.top.location.hash.substr(1);
+                if (hash.length) {
+                    let current_hash_content_item = this.toc__content__list.querySelector(&quot;#&quot; + hash);
+                    let current_hash_nav_item = document.querySelector('[data-id=&quot;' + hash + '&quot;]');
+                    this.resetActiveToc(this.toc__nav__list__items[current_index], current_hash_nav_item, this.toc__content__list__items[current_index], current_hash_content_item);
+                    this.scrollTo(current_hash_content_item);
+                }
+            }
+
+            switchToc(oldTocNavItem, newTocNavItem) {
+                newTocNavItem.focus();
+
+                // tab panels to show and hide
+                let index = [...this.toc__nav__list__items].indexOf(newTocNavItem);
+                let oldIndex = [...this.toc__nav__list__items].indexOf(oldTocNavItem);
+
+                this.resetActiveToc(oldTocNavItem, newTocNavItem, this.toc__content__list__items[oldIndex], this.toc__content__list__items[index]);
+                this.scrollTo(this.toc__content__list__items[index]);
+                var that = this;
+                setTimeout(function() {
+                    window.addEventListener(&quot;scroll&quot;, this.whatever = that.callBackScrollEvent.bind(that));
+                }, 500);
+
+            }
+
+            resetActiveToc(oldTocNavItem, newTocNavItem, oldTocContentItem, newTocContentItem) {
+                this.positionTopCurrentState(newTocNavItem);
+                if (oldTocNavItem) oldTocNavItem.removeAttribute(&quot;aria-selected&quot;);
+                if (newTocNavItem) newTocNavItem.setAttribute(&quot;aria-selected&quot;, &quot;true&quot;);
+                if (oldTocContentItem) oldTocContentItem.classList.remove(&quot;active&quot;);
+                if (newTocContentItem) newTocContentItem.classList.add(&quot;active&quot;);
+            }
+
+            positionTopCurrentState(child) {
+                // Position of the blue background
+                let table_of_content_Y = this.toc__nav__list.getBoundingClientRect().top
+                let relativePosTop = child.getBoundingClientRect().top - table_of_content_Y;
+                this.current_state.style.top = relativePosTop + 'px';
+                if (this.relativeWidth) {
+                    let childWidth = child.offsetWidth;
+                    this.current_state.style.width = childWidth + 'px';
+                }
+            }
+
+            scrollTo(element) {
+                let elementPosition = element.offsetTop - 55;
+                let parentPosition = this.el.getBoundingClientRect().top + window.scrollY;
+                let offsetPosition = (elementPosition + parentPosition);
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: &quot;smooth&quot;
+                });
+            }
+
+            attachEvents(table_of_content__item, i) {
+                // Handle clicking of tabs for mouse users
+                table_of_content__item.addEventListener(&quot;click&quot;, (e) =&gt; {
+                    window.removeEventListener(&quot;scroll&quot;, this.whatever);
+                    e.preventDefault();
+                    let currentToc = this.toc__nav__list.querySelector(&quot;[aria-selected]&quot;);
+
+                    if (e.currentTarget !== currentToc) {
+                        this.switchToc(currentToc, e.currentTarget);
+                    }
+                });
+
+                window.addEventListener('hashchange', () =&gt; {
+                    this.init();
+                });
+            }
+
+            convertToSlug(str) {
+                str = str.replace(/^\s+|\s+$/g, ''); // trim
+                str = str.toLowerCase();
+
+                // remove accents, swap ñ for n, etc
+                var from = &quot;àáäâèéëêìíïîòóöôùúüûñç·/_,:;&quot;;
+                var to = &quot;aaaaeeeeiiiioooouuuunc------&quot;;
+                for (var i = 0, l = from.length; i &lt; l; i++) {
+                    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+                }
+
+                str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                    .replace(/-+/g, '-'); // collapse dashes
+
+                return str;
+            }
+        }
+
+        const toclists = document.querySelectorAll(&quot;.c-table-of-content&quot;);
+
+        if (toclists.length) {
+            [...toclists].map((toclist) =&gt; new Toc(toclist));
+        }
+    });
+&lt;/script&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">div.c-table-of-content.u-flex.c-content
+    nav.c-table-of-content-navigation.fixed(role=&quot;navigation&quot;)(aria-label=&quot;Table of content&quot;)
+        ol.c-table-of-content__nav.relativeWidth.stickyPosition
+            li
+                a.c-table-of-content__nav__item(href='#') Objet du contrat
+            li
+                a.c-table-of-content__nav__item(href='#') Définitions
+            li
+                a.c-table-of-content__nav__item(href='#') Le titulaire
+            li
+                a.c-table-of-content__nav__item(href='#') L'entreprise partagée
+            li
+                a.c-table-of-content__nav__item(href='#' aria-selected=&quot;true&quot;) Création et vie d'une Activité
+            li
+                a.c-table-of-content__nav__item(href='#') Droits de l'Entreprise partagée
+            li
+                a.c-table-of-content__nav__item(href='#') Droits du Titulaire
+            li
+                a.c-table-of-content__nav__item(href='#') Exclusion
+            li
+                a.c-table-of-content__nav__item(href='#') Droit et attribution de compétence
+            li
+                a.c-table-of-content__nav__item(href='#') Conclusion
+            .current-state(aria-hidden=&quot;true&quot;)
+
+    div.c-table-of-content__content
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 1
+            h3.h3.u-spacer-bottom-xs  Objet du contrat
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 2
+            h3.h3.u-spacer-bottom-xs  Définitions
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 3
+            h3.h3.u-spacer-bottom-xs  Le titulaire
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 4
+            h3.h3.u-spacer-bottom-xs  L'entreprise partagée
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 5
+            h3.h3.u-spacer-bottom-xs  Création et vie d'une Activité
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 6
+            h3.h3.u-spacer-bottom-xs  Droits de l'Entreprise partagée
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 7
+            h3.h3.u-spacer-bottom-xs  Droits du Titulaire
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 8
+            h3.h3.u-spacer-bottom-xs  Exclusion
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 9
+            h3.h3.u-spacer-bottom-xs  Droit et attribution de compétence
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+            p.c-body-2.u-spacer-bottom-s Article 10
+            h3.h3.u-spacer-bottom-xs  Conclusion
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+
+
+script.
+    window.addEventListener('load', (event) =&gt; {
+        class Toc {
+            constructor(el) {
+                this.el = el;
+                this.toc__nav__list = this.el.querySelector(&quot;.c-table-of-content__nav&quot;);
+                this.toc__nav__list__items = this.el.querySelectorAll(&quot;a.c-table-of-content__nav__item&quot;);
+                this.toc__content__list = document.querySelector(&quot;.c-table-of-content__content&quot;);
+                this.toc__content__list__items = document.querySelectorAll(&quot;.c-table-of-content__content__item&quot;);
+                this.current_state = this.el.querySelector(&quot;.current-state&quot;);
+                this.relativeWidth = (this.toc__nav__list.classList.contains('relativeWidth')) ? true : false;
+                this.toc__content__list__items__posTop_from_parent = [];
+                this.lastScrollTop = 0;
+
+                this.init();
+            }
+
+            init() {
+                this.current_nav_item = this.toc__nav__list.querySelector(&quot;[aria-selected]&quot;);
+
+                //- Set current item selected                 
+                let current_index = [...this.toc__nav__list__items].indexOf(this.current_nav_item)
+                
+                this.resetActiveToc(null, this.current_nav_item, null, this.toc__content__list__items[current_index]);
+                this.scrollTo(this.toc__content__list__items[current_index]);
+
+                this.toc__nav__list__items.forEach((table_of_content__item, i) =&gt; {
+                    // Attach events to the toc__nav__list__items if the table_of_content__item have toc__content. Otherwise they just act as links
+
+                    table_of_content__item.setAttribute('data-id', this.convertToSlug(table_of_content__item.textContent));
+                    this.toc__content__list__items[i].setAttribute('id', this.convertToSlug(table_of_content__item.textContent));
+                    if (this.toc__content__list__items.length) this.attachEvents(table_of_content__item, i);
+
+                    
+                    if(i === this.toc__nav__list__items.length-1) {
+                        this.callback(current_index);
+                    }
+                });
+
+            }
+
+            attachScrollEvents(){
+                window.addEventListener(&quot;scroll&quot;, this.whatever = this.callBackScrollEvent.bind(this));
+            }
+
+
+            callBackScrollEvent(){
+                let toc__posTop_from_viewport =  document.querySelector(&quot;.c-table-of-content&quot;).getBoundingClientRect().top - 200;
+                let window__posTop_from_viewport = window.scrollY;
+                var st = window.pageYOffset || document.documentElement.scrollTop; 
+                
+                for (let i = 0; i &lt; this.toc__content__list__items__posTop_from_parent.length; i++) {
+                        if (st &gt; this.lastScrollTop){
+                            //- scrolling-down
+                            if ((- toc__posTop_from_viewport) &gt; this.toc__content__list__items__posTop_from_parent[i] &amp;&amp; (- toc__posTop_from_viewport) &lt; this.toc__content__list__items__posTop_from_parent[i+1]) {
+                                this.resetActiveToc(this.toc__nav__list__items[i-1], this.toc__nav__list__items[i], this.toc__content__list__items[i-1], this.toc__content__list__items[i])
+                            }
+                        } else {
+                            //- scrolling-up
+                            if ((- toc__posTop_from_viewport) &gt; this.toc__content__list__items__posTop_from_parent[i] &amp;&amp; (- toc__posTop_from_viewport) &lt; this.toc__content__list__items__posTop_from_parent[i+1]) {
+                                this.resetActiveToc(this.toc__nav__list__items[i+1], this.toc__nav__list__items[i], this.toc__content__list__items[i+1], this.toc__content__list__items[i])
+                            }
+                        }
+                }
+                
+                this.lastScrollTop = st &lt;= 0 ? 0 : st;
+            }
+
+            callback (current_index) { 
+                this.toc__nav__list__items.forEach((table_of_content__item, i) =&gt; {
+                    this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[i].offsetTop));
+                });
+                this.attachScrollEvents();
+
+                //- Get # Hashtag from url (ex: lentreprise-partage)
+                let hash = window.top.location.hash.substr(1);
+                if(hash.length){
+                    let current_hash_content_item = this.toc__content__list.querySelector(&quot;#&quot; + hash);
+                    let current_hash_nav_item = document.querySelector('[data-id=&quot;' + hash + '&quot;]');
+                    this.resetActiveToc(this.toc__nav__list__items[current_index], current_hash_nav_item, this.toc__content__list__items[current_index], current_hash_content_item);
+                    this.scrollTo(current_hash_content_item);
+                }
+            }
+
+            switchToc(oldTocNavItem, newTocNavItem) {
+                newTocNavItem.focus();
+                
+                // tab panels to show and hide
+                let index = [...this.toc__nav__list__items].indexOf(newTocNavItem);
+                let oldIndex = [...this.toc__nav__list__items].indexOf(oldTocNavItem);
+
+                this.resetActiveToc(oldTocNavItem, newTocNavItem, this.toc__content__list__items[oldIndex], this.toc__content__list__items[index]);
+                this.scrollTo(this.toc__content__list__items[index]);
+                var that = this;
+                setTimeout(function(){ 
+                    window.addEventListener(&quot;scroll&quot;, this.whatever = that.callBackScrollEvent.bind(that));
+                }, 500);
+
+            }
+
+            resetActiveToc(oldTocNavItem, newTocNavItem, oldTocContentItem, newTocContentItem){
+                this.positionTopCurrentState(newTocNavItem);
+                if (oldTocNavItem) oldTocNavItem.removeAttribute(&quot;aria-selected&quot;);
+                if (newTocNavItem) newTocNavItem.setAttribute(&quot;aria-selected&quot;, &quot;true&quot;);
+                if (oldTocContentItem) oldTocContentItem.classList.remove(&quot;active&quot;);
+                if (newTocContentItem) newTocContentItem.classList.add(&quot;active&quot;);
+            }
+
+            positionTopCurrentState(child) {
+                // Position of the blue background
+                let table_of_content_Y = this.toc__nav__list.getBoundingClientRect().top
+                let relativePosTop =  child.getBoundingClientRect().top  - table_of_content_Y;
+                this.current_state.style.top = relativePosTop + 'px';
+                if(this.relativeWidth){
+                    let childWidth =  child.offsetWidth;
+                    this.current_state.style.width = childWidth + 'px';
+                }
+            }
+
+            scrollTo(element) {
+                let elementPosition = element.offsetTop - 55;
+                let parentPosition = this.el.getBoundingClientRect().top + window.scrollY;
+                let offsetPosition = (elementPosition + parentPosition);
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: &quot;smooth&quot;
+                });
+            }
+
+            attachEvents(table_of_content__item, i) {
+                // Handle clicking of tabs for mouse users
+                table_of_content__item.addEventListener(&quot;click&quot;, (e) =&gt; {
+                    window.removeEventListener(&quot;scroll&quot;, this.whatever);
+                    e.preventDefault();
+                    let currentToc = this.toc__nav__list.querySelector(&quot;[aria-selected]&quot;);
+
+                    if (e.currentTarget !== currentToc) {
+                        this.switchToc(currentToc, e.currentTarget);
+                    }
+                });
+
+                window.addEventListener('hashchange', () =&gt; {
+                    this.init();
+                });
+            }
+
+            convertToSlug(str) {
+                str = str.replace(/^\s+|\s+$/g, ''); // trim
+                str = str.toLowerCase();
+            
+                // remove accents, swap ñ for n, etc
+                var from = &quot;àáäâèéëêìíïîòóöôùúüûñç·/_,:;&quot;;
+                var to   = &quot;aaaaeeeeiiiioooouuuunc------&quot;;
+                for (var i=0, l=from.length ; i&lt;l ; i++) {
+                    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+                }
+
+                str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                    .replace(/-+/g, '-'); // collapse dashes
+
+                return str;
+            }
+        }
+        
+        const toclists = document.querySelectorAll(&quot;.c-table-of-content&quot;);
+
+        if (toclists.length) {
+            [...toclists].map((toclist) =&gt; new Toc(toclist));
+        }
+    });</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="o-container-vertical">
+            <div class="o-container">
+                <hr class="c-hr">
+                <ul class="c-bordered-list-horizontal c-bordered-list-horizontal--muted">
+                    <li>
+                        <a href="https://github.com/smartcoop/design">
+                            <div class="o-flex">
+                                <div class="u-spacer-right-s">
+                                    <div class="o-svg-icon o-svg-icon-github  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </div>Share feedback on GitHub
+                            </div>
+                            <!--li: a(href="#") Licensing information
+                -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>

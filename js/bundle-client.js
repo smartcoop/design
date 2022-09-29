@@ -875,6 +875,7 @@ var Tabs = /*#__PURE__*/function () {
     _classCallCheck(this, Tabs);
 
     this.el = el;
+    console.log(this.el);
     this.tablist = this.el.querySelector("ul");
     this.tabs = this.el.querySelectorAll("a.c-tabs__item");
     this.panels = this.el.querySelectorAll(".c-tabs__section");
