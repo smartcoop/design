@@ -1,0 +1,912 @@
+@charset "UTF-8";
+/* purgecss start ignore */
+/* ==========================================================================
+  Bedrock specific styles
+   ========================================================================== */
+/* ==========================================================================
+  Variables override
+  Overide variables set in core/scss/prototype.scss with your own
+   ========================================================================== */
+/* BASICS */
+.CodeMirror {
+  /* Set height, width, borders, and global font properties here */
+  font-family: monospace;
+  height: auto;
+  color: black; }
+
+/* PADDING */
+.CodeMirror-lines {
+  padding: 0.4rem;
+  /* Vertical padding around content */ }
+
+.CodeMirror pre {
+  padding: 0 0.4rem;
+  /* Horizontal padding of content */ }
+
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  background-color: white;
+  /* The little square between H and V scrollbars */ }
+
+/* GUTTER */
+.CodeMirror-gutters {
+  border-right: 0.1rem solid #ddd;
+  background-color: #f7f7f7;
+  white-space: nowrap; }
+
+.CodeMirror-linenumber {
+  padding: 0 0.3rem 0 0.5rem;
+  min-width: 2rem;
+  text-align: right;
+  color: #999;
+  white-space: nowrap; }
+
+.CodeMirror-guttermarker {
+  color: black; }
+
+.CodeMirror-guttermarker-subtle {
+  color: #999; }
+
+/* CURSOR */
+.CodeMirror-cursor {
+  border-left: 0.1rem solid black;
+  border-right: none;
+  width: 0; }
+
+/* Shown when moving in bi-directional text */
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 0.1rem solid silver; }
+
+.cm-fat-cursor .CodeMirror-cursor {
+  width: auto;
+  border: 0;
+  background: #7e7; }
+
+.cm-fat-cursor div.CodeMirror-cursors {
+  z-index: 1; }
+
+.cm-animate-fat-cursor {
+  width: auto;
+  border: 0;
+  animation: blink 1.06s steps(1) infinite;
+  background-color: #7e7; }
+
+@keyframes blink {
+  0% { }
+  50% {
+    background-color: transparent; }
+  100% { } }
+
+/* Can style cursor different in overwrite (non-insert) mode */
+.cm-tab {
+  display: inline-block;
+  text-decoration: inherit; }
+
+.CodeMirror-ruler {
+  border-left: 0.1rem solid #ccc;
+  position: absolute; }
+
+/* DEFAULT THEME */
+.cm-s-default .cm-header {
+  color: blue; }
+
+.cm-s-default .cm-quote {
+  color: #090; }
+
+.cm-negative {
+  color: #d44; }
+
+.cm-positive {
+  color: #292; }
+
+.cm-header, .cm-strong {
+  font-weight: bold; }
+
+.cm-em {
+  font-style: italic; }
+
+.cm-link {
+  text-decoration: underline; }
+
+.cm-strikethrough {
+  text-decoration: line-through; }
+
+.cm-s-default .cm-keyword {
+  color: #708; }
+
+.cm-s-default .cm-atom {
+  color: #219; }
+
+.cm-s-default .cm-number {
+  color: #164; }
+
+.cm-s-default .cm-def {
+  color: #00f; }
+
+.cm-s-default .cm-variable-2 {
+  color: #05a; }
+
+.cm-s-default .cm-variable-3 {
+  color: #085; }
+
+.cm-s-default .cm-comment {
+  color: #a50; }
+
+.cm-s-default .cm-string {
+  color: #a11; }
+
+.cm-s-default .cm-string-2 {
+  color: #f50; }
+
+.cm-s-default .cm-meta {
+  color: #555; }
+
+.cm-s-default .cm-qualifier {
+  color: #555; }
+
+.cm-s-default .cm-builtin {
+  color: #30a; }
+
+.cm-s-default .cm-bracket {
+  color: #997; }
+
+.cm-s-default .cm-tag {
+  color: #170; }
+
+.cm-s-default .cm-attribute {
+  color: #00c; }
+
+.cm-s-default .cm-hr {
+  color: #999; }
+
+.cm-s-default .cm-link {
+  color: #00c; }
+
+.cm-s-default .cm-error {
+  color: #f00; }
+
+.cm-invalidchar {
+  color: #f00; }
+
+.CodeMirror-composing {
+  border-bottom: 0.2rem solid; }
+
+/* MONOKAI THEME (Dark UI) */
+.cm-s-monokai.CodeMirror {
+  background: #272822;
+  color: #f8f8f2; }
+
+.cm-s-monokai div.CodeMirror-selected {
+  background: #49483E; }
+
+.cm-s-monokai .CodeMirror-line::selection, .cm-s-monokai .CodeMirror-line > span::selection, .cm-s-monokai .CodeMirror-line > span > span::selection {
+  background: rgba(73, 72, 62, 0.99); }
+
+.cm-s-monokai .CodeMirror-line::-moz-selection, .cm-s-monokai .CodeMirror-line > span::-moz-selection, .cm-s-monokai .CodeMirror-line > span > span::-moz-selection {
+  background: rgba(73, 72, 62, 0.99); }
+
+.cm-s-monokai .CodeMirror-gutters {
+  background: #272822;
+  border-right: 0; }
+
+.cm-s-monokai .CodeMirror-guttermarker {
+  color: white; }
+
+.cm-s-monokai .CodeMirror-guttermarker-subtle {
+  color: #d0d0d0; }
+
+.cm-s-monokai .CodeMirror-linenumber {
+  color: #d0d0d0; }
+
+.cm-s-monokai .CodeMirror-cursor {
+  border-left: 0.1rem solid #f8f8f0; }
+
+.cm-s-monokai span.cm-comment {
+  color: #75715e; }
+
+.cm-s-monokai span.cm-atom {
+  color: #ae81ff; }
+
+.cm-s-monokai span.cm-number {
+  color: #ae81ff; }
+
+.cm-s-monokai span.cm-property, .cm-s-monokai span.cm-attribute {
+  color: #a6e22e; }
+
+.cm-s-monokai span.cm-keyword {
+  color: #f92672; }
+
+.cm-s-monokai span.cm-builtin {
+  color: #66d9ef; }
+
+.cm-s-monokai span.cm-string {
+  color: #e6db74; }
+
+.cm-s-monokai span.cm-variable {
+  color: #f8f8f2; }
+
+.cm-s-monokai span.cm-variable-2 {
+  color: #9effff; }
+
+.cm-s-monokai span.cm-variable-3 {
+  color: #66d9ef; }
+
+.cm-s-monokai span.cm-def {
+  color: #fd971f; }
+
+.cm-s-monokai span.cm-bracket {
+  color: #f8f8f2; }
+
+.cm-s-monokai span.cm-tag {
+  color: #f92672; }
+
+.cm-s-monokai span.cm-header {
+  color: #ae81ff; }
+
+.cm-s-monokai span.cm-link {
+  color: #ae81ff; }
+
+.cm-s-monokai span.cm-error {
+  background: #f92672;
+  color: #f8f8f0; }
+
+.cm-s-monokai .CodeMirror-activeline-background {
+  background: #373831; }
+
+.cm-s-monokai .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important; }
+
+/* Default styles for common addons */
+div.CodeMirror span.CodeMirror-matchingbracket {
+  color: #0f0; }
+
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  color: #f22; }
+
+.CodeMirror-matchingtag {
+  background: rgba(255, 150, 0, 0.3); }
+
+.CodeMirror-activeline-background {
+  background: #e8f2ff; }
+
+/* STOP */
+/* The rest of this file contains styles related to the mechanics of
+   the editor. You probably shouldn't touch them. */
+.CodeMirror {
+  position: relative;
+  overflow: hidden;
+  background: white; }
+
+.CodeMirror-scroll {
+  overflow: scroll !important;
+  /* Things will break if this is overridden */
+  /* 30px is the magic margin used to hide the element's real scrollbars */
+  /* See overflow: hidden in .CodeMirror */
+  margin-bottom: -3rem;
+  margin-right: -3rem;
+  padding-bottom: 3rem;
+  height: 100%;
+  outline: none;
+  /* Prevent dragging from highlighting the element */
+  position: relative; }
+
+.CodeMirror-sizer {
+  position: relative;
+  border-right: 0.3rem solid transparent; }
+
+/* The fake, visible scrollbars. Used to force redraw during scrolling
+   before actuall scrolling happens, thus preventing shaking and
+   flickering artifacts. */
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  position: absolute;
+  z-index: 6;
+  display: none; }
+
+.CodeMirror-vscrollbar {
+  right: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.CodeMirror-hscrollbar {
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll; }
+
+.CodeMirror-scrollbar-filler {
+  right: 0;
+  bottom: 0; }
+
+.CodeMirror-gutter-filler {
+  left: 0;
+  bottom: 0; }
+
+.CodeMirror-gutters {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3; }
+
+.CodeMirror-gutter {
+  white-space: normal;
+  height: 100%;
+  display: inline-block;
+  margin-bottom: -3rem;
+  /* Hack to make IE7 behave */
+  *zoom: 1;
+  *display: inline; }
+
+.CodeMirror-gutter-wrapper {
+  position: absolute;
+  z-index: 4;
+  background: none !important;
+  border: none !important; }
+
+.CodeMirror-gutter-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 4; }
+
+.CodeMirror-gutter-elt {
+  position: absolute;
+  cursor: default;
+  z-index: 4; }
+
+.CodeMirror-gutter-wrapper {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+      user-select: none; }
+
+.CodeMirror-lines {
+  cursor: text;
+  min-height: 0.1rem;
+  /* prevents collapsing before first draw */ }
+
+.CodeMirror pre {
+  /* Reset some styles that the rest of the page might have set */
+  border-radius: 0;
+  border-width: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent; }
+  @media (min-width: 800px) {
+    .CodeMirror pre {
+      white-space: pre;
+      word-wrap: normal; } }
+
+.CodeMirror-wrap pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal; }
+
+.CodeMirror-linebackground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0; }
+
+.CodeMirror-linewidget {
+  position: relative;
+  z-index: 2;
+  overflow: auto; }
+
+.CodeMirror-code {
+  outline: none; }
+
+/* Force content-box sizing for the elements where we expect it */
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber {
+  box-sizing: content-box; }
+
+.CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+.CodeMirror-cursor {
+  position: absolute; }
+
+.CodeMirror-measure pre {
+  position: static; }
+
+div.CodeMirror-cursors {
+  visibility: hidden;
+  position: relative;
+  z-index: 3; }
+
+div.CodeMirror-dragcursors {
+  visibility: visible; }
+
+.CodeMirror-focused div.CodeMirror-cursors {
+  visibility: visible; }
+
+.CodeMirror-selected {
+  background: #d9d9d9; }
+
+.CodeMirror-focused .CodeMirror-selected {
+  background: #d7d4f0; }
+
+.CodeMirror-crosshair {
+  cursor: crosshair; }
+
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection {
+  background: #d7d4f0; }
+
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection {
+  background: #d7d4f0; }
+
+.cm-searching {
+  background: #ffa;
+  background: rgba(255, 255, 0, 0.4); }
+
+/* IE7 hack to prevent it from returning funny offsetTops on the spans */
+.CodeMirror span {
+  *vertical-align: text-bottom; }
+
+/* Used to force a border model for a node */
+.cm-force-border {
+  padding-right: 0.1rem; }
+
+@media print {
+  /* Hide the cursor when printing */
+  .CodeMirror div.CodeMirror-cursors {
+    visibility: hidden; } }
+
+/* See issue #2901 */
+.cm-tab-wrap-hack:after {
+  content: ''; }
+
+/* Help users use markselection to safely style text background */
+span.CodeMirror-selectedtext {
+  background: none; }
+
+/* Variables
+   ========================================================================== */
+/* ==========================================================================
+  Variables override
+  Overide variables set in core/scss/prototype.scss with your own
+   ========================================================================== */
+/* Fixed layout
+   ========================================================================== */
+.br-pagetree-fixed-wrapper {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 100vh; }
+
+/* Basic setup
+   ========================================================================== */
+.br-styleguide-default-styles-active {
+  height: 100%;
+  position: static; }
+  .br-styleguide-default-styles-active body {
+    height: 100%;
+    overflow: visible !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #FFF; }
+  .br-styleguide-default-styles-active .br-styleguide-navigation-holder {
+    box-sizing: border-box;
+    padding: 2.4rem 2.4rem 2.4rem 2.4rem; }
+  .br-styleguide-default-styles-active .br-styleguide-content {
+    background: #FFF;
+    box-sizing: border-box;
+    padding: 2.4rem 2.4rem 2.4rem 4.8rem; }
+
+/* ==========================================================================
+  br-prototype-nav
+   ========================================================================== */
+/* Sidebar
+   ========================================================================== */
+html.br-styleguide,
+.br-styleguide body {
+  margin: 0; }
+
+.br-prototype-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%; }
+
+.br-prototype-content {
+  height: 100%;
+  flex: 1 1 100%;
+  overflow: auto; }
+
+html.br-prototype-nav-is-open {
+  position: relative; }
+
+.br-prototype-nav {
+  background-color: #FFF;
+  line-height: 1.5;
+  z-index: 2000;
+  width: 250px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  height: 100%; }
+  .br-prototype-nav .br-prototype-nav-inner {
+    padding: 2rem;
+    overflow: hidden;
+    overflow-y: auto; }
+  .br-prototype-nav.br-prototype-nav-open {
+    display: flex;
+    box-shadow: 0.2rem 0 0.5rem rgba(0, 0, 0, 0.3); }
+
+.br-prototype-nav-text {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0 0 0.6rem;
+  color: rgba(0, 0, 0, 0.5); }
+
+/* Headings (both on index page and in sidebar)
+   ========================================================================== */
+.br-prototype-nav-main-heading {
+  color: #000;
+  font-weight: 700;
+  margin: 0; }
+
+/* Index page
+   ========================================================================== */
+.br-prototype-nav-index {
+  padding: 2rem; }
+
+.br-prototype-nav-index-cols {
+  column-count: 3; }
+  .br-prototype-nav-index-cols li {
+    break-inside: avoid; }
+
+/* Page states
+   ========================================================================== */
+.br-prototype-page-states {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0.2rem 0 0.5rem rgba(0, 0, 0, 0.3);
+  margin-top: auto;
+  padding: 2rem; }
+
+.br-tree-dir-state-count {
+  float: right;
+  padding: 0 0.4rem;
+  border-radius: 3px;
+  background-color: #eee;
+  font-size: 1.2rem; }
+
+/* Utilities
+   ========================================================================== */
+.br-reset-link-styling {
+  text-decoration: none;
+  color: #000; }
+
+/* Expanded/collapsed states for directories
+   Only in side navigation
+   ========================================================================== */
+.br-bordered-list {
+  list-style: none;
+  padding: 0; }
+
+.br-prototype-nav .br-bordered-list ul {
+  padding: 0 0 0 1.8rem;
+  list-style: none; }
+
+.br-prototype-nav .br-tree-dir .br-tree-dir-title {
+  margin: 0;
+  cursor: default;
+  font-weight: 400; }
+  .br-prototype-nav .br-tree-dir .br-tree-dir-title:before {
+    content: '';
+    width: 0;
+    height: 0;
+    display: inline-block;
+    text-align: center;
+    border: 0;
+    border-left: 0.4rem solid transparent;
+    border-right: 0.4rem solid transparent;
+    border-top: 0.4rem solid #999;
+    margin-left: 0.2rem;
+    margin-right: 0.4rem;
+    position: relative;
+    top: -0.3rem; }
+
+.br-prototype-nav .br-tree-dir--is-collapsed * {
+  display: none; }
+
+.br-prototype-nav .br-tree-dir--is-collapsed > .br-tree-dir-title {
+  display: block; }
+  .br-prototype-nav .br-tree-dir--is-collapsed > .br-tree-dir-title:before {
+    border: 0;
+    border-top: 0.4rem solid transparent;
+    border-bottom: 0.4rem solid transparent;
+    border-left: 0.4rem solid #999;
+    margin-left: 0.35rem;
+    margin-right: 0.65rem;
+    top: 0; }
+
+/* br-component
+   ========================================================================== */
+.br-component-header {
+  font-size: 2.4rem;
+  font-weight: 700; }
+
+/* br-sample
+   ========================================================================== */
+.br-sample {
+  padding: 1.2rem 0; }
+
+.br-sample-clearfix:before,
+.br-sample-clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.br-sample-clearfix:after {
+  clear: both; }
+
+.br-sample-btn {
+  background: #FFF;
+  border: 1px solid #DDD;
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  margin: 0 0 1rem;
+  font-size: 1.2rem; }
+  .br-sample-btn:hover {
+    background: #FFF; }
+
+.br-sample-footer {
+  position: relative; }
+
+/* Code related
+   ========================================================================== */
+.br-sample-code {
+  position: relative; }
+
+.br-sample-copy-code-btn {
+  position: absolute;
+  z-index: 3;
+  top: 1rem;
+  right: 1rem;
+  display: none; }
+  .br-sample-code:hover .br-sample-copy-code-btn {
+    display: block; }
+
+.br-sample-markup {
+  margin-top: 1rem;
+  background: #F0F0F0;
+  border: 1px solid #DDD;
+  padding: 1rem; }
+  .br-sample-markup .CodeMirror {
+    background: transparent; }
+
+.br-sample-content {
+  background: #FFF;
+  padding: 3rem;
+  border: 1px solid #DDD;
+  margin: 1rem 0;
+  position: relative;
+  resize: both; }
+
+.br-sample-content-is-layout {
+  min-height: 500px; }
+
+.br-sample-header .br-sample-header-link {
+  float: right;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  padding: 0 0.2rem 0 0; }
+
+.br-sample-header .br-sample-heading {
+  float: left;
+  margin: 1rem 0;
+  padding: 0; }
+
+/* Color swatches
+   ========================================================================== */
+.br-color-swatch-list {
+  list-style-type: none;
+  padding: 0; }
+
+.br-color-swatch-item {
+  min-width: 150px;
+  display: inline-block;
+  margin: 0 1rem 1rem 0;
+  padding: 1rem;
+  text-align: center; }
+
+.br-color-swatch-preview {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 0.5rem;
+  display: inline-block; }
+
+.br-color-swatch-data {
+  color: #888;
+  font-size: 1.3rem; }
+
+/* Typography
+   ========================================================================== */
+.br-typography-sample-size {
+  opacity: 0.4; }
+
+/* ==========================================================================
+  br-bordered-list
+   ========================================================================== */
+/* ==========================================================================
+  Variables
+   ========================================================================== */
+/* Bordered list
+   ========================================================================== */
+.br-bordered-list-title {
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 1.2rem;
+  font-size: 1.5rem;
+  padding: 0.2rem; }
+
+.br-tree-dir-title {
+  margin: 0;
+  font-size: 1.3rem;
+  padding: 0.4rem 0.2rem; }
+
+.br-bordered-list {
+  margin: 0;
+  padding: 0 0 1rem; }
+  .br-bordered-list ul {
+    padding: 0 0 0 1rem; }
+  .br-bordered-list li {
+    display: block; }
+    .br-bordered-list li a,
+    .br-bordered-list li span.br-bordered-list-label {
+      padding: 0.2rem;
+      font-size: 1.3rem;
+      display: block; }
+    .br-bordered-list li a {
+      text-decoration: none;
+      border-bottom: 1px solid #DDD; }
+    .br-bordered-list li a:hover {
+      background: rgba(0, 0, 0, 0.1); }
+    .br-bordered-list li a.br-bordered-list__link--active {
+      background: rgba(0, 0, 0, 0.15); }
+
+/* Improve styles for nav
+   ========================================================================== */
+.br-bordered-list li a {
+  border-bottom: 1px solid #DDD;
+  padding: 0.4rem; }
+  .br-bordered-list li a:hover {
+    background-color: #F0F0F0; }
+  .br-bordered-list li a.br-bordered-list__link--active {
+    background-color: #F0F0F0; }
+
+.br-styleguide-navigation-holder .br-bordered-list li a {
+  border-bottom: 1px solid #DDD; }
+  .br-styleguide-navigation-holder .br-bordered-list li a:hover {
+    background-color: #FFF; }
+  .br-styleguide-navigation-holder .br-bordered-list li a.br-bordered-list__link--active {
+    background-color: #FFF; }
+
+/* Category markers (on components)
+   To use: add “source: unofficial” to YAML front matter in component .md file
+   ========================================================================== */
+.br-sample-category {
+  background: #EEE;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 0.2rem 0.8rem;
+  font-size: 90%;
+  margin: 0 0 0 1rem;
+  position: relative;
+  top: 0.7rem; }
+
+/* Category markers (in sidebar)
+   Use case: determine which “official” components contain custom code
+   To use: add containsCustom: true to YAML front matter in _docs.md file on component level
+   ========================================================================== */
+.br-docs-category-marker-custom {
+  background: #CCC;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  float: right;
+  margin-top: 4px; }
+
+/* ==========================================================================
+  Grid layout
+   ========================================================================== */
+.br-styleguide-navigation-holder {
+  border-right: 1px solid #DDD;
+  background: #F5F5F5; }
+  @media (min-width: 800px) {
+    .br-styleguide-navigation-holder {
+      overflow: auto; } }
+
+.br-styleguide-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: #F5F5F5;
+  border-right: 1px solid #DDD; }
+
+.br-styleguide-navigation-holder {
+  position: sticky;
+  top: 0;
+  z-index: 9; }
+
+.br-styleguide-search {
+  padding: 1.5rem;
+  background: #F5F5F5;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+  position: sticky;
+  top: 0;
+  z-index: 10; }
+  .br-styleguide-search input {
+    width: 100%; }
+
+@media (min-width: 800px) {
+  .br-styleguide-content {
+    overflow: scroll; } }
+
+.br-styleguide-container {
+  flex: 1 1 100%;
+  height: 100%;
+  display: flex; }
+  .br-styleguide-container .br-styleguide-navigation-wrapper-ie {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 20%; }
+  .br-styleguide-container .br-styleguide-content {
+    flex: 1 0 80%; }
+
+@supports (display: grid) {
+  .br-styleguide-container {
+    height: 100%;
+    display: grid;
+    grid-template-areas: "header" "search" "content" "sidebar"; }
+    @media (min-width: 800px) {
+      .br-styleguide-container {
+        grid-template-columns: 22% auto;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas: "header content content" "search content content" "sidebar content content"; }
+        .br-styleguide-container .br-styleguide-navigation-wrapper-ie {
+          display: contents; } }
+    .br-styleguide-container .br-styleguide-header {
+      grid-area: header; }
+    .br-styleguide-container .br-styleguide-search {
+      grid-area: search; }
+    .br-styleguide-container .br-styleguide-navigation-holder {
+      grid-area: sidebar; }
+    .br-styleguide-container .br-styleguide-content {
+      grid-area: content; } }
+
+/* Component group header
+   ========================================================================== */
+.br-componentgroup-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+/* purgecss end ignore */
+
+/*# sourceMappingURL=prototype.css.map */
