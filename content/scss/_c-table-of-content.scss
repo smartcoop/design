@@ -32,14 +32,12 @@ $c-table-of-content-border-radius: 1rem !default;
     &.sticky-element{
       align-self: flex-start;
       position: sticky;
-      // top: 3rem;
-      top: 0;
+      top: 3rem;
     }
     list-style: none;
     display: inline-block;
     position: relative;
     padding-left: 0;
-    margin: 0; //(((((
 
   
   .current-state{
@@ -133,8 +131,6 @@ $c-table-of-content-border-radius: 1rem !default;
     p:first-child{
       color: $c-table-of-content-item-active-color-dark;
       transition: color .15s ease;
-      margin-top: 0; //(((((
-
     }
   }
 }

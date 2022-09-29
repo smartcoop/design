@@ -2,13 +2,13 @@ div.c-table-of-content.u-flex.c-content
     nav.c-table-of-content-navigation.fixed(role="navigation")(aria-label="Table of content")
         ol.c-table-of-content__nav.relativeWidth.sticky-element
             li
-                a.c-table-of-content__nav__item(href='#' aria-selected="true") Objet du contrat
+                a.c-table-of-content__nav__item(href='#') Objet du contrat
             li
                 a.c-table-of-content__nav__item(href='#') Définitions
             li
                 a.c-table-of-content__nav__item(href='#') Le titulaire
             li
-                a.c-table-of-content__nav__item(href='#') L'entreprise partagée
+                a.c-table-of-content__nav__item(href='#' aria-selected="true") L'entreprise partagée
             li
                 a.c-table-of-content__nav__item(href='#') Création et vie d'une Activité
             li
@@ -86,9 +86,6 @@ script.
                 this.toc__content__list__items = document.querySelectorAll(".c-table-of-content__content__item");
                 this.current_state = this.el.querySelector(".current-state");
                 this.relativeWidth = (this.toc__nav__list.classList.contains('relativeWidth')) ? true : false;
-                this.toc__content__list__items__posTop_from_parent = [];
-                var handlers = [];
-
                 this.init();
             }
 
@@ -99,72 +96,20 @@ script.
                 let current_index = [...this.toc__nav__list__items].indexOf(this.current_nav_item)
                 
                 this.resetActiveToc(null, this.current_nav_item, null, this.toc__content__list__items[current_index]);
-                //- this.scrollTo(this.toc__content__list__items[current_index]);
 
                 this.toc__nav__list__items.forEach((table_of_content__item, i) => {
                     // Attach events to the toc__nav__list__items if the table_of_content__item have toc__content. Otherwise they just act as links
-
                     table_of_content__item.setAttribute('data-id', this.convertToSlug(table_of_content__item.textContent));
                     this.toc__content__list__items[i].setAttribute('id', this.convertToSlug(table_of_content__item.textContent));
                     if (this.toc__content__list__items.length) this.attachEvents(table_of_content__item, i);
 
-                    
-                    if(i === this.toc__nav__list__items.length-1) {
-                        this.callback(current_index);
-                    }
+                    if(i === this.toc__nav__list__items.length-1) this.callback(current_index);
                 });
 
             }
 
-            attachScrollEvents(){
-                var that = this;
-                var lastScrollTop = 0;
-                const wrappedFunc = this.do_something.bind(this);
-                handlers.push(wrappedFunc);
-                window.addEventListener("scroll", wrappedFunc);
-                //- window.addEventListener("scroll", function() {
-                //-     
-                //- });
-            }
-
-            do_something(){
-                console.log(this);
-            }
-
-            callBackScroolEvent(){
-                var that = this;
-                this.do_something();
-                console.log("we are scrooooooolling");
-                //- let toc__posTop_from_viewport =  document.querySelector(".c-table-of-content").getBoundingClientRect().top;
-                //- let window__posTop_from_viewport = window.scrollY;
-                //- //- console.log(window__posTop_from_viewport);
-                //- var st = window.pageYOffset || document.documentElement.scrollTop; 
-                
-                //- for (let i = 0; i < that.toc__content__list__items__posTop_from_parent.length; i++) {
-                //-         //- console.log("current-itemt: " + i);
-                //-         if (st > lastScrollTop){
-                //-             if ((- toc__posTop_from_viewport) > that.toc__content__list__items__posTop_from_parent[i] && (- toc__posTop_from_viewport) < that.toc__content__list__items__posTop_from_parent[i+1]) {
-                //-                 that.resetActiveToc(that.toc__nav__list__items[i-1], that.toc__nav__list__items[i], that.toc__content__list__items[i-1], that.toc__content__list__items[i])
-                //-             }
-                //-         } else {
-                //-             if ((- toc__posTop_from_viewport) > that.toc__content__list__items__posTop_from_parent[i] && (- toc__posTop_from_viewport) < that.toc__content__list__items__posTop_from_parent[i+1]) {
-                //-                 that.resetActiveToc(that.toc__nav__list__items[i+1], that.toc__nav__list__items[i], that.toc__content__list__items[i+1], that.toc__content__list__items[i])
-                //-             }
-                //-         }
-                //- }
-                
-                //- lastScrollTop = st <= 0 ? 0 : st;
-            }
-
             callback (current_index) { 
                 var that = this;
-                setTimeout(function(){ 
-                    that.toc__nav__list__items.forEach((table_of_content__item, i) => {
-                        that.toc__content__list__items__posTop_from_parent.push(Math.round(that.toc__content__list__items[i].getBoundingClientRect().top));
-                    });
-                }, 2000);
-                that.attachScrollEvents();
-
 
                 //- Get # Hashtag from url (ex: lentreprise-partage)
                 let hash = window.top.location.hash.substr(1);
@@ -187,12 +132,6 @@ script.
 
                 this.resetActiveToc(oldTocNavItem, newTocNavItem, this.toc__content__list__items[oldIndex], this.toc__content__list__items[index]);
                 this.scrollTo(this.toc__content__list__items[index]);
-                var that = this
-                setTimeout(function(){ 
-                    const wrappedFunc = this.do_something.bind(that);
-                    window.addEventListener("scroll", wrappedFunc);
-                }, 2000);
-
             }
 
             resetActiveToc(oldTocNavItem, newTocNavItem, oldTocContentItem, newTocContentItem){
@@ -217,7 +156,7 @@ script.
             scrollTo(element) {
                 let elementPosition = element.offsetTop;
                 let parentPosition = this.el.getBoundingClientRect().top + window.scrollY;
-                let offsetPosition = (elementPosition + parentPosition);
+                let offsetPosition = (elementPosition + parentPosition) - 65;
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: "smooth"
@@ -227,8 +166,6 @@ script.
             attachEvents(table_of_content__item, i) {
                 // Handle clicking of tabs for mouse users
                 table_of_content__item.addEventListener("click", (e) => {
-                    window.removeEventListener("scroll", this.callBackScroolEvent);
-
                     e.preventDefault();
                     let currentToc = this.toc__nav__list.querySelector("[aria-selected]");
 
