@@ -1,14 +1,14 @@
 div.c-table-of-content.u-flex.c-content
-    nav.c-table-of-content__nav.fixed(role="navigation")(aria-label="Table of content")
-        ol.relativeWidth.sticky-element
+    nav.c-table-of-content-navigation.fixed(role="navigation")(aria-label="Table of content")
+        ol.c-table-of-content__nav.relativeWidth.sticky-element
             li
-                a.c-table-of-content__nav__item(href='#') Objet du contrat
+                a.c-table-of-content__nav__item(href='#' aria-selected="true") Objet du contrat
             li
                 a.c-table-of-content__nav__item(href='#') Définitions
             li
                 a.c-table-of-content__nav__item(href='#') Le titulaire
             li
-                a.c-table-of-content__nav__item(href='#' aria-selected="true") L'entreprise partagée
+                a.c-table-of-content__nav__item(href='#') L'entreprise partagée
             li
                 a.c-table-of-content__nav__item(href='#') Création et vie d'une Activité
             li
@@ -24,48 +24,52 @@ div.c-table-of-content.u-flex.c-content
             .current-state(aria-hidden="true")
 
     div.c-table-of-content__content
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 1
             h3.h3.u-spacer-bottom-xs  Objet du contrat
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 2
             h3.h3.u-spacer-bottom-xs  Définitions
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 3
             h3.h3.u-spacer-bottom-xs  Le titulaire
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 4
             h3.h3.u-spacer-bottom-xs  L'entreprise partagée
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 5
             h3.h3.u-spacer-bottom-xs  Création et vie d'une Activité
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 6
             h3.h3.u-spacer-bottom-xs  Droits de l'Entreprise partagée
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 7
             h3.h3.u-spacer-bottom-xs  Droits du Titulaire
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 8
             h3.h3.u-spacer-bottom-xs  Exclusion
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 9
             h3.h3.u-spacer-bottom-xs  Droit et attribution de compétence
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-        section.c-table-of-content__section.u-spacer-bottom-xl.u-padding-bottom-s
+        section.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
             p.c-body-2.u-spacer-bottom-s Article 10
             h3.h3.u-spacer-bottom-xs  Conclusion
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
@@ -76,59 +80,167 @@ script.
         class Toc {
             constructor(el) {
                 this.el = el;
-                this.table_of_content__list = this.el.querySelector("ol");
-                this.table_of_content__items = this.el.querySelectorAll("a.c-table-of-content__nav__item");
-                this.current_state = this.el.querySelector(".current-state");
+                this.toc__nav__list = this.el.querySelector(".c-table-of-content__nav");
+                this.toc__nav__list__items = this.el.querySelectorAll("a.c-table-of-content__nav__item");
                 this.toc__content__list = document.querySelector(".c-table-of-content__content");
-                this.toc__content = document.querySelectorAll(".c-table-of-content__section");
-                this.relativeWidth = (this.table_of_content__list.classList.contains('relativeWidth')) ? true : false;
+                this.toc__content__list__items = document.querySelectorAll(".c-table-of-content__content__item");
+                this.current_state = this.el.querySelector(".current-state");
+                this.relativeWidth = (this.toc__nav__list.classList.contains('relativeWidth')) ? true : false;
+                this.toc__content__list__items__posTop_from_parent = [];
+                var handlers = [];
 
                 this.init();
             }
 
             init() {
-                this.current_item = this.table_of_content__list.querySelector("[aria-selected]");
+                this.current_nav_item = this.toc__nav__list.querySelector("[aria-selected]");
 
                 //- Set current item selected                 
-                let current_index = [...this.table_of_content__items].indexOf(this.current_item)
-                this.scrollTo(this.toc__content[current_index], 600);
-                this.toc__content[current_index].classList.add("active");
-                this.positionTopCurrentState(this.current_item);
-               
-               let itemsProcessed = 0;
-                this.table_of_content__items.forEach((table_of_content__item, i) => {
-                // Attach events to the table_of_content__items if the table_of_content__item have toc__content. Otherwise they just act as links
-                    if (this.toc__content.length) this.attachEvents(table_of_content__item, i);
+                let current_index = [...this.toc__nav__list__items].indexOf(this.current_nav_item)
+                
+                this.resetActiveToc(null, this.current_nav_item, null, this.toc__content__list__items[current_index]);
+                //- this.scrollTo(this.toc__content__list__items[current_index]);
+
+                this.toc__nav__list__items.forEach((table_of_content__item, i) => {
+                    // Attach events to the toc__nav__list__items if the table_of_content__item have toc__content. Otherwise they just act as links
 
                     table_of_content__item.setAttribute('data-id', this.convertToSlug(table_of_content__item.textContent));
-                    this.toc__content[i].setAttribute('id', this.convertToSlug(table_of_content__item.textContent));
+                    this.toc__content__list__items[i].setAttribute('id', this.convertToSlug(table_of_content__item.textContent));
+                    if (this.toc__content__list__items.length) this.attachEvents(table_of_content__item, i);
 
-                    itemsProcessed++;
-                    if(itemsProcessed === this.table_of_content__items.length) {
+                    
+                    if(i === this.toc__nav__list__items.length-1) {
                         this.callback(current_index);
                     }
                 });
 
+            }
+
+            attachScrollEvents(){
+                var that = this;
+                var lastScrollTop = 0;
+                const wrappedFunc = this.do_something.bind(this);
+                handlers.push(wrappedFunc);
+                window.addEventListener("scroll", wrappedFunc);
+                //- window.addEventListener("scroll", function() {
+                //-     
+                //- });
+            }
+
+            do_something(){
+                console.log(this);
+            }
+
+            callBackScroolEvent(){
+                var that = this;
+                this.do_something();
+                console.log("we are scrooooooolling");
+                //- let toc__posTop_from_viewport =  document.querySelector(".c-table-of-content").getBoundingClientRect().top;
+                //- let window__posTop_from_viewport = window.scrollY;
+                //- //- console.log(window__posTop_from_viewport);
+                //- var st = window.pageYOffset || document.documentElement.scrollTop; 
                 
+                //- for (let i = 0; i < that.toc__content__list__items__posTop_from_parent.length; i++) {
+                //-         //- console.log("current-itemt: " + i);
+                //-         if (st > lastScrollTop){
+                //-             if ((- toc__posTop_from_viewport) > that.toc__content__list__items__posTop_from_parent[i] && (- toc__posTop_from_viewport) < that.toc__content__list__items__posTop_from_parent[i+1]) {
+                //-                 that.resetActiveToc(that.toc__nav__list__items[i-1], that.toc__nav__list__items[i], that.toc__content__list__items[i-1], that.toc__content__list__items[i])
+                //-             }
+                //-         } else {
+                //-             if ((- toc__posTop_from_viewport) > that.toc__content__list__items__posTop_from_parent[i] && (- toc__posTop_from_viewport) < that.toc__content__list__items__posTop_from_parent[i+1]) {
+                //-                 that.resetActiveToc(that.toc__nav__list__items[i+1], that.toc__nav__list__items[i], that.toc__content__list__items[i+1], that.toc__content__list__items[i])
+                //-             }
+                //-         }
+                //- }
+                
+                //- lastScrollTop = st <= 0 ? 0 : st;
             }
 
             callback (current_index) { 
+                var that = this;
+                setTimeout(function(){ 
+                    that.toc__nav__list__items.forEach((table_of_content__item, i) => {
+                        that.toc__content__list__items__posTop_from_parent.push(Math.round(that.toc__content__list__items[i].getBoundingClientRect().top));
+                    });
+                }, 2000);
+                that.attachScrollEvents();
+
+
                 //- Get # Hashtag from url (ex: lentreprise-partage)
                 let hash = window.top.location.hash.substr(1);
-                if(hash){
-                    let current_hash_item = this.toc__content__list.querySelector("#" + hash);
+                console.log(hash.length);
+                if(hash.length){
+                    let current_hash_content_item = this.toc__content__list.querySelector("#" + hash);
                     let current_hash_nav_item = document.querySelector('[data-id="' + hash + '"]');
-                    this.table_of_content__items[current_index].removeAttribute("aria-selected");
-                    this.toc__content[current_index].classList.remove("active");
-                    
-                    // Go to current #
-                    this.scrollTo(current_hash_item, 600);
-                    current_hash_item.classList.add("active");
-                    current_hash_nav_item.setAttribute("aria-selected", "true");
-                    this.positionTopCurrentState(current_hash_nav_item);
+                    this.resetActiveToc(this.toc__nav__list__items[current_index], current_hash_nav_item, this.toc__content__list__items[current_index], current_hash_content_item);
+                    this.scrollTo(current_hash_content_item);
                 }
-             }
-            
+                
+            }
+
+            switchToc(oldTocNavItem, newTocNavItem) {
+                newTocNavItem.focus();
+                
+                // tab panels to show and hide
+                let index = [...this.toc__nav__list__items].indexOf(newTocNavItem);
+                let oldIndex = [...this.toc__nav__list__items].indexOf(oldTocNavItem);
+
+                this.resetActiveToc(oldTocNavItem, newTocNavItem, this.toc__content__list__items[oldIndex], this.toc__content__list__items[index]);
+                this.scrollTo(this.toc__content__list__items[index]);
+                var that = this
+                setTimeout(function(){ 
+                    const wrappedFunc = this.do_something.bind(that);
+                    window.addEventListener("scroll", wrappedFunc);
+                }, 2000);
+
+            }
+
+            resetActiveToc(oldTocNavItem, newTocNavItem, oldTocContentItem, newTocContentItem){
+                this.positionTopCurrentState(newTocNavItem);
+                if (oldTocNavItem) oldTocNavItem.removeAttribute("aria-selected");
+                if (newTocNavItem) newTocNavItem.setAttribute("aria-selected", "true");
+                if (oldTocContentItem) oldTocContentItem.classList.remove("active");
+                if (newTocContentItem) newTocContentItem.classList.add("active");
+            }
+
+            positionTopCurrentState(child) {
+                // Position of the blue background
+                let table_of_content_Y = this.toc__nav__list.getBoundingClientRect().top
+                let relativePosTop =  child.getBoundingClientRect().top  - table_of_content_Y;
+                this.current_state.style.top = relativePosTop + 'px';
+                if(this.relativeWidth){
+                    let childWidth =  child.offsetWidth;
+                    this.current_state.style.width = childWidth + 'px';
+                }
+            }
+
+            scrollTo(element) {
+                let elementPosition = element.offsetTop;
+                let parentPosition = this.el.getBoundingClientRect().top + window.scrollY;
+                let offsetPosition = (elementPosition + parentPosition);
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+
+            attachEvents(table_of_content__item, i) {
+                // Handle clicking of tabs for mouse users
+                table_of_content__item.addEventListener("click", (e) => {
+                    window.removeEventListener("scroll", this.callBackScroolEvent);
+
+                    e.preventDefault();
+                    let currentToc = this.toc__nav__list.querySelector("[aria-selected]");
+
+                    if (e.currentTarget !== currentToc) {
+                        this.switchToc(currentToc, e.currentTarget);
+                    }
+                });
+
+                window.addEventListener('hashchange', () => {
+                    this.init();
+                });
+            }
 
             convertToSlug(str) {
                 str = str.replace(/^\s+|\s+$/g, ''); // trim
@@ -147,120 +259,6 @@ script.
 
                 return str;
             }
-
-            positionTopCurrentState(child) {
-                let table_of_content_Y = this.table_of_content__list.getBoundingClientRect().top
-                let relativePosTop =  child.getBoundingClientRect().top  - table_of_content_Y;
-                this.current_state.style.top = relativePosTop + 'px';
-                if(this.relativeWidth){
-                    let childWidth =  child.offsetWidth;
-                    this.current_state.style.width = childWidth + 'px';
-                }
-            }
-            
-            attachEvents(table_of_content__item) {
-                // Handle clicking of tabs for mouse users
-                table_of_content__item.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    let currentToc = this.table_of_content__list.querySelector("[aria-selected]");
-
-                    if (e.currentTarget !== currentToc) {
-                        this.switchToc(currentToc, e.currentTarget);
-                    }
-                });
-
-                window.addEventListener('hashchange', () => {
-                    this.init();
-                });
-
-                // Handle keydown events for keyboard users
-                //- tab.addEventListener("keydown", (e) => {
-                //- // Get the index of the current tab in the tabs node list
-                //- let index = [...this.tabs].indexOf(e.currentTarget);
-
-                //- // Work out which key the user is pressing and
-                //- // Calculate the new tab's index where appropriate
-                //- let dir =
-                //-     e.which === 37
-                //-     ? index - 1
-                //-     : e.which === 39
-                //-     ? index + 1
-                //-     : e.which === 40
-                //-     ? "down"
-                //-     : null;
-
-                //- if (dir !== null) {
-                //-     e.preventDefault();
-                //-     // If the down key is pressed, move focus to the open panel,
-                //-     // otherwise switch to the adjacent tab
-                //-     dir === "down"
-                //-     ? this.panels[index].focus()
-                //-     : this.tabs[dir]
-                //-     ? this.switchToc(e.currentTarget, this.tabs[dir])
-                //-     : void 0;
-                //- }
-                //- });
-            }
-
-            switchToc(oldToc, newToc) {
-                newToc.focus();
-
-                this.positionTopCurrentState(newToc);
-                // Set the selected state
-                newToc.setAttribute("aria-selected", "true");
-                oldToc.removeAttribute("aria-selected");
-                // tab panels to show and hide
-                let index = [...this.table_of_content__items].indexOf(newToc);
-                let oldIndex = [...this.table_of_content__items].indexOf(oldToc);
-                if (this.toc__content[oldIndex]) this.toc__content[oldIndex].classList.remove("active");
-                if (this.toc__content[index]) this.toc__content[index].classList.add("active");
-                this.scrollTo(this.toc__content[index], 600);
-            }
-
-            scrollTo(element, duration) {
-                let elementPosition = element.offsetTop;
-                let parentPosition = this.el.getBoundingClientRect().top + window.scrollY;
-                let offsetPosition = (elementPosition + parentPosition) - 60;
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
-
-
-            //- scrollTo(element, to, duration) {
-            //-     if (duration <= 0) return;
-            //-     var difference = to - element.scrollTop;
-            //-     var perTick = difference / duration * 10;
-
-            //-     console.log(difference);
-
-            //-     setTimeout(function() {
-            //-         element.scrollTop = element.scrollTop + perTick;
-            //-         if (element.scrollTop === to) return;
-            //-         scrollTo(element, to, duration - 10);
-            //-     }, 10);
-            //- }
-
-            //- smoothScrollTo(destination, parent, time) {
-            //-     let scroll = init();
-            //-     requestAnimationFrame(shouldScroll);
-
-            //-     function init() {
-            //-         let start = parent.scrollTop;
-            //-         let ticks = time || 30;
-            //-         let i = 0;
-            //-         let positionY = () => (destination - start) * i / ticks + start;
-            //-         let isFinished = () => i++ >= ticks;
-            //-         return { positionY, isFinished };
-            //-     }
-
-            //-     function shouldScroll() {
-            //-         if (scroll.isFinished()) return;
-            //-         parent.scrollTop = scroll.positionY();
-            //-         requestAnimationFrame(shouldScroll);
-            //-     }
-            //- }
         }
         
         const toclists = document.querySelectorAll(".c-table-of-content");
