@@ -109,6 +109,8 @@ $c-table-of-content-border-radius: $g-border-radius-medium !default;
           width: 1.8rem;
           left: -.8rem;
           font-weight: 400;
+          -webkit-transition: color .1s cubic-bezier(0, 0.99, 0.31, 1);
+          transition: color .1s cubic-bezier(0, 0.99, 0.31, 1);
         }
       }
 
@@ -123,8 +125,8 @@ $c-table-of-content-border-radius: $g-border-radius-medium !default;
   }
 
   .c-table-of-content__nav__item {
-
-
+    -webkit-transition: color .1s cubic-bezier(0, 0.99, 0.31, 1);
+    transition: color .1s cubic-bezier(0, 0.99, 0.31, 1);
     &:hover {
       text-decoration: underline !important;
     }
@@ -135,6 +137,13 @@ $c-table-of-content-border-radius: $g-border-radius-medium !default;
 
     &:focus:not(:focus-visible) {
       outline: none;
+    }
+
+    &.clicked{
+      &:before{
+        color: $color-blue-700 !important;
+      }
+      color: $color-blue-700 !important;
     }
 
     &[aria-selected="true"] {
