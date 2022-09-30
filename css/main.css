@@ -3144,7 +3144,7 @@ textarea.c-input--h-large {
   z-index: 70; }
 
 .c-menu--large {
-  min-width: 22rem; }
+  min-width: 13rem; }
 
 .c-menu.c-menu--visible.js-no-action {
   position: static; }
