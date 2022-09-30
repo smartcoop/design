@@ -10,7 +10,7 @@ $c-panel-padding-all-mobile: 2.2rem !default;
 $c-panel-padding-horizontal: 2.4rem !default;
 $c-panel-padding-vertical: 2.4rem !default;
 $c-panel-border-color: $color-gray-150 !default;
-$c-panel-border-radius: 1rem !default;
+$c-panel-border-radius: $g-border-radius-medium !default;
 
 /* Standard component construction
    ========================================================================== */
@@ -34,7 +34,7 @@ $c-panel-border-radius: 1rem !default;
   height: 5.6rem;
   padding: 0 $c-panel-padding-horizontal;
   background:  $color-white;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: $g-border-radius-medium $g-border-radius-medium 0 0;
   border-bottom: 1px solid $c-panel-border-color;
 }
 

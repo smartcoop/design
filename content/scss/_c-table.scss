@@ -13,7 +13,7 @@ $c-table-row-odd-color: $color-gray-50 !default;
 $c-table-row-selected-color: #FFF !default;
 $c-table-row-selected-bg: $color-semantic-primary !default;
 $c-table-padding-all: 3.2rem !default;
-$c-table-border-radius: 1rem !default;
+$c-table-border-radius: $g-border-radius-medium !default;
 
 /* Component
    ========================================================================== */
