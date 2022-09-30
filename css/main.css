@@ -157,9 +157,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333333;
-  background: #FFF;
-  position: relative;
-  overflow: hidden; }
+  background: #FFF; }
 
 img,
 video {
@@ -174,8 +172,7 @@ select {
 
 a {
   color: #000000;
-  text-decoration: underline;
-  font-weight: 600; }
+  text-decoration: none; }
 
 em, i {
   font-style: italic; }
@@ -4734,10 +4731,7 @@ header .c-navbar, header.c-navbar {
  * Set of generic helping classes
  */
 .u-maximize-height {
-  height: 100% !important;
-  position: relative;
-  width: 100%;
-  overflow: hidden; }
+  height: 100% !important; }
 
 .u-maximize-width {
   width: 100% !important; }
