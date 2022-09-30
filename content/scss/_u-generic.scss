@@ -6,6 +6,9 @@
 
 .u-maximize-height {
   height: 100% !important;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .u-maximize-width {
@@ -123,6 +126,18 @@
   display: flex;
   &--twins{
     justify-content: space-between;
+  }
+  &--bp2-col{
+    flex-direction: column;
+    @media (min-width: $g-bp2) {
+      flex-direction: row;
+    }
+  }
+  &--bp2-column-reverse{
+    flex-direction: column-reverse;
+    @media (min-width: $g-bp2) {
+      flex-direction: row;
+    }
   }
 }
 
