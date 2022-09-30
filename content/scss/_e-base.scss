@@ -33,8 +33,6 @@ body {
   line-height: $base-line-height;
   color: $base-color;
   background: $g-base-background;
-  position: relative;
-  overflow: hidden;
 }
 
 img,
@@ -52,8 +50,7 @@ select {
 
 a {
   color: $color-semantic-link;
-  text-decoration: underline;
-  font-weight: 600;
+  text-decoration: none;
 }
 
 em, i {
