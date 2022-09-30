@@ -204,7 +204,6 @@ $c-button-link-color: $color-red-600 !default;
 .c-button--borderless,
 .c-button--borderless-i,
 .c-button--borderless-muted {
-  border-radius: $g-border-radius-small;
   border-color: transparent;
   background: transparent;
   // transition: all .15s ease;
