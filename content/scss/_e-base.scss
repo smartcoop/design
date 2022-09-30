@@ -33,6 +33,8 @@ body {
   line-height: $base-line-height;
   color: $base-color;
   background: $g-base-background;
+  position: relative;
+  overflow: hidden;
 }
 
 img,

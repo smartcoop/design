@@ -106,6 +106,12 @@ $g-spacer-unit: 0.8rem !default;
 
 .u-spacer-top {
   margin-top: $g-spacer-unit * 2 !important;
+  &--bp2{
+    margin-top: $g-spacer-unit * 2 !important;
+    @media (min-width: $g-bp2) {
+      margin-top: 0 !important;
+    }
+  }
 }
 
 .u-spacer-top-l {
@@ -133,6 +139,12 @@ $g-spacer-unit: 0.8rem !default;
 
 .u-spacer-bottom {
   margin-bottom: $g-spacer-unit * 2 !important;
+  &--bp2-x{
+    margin-bottom: 0 !important;
+    @media (min-width: $g-bp2) {
+      margin-bottom: $g-spacer-unit * 2 !important;
+    }
+  }
 }
 
 .u-spacer-bottom-l {
