@@ -87,15 +87,15 @@
 }
 
 .c-design-system-nav-close {
-  display: none;
+  display: none !important;
 }
 
 .u-kill-scroll {
   .c-design-system-nav-open {
-    display: none;
+    display: none !important;
   }
 
   .c-design-system-nav-close {
-    display: block;
+    display: block !important;
   }
 }

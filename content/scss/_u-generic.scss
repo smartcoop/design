@@ -119,6 +119,25 @@
   flex-direction: column;
 }
 
+.u-flex{
+  display: flex;
+  &--twins{
+    justify-content: space-between;
+  }
+  &--bp2-col{
+    flex-direction: column;
+    @media (min-width: $g-bp2) {
+      flex-direction: row;
+    }
+  }
+  &--bp2-column-reverse{
+    flex-direction: column-reverse;
+    @media (min-width: $g-bp2) {
+      flex-direction: row;
+    }
+  }
+}
+
 .u-content-flex {
   flex: 1 0 auto;
 }

@@ -10,11 +10,19 @@ $c-tabs-item-active-color: $color-semantic-header-text !default;
 $c-tabs-item-border-color: $color-gray-200 !default;
 $c-tabs-item-hover-border-color: $color-gray-200 !default;
 $c-tabs-active-border-width: 0.3rem !default;
+$c-tabs-padding-all: 3.2rem !default;
+$c-tabs-border-radius: $g-border-radius-medium !default;
+
 
 /* Component
    ========================================================================== */
 
 .c-tabs {
+  background-color: $color-white;
+  padding: $c-tabs-padding-all/2 $c-tabs-padding-all;
+  border-radius: $c-tabs-border-radius;
+
+
   > ul {
 
     @media screen and (min-width: $g-bp1) {
@@ -86,4 +94,5 @@ $c-tabs-active-border-width: 0.3rem !default;
 
 .c-tabs__section {
   margin-top: $g-spacer-unit * 2;
+  @extend .u-padding-vertical;
 }

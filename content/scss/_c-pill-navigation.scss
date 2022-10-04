@@ -13,6 +13,7 @@
 .c-pill-navigation__item > a,
 .c-pill-navigation__item > button {
   display: block;
+  text-decoration: none;
   padding: .8rem 1.6rem;
   color: $color-semantic-body-text;
   font-weight: 500;

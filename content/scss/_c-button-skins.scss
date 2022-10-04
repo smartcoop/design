@@ -54,7 +54,7 @@ $c-button-link-color: $color-red-600 !default;
    ========================================================================== */
 
 .c-button--secondary {
-  border: 1px solid $color-gray-500;
+  border: 2px solid $color-semantic-body-text;
   background: #fff;
   color: $color-semantic-body-text;
 
@@ -65,7 +65,8 @@ $c-button-link-color: $color-red-600 !default;
   &:hover,
   &.c-button--hover {
     background: $color-gray-50;
-    border-color: $color-gray-500;
+    border-color: $color-gray-900;
+    color: $color-gray-900;
   }
 
   &:active,
@@ -205,6 +206,7 @@ $c-button-link-color: $color-red-600 !default;
 .c-button--borderless-muted {
   border-color: transparent;
   background: transparent;
+  // transition: all .15s ease;
 
   &:not(.c-button--icon) {
     padding-left: 0;
@@ -257,12 +259,14 @@ $c-button-link-color: $color-red-600 !default;
 }
 
 .c-button--borderless {
-  color: $color-semantic-body-text;
+  color: $color-semantic-link;
+  font-weight: 600;
 
   &:hover,
   &.c-button--hover {
     color: $color-gray-900;
     background: transparent;
+    text-decoration: underline;
   }
 
   &:active,
@@ -319,3 +323,4 @@ $c-button-link-color: $color-red-600 !default;
     }
   }
 }
+

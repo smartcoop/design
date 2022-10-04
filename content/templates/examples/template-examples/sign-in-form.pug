@@ -5,61 +5,59 @@ block append pageVariables
 
 block body
 
-    header.o-container-vertical
-        .o-container
-            +c-brand({size: "small"})
-
+    header.o-container-vertical.c-navbar.c-navbar--white.c-navbar--entry
+        .o-container.o-container--small
+            .o-grid
+                .o-grid-col-6
+                    +c-brand({size: "small"})
+                .o-grid-col-6
+                    ul.c-pill-navigation
+                        li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu.u-spacer-left-auto
+                            button(type="button" data-menu="lang-switch"  data-menu-samewidth="true") Français
+                            ul.c-menu.c-menu--large#lang-switch
+                                li.c-menu__item
+                                    a.c-menu__label(href="/fr") Français
+                                li.c-menu__item
+                                    a.c-menu__label(href="/nt") Nederlands
     main.o-container-vertical
         .o-container.o-container--small
-            .c-panel
-                .c-panel__body
-
-                    form
-                        h3.c-h2 Sign in
+            h3.c-h2.u-spacer-bottom-xl Connectez-vous
+            .c-panel.u-shadow-50
+                .c-panel__body.u-padding-vertical-l.u-padding-bottom
+                    form#login_form(onsubmit="alert('Test for eye toggle: you submitted the form');")
                         .o-form-group-layout.o-form-group-layout--standard
                             .o-form-group
-                                label.o-form-group__label Email
+                                label.o-form-group__label Adresse email ou nom d'utilisateur
                                 .o-form-group__controls
-                                    input.c-input(type="email")
+                                    input.c-input(type="text")
 
                             .o-form-group
-                                label.o-form-group__label(for="passwordId") Password
+                                label.o-form-group__label(for="passwordId") Mot de passe
                                 .o-form-group__controls
                                     .c-input-with-icon
                                         input.c-input#passwordId(type="password")
-                                        button.c-input-with-icon__toggle(data-password-toggle)
+                                        button.c-input-with-icon__toggle(data-password-toggle type="button")
                                             +icon('eye')
                                             +icon('eye-off')
 
-                            .o-form-group
-                                a.c-button.c-button--primary.c-button--block(href="#")
+                            .o-form-group.u-flex.u-flex--bp2-col.u-flex--twins.u-spacer-top-l
+                                button.c-button.c-button--primary(type="submit")
                                     .c-button__content
-                                        .c-button__label Sign in
+                                        .c-button__label Se connecter
+                                
+                                a.c-button.c-button--borderless.c-button--right.u-spacer-top--bp2(href="/examples/template-examples/account-recovery.html")
+                                    .c-button__content
+                                        .c-button__label.u-text-right Nom d'utilisateur ou mot de passe oublié ?
 
                             p.c-or
-                                span or
+                                span ou
 
                             .o-form-group
-                                a.c-button.c-button--secondary.c-button--block(href="#")
+                                a.c-button.c-button--borderless.c-button--block(href="#")
                                     .c-button__content
-                                        .c-button__label Register your account
-                            .o-form-group.u-ta-center
-
-            .c-content.u-text-center.u-spacer-top-l
-                a.u-text-muted(href="#") Forgot password
-
-    footer#footer
-        .o-container-vertical
-            .o-container
-                hr.c-hr
-
-                .c-toolbar.c-toolbar--auto
-                    .c-toolbar__left
-                        .c-toolbar__item
-                            .o-flex.o-flex--vertical-center
-                                span.u-spacer-right-s Don't have an account yet?
-                                a.u-text-muted(href="") Sign up
-                    .c-toolbar__right
-                        ul.c-bordered-list-horizontal.c-bordered-list-horizontal--muted
-                            li: a.u-text-muted(href="#") Footer link
-                            li: a.u-text-muted(href="#") Footer link
+                                        .c-button__label S’enregistrer en tant que membre
+                            
+                            .o-form-group
+                                a.c-button.c-button--borderless.c-button--block(href="#")
+                                    .c-button__content
+                                        .c-button__label S’enregistrer en tant que donneur d’ordre

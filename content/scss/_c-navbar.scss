@@ -8,6 +8,24 @@
   padding: 0 2.4rem;
   height: $g-bar-size-regular;
   width: 100%;
+  background-color: $color-white;
+}
+
+header .c-navbar, header.c-navbar{
+  border-top: 4px solid $color-red-600;
+  .c-toolbar{
+    height: 6rem;
+  }
+}
+
+.c-navbar--entry {
+  padding: 4rem 2.4rem;
+  height: auto;
+}
+
+.c-navbar--entry {
+  padding: 4rem 2.4rem;
+  height: auto;
 }
 
 .c-navbar--unpadded {
@@ -34,18 +52,23 @@
   border-bottom: 1px solid $color-semantic-border;
 }
 
-.c-navbar--main {
+.c-navbar--main { // DSW only ! TOFIX - Perf!!
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 1.6rem;
+  border-top: none;
+  header &{
+    border-top: none;
+  }
 
   .c-toolbar__right {
     z-index: 61;
   }
 
   @media (min-width: $g-bp3) {
-    margin: 3.2rem 0;
-    height: $g-bar-size-large;
+    margin: 1.8rem 0 3.2rem;
+    padding-bottom: 1.8rem !important;
+    height: auto;
   }
 }
 

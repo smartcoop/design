@@ -339,9 +339,11 @@ html.br-prototype-nav-is-open {
   padding: 3rem*$br-rem-multiplier;
   border: 1px solid $br-sample-border-color;
   margin: 1rem*$br-rem-multiplier 0;
+  // padding: 0; //(((((
+  // margin: 0; //(((((
   position: relative;
-  overflow-y: hidden;
-  overflow-x: auto;
+  // overflow-y: hidden;
+  // overflow-x: auto; // fix sticky
   resize: both;
 }
 

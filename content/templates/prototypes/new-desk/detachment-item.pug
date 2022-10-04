@@ -51,7 +51,7 @@ block content
                                                     span= user.name
 
         .u-scroll-wrapper-body
-            .u-spacer-xl
+            .u-padding
                 nav.c-tabs.c-tabs--border-bottom
                     ul
                         li
@@ -60,7 +60,6 @@ block content
                             a.c-tabs__item(href="#dpd") DPD
 
                     .c-tabs__section#a1
-                        .u-spacer-xl
                             .u-spacer-bottom-l
                                 +c-alert({
                                     title: "History",
@@ -93,7 +92,6 @@ block content
                                             +c-key-value({key: 'Language'}) French
 
                     .c-tabs__section#dpd
-                        .u-spacer-xl
                             .u-spacer-bottom-l
                                 +c-alert({
                                     title: "History",
