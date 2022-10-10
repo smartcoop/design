@@ -118,6 +118,7 @@ block content
                     this.toc__back_to_top_btn = this.el.querySelector(".back-to-top");
                     this.toc__back_to_top_btn__link = this.toc__back_to_top_btn.querySelector("button");
                     this.toc__back_to_top_btn__visible = false;
+                    this.el_init_top = this.el.getBoundingClientRect().top;
                     this.toc__content__list__items__posTop_from_parent = [];
                     this.lastScrollTop = 0;
                     this.whatever = this.callBackScrollEvent.bind(this, el);
@@ -163,11 +164,15 @@ block content
 
 
                 callBackScrollEvent(el){
-                    let toc__posTop_from_viewport =  document.querySelector(".c-table-of-content").getBoundingClientRect().top - 200;
+                    //- let gap_from_top =
+                    console.log(this.el.getBoundingClientRect().top); // 154 OK
+                    let toc__posTop_from_viewport =  this.el.getBoundingClientRect().top - this.el_init_top - 128 - 26 - 50; // 126 for header and title fiex, 26 for padding, 50 for a gap
                     let window__posTop_from_viewport = window.scrollY;
+                    //- console.log(window__posTop_from_viewport);
                     var st = window.pageYOffset || document.documentElement.scrollTop; 
 
                     //- Handling back-to-top btn
+                    console.log(this.toc__content__list__items__posTop_from_parent);
                     if(- toc__posTop_from_viewport > this.toc__content__list__items__posTop_from_parent[1]){
                         if(this.toc__back_to_top_btn__visible === false){
                             this.fadeIn(this.toc__back_to_top_btn);
@@ -199,7 +204,7 @@ block content
 
                 callback (current_index) { 
                     this.toc__nav__list__items.forEach((table_of_content__item, i) => {
-                        this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[i].offsetTop));
+                        this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[i].getBoundingClientRect().top));
                     });
                     this.attachScrollEvents();
 
