@@ -28,6 +28,11 @@
   position: relative !important;
 }
 
+.u-position-fixed {
+  position: fixed !important;
+  z-index: 1000;
+}
+
 .u-position-absolute {
   position: absolute !important;
 }

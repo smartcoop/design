@@ -133,7 +133,6 @@ script.
             }
 
             attachScrollEvents(){
-                console.log(" launch scroll listener");
                 window.addEventListener("scroll", this.whatever);
             }
 
@@ -221,7 +220,6 @@ script.
                 this.resetActiveToc(newTocNavItem, this.toc__content__list__items[oldIndex], this.toc__content__list__items[index]);
                 this.scrollTo(this.toc__content__list__items[index]);
                 var that = this;
-                console.log(newTocNavItem);
                 setTimeout(function(){ 
                     newTocNavItem.classList.remove("clicked");
                 }, 400);
@@ -247,6 +245,9 @@ script.
                 let elementPosition = element.offsetTop - 55;
                 let parentPosition = this.el.getBoundingClientRect().top + window.scrollY;
                 let offsetPosition = (elementPosition + parentPosition);
+                console.log(elementPosition);
+                console.log(parentPosition);
+                console.log(offsetPosition);
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: "smooth"

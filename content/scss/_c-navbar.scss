@@ -8,11 +8,11 @@
   padding: 0 2.4rem;
   height: $g-bar-size-regular;
   width: 100%;
-  background-color: $color-white;
 }
 
 header .c-navbar, header.c-navbar{
   border-top: 4px solid $color-red-600;
+  background-color: $color-white;
   .c-toolbar{
     height: 6rem;
   }
@@ -98,10 +98,6 @@ header .c-navbar, header.c-navbar{
 
 .c-navbar--bordered-top {
   border-top: 0.1rem solid $color-semantic-border;
-}
-
-.c-navbar--bordered-bottom {
-  border-bottom: 0.1rem solid $color-semantic-border;
 }
 
 /* Sizes
