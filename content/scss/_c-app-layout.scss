@@ -27,49 +27,58 @@
 }
 
 .c-app-layout-inner__sidebar {
-  top: 6.6rem;
   width: 100%;
+  position: relative;
+  top: 2px;
   flex: 0 0 auto;
   padding: 2.4rem;
   margin-top: 0;
-  border-top-right-radius: .6rem;
   background-color: $color-white;
-
+  height: 100%;
+  
   @media (min-width: $g-bp2) {
-    height: 100%;
-    width: 32rem;
+    top: 6.6rem; // because position fixed
+    border-top-right-radius: .6rem;
+    width: $g-sidebar-width-m;
+  }
+  @media (min-width: $g-bp4) {
+    width: $g-sidebar-width-l;
   }
 }
 
 .c-app-layout-inner__content {
-  margin-left: 32rem;
   margin-top: .2rem;
   width: 100%;
   height: 100%;
   flex: 1;
   .c-navbar{
-    margin-left: .2rem;
-    position: fixed;
-    top: 6.4rem;
+    // position: fixed;
+    // top: 6.4rem;
     height: auto;
     border-top: 2px solid $color-gray-50;
     border-bottom: 2px solid $color-gray-50;
-    padding-left: 0;
-    &.u-position-fixed + div{
-      margin-top: 120px;
-    }
     .c-toolbar{
       height: 6.4rem;
-      padding-left: 2.4rem;
-      border-bottom-left-radius: .6rem;
-      border-top-left-radius: .6rem;
       background: white;
     }
   }
-  @media (max-width: ($g-bp2 - 1px)) {
-    // Make full screen scrollable on mobile, mobile navigation pattern needs to be revised in the future
-    .u-scroll-wrapper {
-      display: block;
+  @media (min-width: $g-bp2) {
+    margin-left: $g-sidebar-width-m;
+    .c-navbar{
+      padding-left: 0;
+      margin-left: .2rem;
+      position: fixed;
+      top: 6.4rem;
+      &.u-position-fixed + div{
+        margin-top: 12.8rem;
+      }
+      .c-toolbar{
+        border-bottom-left-radius: .6rem;
+        border-top-left-radius: .6rem;
+      }
     }
+  }
+  @media (min-width: $g-bp4) {
+    margin-left: $g-sidebar-width-l;
   }
 }

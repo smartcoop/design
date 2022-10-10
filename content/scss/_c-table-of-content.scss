@@ -14,13 +14,13 @@ $c-table-of-content-item-active-color-dark: $color-blue-700 !default;
 
 $c-table-of-content-padding-v: 2.6rem !default;
 $c-table-of-content-padding-h: 3.2rem !default;
+$c-table-of-content-padding--mobile: 2.4rem !default;
 $c-table-of-content-border-radius: 1rem !default;
 
 
 /* Component
    ========================================================================== */
 .c-table-of-content {
-  padding: $c-table-of-content-padding-v $c-table-of-content-padding-h;
   background-color: $color-white;
   border-radius: $c-table-of-content-border-radius;
   .back-to-top {
@@ -30,8 +30,12 @@ $c-table-of-content-border-radius: 1rem !default;
     width: max-content;
     margin-left: auto;
   }
-
+  padding: $c-table-of-content-padding--mobile;
+  
+  @media (min-width: $g-bp2) {
+  }
   @media (min-width: $g-bp3) {
+    padding: $c-table-of-content-padding-v $c-table-of-content-padding-h;
     .back-to-top {
       display: none !important;
     }
@@ -66,6 +70,7 @@ $c-table-of-content-border-radius: 1rem !default;
     display: inline-block;
     position: relative;
     padding-left: 0;
+    margin: .4rem 0;
 
 
     .current-state {

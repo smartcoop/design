@@ -37,7 +37,8 @@ const findSelect = (element) => {
 
 // Position dropdown
 function create(triggerEl, targetEl) {
-  const placement = triggerEl.dataset.menuPlacement || 'bottom-start';
+  const placement = triggerEl.dataset.menuPlacement || 'bottom-end';
+  console.log(placement);
   const samewidthEnable = !!triggerEl.dataset.menuSamewidth || false;
   const offset = triggerEl.dataset.menuOffset || dropdownMargin;
   
