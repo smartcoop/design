@@ -78,7 +78,7 @@ const defaultConfig = {
     extraLiners: ['body']
   },
   express: {
-    port: 8000,
+    port: 2000,
   },
 };
 
