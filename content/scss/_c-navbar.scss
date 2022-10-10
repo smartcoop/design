@@ -5,9 +5,22 @@
    ========================================================================== */
 
 .c-navbar {
-  padding: 0 2.4rem;
   height: $g-bar-size-regular;
-  width: 100%;
+  &.main-title{
+    @media (min-width: $g-bp1) {
+      right: 0;
+      left: 0;
+    }
+    @media (min-width: $g-bp2) {
+      left: $g-sidebar-width-m;
+    }
+    @media (min-width: $g-bp4) {
+      left: $g-sidebar-width-l;
+    }
+  }
+  .c-toolbar{
+    padding: 0 2.4rem;
+  }
 }
 
 header .c-navbar, header.c-navbar{

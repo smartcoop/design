@@ -29,8 +29,10 @@
 }
 
 .u-position-fixed {
-  position: fixed !important;
-  z-index: 1000;
+  @media (min-width: $g-bp2) {
+    position: fixed !important;
+    z-index: 1000;
+  }
 }
 
 .u-position-absolute {
