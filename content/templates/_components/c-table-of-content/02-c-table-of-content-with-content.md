@@ -1,5 +1,5 @@
 ---
-title: Table of content with content and interactive
+title: Table of contents and related content
 ---
 
 Here's an example with the related content and the dynamic links that scroll to the right place.
