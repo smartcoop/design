@@ -14,56 +14,22 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body class="u-maximize-height u-overflow-hidden">
+<body>
     <div class="c-app-layout">
-        <header class="u-position-relative">
-            <div class="c-navbar c-navbar--scrollable c-navbar--bordered-bottom">
+        <header class="u-position-fixed u-maximize-width">
+            <div class="c-navbar c-navbar--scrollable">
                 <div class="c-toolbar">
                     <div class="c-toolbar__left">
                         <div class="c-toolbar__item">
                             <div class="c-brand c-brand--xsmall">
-                                <a href="/">
-                                    <img src="/images/logo.svg" alt="Smart" />
+                                <a href="/prototypes/account/super-user-homepage.html">
+                                    <img src="/images/logo.svg" alt="Smart">
                                 </a>
                             </div>
                         </div>
                         <div class="c-toolbar__item">
                             <nav>
                                 <ul class="c-pill-navigation">
-                                    <li class="c-pill-navigation__item">
-                                        <a href="#">Activities</a>
-                                    </li>
-                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
-                                        <button type="button" data-menu="subMenu-1" data-menu-samewidth="true">Management</button>
-                                        <ul class="c-menu c-menu--large" id="subMenu-1">
-                                            <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">Nav item</a>
-                                            </li>
-                                            <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">Nav item</a>
-                                            </li>
-                                            <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">Nav item</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
-                                        <button type="button" data-menu="subMenu-2" data-menu-samewidth="true">Documents</button>
-                                        <ul class="c-menu c-menu--large" id="subMenu-2">
-                                            <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">Nav item</a>
-                                            </li>
-                                            <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">Nav item</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="c-pill-navigation__item">
-                                        <a href="#">Members</a>
-                                    </li>
-                                    <li class="c-pill-navigation__item">
-                                        <a href="#">Archive</a>
-                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -73,33 +39,13 @@
                             <nav>
                                 <ul class="c-pill-navigation">
                                     <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
-                                        <button type="button" data-menu="helpMenu">
-                                            <div class="o-svg-icon o-svg-icon-circle-help  ">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
-                                                    <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
-                                                    <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
-                                                </svg>
-                                            </div>
-                                            <span class="u-sr-accessible">Help</span>
-                                        </button>
-                                        <ul class="c-menu c-menu--large" id="helpMenu">
+                                        <button type="button" data-menu="lang-switch">Français</button>
+                                        <ul class="c-menu c-menu--large" id="lang-switch">
                                             <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">About this page</a>
-                                            </li>
-                                            <li class="c-menu__divider" role="presentational"></li>
-                                            <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">
-                                                    <span>Documentation</span>
-                                                    <div class="o-svg-icon o-svg-icon-external-link o-svg-icon--small o-svg-icon--subtle ">
-                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M14 5C13.7348 5 13.4804 4.89464 13.2929 4.70711C13.1054 4.51957 13 4.26522 13 4C13 3.73478 13.1054 3.48043 13.2929 3.29289C13.4804 3.10536 13.7348 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V10C21 10.2652 20.8946 10.5196 20.7071 10.7071C20.5196 10.8946 20.2652 11 20 11C19.7348 11 19.4804 10.8946 19.2929 10.7071C19.1054 10.5196 19 10.2652 19 10V6.414L9.707 15.707C9.5184 15.8892 9.2658 15.99 9.0036 15.9877C8.7414 15.9854 8.49059 15.8802 8.30518 15.6948C8.11977 15.5094 8.0146 15.2586 8.01233 14.9964C8.01005 14.7342 8.11084 14.4816 8.293 14.293L17.586 5H14ZM3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H10C10.2652 5 10.5196 5.10536 10.7071 5.29289C10.8946 5.48043 11 5.73478 11 6C11 6.26522 10.8946 6.51957 10.7071 6.70711C10.5196 6.89464 10.2652 7 10 7H5V19H17V14C17 13.7348 17.1054 13.4804 17.2929 13.2929C17.4804 13.1054 17.7348 13 18 13C18.2652 13 18.5196 13.1054 18.7071 13.2929C18.8946 13.4804 19 13.7348 19 14V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V7Z" fill="#595959" />
-                                                        </svg>
-                                                    </div>
-                                                </a>
+                                                <a class="c-menu__label" href="#">Français</a>
                                             </li>
                                             <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">Report a bug</a>
+                                                <a class="c-menu__label" href="#">Néerlandais</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -107,25 +53,35 @@
                             </nav>
                         </div>
                         <div class="c-toolbar__item">
-                            <div class="c-input-with-icon">
-                                <div class="o-svg-icon o-svg-icon-search  ">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="#595959" />
-                                    </svg>
-                                </div>
-                                <input class="c-input" type="text" placeholder="Search...">
-                            </div>
-                        </div>
-                        <div class="c-toolbar__item">
-                            <a class="c-user-navigation" href="#" data-menu="userMenu">
+                            <button class="c-user-navigation" href="#" data-menu="userMenu">
                                 <div class="c-avatar c-avatar--img">
-                                    <img src="/images/avatars/1.jpg" alt="avatar" />
+                                    <img src="/images/avatars/1.jpg" alt="avatar">
                                 </div>
-                            </a>
+                                <p class="c-avatar-and-text__text">Alice Henslay (HEA) </p>
+                            </button>
                             <ul class="c-menu c-menu--large" id="userMenu">
                                 <!-- @todo add correct user menu items-->
+                                <li class="c-menu__info">
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--img">
+                                            <img src="/images/avatars/1.jpg" alt="avatar">
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>Signed in as <strong>Alice</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="c-menu__divider" role="presentational"></li>
                                 <li class="c-menu__item">
-                                    <a class="c-menu__label" href="#">My profile</a>
+                                    <a class="c-menu__label" href="/prototypes/account/as-member.html">Act as a member</a>
+                                </li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="/prototypes/account/as-client.html">Act as a client</a>
+                                </li>
+                                <li class="c-menu__divider" role="presentational"></li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="#">Terms and conditions</a>
                                 </li>
                                 <li class="c-menu__divider" role="presentational"></li>
                                 <li class="c-menu__item">
@@ -138,341 +94,345 @@
             </div>
         </header>
         <main class="u-maximize-width u-scroll-wrapper">
-            <div class="c-navbar c-navbar--bordered-bottom">
-                <div class="c-toolbar">
-                    <div class="c-toolbar__left">
-                        <div class="c-toolbar__item">
-                            <h2 class="c-toolbar__title">Simulation</h2>
+            <div class="c-app-layout-inner__content">
+                <div class="u-scroll-wrapper">
+                    <div class="c-navbar u-position-fixed main-title">
+                        <div class="c-toolbar">
+                            <div class="c-toolbar__left">
+                                <div class="c-toolbar__item">
+                                    <h2 class="c-toolbar__title">Simulation</h2>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="u-scroll-wrapper-body">
-                <form class="o-grid">
-                    <div class="o-grid-col-bp3-6">
-                        <div class="u-spacer-l">
-                            <div class="c-panel">
-                                <div class="o-form-group-layout o-form-group-layout--horizontal">
-                                    <div class="c-panel__body">
-                                        <div class="o-form-group">
-                                            <div class="o-form-group__label o-form-group__label--with-helper">
-                                                <label for="smartService">Smart service</label>
-                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-smartService" data-tooltip-placement="right">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-circle-help  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
-                                                                <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
-                                                                <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
-                                                            </svg>
+                    <div class="u-scroll-wrapper-body">
+                        <form class="o-grid">
+                            <div class="o-grid-col-bp3-6">
+                                <div class="u-spacer-l">
+                                    <div class="c-panel">
+                                        <div class="o-form-group-layout o-form-group-layout--horizontal">
+                                            <div class="c-panel__body">
+                                                <div class="o-form-group">
+                                                    <div class="o-form-group__label o-form-group__label--with-helper">
+                                                        <label for="smartService">Smart service</label>
+                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-smartService" data-tooltip-placement="right">
+                                                            <span class="c-button__content">
+                                                                <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                                        <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                                        <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="u-sr-accessible">Show info
+                                                                </div>
+                                                            </span>
+                                                        </button>
+                                                        <div class="c-tooltip" role="tooltip" id="helper-smartService">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                            <div class="c-tooltip__arrow" data-popper-arrow></div>
                                                         </div>
-                                                        <div class="u-sr-accessible">Show info
-                                                        </div>
-                                                    </span>
-                                                </button>
-                                                <div class="c-tooltip" role="tooltip" id="helper-smartService">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                    <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
-                                                </div>
-                                            </div>
-                                            <div class="o-form-group__controls o-form-group__controls--full-width">
-                                                <div class="c-select-holder">
-                                                    <select class="c-select" id="smartService">
-                                                        <option value="0">Select</option>
-                                                        <option value="1">I provide a service in exchange for a salary</option>
-                                                        <option value="2">I continue my Smart activity</option>
-                                                        <option value="3">I carry out an interim assignment on behalf of a client</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="o-form-group">
-                                            <label class="o-form-group__label" for="contractType">Contract type</label>
-                                            <div class="o-form-group__controls">
-                                                <div class="c-select-holder">
-                                                    <select class="c-select" id="contractType">
-                                                        <option value="0">Select</option>
-                                                        <option value="1">Artistic</option>
-                                                        <option value="2">Non-artistic</option>
-                                                        <option value="3">Student</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="o-form-group">
-                                            <div class="o-form-group__label o-form-group__label--with-helper">
-                                                <label id="vatLabel">VAT</label>
-                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helperVat" data-tooltip-placement="right">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-circle-help  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
-                                                                <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
-                                                                <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                        <div class="u-sr-accessible">Show info
-                                                        </div>
-                                                    </span>
-                                                </button>
-                                                <div class="c-tooltip" role="tooltip" id="helperVat">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                    <div class="c-tooltip__arrow" data-popper-arrow></div>
-                                                </div>
-                                            </div>
-                                            <div class="o-form-group__controls">
-                                                <div class="o-flex o-flex--spaced">
-                                                    <div class="c-select-holder">
-                                                        <select class="c-select" id="vatType" aria-labelledby="vatLabel">
-                                                            <option>Select</option>
-                                                            <option>Included</option>
-                                                            <option>Not included</option>
-                                                            <option>No VAT</option>
-                                                        </select>
                                                     </div>
-                                                    <div class="c-radio-group c-radio-group--inline">
-                                                        <div class="c-radio">
-                                                            <label>
-                                                                <input type="radio" name="vatRate" checked="checked" />6%
-                                                            </label>
-                                                        </div>
-                                                        <div class="c-radio">
-                                                            <label>
-                                                                <input type="radio" name="vatRate" checked="checked" />21%
-                                                            </label>
+                                                    <div class="o-form-group__controls o-form-group__controls--full-width">
+                                                        <div class="c-select-holder">
+                                                            <select class="c-select" id="smartService">
+                                                                <option value="0">Select</option>
+                                                                <option value="1">I provide a service in exchange for a salary</option>
+                                                                <option value="2">I continue my Smart activity</option>
+                                                                <option value="3">I carry out an interim assignment on behalf of a client</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p class="c-form-help-text">Ignore when you selected <strong>continue my Smart activity</strong> for the <strong>Smart Service</strong> field.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="c-panel__body">
-                                        <div class="u-spacer-bottom-l">
-                                            <div class="c-alert c-alert--default c-alert--light">
-                                                <div class="o-svg-icon o-svg-icon-circle-information  ">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#595959" />
-                                                        <path d="M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z" fill="#595959" />
-                                                        <path d="M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z" fill="#595959" />
-                                                    </svg>
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="contractType">Contract type</label>
+                                                    <div class="o-form-group__controls">
+                                                        <div class="c-select-holder">
+                                                            <select class="c-select" id="contractType">
+                                                                <option value="0">Select</option>
+                                                                <option value="1">Artistic</option>
+                                                                <option value="2">Non-artistic</option>
+                                                                <option value="3">Student</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="c-alert__body">
-                                                    <div class="c-alert__text">
-                                                        <div class="c-alert__message">
-                                                            <div class="c-content">
-                                                                <p>Required when carrying out an interim assignment on behalf of a client.</p>
+                                                <div class="o-form-group">
+                                                    <div class="o-form-group__label o-form-group__label--with-helper">
+                                                        <label id="vatLabel">VAT</label>
+                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helperVat" data-tooltip-placement="right">
+                                                            <span class="c-button__content">
+                                                                <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                                        <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                                        <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="u-sr-accessible">Show info
+                                                                </div>
+                                                            </span>
+                                                        </button>
+                                                        <div class="c-tooltip" role="tooltip" id="helperVat">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                            <div class="c-tooltip__arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o-form-group__controls">
+                                                        <div class="o-flex o-flex--spaced">
+                                                            <div class="c-select-holder">
+                                                                <select class="c-select" id="vatType" aria-labelledby="vatLabel">
+                                                                    <option>Select</option>
+                                                                    <option>Included</option>
+                                                                    <option>Not included</option>
+                                                                    <option>No VAT</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="c-radio-group c-radio-group--inline">
+                                                                <div class="c-radio">
+                                                                    <label>
+                                                                        <input type="radio" name="vatRate" checked>6%
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-radio">
+                                                                    <label>
+                                                                        <input type="radio" name="vatRate" checked>21%
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-form-help-text">Ignore when you selected <strong>continue my Smart activity</strong> for the <strong>Smart Service</strong> field.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-panel__body">
+                                                <div class="u-spacer-bottom-l">
+                                                    <div class="c-alert c-alert--default c-alert--light">
+                                                        <div class="o-svg-icon o-svg-icon-circle-information  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#595959" />
+                                                                <path d="M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z" fill="#595959" />
+                                                                <path d="M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="c-alert__body">
+                                                            <div class="c-alert__text">
+                                                                <div class="c-alert__message">
+                                                                    <div class="c-content">
+                                                                        <p>Required when carrying out an interim assignment on behalf of a client.</p>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="o-form-group">
-                                            <div class="o-form-group__label o-form-group__label--with-helper">
-                                                <label for="jointCommission">Joint commission</label>
-                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-jointCommission" data-tooltip-placement="right">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-circle-help  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
-                                                                <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
-                                                                <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
-                                                            </svg>
+                                                <div class="o-form-group">
+                                                    <div class="o-form-group__label o-form-group__label--with-helper">
+                                                        <label for="jointCommission">Joint commission</label>
+                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-jointCommission" data-tooltip-placement="right">
+                                                            <span class="c-button__content">
+                                                                <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                                        <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                                        <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="u-sr-accessible">Show info
+                                                                </div>
+                                                            </span>
+                                                        </button>
+                                                        <div class="c-tooltip" role="tooltip" id="helper-jointCommission">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                            <div class="c-tooltip__arrow" data-popper-arrow></div>
                                                         </div>
-                                                        <div class="u-sr-accessible">Show info
+                                                    </div>
+                                                    <div class="o-form-group__controls o-form-group__controls--full-width">
+                                                        <div class="c-select-holder">
+                                                            <select class="c-select" id="jointCommission">
+                                                                <option value="0">Select</option>
+                                                                <option value="1">Performing arts - CP304 (CCT performing arts)</option>
+                                                                <option value="2">Music - CP 304 (CCT music)</option>
+                                                                <option value="3">Dramatic Art - CP 304 (CCT Dramatic Performing Arts)</option>
+                                                                <option value="4">Film industry (feature films) - CP 303.01</option>
+                                                                <option value="5">Operation of cinemas - CP 303.03</option>
+                                                                <option value="6">Dubbing - CCT dubbing</option>
+                                                                <option value="7">Audiovisual other - CP 227</option>
+                                                                <option value="8">Sociocultural Flemish Community - CP 329.01</option>
+                                                                <option value="9">Sociocultural Walloon Region and French and German-speaking Community - CP 329.02</option>
+                                                                <option value="10">Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03</option>
+                                                                <option value="11">Auxiliary joint committee for employees - CP 200</option>
+                                                                <option value="12">Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03</option>
+                                                                <option value="13">Other</option>
+                                                                <option value="14">Work carried out abroad for a principal established abroad</option>
+                                                                <option value="15">Public authorities (no PC)</option>
+                                                            </select>
                                                         </div>
-                                                    </span>
-                                                </button>
-                                                <div class="c-tooltip" role="tooltip" id="helper-jointCommission">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                    <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="subCommittee">Subcommittee</label>
+                                                    <div class="o-form-group__controls">
+                                                        <div class="c-select-holder">
+                                                            <select class="c-select" id="subCommittee">
+                                                                <option value="0">Select</option>
+                                                                <option value="1">Sociocultural work</option>
+                                                                <option value="2">Integration centers and social animation</option>
+                                                                <option value="3">Socio-professional integration</option>
+                                                                <option value="4">Work, employment, socio-professional integration in the Walloon Region</option>
+                                                                <option value="5">Continuing education sub-committee in the French Community</option>
+                                                                <option value="6">Professional integration in the Brussels Region</option>
+                                                            </select>
+                                                        </div>
+                                                        <p class="c-form-help-text">Only required when you selected <strong>Sociocultural Flemish Community </strong> or <strong>Sociocultural Walloon Region and French and German-speaking Community</strong> for the <strong>Joint commission</strong> field.</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="o-form-group__controls o-form-group__controls--full-width">
-                                                <div class="c-select-holder">
-                                                    <select class="c-select" id="jointCommission">
-                                                        <option value="0">Select</option>
-                                                        <option value="1">Performing arts - CP304 (CCT performing arts)</option>
-                                                        <option value="2">Music - CP 304 (CCT music)</option>
-                                                        <option value="3">Dramatic Art - CP 304 (CCT Dramatic Performing Arts)</option>
-                                                        <option value="4">Film industry (feature films) - CP 303.01</option>
-                                                        <option value="5">Operation of cinemas - CP 303.03</option>
-                                                        <option value="6">Dubbing - CCT dubbing</option>
-                                                        <option value="7">Audiovisual other - CP 227</option>
-                                                        <option value="8">Sociocultural Flemish Community - CP 329.01</option>
-                                                        <option value="9">Sociocultural Walloon Region and French and German-speaking Community - CP 329.02</option>
-                                                        <option value="10">Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03</option>
-                                                        <option value="11">Auxiliary joint committee for employees - CP 200</option>
-                                                        <option value="12">Joint sub-committee for federal and bicommunity socio-cultural organizations in the Brussels Region - CP 329.03</option>
-                                                        <option value="13">Other</option>
-                                                        <option value="14">Work carried out abroad for a principal established abroad</option>
-                                                        <option value="15">Public authorities (no PC)</option>
-                                                    </select>
+                                            <div class="c-panel__body">
+                                                <div class="o-form-group">
+                                                    <div class="o-form-group__label o-form-group__label--with-helper">
+                                                        <label id="amountLabel">Amount</label>
+                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-Amount" data-tooltip-placement="right">
+                                                            <span class="c-button__content">
+                                                                <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                                        <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                                        <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="u-sr-accessible">Show info
+                                                                </div>
+                                                            </span>
+                                                        </button>
+                                                        <div class="c-tooltip" role="tooltip" id="helperAmount">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                            <div class="c-tooltip__arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o-form-group__controls">
+                                                        <div class="o-flex o-flex--spaced">
+                                                            <div class="c-select-holder">
+                                                                <select class="c-select" id="amountType" aria-labelledby="amountLabel">
+                                                                    <option>Billing amount</option>
+                                                                    <option>Net to pay</option>
+                                                                    <option>Gross salary</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="c-input-group">
+                                                                <div class="c-input-group__input">
+                                                                    <input class="c-input" type="text" id="amountValue" aria-labelledby="amountLabel">
+                                                                </div>
+                                                                <div class="c-input-group__append">
+                                                                    <span>€</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="o-form-group">
-                                            <label class="o-form-group__label" for="subCommittee">Subcommittee</label>
-                                            <div class="o-form-group__controls">
-                                                <div class="c-select-holder">
-                                                    <select class="c-select" id="subCommittee">
-                                                        <option value="0">Select</option>
-                                                        <option value="1">Sociocultural work</option>
-                                                        <option value="2">Integration centers and social animation</option>
-                                                        <option value="3">Socio-professional integration</option>
-                                                        <option value="4">Work, employment, socio-professional integration in the Walloon Region</option>
-                                                        <option value="5">Continuing education sub-committee in the French Community</option>
-                                                        <option value="6">Professional integration in the Brussels Region</option>
-                                                    </select>
+                                                <div class="o-form-group">
+                                                    <label class="o-form-group__label" for="numberOfDays">Number of days</label>
+                                                    <div class="o-form-group__controls">
+                                                        <input class="c-input" type="number" id="numberOfDays">
+                                                    </div>
                                                 </div>
-                                                <p class="c-form-help-text">Only required when you selected <strong>Sociocultural Flemish Community </strong> or <strong>Sociocultural Walloon Region and French and German-speaking Community</strong> for the <strong>Joint commission</strong> field.</p>
+                                                <div class="o-form-group">
+                                                    <div class="o-form-group__label o-form-group__label--with-helper">
+                                                        <label for="defrayalPerDay">Defrayal (per day)</label>
+                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-defrayalPerDay" data-tooltip-placement="right">
+                                                            <span class="c-button__content">
+                                                                <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                                        <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                                        <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="u-sr-accessible">Show info
+                                                                </div>
+                                                            </span>
+                                                        </button>
+                                                        <div class="c-tooltip" role="tooltip" id="helper-defrayalPerDay">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                            <div class="c-tooltip__arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o-form-group__controls">
+                                                        <div class="c-input-group">
+                                                            <div class="c-input-group__input">
+                                                                <input class="c-input" type="number" id="defrayalPerDay" value="">
+                                                            </div>
+                                                            <div class="c-input-group__append">
+                                                                <span>€</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="o-form-group">
+                                                    <div class="o-form-group__label o-form-group__label--with-helper">
+                                                        <label for="withHoldingTax">Withholding tax</label>
+                                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-withHoldingTax" data-tooltip-placement="right">
+                                                            <span class="c-button__content">
+                                                                <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                                        <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                                        <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="u-sr-accessible">Show info
+                                                                </div>
+                                                            </span>
+                                                        </button>
+                                                        <div class="c-tooltip" role="tooltip" id="helper-withHoldingTax">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                                            <div class="c-tooltip__arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o-form-group__controls">
+                                                        <div class="c-input-group">
+                                                            <div class="c-input-group__input">
+                                                                <input class="c-input" type="number" id="withHoldingTax">
+                                                            </div>
+                                                            <div class="c-input-group__append">
+                                                                <div class="o-svg-icon o-svg-icon-percent  ">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="#595959" />
+                                                                        <path d="M17 19C18.1046 19 19 18.1046 19 17C19 15.8954 18.1046 15 17 15C15.8954 15 15 15.8954 15 17C15 18.1046 15.8954 19 17 19Z" fill="#595959" />
+                                                                        <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" fill="#595959" />
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <script>
+                                                    htmx.logAll();
+                                                </script>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="c-panel__body">
-                                        <div class="o-form-group">
-                                            <div class="o-form-group__label o-form-group__label--with-helper">
-                                                <label id="amountLabel">Amount</label>
-                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-Amount" data-tooltip-placement="right">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-circle-help  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
-                                                                <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
-                                                                <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                        <div class="u-sr-accessible">Show info
-                                                        </div>
-                                                    </span>
-                                                </button>
-                                                <div class="c-tooltip" role="tooltip" id="helperAmount">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                    <div class="c-tooltip__arrow" data-popper-arrow></div>
-                                                </div>
-                                            </div>
-                                            <div class="o-form-group__controls">
-                                                <div class="o-flex o-flex--spaced">
-                                                    <div class="c-select-holder">
-                                                        <select class="c-select" id="amountType" aria-labelledby="amountLabel">
-                                                            <option>Billing amount</option>
-                                                            <option>Net to pay</option>
-                                                            <option>Gross salary</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="c-input-group">
-                                                        <div class="c-input-group__input">
-                                                            <input class="c-input" type="text" id="amountValue" aria-labelledby="amountLabel" />
-                                                        </div>
-                                                        <div class="c-input-group__append">
-                                                            <span>€</span>
-                                                        </div>
+                                    <div class="u-spacer-top">
+                                        <div class="c-toolbar">
+                                            <div class="c-toolbar__right">
+                                                <div class="c-toolbar__item">
+                                                    <div class="c-button-toolbar">
+                                                        <input class="c-button c-button--secondary" type="reset" value="Reset">
+                                                        <input class="c-button c-button--primary" type="submit" value="Calculate">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="o-form-group">
-                                            <label class="o-form-group__label" for="numberOfDays">Number of days</label>
-                                            <div class="o-form-group__controls">
-                                                <input class="c-input" type="number" id="numberOfDays" />
-                                            </div>
-                                        </div>
-                                        <div class="o-form-group">
-                                            <div class="o-form-group__label o-form-group__label--with-helper">
-                                                <label for="defrayalPerDay">Defrayal (per day)</label>
-                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-defrayalPerDay" data-tooltip-placement="right">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-circle-help  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
-                                                                <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
-                                                                <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                        <div class="u-sr-accessible">Show info
-                                                        </div>
-                                                    </span>
-                                                </button>
-                                                <div class="c-tooltip" role="tooltip" id="helper-defrayalPerDay">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                    <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
-                                                </div>
-                                            </div>
-                                            <div class="o-form-group__controls">
-                                                <div class="c-input-group">
-                                                    <div class="c-input-group__input">
-                                                        <input class="c-input" type="number" id="defrayalPerDay" value="" />
-                                                    </div>
-                                                    <div class="c-input-group__append">
-                                                        <span>€</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="o-form-group">
-                                            <div class="o-form-group__label o-form-group__label--with-helper">
-                                                <label for="withHoldingTax">Withholding tax</label>
-                                                <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-withHoldingTax" data-tooltip-placement="right">
-                                                    <span class="c-button__content">
-                                                        <div class="o-svg-icon o-svg-icon-circle-help  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
-                                                                <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
-                                                                <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                        <div class="u-sr-accessible">Show info
-                                                        </div>
-                                                    </span>
-                                                </button>
-                                                <div class="c-tooltip" role="tooltip" id="helper-withHoldingTax">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
-                                                    <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
-                                                </div>
-                                            </div>
-                                            <div class="o-form-group__controls">
-                                                <div class="c-input-group">
-                                                    <div class="c-input-group__input">
-                                                        <input class="c-input" type="number" id="withHoldingTax" />
-                                                    </div>
-                                                    <div class="c-input-group__append">
-                                                        <div class="o-svg-icon o-svg-icon-percent  ">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="#595959" />
-                                                                <path d="M17 19C18.1046 19 19 18.1046 19 17C19 15.8954 18.1046 15 17 15C15.8954 15 15 15.8954 15 17C15 18.1046 15.8954 19 17 19Z" fill="#595959" />
-                                                                <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" fill="#595959" />
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <script>
-                                            htmx.logAll();
-                                        </script>
                                     </div>
                                 </div>
                             </div>
-                            <div class="u-spacer-top">
-                                <div class="c-toolbar">
-                                    <div class="c-toolbar__right">
-                                        <div class="c-toolbar__item">
-                                            <div class="c-button-toolbar">
-                                                <input class="c-button c-button--secondary" type="reset" value="Reset">
-                                                <input class="c-button c-button--primary" type="submit" value="Calculate">
-                                            </div>
+                            <div class="o-grid-col-bp3-6">
+                                <div class="o-flex o-flex--vertical o-flex--center u-maximize-height">
+                                    <div class="u-spacer-l">
+                                        <div class="o-flex o-flex--vertical o-flex--center">
+                                            <div class="c-loader"></div>
+                                            <p class="u-text-muted c-body-1">Calculating simulation...</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    <div class="o-grid-col-bp3-6">
-                        <div class="o-flex o-flex--vertical o-flex--center u-maximize-height">
-                            <div class="u-spacer-l">
-                                <div class="o-flex o-flex--vertical o-flex--center">
-                                    <div class="c-loader"></div>
-                                    <p class="u-text-muted c-body-1">Calculating simulation...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </main>
     </div>

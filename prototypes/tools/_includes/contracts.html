@@ -1,207 +1,209 @@
-<div class="u-scroll-wrapper">
-    <div class="c-navbar c-navbar--bordered-bottom c-navbar--scrollable">
-        <div class="c-toolbar">
-            <div class="c-toolbar__left">
-                <div class="c-toolbar__item">
-                    <h2 class="c-toolbar__title">Contracts</h2>
-                </div>
-                <div class="c-toolbar__item">
-                    <ul class="c-filter-pill-list">
-                        <li class="c-filter-pill-list__item">
-                            <div class="c-popover" role="popover" id="startDateFilter">
-                                <h4 class="c-h4">Start date</h4>
-                                <div class="u-padding-vertical-s">
-                                    <div class="o-form-group-layout o-form-group-layout--standard">
-                                        <div class="o-form-group">
-                                            <label class="o-form-group__label u-sr-accessible" for="filterCriteriaStartDate">Criteria</label>
-                                            <div class="o-form-group__controls o-form-group__controls--full-width">
-                                                <div class="c-select-holder">
-                                                    <select class="c-select" id="filterCriteriaStartDate">
-                                                        <option>Equal to</option>
-                                                        <option>Not equal to</option>
-                                                        <option>After</option>
-                                                        <option>After or equal to</option>
-                                                        <option>Before</option>
-                                                        <option>Before or equal to</option>
-                                                    </select>
+<div class="c-app-layout-inner__content">
+    <div class="u-scroll-wrapper">
+        <div class="c-navbar u-position-fixed main-title">
+            <div class="c-toolbar">
+                <div class="c-toolbar__left">
+                    <div class="c-toolbar__item">
+                        <h2 class="c-toolbar__title">Contracts</h2>
+                    </div>
+                    <div class="c-toolbar__item">
+                        <ul class="c-filter-pill-list">
+                            <li class="c-filter-pill-list__item">
+                                <div class="c-popover" role="popover" id="startDateFilter">
+                                    <h4 class="c-h4">Start date</h4>
+                                    <div class="u-padding-vertical-s">
+                                        <div class="o-form-group-layout o-form-group-layout--standard">
+                                            <div class="o-form-group">
+                                                <label class="o-form-group__label u-sr-accessible" for="filterCriteriaStartDate">Criteria</label>
+                                                <div class="o-form-group__controls o-form-group__controls--full-width">
+                                                    <div class="c-select-holder">
+                                                        <select class="c-select" id="filterCriteriaStartDate">
+                                                            <option>Equal to</option>
+                                                            <option>Not equal to</option>
+                                                            <option>After</option>
+                                                            <option>After or equal to</option>
+                                                            <option>Before</option>
+                                                            <option>Before or equal to</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="o-form-group">
-                                            <div class="c-input-group">
-                                                <div class="c-input-group__input">
-                                                    <input class="c-input" type="text" id="startDate" />
-                                                </div>
-                                                <div class="c-input-group__append">
-                                                    <div class="o-svg-icon o-svg-icon-calendar  ">
-                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M9 2C9.55228 2 10 2.44772 10 3V4H14V3C14 2.44772 14.4477 2 15 2C15.5523 2 16 2.44772 16 3V4H19C20.1046 4 21 4.89543 21 6V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V6C3 4.89543 3.89543 4 5 4H8V3C8 2.44772 8.44772 2 9 2ZM8 6H5V9H19V6H16V7C16 7.55228 15.5523 8 15 8C14.4477 8 14 7.55228 14 7V6H10V7C10 7.55228 9.55228 8 9 8C8.44772 8 8 7.55228 8 7V6ZM19 11H5V19H19V11Z" fill="#595959" />
-                                                        </svg>
+                                            <div class="o-form-group">
+                                                <div class="c-input-group">
+                                                    <div class="c-input-group__input">
+                                                        <input class="c-input" type="text" id="startDate" />
+                                                    </div>
+                                                    <div class="c-input-group__append">
+                                                        <div class="o-svg-icon o-svg-icon-calendar  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M9 2C9.55228 2 10 2.44772 10 3V4H14V3C14 2.44772 14.4477 2 15 2C15.5523 2 16 2.44772 16 3V4H19C20.1046 4 21 4.89543 21 6V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V6C3 4.89543 3.89543 4 5 4H8V3C8 2.44772 8.44772 2 9 2ZM8 6H5V9H19V6H16V7C16 7.55228 15.5523 8 15 8C14.4477 8 14 7.55228 14 7V6H10V7C10 7.55228 9.55228 8 9 8C8.44772 8 8 7.55228 8 7V6ZM19 11H5V19H19V11Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="c-toolbar c-toolbar--auto">
-                                    <div class="c-toolbar__right">
-                                        <div class="c-toolbar__item">
-                                            <div class="c-button-toolbar">
-                                                <button class="c-button c-button--secondary" type="button">
-                                                    <span class="c-button__content">
-                                                        <span class="c-button__label">Reset</span>
-                                                    </span>
-                                                </button>
-                                                <button class="c-button c-button--primary" type="button">
-                                                    <span class="c-button__content">
-                                                        <span class="c-button__label">Apply filter</span>
-                                                    </span>
-                                                </button>
+                                    <div class="c-toolbar c-toolbar--auto">
+                                        <div class="c-toolbar__right">
+                                            <div class="c-toolbar__item">
+                                                <div class="c-button-toolbar">
+                                                    <button class="c-button c-button--secondary" type="button">
+                                                        <span class="c-button__content">
+                                                            <span class="c-button__label">Reset</span>
+                                                        </span>
+                                                    </button>
+                                                    <button class="c-button c-button--primary" type="button">
+                                                        <span class="c-button__content">
+                                                            <span class="c-button__label">Apply filter</span>
+                                                        </span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <button class="c-filter-pill" type="button" data-popover="startDateFilter" data-popover-placement="bottom-start">
-                                <span class="c-filter-pill__label">Start date</span>
-                                <div class="o-svg-icon o-svg-icon-caret-down  ">
-                                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </li>
-                        <li class="c-filter-pill-list__item">
-                            <button class="c-filter-pill" type="button">
-                                <span class="c-filter-pill__label">Client</span>
-                                <span class="c-filter-pill__counter">2</span>
-                                <div class="o-svg-icon o-svg-icon-caret-down  ">
-                                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </li>
-                        <li class="c-filter-pill-list__item">
-                            <button class="c-filter-pill" type="button">
-                                <span class="c-filter-pill__label">Description</span>
-                                <div class="o-svg-icon o-svg-icon-caret-down  ">
-                                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="c-toolbar__right">
-                <div class="c-toolbar__item">
-                    <div class="c-button-toolbar c-button-toolbar--compact">
-                        <a class="c-button c-button--secondary c-button--icon" href="/development/tools/contracts.html">
-                            <span class="c-button__content">
-                                <div class="o-svg-icon o-svg-icon-three-rows  ">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 2C20.1046 2 21 2.89543 21 4V6C21 7.10457 20.1046 8 19 8L5 8C3.89543 8 3 7.10457 3 6L3 4C3 2.89543 3.89543 2 5 2L19 2ZM19 6V4L5 4V6L19 6Z" fill="#595959" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 16C20.1046 16 21 16.8954 21 18V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20L3 18C3 16.8954 3.89543 16 5 16L19 16ZM19 20V18H5V20H19Z" fill="#595959" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 9C20.1046 9 21 9.89543 21 11V13C21 14.1046 20.1046 15 19 15L5 15C3.89543 15 3 14.1046 3 13L3 11C3 9.89543 3.89543 9 5 9L19 9ZM19 13V11L5 11V13L19 13Z" fill="#595959" />
-                                    </svg>
-                                </div>
-                                <div class="u-sr-accessible">List view
-                                </div>
-                            </span>
-                        </a>
-                        <a class="c-button c-button--secondary c-button--icon" href="/development/tools/contracts-grid.html">
-                            <span class="c-button__content">
-                                <div class="o-svg-icon o-svg-icon-table  ">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 5.5C2 4.39543 2.89543 3.5 4 3.5H20C21.1046 3.5 22 4.39543 22 5.5V18.5C22 19.6046 21.1046 20.5 20 20.5H4C2.89543 20.5 2 19.6046 2 18.5V5.5ZM11 5.5H4V8.5H11V5.5ZM13 5.5V8.5H20V5.5H13ZM20 10.5H13V13.5H20V10.5ZM20 15.5H13V18.5H20V15.5ZM11 18.5V15.5H4V18.5H11ZM4 13.5H11V10.5H4V13.5Z" fill="#595959" />
-                                    </svg>
-                                </div>
-                                <div class="u-sr-accessible">Grid view
-                                </div>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="c-toolbar__item">
-                    <button class="c-button c-button--primary" type="button">
-                        <span class="c-button__content">
-                            <div class="o-svg-icon o-svg-icon-add  ">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
-                                </svg>
-                            </div>
-                            <span class="c-button__label">Add item</span>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="u-scroll-wrapper-body">
-    </div>
-    <div class="u-position-relative">
-        <div class="c-navbar c-navbar--scrollable c-navbar--bordered-top">
-            <div class="c-toolbar">
-                <div class="c-toolbar__left">
-                    <div class="c-toolbar__item">
-                        <p class="c-body-2 u-text-muted">1 - 15 of 248 items</p>
+                                <button class="c-filter-pill" type="button" data-popover="startDateFilter" data-popover-placement="bottom-start">
+                                    <span class="c-filter-pill__label">Start date</span>
+                                    <div class="o-svg-icon o-svg-icon-caret-down  ">
+                                        <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="c-filter-pill-list__item">
+                                <button class="c-filter-pill" type="button">
+                                    <span class="c-filter-pill__label">Client</span>
+                                    <span class="c-filter-pill__counter">2</span>
+                                    <div class="o-svg-icon o-svg-icon-caret-down  ">
+                                        <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="c-filter-pill-list__item">
+                                <button class="c-filter-pill" type="button">
+                                    <span class="c-filter-pill__label">Description</span>
+                                    <div class="o-svg-icon o-svg-icon-caret-down  ">
+                                        <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="c-toolbar__right">
                     <div class="c-toolbar__item">
-                        <nav class="c-pagination" aria-label="Page navigation">
-                            <ul class="c-pagination__nav">
-                                <li class="c-pagination__item">
-                                    <a class="c-button c-button--borderless c-button--icon" href="#" disabled="disabled">
-                                        <span class="c-button__content">
-                                            <div class="o-svg-icon o-svg-icon-chevron-left  ">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
-                                                </svg>
-                                            </div>
-                                            <div class="u-sr-accessible">
-                                            </div>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="c-pagination__item c-pagination__item--active">
-                                    <a class="c-pagination__link" href="#">1</a>
-                                </li>
-                                <li class="c-pagination__item">
-                                    <a class="c-pagination__link" href="#">2</a>
-                                </li>
-                                <li class="c-pagination__item">
-                                    <a class="c-pagination__link" href="#">3</a>
-                                </li>
-                                <li class="c-pagination__item">
-                                    <a class="c-pagination__link" href="#">4</a>
-                                </li>
-                                <li class="c-pagination__item">
-                                    <a class="c-pagination__link" href="#">5</a>
-                                </li>
-                                <li class="c-pagination__item">
-                                    <span class="c-pagination__dots">...</span>
-                                </li>
-                                <li class="c-pagination__item">
-                                    <a class="c-pagination__link" href="#">17</a>
-                                </li>
-                                <li class="c-pagination__item">
-                                    <a class="c-button c-button--borderless c-button--icon" href="#">
-                                        <span class="c-button__content">
-                                            <div class="o-svg-icon o-svg-icon-chevron-right  ">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z" fill="#595959" />
-                                                </svg>
-                                            </div>
-                                            <div class="u-sr-accessible">
-                                            </div>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                        <div class="c-button-toolbar c-button-toolbar--compact">
+                            <a class="c-button c-button--secondary c-button--icon" href="/development/tools/contracts.html">
+                                <span class="c-button__content">
+                                    <div class="o-svg-icon o-svg-icon-three-rows  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19 2C20.1046 2 21 2.89543 21 4V6C21 7.10457 20.1046 8 19 8L5 8C3.89543 8 3 7.10457 3 6L3 4C3 2.89543 3.89543 2 5 2L19 2ZM19 6V4L5 4V6L19 6Z" fill="#595959" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19 16C20.1046 16 21 16.8954 21 18V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20L3 18C3 16.8954 3.89543 16 5 16L19 16ZM19 20V18H5V20H19Z" fill="#595959" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19 9C20.1046 9 21 9.89543 21 11V13C21 14.1046 20.1046 15 19 15L5 15C3.89543 15 3 14.1046 3 13L3 11C3 9.89543 3.89543 9 5 9L19 9ZM19 13V11L5 11V13L19 13Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <div class="u-sr-accessible">List view
+                                    </div>
+                                </span>
+                            </a>
+                            <a class="c-button c-button--secondary c-button--icon" href="/development/tools/contracts-grid.html">
+                                <span class="c-button__content">
+                                    <div class="o-svg-icon o-svg-icon-table  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 5.5C2 4.39543 2.89543 3.5 4 3.5H20C21.1046 3.5 22 4.39543 22 5.5V18.5C22 19.6046 21.1046 20.5 20 20.5H4C2.89543 20.5 2 19.6046 2 18.5V5.5ZM11 5.5H4V8.5H11V5.5ZM13 5.5V8.5H20V5.5H13ZM20 10.5H13V13.5H20V10.5ZM20 15.5H13V18.5H20V15.5ZM11 18.5V15.5H4V18.5H11ZM4 13.5H11V10.5H4V13.5Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <div class="u-sr-accessible">Grid view
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__item">
+                        <button class="c-button c-button--primary" type="button">
+                            <span class="c-button__content">
+                                <div class="o-svg-icon o-svg-icon-add  ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
+                                    </svg>
+                                </div>
+                                <span class="c-button__label">Add item</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="u-scroll-wrapper-body">
+        </div>
+        <div class="u-position-relative">
+            <div class="c-navbar c-navbar--scrollable c-navbar--bordered-top">
+                <div class="c-toolbar">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <p class="c-body-2 u-text-muted">1 - 15 of 248 items</p>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <nav class="c-pagination" aria-label="Page navigation">
+                                <ul class="c-pagination__nav">
+                                    <li class="c-pagination__item">
+                                        <a class="c-button c-button--borderless c-button--icon" href="#" disabled="disabled">
+                                            <span class="c-button__content">
+                                                <div class="o-svg-icon o-svg-icon-chevron-left  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z" fill="#595959" />
+                                                    </svg>
+                                                </div>
+                                                <div class="u-sr-accessible">
+                                                </div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="c-pagination__item c-pagination__item--active">
+                                        <a class="c-pagination__link" href="#">1</a>
+                                    </li>
+                                    <li class="c-pagination__item">
+                                        <a class="c-pagination__link" href="#">2</a>
+                                    </li>
+                                    <li class="c-pagination__item">
+                                        <a class="c-pagination__link" href="#">3</a>
+                                    </li>
+                                    <li class="c-pagination__item">
+                                        <a class="c-pagination__link" href="#">4</a>
+                                    </li>
+                                    <li class="c-pagination__item">
+                                        <a class="c-pagination__link" href="#">5</a>
+                                    </li>
+                                    <li class="c-pagination__item">
+                                        <span class="c-pagination__dots">...</span>
+                                    </li>
+                                    <li class="c-pagination__item">
+                                        <a class="c-pagination__link" href="#">17</a>
+                                    </li>
+                                    <li class="c-pagination__item">
+                                        <a class="c-button c-button--borderless c-button--icon" href="#">
+                                            <span class="c-button__content">
+                                                <div class="o-svg-icon o-svg-icon-chevron-right  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z" fill="#595959" />
+                                                    </svg>
+                                                </div>
+                                                <div class="u-sr-accessible">
+                                                </div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
