@@ -24,8 +24,9 @@ block body
             h3.c-h2.u-spacer-bottom-xl Demande de réinitialisation envoyée
             .c-panel.u-shadow-50
                 .c-panel__body.u-padding-vertical-l.u-padding-bottom
-                    .u-flex.u-flex--twins.u-spacer-bottom-l.u-spacer-top-s
+                    .u-flex.u-spacer-bottom-l.u-spacer-top-s
                         +c-badge({skin: 'success', size: 'large'})(class="u-spacer-xs u-m-l-0")
-                        h4.c-h4.u-spacer-left  <span class="u-text-success">Merci.</span> Vous allez recevoir un e-mail contenant les instructions pour réinitialiser votre mot de passe
-                    p.u-spacer-bottom Si vous n'avez pas reçu d'e-mail d'ici 5 minutes, vérifiez votre dossier de courriers indésirables ou demandez un <a href="/examples/template-examples/account-recovery.html">nouvel envoi</a>.
-                    +c-button({skin: 'borderless', icon: 'chevron-left', href: '/examples/template-examples/sign-in-form.html'})(class="u-spacer-bottom") Retour à la page de connexion
+                        h4.c-h4.u-spacer-left  <span class="u-text-success">Merci.</span> Vous allez recevoir un e-mail avec les instructions pour réinitialiser votre mot de passe
+                    p Si vous n'avez pas reçu d'e-mail d'ici 5 minutes, vérifiez vos courriers indésirables ou demandez un <a href="/examples/template-examples/account-recovery.html">nouvel envoi</a>.
+                    div.u-spacer-top-l
+                        +c-button({skin: 'borderless', icon: 'chevron-left', href: '/examples/template-examples/sign-in-form.html'})(class="u-spacer-bottom c-button--left u-spacer-top--bp2") Retour à la page de connexion

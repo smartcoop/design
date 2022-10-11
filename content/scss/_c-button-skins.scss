@@ -206,6 +206,7 @@ $c-button-link-color: $color-red-600 !default;
 .c-button--borderless-muted {
   border-color: transparent;
   background: transparent;
+  // transition: all .15s ease;
 
   &:not(.c-button--icon) {
     padding-left: 0;
@@ -322,3 +323,4 @@ $c-button-link-color: $color-red-600 !default;
     }
   }
 }
+

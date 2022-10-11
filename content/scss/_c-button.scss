@@ -39,8 +39,7 @@ $c-button-icon-spacing-small: 0.4rem !default;
   cursor: pointer;
   vertical-align: middle;
   border-radius: $c-button-border-radius;
-  padding: (($c-button-height - $c-button-line-height - 0.2rem) / 2)
-    $c-button-padding-horizontal;
+  padding: (($c-button-height - $c-button-line-height - 0.2rem) / 2) $c-button-padding-horizontal;
   font-size: $c-button-font-size;
   text-align: center;
   align-items: center;
@@ -53,9 +52,12 @@ $c-button-icon-spacing-small: 0.4rem !default;
   }
 }
 
-a.c-button {
-  display: inline-flex;
-  justify-content: center;
+a.c-button, button.c-button {
+  display: block;
+  @media (min-width: $g-bp2) {
+    display: inline-flex;
+    justify-content: center;
+  }
 }
 
 button.c-button {
@@ -94,11 +96,11 @@ input.c-button {
 }
 
 .c-button:not(.c-button--icon) .o-svg-icon:first-child {
-  margin-left: -0.2rem;
+  margin-left: -0.1rem;
 }
 
 .c-button:not(.c-button--icon) .o-svg-icon:last-child {
-  margin-right: -0.2rem;
+  margin-right: -0.1rem;
 }
 
 // Different spacing for carets
@@ -157,9 +159,11 @@ input.c-button {
     ========================================================================== */
 
 .c-button--block {
-  width: 100%;
-  text-align: center;
-  justify-content: center;
+  @media (min-width: $g-bp2) {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* Link button
@@ -178,5 +182,35 @@ input.c-button {
   &:hover svg *,
   &:active svg * {
     color: darken($color-red-600, 15%);
+  }
+}
+
+/* Focus button borderless (align to grid on right and left)
+    ========================================================================== */
+
+@media (min-width: $g-bp2) {
+  .c-button{ // .c-button--left / .c-button--right
+    &--left{
+      &.c-button--borderless{
+        &:first-child{
+          transition: all .05s ease;
+          &:focus{
+            padding: (($c-button-height - $c-button-line-height - 0.2rem) / 2) $c-button-padding-horizontal/2 !important;
+            margin-left: -$c-button-padding-horizontal/2;
+          }
+        }
+      }
+    }
+    &--right{
+      &.c-button--borderless{
+        &:last-child{
+          transition: all .05s ease;
+          &:focus{
+            padding: (($c-button-height - $c-button-line-height - 0.2rem) / 2) $c-button-padding-horizontal/2 !important;
+            margin-right: -$c-button-padding-horizontal/2;
+          }
+        }
+      }
+    }
   }
 }
