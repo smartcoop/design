@@ -14,10 +14,10 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body class="u-maximize-height">
+<body class="u-maximize-height u-overflow-hidden">
     <div class="c-app-layout">
-        <header class="u-position-fixed u-maximize-width">
-            <div class="c-navbar c-navbar--scrollable">
+        <header class="u-position-relative">
+            <div class="c-navbar c-navbar--scrollable c-navbar--bordered-bottom">
                 <div class="c-toolbar">
                     <div class="c-toolbar__left">
                         <div class="c-toolbar__item">
@@ -39,13 +39,88 @@
                             <nav>
                                 <ul class="c-pill-navigation">
                                     <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
-                                        <button type="button" data-menu="lang-switch">Français</button>
-                                        <ul class="c-menu c-menu--large" id="lang-switch">
+                                        <button type="button" data-menu="helpMenu">
+                                            <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                    <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                    <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <span class="u-sr-accessible">Help</span>
+                                        </button>
+                                        <ul class="c-menu c-menu--large" id="helpMenu">
                                             <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">Français</a>
+                                                <a class="c-menu__label" href="#">About this page</a>
+                                            </li>
+                                            <li class="c-menu__divider" role="presentational"></li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">Select French</a>
                                             </li>
                                             <li class="c-menu__item">
-                                                <a class="c-menu__label" href="#">Néerlandais</a>
+                                                <a class="c-menu__label" href="#">Select Dutch</a>
+                                            </li>
+                                            <li class="c-menu__divider" role="presentational"></li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="/prototypes/index.html">
+                                                    <span>Documentation</span>
+                                                    <div class="o-svg-icon o-svg-icon-external-link o-svg-icon--small o-svg-icon--subtle ">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M14 5C13.7348 5 13.4804 4.89464 13.2929 4.70711C13.1054 4.51957 13 4.26522 13 4C13 3.73478 13.1054 3.48043 13.2929 3.29289C13.4804 3.10536 13.7348 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V10C21 10.2652 20.8946 10.5196 20.7071 10.7071C20.5196 10.8946 20.2652 11 20 11C19.7348 11 19.4804 10.8946 19.2929 10.7071C19.1054 10.5196 19 10.2652 19 10V6.414L9.707 15.707C9.5184 15.8892 9.2658 15.99 9.0036 15.9877C8.7414 15.9854 8.49059 15.8802 8.30518 15.6948C8.11977 15.5094 8.0146 15.2586 8.01233 14.9964C8.01005 14.7342 8.11084 14.4816 8.293 14.293L17.586 5H14ZM3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H10C10.2652 5 10.5196 5.10536 10.7071 5.29289C10.8946 5.48043 11 5.73478 11 6C11 6.26522 10.8946 6.51957 10.7071 6.70711C10.5196 6.89464 10.2652 7 10 7H5V19H17V14C17 13.7348 17.1054 13.4804 17.2929 13.2929C17.4804 13.1054 17.7348 13 18 13C18.2652 13 18.5196 13.1054 18.7071 13.2929C18.8946 13.4804 19 13.7348 19 14V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V7Z" fill="#595959" />
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label c-menu__label--2-lines" href="https://smartbe.be/fr/contact/" target="_blank">
+                                                    <div class="o-flex o-flex--vertical-center">
+                                                        <span>Contact my advisor</span>
+                                                        <div class="o-svg-icon o-svg-icon-external-link o-svg-icon--small o-svg-icon--subtle ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M14 5C13.7348 5 13.4804 4.89464 13.2929 4.70711C13.1054 4.51957 13 4.26522 13 4C13 3.73478 13.1054 3.48043 13.2929 3.29289C13.4804 3.10536 13.7348 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V10C21 10.2652 20.8946 10.5196 20.7071 10.7071C20.5196 10.8946 20.2652 11 20 11C19.7348 11 19.4804 10.8946 19.2929 10.7071C19.1054 10.5196 19 10.2652 19 10V6.414L9.707 15.707C9.5184 15.8892 9.2658 15.99 9.0036 15.9877C8.7414 15.9854 8.49059 15.8802 8.30518 15.6948C8.11977 15.5094 8.0146 15.2586 8.01233 14.9964C8.01005 14.7342 8.11084 14.4816 8.293 14.293L17.586 5H14ZM3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H10C10.2652 5 10.5196 5.10536 10.7071 5.29289C10.8946 5.48043 11 5.73478 11 6C11 6.26522 10.8946 6.51957 10.7071 6.70711C10.5196 6.89464 10.2652 7 10 7H5V19H17V14C17 13.7348 17.1054 13.4804 17.2929 13.2929C17.4804 13.1054 17.7348 13 18 13C18.2652 13 18.5196 13.1054 18.7071 13.2929C18.8946 13.4804 19 13.7348 19 14V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V7Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-menu__subline">alice@example.com</div>
+                                                </a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">Report a bug</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="c-toolbar__item">
+                            <nav>
+                                <ul class="c-pill-navigation">
+                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                        <button type="button" data-menu="createMenu">
+                                            <div class="o-svg-icon o-svg-icon-add  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C12.5523 4 13 4.44771 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44771 11.4477 4 12 4Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <span class="u-sr-accessible">Create</span>
+                                        </button>
+                                        <ul class="c-menu c-menu--large" id="createMenu">
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">New quote / invoice</a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">New contract</a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">New expense</a>
+                                            </li>
+                                            <li class="c-menu__divider" role="presentational"></li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">New funding demand</a>
+                                            </li>
+                                            <li class="c-menu__divider" role="presentational"></li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">Buy shares</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -57,7 +132,6 @@
                                 <div class="c-avatar c-avatar--img">
                                     <img src="/images/avatars/1.jpg" alt="avatar">
                                 </div>
-                                <p class="c-avatar-and-text__text">Alice Henslay (HEA) </p>
                             </button>
                             <ul class="c-menu c-menu--large" id="userMenu">
                                 <!-- @todo add correct user menu items-->
@@ -81,7 +155,7 @@
                                 </li>
                                 <li class="c-menu__divider" role="presentational"></li>
                                 <li class="c-menu__item">
-                                    <a class="c-menu__label" href="#">Terms and conditions</a>
+                                    <a class="c-menu__label" href="#">My profile</a>
                                 </li>
                                 <li class="c-menu__divider" role="presentational"></li>
                                 <li class="c-menu__item">
@@ -94,22 +168,20 @@
             </div>
         </header>
         <main class="u-maximize-width u-scroll-wrapper">
-            <div class="c-app-layout-inner__content u-maximize-height">
-                <div class="c-error-page">
-                    <span class="c-error-page__code">Hi Sophie!</span>
-                    <h4 class="c-error-page__title">This is your Super User homepage.</h4>
-                    <p class="c-error-page__desc">TODO This surely shouldn't be a c-error-page.</p>
-                    <a class="c-button c-button--secondary" href="/prototypes/old-desk/advisor/activities.html">
-                        <span class="c-button__content">
-                            <span class="c-button__label">See the advisor dashboard</span>
-                            <div class="o-svg-icon o-svg-icon-external-link  ">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 5C13.7348 5 13.4804 4.89464 13.2929 4.70711C13.1054 4.51957 13 4.26522 13 4C13 3.73478 13.1054 3.48043 13.2929 3.29289C13.4804 3.10536 13.7348 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V10C21 10.2652 20.8946 10.5196 20.7071 10.7071C20.5196 10.8946 20.2652 11 20 11C19.7348 11 19.4804 10.8946 19.2929 10.7071C19.1054 10.5196 19 10.2652 19 10V6.414L9.707 15.707C9.5184 15.8892 9.2658 15.99 9.0036 15.9877C8.7414 15.9854 8.49059 15.8802 8.30518 15.6948C8.11977 15.5094 8.0146 15.2586 8.01233 14.9964C8.01005 14.7342 8.11084 14.4816 8.293 14.293L17.586 5H14ZM3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H10C10.2652 5 10.5196 5.10536 10.7071 5.29289C10.8946 5.48043 11 5.73478 11 6C11 6.26522 10.8946 6.51957 10.7071 6.70711C10.5196 6.89464 10.2652 7 10 7H5V19H17V14C17 13.7348 17.1054 13.4804 17.2929 13.2929C17.4804 13.1054 17.7348 13 18 13C18.2652 13 18.5196 13.1054 18.7071 13.2929C18.8946 13.4804 19 13.7348 19 14V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V7Z" fill="#595959" />
-                                </svg>
-                            </div>
-                        </span>
-                    </a>
-                </div>
+            <div class="c-error-page">
+                <span class="c-error-page__code">Hi Sophie!</span>
+                <h4 class="c-error-page__title">This is your Super User homepage.</h4>
+                <p class="c-error-page__desc">TODO This surely shouldn't be a c-error-page.</p>
+                <a class="c-button c-button--secondary" href="/prototypes/old-desk/advisor/activities.html">
+                    <span class="c-button__content">
+                        <span class="c-button__label">See the advisor dashboard</span>
+                        <div class="o-svg-icon o-svg-icon-external-link  ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 5C13.7348 5 13.4804 4.89464 13.2929 4.70711C13.1054 4.51957 13 4.26522 13 4C13 3.73478 13.1054 3.48043 13.2929 3.29289C13.4804 3.10536 13.7348 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V10C21 10.2652 20.8946 10.5196 20.7071 10.7071C20.5196 10.8946 20.2652 11 20 11C19.7348 11 19.4804 10.8946 19.2929 10.7071C19.1054 10.5196 19 10.2652 19 10V6.414L9.707 15.707C9.5184 15.8892 9.2658 15.99 9.0036 15.9877C8.7414 15.9854 8.49059 15.8802 8.30518 15.6948C8.11977 15.5094 8.0146 15.2586 8.01233 14.9964C8.01005 14.7342 8.11084 14.4816 8.293 14.293L17.586 5H14ZM3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H10C10.2652 5 10.5196 5.10536 10.7071 5.29289C10.8946 5.48043 11 5.73478 11 6C11 6.26522 10.8946 6.51957 10.7071 6.70711C10.5196 6.89464 10.2652 7 10 7H5V19H17V14C17 13.7348 17.1054 13.4804 17.2929 13.2929C17.4804 13.1054 17.7348 13 18 13C18.2652 13 18.5196 13.1054 18.7071 13.2929C18.8946 13.4804 19 13.7348 19 14V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V7Z" fill="#595959" />
+                            </svg>
+                        </div>
+                    </span>
+                </a>
             </div>
         </main>
     </div>

@@ -515,8 +515,7 @@ var findSelect = function findSelect(element) {
 
 
 function create(triggerEl, targetEl) {
-  var placement = triggerEl.dataset.menuPlacement || 'bottom-end';
-  console.log(placement);
+  var placement = triggerEl.dataset.menuPlacement || 'bottom-start';
   var samewidthEnable = !!triggerEl.dataset.menuSamewidth || false;
   var offset = triggerEl.dataset.menuOffset || dropdownMargin;
   var popperInstance = new _core.createPopper(triggerEl, targetEl, {
