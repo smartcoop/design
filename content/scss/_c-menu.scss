@@ -25,7 +25,6 @@ $g-c-menu-z: 60 !default;
   visibility: hidden;
   pointer-events: none;
   z-index: $g-c-menu-z;
-  right: 0;
 }
 
 .c-menu--large {
@@ -37,7 +36,6 @@ $g-c-menu-z: 60 !default;
 }
 
 .c-menu--visible {
-  right: auto;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
