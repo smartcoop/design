@@ -5,12 +5,10 @@ block append pageVariables
 
 block content
     .c-app-layout-inner
-        .c-app-layout-inner__sidebar
+        .c-app-layout-inner__sidebar.u-position-fixed
             include /templates/prototypes/account/_includes/side-menu
 
         .c-app-layout-inner__content
             .u-scroll-wrapper
-                .u-scroll-wrapper-body
-                    .o-container.o-container--large
-                        .o-container-vertical
-                            include /templates/prototypes/_includes/user-homepage
+                .o-container.o-container--large
+                    include /templates/prototypes/_includes/user-homepage

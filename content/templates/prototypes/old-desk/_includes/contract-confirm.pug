@@ -1,68 +1,56 @@
 include ../../../../../core/templates/mixins/icon
 include /templates/_mixins/all
 
-.u-spacer-bottom-xl
-    .u-spacer-bottom-l
-        .c-navbar.c-navbar--unpadded.c-navbar--bordered-bottom
-            .c-toolbar
-                .c-toolbar__left
-                    h3.c-h3.u-m-b-0 General information
-                .c-toolbar__right
-                    +c-button({ icon: 'edit', href: "#" }) Edit
-    dl.c-key-value.c-key-value--horizontal.c-key-value--short
-        +c-key-value({key: 'Worker'}) Manfred
-        +c-key-value({key: 'Work setting'}) The work is mainly performed in places and at times freely chosen
-        +c-key-value({key: 'Compensation budget'}) 1000.00 EUR
-        +c-key-value({key: 'Project'}) Unspecified
-        +c-key-value({key: 'Description'}) Some description.
+.c-panel
+    .c-panel__body
+        .u-padding-vertical-xl
+            .u-spacer-bottom-l
+                .c-navbar.c-navbar--unpadded
+                    .c-toolbar
+                        .c-toolbar__left
+                            h3.c-h3.u-m-b-0 Location and dates
+                        .c-toolbar__right
+                            +c-button({ icon: 'edit', href: "#" }) Edit
+            .u-spacer-bottom-l
+                dl.c-key-value.c-key-value--horizontal.c-key-value--short
+                    +c-key-value({key: 'Work country'}) Belgium
+                    +c-key-value({key: 'Work dates'}) 2022 January 7
 
+            .o-form-group
+                .o-form-group__controls.o-form-group__controls--full-width
+                    .c-checkbox
+                        label
+                            input(type="checkbox")
+                            | By ticking this checkbox, you confirm COVID-19 dolore excepteur excepteur consequat ullamco dolore consequat.
 
-.u-padding-vertical-xl
-    .u-spacer-bottom-l
-        .c-navbar.c-navbar--unpadded.c-navbar--bordered-bottom
-            .c-toolbar
-                .c-toolbar__left
-                    h3.c-h3.u-m-b-0 Location and dates
-                .c-toolbar__right
-                    +c-button({ icon: 'edit', href: "#" }) Edit
-    .u-spacer-bottom-l
-        dl.c-key-value.c-key-value--horizontal.c-key-value--short
-            +c-key-value({key: 'Work country'}) Belgium
-            +c-key-value({key: 'Work dates'}) 2022 January 7
+.c-panel
+    .c-panel__body
+        .u-padding-vertical-xl
+            .u-spacer-bottom-l
+                .c-navbar.c-navbar--unpadded
+                    .c-toolbar
+                        .c-toolbar__left
+                            h3.c-h3.u-m-b-0 Role and risks
+                        .c-toolbar__right
+                            +c-button({ icon: 'edit', href: "#" }) Edit
+            dl.c-key-value.c-key-value--horizontal.c-key-value--short
+                +c-key-value({key: 'Role'}) Art and craft creation > Entertainment arts > Dancer
+                +c-key-value({key: 'Work type'}) Artistic
+                +c-key-value({key: 'Work risks'}) None
 
-    .o-form-group
-        .o-form-group__controls.o-form-group__controls--full-width
-            .c-checkbox
-                label
-                    input(type="checkbox")
-                    | By ticking this checkbox, you confirm COVID-19 dolore excepteur excepteur consequat ullamco dolore consequat.
+.c-panel
+    .c-panel__body
+        .u-padding-vertical-xl
+            .u-spacer-bottom-l
+                .c-navbar.c-navbar--unpadded
+                    .c-toolbar
+                        .c-toolbar__left
+                            h3.c-h3.u-m-b-0 Contract type
+                        .c-toolbar__right
+                            +c-button({ icon: 'edit', href: "#" }) Edit
 
-
-.u-padding-vertical-xl
-    .u-spacer-bottom-l
-        .c-navbar.c-navbar--unpadded.c-navbar--bordered-bottom
-            .c-toolbar
-                .c-toolbar__left
-                    h3.c-h3.u-m-b-0 Role and risks
-                .c-toolbar__right
-                    +c-button({ icon: 'edit', href: "#" }) Edit
-    dl.c-key-value.c-key-value--horizontal.c-key-value--short
-        +c-key-value({key: 'Role'}) Art and craft creation > Entertainment arts > Dancer
-        +c-key-value({key: 'Work type'}) Artistic
-        +c-key-value({key: 'Work risks'}) None
-
-
-.u-padding-vertical-xl
-    .u-spacer-bottom-l
-        .c-navbar.c-navbar--unpadded.c-navbar--bordered-bottom
-            .c-toolbar
-                .c-toolbar__left
-                    h3.c-h3.u-m-b-0 Contract type
-                .c-toolbar__right
-                    +c-button({ icon: 'edit', href: "#" }) Edit
-
-    dl.c-key-value.c-key-value--horizontal.c-key-value--short
-        +c-key-value({key: 'Contract type'}) Artistic contract, paid based on duration
-        +c-key-value({key: 'Is your fiscal residence abroad'}) No
-        +c-key-value({key: 'Withholding rate'}) 11.11%
-        +c-key-value({key: 'Daily schedule'}) Full time
+            dl.c-key-value.c-key-value--horizontal.c-key-value--short
+                +c-key-value({key: 'Contract type'}) Artistic contract, paid based on duration
+                +c-key-value({key: 'Is your fiscal residence abroad'}) No
+                +c-key-value({key: 'Withholding rate'}) 11.11%
+                +c-key-value({key: 'Daily schedule'}) Full time

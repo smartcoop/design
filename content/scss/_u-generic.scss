@@ -28,6 +28,16 @@
   position: relative !important;
 }
 
+@media (min-width: $g-bp2) {
+  .u-position-fixed {
+    position: fixed !important;
+    z-index: 60;
+  }
+  header.u-position-fixed {
+    z-index: 65;
+  }
+}
+
 .u-position-absolute {
   position: absolute !important;
 }

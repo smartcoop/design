@@ -17,6 +17,7 @@
   padding: .8rem 1.6rem;
   color: $color-semantic-body-text;
   font-weight: 500;
+  border-radius: 30px;
   &:hover,
   &:active,
   &:focus {
@@ -33,6 +34,7 @@
   margin: 0;
   cursor: pointer;
   line-height: 1.5;
+  border-radius: 30px;
   &:after {
     pointer-events: none;
     content: ' ';

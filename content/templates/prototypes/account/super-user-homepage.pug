@@ -1,11 +1,12 @@
-extends /templates/prototypes/_layouts/default
+extends /templates/_layouts/default
 
 block append pageVariables
     - var moduleTitle = "Account - Homepage"
 
 block content
-    .c-error-page
-        span.c-error-page__code Hi Sophie!
-        h4.c-error-page__title This is your Super User homepage.
-        p.c-error-page__desc TODO This surely shouldn't be a c-error-page.
-        +c-button({ icon: 'external-link', layout: 'text-icon', href: '/prototypes/old-desk/advisor/activities.html' }) See the advisor dashboard
+    .c-app-layout-inner__content.u-maximize-height
+        .c-error-page
+            span.c-error-page__code Hi Sophie!
+            h4.c-error-page__title This is your Super User homepage.
+            p.c-error-page__desc TODO This surely shouldn't be a c-error-page.
+            +c-button({ icon: 'external-link', layout: 'text-icon', href: '/prototypes/old-desk/advisor/activities.html' }) See the advisor dashboard
