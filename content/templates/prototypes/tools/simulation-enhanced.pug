@@ -1,4 +1,4 @@
-extends /templates/_layouts/default
+extends /templates/prototypes/_layouts/default
 
 block append pageVariables
     - var moduleTitle = "Tools - Simulation"
@@ -7,35 +7,37 @@ block append pageVariables
 
 block content
 
-    .c-navbar
-        .c-toolbar
-            .c-toolbar__left
-                .c-toolbar__item
-                        h2.c-toolbar__title Simulation
-    .u-scroll-wrapper-body
-        .o-grid(hx-boost="true")
-            .o-grid-col-bp3-6
-                .u-spacer-l
-                    .c-panel
-                        - var input = {}
-                        - if (state == "filled") input = data.input
-                        form.o-form-group-layout.o-form-group-layout--horizontal
-                            include /templates/_includes/simulation-form-fields
-
-                    .u-spacer-top
-                        .c-toolbar
-                            .c-toolbar__right
-                                .c-toolbar__item
-                                    input.c-button.c-button--secondary(type="reset" value="Reset")
-                                    +c-button({ isLoading: true })(id="indicator" class="htmx-indicator") Calculate
-                                    +c-button({ skin: 'primary', href: '/development/tools/simulation.html'})(hx-get="/partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator" hx-boost="true") Calculate
-
-
-            .o-grid-col-bp3-6
-                .u-maximize-height(id="simulationResult")
-                    .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
+    .c-app-layout-inner__content
+        .u-scroll-wrapper
+            .c-navbar.u-position-fixed.main-title
+                .c-toolbar
+                    .c-toolbar__left
+                        .c-toolbar__item
+                                h2.c-toolbar__title Simulation
+            .u-scroll-wrapper-body
+                .o-grid(hx-boost="true")
+                    .o-grid-col-bp3-6
                         .u-spacer-l
-                            .c-blank-slate
-                                +c-avatar({icon: 'document', size: 'large'})
-                                p.u-text-muted.c-body-1 Fill in the form to view a calculation
+                            .c-panel
+                                - var input = {}
+                                - if (state == "filled") input = data.input
+                                form.o-form-group-layout.o-form-group-layout--horizontal
+                                    include /templates/_includes/simulation-form-fields
+
+                            .u-spacer-top
+                                .c-toolbar
+                                    .c-toolbar__right
+                                        .c-toolbar__item
+                                            input.c-button.c-button--secondary(type="reset" value="Reset")
+                                            +c-button({ isLoading: true })(id="indicator" class="htmx-indicator") Calculate
+                                            +c-button({ skin: 'primary', href: '/development/tools/simulation.html'})(hx-get="/partials/simulation-result.html" hx-target="#simulationResult" hx-indicator="#indicator" hx-boost="true") Calculate
+
+
+                    .o-grid-col-bp3-6
+                        .u-maximize-height(id="simulationResult")
+                            .o-flex.o-flex--vertical.o-flex--center.u-maximize-height
+                                .u-spacer-l
+                                    .c-blank-slate
+                                        +c-avatar({icon: 'document', size: 'large'})
+                                        p.u-text-muted.c-body-1 Fill in the form to view a calculation
 

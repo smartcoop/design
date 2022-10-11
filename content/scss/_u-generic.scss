@@ -28,10 +28,13 @@
   position: relative !important;
 }
 
-.u-position-fixed {
-  @media (min-width: $g-bp2) {
+@media (min-width: $g-bp2) {
+  .u-position-fixed {
     position: fixed !important;
-    z-index: 1000;
+    z-index: 60;
+  }
+  header.u-position-fixed {
+    z-index: 65;
   }
 }
 

@@ -5,13 +5,14 @@
 .c-user-navigation {
   display: flex;
   align-items: center;
-  padding: .4rem 2.8rem .4rem 1.6rem;
+  padding: .4rem 2.8rem .4rem .4rem;
   color: $color-semantic-body-text;
   position: relative;
   appearance: none;
   background: none;
   border: none;
   margin: 0;
+  border-radius: 30px;
   cursor: pointer;
 
   .c-avatar {
