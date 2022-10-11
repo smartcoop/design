@@ -3,37 +3,37 @@
 //-   development/tools/contracts-empty.pug
 //-   development/tools/contracts-grid.pug
 //-   development/tools/contracts.pug
-.c-app-layout-inner__content
-    .u-scroll-wrapper
-        .c-navbar.u-position-fixed.main-title
-            .c-toolbar
-                .c-toolbar__left
-                    .c-toolbar__item
-                            h2.c-toolbar__title Contracts
-                    if view != "empty"
-                        include /templates/prototypes/tools/_includes/contracts-filter
 
-                .c-toolbar__right
-                    if view == "list"
-                        include /templates/prototypes/tools/_includes/contracts-sort
-                    if view != "empty"
-                        include /templates/prototypes/tools/_includes/contracts-switch
-                    .c-toolbar__item
+.u-scroll-wrapper
+    .c-navbar.c-navbar--bordered-bottom.c-navbar--scrollable
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                        h2.c-toolbar__title Contracts
+                if view != "empty"
+                    include /templates/prototypes/tools/_includes/contracts-filter
+
+            .c-toolbar__right
+                if view == "list"
+                    include /templates/prototypes/tools/_includes/contracts-sort
+                if view != "empty"
+                    include /templates/prototypes/tools/_includes/contracts-switch
+                .c-toolbar__item
+                    +c-button({skin: 'primary', icon: 'add'}) Add item
+
+    .u-scroll-wrapper-body
+        if view == "empty"
+            .o-flex.o-flex--center.u-maximize-height
+                .u-spacer-l
+                    .c-blank-slate
+                        +c-avatar({icon: 'document', size: 'large'})
+                        p.u-text-muted.c-body-1 There are no items yet.
                         +c-button({skin: 'primary', icon: 'add'}) Add item
-
-        .u-scroll-wrapper-body
-            if view == "empty"
-                .o-flex.o-flex--center.u-maximize-height
-                    .u-spacer-l
-                        .c-blank-slate
-                            +c-avatar({icon: 'document', size: 'large'})
-                            p.u-text-muted.c-body-1 There are no items yet.
-                            +c-button({skin: 'primary', icon: 'add'}) Add item
-            if view == "grid"
-                include /templates/prototypes/tools/_includes/contracts-grid
-            if view == "list"
-                include /templates/prototypes/tools/_includes/contracts-list
+        if view == "grid"
+            include /templates/prototypes/tools/_includes/contracts-grid
+        if view == "list"
+            include /templates/prototypes/tools/_includes/contracts-list
 
 
-        if view != "empty"
-            include /templates/prototypes/tools/_includes/contracts-pagination
+    if view != "empty"
+        include /templates/prototypes/tools/_includes/contracts-pagination
