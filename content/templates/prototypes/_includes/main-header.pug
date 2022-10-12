@@ -1,27 +1,10 @@
 include ../../../../core/templates/mixins/icon
 include /templates/_mixins/all
-.c-navbar.c-navbar--scrollable
+.c-navbar
     .c-toolbar
         .c-toolbar__left
             .c-toolbar__item
                 +c-brand({href: "/prototypes/account/super-user-homepage.html", size: "xsmall"})
-            .c-toolbar__item
-                nav
-                    ul.c-pill-navigation
-                        -
-                            var navItems = [
-                            ]
-
-                        each item, index in navItems
-                            li.c-pill-navigation__item(class=item.subMenu? 'c-pill-navigation__item--has-child-menu' : '')
-                                if item.subMenu
-                                    button(type="button" data-menu="subMenu-"+index data-menu-samewidth="true") #{item.name}
-                                    ul.c-menu.c-menu--large(id="subMenu-"+index)
-                                        each subItem in item.subMenu
-                                            li.c-menu__item
-                                                a.c-menu__label(href=subItem.pathName) #{subItem.name}
-                                else
-                                    a(href=item.pathName) #{item.name}
 
         .c-toolbar__right
             .c-toolbar__item
@@ -47,11 +30,6 @@ include /templates/_mixins/all
                             +c-avatar({img: '/images/avatars/1.jpg', alt: 'avatar'})
                             .c-avatar-and-text__text
                                 p Signed in as <strong>Alice</strong>
-                    li.c-menu__divider(role="presentational")
-                    li.c-menu__item
-                        a.c-menu__label(href="/prototypes/account/as-member.html") Act as a member
-                    li.c-menu__item
-                        a.c-menu__label(href="/prototypes/account/as-client.html") Act as a client
                     li.c-menu__divider(role="presentational")
                     li.c-menu__item
                         a.c-menu__label(href="#") Terms and conditions
