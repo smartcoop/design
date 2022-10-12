@@ -3305,7 +3305,8 @@ header .c-navbar, header.c-navbar {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 1.6rem;
-  border-top: none; }
+  border-top: none;
+  border-bottom: 1px solid #F2F2F2; }
   header .c-navbar--main {
     border-top: none; }
   .c-navbar--main .c-toolbar__right {
@@ -4001,6 +4002,8 @@ c-table-of-content
           content: counter(li) ".  ";
           position: relative;
           display: inline-block;
+          float: left;
+          margin-bottom: 1px;
           color: #808080;
           width: 1.8rem;
           left: -.8rem;
