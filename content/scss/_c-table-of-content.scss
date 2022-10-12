@@ -12,14 +12,17 @@ $c-table-of-content-item-active-color-light: $color-blue-50 !default;
 $c-table-of-content-item-active-color-dark: $color-blue-700 !default;
 
 
-$c-table-of-content-active-border-width: 0.3rem !default;
-$c-table-of-content-padding-all: 3.2rem !default;
-$c-table-of-content-border-radius: $g-border-radius-medium !default;
+$c-table-of-content-padding-v: 2.6rem !default;
+$c-table-of-content-padding-h: 3.2rem !default;
+$c-table-of-content-border-radius: 1rem !default;
 
 
 /* Component
    ========================================================================== */
 .c-table-of-content {
+  padding: $c-table-of-content-padding-v $c-table-of-content-padding-h;
+  background-color: $color-white;
+  border-radius: $c-table-of-content-border-radius;
   .back-to-top {
     display: block;
     position: sticky;
@@ -40,7 +43,7 @@ $c-table-of-content-border-radius: $g-border-radius-medium !default;
     }
 
     .c-table-of-content-navigation {
-      padding: 0 $c-table-of-content-padding-all 0 0;
+      padding: 0 3.2rem 0 0;
     }
   }
 }
@@ -50,12 +53,13 @@ $c-table-of-content-border-radius: $g-border-radius-medium !default;
   padding: 0;
   border-radius: $c-table-of-content-border-radius;
   min-width: 45%;
+  position: relative;
 
   .c-table-of-content__nav {
     &.stickyPosition {
       align-self: flex-start;
       position: sticky;
-      top: 3rem;
+      top: 16rem;
     }
 
     list-style: none;
