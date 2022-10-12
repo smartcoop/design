@@ -1,9 +1,9 @@
 /* ==========================================================================
-   c-table-of-content
-   ========================================================================== */
+c-table-of-content
+========================================================================== */
 
 /* Variables
-   ========================================================================== */
+========================================================================== */
 
 $c-table-of-content-item-color: $color-semantic-header-text !default;
 $c-table-of-content-item-color-number: $color-gray-500 !default;
@@ -15,14 +15,13 @@ $c-table-of-content-item-active-color-dark: $color-blue-700 !default;
 $c-table-of-content-padding-v: 2.6rem !default;
 $c-table-of-content-padding-h: 3.2rem !default;
 $c-table-of-content-padding--mobile: 2.4rem !default;
-$c-table-of-content-border-radius: 1rem !default;
-
 
 /* Component
-   ========================================================================== */
+========================================================================== */
 .c-table-of-content {
   background-color: $color-white;
-  border-radius: $c-table-of-content-border-radius;
+  border-radius: $g-border-radius-medium;
+  padding: $c-table-of-content-padding--mobile;
   .back-to-top {
     display: block;
     position: sticky;
@@ -30,22 +29,19 @@ $c-table-of-content-border-radius: 1rem !default;
     width: max-content;
     margin-left: auto;
   }
-  padding: $c-table-of-content-padding--mobile;
   
-  @media (min-width: $g-bp2) {
-  }
   @media (min-width: $g-bp3) {
     padding: $c-table-of-content-padding-v $c-table-of-content-padding-h;
     .back-to-top {
       display: none !important;
     }
-
+    
     display: flex;
-
+    
     .back-top-top {
       display: none;
     }
-
+    
     .c-table-of-content-navigation {
       padding: 0 3.2rem 0 0;
     }
@@ -55,24 +51,23 @@ $c-table-of-content-border-radius: 1rem !default;
 .c-table-of-content-navigation {
   background-color: $color-white;
   padding: 0;
-  border-radius: $c-table-of-content-border-radius;
+  border-radius: $g-border-radius-medium;
   min-width: 45%;
   position: relative;
-
+  
   .c-table-of-content__nav {
-    &.stickyPosition {
-      align-self: flex-start;
-      position: sticky;
-      top: 16rem;
-    }
-
     list-style: none;
     display: inline-block;
     position: relative;
     padding-left: 0;
     margin: .4rem 0;
-
-
+    
+    &.stickyPosition {
+      align-self: flex-start;
+      position: sticky;
+      top: 16rem;
+    }
+    
     .current-state {
       display: block;
       position: absolute;
@@ -86,17 +81,17 @@ $c-table-of-content-border-radius: 1rem !default;
       border-radius: $g-border-radius-small;
       transition: top .4s ease, width .4s ease;
     }
-
+    
     li {
       counter-increment: li;
       z-index: 11;
       position: relative;
-
+      
       &:before {
         content: "";
         display: none;
       }
-
+      
       a {
         width: 100%;
         text-decoration: none;
@@ -105,11 +100,11 @@ $c-table-of-content-border-radius: 1rem !default;
         padding: .3rem 1.4rem .3rem 2rem;
         transition: all .3s ease;
         color: $c-table-of-content-item-active-text-color;
-
+        
         &:not(.c-button) {
           border-bottom: 0;
         }
-
+        
         &:before {
           content: counter(li) ".  ";
           position: relative;
@@ -122,44 +117,43 @@ $c-table-of-content-border-radius: 1rem !default;
           transition: color .1s cubic-bezier(0, 0.99, 0.31, 1);
         }
       }
-
+      
       & + li {
         margin-top: 1rem;
       }
     }
-
+    
     &.relativeWidth li a {
       width: auto;
     }
   }
-
+  
   .c-table-of-content__nav__item {
     -webkit-transition: color .1s cubic-bezier(0, 0.99, 0.31, 1);
     transition: color .1s cubic-bezier(0, 0.99, 0.31, 1);
     &:hover {
       text-decoration: underline !important;
     }
-
     &:focus {
       color: $c-table-of-content-item-color;
     }
-
+    
     &:focus:not(:focus-visible) {
       outline: none;
     }
-
+    
     &.clicked{
       &:before{
         color: $color-blue-700 !important;
       }
       color: $color-blue-700 !important;
     }
-
+    
     &[aria-selected="true"] {
       color: $c-table-of-content-item-color;
       position: relative; // makes box-shadow to be on top of the global border
       font-weight: 500;
-
+      
       &:before {
         font-weight: 500;
         color: $c-table-of-content-item-color;

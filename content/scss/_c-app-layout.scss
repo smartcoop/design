@@ -1,6 +1,6 @@
 /* ==========================================================================
-  Component: app layout
-   ========================================================================== */
+Component: app layout
+========================================================================== */
 
 .c-app-layout {
   display: flex;
@@ -15,12 +15,12 @@
 
 .c-app-layout-inner {
   height: 100%;
-
+  
   @media (max-width: ($g-bp2 - 1px)) {
     // Make full screen scrollable on mobile, mobile navigation pattern needs to be revised in the future
     overflow-y: auto;
   }
-
+  
   @media (min-width: $g-bp2) {
     display: flex;
   }
@@ -75,9 +75,6 @@
   width: 100%;
   height: 100%;
   flex: 1;
-  .c-bckg{
-    background-color: white;
-  }
   .c-navbar{
     height: auto;
     border-top: 2px solid $color-gray-50;
@@ -89,13 +86,13 @@
   }
   @media (min-width: $g-bp2) {
     margin-top: 6.4rem;
-      .c-navbar{
-        padding-left: 0;
-        position: fixed;
-        top: 6.4rem;
-        &.u-position-fixed + div{
-          margin-top: 6.4rem;
-        }
+    .c-navbar{
+      padding-left: 0;
+      position: fixed;
+      top: 6.4rem;
+      &.u-position-fixed + div{
+        margin-top: 6.4rem;
       }
+    }
   }
 }
