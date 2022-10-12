@@ -109,6 +109,8 @@ $c-table-of-content-padding--mobile: 2.4rem !default;
           content: counter(li) ".  ";
           position: relative;
           display: inline-block;
+          float: left;
+          margin-bottom: 1px;
           color: $c-table-of-content-item-color-number;
           width: 1.8rem;
           left: -.8rem;
