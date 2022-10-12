@@ -64,6 +64,7 @@ header .c-navbar, header.c-navbar{
   padding-right: 0;
   margin-bottom: 1.6rem;
   border-top: none;
+  border-bottom: 1px solid $color-gray-50;
   header &{
     border-top: none;
   }
