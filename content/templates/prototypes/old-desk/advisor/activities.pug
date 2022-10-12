@@ -5,12 +5,12 @@ block append pageVariables
 
 block content
     .c-app-layout-inner
-        .c-app-layout-inner__sidebar
+        .c-app-layout-inner__sidebar.u-position-fixed
             include /templates/prototypes/old-desk/_includes/side-menu--advisor
 
         .c-app-layout-inner__content
             .u-scroll-wrapper
-                .c-navbar.c-navbar--bordered-bottom
+                .c-navbar.u-position-fixed.main-title
                     .c-toolbar
                         .c-toolbar__left
                             .c-toolbar__item

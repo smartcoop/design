@@ -58,7 +58,9 @@
   }
 
   &.c-side-menu__item--active .c-side-menu__link:before {
+    @media (min-width: $g-bp2) {
       border-top-left-radius: 0.3rem;
+    }
   }
 }
 
