@@ -193,7 +193,6 @@ block content
                             if(this.current__index != this.toc__nav__list__items[i]){
                                 window.removeEventListener("hashchange", this.whateverHash);
                                 this.resetActiveToc( this.toc__nav__list__items[i], this.toc__content__list__items[i]);
-                                console.log("new toc from - callBackScrollEvent");
                                 var that = this;
                                 setTimeout(function(){ 
                                     window.addEventListener("hashchange", that.whateverHash);
@@ -210,7 +209,6 @@ block content
                         window.removeEventListener("scroll", this.whatever);
                         let current_hash_content_item = this.toc__content__list.querySelector('[data-id="' + hash + '"]');
                         this.resetActiveToc(this.toc__nav__list.querySelector('[data-id="' + hash + '"]'), current_hash_content_item);
-                        console.log("new toc from - callBackHashEvent");
                         this.scrollTo(current_hash_content_item);
                         var that = this;
                         setTimeout(function(){ 
@@ -231,11 +229,9 @@ block content
                         let current_hash_content_item = this.toc__content__list.querySelector('[data-id="' + hash + '"]');
                         let current_hash_index = [...this.toc__content__list__items].indexOf(current_hash_content_item);
                         this.resetActiveToc(this.toc__nav__list.querySelector('[data-id="' + hash + '"]'), current_hash_content_item);
-                        console.log("new toc from - callbackItemsSet");
                         this.scrollTo(this.toc__content__list__items[current_hash_index]);
                     }else{
                         this.resetActiveToc(current_nav_item, this.toc__content__list__items[current_index]);
-                        console.log("new toc from - callbackItemsSet");
                         this.scrollTo(this.toc__content__list__items[current_index]);
                     }
                     var that = this;
@@ -247,9 +243,6 @@ block content
 
                 resetActiveToc(newTocNavItem, newTocContentItem){
                     this.positionTopCurrentState(newTocNavItem);
-                    console.log("new toc");
-                    console.log(newTocNavItem);
-                    console.log(newTocContentItem);
 
                     window.location.hash = this.convertToSlug(newTocNavItem.textContent);
                     
@@ -269,7 +262,6 @@ block content
                     
                     let index = [...this.toc__nav__list__items].indexOf(newTocNavItem);
                     this.resetActiveToc(newTocNavItem, this.toc__content__list__items[index]);
-                    console.log("new toc from - switchTocAfterClick");
                     this.scrollTo(this.toc__content__list__items[index]);
                     var that = this;
                     setTimeout(function(){ 
