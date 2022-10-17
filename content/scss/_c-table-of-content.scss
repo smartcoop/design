@@ -25,9 +25,10 @@ $c-table-of-content-padding--mobile: 2.4rem !default;
   .back-to-top {
     display: block;
     position: fixed;
-    bottom: 3rem;
-    width: max-content;
-    margin-left: auto;
+    bottom: 4rem;
+    right: 4rem;
+    width: 4rem;
+    height: 4rem;
   }
   
   @media (min-width: $g-bp3) {
