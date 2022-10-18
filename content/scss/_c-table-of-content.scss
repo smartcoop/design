@@ -170,6 +170,11 @@ $c-table-of-content-padding--mobile: 2.4rem !default;
       transition: color .15s ease;
     }
   }
+  &:first-child{
+    p:first-child {
+      margin-top: 0.75rem;
+    }   
+  }
   h2 + h3{
     margin-top: 1rem;
   }

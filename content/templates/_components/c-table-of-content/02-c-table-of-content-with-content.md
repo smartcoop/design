@@ -26,8 +26,10 @@ For example, on the [terms and conditions page](/examples/template-examples/term
 
 The navigation is clickable. There's also a way to navigate and share each section with the URL.
 Each title is dynamically (by js) converted as a slug that can be used as `anchor`.
+The hash is changing dynamically in the URL when clicking and scrolling to an article in order to share it by copy/paste from the URL bar (www.whatever.com/table-of-content#my-article)
 
 So to access direclty [the Droits de l'Entreprise partagée section](#droits-de-lentreprise-partagee), you can simply add **#droits-de-lentreprise-partagee** to the URL (slug removes accents, special characters and spaces)
 
 #### Example:
+
 
