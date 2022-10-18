@@ -20,6 +20,7 @@
 header .c-navbar, header.c-navbar{
   border-top: 4px solid $color-red-600;
   background-color: $color-white;
+  border-bottom: 2px solid $color-gray-50;
   .c-toolbar{
     height: 6rem;
   }

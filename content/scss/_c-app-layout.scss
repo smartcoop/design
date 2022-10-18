@@ -38,7 +38,7 @@ Component: app layout
   height: 100%;
   
   @media (min-width: $g-bp2) {
-    top: 6.6rem; // because position fixed
+    top: 6.4rem;
     border-top-right-radius: .6rem;
     width: $g-sidebar-width-m;
   }
@@ -85,13 +85,13 @@ Component: app layout
     }
   }
   @media (min-width: $g-bp2) {
-    margin-top: 6.4rem;
+    margin-top: 6.2rem;
     .c-navbar{
       padding-left: 0;
       position: fixed;
-      top: 6.4rem;
+      top: 6.2rem;
       &.u-position-fixed + div{
-        margin-top: 6.4rem;
+        margin-top: 6.2rem;
       }
     }
   }

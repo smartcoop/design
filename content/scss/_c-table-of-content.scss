@@ -24,24 +24,20 @@ $c-table-of-content-padding--mobile: 2.4rem !default;
   padding: $c-table-of-content-padding--mobile;
   .back-to-top {
     display: block;
-    position: sticky;
-    bottom: 3rem;
-    width: max-content;
-    margin-left: auto;
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 4rem;
+    height: 4rem;
   }
   
   @media (min-width: $g-bp3) {
     padding: $c-table-of-content-padding-v $c-table-of-content-padding-h;
+    display: flex;
+
     .back-to-top {
       display: none !important;
     }
-    
-    display: flex;
-    
-    .back-top-top {
-      display: none;
-    }
-    
     .c-table-of-content-navigation {
       padding: 0 3.2rem 0 0;
     }
@@ -52,7 +48,7 @@ $c-table-of-content-padding--mobile: 2.4rem !default;
   background-color: $color-white;
   padding: 0;
   border-radius: $g-border-radius-medium;
-  min-width: 45%;
+  min-width: 40%;
   position: relative;
   
   .c-table-of-content__nav {
@@ -164,12 +160,17 @@ $c-table-of-content-padding--mobile: 2.4rem !default;
   }
 }
 
-
+.c-table-of-content__content{
+  margin-bottom: 10rem;
+}
 .c-table-of-content__content__item {
   &.active {
     p:first-child {
       color: $c-table-of-content-item-active-color-dark;
       transition: color .15s ease;
     }
+  }
+  h2 + h3{
+    margin-top: 1rem;
   }
 }

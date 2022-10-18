@@ -4,9 +4,9 @@ block append pageVariables
     - var bodyClass = ""
 
 block body
-    .c-app-layout(class=fullScroll? "u-scroll" : "")
+    .c-app-layout
         block global-banner
         header.u-position-fixed.u-maximize-width 
             include /templates/prototypes/_includes/main-header
-        main.u-maximize-width(class=!fullScroll? "u-scroll-wrapper" : "")
+        main.u-maximize-width
             block content
