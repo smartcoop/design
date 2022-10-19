@@ -1,6 +1,6 @@
 div.c-table-of-content.c-content
     nav.c-table-of-content-navigation.fixed#table-of-content-nav(role="navigation" aria-label="Table of content")
-        ol.c-table-of-content__nav.relativeWidth.stickyPosition
+        ol.c-table-of-content__nav.relativeWidth.stickyPosition(style="top: 3rem;")
             li
                 a.c-table-of-content__nav__item(href='#section1' aria-selected="true") Objet du contrat
             li
@@ -277,7 +277,7 @@ div.c-table-of-content.c-content
                 scrollTo(element) {
                     let parentPosition = this.el.getBoundingClientRect().top + window.scrollY;
                     let index = [...this.toc__content__list__items].indexOf(element);
-                    let gap = (index === 0) ? this.elPaddingTop + 20 : this.elPaddingTop + 20; // custom values from fixed elements
+                    let gap = (index === 0) ? this.elPaddingTop + 35 : this.elPaddingTop + 35; // custom values from fixed elements
                     let elementPosition = element.offsetTop + (parentPosition - gap);
                     window.scrollTo({
                         top: elementPosition,
