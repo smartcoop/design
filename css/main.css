@@ -3182,7 +3182,7 @@ textarea.c-input--h-large {
   right: 0; }
 
 .c-menu--large {
-  min-width: 13rem; }
+  min-width: 18rem; }
 
 .c-menu.c-menu--visible.js-no-action {
   position: static; }
@@ -4040,6 +4040,9 @@ c-table-of-content
 .c-table-of-content__content__item.active p:first-child {
   color: #154EB1;
   transition: color .15s ease; }
+
+.c-table-of-content__content__item:first-child p:first-child {
+  margin-top: 0.75rem; }
 
 .c-table-of-content__content__item h2 + h3 {
   margin-top: 1rem; }
