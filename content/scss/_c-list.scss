@@ -1,0 +1,129 @@
+/* ==========================================================================
+  Component: list
+  ---
+  List styling
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+// $c-table-background-color: #FFF !default;
+// $c-table-border-color: $color-gray-150 !default;
+
+/* Component
+   ========================================================================== */
+
+.c-list {
+  width: 100%;
+  background-color: $color-gray-50;
+  padding: 2rem 3rem;
+}
+.c-list__header {
+  border-bottom: 1px solid $color-gray-50;
+  .c-list__item {
+    padding: 1rem 1rem;
+    .c-list__item--cell{
+      color: $color-black;
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.c-list__body {
+  width: 100%;
+  
+}
+
+.c-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex: 1 1 auto;
+  padding: .5rem 1rem;
+  background-color: white;
+  border-radius: $g-border-radius-small;
+  
+  .mod-6{
+    width: calc(50% - 1.2rem);
+    margin-left: 0; margin-right: 0;
+    align-items: center;
+
+  }
+
+  &--cell{
+    // flex-grow: 1;
+    // flex-basis: 0;
+    &[class*='o-grid-col']{
+      margin-left: 0;margin-right: 0;
+    }
+    &.align-right{ 
+      // good practire for actions at the end
+      text-align: right;
+    }
+    &.small{
+      font-size: 1.4rem;
+    }
+  }
+
+  &+.c-list__item{
+    border-top: 1px solid $color-gray-50;
+  }
+
+}
+
+.c-list--pajamas .c-list__body{
+  .c-list__item:nth-child(odd){
+    background-color: $color-gray-25;
+  }
+}
+
+.c-list--scattered{
+  .c-list__header{    
+    display: none;
+  }
+  .c-list__item{
+    padding: 2rem 2rem;
+    margin-bottom: 1.5rem;
+
+    .mod-6{
+      width: calc(50% - 2.4rem);
+      display: block !important;
+      &:first-child{
+        .c-list__item--cell{
+          width: 100%;
+        }
+      }
+      .c-list__item--cell{
+        &:last-child{
+          font-weight: bold;
+        }
+      }
+      &+.mod-6{
+        width: calc(50% - 2.4rem);
+        display: flex !important;
+        .c-list__item--cell{
+          width: 25%;
+          &:first-child{
+            width: 32%;
+          }
+          &:last-child{
+            width: 43%;
+          }
+        }
+      }
+    }
+    
+    &--cell{
+      width: 50%;
+      // &.align-right{ 
+      //   text-align: left;
+      // }
+    }
+
+  }
+  .c-list__item + .c-list__item{
+    margin-top: 1.5rem;
+  }
+}
