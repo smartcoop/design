@@ -4,12 +4,6 @@
   List styling
    ========================================================================== */
 
-/* Variables
-   ========================================================================== */
-
-// $c-table-background-color: #FFF !default;
-// $c-table-border-color: $color-gray-150 !default;
-
 /* Component
    ========================================================================== */
 
@@ -117,14 +111,6 @@
         }
       }
     }
-    
-    &--cell{
-      // width: 50%;
-      // &.align-right{ 
-      //   text-align: left;
-      // }
-    }
-
   }
   .c-list__item + .c-list__item{
     margin-top: 1.5rem;
