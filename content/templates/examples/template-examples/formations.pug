@@ -1,0 +1,151 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Formations"
+    - var view = "list"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar.u-position-fixed
+            include /templates/prototypes/partials/side-menu-cfa
+
+        .c-app-layout-inner__content
+            include /templates/prototypes/partials/main-title-filters-formations
+
+            .o-container.o-container--large
+                .o-container-vertical--padding-small.u-position-relative
+                    ol.c-list
+                        .c-list__header
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5 Nom de la formation
+                                    .c-list__item--cell.o-grid-col-bp3-1 Matière(s)
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3 Status
+                                    .c-list__item--cell.o-grid-col-4.o-grid-col-bp3-3
+                        .c-list__body
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5.o-flex.o-flex--vertical-center.small.title Structurer son activité avec le business Model Canvas - <i>samuel.desguin@gmail.com</i>
+                                    .c-list__item--cell.o-grid-col-bp3-1.o-flex.o-flex--vertical-center.small Economie / Marketing
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3.o-grid
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3.o-flex.o-flex--vertical-center
+                                        +c-status-pill({skin: 'pending'}) User
+                                    .c-list__item--cell.align-right.o-grid-col-4.o-grid-col-bp3-3
+                                        +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5.o-flex.o-flex--vertical-center.small.title Notions de base en comptabilité et création d'un plan financier - <i>samuel.desguin@gmail.com</i>
+                                    .c-list__item--cell.o-grid-col-bp3-1.o-flex.o-flex--vertical-center.small Economie / Marketing
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3.o-grid
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3.o-flex.o-flex--vertical-center
+                                        +c-status-pill({skin: 'pending'}) User
+                                    .c-list__item--cell.align-right.o-grid-col-4.o-grid-col-bp3-3
+                                        +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5.o-flex.o-flex--vertical-center.small.title Happy @ Home / Happy @ Work: où comment trouver l'équilibre juste - <i>celineoctavie@gmail.com</i>
+                                    .c-list__item--cell.o-grid-col-bp3-1.o-flex.o-flex--vertical-center.small Economie / Marketing
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3.o-grid
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3.o-flex.o-flex--vertical-center
+                                        +c-status-pill({skin: 'success'}) Publié
+                                    .c-list__item--cell.align-right.o-grid-col-4.o-grid-col-bp3-3
+                                        +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5.o-flex.o-flex--vertical-center.small.title Nutrition et nutrithérapie - <i>celineoctavie@gmail.com</i>
+                                    .c-list__item--cell.o-grid-col-bp3-1.o-flex.o-flex--vertical-center.small Economie / Marketing
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3.o-grid
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3.o-flex.o-flex--vertical-center
+                                        +c-status-pill({skin: 'default'}) Brouillon
+                                    .c-list__item--cell.align-right.o-grid-col-4.o-grid-col-bp3-3
+                                        +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5.o-flex.o-flex--vertical-center.small.title Nutrition et nutrithérapie - <i>celineoctavie@gmail.com</i>
+                                    .c-list__item--cell.o-grid-col-bp3-1.o-flex.o-flex--vertical-center.small Science humaine et sociales, Communication
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3.o-grid
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3.o-flex.o-flex--vertical-center
+                                        +c-status-pill({skin: 'pending'}) User
+                                    .c-list__item--cell.align-right.o-grid-col-4.o-grid-col-bp3-3
+                                        +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5.o-flex.o-flex--vertical-center.small.title Happy @ Home / Happy @ Work: où comment trouver l'équilibre juste - <i>celineoctavie@gmail.com</i>
+                                    .c-list__item--cell.o-grid-col-bp3-1.o-flex.o-flex--vertical-center.small Economie / Marketing
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3.o-grid
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3.o-flex.o-flex--vertical-center
+                                        +c-status-pill({skin: 'pending'}) User
+                                    .c-list__item--cell.align-right.o-grid-col-4.o-grid-col-bp3-3
+                                        +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5.o-flex.o-flex--vertical-center.small.title English - General Progress - <i>hnewdheli@hotmail.com</i>
+                                    .c-list__item--cell.o-grid-col-bp3-1.o-flex.o-flex--vertical-center.small Cours de langue, Economie / Marketing, Matière scolaire / universitaire
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3.o-grid
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3.o-flex.o-flex--vertical-center
+                                        +c-status-pill({skin: 'pending'}) User
+                                    .c-list__item--cell.align-right.o-grid-col-4.o-grid-col-bp3-3
+                                        +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5.o-flex.o-flex--vertical-center.small.title Happy @ Home / Happy @ Work: où comment trouver l'équilibre juste - <i>celineoctavie@gmail.com</i>
+                                    .c-list__item--cell.o-grid-col-bp3-1.o-flex.o-flex--vertical-center.small Economie / Marketing
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3.o-grid
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3.o-flex.o-flex--vertical-center
+                                        +c-status-pill({skin: 'pending'}) User
+                                    .c-list__item--cell.align-right.o-grid-col-4.o-grid-col-bp3-3
+                                        +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
+                            li.c-list__item.o-grid
+                                .o-grid-col-8.o-grid-col-bp2-8.o-grid-col-bp3-7.o-grid-col-bp4-9.o-grid
+                                    .c-list__item--cell.o-grid-col-bp3-5.o-flex.o-flex--vertical-center.small.title Happy @ Home / Happy @ Work: où comment trouver l'équilibre juste - <i>celineoctavie@gmail.com</i>
+                                    .c-list__item--cell.o-grid-col-bp3-1.o-flex.o-flex--vertical-center.small Economie / Marketing
+                                .o-grid-col-4.o-grid-col-bp2-4.o-grid-col-bp3-3.o-grid-col-bp4-3.o-grid
+                                    .c-list__item--cell.o-grid-col-8.o-grid-col-bp3-3.o-flex.o-flex--vertical-center
+                                        +c-status-pill({skin: 'pending'}) User
+                                    .c-list__item--cell.align-right.o-grid-col-4.o-grid-col-bp3-3
+                                        +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
+                    
+    
+    script.
+        window.addEventListener('load', (event) => {
+            class SwitchViewButton {
+                constructor(els) {
+                    this.els = els;
+                    this.target__el = document.querySelector('.' + this.els[0].getAttribute('data-switch-target') );
+
+                    console.log(els);
+
+  
+                    this.init();
+                }
+
+                init() {
+                    this.els.forEach((el, i) => {
+                        // Attach events
+                        el.addEventListener("click", (e) => {
+                            e.preventDefault();
+                            this.toggleClass(this.target__el, ( el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
+                            this.els.forEach((il) => {
+                                //- Toggle class for other buttons around
+                                this.toggleClass(il, "c-button--secondary");
+                                this.toggleClass(il, "c-button--primary");
+                            });
+
+                        });
+                    });
+                   
+                }
+
+                toggleClass(target, toggleClass){
+                    target.classList.toggle(toggleClass);
+                }
+
+            }
+            
+            const switchViewButtons = document.querySelectorAll("[data-toggle]");
+
+            if (switchViewButtons.length) {
+                new SwitchViewButton(switchViewButtons);
+            }
+        });

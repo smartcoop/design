@@ -1,0 +1,16 @@
+.c-navbar.u-position-fixed.main-title
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    h1.c-toolbar__title= moduleTitle
+  
+            .c-toolbar__right
+                if view != "empty"
+                    include /templates/prototypes/tools/_includes/contracts-switch
+                .c-toolbar__item
+                    .o-form-group-layout
+                        .o-form-group
+                            .c-input-with-icon
+                                +icon('search')
+                                input.c-input(type="text" placeholder="Enter your search term...")
+            

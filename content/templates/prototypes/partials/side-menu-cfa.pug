@@ -1,0 +1,19 @@
+ul.c-side-menu
+    li.c-side-menu__item
+        a.c-side-menu__link(href="#") Mon profil formateur
+    li.c-side-menu__item
+        a.c-side-menu__link(href="#") Mes formations
+
+ul.c-side-menu
+    if moduleTitle == "Formateurs"
+        li.c-side-menu__item
+            a.c-side-menu__link(href="/examples/template-examples/formations.html") Toutes les formations
+        li.c-side-menu__item.c-side-menu__item--active
+            a.c-side-menu__link(href="/examples/template-examples/formateurs.html") Tous les formateurs
+    else
+        li.c-side-menu__item.c-side-menu__item--active
+            a.c-side-menu__link(href="/examples/template-examples/formations.html") Toutes les formations
+        li.c-side-menu__item
+            a.c-side-menu__link(href="/examples/template-examples/formateurs.html") Tous les formateurs
+
+    

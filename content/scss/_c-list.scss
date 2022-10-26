@@ -16,12 +16,17 @@
 .c-list {
   width: 100%;
   background-color: $color-gray-50;
-  padding: 2rem 3rem;
+  padding: 0;
 }
+
 .c-list__header {
-  border-bottom: 1px solid $color-gray-50;
+  border-bottom: 2px solid $color-gray-50;
   .c-list__item {
-    padding: 1rem 1rem;
+    &:first-child{
+      border-top-left-radius: $g-border-radius-medium;
+      border-top-right-radius: $g-border-radius-medium;
+    }
+    padding: 1rem 0;
     .c-list__item--cell{
       color: $color-black;
       font-weight: 500;
@@ -41,9 +46,11 @@
   align-items: center;
   flex-direction: row;
   flex: 1 1 auto;
-  padding: .5rem 1rem;
+  padding: .5rem 0;
   background-color: white;
   border-radius: $g-border-radius-small;
+  margin-left: 0;
+  margin-right: 0;
   
   .mod-6{
     width: calc(50% - 1.2rem);
@@ -53,22 +60,13 @@
   }
 
   &--cell{
-    // flex-grow: 1;
-    // flex-basis: 0;
-    &[class*='o-grid-col']{
-      margin-left: 0;margin-right: 0;
-    }
-    &.align-right{ 
-      // good practire for actions at the end
-      text-align: right;
-    }
     &.small{
       font-size: 1.4rem;
     }
   }
 
   &+.c-list__item{
-    border-top: 1px solid $color-gray-50;
+    border-top: 2px solid $color-gray-50;
   }
 
 }
@@ -86,6 +84,11 @@
   .c-list__item{
     padding: 2rem 2rem;
     margin-bottom: 1.5rem;
+
+    .title{
+      @extend .c-h5;
+      margin-bottom: 0;
+    }
 
     .mod-6{
       width: calc(50% - 2.4rem);
@@ -116,7 +119,7 @@
     }
     
     &--cell{
-      width: 50%;
+      // width: 50%;
       // &.align-right{ 
       //   text-align: left;
       // }
@@ -125,5 +128,25 @@
   }
   .c-list__item + .c-list__item{
     margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: ($g-bp3)) {
+  .c-list {
+    &__item{
+      &--cell{
+        &.align-right{ 
+          // good practire for actions at the end
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+@media (max-width: ($g-bp3-m)) {
+  .c-list {
+    width: 100%;
+    background-color: $color-gray-50;
+    
   }
 }
