@@ -132,7 +132,7 @@ input.c-button {
   }
 
   &.c-button--icon {
-    padding: ($c-button-height-small - $c-button-line-height-small) / 2;
+    padding: ($c-button-height-small - $c-button-line-height-small) / 2 ;
   }
 
   &:not(.c-button--icon) .o-svg-icon:first-child {
@@ -144,11 +144,11 @@ input.c-button {
   }
 }
 
-/* Icon-only Button (Square)
+/* Icon-only Button
     ========================================================================== */
 
 .c-button--icon {
-  padding: (($c-button-height - $c-button-line-height - 0.2rem) / 2);
+  padding: (($c-button-height - $c-button-line-height - 0.4rem) / 2) (($c-button-height - $c-button-line-height - 0.2rem) / 2);
 
   &.c-button--small {
     padding: ($c-button-height-small - $c-button-line-height-small) / 2;

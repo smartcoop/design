@@ -44,6 +44,11 @@ $c-input-padding: 0.8rem !default;
   &::placeholder {
     color: $color-gray-400;
   }
+
+  .c-toolbar__item &{
+    border-radius: 2rem;
+  }
+
 }
 
 *[disabled] .c-input,

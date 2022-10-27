@@ -53,13 +53,32 @@
   }
 
   .c-button + .c-button {
-    margin: 0 0 0 -0.1rem;
+    margin: 0 0 0 -0.2rem;
+  }
+  .c-button:first-child{
+    padding-right: .5rem;
+    &.c-button--small{
+      padding-right: .25rem;
+      padding-left: .5rem;
+    }
+  }
+  .c-button:last-child{
+    padding-left: .5rem;
+    &.c-button--small{
+      padding-right: .5rem;
+      padding-left: .25rem;
+    }
   }
 }
 
 .c-button-toolbar--vertical {
   flex-flow: column;
-
+  .c-button:first-child{
+    padding-right: .7rem;
+  }
+  .c-button:last-child{
+    padding-left: .7rem;
+  }
   .c-button + .c-button {
     margin-left: 0;
     margin-top: $g-spacer-unit;

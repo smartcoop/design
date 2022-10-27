@@ -46,7 +46,7 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   z-index: $g-c-local-toolbar-z; // Left and right should have higher z-index than center; if the elements overlap, there is a bigger chance we can still tap the action most likely contained on the left or right end
   justify-content: flex-start;
   .c-toolbar__item {
-    margin-right: $c-toolbar-item-spacing;
+    margin-right: $c-toolbar-item-spacing/2;
     &:only-child {
       margin: 0;
     }
@@ -173,3 +173,18 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   }
 
 }
+
+@media (min-width: $g-bp3-m) {
+  .c-toolbar__left {
+    .c-toolbar__item {
+      margin-right: $c-toolbar-item-spacing;
+    }
+  }
+}
+
+@media (min-width: $g-bp4) {
+  .c-toolbar__title {
+    margin-right: 2rem;
+  }
+}
+
