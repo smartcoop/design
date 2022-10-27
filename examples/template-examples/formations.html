@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html class="u-maximize-height" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Formations - Smart Design System
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+    <div class="c-app-layout">
+        <header class="u-position-fixed u-maximize-width">
+            <div class="c-navbar">
+                <div class="c-toolbar">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <div class="c-brand c-brand--xsmall">
+                                <a href="/prototypes/account/super-user-homepage.html">
+                                    <img src="/images/logo.svg" alt="Smart">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <nav>
+                                <ul class="c-pill-navigation">
+                                    <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                        <button type="button" data-menu="lang-switch">Français</button>
+                                        <ul class="c-menu c-menu--large" id="lang-switch">
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">Français</a>
+                                            </li>
+                                            <li class="c-menu__item">
+                                                <a class="c-menu__label" href="#">Néerlandais</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="c-toolbar__item">
+                            <button class="c-user-navigation" href="#" data-menu="userMenu">
+                                <div class="c-avatar c-avatar--img">
+                                    <img src="/images/avatars/1.jpg" alt="avatar">
+                                </div>
+                                <p class="c-avatar-and-text__text">Alice Henslay (HEA) </p>
+                            </button>
+                            <ul class="c-menu c-menu--large" id="userMenu">
+                                <!-- @todo add correct user menu items-->
+                                <li class="c-menu__info">
+                                    <div class="c-avatar-and-text">
+                                        <div class="c-avatar c-avatar--img">
+                                            <img src="/images/avatars/1.jpg" alt="avatar">
+                                        </div>
+                                        <div class="c-avatar-and-text__text">
+                                            <p>Signed in as <strong>Alice</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="c-menu__divider" role="presentational"></li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="#">Terms and conditions</a>
+                                </li>
+                                <li class="c-menu__divider" role="presentational"></li>
+                                <li class="c-menu__item">
+                                    <a class="c-menu__label" href="#">Sign out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="u-maximize-width">
+            <div class="c-app-layout-inner">
+                <div class="c-app-layout-inner__sidebar u-position-fixed">
+                    <ul class="c-side-menu">
+                        <li class="c-side-menu__item">
+                            <a class="c-side-menu__link" href="#">Mon profil formateur</a>
+                        </li>
+                        <li class="c-side-menu__item">
+                            <a class="c-side-menu__link" href="#">Mes formations</a>
+                        </li>
+                    </ul>
+                    <ul class="c-side-menu">
+                        <li class="c-side-menu__item c-side-menu__item--active">
+                            <a class="c-side-menu__link" href="/examples/template-examples/formations.html">Toutes les formations</a>
+                        </li>
+                        <li class="c-side-menu__item">
+                            <a class="c-side-menu__link" href="/examples/template-examples/formateurs.html">Tous les formateurs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="c-app-layout-inner__content">
+                    <div class="c-navbar u-position-fixed main-title collapsing">
+                        <div class="c-toolbar">
+                            <div class="c-toolbar__left">
+                                <div class="c-toolbar__item">
+                                    <h1 class="c-toolbar__title">Formations</h1>
+                                </div>
+                                <div class="c-toolbar__item">
+                                    <button class="c-filter-pill" type="button" data-popover="filter-status" data-popover-placement="bottom-start">
+                                        <span class="c-filter-pill__label">par status</span>
+                                        <span class="c-filter-pill__counter">2</span>
+                                        <div class="o-svg-icon o-svg-icon-caret-down  ">
+                                            <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <div class="c-popover" role="popover" id="filter-status">
+                                        <h4 class="c-h4">Filtrer par status</h4>
+                                        <div class="u-padding-vertical-s">
+                                            <div class="o-form-group-layout o-form-group-layout--standard">
+                                                <div class="o-form-group">
+                                                    <div class="o-form-group__controls">
+                                                        <div class="c-checkbox-group">
+                                                            <div class="c-checkbox">
+                                                                <label>
+                                                                    <input type="checkbox">Brouillon
+                                                                </label>
+                                                            </div>
+                                                            <div class="c-checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" checked>En attente de validation
+                                                                </label>
+                                                            </div>
+                                                            <div class="c-checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" checked>Publié
+                                                                </label>
+                                                            </div>
+                                                            <div class="c-checkbox">
+                                                                <label>
+                                                                    <input type="checkbox">Annulé
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-button-toolbar">
+                                            <button class="c-button c-button--secondary" type="button">
+                                                <span class="c-button__content">
+                                                    <span class="c-button__label">Réinitialiser</span>
+                                                </span>
+                                            </button>
+                                            <button class="c-button c-button--primary" type="button">
+                                                <span class="c-button__content">
+                                                    <span class="c-button__label">Appliquer les filtres</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-toolbar__item">
+                                    <button class="c-filter-pill" type="button" data-popover="filter-subject" data-popover-placement="bottom-start">
+                                        <span class="c-filter-pill__label">par matière(s)</span>
+                                        <span class="c-filter-pill__counter">2</span>
+                                        <div class="o-svg-icon o-svg-icon-caret-down  ">
+                                            <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11 10L6 16L1 10H11Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <div class="c-popover" role="popover" id="filter-subject">
+                                        <h4 class="c-h4">Filtrer par Matière(s)
+                                            <div class="u-padding-vertical-s">
+                                                <div class="o-form-group-layout o-form-group-layout--standard">
+                                                    <div class="o-form-group">
+                                                        <div class="o-form-group__controls">
+                                                            <div class="c-checkbox-group">
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox">Cours de langue
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" checked>Technologie de l'information
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" checked>Sciences humaines et sociales
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox">Matière scolaire / universitaire
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox">Soin au personnes
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox">Communication
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox">Art / Culture
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox">Economie / Marketing
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox">Sport
+                                                                    </label>
+                                                                </div>
+                                                                <div class="c-checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox">Autre
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-button-toolbar">
+                                                <button class="c-button c-button--secondary" type="button">
+                                                    <span class="c-button__content">
+                                                        <span class="c-button__label">Réinitialiser</span>
+                                                    </span>
+                                                </button>
+                                                <button class="c-button c-button--primary" type="button">
+                                                    <span class="c-button__content">
+                                                        <span class="c-button__label">Appliquer les filtres</span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-toolbar__right">
+                                <div class="c-toolbar__item">
+                                    <div class="c-button-toolbar c-button-toolbar--compact">
+                                        <a class="c-button c-button--primary c-button--icon" href="/development/tools/contracts.html" data-toggle="scattered" data-switch-target="c-list">
+                                            <span class="c-button__content">
+                                                <div class="o-svg-icon o-svg-icon-reorder  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z" fill="#0D0D0D" />
+                                                    </svg>
+                                                </div>
+                                                <div class="u-sr-accessible">Table view
+                                                </div>
+                                            </span>
+                                        </a>
+                                        <a class="c-button c-button--secondary c-button--icon" href="/development/tools/contracts-grid.html" data-toggle="scattered" data-switch-target="c-list">
+                                            <span class="c-button__content">
+                                                <div class="o-svg-icon o-svg-icon-two-rows  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M19 3a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm0 6V5H5v4h14zm0 4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14zm0 6v-4H5v4h14z" fill="#0D0D0D" />
+                                                    </svg>
+                                                </div>
+                                                <div class="u-sr-accessible">Grid view
+                                                </div>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="c-toolbar__item">
+                                    <div class="o-form-group-layout">
+                                        <div class="o-form-group">
+                                            <div class="c-input-with-icon">
+                                                <div class="o-svg-icon o-svg-icon-search  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="#595959" />
+                                                    </svg>
+                                                </div>
+                                                <input class="c-input" type="text" placeholder="Enter your search term...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-container o-container--large">
+                        <div class="o-container-vertical--padding-small u-position-relative">
+                            <ol class="c-list">
+                                <div class="c-list__header">
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5">Nom de la formation</div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1">Matière(s)</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3">Status</div>
+                                            <div class="c-list__item--cell o-grid-col-4 o-grid-col-bp3-3"></div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="c-list__body">
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5 o-flex o-flex--vertical-center small title">Structurer son activité avec le business Model Canvas - <i>samuel.desguin@gmail.com</i>
+                                            </div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1 o-flex o-flex--vertical-center small">Economie / Marketing</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3 o-flex o-flex--vertical-center">
+                                                <span class="c-status-pill c-status-pill--pending">
+                                                    <span class="c-status-pill__circle"></span>
+                                                    <span class="c-status-pill__label">User</span>
+                                                </span>
+                                            </div>
+                                            <div class="c-list__item--cell align-right o-grid-col-4 o-grid-col-bp3-3">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Edit
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5 o-flex o-flex--vertical-center small title">Notions de base en comptabilité et création d'un plan financier - <i>samuel.desguin@gmail.com</i>
+                                            </div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1 o-flex o-flex--vertical-center small">Economie / Marketing</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3 o-flex o-flex--vertical-center">
+                                                <span class="c-status-pill c-status-pill--pending">
+                                                    <span class="c-status-pill__circle"></span>
+                                                    <span class="c-status-pill__label">User</span>
+                                                </span>
+                                            </div>
+                                            <div class="c-list__item--cell align-right o-grid-col-4 o-grid-col-bp3-3">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Edit
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5 o-flex o-flex--vertical-center small title">Happy @ Home / Happy @ Work: où comment trouver l'équilibre juste - <i>celineoctavie@gmail.com</i>
+                                            </div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1 o-flex o-flex--vertical-center small">Economie / Marketing</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3 o-flex o-flex--vertical-center">
+                                                <span class="c-status-pill c-status-pill--success">
+                                                    <span class="c-status-pill__circle"></span>
+                                                    <span class="c-status-pill__label">Publié</span>
+                                                </span>
+                                            </div>
+                                            <div class="c-list__item--cell align-right o-grid-col-4 o-grid-col-bp3-3">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Edit
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5 o-flex o-flex--vertical-center small title">Nutrition et nutrithérapie - <i>celineoctavie@gmail.com</i>
+                                            </div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1 o-flex o-flex--vertical-center small">Economie / Marketing</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3 o-flex o-flex--vertical-center">
+                                                <span class="c-status-pill c-status-pill--default">
+                                                    <span class="c-status-pill__circle"></span>
+                                                    <span class="c-status-pill__label">Brouillon</span>
+                                                </span>
+                                            </div>
+                                            <div class="c-list__item--cell align-right o-grid-col-4 o-grid-col-bp3-3">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Edit
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5 o-flex o-flex--vertical-center small title">Nutrition et nutrithérapie - <i>celineoctavie@gmail.com</i>
+                                            </div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1 o-flex o-flex--vertical-center small">Science humaine et sociales, Communication</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3 o-flex o-flex--vertical-center">
+                                                <span class="c-status-pill c-status-pill--pending">
+                                                    <span class="c-status-pill__circle"></span>
+                                                    <span class="c-status-pill__label">User</span>
+                                                </span>
+                                            </div>
+                                            <div class="c-list__item--cell align-right o-grid-col-4 o-grid-col-bp3-3">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Edit
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5 o-flex o-flex--vertical-center small title">Happy @ Home / Happy @ Work: où comment trouver l'équilibre juste - <i>celineoctavie@gmail.com</i>
+                                            </div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1 o-flex o-flex--vertical-center small">Economie / Marketing</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3 o-flex o-flex--vertical-center">
+                                                <span class="c-status-pill c-status-pill--pending">
+                                                    <span class="c-status-pill__circle"></span>
+                                                    <span class="c-status-pill__label">User</span>
+                                                </span>
+                                            </div>
+                                            <div class="c-list__item--cell align-right o-grid-col-4 o-grid-col-bp3-3">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Edit
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5 o-flex o-flex--vertical-center small title">English - General Progress - <i>hnewdheli@hotmail.com</i>
+                                            </div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1 o-flex o-flex--vertical-center small">Cours de langue, Economie / Marketing, Matière scolaire / universitaire</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3 o-flex o-flex--vertical-center">
+                                                <span class="c-status-pill c-status-pill--pending">
+                                                    <span class="c-status-pill__circle"></span>
+                                                    <span class="c-status-pill__label">User</span>
+                                                </span>
+                                            </div>
+                                            <div class="c-list__item--cell align-right o-grid-col-4 o-grid-col-bp3-3">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Edit
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5 o-flex o-flex--vertical-center small title">Happy @ Home / Happy @ Work: où comment trouver l'équilibre juste - <i>celineoctavie@gmail.com</i>
+                                            </div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1 o-flex o-flex--vertical-center small">Economie / Marketing</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3 o-flex o-flex--vertical-center">
+                                                <span class="c-status-pill c-status-pill--pending">
+                                                    <span class="c-status-pill__circle"></span>
+                                                    <span class="c-status-pill__label">User</span>
+                                                </span>
+                                            </div>
+                                            <div class="c-list__item--cell align-right o-grid-col-4 o-grid-col-bp3-3">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Edit
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="c-list__item o-grid">
+                                        <div class="o-grid-col-8 o-grid-col-bp2-8 o-grid-col-bp3-7 o-grid-col-bp4-9 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-bp3-5 o-flex o-flex--vertical-center small title">Happy @ Home / Happy @ Work: où comment trouver l'équilibre juste - <i>celineoctavie@gmail.com</i>
+                                            </div>
+                                            <div class="c-list__item--cell o-grid-col-bp3-1 o-flex o-flex--vertical-center small">Economie / Marketing</div>
+                                        </div>
+                                        <div class="o-grid-col-4 o-grid-col-bp2-4 o-grid-col-bp3-3 o-grid-col-bp4-3 o-grid">
+                                            <div class="c-list__item--cell o-grid-col-8 o-grid-col-bp3-3 o-flex o-flex--vertical-center">
+                                                <span class="c-status-pill c-status-pill--pending">
+                                                    <span class="c-status-pill__circle"></span>
+                                                    <span class="c-status-pill__label">User</span>
+                                                </span>
+                                            </div>
+                                            <div class="c-list__item--cell align-right o-grid-col-4 o-grid-col-bp3-3">
+                                                <button class="c-button c-button--borderless c-button--icon" type="button">
+                                                    <span class="c-button__content">
+                                                        <div class="o-svg-icon o-svg-icon-edit  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16.2929 2.29289C16.6834 1.90237 17.3166 1.90237 17.7071 2.29289L21.7071 6.29289C22.0976 6.68342 22.0976 7.31658 21.7071 7.70711L8.70711 20.7071C8.51957 20.8946 8.26522 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.7348 3.10536 15.4804 3.29289 15.2929L13.2927 5.2931L16.2929 2.29289ZM14 7.41421L5 16.4142V19H7.58579L16.5858 10L14 7.41421ZM18 8.58579L19.5858 7L17 4.41421L15.4142 6L18 8.58579Z" fill="#595959" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="u-sr-accessible">Edit
+                                                        </div>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                window.addEventListener('load', (event) => {
+                    class SwitchViewButton {
+                        constructor(els) {
+                            this.els = els;
+                            this.target__el = document.querySelector('.' + this.els[0].getAttribute('data-switch-target'));
+
+                            console.log(els);
+
+
+                            this.init();
+                        }
+
+                        init() {
+                            this.els.forEach((el, i) => {
+                                // Attach events
+                                el.addEventListener("click", (e) => {
+                                    e.preventDefault();
+                                    this.toggleClass(this.target__el, (el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
+                                    this.els.forEach((il) => {
+                                        //- Toggle class for other buttons around
+                                        this.toggleClass(il, "c-button--secondary");
+                                        this.toggleClass(il, "c-button--primary");
+                                    });
+
+                                });
+                            });
+
+                        }
+
+                        toggleClass(target, toggleClass) {
+                            target.classList.toggle(toggleClass);
+                        }
+
+                    }
+
+                    const switchViewButtons = document.querySelectorAll("[data-toggle]");
+
+                    if (switchViewButtons.length) {
+                        new SwitchViewButton(switchViewButtons);
+                    }
+                });
+            </script>
+        </main>
+    </div>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>
