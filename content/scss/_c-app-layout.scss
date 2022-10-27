@@ -5,11 +5,11 @@ Component: app layout
 .c-app-layout {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 0;
-  // overflow: hidden;
+  min-height: 100%;
   main{
     background-color: $color-gray-50;
+    height: 100%;
+    flex: 1;
   }
 }
 
@@ -32,7 +32,7 @@ Component: app layout
   position: relative;
   top: 2px;
   flex: 0 0 auto;
-  padding: 2.4rem;
+  padding: 1.8rem;
   margin-top: 0;
   background-color: $color-white;
   height: 100%;
@@ -41,6 +41,9 @@ Component: app layout
     top: 6.4rem;
     border-top-right-radius: .6rem;
     width: $g-sidebar-width-m;
+  }
+  @media (min-width: $g-bp3-m) {
+    padding: 2.4rem;
   }
   @media (min-width: $g-bp4) {
     width: $g-sidebar-width-l;
@@ -79,19 +82,40 @@ Component: app layout
     height: auto;
     border-top: 2px solid $color-gray-50;
     border-bottom: 2px solid $color-gray-50;
+    
     .c-toolbar{
-      height: 6.4rem;
+      // height: 6.4rem;
       background: white;
     }
   }
   @media (min-width: $g-bp2) {
+    .c-navbar{
+      
+      &.u-position-fixed.main-title{
+        top: 6.2rem;
+        & + div{
+          margin-top: 12.4rem;
+        }
+      }
+      &.u-position-fixed.collapsing{
+        & + div{
+          margin-top: 20.4rem;
+        }
+      }
+    }
+  }
+  @media (min-width: $g-bp3-m) {
     margin-top: 6.2rem;
     .c-navbar{
       padding-left: 0;
       position: fixed;
-      top: 6.2rem;
-      &.u-position-fixed + div{
-        margin-top: 6.2rem;
+      .c-toolbar{
+        height: 6.2rem;
+      }
+      &.u-position-fixed.main-title, &.u-position-fixed.collapsing{
+        & + div{
+          margin-top: 7rem;
+        }
       }
     }
   }
