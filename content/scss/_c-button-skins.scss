@@ -84,6 +84,12 @@ $c-button-link-color: $color-red-600 !default;
   &:focus:not(:focus-visible) {
     outline: none;
   }
+
+  &.c-button--icon{
+    border: none;
+    box-shadow: inset 0 0 0 .5px $color-black;
+    border: .5px solid $color-black;
+  }
 }
 
 /* Danger
