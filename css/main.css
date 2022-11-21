@@ -1873,7 +1873,6 @@ Component: app layout
    ========================================================================== */
 .c-button {
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   text-decoration: none;
   cursor: pointer;
@@ -1899,7 +1898,6 @@ a.c-button, button.c-button {
 
 button.c-button {
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   margin: 0; }
   button.c-button::-moz-focus-inner {
@@ -2981,7 +2979,6 @@ a.c-card:hover {
   padding: 0.8rem;
   width: 100%;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none; }
   .c-input:focus {
     outline: 0;
@@ -3131,7 +3128,6 @@ textarea.c-input--h-large {
     left: auto; }
   .c-input-with-icon .c-input-with-icon__toggle {
     -webkit-appearance: none;
-       -moz-appearance: none;
             appearance: none;
     background: none;
     border: none;
@@ -3616,7 +3612,6 @@ header .c-navbar, header.c-navbar {
 .c-pill-navigation__item--has-child-menu > button {
   padding: .8rem 2.8rem .8rem 1.6rem;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   background: none;
   border: none;
@@ -3732,7 +3727,6 @@ header .c-navbar, header.c-navbar {
    ========================================================================== */
 .c-select {
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   background: #fff;
   border: 1px solid #CCCCCC;
@@ -3800,7 +3794,6 @@ header .c-navbar, header.c-navbar {
 .c-select-custom {
   color: #333333;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   text-align: left;
   background: #fff;
@@ -4699,7 +4692,6 @@ c-table-of-content
   color: #333333;
   position: relative;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   background: none;
   border: none;

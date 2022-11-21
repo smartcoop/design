@@ -25000,9 +25000,9 @@ module.exports={
     "@babel/preset-env": "^7.14.5",
     "autoprefixer": "^9.8.6",
     "babelify": "^10.0.0",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.10",
     "browserify": "^16.5.0",
-    "cached-path-relative": ">=1.0.2",
+    "cached-path-relative": "^1.1.0",
     "chalk": "^3.0.0",
     "cheerio": "^1.0.0-rc.10",
     "clipboard": "^1.5.3",
@@ -25030,7 +25030,7 @@ module.exports={
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^2.0.1",
+    "gulp-terser": "^2.1.0",
     "gulp-util": "^3.0.7",
     "icon-font-generator": "^2.1.11",
     "jquery": "^3.6.0",
@@ -25038,7 +25038,7 @@ module.exports={
     "lodash": "^4.17.21",
     "marked": "^0.8.2",
     "mkdirp": "^0.5.1",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "natives": "^1.1.6",
     "node-notifier": "^6.0.0",
     "postcss": "^8.3.4",
@@ -25047,7 +25047,9 @@ module.exports={
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "@popperjs/core": "^2.9.2"
+    "@popperjs/core": "^2.9.2",
+    "each-props": "^3.0.0",
+    "sass": "^1.56.1"
   }
 }
 
