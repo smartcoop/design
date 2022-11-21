@@ -3,90 +3,90 @@
             .c-toolbar__left
                 .c-toolbar__item
                     h1.c-toolbar__title= moduleTitle
-                .c-toolbar__item
-                    +c-filter-pill({counter: '2'})(data-popover="filter-status" data-popover-placement="bottom-start") par status
+                //- .c-toolbar__item
+                //-     +c-filter-pill({counter: '2'})(data-popover="filter-status" data-popover-placement="bottom-start") par status
 
-                    .c-popover(role="popover" id="filter-status")
-                        h4.c-h4 Filtrer par status
-                        .u-padding-vertical-s
-                            .o-form-group-layout.o-form-group-layout--standard
-                                .o-form-group
-                                    .o-form-group__controls
-                                        .c-checkbox-group
-                                            .c-checkbox
-                                                label
-                                                    input(type="checkbox")
-                                                    | Brouillon
-                                            .c-checkbox
-                                                label
-                                                    input(type="checkbox" checked)
-                                                    | En attente de validation
-                                            .c-checkbox
-                                                label
-                                                    input(type="checkbox" checked)
-                                                    | Publié
-                                            .c-checkbox
-                                                label
-                                                    input(type="checkbox")
-                                                    | Annulé
+                //-     .c-popover(role="popover" id="filter-status")
+                //-         h4.c-h4 Filtrer par status
+                //-         .u-padding-vertical-s
+                //-             .o-form-group-layout.o-form-group-layout--standard
+                //-                 .o-form-group
+                //-                     .o-form-group__controls
+                //-                         .c-checkbox-group
+                //-                             .c-checkbox
+                //-                                 label
+                //-                                     input(type="checkbox")
+                //-                                     | Brouillon
+                //-                             .c-checkbox
+                //-                                 label
+                //-                                     input(type="checkbox" checked)
+                //-                                     | En attente de validation
+                //-                             .c-checkbox
+                //-                                 label
+                //-                                     input(type="checkbox" checked)
+                //-                                     | Publié
+                //-                             .c-checkbox
+                //-                                 label
+                //-                                     input(type="checkbox")
+                //-                                     | Annulé
                                 
-                        .c-button-toolbar
-                            +c-button({}) Réinitialiser
-                            +c-button({skin: 'primary'}) Appliquer les filtres
+                //-         .c-button-toolbar
+                //-             +c-button({}) Réinitialiser
+                //-             +c-button({skin: 'primary'}) Appliquer les filtres
 
-                .c-toolbar__item
-                    +c-filter-pill({counter: '2'})(data-popover="filter-subject" data-popover-placement="bottom-start") par matière(s)
+                //- .c-toolbar__item
+                //-     +c-filter-pill({counter: '2'})(data-popover="filter-subject" data-popover-placement="bottom-start") par matière(s)
                     
-                    .c-popover(role="popover" id="filter-subject")
-                        h4.c-h4 Filtrer par Matière(s)
-                            .u-padding-vertical-s
-                                .o-form-group-layout.o-form-group-layout--standard
-                                    .o-form-group
-                                        .o-form-group__controls
-                                            .c-checkbox-group
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox")
-                                                        | Cours de langue
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox" checked)
-                                                        | Technologie de l'information
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox" checked)
-                                                        | Sciences humaines et sociales
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox")
-                                                        | Matière scolaire / universitaire
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox")
-                                                        | Soin au personnes
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox")
-                                                        | Communication
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox")
-                                                        | Art / Culture
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox")
-                                                        | Economie / Marketing
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox")
-                                                        | Sport
-                                                .c-checkbox
-                                                    label
-                                                        input(type="checkbox")
-                                                        | Autre
-                            .c-button-toolbar
-                                +c-button({}) Réinitialiser
-                                +c-button({skin: 'primary'}) Appliquer les filtres
+                //-     .c-popover(role="popover" id="filter-subject")
+                //-         h4.c-h4 Filtrer par Matière(s)
+                //-             .u-padding-vertical-s
+                //-                 .o-form-group-layout.o-form-group-layout--standard
+                //-                     .o-form-group
+                //-                         .o-form-group__controls
+                //-                             .c-checkbox-group
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox")
+                //-                                         | Cours de langue
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox" checked)
+                //-                                         | Technologie de l'information
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox" checked)
+                //-                                         | Sciences humaines et sociales
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox")
+                //-                                         | Matière scolaire / universitaire
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox")
+                //-                                         | Soin au personnes
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox")
+                //-                                         | Communication
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox")
+                //-                                         | Art / Culture
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox")
+                //-                                         | Economie / Marketing
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox")
+                //-                                         | Sport
+                //-                                 .c-checkbox
+                //-                                     label
+                //-                                         input(type="checkbox")
+                //-                                         | Autre
+                //-             .c-button-toolbar
+                //-                 +c-button({}) Réinitialiser
+                //-                 +c-button({skin: 'primary'}) Appliquer les filtres
 
             .c-toolbar__right
                 if view != "empty"
