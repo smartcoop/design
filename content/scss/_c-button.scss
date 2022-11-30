@@ -185,6 +185,20 @@ input.c-button {
   }
 }
 
+a.link--sup:not(.c-button){
+  color: $color-blue-600;
+  border-bottom: none;
+  sup{
+    border-bottom: .1rem solid rgba($color-blue-600,.33);
+  }
+  &:hover{
+    border-bottom: none;
+    sup{
+      border-bottom: .1rem solid $color-blue-600;
+    }
+  }
+}
+
 /* Focus button borderless (align to grid on right and left)
     ========================================================================== */
 

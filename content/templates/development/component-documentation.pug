@@ -114,8 +114,6 @@ block content
                                         each group in category
                                             - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
                                             li(class=styleguideNavListItemClass+' '+`${ "development/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
-                                                p="development/" + group.group.id
-                                                p=pathname
                                                 a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
                                                     |  #{groupName}
 

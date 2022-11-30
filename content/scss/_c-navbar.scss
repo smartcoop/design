@@ -7,6 +7,7 @@
 .c-navbar {
   height: $g-bar-size-regular;
   &.main-title{
+    box-shadow: 0 3px 2px transparentize($color-gray-50, .60);
     @media (min-width: $g-bp1) {
       right: 0;
       left: 0;
