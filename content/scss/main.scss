@@ -69,13 +69,13 @@
 @import "_c-citation";
 @import "_c-dialog";
 @import "_c-error-page";
-@import "_c-file-attachment";
+// @import "_c-file-attachment"; // not in use for now, moved to styleguide-customizations.scss
 @import "_c-file-attachment-list";
 @import "_c-file-upload";
 @import "_c-filter-pill";
 @import "_c-filter-pill-list";
 @import "_c-form-help-text";
-@import "_c-global-banner";
+// @import "_c-global-banner";  // not in use for now, moved to styleguide-customizations.scss
 @import "_c-hr";
 @import "_c-icon-list";
 @import "_c-input";
@@ -89,7 +89,7 @@
 @import "_c-panel";
 @import "_c-pill-navigation";
 @import "_c-popover";
-@import "_c-progress-bar";
+// @import "_c-progress-bar"; // not in use for now, moved to styleguide-customizations.scss
 @import "_c-select";
 @import "_c-select-custom";
 @import "_c-side-menu";
@@ -104,7 +104,7 @@
 @import "_c-toolbar-title";
 @import "_c-tooltip";
 @import "_c-user-navigation";
-@import "_c-wizard";
+// @import "_c-wizard"; // not in use for now, moved to styleguide-customizations.scss
 
 /* Components specific to design system website
    ========================================================================== */

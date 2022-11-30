@@ -138,26 +138,7 @@ header .c-navbar, header.c-navbar{
   border-bottom: 1px solid $color-semantic-border;
 }
 
-.c-navbar--main { // DSW only ! TOFIX - Perf!!
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 1.6rem;
-  border-top: none;
-  border-bottom: 1px solid $color-gray-50;
-  header &{
-    border-top: none;
-  }
 
-  .c-toolbar__right {
-    z-index: 61;
-  }
-
-  @media (min-width: $g-bp3) {
-    margin: 1.8rem 0 3.2rem;
-    padding-bottom: 1.8rem !important;
-    height: auto;
-  }
-}
 
 .c-navbar--scrollable {
   overflow-x: auto;
