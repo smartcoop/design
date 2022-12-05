@@ -111,6 +111,7 @@ $c-radio-checked-color: $color-blue-600 !default;
   height: $c-checkbox-size;
   width: $c-checkbox-size;
   margin: 0 $c-checkbox-spacing 0 0;
+  top: -1px;
 
   &:before {
     width: $c-checkbox-size;

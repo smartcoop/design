@@ -21,7 +21,7 @@ const selectOptions = document.querySelectorAll('[role="option"]');
 // Global settings
 const menuActiveClass = 'c-menu--visible';
 var menuButtonActiveClass = 'c-menu-button-active';
-const dropdownMargin = 8;
+const dropdownMargin = 6;
 let popperInstances = [];
 
 // Find target dropdown element
@@ -38,7 +38,6 @@ const findSelect = (element) => {
 // Position dropdown
 function create(triggerEl, targetEl) {
   const placement = triggerEl.dataset.menuPlacement || 'bottom-end';
-  console.log(placement);
   const samewidthEnable = !!triggerEl.dataset.menuSamewidth || false;
   const offset = triggerEl.dataset.menuOffset || dropdownMargin;
   
@@ -49,7 +48,7 @@ function create(triggerEl, targetEl) {
       {
         name: 'offset',
         options: {
-          offset: [0, offset],
+          offset: [8, offset],
         },
       },
       {

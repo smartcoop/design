@@ -128,7 +128,7 @@ block content
                                     ul(class=styleguideNavListClass)
                                         each group in category
                                             - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
-                                            li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
+                                            li(class=styleguideNavListItemClass+' '+`${ "development/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
                                                 a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
                                                     |  #{groupName}
 

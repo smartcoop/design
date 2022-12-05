@@ -1,5 +1,17 @@
 @import "_s-colors";
+@import "_s-variables";
 @import "br-variables-override";
+
+// depreciated or not ready for prod components
+@import "_c-wizard";
+@import "_c-progress-bar";
+@import "_c-global-banner";
+@import "_c-file-attachment";
+@import "_c-filter-pill";
+@import "_c-form-help-text";
+@import "_c-file-upload";
+@import "_c-error-page";
+@import "_c-icon-list"; 
 
 /* ==========================================================================
    Style guide styles
@@ -142,3 +154,35 @@
   border: 0.1rem solid $color-gray-200;
   white-space: nowrap;
 }
+
+.c-design-system-home-illustration {
+    background: $color-gray-25;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.c-navbar--main { 
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 1.6rem;
+    border-top: none;
+    border-bottom: 10px solid $color-gray-50;
+    header &{
+      border-top: none;
+    }
+
+    .c-toolbar{
+      padding-left: 0 ;
+      padding-right: 0 ;
+    }
+  
+    .c-toolbar__right {
+      z-index: 61;
+    }
+  
+    @media (min-width: $g-bp3) {
+      margin: 1.8rem 0 3.2rem;
+      padding-bottom: 1.8rem !important;
+      height: auto;
+    }
+  }

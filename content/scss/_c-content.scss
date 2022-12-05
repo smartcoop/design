@@ -73,6 +73,9 @@
 .c-content a:not(.c-button) {
   text-decoration: none;
   border-bottom: .1rem solid rgba($color-blue-600,.33);
+  &:hover{
+    border-bottom: .1rem solid $color-blue-600;
+  }
 
   &.u-text-muted {
     color: $color-semantic-muted-text;

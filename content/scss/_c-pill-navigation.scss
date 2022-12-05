@@ -15,6 +15,7 @@
   display: block;
   text-decoration: none;
   padding: .8rem 1.6rem;
+  display: flex;
   color: $color-semantic-body-text;
   font-weight: 500;
   border-radius: 30px;
@@ -23,10 +24,15 @@
   &:focus {
     background: $color-gray-25;
   }
+  .o-svg-icon{
+    margin-right: .4rem;
+    margin-top: 1px;
+    margin-left: -2px;
+  }
 }
 
 .c-pill-navigation__item--has-child-menu > button {
-  padding: .8rem 2.8rem .8rem 1.6rem;
+  padding: .8rem 2.6rem .8rem 1rem;
   appearance: none;
   background: none;
   border: none;
@@ -39,7 +45,7 @@
     pointer-events: none;
     content: ' ';
     position: absolute;
-    right: 1.4rem;
+    right: 1rem;
     top: 1.8rem;
     width: 0;
     height: 0;
