@@ -8,31 +8,52 @@ include /templates/_mixins/all
 
         .c-toolbar__right
             .c-toolbar__item
-                nav
-                    ul.c-pill-navigation
-                        li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu
-                            button(type="button" data-menu="lang-switch") Français
+                ul.c-pill-navigation
+                    li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu
+                        button(type="button" data-menu="help")
+                            +icon('circle-help', "o-svg-icon--small")
+                            p.u-hidden--mobile Aide
 
-                            ul.c-menu.c-menu--large(id="lang-switch")
-                                li.c-menu__item
-                                    a.c-menu__label(href="#") Français
-                                li.c-menu__item
-                                    a.c-menu__label(href="#") Néerlandais
+                        ul.c-menu.c-menu--large(id="help")
+                            li.c-menu__info
+                                p.c-menu__subline Aide et documentation
+                            li.c-menu__item
+                                a.c-menu__label(href="#") 
+                                    +icon('external-link')
+                                    span Documentation
+                            li.c-menu__item
+                                a.c-menu__label(href="#") Contactez-nous
+            
+            .c-toolbar__item
+                ul.c-pill-navigation
+                    li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu
+                        button(type="button" data-menu="lang-switch") Français
+
+                        ul.c-menu.c-menu--large(id="lang-switch")
+                            li.c-menu__info
+                                p.c-menu__subline Choix de la langue
+                            li.c-menu__item
+                                a.c-menu__label(href="#") Français
+                            li.c-menu__item
+                                a.c-menu__label(href="#") Dutch
 
             .c-toolbar__item
                 button.c-user-navigation(href="#" data-menu="userMenu")
                     +c-avatar({img: '/images/avatars/1.jpg', alt: 'avatar'})
                     p.c-avatar-and-text__text.u-hidden--mobile Alice Henslay (HEA) 
-                ul.c-menu.c-menu--large(id="userMenu")
-                    // @todo add correct user menu items
+                ul.c-menu.c-menu--xxlarge(id="userMenu")
                     li.c-menu__info
-                        .c-avatar-and-text
-                            +c-avatar({img: '/images/avatars/1.jpg', alt: 'avatar'})
-                            .c-avatar-and-text__text
-                                p Signed in as <strong>Alice</strong>
-                    li.c-menu__divider(role="presentational")
+                        p.c-menu__subline Informations personelles
                     li.c-menu__item
-                        a.c-menu__label(href="#") Terms and conditions
-                    li.c-menu__divider(role="presentational")
+                        a.c-menu__label(href="#") Vos informations personelles
                     li.c-menu__item
-                        a.c-menu__label(href="#") Sign out
+                        a.c-menu__label(href="#") Vos documents
+                    li.c-menu__item
+                        a.c-menu__label(href="#") Votre compte
+                    li.c-menu__item
+                        a.c-menu__label(href="#") Nos conditions d'utilisations
+                    li.c-menu__divider(role="sign-out")
+                    li.c-menu__item.c-menu__item--danger
+                        a.c-menu__label(href="#")
+                            +icon('log-out')
+                            span Se déconnecter

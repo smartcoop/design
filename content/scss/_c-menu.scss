@@ -14,8 +14,7 @@ $g-c-menu-z: 60 !default;
 
 .c-menu {
   background: #fff;
-  border: 1px solid $color-gray-200;
-  border-radius: 0.3rem;
+  border-radius: $g-border-radius-medium;
   filter: drop-shadow(0 0 0.5rem rgba(33, 33, 33, 0.25));
   color: $g-text-color;
   min-width: 10rem;
@@ -26,10 +25,39 @@ $g-c-menu-z: 60 !default;
   pointer-events: none;
   z-index: $g-c-menu-z;
   right: 0;
+  top: -4px !important;
+  &:after{
+    border-radius: 2px 2px 2px 12px;
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    clear: both;
+  }
+  &[data-popper-placement="bottom-start"] {
+    &:after{
+      right: auto;
+      left: 22px;
+    }
+  }
+  @media (min-width: $g-bp3) {
+    top: 0 !important;
+    &:after{
+      right: 18px;
+   }
+  }
 }
 
 .c-menu--large {
-  min-width: 18rem;
+  min-width: 21rem;
+}
+
+.c-menu--xxlarge {
+  min-width: 26rem;
 }
 
 .c-menu.c-menu--visible.js-no-action {
@@ -88,7 +116,8 @@ $g-c-menu-z: 60 !default;
 
 .c-menu__subline {
   font-size: 1.4rem;
-  color: $color-semantic-muted-text;
+  color: $color-black;
+  font-weight: 600;
   margin-top: 0.2rem;
 }
 
@@ -98,7 +127,7 @@ $g-c-menu-z: 60 !default;
 }
 
 .c-menu__divider {
-  border-top: 0.1rem solid $color-gray-200;
+  border-top: 0.1rem solid $color-semantic-border;
   display: block;
   margin-top: 0.4rem;
   padding-top: 0.4rem;
@@ -115,7 +144,7 @@ $g-c-menu-z: 60 !default;
 // Styling for items not used in a dropdown, ie as a list item
 *:not(.c-menu)>.c-menu__item {
   min-height: $g-bar-size-medium;
-  border-bottom: 1px solid $color-gray-200;
+  border-bottom: 1px solid $color-semantic-border;
   padding-left: 0;
   padding-right: 0;
 
