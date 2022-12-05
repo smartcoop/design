@@ -23,6 +23,7 @@ block append styleguideSettings
     - var styleguideRichContentClass = "c-content"
     - var styleguideNavListTitleClass = "c-h4"
     - var styleguideNavListClass = "c-styleguide-list"
+    - var styleguideNavListItemClass = "c-styleguide-list__item"
     - var styleguideNavListItemActiveClass = "c-styleguide-list__item--active"
     - var styleguideInputClass = "c-input c-input--max-width"
     - var styleguideLogoAsImage = true
@@ -56,6 +57,7 @@ html(dir="ltr" lang="en" class=htmlClass ? htmlClass : '')
 
         script(src='https://unpkg.com/htmx.org@1.6.0')
         script(src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js' defer)
+        //- Both scripts to remove before prod
 
 
         block headerStyles
