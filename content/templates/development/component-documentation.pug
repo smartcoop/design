@@ -5,36 +5,46 @@ block append pageVariables
     -
         var obj = [
             {
+                name: "Table of content",
+                ref: "c-table-of-content",
+                state: "new"
+            },
+            {
+                name: "Interactions",
+                ref: "u-interactions",
+                state: "new"
+            },
+            {
                 name: "Button",
-                ref: "button"
+                ref: "c-button"
             },
             {
                 name: "Input",
-                ref: "input"
+                ref: "c-input"
             },
             {
                 name: "Radio button",
-                ref: "radio-button"
+                ref: "c-radio-button"
             },
             {
                 name: "Checkbox",
-                ref: "checkbox"
+                ref: "c-checkbox"
             },
             {
                 name: "Select",
-                ref: "select"
+                ref: "c-select"
             },
             {
                 name: "Tooltip",
-                ref: "tooltip"
+                ref: "c-tooltip"
             },
             {
                 name: "Dialog",
-                ref: "dialog"
+                ref: "c-dialog"
             },
             {
                 name: "Alert",
-                ref: "alert"
+                ref: "c-alert"
             }
         ]
 
@@ -46,11 +56,16 @@ block append headerStyles
             border-radius: .3rem;
             display: block;
         }
-        #component-docs span {
+        #component-docs .title {
             display: block;
-            padding: .8rem 1.6rem;
-            color: #333
+            padding: .8rem 1.6rem .8rem 0;
+            color: #333;
 
+        }
+        #component-docs .title .c-status-pill {
+            margin-left: .75rem;
+            position:relative;
+            top: -1px;
         }
         #component-docs img {
             background: #F2F2F2;
@@ -119,11 +134,15 @@ block content
 
         .o-grid-col-bp3-9
                 .c-display
-                    p(style="margin-top: 0;") Please choose an item in the navigation. Or choose one of the popular components:
+                    p(style="margin-top: 0;") It contains all the fundamental components you will need to build all the smart tools in a consistant way.
 
                 ul.o-card-grid#component-docs
                     each item in obj
                         li
-                            a.c-card(href="/development/docs/c-"+item.ref+".html")
+                            a.c-card(href="/development/docs/"+item.ref+".html")
                                 img(src="/images/component-illustrations/"+item.ref+".png" alt="")
-                                span #{item.name}
+                                h4.c-h4.title #{item.name}
+                                    if item.state === "new"
+                                        +c-status-pill({skin: 'success'}) New
+                                    if item.state === "depreciated"
+                                        +c-status-pill({skin: 'danger'}) Depreciated

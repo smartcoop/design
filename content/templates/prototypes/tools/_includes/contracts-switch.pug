@@ -3,5 +3,5 @@ include /templates/_mixins/all
 
 .c-toolbar__item
     .c-button-toolbar.c-button-toolbar--compact
-        +c-button({ skin: (view == "list"? 'primary' : 'secondary'), icon: 'reorder', layout: 'icon-only', href: '/development/tools/contracts.html'})(data-toggle="scattered" data-switch-target="c-list") Table view
-        +c-button({ skin: (view == "grid"? 'primary' : 'secondary'), icon: 'two-rows', layout: 'icon-only', href: '/development/tools/contracts-grid.html'})(data-toggle="scattered" data-switch-target="c-list") Grid view
+        +c-button({ skin: (view == "list"? 'primary' : 'secondary'), icon: 'reorder', layout: 'icon-only', href: '/development/tools/contracts.html'})(data-toggle="big" data-switch-target="c-table") Table view
+        +c-button({ skin: (view == "grid"? 'primary' : 'secondary'), icon: 'two-rows', layout: 'icon-only', href: '/development/tools/contracts-grid.html'})(data-toggle="big" data-switch-target="c-table") Grid view
