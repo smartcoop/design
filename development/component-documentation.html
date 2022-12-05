@@ -19,10 +19,17 @@
             display: block;
         }
 
-        #component-docs span {
+        #component-docs .title {
             display: block;
-            padding: .8rem 1.6rem;
-            color: #333
+            padding: .8rem 1.6rem .8rem 0;
+            color: #333;
+
+        }
+
+        #component-docs .title .c-status-pill {
+            margin-left: .75rem;
+            position: relative;
+            top: -1px;
         }
 
         #component-docs img {
@@ -350,9 +357,6 @@
                                             <a class="null " href="/development/docs/c-key-value.html"> Key value list</a>
                                         </li>
                                         <li class="null ">
-                                            <a class="null " href="/development/docs/c-list.html"> List</a>
-                                        </li>
-                                        <li class="null ">
                                             <a class="null " href="/development/docs/c-loader.html"> Loader</a>
                                         </li>
                                         <li class="null ">
@@ -438,6 +442,9 @@
                                 <h4 class="br-docs-category-name c-h4">Utilities</h4>
                                 <div class="br-docs-category-list-wrapper">
                                     <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/u-interactions.html"> Interactions</a>
+                                        </li>
                                         <li class="null ">
                                             <a class="null " href="/development/docs/u-spacer.html"> Spacing utility classes</a>
                                         </li>
@@ -553,9 +560,6 @@
                                     <a class="null " href="/development/docs/c-key-value.html"> Key value list</a>
                                 </li>
                                 <li class="null ">
-                                    <a class="null " href="/development/docs/c-list.html"> List</a>
-                                </li>
-                                <li class="null ">
                                     <a class="null " href="/development/docs/c-loader.html"> Loader</a>
                                 </li>
                                 <li class="null ">
@@ -642,6 +646,9 @@
                         <div class="br-docs-category-list-wrapper">
                             <ul class="c-styleguide-list">
                                 <li class="null ">
+                                    <a class="null " href="/development/docs/u-interactions.html"> Interactions</a>
+                                </li>
+                                <li class="null ">
                                     <a class="null " href="/development/docs/u-spacer.html"> Spacing utility classes</a>
                                 </li>
                             </ul>
@@ -651,55 +658,83 @@
             </div>
             <div class="o-grid-col-bp3-9">
                 <div class="c-display">
-                    <p style="margin-top: 0;">Please choose an item in the navigation. Or choose one of the popular components:</p>
+                    <p style="margin-top: 0;">It contains all the fundamental components you will need to build all the smart tools in a consistant way.</p>
                 </div>
                 <ul class="o-card-grid" id="component-docs">
                     <li>
+                        <a class="c-card" href="/development/docs/c-table-of-content.html">
+                            <img src="/images/component-illustrations/c-table-of-content.png" alt="">
+                            <h4 class="c-h4 title">Table of content<span class="c-status-pill c-status-pill--success">
+                                    <span class="c-status-pill__circle"></span>
+                                    <span class="c-status-pill__label">New</span>
+                                </span>
+                            </h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="c-card" href="/development/docs/u-interactions.html">
+                            <img src="/images/component-illustrations/u-interactions.png" alt="">
+                            <h4 class="c-h4 title">Interactions<span class="c-status-pill c-status-pill--success">
+                                    <span class="c-status-pill__circle"></span>
+                                    <span class="c-status-pill__label">New</span>
+                                </span>
+                            </h4>
+                        </a>
+                    </li>
+                    <li>
                         <a class="c-card" href="/development/docs/c-button.html">
-                            <img src="/images/component-illustrations/button.png" alt="">
-                            <span>Button</span>
+                            <img src="/images/component-illustrations/c-button.png" alt="">
+                            <h4 class="c-h4 title">Button
+                            </h4>
                         </a>
                     </li>
                     <li>
                         <a class="c-card" href="/development/docs/c-input.html">
-                            <img src="/images/component-illustrations/input.png" alt="">
-                            <span>Input</span>
+                            <img src="/images/component-illustrations/c-input.png" alt="">
+                            <h4 class="c-h4 title">Input
+                            </h4>
                         </a>
                     </li>
                     <li>
                         <a class="c-card" href="/development/docs/c-radio-button.html">
-                            <img src="/images/component-illustrations/radio-button.png" alt="">
-                            <span>Radio button</span>
+                            <img src="/images/component-illustrations/c-radio-button.png" alt="">
+                            <h4 class="c-h4 title">Radio button
+                            </h4>
                         </a>
                     </li>
                     <li>
                         <a class="c-card" href="/development/docs/c-checkbox.html">
-                            <img src="/images/component-illustrations/checkbox.png" alt="">
-                            <span>Checkbox</span>
+                            <img src="/images/component-illustrations/c-checkbox.png" alt="">
+                            <h4 class="c-h4 title">Checkbox
+                            </h4>
                         </a>
                     </li>
                     <li>
                         <a class="c-card" href="/development/docs/c-select.html">
-                            <img src="/images/component-illustrations/select.png" alt="">
-                            <span>Select</span>
+                            <img src="/images/component-illustrations/c-select.png" alt="">
+                            <h4 class="c-h4 title">Select
+                            </h4>
                         </a>
                     </li>
                     <li>
                         <a class="c-card" href="/development/docs/c-tooltip.html">
-                            <img src="/images/component-illustrations/tooltip.png" alt="">
-                            <span>Tooltip</span>
+                            <img src="/images/component-illustrations/c-tooltip.png" alt="">
+                            <h4 class="c-h4 title">Tooltip
+                            </h4>
                         </a>
                     </li>
                     <li>
                         <a class="c-card" href="/development/docs/c-dialog.html">
-                            <img src="/images/component-illustrations/dialog.png" alt="">
-                            <span>Dialog</span>
+                            <img src="/images/component-illustrations/c-dialog.png" alt="">
+                            <h4 class="c-h4 title">Dialog
+                            </h4>
                         </a>
                     </li>
                     <li>
                         <a class="c-card" href="/development/docs/c-alert.html">
-                            <img src="/images/component-illustrations/alert.png" alt="">
-                            <span>Alert</span>
+                            <img src="/images/component-illustrations/c-alert.png" alt="">
+                            <h4 class="c-h4 title">Alert
+                            </h4>
                         </a>
                     </li>
                 </ul>

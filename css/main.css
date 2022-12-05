@@ -906,7 +906,7 @@ abbr[title] {
   font-weight: 600;
   margin: 0 0 0.8rem; }
 
-.c-h5, .c-list--scattered .c-list__item .title, .c-content h5, .c-content .c-h5, .c-content .c-list--scattered .c-list__item .title, .c-list--scattered .c-list__item .c-content .title {
+.c-h5, .c-content h5, .c-content .c-h5 {
   font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 1.65rem;
   font-weight: 600;
@@ -3211,7 +3211,7 @@ textarea.c-input--h-large {
   border-radius: 0.3rem;
   filter: drop-shadow(0 0 0.5rem rgba(33, 33, 33, 0.25));
   color: #333333;
-  min-width: 10rem;
+  min-width: 14rem;
   opacity: 0;
   padding: 0.4rem 0;
   position: absolute;
@@ -3954,7 +3954,7 @@ header .c-navbar, header.c-navbar {
    ========================================================================== */
 .c-status-pill {
   border-radius: 2.4rem;
-  padding: 0.2rem 1.2rem;
+  padding: 0.2rem 1rem 0.2rem .8rem;
   display: inline-flex;
   align-items: center;
   font-size: 1.2rem;
@@ -4133,10 +4133,12 @@ c-table-of-content
    ========================================================================== */
 .c-table {
   width: 100%;
-  background-color: #FFFFFF;
-  padding: 3.2rem;
-  border-radius: 1rem;
-  margin: 2rem 0; }
+  border-radius: 1rem; }
+  .c-table tr {
+    background-color: #FFFFFF; }
+  .c-table thead tr {
+    background-color: #FFFFFF;
+    color: #000000; }
   .c-table th, .c-table td {
     text-align: left; }
   .c-table td,
@@ -4151,7 +4153,7 @@ c-table-of-content
 .c-table--styled th {
   font-weight: 500;
   height: 5.6rem;
-  border-bottom: 0.1rem solid #D9D9D9;
+  border-bottom: 2px solid #F2F2F2;
   vertical-align: middle; }
 
 .c-table--styled tbody th {
@@ -4162,18 +4164,20 @@ c-table-of-content
 .c-table--styled tbody tr:last-child th {
   border: none; }
 
-.c-table--styled thead th {
-  border-width: 0.2rem;
-  border-radius: 0.4rem 0.4rem 0 0; }
+.c-table--styled thead th:first-child {
+  border-top-left-radius: 0.4rem; }
+
+.c-table--styled thead th:last-child {
+  border-top-right-radius: 0.4rem; }
 
 .c-table--styled tfoot td,
 .c-table--styled tfoot th {
-  border-top: 0.2rem solid #D9D9D9;
+  border-top: 2px solid #F2F2F2;
   border-bottom: none;
   font-weight: 500; }
 
 .c-table--styled td {
-  border-bottom: 0.1rem solid #D9D9D9; }
+  border-bottom: 0.1rem solid #F2F2F2; }
 
 .c-table--styled tr:last-child td {
   border-bottom: none; }
@@ -4192,10 +4196,28 @@ c-table-of-content
 .c-table--styled td input[type=checkbox] {
   margin: 0 auto; }
 
-.c-table--bordered {
-  border: 1px solid #D9D9D9;
-  border-radius: 0.3rem;
-  border-collapse: separate; }
+.c-table--big {
+  border-collapse: separate;
+  border-spacing: 0 1.2rem; }
+  .c-table--big td {
+    border-bottom: none;
+    padding: 1.8rem 2rem; }
+  .c-table--big thead th {
+    border: none;
+    padding: .5rem 2rem;
+    height: 2rem; }
+    .c-table--big thead th:first-child {
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem; }
+    .c-table--big thead th:last-child {
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem; }
+  .c-table--big tbody tr td:first-child {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem; }
+  .c-table--big tbody tr td:last-child {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
 
 .c-table--nowrap th,
 .c-table--nowrap td {
@@ -4283,7 +4305,7 @@ c-table-of-content
    Adapted from Bootstrap 4
    ========================================================================== */
 .c-table-responsive {
-  border: 1px solid #D9D9D9;
+  border: 1px solid #F2F2F2;
   border-radius: 0.3rem;
   display: block;
   width: 100%;
@@ -4307,94 +4329,6 @@ c-table-of-content
     padding-left: 2.4rem; }
   .c-panel .c-table tr th:last-child {
     padding-right: 2.4rem; }
-
-/* ==========================================================================
-  Component: list
-  ---
-  List styling
-   ========================================================================== */
-/* Component
-   ========================================================================== */
-.c-list {
-  width: 100%;
-  background-color: #F2F2F2;
-  padding: 0; }
-
-.c-list__header {
-  border-bottom: 2px solid #F2F2F2; }
-  .c-list__header .c-list__item {
-    padding: 1rem 0; }
-    .c-list__header .c-list__item:first-child {
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem; }
-    .c-list__header .c-list__item .c-list__item--cell {
-      color: #000000;
-      font-weight: 500;
-      font-size: 1.4rem; }
-
-.c-list__body {
-  width: 100%; }
-
-.c-list__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  flex: 1 1 auto;
-  padding: .5rem 0;
-  background-color: white;
-  border-radius: 0.4rem;
-  margin-left: 0;
-  margin-right: 0; }
-  .c-list__item .mod-6 {
-    width: calc(50% - 1.2rem);
-    margin-left: 0;
-    margin-right: 0;
-    align-items: center; }
-  .c-list__item--cell.small {
-    font-size: 1.4rem; }
-  .c-list__item + .c-list__item {
-    border-top: 2px solid #F2F2F2; }
-
-.c-list--pajamas .c-list__body .c-list__item:nth-child(odd) {
-  background-color: #F9F9F9; }
-
-.c-list--scattered .c-list__header {
-  display: none; }
-
-.c-list--scattered .c-list__item {
-  padding: 2rem 2rem;
-  margin-bottom: 1.5rem; }
-  .c-list--scattered .c-list__item .title {
-    margin-bottom: 0; }
-  .c-list--scattered .c-list__item .mod-6 {
-    width: calc(50% - 2.4rem);
-    display: block !important; }
-    .c-list--scattered .c-list__item .mod-6:first-child .c-list__item--cell {
-      width: 100%; }
-    .c-list--scattered .c-list__item .mod-6 .c-list__item--cell:last-child {
-      font-weight: bold; }
-    .c-list--scattered .c-list__item .mod-6 + .mod-6 {
-      width: calc(50% - 2.4rem);
-      display: flex !important; }
-      .c-list--scattered .c-list__item .mod-6 + .mod-6 .c-list__item--cell {
-        width: 25%; }
-        .c-list--scattered .c-list__item .mod-6 + .mod-6 .c-list__item--cell:first-child {
-          width: 32%; }
-        .c-list--scattered .c-list__item .mod-6 + .mod-6 .c-list__item--cell:last-child {
-          width: 43%; }
-
-.c-list--scattered .c-list__item + .c-list__item {
-  margin-top: 1.5rem; }
-
-@media (min-width: 900px) {
-  .c-list__item--cell.align-right {
-    text-align: right; } }
-
-@media (max-width: 1040px) {
-  .c-list {
-    width: 100%;
-    background-color: #F2F2F2; } }
 
 /* ==========================================================================
    c-tabs
