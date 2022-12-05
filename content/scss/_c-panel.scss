@@ -20,6 +20,14 @@ $c-panel-border-radius: $g-border-radius-medium !default;
   border-radius: $c-panel-border-radius;
 }
 
+.c-panel--yellow{
+  background-color: $color-yellow-50;
+  border-radius: $c-panel-border-radius;
+}
+.c-panel--border-r-sm{
+  border-radius: $g-border-radius-small !important;
+}
+
 .c-panel__body {
   padding: $c-panel-padding-all;
 }

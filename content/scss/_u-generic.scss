@@ -46,6 +46,17 @@
   display: none !important;
 }
 
+.u-hidden--mobile{
+  display: none !important;
+  @media (min-width: $g-bp2) {
+    display: block !important;
+  }
+}
+
+.u-inline-block{
+  display: inline-block !important;
+}
+
 .u-opacity-50 {
   opacity: 0.5;
 }

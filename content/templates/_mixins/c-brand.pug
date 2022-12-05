@@ -8,6 +8,7 @@
 
 
 mixin c-brand({href="/", size="medium", isClosable=true})
+    - var href = '/';
     .c-brand(class="c-brand--"+size)
         a(href=href)
             img(src="/images/logo.svg" alt="Smart")
