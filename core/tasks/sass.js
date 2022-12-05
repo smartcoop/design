@@ -30,7 +30,6 @@ module.exports = function () {
   const processors = [
     autoprefixer()
   ];
-
   return gulp.src(sources)
     // Inject config svgIconPrefix in scss
     .pipe(header('$br-svg-icon-class-prefix: ' + svgIconClassPrefix + ';\n'))

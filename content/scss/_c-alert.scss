@@ -31,6 +31,13 @@ $c-alert-border-radius: 0.3rem !default;
     padding: 0.6rem;
     margin: -0.6rem;
   }
+  
+  .c-alert__message{
+    .c-button--icon{
+      padding: 0.1rem;
+      margin: 0 .3rem;
+    }
+  }
 
   &+.c-alert {
     margin-top: $g-spacer-unit * 2;

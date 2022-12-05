@@ -5,13 +5,14 @@
 .c-user-navigation {
   display: flex;
   align-items: center;
-  padding: .4rem 2.8rem .4rem .4rem;
+  padding: .4rem 2.4rem .4rem .4rem;
   color: $color-semantic-body-text;
   position: relative;
   appearance: none;
   background: none;
   border: none;
   margin: 0;
+  margin-right: -.6rem;
   border-radius: 30px;
   cursor: pointer;
 
@@ -23,7 +24,7 @@
     pointer-events: none;
     content: ' ';
     position: absolute;
-    right: 1.4rem;
+    right: 1rem;
     top: 1.8rem;
     width: 0;
     height: 0;

@@ -9,3 +9,4 @@ import "./modules/navbar-components";
 import "./modules/popper-popover";
 import "./modules/popper-tooltip";
 import "./modules/tabs";
+import "./modules/table-of-content";

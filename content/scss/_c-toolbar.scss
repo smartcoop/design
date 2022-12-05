@@ -15,11 +15,25 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
 
 .c-toolbar {
   width: 100%;
-  display: flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: space-around;
+  display: flex;
   height: $g-bar-size-regular;
+  .main-title &{
+    display: block;
+    height: auto;
+    .c-toolbar__right{
+      justify-content: flex-start;
+    }
+    @media (min-width: $g-bp2) {
+      .c-toolbar__right{
+        justify-content: flex-end;
+      }
+      display: flex;
+      height: $g-bar-size-regular;
+    }
+  }
 }
 
 .c-toolbar--small {
@@ -62,6 +76,7 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
       margin: 0;
     }
   }
+
 }
 
 .c-toolbar__left,
