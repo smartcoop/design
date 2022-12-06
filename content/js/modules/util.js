@@ -74,7 +74,6 @@ class ScrollToLink {
   constructor(els) {
       this.els = els;
       this.target__el = document.querySelector('.' + this.els[0].getAttribute('data-scroll-target-id') );
-      console.log(els);
       this.init();
   }
 
