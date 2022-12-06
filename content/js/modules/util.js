@@ -24,20 +24,19 @@ export { isClickOutside };
 class SwitchViewButton {
   constructor(els) {
       this.els = els;
-      this.target__el = document.querySelector('.' + this.els[0].getAttribute('data-switch-target') );
-
       this.init();
-  }
-
-  init() {
+    }
+    
+    init() {
       this.els.forEach((el, i) => {
-          // Attach events
-          el.addEventListener("click", (e) => {
-              if(el.getAttribute('data-toggle') === "disabled"){
-                  this.toggleAttribute(this.target__el, "disabled");
+        // Attach events
+        el.addEventListener("click", (e) => {
+            var target__el = document.querySelector('.' + el.getAttribute('data-switch-target') );
+            if(el.getAttribute('data-toggle') === "disabled"){
+                  this.toggleAttribute(target__el, "disabled");
               }else{
                   e.preventDefault();
-                  this.toggleClass(this.target__el, ( el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
+                  this.toggleClass(target__el, ( el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
                   this.els.forEach((il) => {
                       //- Toggle class for other buttons around
                       this.toggleClass(il, "c-button--secondary");
@@ -55,6 +54,7 @@ class SwitchViewButton {
   }
   
   toggleAttribute(target, attribute){
+    
       if (target.hasAttribute(attribute)) {
           target.removeAttribute(attribute) 
       }else{
