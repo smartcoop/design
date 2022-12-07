@@ -25049,6 +25049,7 @@ module.exports={
   "dependencies": {
     "@popperjs/core": "^2.9.2",
     "each-props": "^3.0.0",
+    "gulp-minify": "^3.1.0",
     "sass": "^1.56.1"
   }
 }
