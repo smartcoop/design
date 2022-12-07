@@ -4,6 +4,7 @@ const rename = require('gulp-rename');
 const babelify = require('babelify');
 const terser = require('gulp-terser');
 const gulpif = require('gulp-if');
+const minify = require('gulp-minify');
 const paths = require('../paths');
 
 let config;
@@ -24,7 +25,7 @@ module.exports = {
     return gulp.src(paths.content.js.entryFile)
       .pipe(bro(babelConfig))
       .pipe(rename('bundle-client.js'))
-      .pipe(gulpif(config.js.minify,terser()))
+      .pipe(minify())
       .pipe(gulp.dest(paths.compiled.js))
   },
   prototypeBundle() {
@@ -32,6 +33,13 @@ module.exports = {
       .pipe(bro(babelConfig))
       .pipe(rename('bundle-prototype.js'))
       .pipe(gulpif(config.js.minify,terser()))
+      .pipe(gulp.dest(paths.compiled.js))
+  },
+  curuBundle() {
+    return gulp.src(paths.curu.js.entryFile)
+      .pipe(bro(babelConfig))
+      .pipe(rename('bundle-curu.js'))
+      .pipe(minify())
       .pipe(gulp.dest(paths.compiled.js))
   }
 };

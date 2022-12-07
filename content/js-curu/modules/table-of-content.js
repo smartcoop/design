@@ -1,4 +1,7 @@
-class Toc {
+/* Table of content components
+   ========================================================================== */
+   
+   class Toc {
     constructor(el) {
         this.el = el;
         this.toc__nav__list = this.el.querySelector(".c-table-of-content__nav");
@@ -21,9 +24,6 @@ class Toc {
         this.currentUrl = window.location.href.split("#")[0];
         this.whatever = this.callBackScrollEvent.bind(this, el);
         this.whateverHash = this.callBackHashEvent.bind(this, el);
-        console.log(this.el_init_top);
-        console.log(this.header_height);
-        console.log(this.main_title_height);
         this.init();
     }
 
@@ -126,14 +126,13 @@ class Toc {
     }
 
     callbackItemsSet(current_index, current_nav_item ) { 
-        console.log("callbackItemsSet");
         this.toc__nav__list__items.forEach((table_of_content__item, i) => {
             this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[i].offsetTop));
         });
+        this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[11].offsetTop + this.toc__content__list__items[11].offsetHeight));
 
         //- Get # Hashtag from url (ex: lentreprise-partage)
         let hash = window.top.location.hash.substr(1);
-        console.log(hash);
         if(hash.length){
             let current_hash_content_item = this.toc__content__list.querySelector('[data-id="' + hash + '"]');
             let current_hash_index = [...this.toc__content__list__items].indexOf(current_hash_content_item);

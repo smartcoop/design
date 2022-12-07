@@ -1,0 +1,42 @@
+block append pageVariables
+    - var moduleTitle = "Formations"
+    - var view = "list"
+
+div.u-bg-gray-50
+    div.u-padding-vertical.u-padding
+        include /templates/prototypes/tools/_includes/contracts-switch
+    div.u-padding
+        table.c-table.c-table--styled.js-data-table
+            thead
+                tr
+                    th Nom de la formation
+                    th Contact
+                    th Matière(s)
+                    th Status
+                    th
+                        // Actions
+            tbody
+                each item, index in [1, 2]
+                    tr
+                        td Lorem Ipsum
+                        td someone@gmail.com
+                        td Economie / Marketing
+                        td
+                            +c-status-pill({skin: 'default'}) Brouillon
+                        td
+                            .c-button-toolbar
+                                +c-button({skin: 'borderless', icon: 'options-horizontal', layout: 'icon-only'})(data-menu-placement="bottom-end" data-menu="dropdownMenu-"+index) More options
+
+                                ul.c-menu(id="dropdownMenu-"+index)
+                                    li.c-menu__item
+                                        a.c-menu__label(href="#")
+                                            +icon('edit')
+                                            span Edit
+                                    li.c-menu__item
+                                        a.c-menu__label(href="#")
+                                            +icon('delete')
+                                            span Delete
+                                    li.c-menu__item
+                                        a.c-menu__label(href="#")
+                                            +icon('add')
+                                            span Add more

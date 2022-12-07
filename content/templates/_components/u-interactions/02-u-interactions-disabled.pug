@@ -1,0 +1,11 @@
+div.u-padding-xl
+    div#acceptation.c-panel--yellow.u-padding-l.u-padding-horizontal-xl.c-panel--border-r-sm
+        div.u-flex.u-flex--twins.o-flex--vertical-center
+            div
+                .c-checkbox-group
+                    .c-checkbox
+                        label
+                            input(type="checkbox" data-toggle="disabled" data-switch-target="c-button--warning")
+                            | J’accepte le contrat d’utilisation
+            div
+                +c-button({skin: 'warning', icon: 'check'})(disabled) Valider

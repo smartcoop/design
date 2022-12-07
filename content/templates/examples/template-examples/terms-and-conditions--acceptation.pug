@@ -125,8 +125,8 @@ block content
                                             +icon('arrow-up')
                                             .u-sr-accessible Back to table of content
 
-                        div#acceptation.u-padding-xl
-                            div.c-panel--yellow.u-padding-l.u-padding-horizontal-xl.c-panel--border-r-sm
+                        div.u-padding-xl
+                            div#acceptation.c-panel--yellow.u-padding-l.u-padding-horizontal-xl.c-panel--border-r-sm
                                 div.u-flex.u-flex--twins.o-flex--vertical-center
                                     div
                                         .c-checkbox-group
@@ -135,4 +135,5 @@ block content
                                                     input(type="checkbox" data-toggle="disabled" data-switch-target="c-button--warning")
                                                     | J’accepte le contrat d’utilisation
                                     div
-                                        +c-button({skin: 'warning', icon: 'check'})(disabled) Valider     
+                                        +c-button({skin: 'warning', icon: 'check'})(disabled) Valider
+    script(src='/js/bundle-curu-min.js')
