@@ -126,7 +126,6 @@
     }
 
     callbackItemsSet(current_index, current_nav_item ) { 
-        console.log(this.toc__nav__list__items.length);
         this.toc__nav__list__items.forEach((table_of_content__item, i) => {
             this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[i].offsetTop));
         });
