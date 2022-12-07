@@ -11,6 +11,7 @@ if (process.env.NODE_ENV == "production") {
 
 const contentPath = 'content/';
 const corePath = 'core/';
+const curuPath = 'content/js-curu';
 const compiledPath = 'tmp/';
 const distPath = 'dist/';
 
@@ -79,6 +80,13 @@ module.exports = {
         colors: path.join(corePath, 'templates/styleguide/colors.pug'),
         componentGroup: path.join(corePath, 'templates/styleguide/component-group.pug')
       }
+    }
+  },
+  curu: {
+    path: curuPath,
+    js: {
+      entryFile: path.join(curuPath, 'index.js'),
+      allFiles: path.join(curuPath, '**/*.js'),
     }
   },
   compiled: {

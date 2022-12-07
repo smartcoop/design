@@ -26,8 +26,8 @@ block content
                         tbody
                             each item, index in [1, 2, 3, 4, 5, 6, 7]
                                 tr
-                                    td Structurer son activité avec le business Model Canvas
-                                    td samuel.desguin@gmail.com
+                                    td Nom et description de la formation donnée
+                                    td someone@gmail.com
                                     td Economie / Marketing
                                     td
                                         +c-status-pill({skin: 'default'}) Brouillon
@@ -50,7 +50,7 @@ block content
                                                         span Add more
                                 tr
                                     td English - General Progress
-                                    td samuel.desguin@gmail.com
+                                    td someone@gmail.com
                                     td Cours de langue, Economie / Marketing, Matière scolaire / universitaire
                                     td
                                         +c-status-pill({skin: 'success'}) Acceptée
@@ -71,47 +71,3 @@ block content
                                                     a.c-menu__label(href="#")
                                                         +icon('add')
                                                         span Add more
-
-    
-    script.
-        window.addEventListener('load', (event) => {
-            class SwitchViewButton {
-                constructor(els) {
-                    this.els = els;
-                    this.target__el = document.querySelector('.' + this.els[0].getAttribute('data-switch-target') );
-
-                    console.log(els);
-
-  
-                    this.init();
-                }
-
-                init() {
-                    this.els.forEach((el, i) => {
-                        // Attach events
-                        el.addEventListener("click", (e) => {
-                            e.preventDefault();
-                            this.toggleClass(this.target__el, ( el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
-                            this.els.forEach((il) => {
-                                //- Toggle class for other buttons around
-                                this.toggleClass(il, "c-button--secondary");
-                                this.toggleClass(il, "c-button--primary");
-                            });
-
-                        });
-                    });
-                   
-                }
-
-                toggleClass(target, toggleClass){
-                    target.classList.toggle(toggleClass);
-                }
-
-            }
-            
-            const switchViewButtons = document.querySelectorAll("[data-toggle]");
-
-            if (switchViewButtons.length) {
-                new SwitchViewButton(switchViewButtons);
-            }
-        });
