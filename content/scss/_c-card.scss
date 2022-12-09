@@ -72,7 +72,6 @@ a.c-card:hover {
 
 .c-card__banner{
   position: relative;
-  // width: 266px;
   height: auto;
   min-height: 125px;
   border-radius: $c-card-border-radius;
@@ -84,7 +83,7 @@ a.c-card:hover {
     padding: $c-card-padding;
     position: relative;
     z-index: 101;
-    width: 100%;
+    width: ;
     display: flex;
     align-items: center;
     .wrap{
