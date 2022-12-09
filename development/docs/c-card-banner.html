@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Textarea - Component documentation - Smart Design System
+    <title>Card banner - Component documentation - Smart Design System
     </title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/prototype.css">
@@ -635,24 +635,53 @@
             </div>
             <div class="o-grid-col-bp3-9">
                 <div class="br-componentgroup-header-wrapper">
-                    <h1 class="br-componentgroup-header c-d-h2">Textarea</h1>
+                    <h1 class="br-componentgroup-header c-d-h2">Card banner</h1>
                 </div>
                 <div class="br-content c-content">
                 </div>
-                <div class="br-sample" id="component-01-c-textarea">
+                <div class="br-sample" id="component-01-c-card-banner">
                     <div class="br-sample-header br-sample-clearfix">
-                        <h3 class="br-sample-heading c-h3">Textarea</h3>
-                        <a class="br-sample-header-link" href="#component-01-c-textarea">#</a>
+                        <h3 class="br-sample-heading c-h3">Card banner</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-card-banner">#</a>
                     </div>
-                    <div class="br-sample-documentation c-content">
-                        <p>A standard textarea. Use for multi-line text. Manipulate the height with the <code>rows</code> attribute or the following modifier classes: <code>.c-input--h-small</code>, <code>.c-input--h-medium</code>, <code>.c-input--h-large</code>.</p>
-                        <p>Optionally add a class of <code>.autosize</code> to autosize. This functionality relies on <a href="https://www.npmjs.com/package/autosize">autosize</a>.</p>
-                    </div>
+                    <div class="br-sample-documentation c-content"></div>
                     <div class="br-sample-content">
-                        <div class="o-form-group-layout o-form-group-layout--standard">
-                            <div class="o-form-group">
-                                <label class="o-form-group__label" for="textareaId">Label</label>
-                                <textarea class="c-textarea" rows="5" id="textareaId"></textarea>
+                        <div class="o-grid">
+                            <div class="o-grid-col-3 c-card c-card__banner" data-gradient="data-gradient" style="--bckg-color: black; --title-color: #FFBC1A; --background: url('../images/banner-december-2022.jpg'); --gradient-step-1-pos: 20%; --gradient-step-1-opacity: 0.85; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.25; --gradient-color: 0, 0, 0;">
+                                <div class="c-card__banner--text">
+                                    <div class="wrap">
+                                        <p class="sub-title">Smart vous
+                                            <br> souhaite de
+                                        </p>
+                                        <p class="main-title c-h3">joyeuses fêtes
+                                            <br> de fin d'années
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-3 c-card c-card__banner" data-gradient="data-gradient" style="--bckg-color: #00A57; --title-color: #FFBC1A; --background: url('../images/banner-december-2022-1.png'); --gradient-step-1-pos: 5%; --gradient-step-1-opacity: 0.35; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.25; --gradient-color: 0, 165, 125;">
+                                <div class="c-card__banner--text">
+                                    <div class="wrap">
+                                        <p class="sub-title">Smart vous
+                                            <br> souhaite de
+                                        </p>
+                                        <p class="main-title c-h3">joyeuses fêtes
+                                            <br> de fin d'années
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid-col-3 c-card c-card__banner" data-gradient="data-gradient" style="--bckg-color: black; --title-color: #FF4054; --background: url('../images/banner-december-2022-1.png'); --gradient-step-1-pos: 20%; --gradient-step-1-opacity: 0.45; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.25; --gradient-color: 0, 0, 0;">
+                                <div class="c-card__banner--text">
+                                    <div class="wrap">
+                                        <p class="sub-title">Smart vous
+                                            <br> souhaite de
+                                        </p>
+                                        <p class="main-title c-h3">joyeuses fêtes
+                                            <br> de fin d'années
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -661,20 +690,63 @@
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
-    &lt;div class=&quot;o-form-group&quot;&gt;
-        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textareaId&quot;&gt;Label&lt;/label&gt;
-        &lt;textarea class=&quot;c-textarea&quot; rows=&quot;5&quot; id=&quot;textareaId&quot;&gt;&lt;/textarea&gt;
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-grid&quot;&gt;
+    &lt;div class=&quot;o-grid-col-3 c-card c-card__banner&quot; data-gradient=&quot;data-gradient&quot; style=&quot;--bckg-color: black; --title-color: #FFBC1A; --background: url('../images/banner-december-2022.jpg'); --gradient-step-1-pos: 20%; --gradient-step-1-opacity: 0.85; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.25; --gradient-color: 0, 0, 0;&quot;&gt;
+        &lt;div class=&quot;c-card__banner--text&quot;&gt;
+            &lt;div class=&quot;wrap&quot;&gt;
+                &lt;p class=&quot;sub-title&quot;&gt;Smart vous
+                    &lt;br&gt; souhaite de
+                &lt;/p&gt;
+                &lt;p class=&quot;main-title c-h3&quot;&gt;joyeuses fêtes
+                    &lt;br&gt; de fin d'années
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3 c-card c-card__banner&quot; data-gradient=&quot;data-gradient&quot; style=&quot;--bckg-color: #00A57; --title-color: #FFBC1A; --background: url('../images/banner-december-2022-1.png'); --gradient-step-1-pos: 5%; --gradient-step-1-opacity: 0.35; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.25; --gradient-color: 0, 165, 125;&quot;&gt;
+        &lt;div class=&quot;c-card__banner--text&quot;&gt;
+            &lt;div class=&quot;wrap&quot;&gt;
+                &lt;p class=&quot;sub-title&quot;&gt;Smart vous
+                    &lt;br&gt; souhaite de
+                &lt;/p&gt;
+                &lt;p class=&quot;main-title c-h3&quot;&gt;joyeuses fêtes
+                    &lt;br&gt; de fin d'années
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid-col-3 c-card c-card__banner&quot; data-gradient=&quot;data-gradient&quot; style=&quot;--bckg-color: black; --title-color: #FF4054; --background: url('../images/banner-december-2022-1.png'); --gradient-step-1-pos: 20%; --gradient-step-1-opacity: 0.45; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.25; --gradient-color: 0, 0, 0;&quot;&gt;
+        &lt;div class=&quot;c-card__banner--text&quot;&gt;
+            &lt;div class=&quot;wrap&quot;&gt;
+                &lt;p class=&quot;sub-title&quot;&gt;Smart vous
+                    &lt;br&gt; souhaite de
+                &lt;/p&gt;
+                &lt;p class=&quot;main-title c-h3&quot;&gt;joyeuses fêtes
+                    &lt;br&gt; de fin d'années
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
-    .o-form-group
-        label.o-form-group__label(for=&quot;textareaId&quot;) Label
-        textarea.c-textarea(rows=&quot;5&quot; id=&quot;textareaId&quot;)
-</pre>
+                            <pre class="br-sample-markup br-sample-markup-pug">.o-grid
+    .o-grid-col-3.c-card.c-card__banner(data-gradient style=&quot;--bckg-color: black; --title-color: #FFBC1A; --background: url('../images/banner-december-2022.jpg'); --gradient-step-1-pos: 20%; --gradient-step-1-opacity: 0.85; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.25; --gradient-color: 0, 0, 0;&quot;)
+            .c-card__banner--text
+                .wrap
+                    p.sub-title Smart vous&lt;br&gt; souhaite de
+                    p.main-title.c-h3 joyeuses fêtes&lt;br&gt; de fin d'années
+    .o-grid-col-3.c-card.c-card__banner(data-gradient style=&quot;--bckg-color: #00A57; --title-color: #FFBC1A; --background: url('../images/banner-december-2022-1.png'); --gradient-step-1-pos: 5%; --gradient-step-1-opacity: 0.35; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.25; --gradient-color: 0, 165, 125;&quot;)
+            .c-card__banner--text
+                .wrap
+                    p.sub-title Smart vous&lt;br&gt; souhaite de
+                    p.main-title.c-h3 joyeuses fêtes&lt;br&gt; de fin d'années
+    .o-grid-col-3.c-card.c-card__banner(data-gradient style=&quot;--bckg-color: black; --title-color: #FF4054; --background: url('../images/banner-december-2022-1.png'); --gradient-step-1-pos: 20%; --gradient-step-1-opacity: 0.45; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.25; --gradient-color: 0, 0, 0;&quot;)
+            .c-card__banner--text
+                .wrap
+                    p.sub-title Smart vous&lt;br&gt; souhaite de
+                    p.main-title.c-h3 joyeuses fêtes&lt;br&gt; de fin d'années</pre>
                         </div>
                     </div>
                 </div>
