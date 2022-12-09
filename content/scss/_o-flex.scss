@@ -33,6 +33,12 @@ $o-flex-gutter-width: 0.8rem !default;
 .o-flex--reverse {
   flex-direction: row-reverse;
 }
+// reverse on mobile
+.o-flex--reverse-mobile {
+  @media (max-width: $g-bp2) {
+    flex-direction: row-reverse;
+  }
+}
 
 .o-flex--vertical-center {
   align-items: center;

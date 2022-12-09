@@ -2,17 +2,22 @@ include ../../../../core/templates/mixins/icon
 include /templates/_mixins/all
 
 
-.o-container-vertical--padding-small
-    .c-panel.u-shadow-50
+.u-spacer-bottom-l.u-spacer-top-l 
+    h1.c-h2 Bienvenue sur votre espace
+.u-spacer-bottom-l.o-grid
+    .c-panel.o-grid-col-12.o-grid-col-bp3-8
         .c-panel__body
             .c-content
-                h4 Welcome
-                p Do you have any question ? You can contact one of our advisors. You can also buy a share.
+                p.u-m-t-0 Des questions ? Contactez l'un de nos conseillers. Vous pouvez aussi souscrire à une part coopérative.
                 .c-button-toolbar
-                    +c-button({layout: 'text-icon', icon: 'external-link'}) Contact an advisor
-                    +c-button({layout: 'text-icon', icon: 'external-link'}) Buy a share
-
-.o-container-vertical--padding-small
+                    +c-button({skin: 'highlights',layout: 'text-icon', icon: 'external-link'}) Contactez-nous
+                    +c-button({layout: 'text-icon', icon: 'external-link'}) Souscrire une part
+    .c-card.c-card__banner.o-grid-col-12.o-grid-col-bp3-4.u-spacer-top-l.u-spacer-top-0-bp3(data-gradient style="--bckg-color: black; --title-color: #FFBC1A; --background: url('../images/banner-december-2022.jpg'); --gradient-step-1-pos: 20%; --gradient-step-1-opacity: 0.85; --gradient-step-2-pos: 80%; --gradient-step-2-opacity: 0.2; --gradient-color: 0, 0, 0;")
+        .c-card__banner--text
+            .wrap
+                p.sub-title Smart vous<br> souhaite de
+                p.main-title.c-h3 joyeuses fêtes<br> de fin d'années
+.u-spacer-bottom-l 
     .c-panel
         .c-panel__header
             .c-toolbar
@@ -20,11 +25,13 @@ include /templates/_mixins/all
                     h2.c-panel__title News
         .c-panel__body
             .c-content
-                h4 Taux réduits de TVA
+                h4 Besoin d’un espace où travailler à Bruxelles ?
                 p
-                    | De nouveaux taux réduits de TVA sont disponibles à l’encodage dans les outils Activité et Contrat. Votre prestation rentre-t-elle dans le cadre d’une TVA réduite? Comment l'encoder? 
+                    | En tant que sociétaires Smart, vous pouvez bénéficier sous certaines conditions d’espaces de travail à prix hyper avantageux dans les locaux de Smart à Saint-Gilles. Deux grands espaces sont disponibles pour des collectifs et huit bureaux dans un espace partagé. En plus d’un loyer attractif, bénéficiez d’une série d’autres avantages : Internet/Wifi ; sanitaires ; café, thé et eau ; parking vélo ; accès PMR ; mise à disposition de salles de réunion ; espace sécurisé avec alarme ; imprimante.
+                p
                     a.c-link(href="#") Retrouvez toutes les infos ici
-
+                p
+                    strong Attention, date limite pour candidater : 14 novembre
                 hr.c-hr
 
                 h4 Nos bureaux à nouveau accessibles sans rendez-vous

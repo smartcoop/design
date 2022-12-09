@@ -32,10 +32,8 @@ include /templates/_mixins/all
                         button(type="button" data-menu="lang-switch") Français
 
                         ul.c-menu.c-menu--large(id="lang-switch")
-                            li.c-menu__info
-                                p.c-menu__subline Choix de la langue
-                            li.c-menu__item
-                                a.c-menu__label(href="#") Français
+                            li.c-menu__item.u-text-muted
+                                p.c-menu__label Français
                             li.c-menu__item
                                 a.c-menu__label(href="#") Dutch
 
@@ -46,6 +44,8 @@ include /templates/_mixins/all
                 ul.c-menu.c-menu--xxlarge(id="userMenu")
                     li.c-menu__info
                         p.c-menu__subline Informations personnelles
+                    li.c-menu__item.u-hidden--dsktp
+                        p.c-menu__label.u-text-muted Alice Henslay (HEA) 
                     li.c-menu__item
                         a.c-menu__label(href="#") Vos informations personnelles
                     li.c-menu__item

@@ -274,8 +274,10 @@ $g-spacer-unit: 0.8rem !default;
   .u-spacer-right-bp3 {
     padding-right: $g-spacer-unit * 2 !important;
   }
+  .u-spacer-top-0-bp3 {
+    margin-top: 0 !important;
+  }
 }
-
 /* Resets
    ========================================================================== */
 
