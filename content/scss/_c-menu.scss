@@ -91,19 +91,20 @@ $g-c-menu-z: 60 !default;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  cursor: pointer;
 
   .c-avatar + span,
   .o-svg-icon + span,
   span + .o-svg-icon {
     margin-left: $g-spacer-unit;
   }
+}
 
-  // Hover state
+a.c-menu__label{
+  // Links only
+  cursor: pointer;
   &:hover {
     background-color: $color-gray-50;
   }
-
   &:focus {
     box-shadow: inset 0 0 0 0.2rem $color-blue-50;
   }

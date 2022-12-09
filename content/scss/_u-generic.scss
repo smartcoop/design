@@ -53,6 +53,13 @@
   }
 }
 
+.u-hidden--dsktp{
+  display: block !important;
+  @media (min-width: $g-bp2) {
+    display: none !important;
+  }
+}
+
 .u-inline-block{
   display: inline-block !important;
 }
