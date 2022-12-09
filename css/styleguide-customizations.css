@@ -1,0 +1,534 @@
+/* ==========================================================================
+  Colors
+  Only define colors here. Don't use sass color functions, stick to hex values,
+  or the color component in styleguide won't regenerate automatically anymore.
+ ========================================================================== */
+/* Base
+ ========================================================================== */
+/* Reds
+ ========================================================================== */
+/* Yellows
+========================================================================== */
+/* Greens
+ ========================================================================== */
+/* Blues
+ ========================================================================== */
+/* Semantic colors
+ ========================================================================== */
+/* ==========================================================================
+   Variables
+   ---
+   Global SCSS variables (override default values defined in component files)
+   ========================================================================== */
+/* Typography
+   ========================================================================== */
+/* Colors
+   ========================================================================== */
+/* Breakpoints
+   ========================================================================== */
+/* Z-index stack
+   ========================================================================== */
+/* Bars
+   ========================================================================== */
+/* General
+   ========================================================================== */
+/* Form groups
+   ========================================================================== */
+/* Button overrides
+   ========================================================================== */
+/* ==========================================================================
+  Variables override
+  Overide variables set in core/scss/prototype.scss with your own
+   ========================================================================== */
+/* ==========================================================================
+  c-wizard
+ ========================================================================== */
+.c-wizard ul {
+  display: flex; }
+
+.c-wizard.c-wizard--bordered {
+  border-bottom: 0.1rem solid #E5E5E5; }
+
+.c-wizard li {
+  position: relative;
+  height: 6.4rem;
+  margin-right: 1.6rem; }
+  .c-wizard li:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 900px) {
+    .c-wizard li {
+      margin-right: 2.4rem; } }
+
+.c-wizard__item {
+  color: #808080;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0;
+  height: 6.1rem;
+  width: 100%; }
+  .c-wizard__item:hover, .c-wizard__item:focus {
+    color: #000000; }
+  .c-wizard__item:focus:not(:focus-visible) {
+    outline: none; }
+  .c-wizard__item:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: transparent;
+    height: .3rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+
+.c-wizard__indicator {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 100%;
+  background: #E5E5E5;
+  border: 0.2rem solid #E5E5E5;
+  color: #595959;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 0; }
+
+.c-wizard__label {
+  display: none; }
+  @media screen and (min-width: 900px) {
+    .c-wizard__label {
+      display: block;
+      margin-left: .8rem; } }
+
+.c-wizard--complete {
+  color: #808080; }
+  .c-wizard--complete .c-wizard__indicator {
+    background: #00A57D;
+    border-color: #00A57D; }
+    .c-wizard--complete .c-wizard__indicator:before {
+      content: "";
+      position: absolute;
+      width: 2.4rem;
+      height: 2.4rem;
+      left: -0.2rem;
+      top: -0.2rem;
+      border-radius: 100%;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath fill='none' d='M0 0h16v16H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M11.69 4.675l-.443.424L6.77 9.575 4.752 7.558l-.442-.422L3.445 8l.423.442 2.46 2.46.442.423.442-.423 4.92-4.92.423-.442-.865-.865z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat; }
+
+.c-wizard--active {
+  color: #333333; }
+  .c-wizard--active:after {
+    background-color: #000000; }
+  .c-wizard--active .c-wizard__indicator {
+    background: #000000;
+    border-color: #000000;
+    color: #FFFFFF; }
+
+/* ==========================================================================
+    Component: Progress bar
+    ---
+    Progress bar that changes width AND color using a CSS variable
+    By Lea verou - http://dabblet.com/gist/9ef99ce3555ba569c24c7532ef37dc9a
+   ========================================================================== */
+.c-progress-bar {
+  display: flex;
+  width: 100%;
+  height: 0.4rem;
+  background-color: #CCCCCC;
+  border-radius: .3rem;
+  overflow: hidden; }
+  .c-progress-bar:before {
+    content: "";
+    width: calc(var(--value) * 100%);
+    background: #1267FB;
+    animation: fillBar 250ms linear 1; }
+
+@keyframes fillBar {
+  form {
+    width: 0%; }
+  to {
+    width: var(--value); } }
+
+.c-progress-bar--success:before {
+  background: #00A57D; }
+
+/* ==========================================================================
+  Component: Global banner
+   ========================================================================== */
+.c-global-banner {
+  padding: 1.2rem 2.4rem;
+  position: relative;
+  min-height: 5.6rem;
+  display: flex;
+  align-items: center; }
+  .c-global-banner.c-global-banner--default {
+    background-color: #1267FB;
+    color: #FFFFFF; }
+    .c-global-banner.c-global-banner--default .c-button--icon,
+    .c-global-banner.c-global-banner--default .o-svg-icon {
+      color: #FFFFFF; }
+  .c-global-banner.c-global-banner--warning {
+    background-color: #F4C95D; }
+    .c-global-banner.c-global-banner--warning .o-svg-icon {
+      color: #595959; }
+  .c-global-banner .o-svg-icon {
+    margin-right: 1.6rem;
+    flex-shrink: 0; }
+  .c-global-banner .c-button--icon {
+    position: absolute;
+    right: 1.2rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 2.4rem; }
+
+/* ==========================================================================
+c-file-attachment-list
+========================================================================== */
+/* Component
+========================================================================== */
+.c-file-attachment-list {
+  margin: -0.4rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .c-file-attachment-list .c-file-attachment {
+    margin: 0.4rem; }
+    .c-file-attachment-list .c-file-attachment a {
+      overflow: hidden; }
+
+.c-file-attachment a {
+  background: #F2F2F2;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.6rem 0.6rem 1rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border-radius: 4rem;
+  color: #333333;
+  text-decoration: none;
+  width: 100%;
+  align-items: center; }
+  .c-file-attachment a:hover {
+    background-color: #E5E5E5; }
+
+.c-file-attachment__icon {
+  background: #FFFFFF;
+  border-radius: 2.8rem;
+  padding: 0.4rem; }
+  .c-file-attachment__icon .o-svg-icon {
+    width: 2rem;
+    height: 2rem; }
+
+.c-file-attachment__name {
+  margin-left: .6rem;
+  transition: color .2s ease-in-out; }
+
+/* ==========================================================================
+  c-filter-pill-list
+   ========================================================================== */
+.c-filter-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .c-filter-pill-list .c-filter-pill-list__item + .c-filter-pill-list__item {
+    margin-left: 0.8rem; }
+
+/* ==========================================================================
+  c-filter-pill
+   ========================================================================== */
+.c-filter-pill {
+  border-radius: 2.4rem;
+  padding: 0.5rem 0.8rem 0.5rem 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 0.1rem solid transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 0.1rem solid #CCCCCC;
+  background: #F9F9F9; }
+  .c-filter-pill .o-svg-icon {
+    width: 0.8rem;
+    height: 1.6rem;
+    color: #666666; }
+
+.c-filter-pill:active,
+.c-filter-pill-list__item .c-popover[data-show] ~ .c-filter-pill {
+  border-color: #8AB5FF;
+  background: #E7EFFE; }
+
+.c-filter-pill__label {
+  line-height: 1;
+  color: #333333; }
+
+.c-filter-pill__counter {
+  font-size: 1.2rem;
+  line-height: 1;
+  background-color: #1267FB;
+  color: #fff;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.6rem; }
+
+.c-filter-pill__label + .o-svg-icon {
+  margin-left: 0.6rem; }
+
+/* ==========================================================================
+  c-form-help-text
+  ---
+  Help text + Errors on forms
+   ========================================================================== */
+.c-form-help-text {
+  color: #808080;
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 0.6rem; }
+
+.c-form-help-text--error {
+  color: #FF4054; }
+
+.c-form-help-text + .c-form-help-text {
+  margin-top: 0.4rem; }
+
+/* ==========================================================================
+  c-file-upload
+   ========================================================================== */
+.c-file-upload {
+  background: transparent;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+  .c-file-upload .c-progress-bar {
+    width: 60%; }
+
+.c-file-upload input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.0001; }
+
+.c-file-upload input[type="file"]:focus:not([disabled]) ~ .c-file-upload__content {
+  outline: 0;
+  border-color: transparent;
+  box-shadow: inset 0 0 0 0.1rem #1267FB; }
+
+.c-file-upload input[type="file"]:hover:not([disabled]) ~ .c-file-upload__content {
+  background-color: #F9F9F9; }
+
+.c-file-upload--gray-25 .c-file-upload__content {
+  background-color: #F9F9F9; }
+
+.c-file-upload--error .c-file-upload__content {
+  border-color: #FF4054; }
+
+.c-file-upload__content {
+  border: 0.1rem dashed #B3B3B3;
+  border-radius: 0.3rem;
+  width: 100%;
+  padding: 3rem;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 12rem; }
+  .c-file-upload__content .c-button {
+    position: relative; }
+
+.c-file-upload__status {
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center; }
+  .c-file-upload__status span + .o-svg-icon {
+    margin-left: 0.4rem; }
+
+/* ==========================================================================
+  c-error-page
+   ========================================================================== */
+.c-error-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2.4rem; }
+
+.c-error-page__code {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #666666; }
+
+.c-error-page__title {
+  color: #1A1A1A;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0 0 0.8rem; }
+
+.c-error-page__desc + .c-button,
+.c-error-page__desc + .c-button-toolbar {
+  margin-top: 2.4rem; }
+
+/* ==========================================================================
+  Component: c-icon-list
+   ========================================================================== */
+.c-icon-list .c-icon-list__item + .c-icon-list__item {
+  margin: 1.6rem 0 0 0; }
+
+.c-icon-list--horizontal {
+  display: flex;
+  align-items: center; }
+  .c-icon-list--horizontal .c-icon-list__item + .c-icon-list__item {
+    margin: 0 0 0 2.4rem; }
+
+.c-icon-list__item {
+  display: flex;
+  align-items: center; }
+  .c-icon-list__item .o-svg-icon {
+    color: #999999;
+    margin-right: 0.8rem; }
+
+/* ==========================================================================
+   Style guide styles
+   ========================================================================== */
+/*
+
+  In the "real world" (e.g. the app itself) some HTML elements are hidden by default,
+  or positioned in specific ways. In the styleguide sometimes we want to undo some of
+  that for demonstrational purposes. This is the location where would you write such code.
+
+  The idea is that the code that you write here never makes it to the final app. It's only
+  purpose is to make the style guide look good.
+
+  You can target a component with #component-{component-name} e.g. when a component
+  folder is called 01-my-component you can target it with #component-01-my-component.
+
+  It's interesting to know that the box that contains the component is called .br-sample-content.
+
+  Sometimes you want to set a height on this or targets its children etc.
+*/
+.br-styleguide-brand-heading {
+  margin: 0; }
+
+/* Styleguide list
+   ========================================================================== */
+.c-styleguide-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem; }
+  .c-styleguide-list li:first-child {
+    padding-top: 0.2rem; }
+  .c-styleguide-list li a {
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem 1.6rem;
+    color: #333333; }
+    .c-styleguide-list li a:hover {
+      color: #FF4054; }
+  .c-styleguide-list li.c-styleguide-list__item--active a {
+    color: #FF4054; }
+
+/* Colors
+   ========================================================================== */
+/* Typography
+   ========================================================================== */
+.br-typography-sample-name {
+  font-size: 1.4rem;
+  color: #808080; }
+
+/* Icons
+   ========================================================================== */
+#component-01-svg-icons h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 1.6rem 0; }
+  #component-01-svg-icons h3:first-child {
+    margin-top: 0; }
+
+.c-styleguide-svg-icons {
+  flex-wrap: nowrap;
+  column-count: 4; }
+
+.c-styleguide-svg-icon {
+  break-inside: avoid;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0; }
+  .c-styleguide-svg-icon .o-svg-icon {
+    margin-right: 0.8rem; }
+
+/* Grid
+   ========================================================================== */
+.br-styleguide #component-01-o-grid [class*="o-grid-col"],
+.br-styleguide #component-02-split-in-2-columns [class*="o-grid-col"],
+.br-styleguide #component-03-split-in-3-columns [class*="o-grid-col"],
+.br-styleguide #component-04-split-in-4-columns [class*="o-grid-col"],
+.br-styleguide #component-05-split-in-6-columns [class*="o-grid-col"] {
+  color: #fff;
+  background: #7a7a7a;
+  margin-bottom: 1.6rem;
+  padding: 1rem;
+  text-align: center; }
+
+/* Cards
+   ========================================================================== */
+#component-03-c-card-image .c-card {
+  max-width: 48rem; }
+
+/* Footer margins
+   ========================================================================== */
+.br-componentgroup-footer-wrapper {
+  margin-top: 4.8rem; }
+
+/* Adjust font weight in buttons
+   ========================================================================== */
+.c-button.br-sample-copy-code-btn,
+.c-button.br-sample-show-code-btn {
+  font-weight: 400;
+  border: 0.1rem solid #CCCCCC;
+  white-space: nowrap; }
+
+.c-design-system-home-illustration {
+  background: #F9F9F9;
+  padding: 2rem;
+  border-radius: 10px; }
+
+.c-navbar--main {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 1.6rem;
+  border-top: none;
+  border-bottom: 10px solid #F2F2F2; }
+  header .c-navbar--main {
+    border-top: none; }
+  .c-navbar--main .c-toolbar {
+    padding-left: 0;
+    padding-right: 0; }
+  .c-navbar--main .c-toolbar__right {
+    z-index: 61; }
+  @media (min-width: 900px) {
+    .c-navbar--main {
+      margin: 1.8rem 0 3.2rem;
+      padding-bottom: 1.8rem !important;
+      height: auto; } }
+
+/*# sourceMappingURL=styleguide-customizations.css.map */
