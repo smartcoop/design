@@ -68,3 +68,59 @@ a.c-card:hover {
     margin-left: -2.4rem;
   }
 }
+
+
+.c-card__banner{
+  position: relative;
+  // width: 266px;
+  height: auto;
+  min-height: 125px;
+  border-radius: $c-card-border-radius;
+  background-color: var(--bckg-color);
+  background-image: var(--background);
+  background-size: cover;
+  overflow: hidden;
+  &--text{
+    padding: $c-card-padding;
+    position: relative;
+    z-index: 101;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .wrap{
+      width: 80%;
+    }
+    p{
+      margin-bottom: 0;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+      &.sub-title{
+        color: white;
+        width: 80%;
+      }
+      &.main-title{
+        color: var(--title-color);
+      }
+    }
+  }
+}
+
+[data-gradient]:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+$gradient: '';
+$gradient-color-1: rgba(var(--gradient-color), var(--gradient-step-1-opacity));
+$gradient-color-2: rgba(var(--gradient-color), var(--gradient-step-2-opacity));
+$gradient: $gradient-color-1 + ' ' + var(--gradient-step-1-pos) + ', ' + $gradient-color-2 + ' ' + var(--gradient-step-2-pos);
+
+
+
+[data-gradient]:before{
+  background-color: $gradient-color-1;
+  background: linear-gradient(90deg, #{$gradient});
+}
