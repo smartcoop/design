@@ -14,6 +14,7 @@ block content
 
             .o-container.o-container--large
                 .o-container-vertical--padding-small.u-position-relative
+<<<<<<< HEAD
                     ol.c-list
                         .c-list__header
                             li.c-list__item.o-grid
@@ -107,6 +108,67 @@ block content
                                         +c-button({ layout: 'icon-only', icon: 'edit', skin: 'borderless'}) Edit
 
 
+=======
+                    table.c-table.c-table--styled.js-data-table
+                        thead
+                            tr
+                                th Nom de la formation
+                                th Contact
+                                th Matière(s)
+                                th Status
+                                th
+                                    // Actions
+                        tbody
+                            each item, index in [1, 2, 3, 4, 5, 6, 7]
+                                tr
+                                    td Structurer son activité avec le business Model Canvas
+                                    td example@site.com
+                                    td Economie / Marketing
+                                    td
+                                        +c-status-pill({skin: 'default'}) Brouillon
+                                    td
+                                        .c-button-toolbar
+                                            +c-button({skin: 'borderless', icon: 'options-horizontal', layout: 'icon-only'})(data-menu-placement="bottom-end" data-menu="dropdownMenu-"+index) More options
+
+                                            ul.c-menu(id="dropdownMenu-"+index)
+                                                li.c-menu__item
+                                                    a.c-menu__label(href="#")
+                                                        +icon('edit')
+                                                        span Edit
+                                                li.c-menu__item
+                                                    a.c-menu__label(href="#")
+                                                        +icon('delete')
+                                                        span Delete
+                                                li.c-menu__item
+                                                    a.c-menu__label(href="#")
+                                                        +icon('add')
+                                                        span Add more
+                                tr
+                                    td English - General Progress
+                                    td example@site.com
+                                    td Cours de langue, Economie / Marketing, Matière scolaire / universitaire
+                                    td
+                                        +c-status-pill({skin: 'success'}) Acceptée
+                                    td
+                                        .c-button-toolbar
+                                            +c-button({skin: 'borderless', icon: 'options-horizontal', layout: 'icon-only'})(data-menu-placement="bottom-end" data-menu="dropdownMenu-"+index) More options
+
+                                            ul.c-menu(id="dropdownMenu-"+index)
+                                                li.c-menu__item
+                                                    a.c-menu__label(href="#")
+                                                        +icon('edit')
+                                                        span Edit
+                                                li.c-menu__item
+                                                    a.c-menu__label(href="#")
+                                                        +icon('delete')
+                                                        span Delete
+                                                li.c-menu__item
+                                                    a.c-menu__label(href="#")
+                                                        +icon('add')
+                                                        span Add more
+
+
+>>>>>>> 0c7a447 (change list to table + interactions (#248))
     script.
         window.addEventListener('load', (event) => {
             class SwitchViewButton {
