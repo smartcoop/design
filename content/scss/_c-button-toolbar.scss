@@ -8,20 +8,22 @@
   align-items: center;
   display: flex;
 
-  .c-button + .c-button {
-    margin-left: 0.8rem;
+  .c-button{
+    margin-top: 1rem;
+    margin-right: 0.8rem;
+    &:last-child{
+      margin-right: 0;
+    }
   }
+  // .c-button + .c-button {
+  // }
 
   .c-button--link + .c-button--link {
     margin-left: 1.6rem;
   }
 
-  @media (max-width: $g-bp2) {
-    display: block;
-    .c-button + .c-button {
-      margin-left: 0;
-      margin-top: 1rem;
-    }
+  &.wrap{
+    flex-flow: wrap;
   }
 }
 

@@ -13,6 +13,7 @@ $o-grid-column-gap: 2.4rem !default;
 
 $o-grid-bp1: 400px;
 $o-grid-bp2: 600px;
+$o-grid-bp2-m: 700px;
 $o-grid-bp3: 900px;
 $o-grid-bp4: 1200px;
 
@@ -72,6 +73,25 @@ $i: 0;
 
   @while($i < $o-grid-columns) {
     .o-grid-col-bp2-#{$i + 1} {
+      width: calc(#{( ( $i + 1 ) / $o-grid-columns ) * 100}% - #{$o-grid-column-gap});
+    }
+    $i: $i + 1;
+  }
+}
+
+$i: 0;
+
+// Activate columns only from breakpoint 2 M
+$i: 0;
+
+@media (min-width: $o-grid-bp2-m) {
+
+  [class*='o-grid-col-bp2-'] {
+      flex: 1 1 auto;
+  }
+
+  @while($i < $o-grid-columns) {
+    .o-grid-col-bp2m-#{$i + 1} {
       width: calc(#{( ( $i + 1 ) / $o-grid-columns ) * 100}% - #{$o-grid-column-gap});
     }
     $i: $i + 1;

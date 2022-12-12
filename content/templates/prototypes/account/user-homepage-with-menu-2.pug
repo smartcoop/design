@@ -1,0 +1,14 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar.u-position-fixed
+            include /templates/prototypes/account/_includes/side-menu
+
+        .c-app-layout-inner__content
+            .u-scroll-wrapper
+                .o-container.o-container--large
+                    include /templates/prototypes/_includes/user-homepage-2
