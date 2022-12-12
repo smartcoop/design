@@ -89,6 +89,22 @@ Component: app layout
     }
   }
   @media (min-width: $g-bp2) {
+    .c-navbar{
+      
+      &.u-position-fixed.main-title{
+        top: 6.2rem;
+        & + div{
+          margin-top: 12.4rem;
+        }
+      }
+      &.u-position-fixed.collapsing{
+        & + div{
+          margin-top: 20.4rem;
+        }
+      }
+    }
+  }
+  @media (min-width: $g-bp3-m) {
     margin-top: 6.2rem;
     .c-navbar{
       
