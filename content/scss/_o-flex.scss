@@ -16,9 +16,30 @@ $o-flex-gutter-width: 0.8rem !default;
   display: flex;
 }
 
-.o-flex-bp2 {
-  @media (min-width: $g-bp2) {
+.o-flex--col-reverse {
+  flex-direction: column-reverse;
+}
+
+@media (min-width: $g-bp1-m) { // 600
+  .o-flex--col-reverse-bp1-m {
+    flex-direction: column-reverse;
+  }
+  .o-flex--horizontal-bp1-m {
+    flex-direction: row;
+  }
+}
+@media (min-width: $g-bp2) { // 700
+  .o-flex-bp2 {
     display: flex;
+  }
+  .o-flex--col-reverse-bp2 {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: $g-bp3) {
+  .o-flex--horizontal-bp3 {
+    flex-direction: row;
   }
 }
 
@@ -30,7 +51,11 @@ $o-flex-gutter-width: 0.8rem !default;
   flex-direction: column;
 }
 
-.o-flex--reverse {
+.o-flex--horizontal {
+  flex-direction: row;
+}
+
+.o-flex--reverse { // same in o-grid + u-generic. To factorize
   flex-direction: row-reverse;
 }
 // reverse on mobile
