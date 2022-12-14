@@ -1125,49 +1125,6 @@
                                 </table>
                             </div>
                         </div>
-                        <script>
-                            window.addEventListener('load', (event) => {
-                                class SwitchViewButton {
-                                    constructor(els) {
-                                        this.els = els;
-                                        this.target__el = document.querySelector('.' + this.els[0].getAttribute('data-switch-target'));
-
-                                        console.log(els);
-
-
-                                        this.init();
-                                    }
-
-                                    init() {
-                                        this.els.forEach((el, i) => {
-                                            // Attach events
-                                            el.addEventListener("click", (e) => {
-                                                e.preventDefault();
-                                                this.toggleClass(this.target__el, (el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
-                                                this.els.forEach((il) => {
-                                                    //- Toggle class for other buttons around
-                                                    this.toggleClass(il, "c-button--secondary");
-                                                    this.toggleClass(il, "c-button--primary");
-                                                });
-
-                                            });
-                                        });
-
-                                    }
-
-                                    toggleClass(target, toggleClass) {
-                                        target.classList.toggle(toggleClass);
-                                    }
-
-                                }
-
-                                const switchViewButtons = document.querySelectorAll("[data-toggle]");
-
-                                if (switchViewButtons.length) {
-                                    new SwitchViewButton(switchViewButtons);
-                                }
-                            });
-                        </script>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
@@ -1640,50 +1597,7 @@
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;
-    window.addEventListener('load', (event) =&gt; {
-        class SwitchViewButton {
-            constructor(els) {
-                this.els = els;
-                this.target__el = document.querySelector('.' + this.els[0].getAttribute('data-switch-target'));
-
-                console.log(els);
-
-
-                this.init();
-            }
-
-            init() {
-                this.els.forEach((el, i) =&gt; {
-                    // Attach events
-                    el.addEventListener(&quot;click&quot;, (e) =&gt; {
-                        e.preventDefault();
-                        this.toggleClass(this.target__el, (el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
-                        this.els.forEach((il) =&gt; {
-                            //- Toggle class for other buttons around
-                            this.toggleClass(il, &quot;c-button--secondary&quot;);
-                            this.toggleClass(il, &quot;c-button--primary&quot;);
-                        });
-
-                    });
-                });
-
-            }
-
-            toggleClass(target, toggleClass) {
-                target.classList.toggle(toggleClass);
-            }
-
-        }
-
-        const switchViewButtons = document.querySelectorAll(&quot;[data-toggle]&quot;);
-
-        if (switchViewButtons.length) {
-            new SwitchViewButton(switchViewButtons);
-        }
-    });
-&lt;/script&gt;</pre>
+&lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
@@ -1728,51 +1642,7 @@ div.u-bg-gray-50
                                     li.c-menu__item
                                         a.c-menu__label(href=&quot;#&quot;)
                                             +icon('add')
-                                            span Add more
-
-script.
-        window.addEventListener('load', (event) =&gt; {
-            class SwitchViewButton {
-                constructor(els) {
-                    this.els = els;
-                    this.target__el = document.querySelector('.' + this.els[0].getAttribute('data-switch-target') );
-
-                    console.log(els);
-
-
-                    this.init();
-                }
-
-                init() {
-                    this.els.forEach((el, i) =&gt; {
-                        // Attach events
-                        el.addEventListener(&quot;click&quot;, (e) =&gt; {
-                            e.preventDefault();
-                            this.toggleClass(this.target__el, ( el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
-                            this.els.forEach((il) =&gt; {
-                                //- Toggle class for other buttons around
-                                this.toggleClass(il, &quot;c-button--secondary&quot;);
-                                this.toggleClass(il, &quot;c-button--primary&quot;);
-                            });
-
-                        });
-                    });
-
-                }
-
-                toggleClass(target, toggleClass){
-                    target.classList.toggle(toggleClass);
-                }
-
-            }
-
-            const switchViewButtons = document.querySelectorAll(&quot;[data-toggle]&quot;);
-
-            if (switchViewButtons.length) {
-                new SwitchViewButton(switchViewButtons);
-            }
-        });
-</pre>
+                                            span Add more</pre>
                         </div>
                     </div>
                 </div>

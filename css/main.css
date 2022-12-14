@@ -456,15 +456,33 @@ abbr[title] {
 .o-flex {
   display: flex; }
 
+.o-flex--col-reverse {
+  flex-direction: column-reverse; }
+
+@media (min-width: 600px) {
+  .o-flex--col-reverse-bp1-m {
+    flex-direction: column-reverse; }
+  .o-flex--horizontal-bp1-m {
+    flex-direction: row; } }
+
 @media (min-width: 700px) {
   .o-flex-bp2 {
-    display: flex; } }
+    display: flex; }
+  .o-flex--col-reverse-bp2 {
+    flex-direction: column-reverse; } }
+
+@media (min-width: 900px) {
+  .o-flex--horizontal-bp3 {
+    flex-direction: row; } }
 
 .o-flex-inline {
   display: inline-flex; }
 
 .o-flex--vertical {
   flex-direction: column; }
+
+.o-flex--horizontal {
+  flex-direction: row; }
 
 .o-flex--reverse {
   flex-direction: row-reverse; }
@@ -2458,7 +2476,12 @@ a.c-card:hover {
   background-color: var(--bckg-color);
   background-image: var(--background);
   background-size: cover;
+  box-shadow: 0 0 18px rgba(var(--gradient-color), 0.22);
   overflow: hidden; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .c-card__banner {
+      background-image: var(--background-r);
+      /* Retina-specific */ } }
   .c-card__banner.img-right {
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -2477,7 +2500,9 @@ a.c-card:hover {
       text-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
       .c-card__banner--text p.sub-title {
         color: white;
-        width: 80%; }
+        width: 80%;
+        font-weight: 500;
+        margin-bottom: .2rem; }
       .c-card__banner--text p.main-title {
         color: var(--title-color); }
 
@@ -4838,11 +4863,9 @@ c-table-of-content
     @media (min-width: 700px) {
       .u-flex--bp2-col {
         flex-direction: row; } }
-  .u-flex--bp2-column-reverse {
-    flex-direction: column-reverse; }
-    @media (min-width: 700px) {
-      .u-flex--bp2-column-reverse {
-        flex-direction: row; } }
+  @media (max-width: 700px) {
+    .u-flex--bp2-column-reverse {
+      flex-direction: column-reverse; } }
 
 .u-content-flex {
   flex: 1 0 auto; }
