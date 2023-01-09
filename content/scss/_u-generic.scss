@@ -158,10 +158,9 @@
       flex-direction: row;
     }
   }
-  &--bp2-column-reverse{
-    flex-direction: column-reverse;
-    @media (min-width: $g-bp2) {
-      flex-direction: row;
+  &--bp2-column-reverse{ // same in o-grid. To factorize
+    @media (max-width: $g-bp2) {
+      flex-direction: column-reverse;
     }
   }
 }

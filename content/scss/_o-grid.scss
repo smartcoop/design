@@ -152,6 +152,6 @@ $i: 0;
   flex: 1 1 auto;
 }
 
-.o-grid--reverse {
+.o-grid--reverse { // same in U-generic + o-flec. To factorize
   flex-direction: row-reverse;
 }

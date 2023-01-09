@@ -78,7 +78,14 @@ a.c-card:hover {
   background-color: var(--bckg-color);
   background-image: var(--background);
   background-size: cover;
+  box-shadow: 0 0 18px rgba(var(--gradient-color), .22);
   overflow: hidden;
+  @media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+    background-image: var(--background-r);
+      /* Retina-specific */
+  }
   &.img-right{
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -100,6 +107,8 @@ a.c-card:hover {
       &.sub-title{
         color: white;
         width: 80%;
+        font-weight: 500;
+        margin-bottom: .2rem;
       }
       &.main-title{
         color: var(--title-color);
