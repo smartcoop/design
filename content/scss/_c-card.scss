@@ -131,7 +131,6 @@ $gradient-color-1: rgba(var(--gradient-color), var(--gradient-step-1-opacity));
 $gradient-color-2: rgba(var(--gradient-color), var(--gradient-step-2-opacity));
 $gradient: $gradient-color-1 + ' ' + var(--gradient-step-1-pos) + ', ' + $gradient-color-2 + ' ' + var(--gradient-step-2-pos);
 
-
 [data-gradient]:before{
   background-color: $gradient-color-1;
   background: linear-gradient(90deg, #{$gradient});

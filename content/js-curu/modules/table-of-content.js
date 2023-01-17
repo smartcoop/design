@@ -129,7 +129,7 @@
         this.toc__nav__list__items.forEach((table_of_content__item, i) => {
             this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[i].offsetTop));
         });
-        this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[11].offsetTop + this.toc__content__list__items[11].offsetHeight));
+        this.toc__content__list__items__posTop_from_parent.push(Math.round(this.toc__content__list__items[this.toc__content__list__items.length-1].offsetTop + this.toc__content__list__items[this.toc__content__list__items.length-1].offsetHeight));
 
         //- Get # Hashtag from url (ex: lentreprise-partage)
         let hash = window.top.location.hash.substr(1);
