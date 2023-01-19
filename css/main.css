@@ -5167,6 +5167,56 @@ c-table-of-content
 /* Vendor
   3rd party code
   ========================================================================== */
+.dynamic-dashboard {
+  display: flex;
+  flex-direction: column; }
+  .dynamic-dashboard > div + div {
+    margin-top: 2.4rem; }
+  .dynamic-dashboard > div {
+    flex: 1;
+    order: 2; }
+  .dynamic-dashboard > .communication {
+    flex: none;
+    width: 100%;
+    order: 1;
+    margin-bottom: 2.4rem;
+    margin-top: 0; }
+  @media (min-width: 600px) {
+    .dynamic-dashboard {
+      flex-direction: row; }
+      .dynamic-dashboard > div + div {
+        margin-left: 2.4rem;
+        margin-top: 0;
+        margin-bottom: 0; }
+      .dynamic-dashboard > .communication {
+        width: 45%;
+        order: 3;
+        margin-bottom: 0; } }
+  @media (min-width: 700px) {
+    .dynamic-dashboard {
+      flex-direction: column; }
+      .dynamic-dashboard > div + div {
+        margin-left: 0;
+        margin-top: 2.4rem; }
+      .dynamic-dashboard > .communication {
+        width: 100%;
+        order: 1;
+        margin-bottom: 2.4rem; } }
+  @media (min-width: 900px) {
+    .dynamic-dashboard {
+      flex-direction: row; }
+      .dynamic-dashboard > div + div {
+        margin-left: 2.4rem;
+        margin-top: 0;
+        margin-bottom: 0; }
+      .dynamic-dashboard > .communication {
+        width: 32%;
+        order: 3;
+        margin-bottom: 0; } }
+  @media (min-width: 1200px) {
+    .dynamic-dashboard > .communication {
+      width: 37%; } }
+
 /* ==========================================================================
     Htmx styles
    ========================================================================== */
