@@ -13,6 +13,11 @@ block content
 
             .o-container.o-container--large
                 .o-container-vertical--padding-small.u-position-relative
+                    .u-spacer-bottom-l
+                        +c-alert({
+                            skin: 'success',
+                            message: '<div>Vous avez accepté le contrat d’utilisation le <b>23 février 2023</b> </div>'
+                        })
                     div.c-panel
                         div.c-table-of-content.c-content
                             nav.c-table-of-content-navigation.fixed#table-of-content-nav(role="navigation" aria-label="Table of content")
