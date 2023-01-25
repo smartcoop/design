@@ -1,0 +1,114 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Terms and conditions"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar.u-position-fixed
+            include /templates/prototypes/partials/side-menu
+
+        .c-app-layout-inner__content
+            include /templates/prototypes/partials/main-title
+
+            .o-container.o-container--large
+                .o-container-vertical--padding-small.u-position-relative
+                    div.c-panel
+                        div.c-table-of-content.c-content
+                            nav.c-table-of-content-navigation.fixed#table-of-content-nav(role="navigation" aria-label="Table of content")
+                                ol.c-table-of-content__nav.relativeWidth.stickyPosition
+                                    li.not-numbered
+                                        a.c-table-of-content__nav__item(href='#section1' aria-selected="true") Préambule
+                                    li.not-numbered
+                                        a.c-table-of-content__nav__item(href='#section2') Les parties
+                                    li
+                                        a.c-table-of-content__nav__item(href='#section3') Objet du contrat
+                                    li
+                                        a.c-table-of-content__nav__item(href='#section4') Définitions
+                                    li
+                                        a.c-table-of-content__nav__item(href='#section5') Le titulaire
+                                    li
+                                        a.c-table-of-content__nav__item(href='#section6') L'entreprise partagée
+                                    li
+                                        a.c-table-of-content__nav__item(href='#section7') Création et vie d'une Activité
+                                    li
+                                        a.c-table-of-content__nav__item(href='#section8') Droits de l'Entreprise partagée
+                                    li
+                                        a.c-table-of-content__nav__item(href='#section9') Droits du Titulaire
+                                    li
+                                        a.c-table-of-content__nav__item(href='#section12') Conclusion
+                                    .current-state(aria-hidden="true")
+
+                            div.c-table-of-content__content
+                                section#section1.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Préambule
+                                    h2.c-h3.u-spacer-bottom-xs  Quels sont les objectifs de notre contrat d’utilisation ?
+                                    p Le présent Contrat d’Utilisation vise à régir la relation entre le Titulaire et l’entreprise Smart, (ci-après dénommée l’ « Entreprise Partagée ») ainsi que les droits et obligations de l’une et l’autre partie. Ce contrat a également pour objectif d'accompagner, d’informer et d’orienter le Titulaire dans la gestion de l’Activité, qu’il ou elle a décidé de constituer et de développer au sein de l’Entreprise Partagée. Ce contrat n’a pas vocation à régir la relation entre la société coopérative SmartCoop (ci-après dénommée « SmartCoop ») et ses sociétaires, cette relation étant régie par le code des sociétés et des associations (CSA), les statuts et le Règlement d’Ordre Intérieur de SmartCoop<a href="#Note01" class="link--sup"><sup>1</sup></a>. Ce contrat n’a pas non plus vocation à régir la relation entre Smart<a href="#Note02" class="link--sup"> <sup>2</sup></a> et ses travailleurs salariés. Cette relation étant régie par le contrat de travail, le règlement de travail et le droit du travail. Conformément à l’article 4 des statuts de SmartCoop<a href="#Note03" class="link--sup"><sup>3</sup></a>, le présent contrat et toutes ses modifications ultérieures sont validés par le Conseil d’administration de SmartCoop. Toute modification du Contrat d’Utilisation est automatiquement portée à la connaissance du Titulaire et soumise à son acceptation, dans son « Espace Activité ».
+                                    hr.c-hr
+                                    .foot-notes.u-text-small
+                                        p#Note01 <sup>1</sup> <a href="http://www.ejustice.just.fgov.be/cgi_tsv/tsv_rech.pl?language=fr&amp;btw=0668600511&amp;liste=Liste">Statuts de SmartCoop SCES agréée, Moniteur Belge</a>, articles 8 à 10. <a href="https://smartbe.be/wp-content/uploads/2021/04/ROI_FR.pdf">Règlement d’Ordre Intérieur de SmartCoop</a>
+                                        p#Note02 <sup>2</sup> Entendue comme SmartCoop ou l’une de ses entités de productions telles que définies dans le Règlement d’Usages.
+                                        p#Note03 <sup>3</sup> <a href="http://www.ejustice.just.fgov.be/cgi_tsv/tsv_rech.pl?language=fr&amp;btw=0668600511&amp;liste=Liste">Statuts de SmartCoop SCES agréée, Moniteur Belge</a>, article 4
+                                section#section2.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Les parties
+                                    h2.c-h3.u-spacer-bottom-xs  Les différentes parties liées au contrat
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                section#section3.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Article 1
+                                    h2.c-h3.u-spacer-bottom-xs  Objet du contrat
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                section#section4.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Article 2
+                                    h2.c-h3.u-spacer-bottom-xs  Définitions
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                section#section5.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Article 3
+                                    h2.c-h3.u-spacer-bottom-xs  Le titulaire
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                section#section6.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Article 4
+                                    h2.c-h3.u-spacer-bottom-xs  L'entreprise partagée
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                section#section7.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Article 5
+                                    h2.c-h3.u-spacer-bottom-xs  Création et vie d'une Activité
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                section#section8.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Article 6
+                                    h2.c-h3.u-spacer-bottom-xs  Droits de l'Entreprise partagée
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                section#section9.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Article 7
+                                    h2.c-h3.u-spacer-bottom-xs  Droits du Titulaire
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                section#section10.c-table-of-content__content__item.u-spacer-bottom-xl.u-padding-bottom-s
+                                    p.c-body-2.u-spacer-bottom-s Article 8
+                                    h2.c-h3.u-spacer-bottom-xs  Exclusion
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    wp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                .back-to-top
+                                    button.c-button.c-button--secondary.c-button--icon.u-shadow-10
+                                        span.c-button__content
+                                            +icon('arrow-up')
+                                            .u-sr-accessible Back to table of content
+
+                        div.u-padding-xl
+                            div#after-acceptation.c-panel--green.u-padding-l.c-panel--border-r-sm
+                                p Vous avez accepté le contrat d’utilisation le <b>23 février 2023</b> 
+    script(src='/js/bundle-curu-min.js')

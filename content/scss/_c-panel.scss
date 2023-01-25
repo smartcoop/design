@@ -24,6 +24,11 @@ $c-panel-border-radius: $g-border-radius-medium !default;
   background-color: $color-yellow-50;
   border-radius: $c-panel-border-radius;
 }
+
+.c-panel--green{
+  background-color: $color-green-50;
+  border-radius: $c-panel-border-radius;
+}
 .c-panel--border-r-sm{
   border-radius: $g-border-radius-small !important;
 }
