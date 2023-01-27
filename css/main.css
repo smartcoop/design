@@ -3452,6 +3452,10 @@ header .c-navbar, header.c-navbar {
   background-color: #FCF7E8;
   border-radius: 1rem; }
 
+.c-panel--green {
+  background-color: #ECF9F6;
+  border-radius: 1rem; }
+
 .c-panel--border-r-sm {
   border-radius: 0.4rem !important; }
 
