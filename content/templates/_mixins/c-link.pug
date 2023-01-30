@@ -1,0 +1,27 @@
+//-
+    Mixin Link - Inine links
+
+
+mixin c-link({href, icon, iconHighlight = fasle})
+    - var classListing = "c-link"
+    - if (iconHighlight) blockClass = " c-button--block"
+    a(href=href class=classListing)
+        +c-link-inner-layout(icon, iconHighlight)
+            if block
+                block
+            else
+                |
+
+mixin c-link-inner-layout(icon, iconHighlight)
+    if iconHighlight
+        block
+        +c-button({ layout: 'icon-only', icon: icon, skin: 'highlights'})
+    else
+        if icon
+            span.c-link__label
+                block
+            +icon(icon)
+        else
+            span.c-link__label
+                block
+

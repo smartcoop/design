@@ -197,8 +197,11 @@ $c-button-link-color: $color-red-600 !default;
   &:focus:not(:focus-visible) {
     outline: none;
   }
-
+  
   &[disabled]{
+    background: $color-red-150;
+    border-color: $color-red-150;
+    color: $color-red-400;
     cursor: not-allowed;
   }
 }

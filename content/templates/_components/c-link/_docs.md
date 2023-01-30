@@ -1,0 +1,5 @@
+---
+title: Link
+---
+
+Inline Links
