@@ -48,6 +48,13 @@ $c-button-link-color: $color-red-600 !default;
   &:focus:not(:focus-visible) {
     outline: none;
   }
+
+  &[disabled]{
+    background: $color-blue-150;
+    border-color: $color-blue-150;
+    color: $color-blue-400;
+    cursor: not-allowed;
+  }
 }
 
 /* Primary
