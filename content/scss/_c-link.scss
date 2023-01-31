@@ -1,0 +1,33 @@
+/* ==========================================================================
+  c-link
+ ========================================================================== */
+
+// color
+$c-link-underline-color: $color-blue-600;
+
+$c-link-button-height: 1.8rem;
+
+/* Default size
+   ========================================================================== */
+
+.c-link {
+  &__label{
+    display: inline-block;
+  }
+  .o-svg-icon {
+    margin-bottom: -.2rem;
+    display: inline-block;
+    height: $c-link-button-height;
+    width: $c-link-button-height;
+  }
+  .c-button{
+    padding: 0.2rem;
+    margin: -.2rem 0 0 .3rem;
+    &__content{
+      
+      height: $c-link-button-height;
+      width: $c-link-button-height;
+    }
+  }
+}
+
