@@ -5,7 +5,7 @@
 mixin c-link({href, icon, iconHighlight = fasle})
     - var classListing = "c-link"
     - if (iconHighlight) blockClass = " c-button--block"
-    a(href=href class=classListing)
+    a(href=href class=classListing)&attributes(attributes)
         +c-link-inner-layout(icon, iconHighlight)
             if block
                 block
