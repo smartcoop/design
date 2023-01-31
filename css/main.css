@@ -2104,6 +2104,11 @@ a.link--sup:not(.c-button) {
     outline: #8AB5FF auto 1px; }
   .c-button--highlights:focus:not(:focus-visible) {
     outline: none; }
+  .c-button--highlights[disabled] {
+    background: #CEE0FF;
+    border-color: #CEE0FF;
+    color: #8AB5FF;
+    cursor: not-allowed; }
 
 /* Primary
    ========================================================================== */
@@ -2192,6 +2197,9 @@ a.link--sup:not(.c-button) {
   .c-button--danger:focus:not(:focus-visible) {
     outline: none; }
   .c-button--danger[disabled] {
+    background: #FFB0B9;
+    border-color: #FFB0B9;
+    color: #FF6979;
     cursor: not-allowed; }
 
 /* Danger secondary
@@ -3865,6 +3873,27 @@ header .c-navbar, header.c-navbar {
     box-shadow: 1rem 0 #B3B3B3, 2rem 0 #B3B3B3, 3rem 0 #B3B3B3; }
   100% {
     box-shadow: 1rem 0 #B3B3B3, 2rem 0 #B3B3B3, 3rem 0 #B3B3B3; } }
+
+/* ==========================================================================
+  c-link
+ ========================================================================== */
+/* Default size
+   ========================================================================== */
+.c-link__label {
+  display: inline-block; }
+
+.c-link .o-svg-icon {
+  margin-bottom: -.2rem;
+  display: inline-block;
+  height: 1.8rem;
+  width: 1.8rem; }
+
+.c-link .c-button {
+  padding: 0.2rem;
+  margin: -.2rem 0 0 .3rem; }
+  .c-link .c-button__content {
+    height: 1.8rem;
+    width: 1.8rem; }
 
 /* ==========================================================================
   Component: Status Pill

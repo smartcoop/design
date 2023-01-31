@@ -331,6 +331,9 @@
                                             <a class="null " href="/development/docs/c-key-value.html"> Key value list</a>
                                         </li>
                                         <li class="c-styleguide-list__item ">
+                                            <a class="null " href="/development/docs/c-link.html"> Link</a>
+                                        </li>
+                                        <li class="c-styleguide-list__item ">
                                             <a class="null " href="/development/docs/c-list.html"> List</a>
                                         </li>
                                         <li class="c-styleguide-list__item ">
@@ -540,6 +543,9 @@
                                     <a class="null " href="/development/docs/c-key-value.html"> Key value list</a>
                                 </li>
                                 <li class="c-styleguide-list__item ">
+                                    <a class="null " href="/development/docs/c-link.html"> Link</a>
+                                </li>
+                                <li class="c-styleguide-list__item ">
                                     <a class="null " href="/development/docs/c-list.html"> List</a>
                                 </li>
                                 <li class="c-styleguide-list__item ">
@@ -646,6 +652,47 @@
                 <div class="br-content c-content">
                     <p>This page documents the different button skins and types.</p>
 
+                </div>
+                <div class="br-sample" id="component-01-c-button-highlights">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Button highlights</h3>
+                        <a class="br-sample-header-link" href="#component-01-c-button-highlights">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <button class="c-button c-button--highlights" type="button">
+                            <span class="c-button__content">
+                                <span class="c-button__label">Button label</span>
+                            </span>
+                        </button>
+                        <button class="c-button c-button--highlights" type="button" disabled="disabled">
+                            <span class="c-button__content">
+                                <span class="c-button__label">Button label</span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;button class=&quot;c-button c-button--highlights&quot; type=&quot;button&quot;&gt;
+    &lt;span class=&quot;c-button__content&quot;&gt;
+        &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;c-button c-button--highlights&quot; type=&quot;button&quot; disabled=&quot;disabled&quot;&gt;
+    &lt;span class=&quot;c-button__content&quot;&gt;
+        &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">+c-button({skin: 'highlights'}) Button label
++c-button({skin: 'highlights'})(disabled) Button label</pre>
+                        </div>
+                    </div>
                 </div>
                 <div class="br-sample" id="component-01-c-button-primary">
                     <div class="br-sample-header br-sample-clearfix">
@@ -773,6 +820,11 @@
                                 <span class="c-button__label">Button label</span>
                             </span>
                         </button>
+                        <button class="c-button c-button--danger" type="button" disabled="disabled">
+                            <span class="c-button__content">
+                                <span class="c-button__label">Button label</span>
+                            </span>
+                        </button>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
@@ -783,11 +835,58 @@
     &lt;span class=&quot;c-button__content&quot;&gt;
         &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
     &lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;c-button c-button--danger&quot; type=&quot;button&quot; disabled=&quot;disabled&quot;&gt;
+    &lt;span class=&quot;c-button__content&quot;&gt;
+        &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
+    &lt;/span&gt;
 &lt;/button&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">+c-button({skin: 'danger'}) Button label</pre>
+                            <pre class="br-sample-markup br-sample-markup-pug">+c-button({skin: 'danger'}) Button label
++c-button({skin: 'danger'})(disabled) Button label</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-04-c-button-warning">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Button warning</h3>
+                        <a class="br-sample-header-link" href="#component-04-c-button-warning">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <button class="c-button c-button--warning" type="button">
+                            <span class="c-button__content">
+                                <span class="c-button__label">Button label</span>
+                            </span>
+                        </button>
+                        <button class="c-button c-button--warning" type="button" disabled="disabled">
+                            <span class="c-button__content">
+                                <span class="c-button__label">Button label</span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;button class=&quot;c-button c-button--warning&quot; type=&quot;button&quot;&gt;
+    &lt;span class=&quot;c-button__content&quot;&gt;
+        &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;c-button c-button--warning&quot; type=&quot;button&quot; disabled=&quot;disabled&quot;&gt;
+    &lt;span class=&quot;c-button__content&quot;&gt;
+        &lt;span class=&quot;c-button__label&quot;&gt;Button label&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">+c-button({skin: 'warning'}) Button label
++c-button({skin: 'warning'})(disabled) Button label</pre>
                         </div>
                     </div>
                 </div>
