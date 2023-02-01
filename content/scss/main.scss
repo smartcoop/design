@@ -131,3 +131,7 @@
 @import "_p-dynamic-dashboard";
 
 @import "_v-htmx";
+
+@media print {
+   @import "_print";
+ }
