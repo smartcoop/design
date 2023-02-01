@@ -5270,4 +5270,12 @@ c-table-of-content
 .htmx-request ~ .c-blank-slate {
   display: none; }
 
+@media print {
+  /* ==========================================================================
+  Print Stylesheet for Smart
+  ---
+   ========================================================================== */
+  .c-app-layout-inner__sidebar, .c-button {
+    display: none !important; } }
+
 /*# sourceMappingURL=main.css.map */
