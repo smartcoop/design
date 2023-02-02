@@ -19,7 +19,7 @@
         margin-top: 0;
     }
 
-    & > .c-panel:not(.communication) {
+    & > .c-panel{
         .c-panel__body{
             height: 100%;
         }
