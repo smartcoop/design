@@ -19,6 +19,18 @@
         margin-top: 0;
     }
 
+    & > .c-panel:not(.communication) {
+        .c-panel__body{
+            height: 100%;
+        }
+        .c-content{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
     @media (min-width: $g-bp1-m) {
         flex-direction: row;
         & > div+div{
