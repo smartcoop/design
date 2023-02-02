@@ -6,3 +6,68 @@
 .c-app-layout-inner__sidebar, .c-button{
    display: none !important;
 }
+
+.c-app-layout-inner__sidebar + .c-app-layout-inner__content {
+   margin-left: 0 !important;
+   margin-top: 0 !important;
+   .c-navbar.main-title {
+      left: 0 !important;
+   }
+}
+.c-app-layout-inner__content .c-navbar.u-position-fixed.main-title{
+   top: 0 !important;
+}
+.c-app-layout-inner__content .c-navbar.u-position-fixed.main-title + div{
+   margin-top: 0 !important;
+}
+
+.c-app-layout-inner__content .c-navbar, header .c-navbar, header.c-navbar{
+   border: none !important;
+}
+.c-navbar.main-title{
+   box-shadow: none;
+}
+.main-title .c-toolbar{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+// Table of content
+.c-table-of-content{
+   padding: 0;
+   display: block;
+}
+.c-table-of-content-navigation{
+   border-left: 4px solid black;
+   border-radius: 0;
+   padding-left: 1rem;
+   margin-bottom: 3rem;
+}
+.c-table-of-content__content__item.active p.c-body-2:first-child{
+   color: black;
+}
+
+.u-position-fixed, .c-app-layout-inner__sidebar{
+   position: relative !important;
+}
+
+// Hide actions
+.main-title .c-toolbar .c-toolbar__right{
+   // .c-toolbar__item{
+   //    margin-left: 0;
+   // }
+   .c-button, .c-link{
+      display: none !important;
+   }
+}
+
+header{
+   .c-toolbar__right{
+      display: none !important;
+   }
+}
+
+.c-alert{
+   display: none !important;
+}
