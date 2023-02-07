@@ -5310,7 +5310,7 @@ c-table-of-content
     display: none !important; }
   header .c-toolbar__right {
     display: none !important; }
-  .c-alert {
+  .c-alert, .c-panel--green, .c-panel--yellow {
     display: none !important; } }
 
 /*# sourceMappingURL=main.css.map */
