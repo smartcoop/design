@@ -72,9 +72,9 @@
 .c-link,
 .c-content a:not(.c-button) {
   text-decoration: none;
-  border-bottom: .1rem solid rgba($color-blue-600,.33);
+  border-bottom: .1rem solid rgba($color-black,.33);
   &:hover{
-    border-bottom: .1rem solid $color-blue-600;
+    border-bottom: .1rem solid $color-black;
   }
 
   &.u-text-muted {
