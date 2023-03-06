@@ -977,10 +977,10 @@ abbr[title] {
 .c-link,
 .c-content a:not(.c-button) {
   text-decoration: none;
-  border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.33); }
   .c-link:hover,
   .c-content a:not(.c-button):hover {
-    border-bottom: 0.1rem solid #1267FB; }
+    border-bottom: 0.1rem solid #000000; }
   .c-link.u-text-muted,
   .c-content a:not(.c-button).u-text-muted {
     color: #808080;
@@ -2089,26 +2089,21 @@ a.link--sup:not(.c-button) {
 /* Highlights
    ========================================================================== */
 .c-button--highlights {
-  background: #1267FB;
-  border-color: #1267FB;
+  background: #1A1A1A;
+  border-color: #1A1A1A;
   color: #fff; }
   .c-button--highlights svg * {
-    fill: #1267FB; }
+    fill: currentColor; }
   .c-button--highlights:hover, .c-button--highlights.c-button--hover {
-    background: #1267FB;
-    border-color: #154EB1; }
+    background: #1A1A1A;
+    border-color: #000000; }
   .c-button--highlights:active, .c-button--highlights.c-button--active {
-    border-color: #154EB1;
-    background: #154EB1; }
+    border-color: #000000;
+    background: #000000; }
   .c-button--highlights:focus {
     outline: #8AB5FF auto 1px; }
   .c-button--highlights:focus:not(:focus-visible) {
     outline: none; }
-  .c-button--highlights[disabled] {
-    background: #CEE0FF;
-    border-color: #CEE0FF;
-    color: #8AB5FF;
-    cursor: not-allowed; }
 
 /* Primary
    ========================================================================== */
@@ -3462,6 +3457,10 @@ header .c-navbar, header.c-navbar {
 
 .c-panel--green {
   background-color: #ECF9F6;
+  border-radius: 1rem; }
+
+.c-panel--red {
+  background-color: #FEE7E9;
   border-radius: 1rem; }
 
 .c-panel--border-r-sm {

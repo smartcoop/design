@@ -136,11 +136,25 @@ var Toc = /*#__PURE__*/function () {
         index_scroll = 1;
       }
 
-      this.lastScrollTop = std <= 0 ? 0 : std; //- Handling active states on scroll
+      this.lastScrollTop = std <= 0 ? 0 : std;
+      this.toc__content__list_length = this.toc__content__list__items__posTop_from_parent.length; //- Handling active states on scroll
 
-      for (var i = 0; i < this.toc__content__list__items__posTop_from_parent.length; i++) {
+      for (var i = 0; i < this.toc__content__list_length; i++) {
         if (-toc__posTop_from_viewport > this.toc__content__list__items__posTop_from_parent[i] && -toc__posTop_from_viewport < this.toc__content__list__items__posTop_from_parent[i + 1]) {
-          if (this.current__index != this.toc__nav__list__items[i]) {
+          // console.log((this.toc__content__list__items__posTop_from_parent[this.toc__content__list_length -3] + (this.toc__content__list__items[this.toc__content__list_length -3].offsetHeight/2)));
+          if (-toc__posTop_from_viewport > this.toc__content__list__items__posTop_from_parent[this.toc__content__list_length - 3] + this.toc__content__list__items[this.toc__content__list_length - 3].offsetHeight / 2 && -toc__posTop_from_viewport < this.toc__content__list__items__posTop_from_parent[this.toc__content__list_length - 2]) {
+            console.log('switch');
+            console.log(this.toc__nav__list__items[i + 1]);
+            console.log(this.toc__content__list__items[i + 1]);
+            window.removeEventListener("hashchange", this.whateverHash);
+            this.resetActiveToc(this.toc__nav__list__items[i + 1], this.toc__content__list__items[i + 1], true);
+            var that = this;
+            setTimeout(function () {
+              window.addEventListener("hashchange", that.whateverHash);
+            }, 750);
+          } else if (this.current__index != this.toc__nav__list__items[i]) {
+            // console.log("Toc_pos_from_viewport: " + (- toc__posTop_from_viewport));
+            // console.log("——: " + this.toc__content__list__items__posTop_from_parent[i+1]);
             window.removeEventListener("hashchange", this.whateverHash);
             this.resetActiveToc(this.toc__nav__list__items[i], this.toc__content__list__items[i], true);
             var that = this;
