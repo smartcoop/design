@@ -21,24 +21,24 @@ $c-button-link-color: $color-red-600 !default;
    ========================================================================== */
 
 .c-button--highlights {
-  background: $color-blue-600;
-  border-color: $color-blue-600;
+  background: $color-gray-900;
+  border-color: $color-gray-900;
   color: #fff;
 
   svg * {
-    fill: $color-blue-600;
+    fill: currentColor;
   }
 
   &:hover,
   &.c-button--hover {
-    background: $color-blue-600;
-    border-color: $color-blue-650;
+    background: $color-gray-900;
+    border-color: $color-black;
   }
 
   &:active,
   &.c-button--active {
-    border-color: $color-blue-650;
-    background: $color-blue-650;
+    border-color: $color-black;
+    background: $color-black;
   }
 
   &:focus {
@@ -47,13 +47,6 @@ $c-button-link-color: $color-red-600 !default;
 
   &:focus:not(:focus-visible) {
     outline: none;
-  }
-
-  &[disabled]{
-    background: $color-blue-150;
-    border-color: $color-blue-150;
-    color: $color-blue-400;
-    cursor: not-allowed;
   }
 }
 
