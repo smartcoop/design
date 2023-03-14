@@ -73,3 +73,13 @@
     background: $color-yellow-800;
   }
 }
+
+.c-status-pill--client {
+  border: 0.1rem solid $color-beige-50;
+  background: $color-beige-50;
+  color: $color-beige-900;
+
+  .c-status-pill__circle {
+    background: $color-beige-900;
+  }
+}

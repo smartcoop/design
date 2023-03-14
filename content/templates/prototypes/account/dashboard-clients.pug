@@ -6,13 +6,15 @@ block append pageVariables
 block content
     .c-app-layout-inner
         .c-app-layout-inner__sidebar.u-position-fixed
+            div.u-spacer-bottom-l
+                +c-status-pill({skin: 'client', nodot:true}) Espace client
             include /templates/prototypes/account/_includes/side-menu
 
         .c-app-layout-inner__content
             .u-scroll-wrapper
                 .o-container.o-container--large
                     .u-spacer-bottom-l.u-spacer-top-l 
-                        h1.c-h2 Bienvenue sur votre espace membre
+                        h1.c-h2 Bienvenue sur votre espace client
                     .dynamic-dashboard.u-spacer-bottom-l
                         .c-panel
                             .c-panel__body
