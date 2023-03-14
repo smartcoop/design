@@ -10,6 +10,16 @@
         flex: 1;
         order: 2;
     }
+
+    .c-panel__body{
+        height: 100%;
+        .c-content{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
     
     & > .communication{
         flex: none;

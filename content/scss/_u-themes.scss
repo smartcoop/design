@@ -1,0 +1,47 @@
+/* ==========================================================================
+  Utility: Themes
+  ===
+
+/* Theme for clients in beige
+   ========================================================================== */
+
+.theme-clients{ 
+  .c-panel{
+    background-color: $color-beige-50;
+    p{
+      color: $color-beige-800;
+      &.c-body-2{
+        color: $color-beige-900;
+      }
+    }
+  }
+  .c-button--primary {
+    background: $color-beige-500;
+    border-color: $color-beige-500;
+    color: $color-beige-800;
+  
+    svg * {
+      fill: $color-beige-800;
+    }
+  
+    &:hover,
+    &.c-button--hover {
+      background: $color-beige-600;
+      border-color: $color-beige-600;
+    }
+  
+    &:active,
+    &.c-button--active {
+      background: $color-beige-700;
+      border-color: $color-beige-700;
+    }
+  
+    &:focus {
+      outline: $c-button-outline-color auto 1px;
+    }
+  
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
+}
