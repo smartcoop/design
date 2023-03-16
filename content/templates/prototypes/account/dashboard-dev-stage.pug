@@ -1,0 +1,26 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Dashboard"
+ 
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar.u-position-fixed
+            include /templates/prototypes/account/_includes/side-menu
+
+        .c-app-layout-inner__content
+            .u-scroll-wrapper
+                .o-container.o-container--large
+                    .u-spacer-bottom-l.u-spacer-top-l 
+                        h1.c-h2 Bienvenue sur votre espace membre
+                    .dynamic-dashboard.u-spacer-bottom-l
+                        .c-panel
+                            .c-panel__body
+                                .c-content
+                                    p.u-m-t-0.u-spacer-bottom-xs Des questions ? Contactez l'un de nos conseillers. Vous pouvez aussi souscrire à une part coopérative.
+                                    .c-button-toolbar.wrap
+                                        +c-button({skin: 'highlights',layout: 'text-icon', icon: 'external-link'}) Contactez-nous
+                                        +c-button({skin: 'secondary', layout: 'text-icon', icon: 'external-link'}) Souscrire une part
+                    include /templates/prototypes/_includes/news
+
