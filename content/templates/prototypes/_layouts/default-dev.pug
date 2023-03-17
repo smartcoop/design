@@ -1,0 +1,16 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var bodyClass = ""
+    
+block body
+    .c-app-layout
+        block global-banner-dev
+        header.u-position-fixed.u-maximize-width
+            +c-global-banner({
+                skin: 'default',
+                message: "This is the DEV environment"
+            })(data-toggle="dev-env" data-switch-target="dev-env")
+            include /templates/prototypes/_includes/main-header
+        main.u-maximize-width.dev-env
+            block content
