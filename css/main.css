@@ -24,6 +24,8 @@
  ========================================================================== */
 /* Blues
  ========================================================================== */
+/* Beige
+ ========================================================================== */
 /* Semantic colors
  ========================================================================== */
 /* ==========================================================================
@@ -3949,6 +3951,14 @@ header .c-navbar, header.c-navbar {
   .c-status-pill--warning .c-status-pill__circle {
     background: #C28D0A; }
 
+.c-status-pill--client {
+  border: 0.1rem solid #FDFAE8;
+  background: #FDFAE8;
+  color: #3a3200;
+  font-weight: bold; }
+  .c-status-pill--client .c-status-pill__circle {
+    background: #3a3200; }
+
 /* ==========================================================================
 c-table-of-content
 ========================================================================== */
@@ -5196,6 +5206,36 @@ c-table-of-content
 .u-text-uc {
   text-transform: uppercase; }
 
+/* ==========================================================================
+  Utility: Themes
+  ===
+
+/* Theme for clients in beige
+   ========================================================================== */
+.theme-clients .c-panel {
+  background-color: #FDFAE8; }
+  .theme-clients .c-panel p {
+    color: #524602; }
+    .theme-clients .c-panel p.c-body-2 {
+      color: #3a3200; }
+
+.theme-clients .c-button--primary {
+  background: #D3C677;
+  border-color: #D3C677;
+  color: #524602; }
+  .theme-clients .c-button--primary svg * {
+    fill: #524602; }
+  .theme-clients .c-button--primary:hover, .theme-clients .c-button--primary.c-button--hover {
+    background: #c4b554;
+    border-color: #c4b554; }
+  .theme-clients .c-button--primary:active, .theme-clients .c-button--primary.c-button--active {
+    background: #af9d2d;
+    border-color: #af9d2d; }
+  .theme-clients .c-button--primary:focus {
+    outline: #8AB5FF auto 1px; }
+  .theme-clients .c-button--primary:focus:not(:focus-visible) {
+    outline: none; }
+
 /* Vendor
   3rd party code
   ========================================================================== */
@@ -5204,6 +5244,21 @@ c-table-of-content
   grid-gap: 2.4rem;
   grid-auto-columns: 1fr; }
   .dynamic-dashboard--grid > div {
+    flex: 1;
+    order: 2; }
+  .dynamic-dashboard--grid .c-panel__body {
+    height: 100%; }
+    .dynamic-dashboard--grid .c-panel__body .c-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+  .dynamic-dashboard--grid > .communication {
+    flex: none;
+    width: 100%;
+    order: 1;
+    margin-bottom: 2.4rem;
+    margin-top: 0;
     grid-row: 1; }
   @media (max-width: 1200px) {
     .dynamic-dashboard--grid > div + div + div {
