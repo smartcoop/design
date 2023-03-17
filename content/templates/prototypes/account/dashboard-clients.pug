@@ -1,0 +1,38 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Dashboard Clients"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar.u-position-fixed
+            div.u-spacer-bottom-l
+                +c-status-pill({skin: 'client', nodot:true}) Espace client
+            include /templates/prototypes/account/_includes/side-menu
+
+        .c-app-layout-inner__content
+            .u-scroll-wrapper
+                .o-container.o-container--large
+                    .u-spacer-bottom-l.u-spacer-top-l 
+                        h1.c-h2 Bienvenue sur votre espace client
+                    .dynamic-dashboard.u-spacer-bottom-l
+                        .c-panel
+                            .c-panel__body
+                                .c-content
+                                    p.u-m-t-0.u-m-b-0 Des question ? Contactez le service client.
+                                    .c-button-toolbar.wrap
+                                        +c-button({skin: 'primary',layout: 'text-icon', icon: 'external-link'}) Voir le contrat d'utilisation
+                        .theme-clients
+                            .c-panel
+                                .c-panel__body
+                                    .c-content
+                                        p.u-m-t-0.u-m-b-0 Vos informatios personelles
+                                        .o-flex.o-flex--justify-between
+                                            div
+                                                p.c-body-2.u-spacer-bottom-xs Nom d'entreprise
+                                                p.u-m-t-0.u-m-b-0.u-text-bold Lumbini S.A.R.L 
+                                            div
+                                                p.c-body-2.u-spacer-bottom-xs Référence client
+                                                p.u-m-t-0.u-m-b-0.u-text-bold SmartBE-050-623 
+                                                    +c-button({skin: 'primary',layout: 'icon-only', icon: 'copy', size: 'small'})(data-action="copy" data-copy="SmartBE-050-623") Copier la référence client 
+                    include /templates/prototypes/_includes/news

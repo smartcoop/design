@@ -7,17 +7,21 @@
     @param {string} icon - icon name
     @param {string} href - if href
 
-mixin c-status-pill({skin = "default", href})
+mixin c-status-pill({skin = "default", nodot = "false", href})
     - var classListing = "c-status-pill c-status-pill--"+skin
-    if href
-        a(href=href class=classListing)&attributes(attributes)
-            +c-status-pill-inner
-                block
-
-    else
+    if nodot === true
         span(class=classListing)&attributes(attributes)
-            +c-status-pill-inner
-                block
+            block
+    else
+        if href
+            a(href=href class=classListing)&attributes(attributes)
+                +c-status-pill-inner
+                    block
+
+        else
+            span(class=classListing)&attributes(attributes)
+                +c-status-pill-inner
+                    block
 
 mixin c-status-pill-inner()
     span.c-status-pill__circle
