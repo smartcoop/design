@@ -5,10 +5,11 @@ block append pageVariables
     
 block body
     .c-app-layout
-        block global-banner
+        block global-banner-dev
         header.u-position-fixed.u-maximize-width
             +c-global-banner({
-                message: "Nam eget hendrerit massa, a consequat turpis."
+                skin: 'warning',
+                message: "This is the STAGE environment"
             })(data-toggle="dev-env" data-switch-target="dev-env")
             include /templates/prototypes/_includes/main-header
         main.u-maximize-width.dev-env
