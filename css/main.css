@@ -2874,6 +2874,153 @@ a.c-card:hover {
     visibility: visible; }
 
 /* ==========================================================================
+c-file-attachment-list
+========================================================================== */
+/* Component
+========================================================================== */
+.c-file-attachment-list {
+  margin: -0.4rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .c-file-attachment-list .c-file-attachment {
+    margin: 0.4rem; }
+    .c-file-attachment-list .c-file-attachment a {
+      overflow: hidden; }
+
+.c-file-attachment a {
+  background: #F2F2F2;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.6rem 0.6rem 1rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border-radius: 4rem;
+  color: #333333;
+  text-decoration: none;
+  width: 100%;
+  align-items: center; }
+  .c-file-attachment a:hover {
+    background-color: #E5E5E5; }
+
+.c-file-attachment__icon {
+  background: #FFFFFF;
+  border-radius: 2.8rem;
+  padding: 0.4rem; }
+  .c-file-attachment__icon .o-svg-icon {
+    width: 2rem;
+    height: 2rem; }
+
+.c-file-attachment__name {
+  margin-left: .6rem;
+  transition: color .2s ease-in-out; }
+
+/* ==========================================================================
+  c-file-upload
+   ========================================================================== */
+.c-file-upload {
+  background: transparent;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+  .c-file-upload .c-progress-bar {
+    width: 60%; }
+
+.c-file-upload input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.0001; }
+
+.c-file-upload input[type="file"]:focus:not([disabled]) ~ .c-file-upload__content {
+  outline: 0;
+  border-color: transparent;
+  box-shadow: inset 0 0 0 0.1rem #1267FB; }
+
+.c-file-upload input[type="file"]:hover:not([disabled]) ~ .c-file-upload__content {
+  background-color: #F9F9F9; }
+
+.c-file-upload--gray-25 .c-file-upload__content {
+  background-color: #F9F9F9; }
+
+.c-file-upload--error .c-file-upload__content {
+  border-color: #FF4054; }
+
+.c-file-upload__content {
+  border: 0.1rem dashed #B3B3B3;
+  border-radius: 0.3rem;
+  width: 100%;
+  padding: 3rem;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 12rem; }
+  .c-file-upload__content .c-button {
+    position: relative; }
+
+.c-file-upload__status {
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center; }
+  .c-file-upload__status span + .o-svg-icon {
+    margin-left: 0.4rem; }
+
+/* ==========================================================================
+  c-form-help-text
+  ---
+  Help text + Errors on forms
+   ========================================================================== */
+.c-form-help-text {
+  color: #808080;
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 0.6rem; }
+
+.c-form-help-text--error {
+  color: #FF4054; }
+
+.c-form-help-text + .c-form-help-text {
+  margin-top: 0.4rem; }
+
+/* ==========================================================================
+  Component: Global banner
+   ========================================================================== */
+.c-global-banner {
+  padding: .6rem 2.4rem;
+  position: relative;
+  min-height: 4rem;
+  display: flex;
+  align-items: center; }
+  .c-global-banner.c-global-banner--default {
+    background-color: #1267FB;
+    color: #FFFFFF; }
+    .c-global-banner.c-global-banner--default .c-button--icon,
+    .c-global-banner.c-global-banner--default .o-svg-icon {
+      color: #FFFFFF; }
+  .c-global-banner.c-global-banner--warning {
+    background-color: #F4C95D; }
+    .c-global-banner.c-global-banner--warning .o-svg-icon {
+      color: #595959; }
+  .c-global-banner .o-svg-icon {
+    margin-right: 1.6rem;
+    flex-shrink: 0; }
+  .c-global-banner .c-button--icon {
+    position: absolute;
+    right: 1.2rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 2.4rem; }
+
+/* ==========================================================================
   Component: hr
   ---
   A horizontal ruler.
