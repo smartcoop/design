@@ -16,7 +16,7 @@ block content
                     .u-spacer-bottom-l
                         +c-alert({
                             skin: 'error',
-                            message: '<div>Veuillez accepter notre <a href="" data-scroll-to data-scroll-target-id="acceptation" >contrat d’utilisation en fin de page <button class="c-button c-button--small c-button--highlights c-button--icon u-inline-block u-m-r-0" type="button"><span class="c-button__content"><div class="o-svg-icon o-svg-icon--arrow-down"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4C12.5523 4 13 4.44772 13 5V16.5858L17.2929 12.2929C17.6834 11.9024 18.3166 11.9024 18.7071 12.2929C19.0976 12.6834 19.0976 13.3166 18.7071 13.7071L12.7071 19.7071C12.3166 20.0976 11.6834 20.0976 11.2929 19.7071L5.29289 13.7071C4.90237 13.3166 4.90237 12.6834 5.29289 12.2929C5.68342 11.9024 6.31658 11.9024 6.70711 12.2929L11 16.5858V5C11 4.44772 11.4477 4 12 4Z" fill="#595959" /></svg></div><div class="u-sr-accessible">Scroll jusqu\'en bas de page</div></span></button></a>&nbsp; pour <b>débloquer les accès à tous nos services.</b> Si vous avez des questions, veuillez contactez un conseiller ou voir la rubrique aide</div>'
+                            message: '<div>Pour continuer à utiliser les outils et services de Smart, veuillez prendre connaissance et <a href="" data-scroll-to data-scroll-target-id="acceptation" >accepter le contrat d\'utilisation. <button class="c-button c-button--small c-button--highlights c-button--icon u-inline-block u-m-r-0" type="button"><span class="c-button__content"><div class="o-svg-icon o-svg-icon--arrow-down"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4C12.5523 4 13 4.44772 13 5V16.5858L17.2929 12.2929C17.6834 11.9024 18.3166 11.9024 18.7071 12.2929C19.0976 12.6834 19.0976 13.3166 18.7071 13.7071L12.7071 19.7071C12.3166 20.0976 11.6834 20.0976 11.2929 19.7071L5.29289 13.7071C4.90237 13.3166 4.90237 12.6834 5.29289 12.2929C5.68342 11.9024 6.31658 11.9024 6.70711 12.2929L11 16.5858V5C11 4.44772 11.4477 4 12 4Z" fill="#595959" /></svg></div><div class="u-sr-accessible">Scroll jusqu\'en bas de page</div></span></button></a>&nbsp; Pour toute question, nous vous invitons à prendre contact avec un·e conseiller·e.</div>'
                         })
                     div.c-panel
                         div.c-table-of-content.c-content
@@ -113,7 +113,7 @@ block content
                                             .c-checkbox
                                                 label
                                                     input(type="checkbox" data-toggle="disabled" data-switch-target="c-button--danger")
-                                                    | J’accepte le contrat d’utilisation
+                                                    | Je déclare avoir pris connaissance du présent Contrat d'Utilisation et l'accepter.
                                     div
-                                        +c-button({skin: 'danger', icon: 'check', href:'http://localhost:3000/examples/template-examples/terms-and-conditions--after-acceptation.html'})(disabled) Valider
+                                        +c-button({skin: 'danger', icon: 'check', href:'http://localhost:3000/examples/template-examples/terms-and-conditions--after-acceptation.html'})(disabled) Confirmer
     script(src='/js/bundle-curu-min.js')
