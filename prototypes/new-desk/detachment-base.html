@@ -17,6 +17,29 @@
 <body>
     <div class="c-app-layout">
         <header class="u-position-fixed u-maximize-width">
+            <div class="c-global-banner c-global-banner--default" data-toggle="dev-env" data-switch-target="dev-env">
+                <div class="o-svg-icon o-svg-icon-circle-information o-svg-icon--default ">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#595959" />
+                        <path d="M12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11C11 10.4477 11.4477 10 12 10Z" fill="#595959" />
+                        <path d="M13.5 7.5C13.5 8.32843 12.8284 9 12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5Z" fill="#595959" />
+                    </svg>
+                </div>
+                <p class="c-body-1">
+                <p>Nam eget hendrerit massa, a consequat turpis.</p>
+                </p>
+                <button class="c-button c-button--borderless c-button--icon" type="button" data-banner-close="data-banner-close">
+                    <span class="c-button__content">
+                        <div class="o-svg-icon o-svg-icon-close  ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                            </svg>
+                        </div>
+                        <div class="u-sr-accessible">Close
+                        </div>
+                    </span>
+                </button>
+            </div>
             <div class="c-navbar">
                 <div class="c-toolbar">
                     <div class="c-toolbar__left">
@@ -125,7 +148,7 @@
                 </div>
             </div>
         </header>
-        <main class="u-maximize-width">
+        <main class="u-maximize-width dev-env">
             <div class="u-position-relative">
                 <div class="c-navbar c-navbar--scrollable">
                     <div class="c-toolbar">

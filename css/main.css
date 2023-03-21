@@ -4918,6 +4918,12 @@ c-table-of-content
 .u-link-muted {
   color: inherit; }
 
+.dev-env .c-app-layout-inner__sidebar {
+  top: 10.6rem; }
+
+.dev-env .c-app-layout-inner__content {
+  margin-top: 10.2rem; }
+
 /* ==========================================================================
   Utility: spacing
 

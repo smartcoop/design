@@ -1029,7 +1029,10 @@ var SwitchViewButton = /*#__PURE__*/function () {
         el.addEventListener("click", function (e) {
           var target__el = document.querySelector('.' + el.getAttribute('data-switch-target'));
 
-          if (el.getAttribute('data-toggle') === "disabled") {
+          if (el.getAttribute('data-switch-target') === el.getAttribute('data-toggle')) {
+            // This way you can remove the target classname of the element you are targeting
+            target__el.classList.remove(el.getAttribute('data-toggle'));
+          } else if (el.getAttribute('data-toggle') === "disabled") {
             _this.toggleAttribute(target__el, "disabled");
           } else {
             e.preventDefault();
@@ -1037,7 +1040,6 @@ var SwitchViewButton = /*#__PURE__*/function () {
             _this.toggleClass(target__el, el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle'));
 
             _this.els.forEach(function (il) {
-              //- Toggle class for other buttons around
               _this.toggleClass(il, "c-button--secondary");
 
               _this.toggleClass(il, "c-button--primary");
