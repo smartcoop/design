@@ -5411,6 +5411,13 @@ c-table-of-content
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
+  .dynamic-dashboard--grid .c-panel__body {
+    height: 100%; }
+    .dynamic-dashboard--grid .c-panel__body .c-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
   .dynamic-dashboard--grid > .communication {
     flex: none;
     width: 100%;
