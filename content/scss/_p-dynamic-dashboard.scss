@@ -1,14 +1,27 @@
-.dynamic-dashboard{
-    display: flex;
-    flex-direction: column;
-    
-    & > div+div{
-        margin-top: 2.4rem;
+.dynamic-dashboard--grid{
+    display: grid;
+    grid-gap: 2.4rem;
+    grid-auto-columns: 1fr;
+    & > div:first-child{
+        grid-row: 1;
+        grid-column: inherit;
     }
-    
-    & > div{
-        flex: 1;
-        order: 2;
+    & > div + div{
+        grid-row: 1;
+        grid-column: inherit;
+    }
+    & >  div + div + div{
+        grid-row: 2;
+    }
+
+    .c-panel__body{
+        height: 100%;
+        .c-content{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
 
     .c-panel__body{
@@ -25,51 +38,63 @@
         flex: none;
         width: 100%;
         order: 1;
-        margin-bottom: 2.4rem;
+        // margin-bottom: 2.4rem;
         margin-top: 0;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    @media (max-width: $g-bp4) {
+        & >  div + div + div{
+            grid-row: 2;
+            grid-column: 1 / span 2;
+        }
+    }
+    @media (max-width: $g-bp3) {
+        & > div{
+            grid-row: 1;
+            grid-column: 1 / span 2;
+        }
+        & > div + div{
+            grid-row: 2;
+        }
+        & >  div + div + div{
+            grid-row: 3;
+        }
     }
 
-    @media (min-width: $g-bp1-m) {
-        flex-direction: row;
-        & > div+div{
-            margin-left: 2.4rem;
-            margin-top: 0;
-            margin-bottom: 0;
+    @media (max-width: $g-bp2) {
+        & > div:first-child{
+            grid-row: 1;
+            grid-column: inherit;
         }
-        & > .communication{
-            width: 45%;
-            order: 3;
-            margin-bottom: 0;
-        }        
-    }
-    @media (min-width: $g-bp2) {
-        flex-direction: column;
-        & > div+div{
-            margin-left: 0;
-            margin-top: 2.4rem;
+        & > div + div{
+            grid-row: 1;
+            grid-column: inherit;
         }
-        & > .communication{
-            width: 100%;
-            order: 1;
-            margin-bottom: 2.4rem;
+        & >  div + div + div{
+            grid-row: 2;
         }
     }
-    @media (min-width: $g-bp3) {
-        flex-direction: row;
-        & > div+div{
-            margin-left: 2.4rem;
-            margin-top: 0;
-            margin-bottom: 0;
+
+    @media (max-width: $g-bp1-m) {
+        & > div:first-child{
+            grid-row: 1;
+            grid-column: 1 / span 2;
         }
-        & > .communication{
-            width: 32%;
-            order: 3;
-            margin-bottom: 0;
+        & > div + div{
+            grid-row: 2;
+            grid-column: 1 / span 2;
         }
-    }
-    @media (min-width: $g-bp4) {
-        & > .communication{
-            width: 37%;
+        & >  div + div + div{
+            grid-row: 3;
         }
     }
+   
 }
+
+$g-bp1: 400px;
+$g-bp1-m: 600px;
+$g-bp2: 700px;
+$g-bp3: 900px;
+$g-bp3-m: 1040px;
+$g-bp4: 1200px;

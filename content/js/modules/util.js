@@ -32,17 +32,19 @@ class SwitchViewButton {
         // Attach events
         el.addEventListener("click", (e) => {
             var target__el = document.querySelector('.' + el.getAttribute('data-switch-target') );
-            if(el.getAttribute('data-toggle') === "disabled"){
-                  this.toggleAttribute(target__el, "disabled");
-              }else{
-                  e.preventDefault();
-                  this.toggleClass(target__el, ( el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
-                  this.els.forEach((il) => {
-                      //- Toggle class for other buttons around
-                      this.toggleClass(il, "c-button--secondary");
-                      this.toggleClass(il, "c-button--primary");
-                  });
-              }
+            if(el.getAttribute('data-switch-target') === el.getAttribute('data-toggle')){
+              // This way you can remove the target classname of the element you are targeting
+              target__el.classList.remove(el.getAttribute('data-toggle'));
+            }else if(el.getAttribute('data-toggle') === "disabled"){
+              this.toggleAttribute(target__el, "disabled");
+            }else{
+              e.preventDefault();
+              this.toggleClass(target__el, ( el.getAttribute('data-switch-target') + '--' + el.getAttribute('data-toggle')));
+              this.els.forEach((il) => {
+                  this.toggleClass(il, "c-button--secondary");
+                  this.toggleClass(il, "c-button--primary");
+              });
+            }
 
           });
       });
@@ -54,7 +56,6 @@ class SwitchViewButton {
   }
   
   toggleAttribute(target, attribute){
-    
       if (target.hasAttribute(attribute)) {
           target.removeAttribute(attribute) 
       }else{

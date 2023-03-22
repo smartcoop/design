@@ -69,11 +69,11 @@
 @import "_c-citation";
 @import "_c-dialog";
 // @import "_c-error-page"; // not in use for now, moved to styleguide-customizations.scss
-// @import "_c-file-attachment"; // not in use for now, moved to styleguide-customizations.scss
-// @import "_c-file-upload"; // not in use for now, moved to styleguide-customizations.scss
+@import "_c-file-attachment";
+@import "_c-file-upload";
 // @import "_c-filter-pill"; // not in use for now, moved to styleguide-customizations.scss
-// @import "_c-form-help-text"; // not in use for now, moved to styleguide-customizations.scss
-// @import "_c-global-banner";  // not in use for now, moved to styleguide-customizations.scss
+@import "_c-form-help-text"; 
+@import "_c-global-banner";  
 @import "_c-hr";
 // @import "_c-icon-list"; // not in use for now, moved to styleguide-customizations.scss
 @import "_c-input";
