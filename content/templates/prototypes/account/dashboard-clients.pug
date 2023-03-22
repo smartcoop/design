@@ -1,4 +1,4 @@
-extends /templates/prototypes/_layouts/default
+extends /templates/prototypes/_layouts/default-client
 
 block append pageVariables
     - var moduleTitle = "Dashboard Clients"
@@ -8,7 +8,7 @@ block content
         .c-app-layout-inner__sidebar.u-position-fixed
             div.u-spacer-bottom-l
                 +c-status-pill({skin: 'client', nodot:true}) Espace client
-            include /templates/prototypes/account/_includes/side-menu
+            include /templates/prototypes/account/_includes/side-menu-client
 
         .c-app-layout-inner__content
             .u-scroll-wrapper
@@ -21,7 +21,7 @@ block content
                                 .c-content
                                     p.u-m-t-0.u-m-b-0 Des question ? Contactez le service client.
                                     .c-button-toolbar.wrap
-                                        +c-button({skin: 'primary',layout: 'text-icon', icon: 'external-link'}) Voir le contrat d'utilisation
+                                        +c-button({skin: 'primary',layout: 'text-icon', icon: 'external-link'}) Contactez-nous
                         .theme-clients
                             .c-panel
                                 .c-panel__body
@@ -29,10 +29,10 @@ block content
                                         p.u-m-t-0.u-m-b-0 Vos informatios personelles
                                         .o-flex.o-flex--justify-between
                                             div
-                                                p.c-body-2.u-spacer-bottom-xs Nom d'entreprise
+                                                p.c-body-2.u-spacer-bottom-xs Dénomination
                                                 p.u-m-t-0.u-m-b-0.u-text-bold Lumbini S.A.R.L 
                                             div
-                                                p.c-body-2.u-spacer-bottom-xs Référence client
+                                                p.c-body-2.u-spacer-bottom-xs Référence
                                                 p.u-m-t-0.u-m-b-0.u-text-bold SmartBE-050-623 
                                                     +c-button({skin: 'primary',layout: 'icon-only', icon: 'copy', size: 'small'})(data-action="copy" data-copy="SmartBE-050-623") Copier la référence client 
                     include /templates/prototypes/_includes/news

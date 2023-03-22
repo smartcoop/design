@@ -1,0 +1,12 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var bodyClass = ""
+
+block body
+    .c-app-layout
+        block global-banner
+        header.u-position-fixed.u-maximize-width 
+            include /templates/prototypes/_includes/main-header-client
+        main.u-maximize-width
+            block content
