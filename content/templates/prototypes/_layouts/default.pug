@@ -7,9 +7,6 @@ block body
     .c-app-layout
         block global-banner
         header.u-position-fixed.u-maximize-width
-            +c-global-banner({
-                message: "Nam eget hendrerit massa, a consequat turpis."
-            })(data-toggle="dev-env" data-switch-target="dev-env")
             include /templates/prototypes/_includes/main-header
-        main.u-maximize-width.dev-env
+        main.u-maximize-width
             block content
