@@ -7,10 +7,13 @@ block body
     .c-app-layout
         block global-banner-dev
         header.u-position-fixed.u-maximize-width
-            +c-global-banner({
-                skin: 'warning',
-                message: "This is the STAGE environment"
-            })(data-toggle="dev-env" data-switch-target="dev-env")
+            <div class="c-global-banner c-global-banner--warning">
+                +icon('circle-information')(class="o-svg-icon--warning")
+                <p class="c-body-1">
+                </p>STAGE environment
+                <p></p>
+                +c-button({ layout: 'icon-only', icon: 'close', skin: 'borderless'})(data-banner-close="data-banner-close" data-toggle="dev-env" data-switch-target="dev-env") Open menu
+            </div>
             include /templates/prototypes/_includes/main-header
         main.u-maximize-width.dev-env
             block content
