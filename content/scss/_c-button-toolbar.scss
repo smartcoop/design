@@ -9,14 +9,12 @@
   display: flex;
 
   .c-button{
-    margin-top: 1rem;
+    // margin-top: 1rem;
     margin-right: 0.8rem;
     &:last-child{
       margin-right: 0;
     }
   }
-  // .c-button + .c-button {
-  // }
 
   .c-button--link + .c-button--link {
     margin-left: 1.6rem;
@@ -38,6 +36,7 @@
 .c-button-toolbar--compact {
   .c-button {
     border-radius: 0;
+    margin-right: 0;
   }
 
   .c-button-toolbar__label {
