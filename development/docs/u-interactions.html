@@ -2142,6 +2142,69 @@ div.u-bg-gray-50
                         </div>
                     </div>
                 </div>
+                <div class="br-sample" id="component-04-u-interactions-copy-btn">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Copy to clipboard button</h3>
+                        <a class="br-sample-header-link" href="#component-04-u-interactions-copy-btn">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content">
+                        <p>This interaction copy a text into the navigator clipboard by clicking a button</p>
+                    </div>
+                    <div class="br-sample-content">
+                        <div class="o-flex o-flex--vertical-center">
+                            <p class="u-m-t-0 u-m-b-0 u-text-bold" id="ref">SmartBE-050-623</p>
+                            <button class="c-button c-button--primary c-button--small c-button--icon u-spacer-left-xs" type="button" data-action="copy" data-action-trad="copied" data-copy-content="#ref" data-tooltip="tooltip-2" data-tooltip-placement="left">
+                                <span class="c-button__content">
+                                    <div class="o-svg-icon o-svg-icon-copy  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V8H20C20.5304 8 21.0391 8.21071 21.4142 8.58579C21.7893 8.96086 22 9.46957 22 10V20C22 20.5304 21.7893 21.0391 21.4142 21.4142C21.0391 21.7893 20.5304 22 20 22H10C9.46957 22 8.96086 21.7893 8.58579 21.4142C8.21071 21.0391 8 20.5304 8 20V16H4C3.46957 16 2.96086 15.7893 2.58579 15.4142C2.21071 15.0391 2 14.5304 2 14V4ZM10 16V20H20V10H16V14C16 14.5304 15.7893 15.0391 15.4142 15.4142C15.0391 15.7893 14.5304 16 14 16H10ZM14 14V4H4V14H14Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                    <div class="u-sr-accessible">Copier la référence client
+                                    </div>
+                                </span>
+                            </button>
+                            <div class="c-tooltip" id="tooltip-2" role="tooltip">
+                                <span>Copy to clipboard</span>
+                                <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-flex o-flex--vertical-center&quot;&gt;
+    &lt;p class=&quot;u-m-t-0 u-m-b-0 u-text-bold&quot; id=&quot;ref&quot;&gt;SmartBE-050-623&lt;/p&gt;
+    &lt;button class=&quot;c-button c-button--primary c-button--small c-button--icon u-spacer-left-xs&quot; type=&quot;button&quot; data-action=&quot;copy&quot; data-action-trad=&quot;copied&quot; data-copy-content=&quot;#ref&quot; data-tooltip=&quot;tooltip-2&quot; data-tooltip-placement=&quot;left&quot;&gt;
+        &lt;span class=&quot;c-button__content&quot;&gt;
+            &lt;div class=&quot;o-svg-icon o-svg-icon-copy  &quot;&gt;
+                &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                    &lt;path d=&quot;M2 4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V8H20C20.5304 8 21.0391 8.21071 21.4142 8.58579C21.7893 8.96086 22 9.46957 22 10V20C22 20.5304 21.7893 21.0391 21.4142 21.4142C21.0391 21.7893 20.5304 22 20 22H10C9.46957 22 8.96086 21.7893 8.58579 21.4142C8.21071 21.0391 8 20.5304 8 20V16H4C3.46957 16 2.96086 15.7893 2.58579 15.4142C2.21071 15.0391 2 14.5304 2 14V4ZM10 16V20H20V10H16V14C16 14.5304 15.7893 15.0391 15.4142 15.4142C15.0391 15.7893 14.5304 16 14 16H10ZM14 14V4H4V14H14Z&quot; fill=&quot;#595959&quot; /&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;u-sr-accessible&quot;&gt;Copier la référence client
+            &lt;/div&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;c-tooltip&quot; id=&quot;tooltip-2&quot; role=&quot;tooltip&quot;&gt;
+        &lt;span&gt;Copy to clipboard&lt;/span&gt;
+        &lt;div class=&quot;c-tooltip__arrow&quot; data-popper-arrow=&quot;data-popper-arrow&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">div.o-flex.o-flex--vertical-center
+    p#ref.u-m-t-0.u-m-b-0.u-text-bold SmartBE-050-623
+    +c-button({skin: 'primary', layout: 'icon-only', icon: 'copy', size: 'small'})(data-action=&quot;copy&quot; data-action-trad=&quot;copied&quot; data-copy-content=&quot;#ref&quot; data-tooltip=&quot;tooltip-2&quot; data-tooltip-placement=&quot;left&quot; class=&quot;u-spacer-left-xs&quot;) Copier la référence client
+    .c-tooltip#tooltip-2(role=&quot;tooltip&quot;)
+        span Copy to clipboard
+        .c-tooltip__arrow(data-popper-arrow)</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

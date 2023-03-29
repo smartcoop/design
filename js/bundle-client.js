@@ -7,6 +7,8 @@ require("./modules/close-alert");
 
 require("./modules/close-global-banner");
 
+require("./modules/copy-btn");
+
 require("./modules/design-system-website-mobile-menu");
 
 require("./modules/dialogs");
@@ -23,7 +25,7 @@ require("./modules/popper-tooltip");
 
 require("./modules/tabs");
 
-},{"./modules/accordion":2,"./modules/close-alert":3,"./modules/close-global-banner":4,"./modules/design-system-website-mobile-menu":5,"./modules/dialogs":6,"./modules/input-password.js":7,"./modules/menu":8,"./modules/navbar-components":9,"./modules/popper-popover":10,"./modules/popper-tooltip":11,"./modules/tabs":12}],2:[function(require,module,exports){
+},{"./modules/accordion":2,"./modules/close-alert":3,"./modules/close-global-banner":4,"./modules/copy-btn":5,"./modules/design-system-website-mobile-menu":6,"./modules/dialogs":7,"./modules/input-password.js":8,"./modules/menu":9,"./modules/navbar-components":10,"./modules/popper-popover":11,"./modules/popper-tooltip":12,"./modules/tabs":13}],2:[function(require,module,exports){
 "use strict";
 
 /* Accordion
@@ -178,6 +180,51 @@ if (closablebanners.length) {
 },{}],5:[function(require,module,exports){
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/* Copy btn JS
+   ========================================================================== */
+var CopyBtn = function CopyBtn(btn) {
+  _classCallCheck(this, CopyBtn);
+
+  this.btn = btn;
+  var copy_trad = this.btn.getAttribute('data-action-trad');
+  var target__el = document.querySelector(this.btn.getAttribute('data-copy-content'));
+  var target__el__content = target__el.innerHTML;
+  this.btn.addEventListener('click', myFunc, false);
+  this.btn.myBtn = this.btn;
+
+  function myFunc(evt) {
+    var tooltipContent = evt.currentTarget.myBtn.nextElementSibling.querySelector("span");
+    navigator.clipboard.writeText(target__el__content).then(function (x) {
+      tooltipContent.innerHTML = target__el__content + " " + copy_trad;
+    });
+  }
+};
+
+var copyBtns = document.querySelectorAll("[data-action='copy']");
+
+if (copyBtns.length) {
+  _toConsumableArray(copyBtns).map(function (copyBtnsWithClick) {
+    return new CopyBtn(copyBtnsWithClick);
+  });
+}
+
+},{}],6:[function(require,module,exports){
+"use strict";
+
 /* ==========================================================================
   Mobile menu
    ========================================================================== */
@@ -201,7 +248,7 @@ var handleMenuClose = function handleMenuClose(e) {
 mobileNavigationOpenButton && mobileNavigationOpenButton.addEventListener('click', handleMenuOpen, false);
 mobileNavigationCloseButton && mobileNavigationCloseButton.addEventListener('click', handleMenuClose, false);
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 var _util = require("./util.js");
@@ -429,7 +476,7 @@ var focusTrap = function focusTrap(dialog, e) {
   dialog.addEventListener('keydown', handleKeyDown, false);
 };
 
-},{"./util.js":13}],7:[function(require,module,exports){
+},{"./util.js":14}],8:[function(require,module,exports){
 "use strict";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -473,7 +520,7 @@ if (passwordsInputs.length) {
   });
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -638,7 +685,7 @@ selectOptions.forEach(function (option) {
 
 document.addEventListener('click', handleOutsideClick);
 
-},{"./util":13,"@popperjs/core":14}],9:[function(require,module,exports){
+},{"./util":14,"@popperjs/core":15}],10:[function(require,module,exports){
 "use strict";
 
 /* Navbar components
@@ -679,7 +726,7 @@ function openCurrNavbar(e) {
   }
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -774,7 +821,7 @@ document.addEventListener('click', function (e) {
   }
 });
 
-},{"./util":13,"@popperjs/core":14}],11:[function(require,module,exports){
+},{"./util":14,"@popperjs/core":15}],12:[function(require,module,exports){
 "use strict";
 
 var _core = require("@popperjs/core");
@@ -848,7 +895,7 @@ function hide(e) {
   destroy();
 }
 
-},{"@popperjs/core":14}],12:[function(require,module,exports){
+},{"@popperjs/core":15}],13:[function(require,module,exports){
 "use strict";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -975,7 +1022,7 @@ if (tablists.length) {
   });
 }
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1116,7 +1163,7 @@ if (ScrollToLinks.length) {
   new ScrollToLink(ScrollToLinks);
 }
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 (function (process){(function (){
 /**
  * @popperjs/core v2.9.2 - MIT License
@@ -3025,7 +3072,7 @@ exports.preventOverflow = preventOverflow$1;
 
 
 }).call(this)}).call(this,require('_process'))
-},{"_process":15}],15:[function(require,module,exports){
+},{"_process":16}],16:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
