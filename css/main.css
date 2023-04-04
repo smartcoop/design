@@ -2873,6 +2873,34 @@ a.c-card:hover {
     visibility: visible; }
 
 /* ==========================================================================
+  c-error-page
+   ========================================================================== */
+.c-error-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2.4rem; }
+
+.c-error-page__code {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #666666; }
+
+.c-error-page__title {
+  color: #1A1A1A;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0 0 0.8rem; }
+
+.c-error-page__desc + .c-button,
+.c-error-page__desc + .c-button-toolbar {
+  margin-top: 2.4rem; }
+
+/* ==========================================================================
 c-file-attachment-list
 ========================================================================== */
 /* Component
