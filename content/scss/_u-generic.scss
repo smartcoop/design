@@ -4,6 +4,10 @@
  * Set of generic helping classes
  */
 
+.u-t-align-right{
+  text-align: right;
+}
+
 .u-maximize-height {
   height: 100% !important;
 }
@@ -178,12 +182,10 @@
 }
 
 .dev-env{
-
   .c-app-layout-inner__sidebar{
     top: 10.6rem;
   }
   .c-app-layout-inner__content{
     margin-top: 10.2rem;
   }
-  
 }

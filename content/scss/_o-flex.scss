@@ -21,6 +21,9 @@ $o-flex-gutter-width: 0.8rem !default;
 }
 
 @media (min-width: $g-bp1-m) { // 600
+  .o-flex-bp1-m  {
+    display: flex;
+  }
   .o-flex--col-reverse-bp1-m {
     flex-direction: column-reverse;
   }
@@ -32,12 +35,18 @@ $o-flex-gutter-width: 0.8rem !default;
   .o-flex-bp2 {
     display: flex;
   }
+  .o-block-bp2 {
+    display: block;
+  }
   .o-flex--col-reverse-bp2 {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: $g-bp3) {
+  .o-flex-bp3 {
+    display: flex;
+  }
   .o-flex--horizontal-bp3 {
     flex-direction: row;
   }
