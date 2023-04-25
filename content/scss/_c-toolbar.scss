@@ -26,7 +26,7 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
     .c-toolbar__right{
       justify-content: flex-start;
     }
-    @media (min-width: $g-bp2) {
+    @media (min-width: $g-bp3) {
       .c-toolbar__right{
         justify-content: flex-end;
       }
@@ -72,6 +72,9 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   justify-content: flex-end;
   .c-toolbar__item {
     margin-left: $c-toolbar-item-spacing;
+    &:first-child {
+      margin-left: 0;
+    }
     &:only-child {
       margin: 0;
     }

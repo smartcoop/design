@@ -270,7 +270,7 @@ $g-spacer-unit: 0.8rem !default;
 /* Breakpoint based utilities
    ========================================================================== */
 
-@media (min-width: $g-bp3) {
+@media (min-width: $g-bp3) { //900
   .u-spacer-right-bp3 {
     padding-right: $g-spacer-unit * 2 !important;
   }

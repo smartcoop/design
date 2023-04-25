@@ -127,16 +127,10 @@ $c-table-of-content-padding--mobile2: 2.4rem !default;
         }
       }
       
-      &.not-numbered{
-        a{
-          padding-left: 1rem;
-        }
-      }
-      &:not(.not-numbered){
-        counter-increment: li;
-        a:before {
-          content: counter(li) ".  ";
-        }
+      
+      counter-increment: li;
+      a:before {
+        content: counter(li) ".  ";
       }
 
       
