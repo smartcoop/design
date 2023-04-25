@@ -462,6 +462,8 @@ abbr[title] {
   flex-direction: column-reverse; }
 
 @media (min-width: 600px) {
+  .o-flex-bp1-m {
+    display: flex; }
   .o-flex--col-reverse-bp1-m {
     flex-direction: column-reverse; }
   .o-flex--horizontal-bp1-m {
@@ -470,10 +472,14 @@ abbr[title] {
 @media (min-width: 700px) {
   .o-flex-bp2 {
     display: flex; }
+  .o-block-bp2 {
+    display: block; }
   .o-flex--col-reverse-bp2 {
     flex-direction: column-reverse; } }
 
 @media (min-width: 900px) {
+  .o-flex-bp3 {
+    display: flex; }
   .o-flex--horizontal-bp3 {
     flex-direction: row; } }
 
@@ -4298,7 +4304,8 @@ c-table-of-content
     .c-table-of-content-navigation .c-table-of-content__nav li {
       z-index: 11;
       position: relative;
-      counter-increment: none; }
+      counter-increment: none;
+      counter-increment: li; }
       .c-table-of-content-navigation .c-table-of-content__nav li:before {
         content: "";
         display: none; }
@@ -4321,12 +4328,8 @@ c-table-of-content
           left: -.8rem;
           font-weight: 400;
           transition: color 0.1s cubic-bezier(0, 0.99, 0.31, 1); }
-      .c-table-of-content-navigation .c-table-of-content__nav li.not-numbered a {
-        padding-left: 1rem; }
-      .c-table-of-content-navigation .c-table-of-content__nav li:not(.not-numbered) {
-        counter-increment: li; }
-        .c-table-of-content-navigation .c-table-of-content__nav li:not(.not-numbered) a:before {
-          content: counter(li) ".  "; }
+      .c-table-of-content-navigation .c-table-of-content__nav li a:before {
+        content: counter(li) ".  "; }
       .c-table-of-content-navigation .c-table-of-content__nav li + li {
         margin-top: 1rem; }
     .c-table-of-content-navigation .c-table-of-content__nav.relativeWidth li a {
@@ -4685,7 +4688,7 @@ c-table-of-content
     height: auto; }
     .main-title .c-toolbar .c-toolbar__right {
       justify-content: flex-start; }
-    @media (min-width: 700px) {
+    @media (min-width: 900px) {
       .main-title .c-toolbar {
         display: flex;
         height: 6.4rem; }
@@ -4720,6 +4723,8 @@ c-table-of-content
   justify-content: flex-end; }
   .c-toolbar__right .c-toolbar__item {
     margin-left: 1.6rem; }
+    .c-toolbar__right .c-toolbar__item:first-child {
+      margin-left: 0; }
     .c-toolbar__right .c-toolbar__item:only-child {
       margin: 0; }
 
@@ -5059,6 +5064,9 @@ c-table-of-content
  * ===
  * Set of generic helping classes
  */
+.u-t-align-right {
+  text-align: right; }
+
 .u-maximize-height {
   height: 100% !important; }
 
