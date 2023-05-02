@@ -116,7 +116,7 @@
       margin: 0;
     }
     li{
-      margin-bottom: .8rem;
+      margin-bottom: 1rem;
       position: relative;
     }
   }
@@ -139,17 +139,30 @@
   }
 
   ol {
-    padding-left: 1.2rem;
+    padding-left: 2rem;
+    counter-reset: li;
+    ol{
+      padding-left: 3.4rem;
+      margin: 1rem 0;
+      li{
+        &:before{
+          left: -3.4rem;
+        }
+      }
+    }
     li{
-      counter-increment: li;
       &:before{
-        content:  counter(li) ".  ";
-        position: relative;
+        counter-increment: li;
+        content: counters(li, ".") ".";
+        color: $color-gray-500;
+        font-weight: 400;
+        position: absolute;
         display: inline-block;
         width: 1.8rem;
-        left: -.8rem;
-        font-weight: bold;
+        left: -2rem;
       }
     }
   }
+
+  
 }
