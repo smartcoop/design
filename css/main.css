@@ -1020,7 +1020,7 @@ abbr[title] {
   .c-content ul ul, .c-content ul ol, .c-content ol ul, .c-content ol ol {
     margin: 0; }
   .c-content ul li, .c-content ol li {
-    margin-bottom: .8rem;
+    margin-bottom: 1rem;
     position: relative; }
 
 .c-content ul {
@@ -1037,16 +1037,22 @@ abbr[title] {
     background-color: #333333; }
 
 .c-content ol {
-  padding-left: 1.2rem; }
-  .c-content ol li {
-    counter-increment: li; }
-    .c-content ol li:before {
-      content: counter(li) ".  ";
-      position: relative;
-      display: inline-block;
-      width: 1.8rem;
-      left: -.8rem;
-      font-weight: bold; }
+  padding-left: 2rem;
+  counter-reset: li; }
+  .c-content ol ol {
+    padding-left: 3.4rem;
+    margin: 1rem 0; }
+    .c-content ol ol li:before {
+      left: -3.4rem; }
+  .c-content ol li:before {
+    counter-increment: li;
+    content: counters(li, ".") ".";
+    color: #808080;
+    font-weight: 400;
+    position: absolute;
+    display: inline-block;
+    width: 1.8rem;
+    left: -2rem; }
 
 /* ==========================================================================
   c-display
