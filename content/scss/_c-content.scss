@@ -131,9 +131,9 @@
         width: .8rem;
         height: .8rem;
         top: .8rem;
-        left: -2.4rem;
+        left: -1.8rem;
         border-radius: 100%;
-        background-color: $base-color;
+        background-color: $color-gray-500;
       }
     }
   }
@@ -149,6 +149,7 @@
           left: -3.4rem;
         }
       }
+      
     }
     li{
       &:before{
@@ -160,6 +161,20 @@
         display: inline-block;
         width: 1.8rem;
         left: -2rem;
+      }
+    }
+    ul{
+      padding-left: 3.4rem;
+      margin: 1rem 0;
+      li{
+        &:before{
+          content: "";
+          width: .8rem;
+          height: .8rem;
+          background-color: $color-gray-500;
+          border-radius: .4rem;
+          left: -1.8rem;
+        }
       }
     }
   }
