@@ -1032,9 +1032,9 @@ abbr[title] {
     width: .8rem;
     height: .8rem;
     top: .8rem;
-    left: -2.4rem;
+    left: -1.8rem;
     border-radius: 100%;
-    background-color: #333333; }
+    background-color: #808080; }
 
 .c-content ol {
   padding-left: 2rem;
@@ -1053,6 +1053,16 @@ abbr[title] {
     display: inline-block;
     width: 1.8rem;
     left: -2rem; }
+  .c-content ol ul {
+    padding-left: 3.4rem;
+    margin: 1rem 0; }
+    .c-content ol ul li:before {
+      content: "";
+      width: .8rem;
+      height: .8rem;
+      background-color: #808080;
+      border-radius: .4rem;
+      left: -1.8rem; }
 
 /* ==========================================================================
   c-display
