@@ -78,7 +78,7 @@ a.c-card:hover {
   background-color: var(--bckg-color);
   background-image: var(--background);
   background-size: cover;
-  box-shadow: 0 0 18px rgba(var(--gradient-color), .22);
+  box-shadow: 0 0 18px rgba(var(--bckg-color-rgb), .22);
   overflow: hidden;
   @media 
   (-webkit-min-device-pixel-ratio: 2), 
@@ -103,9 +103,9 @@ a.c-card:hover {
     }
     p{
       margin-bottom: 0;
-      text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+      // text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
       &.sub-title{
-        color: white;
+        color: var(--subtitle-color);
         width: 80%;
         font-weight: 500;
         margin-bottom: .2rem;
@@ -116,6 +116,68 @@ a.c-card:hover {
     }
   }
 }
+
+.card__banner--ag{
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  .c-card__banner--text{
+    position: relative;
+    z-index: 10;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 75%;
+    top: -65%;
+    height: 230%;
+    right: 24%;
+    z-index: 5;
+    background-color: var(--bckg-color);
+    transform: skew(20deg, 20deg);
+  }
+  .c-button--secondary {
+    margin-top: .4rem;
+    color: white;
+  }
+  .sup-title, .divider{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .divider{
+    margin: 0 .2rem;
+    &--off{
+      display: none;
+    }
+  }
+  .sup-title{
+    display: block;
+    margin-top: .4rem;
+  }
+  @media (min-width: $g-bp3-m) {
+    .c-button--secondary {
+      margin-top: 0;
+    }
+    &:after{
+      width: 35%;
+      right: 30%;
+
+    }
+    .sup-title{
+      display: inline;
+      margin-top: 0;
+    }
+    .divider{
+      margin: 0 .4rem;
+      &--off{
+        display: inline;
+      }
+    }
+  }
+}
+
 
 [data-gradient]:before{
   content: "";

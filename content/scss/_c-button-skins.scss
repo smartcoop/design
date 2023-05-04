@@ -17,43 +17,11 @@ $c-button-link-color: $color-red-600 !default;
   border: 2px solid transparent;
 }
 
-/* Highlights
-   ========================================================================== */
-
-.c-button--highlights {
-  background: $color-gray-900;
-  border-color: $color-gray-900;
-  color: #fff;
-
-  svg * {
-    fill: currentColor;
-  }
-
-  &:hover,
-  &.c-button--hover {
-    background: $color-gray-900;
-    border-color: $color-black;
-  }
-
-  &:active,
-  &.c-button--active {
-    border-color: $color-black;
-    background: $color-black;
-  }
-
-  &:focus {
-    outline: $c-button-outline-color auto 1px;
-  }
-
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
-}
 
 /* Primary
    ========================================================================== */
 
-.c-button--primary {
+.c-button--primary, .c-button--highlights {
   background: $color-gray-900;
   border-color: $color-gray-900;
   color: #fff;
@@ -64,7 +32,7 @@ $c-button-link-color: $color-red-600 !default;
 
   &:hover,
   &.c-button--hover {
-    background: $color-gray-900;
+    background: $color-black;
     border-color: $color-black;
   }
 
@@ -87,9 +55,10 @@ $c-button-link-color: $color-red-600 !default;
    ========================================================================== */
 
 .c-button--secondary {
-  border: 2px solid $color-semantic-body-text;
-  background: #fff;
+  border: 2px solid rgba(0, 0, 0, .12);
+  background: transparent;
   color: $color-semantic-body-text;
+  transition: all .2s ease;
 
   svg * {
     fill: $color-semantic-icon;
@@ -97,9 +66,10 @@ $c-button-link-color: $color-red-600 !default;
 
   &:hover,
   &.c-button--hover {
-    background: $color-gray-50;
-    border-color: $color-gray-900;
+    background: rgba(0, 0, 0, .65);
+    border-color: transparent;
     color: $color-gray-900;
+    color: $color-white;
   }
 
   &:active,
