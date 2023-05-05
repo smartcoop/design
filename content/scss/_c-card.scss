@@ -118,7 +118,7 @@ a.c-card:hover {
 }
 
 .card__banner--ag{
-  background-size: auto;
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position-x: right;
   .c-card__banner--text{
@@ -157,6 +157,7 @@ a.c-card:hover {
     margin-top: .4rem;
   }
   @media (min-width: $g-bp3-m) {
+  background-size: 50%;
     .c-button--secondary {
       margin-top: 0;
     }
