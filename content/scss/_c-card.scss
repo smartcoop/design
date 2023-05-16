@@ -137,6 +137,18 @@ a.c-card:hover {
     background-color: var(--bckg-color);
     transform: skew(20deg, 20deg);
   }
+  &:before{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 2px;
+    width: 70px;
+    height: 70px;
+    right: 2%;
+    z-index: 10;
+    background-image: url('../images/banners/202305/letscoop.png');
+    background-size: 100% ;
+  }
   .c-button--secondary {
     margin-top: .4rem;
     color: white;
@@ -156,15 +168,28 @@ a.c-card:hover {
     display: block;
     margin-top: .4rem;
   }
+  @media (min-width: $g-bp3) {
+    background-size: 50%;
+    &:before{
+      top: 12px;
+      width: 125px;
+      height: 125px;
+      right: 19%;
+      background-size: 100% ;
+    }
+  }
   @media (min-width: $g-bp3-m) {
-  background-size: 50%;
+    background-size: 35%;
     .c-button--secondary {
       margin-top: 0;
     }
     &:after{
       width: 35%;
       right: 30%;
-
+    }
+    &:before{
+      top: 0;
+      right: 28.5%;
     }
     .sup-title{
       display: inline;
