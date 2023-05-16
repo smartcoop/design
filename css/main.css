@@ -2515,7 +2515,7 @@ a.c-card:hover {
         color: var(--title-color); }
 
 .card__banner--ag {
-  background-size: auto;
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position-x: right; }
   .card__banner--ag .c-card__banner--text {
@@ -2547,18 +2547,20 @@ a.c-card:hover {
     display: block;
     margin-top: .4rem; }
   @media (min-width: 1040px) {
-    .card__banner--ag .c-button--secondary {
-      margin-top: 0; }
-    .card__banner--ag:after {
-      width: 35%;
-      right: 30%; }
-    .card__banner--ag .sup-title {
-      display: inline;
-      margin-top: 0; }
-    .card__banner--ag .divider {
-      margin: 0 .4rem; }
-      .card__banner--ag .divider--off {
-        display: inline; } }
+    .card__banner--ag {
+      background-size: 50%; }
+      .card__banner--ag .c-button--secondary {
+        margin-top: 0; }
+      .card__banner--ag:after {
+        width: 35%;
+        right: 30%; }
+      .card__banner--ag .sup-title {
+        display: inline;
+        margin-top: 0; }
+      .card__banner--ag .divider {
+        margin: 0 .4rem; }
+        .card__banner--ag .divider--off {
+          display: inline; } }
 
 [data-gradient]:before {
   content: "";
