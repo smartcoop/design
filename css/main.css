@@ -1051,8 +1051,9 @@ abbr[title] {
     font-weight: 400;
     position: absolute;
     display: inline-block;
-    width: 1.8rem;
-    left: -2rem; }
+    width: 2.4rem;
+    left: -3rem;
+    text-align: right; }
   .c-content ol ul {
     padding-left: 3.4rem;
     margin: 1rem 0; }
@@ -2532,6 +2533,17 @@ a.c-card:hover {
     z-index: 5;
     background-color: var(--bckg-color);
     transform: skew(20deg, 20deg); }
+  .card__banner--ag:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 2px;
+    width: 70px;
+    height: 70px;
+    right: 2%;
+    z-index: 10;
+    background-image: url("../images/banners/202305/letscoop.png");
+    background-size: 100%; }
   .card__banner--ag .c-button--secondary {
     margin-top: .4rem;
     color: white; }
@@ -2546,14 +2558,26 @@ a.c-card:hover {
   .card__banner--ag .sup-title {
     display: block;
     margin-top: .4rem; }
-  @media (min-width: 1040px) {
+  @media (min-width: 900px) {
     .card__banner--ag {
       background-size: 50%; }
+      .card__banner--ag:before {
+        top: 12px;
+        width: 125px;
+        height: 125px;
+        right: 19%;
+        background-size: 100%; } }
+  @media (min-width: 1040px) {
+    .card__banner--ag {
+      background-size: 35%; }
       .card__banner--ag .c-button--secondary {
         margin-top: 0; }
       .card__banner--ag:after {
         width: 35%;
         right: 30%; }
+      .card__banner--ag:before {
+        top: 0;
+        right: 28.5%; }
       .card__banner--ag .sup-title {
         display: inline;
         margin-top: 0; }
