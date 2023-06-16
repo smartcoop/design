@@ -3,30 +3,37 @@
     grid-gap: 2.4rem;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    & > div:first-child{
+    & > div{
         grid-column: 1 / 3;
-        grid-row: 1;
+        // grid-row: 2;
     }
     & > div + div{
         grid-column: 1 / 3;
-        grid-row: 2;
-    }
-    & >  div + div + div{
-        grid-column: 1 / 3;
-        grid-row: 3;
+        // grid-row: 2;
     }
     @media (min-width: $g-bp3) {
-        & > div:first-child{
-            grid-column: 1 / 3;
+        & > div{
+            grid-column: 1 / 2;
             grid-row: 1;
         }
         & > div + div{
+            grid-column: 2 / 3;
+            grid-row: 1;
+        }
+        & > div.card__banner--ag{
+            grid-column: 1 / 3;
+        }
+        & > div.card__banner--ag + div{
             grid-column: 1 / 2;
+            grid-row: 2;
+        }
+        & > div.card__banner--ag + div + div{
+            grid-column: 2 / 3;
             grid-row: 2;
         }
         & >  div + div + div{
             grid-column: 2 / 3;
-            grid-row: 2;
+            grid-row: 1;
         }
     }
 
