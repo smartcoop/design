@@ -5611,6 +5611,8 @@ c-table-of-content
     .dynamic-dashboard--grid > div {
       grid-column: 1 / 2;
       grid-row: 1; }
+      .dynamic-dashboard--grid > div:only-child {
+        grid-column: 1 / 3; }
     .dynamic-dashboard--grid > div + div {
       grid-column: 2 / 3;
       grid-row: 1; }
