@@ -1,0 +1,39 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Récapitulatif des sommes des rémunérations"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar.u-position-fixed
+            include /templates/prototypes/partials/side-menu
+
+        .c-app-layout-inner__content
+            include /templates/prototypes/partials/main-title-only
+
+            .o-container.o-container--large
+                .o-container-vertical--padding-small.u-position-relative
+                    h3.c-h2.u-spacer-bottom-xl Activité: ABC
+                        +c-badge({skin: 'help'})(data-tooltip="tooltip-1" data-tooltip-placement="right")
+                        .c-tooltip#tooltip-1(role="tooltip")
+                            | Informations sur l'activité en question
+                            .c-tooltip__arrow(data-popper-arrow)
+                    table.c-table.c-table--styled.c-table--bordered.js-data-table
+                        thead
+                            tr
+                                th(rowspan="2") Statut
+                                th(rowspan="2") salaire brut
+                                th(colspan="3") Concession de droit d’auteur
+                            tr
+                                th liée à une prestation
+                                th Ratio par rapport au salaire
+                                th Autres concessions
+
+                        tbody
+                            each item, index in [1, 2, 3, 4]
+                                tr
+                                    td Data
+                                    td Data
+                                    td Data
+                                    td Data
+                                    td Data
