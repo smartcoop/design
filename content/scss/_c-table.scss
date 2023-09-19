@@ -134,15 +134,6 @@ $c-table-border-radius: $g-border-radius-medium !default;
       border-bottom: 2px dashed white;
   }
 
-  tr.bckg-gray{
-
-    background-color: $color-gray-25;
-  }
-
-  tr.bckg-yellow{
-    background-color: $color-yellow-150;
-  }
-
   
 
   td,
@@ -243,7 +234,6 @@ $c-table-border-radius: $g-border-radius-medium !default;
 
 /* Invisible table structure
    ========================================================================== */
-
 .c-table.c-table--invisible {
   border: 0;
   width: 100%;
