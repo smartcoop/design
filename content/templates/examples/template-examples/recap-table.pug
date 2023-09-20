@@ -1,0 +1,82 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Récapitulatif des sommes des rémunérations"
+
+block content
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar.u-position-fixed
+            include /templates/prototypes/partials/side-menu
+
+        .c-app-layout-inner__content
+            include /templates/prototypes/partials/main-title-only
+
+            .o-container
+                .o-container-vertical--padding-small.u-position-relative
+                    h3.c-h2.u-spacer-bottom-xl 
+                    table.c-table.c-table--styled.c-table--bordered.js-data-table
+                        thead
+                            tr
+                                th(rowspan="2" class="disabled") Activité: ABC
+                                    +c-badge({skin: 'help'})(data-tooltip="tooltip-1" data-tooltip-placement="right")
+                                    .c-tooltip#tooltip-1(role="tooltip")
+                                        | Informations sur l'activité en question
+                                        .c-tooltip__arrow(data-popper-arrow)
+                                th(rowspan="2") Statut
+                                th(rowspan="2").u-text-center salaire brut
+                                th(colspan="4").u-text-center.dotted-bottom Concession de droit d’auteur
+                            tr
+                                th.u-text-center.dotted liée à une prestation
+                                th.u-text-center.dotted Ratio par rapport au salaire
+                                th.u-text-center.dotted Autres concessions
+                                th.u-text-center Total
+
+                        tbody
+                            tr
+                                td(rowspan="3").border-top-left-r Idir Cherfaoui
+                                td
+                                    +c-status-pill({skin: 'success'}) Validées
+                                td.u-text-center 700,<small>00&nbsp;€</small>
+                                td.u-text-center 300,<small>00&nbsp;€</small>
+                                td.u-text-center 30%
+                                td.u-text-center 500,<small>00&nbsp;€</small>
+                                td.u-text-center 1000,<small>00&nbsp;€</small>
+                            tr.bckg-gray
+                                td
+                                    +c-status-pill({skin: 'pending'}) En attente
+                                td.u-text-center 700,<small>00&nbsp;€</small>
+                                td.u-text-center 300,<small>00&nbsp;€</small>
+                                td.u-text-center 30%
+                                td.u-text-center 500,<small>00&nbsp;€</small>
+                                td.u-text-center 1000,<small>00&nbsp;€</small>
+                            tr.bckg-yellow
+                                td Total
+                                td.u-text-center 700,<small>00&nbsp;€</small>
+                                td.u-text-center 300,<small>00&nbsp;€</small>
+                                td.u-text-center 30%
+                                td.u-text-center 500,<small>00&nbsp;€</small>
+                                td.u-text-center 1000,<small>00&nbsp;€</small>
+                            tr
+                                td(rowspan="3").border-bottom-left-r Marcel Pirnay
+                                td
+                                    +c-status-pill({skin: 'success'}) Validées
+                                td.u-text-center 700,<small>00&nbsp;€</small>
+                                td.u-text-center 300,<small>00&nbsp;€</small>
+                                td.u-text-center 30%
+                                td.u-text-center 500,<small>00&nbsp;€</small>
+                                td.u-text-center 1000,<small>00&nbsp;€</small>
+                            tr.bckg-gray
+                                td
+                                    +c-status-pill({skin: 'pending'}) En attente
+                                td.u-text-center 700,<small>00&nbsp;€</small>
+                                td.u-text-center 300,<small>00&nbsp;€</small>
+                                td.u-text-center 30%
+                                td.u-text-center 500,<small>00&nbsp;€</small>
+                                td.u-text-center 1000,<small>00&nbsp;€</small>
+                            tr.bckg-yellow
+                                td Total
+                                td.u-text-center 700,<small>00&nbsp;€</small>
+                                td.u-text-center 300,<small>00&nbsp;€</small>
+                                td.u-text-center 30%
+                                td.u-text-center 500,<small>00&nbsp;€</small>
+                                td.u-text-center 1000,<small>00&nbsp;€</small>
