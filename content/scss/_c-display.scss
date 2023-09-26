@@ -1,8 +1,10 @@
 /* ==========================================================================
   c-display
   ---
+
   Usage: wrap a .c-display class around content to turn it into rich text.
-  Similar to .c-content, but meant for a reading context.
+  Similar to .c-content, but meant for styleguide website only.
+  Do not use c-display in production app.
 
    ========================================================================== */
 
@@ -76,20 +78,11 @@
   line-height: 1.72;
 }
 
-small {
-  font-size: 1.3rem;
-  margin: 1.6rem 0;
-  line-height: 1.72;
-}
-
 .c-display {
 
   p {
     margin: 1.8rem 0;
-  }
-
-  
-
+  } 
 
   .c-sidenote {
     color: $color-semantic-muted-text;
