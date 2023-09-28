@@ -15,6 +15,7 @@ Component: app layout
 
 .c-app-layout-inner {
   height: 100%;
+  overflow-x: auto;
   
   @media (max-width: ($g-bp2 - 1px)) {
     // Make full screen scrollable on mobile, mobile navigation pattern needs to be revised in the future

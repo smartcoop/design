@@ -1,19 +1,53 @@
-table.c-table.c-table--styled
-    thead
-        tr
-            th Data
-            th Data
-            th Data
-    tbody
-        tr
-            td Data
-            td Data
-            td Data
-        tr
-            td Data
-            td Data
-            td Data
-        tr
-            td Data
-            td Data
-            td Data
+div.bckg-gray-50.u-padding-l
+    table.c-table.c-table--styled.c-table--bordered.js-data-table
+        thead
+            tr
+                th(rowspan="2" class="disabled") Activité: ABC
+                    +c-badge({skin: 'help'})(data-tooltip="tooltip-1" data-tooltip-placement="right")
+                    .c-tooltip#tooltip-1(role="tooltip")
+                        | Informations sur l'activité en question   
+                        .c-tooltip__arrow(data-popper-arrow)
+                th(rowspan="2") Lorem
+                th(rowspan="2").u-text-center Lorem Ipsum Dolor
+                th(colspan="4").u-text-center.dotted-bottom Lorem Ipsum Dolor
+            tr
+                th.u-text-center.dotted Lorem Ipsum
+                th.u-text-center Total
+
+        tbody
+            tr
+                td(rowspan="3").border-top-left-r Lorem Ipsum
+                td
+                    +c-status-pill({skin: 'success'}) Success
+                td.u-text-center 700,<small>00&nbsp;€</small>
+                td.u-text-center 30%
+                td.u-text-center 1000<small>,00 €</small>
+            tr.bckg-gray
+                td
+                    +c-status-pill({skin: 'pending'}) Pending
+                td.u-text-center 700,<small>00&nbsp;€</small>
+                td.u-text-center 30%
+                td.u-text-center 1000,<small>00&nbsp;€</small>
+            tr.bckg-yellow
+                td Total
+                td.u-text-center 700,<small>00&nbsp;€</small>
+                td.u-text-center 30%
+                td.u-text-center 1000,<small>00&nbsp;€</small>
+            tr
+                td(rowspan="3").border-bottom-left-r Lorem Ipsum
+                td
+                    +c-status-pill({skin: 'success'}) Success
+                td.u-text-center 700,<small>00&nbsp;€</small>
+                td.u-text-center 30%
+                td.u-text-center 1000,<small>00&nbsp;€</small>
+            tr.bckg-gray
+                td
+                    +c-status-pill({skin: 'pending'}) Pending
+                td.u-text-center 700,<small>00&nbsp;€</small>
+                td.u-text-center 30%
+                td.u-text-center 1000,<small>00&nbsp;€</small>
+            tr.bckg-yellow
+                td Total
+                td.u-text-center 700,<small>00&nbsp;€</small>
+                td.u-text-center 30%
+                td.u-text-center 1000,<small>00&nbsp;€</small>

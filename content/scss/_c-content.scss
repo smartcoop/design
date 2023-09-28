@@ -2,10 +2,9 @@
   c-content
   ---
   Usage: wrap a .c-content class around content to turn it into rich text.
-
-  .c-h1, .c-h2, .c-body-1, c-body 2
+  This is used in production app.
   ---
-  Usage: use these classes to style individual components like their rich text equivalent
+  Usage: This is used in production app.
    ========================================================================== */
 
 .c-h1, .c-h2, .c-h3, .c-h4,
@@ -88,6 +87,12 @@
   p {
     margin: 1.5rem 0;
     line-height: 1.65em;
+  }
+
+  small {
+    font-size: 1.3rem;
+    margin: 1.6rem 0;
+    line-height: 1.72;
   }
 
   dl {
