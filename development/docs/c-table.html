@@ -755,86 +755,270 @@
                         <p>A table with more styling.</p>
                     </div>
                     <div class="br-sample-content">
-                        <table class="c-table c-table--styled">
-                            <thead>
-                                <tr>
-                                    <th>Data</th>
-                                    <th>Data</th>
-                                    <th>Data</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                </tr>
-                                <tr>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                </tr>
-                                <tr>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="bckg-gray-50 u-padding-l">
+                            <table class="c-table c-table--styled c-table--bordered js-data-table">
+                                <thead>
+                                    <tr>
+                                        <th class="disabled" rowspan="2">Activité: ABC
+                                            <div class="c-badge c-badge--help" data-tooltip="tooltip-1" data-tooltip-placement="right">
+                                                <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                        <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                        <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="c-tooltip" id="tooltip-1" role="tooltip">Informations sur l'activité en question
+                                                <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
+                                            </div>
+                                        </th>
+                                        <th rowspan="2">Lorem</th>
+                                        <th class="u-text-center" rowspan="2">Lorem Ipsum Dolor</th>
+                                        <th class="u-text-center dotted-bottom" colspan="4">Lorem Ipsum Dolor</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="u-text-center dotted">Lorem Ipsum</th>
+                                        <th class="u-text-center">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border-top-left-r" rowspan="3">Lorem Ipsum</td>
+                                        <td>
+                                            <span class="c-status-pill c-status-pill--success">
+                                                <span class="c-status-pill__circle"></span>
+                                                <span class="c-status-pill__label">Success</span>
+                                            </span>
+                                        </td>
+                                        <td class="u-text-center">700,<small>00&nbsp;€</small>
+                                        </td>
+                                        <td class="u-text-center">30%</td>
+                                        <td class="u-text-center">1000<small>,00 €</small>
+                                        </td>
+                                    </tr>
+                                    <tr class="bckg-gray">
+                                        <td>
+                                            <span class="c-status-pill c-status-pill--pending">
+                                                <span class="c-status-pill__circle"></span>
+                                                <span class="c-status-pill__label">Pending</span>
+                                            </span>
+                                        </td>
+                                        <td class="u-text-center">700,<small>00&nbsp;€</small>
+                                        </td>
+                                        <td class="u-text-center">30%</td>
+                                        <td class="u-text-center">1000,<small>00&nbsp;€</small>
+                                        </td>
+                                    </tr>
+                                    <tr class="bckg-yellow">
+                                        <td>Total</td>
+                                        <td class="u-text-center">700,<small>00&nbsp;€</small>
+                                        </td>
+                                        <td class="u-text-center">30%</td>
+                                        <td class="u-text-center">1000,<small>00&nbsp;€</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-bottom-left-r" rowspan="3">Lorem Ipsum</td>
+                                        <td>
+                                            <span class="c-status-pill c-status-pill--success">
+                                                <span class="c-status-pill__circle"></span>
+                                                <span class="c-status-pill__label">Success</span>
+                                            </span>
+                                        </td>
+                                        <td class="u-text-center">700,<small>00&nbsp;€</small>
+                                        </td>
+                                        <td class="u-text-center">30%</td>
+                                        <td class="u-text-center">1000,<small>00&nbsp;€</small>
+                                        </td>
+                                    </tr>
+                                    <tr class="bckg-gray">
+                                        <td>
+                                            <span class="c-status-pill c-status-pill--pending">
+                                                <span class="c-status-pill__circle"></span>
+                                                <span class="c-status-pill__label">Pending</span>
+                                            </span>
+                                        </td>
+                                        <td class="u-text-center">700,<small>00&nbsp;€</small>
+                                        </td>
+                                        <td class="u-text-center">30%</td>
+                                        <td class="u-text-center">1000,<small>00&nbsp;€</small>
+                                        </td>
+                                    </tr>
+                                    <tr class="bckg-yellow">
+                                        <td>Total</td>
+                                        <td class="u-text-center">700,<small>00&nbsp;€</small>
+                                        </td>
+                                        <td class="u-text-center">30%</td>
+                                        <td class="u-text-center">1000,<small>00&nbsp;€</small>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div class="br-sample-footer">
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
                         <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
                         <div class="br-sample-code br-sample-code-html">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-html">&lt;table class=&quot;c-table c-table--styled&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Data&lt;/th&gt;
-            &lt;th&gt;Data&lt;/th&gt;
-            &lt;th&gt;Data&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Data&lt;/td&gt;
-            &lt;td&gt;Data&lt;/td&gt;
-            &lt;td&gt;Data&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Data&lt;/td&gt;
-            &lt;td&gt;Data&lt;/td&gt;
-            &lt;td&gt;Data&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Data&lt;/td&gt;
-            &lt;td&gt;Data&lt;/td&gt;
-            &lt;td&gt;Data&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;bckg-gray-50 u-padding-l&quot;&gt;
+    &lt;table class=&quot;c-table c-table--styled c-table--bordered js-data-table&quot;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th class=&quot;disabled&quot; rowspan=&quot;2&quot;&gt;Activité: ABC
+                    &lt;div class=&quot;c-badge c-badge--help&quot; data-tooltip=&quot;tooltip-1&quot; data-tooltip-placement=&quot;right&quot;&gt;
+                        &lt;div class=&quot;o-svg-icon o-svg-icon-circle-help  &quot;&gt;
+                            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                &lt;path d=&quot;M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z&quot; fill=&quot;#595959&quot; /&gt;
+                                &lt;path d=&quot;M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z&quot; fill=&quot;#595959&quot; /&gt;
+                                &lt;path d=&quot;M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;c-tooltip&quot; id=&quot;tooltip-1&quot; role=&quot;tooltip&quot;&gt;Informations sur l'activité en question
+                        &lt;div class=&quot;c-tooltip__arrow&quot; data-popper-arrow=&quot;data-popper-arrow&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th rowspan=&quot;2&quot;&gt;Lorem&lt;/th&gt;
+                &lt;th class=&quot;u-text-center&quot; rowspan=&quot;2&quot;&gt;Lorem Ipsum Dolor&lt;/th&gt;
+                &lt;th class=&quot;u-text-center dotted-bottom&quot; colspan=&quot;4&quot;&gt;Lorem Ipsum Dolor&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th class=&quot;u-text-center dotted&quot;&gt;Lorem Ipsum&lt;/th&gt;
+                &lt;th class=&quot;u-text-center&quot;&gt;Total&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;border-top-left-r&quot; rowspan=&quot;3&quot;&gt;Lorem Ipsum&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;span class=&quot;c-status-pill c-status-pill--success&quot;&gt;
+                        &lt;span class=&quot;c-status-pill__circle&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;c-status-pill__label&quot;&gt;Success&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;30%&lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;1000&lt;small&gt;,00 €&lt;/small&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class=&quot;bckg-gray&quot;&gt;
+                &lt;td&gt;
+                    &lt;span class=&quot;c-status-pill c-status-pill--pending&quot;&gt;
+                        &lt;span class=&quot;c-status-pill__circle&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;c-status-pill__label&quot;&gt;Pending&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;30%&lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class=&quot;bckg-yellow&quot;&gt;
+                &lt;td&gt;Total&lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;30%&lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;border-bottom-left-r&quot; rowspan=&quot;3&quot;&gt;Lorem Ipsum&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;span class=&quot;c-status-pill c-status-pill--success&quot;&gt;
+                        &lt;span class=&quot;c-status-pill__circle&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;c-status-pill__label&quot;&gt;Success&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;30%&lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class=&quot;bckg-gray&quot;&gt;
+                &lt;td&gt;
+                    &lt;span class=&quot;c-status-pill c-status-pill--pending&quot;&gt;
+                        &lt;span class=&quot;c-status-pill__circle&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;c-status-pill__label&quot;&gt;Pending&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;30%&lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class=&quot;bckg-yellow&quot;&gt;
+                &lt;td&gt;Total&lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;30%&lt;/td&gt;
+                &lt;td class=&quot;u-text-center&quot;&gt;1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</pre>
                         </div>
                         <div class="br-sample-code br-sample-code-pug">
                             <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
-                            <pre class="br-sample-markup br-sample-markup-pug">table.c-table.c-table--styled
-    thead
-        tr
-            th Data
-            th Data
-            th Data
-    tbody
-        tr
-            td Data
-            td Data
-            td Data
-        tr
-            td Data
-            td Data
-            td Data
-        tr
-            td Data
-            td Data
-            td Data
+                            <pre class="br-sample-markup br-sample-markup-pug">div.bckg-gray-50.u-padding-l
+    table.c-table.c-table--styled.c-table--bordered.js-data-table
+        thead
+            tr
+                th(rowspan=&quot;2&quot; class=&quot;disabled&quot;) Activité: ABC
+                    +c-badge({skin: 'help'})(data-tooltip=&quot;tooltip-1&quot; data-tooltip-placement=&quot;right&quot;)
+                    .c-tooltip#tooltip-1(role=&quot;tooltip&quot;)
+                        | Informations sur l'activité en question   
+                        .c-tooltip__arrow(data-popper-arrow)
+                th(rowspan=&quot;2&quot;) Lorem
+                th(rowspan=&quot;2&quot;).u-text-center Lorem Ipsum Dolor
+                th(colspan=&quot;4&quot;).u-text-center.dotted-bottom Lorem Ipsum Dolor
+            tr
+                th.u-text-center.dotted Lorem Ipsum
+                th.u-text-center Total
+
+        tbody
+            tr
+                td(rowspan=&quot;3&quot;).border-top-left-r Lorem Ipsum
+                td
+                    +c-status-pill({skin: 'success'}) Success
+                td.u-text-center 700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                td.u-text-center 30%
+                td.u-text-center 1000&lt;small&gt;,00 €&lt;/small&gt;
+            tr.bckg-gray
+                td
+                    +c-status-pill({skin: 'pending'}) Pending
+                td.u-text-center 700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                td.u-text-center 30%
+                td.u-text-center 1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+            tr.bckg-yellow
+                td Total
+                td.u-text-center 700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                td.u-text-center 30%
+                td.u-text-center 1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+            tr
+                td(rowspan=&quot;3&quot;).border-bottom-left-r Lorem Ipsum
+                td
+                    +c-status-pill({skin: 'success'}) Success
+                td.u-text-center 700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                td.u-text-center 30%
+                td.u-text-center 1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+            tr.bckg-gray
+                td
+                    +c-status-pill({skin: 'pending'}) Pending
+                td.u-text-center 700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                td.u-text-center 30%
+                td.u-text-center 1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+            tr.bckg-yellow
+                td Total
+                td.u-text-center 700,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
+                td.u-text-center 30%
+                td.u-text-center 1000,&lt;small&gt;00&amp;nbsp;€&lt;/small&gt;
 </pre>
                         </div>
                     </div>

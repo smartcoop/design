@@ -282,6 +282,131 @@
     margin-right: 0.8rem; }
 
 /* ==========================================================================
+  c-display
+  ---
+
+  Usage: wrap a .c-display class around content to turn it into rich text.
+  Similar to .c-content, but meant for styleguide website only.
+  Do not use c-display in production app.
+
+   ========================================================================== */
+.c-display {
+  font-size: 1.8rem;
+  line-height: 1.72; }
+
+.c-d-h1, .c-d-h2, .c-d-h3, .c-d-h4,
+.c-display h1,
+.c-display h2,
+.c-display h3,
+.c-display h4 {
+  color: #1A1A1A; }
+
+.c-d-h1, .c-display h1,
+.c-d-h2, .c-display h2,
+.c-d-h3, .c-display h3,
+.c-d-h4, .c-display h4 {
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+.c-d-h1, .c-display h1 {
+  font-size: 3.8rem;
+  margin: 4.8rem 0 3.2rem;
+  line-height: 1.25;
+  font-weight: 700; }
+
+.c-d-h2, .c-display h2 {
+  font-size: 3rem;
+  margin: 4.8rem 0 2.4rem;
+  line-height: 1.36;
+  font-weight: 600; }
+
+.c-d-h3, .c-display h3 {
+  font-size: 2.6rem;
+  margin: 3.2rem 0 1.8rem;
+  line-height: 1.36;
+  font-weight: 600; }
+
+.c-d-h4, .c-display h4 {
+  font-size: 2.2rem;
+  margin: 2.4rem 0 1.6rem;
+  line-height: 1.36;
+  font-weight: 600; }
+
+.c-d-h1:first-child,
+.c-d-h2:first-child,
+.c-d-h3:first-child,
+.c-d-h4:first-child,
+.c-display h1:first-child,
+.c-display h2:first-child,
+.c-display h3:first-child,
+.c-display h4:first-child {
+  margin-top: 0; }
+
+.c-d-body-1 {
+  font-size: 1.8rem;
+  margin: 1.8rem 0; }
+
+.c-d-body-2 {
+  font-size: 1.6rem;
+  margin: 1.6rem 0;
+  line-height: 1.72; }
+
+.c-display p {
+  margin: 1.8rem 0; }
+
+.c-display .c-sidenote {
+  color: #808080;
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 1.6rem 0; }
+  @media (min-width: 1200px) {
+    .c-display .c-sidenote {
+      float: right;
+      clear: right;
+      width: 32rem;
+      margin: 0 -32rem 0 0;
+      padding: 0 2.4rem;
+      position: relative;
+      vertical-align: baseline; } }
+
+.c-display a {
+  text-decoration: none;
+  color: #1267FB;
+  border-bottom: 0.1rem solid rgba(18, 103, 251, 0.33); }
+
+.c-display ul, .c-display ol {
+  padding-left: 3.2rem;
+  margin: 1.8rem 0; }
+  .c-display ul ul, .c-display ul ol, .c-display ol ul, .c-display ol ol {
+    margin: 0; }
+  .c-display ul h1, .c-display ul h2, .c-display ul h3, .c-display ul h4, .c-display ul h5, .c-display ol h1, .c-display ol h2, .c-display ol h3, .c-display ol h4, .c-display ol h5 {
+    margin-left: -3rem; }
+
+.c-display ul {
+  list-style: disc; }
+
+.c-display ol {
+  list-style: decimal; }
+
+.c-display pre {
+  margin: 1.6rem 0; }
+
+.c-display figure {
+  margin: 3.2rem 0; }
+
+.c-display figure img {
+  border: 0.1rem solid #E5E5E5; }
+
+.c-display figcaption {
+  color: #808080;
+  font-size: 1.4rem; }
+
+.c-display hr {
+  margin: 3.2rem 0;
+  border: none;
+  border-bottom: 1px solid #D9D9D9; }
+
+/* ==========================================================================
    Style guide styles
    ========================================================================== */
 /*
