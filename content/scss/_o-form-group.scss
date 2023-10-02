@@ -36,8 +36,7 @@ $o-form-group-label-font-weight: 500 !default;
     font-weight: $o-form-group-label-font-weight;
     display: block;
     flex: none;
-    .tooltip-icon{
-      display: inline-block;
+    .c-tooltip-icon{
       margin-left: .4rem;
     }
   }

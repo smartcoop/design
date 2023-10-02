@@ -19,7 +19,11 @@ $c-tooltip-bg: rgba(0,0,0,0.75) !default;
   border-radius: 0.4rem;
   max-width: 24rem;
   z-index: 1;
+  &-icon{
+    display: inline-block;
+  }
 }
+
 
 .c-tooltip--size-m {
   min-width: 24rem;
