@@ -29,10 +29,6 @@
     border-right: .2rem solid $color-gray-200;
   }
 
-  table td {
-    border-bottom: 1px solid $color-gray-100;
-  }
-
   table tr:last-child td,
   table tr:last-child th[scope="row"] {
     border-bottom: none;
