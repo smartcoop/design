@@ -568,8 +568,11 @@ abbr[title] {
   font-weight: 500;
   display: block;
   flex: none; }
+  .o-form-group-layout--standard label.o-form-group__label .c-tooltip-icon,
+  .o-form-group-layout--standard .o-form-group__label label .c-tooltip-icon {
+    margin-left: .4rem; }
 
-.o-form-group-layout--standard .o-form-group__label--with-helper {
+.o-form-group-layout--standard label.o-form-group__label--with-helper {
   display: flex;
   align-items: center; }
 
@@ -4813,13 +4816,15 @@ c-table-of-content
    ========================================================================== */
 .c-tooltip {
   display: none;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.75);
   color: #FFF;
   padding: .8rem 1.2rem;
   font-size: 1.3rem;
   border-radius: 0.4rem;
   max-width: 24rem;
   z-index: 1; }
+  .c-tooltip-icon {
+    display: inline-block; }
 
 .c-tooltip--size-m {
   min-width: 24rem; }
@@ -4836,19 +4841,19 @@ c-table-of-content
 
 .c-tooltip[data-popper-placement^='top'] > .c-tooltip__arrow {
   filter: none;
-  border-top-color: rgba(0, 0, 0, 0.65); }
+  border-top-color: rgba(0, 0, 0, 0.75); }
 
 .c-tooltip[data-popper-placement^='bottom'] > .c-tooltip__arrow {
   filter: none;
-  border-bottom-color: rgba(0, 0, 0, 0.65); }
+  border-bottom-color: rgba(0, 0, 0, 0.75); }
 
 .c-tooltip[data-popper-placement^='left'] > .c-tooltip__arrow {
   filter: none;
-  border-left-color: rgba(0, 0, 0, 0.65); }
+  border-left-color: rgba(0, 0, 0, 0.75); }
 
 .c-tooltip[data-popper-placement^='right'] > .c-tooltip__arrow {
   filter: none;
-  border-right-color: rgba(0, 0, 0, 0.65); }
+  border-right-color: rgba(0, 0, 0, 0.75); }
 
 /* ==========================================================================
   c-user-navigation
