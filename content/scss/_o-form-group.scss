@@ -16,6 +16,8 @@ $o-form-group-label-font-weight: 500 !default;
    Group within a form that defines a layout
    ========================================================================== */
 
+   
+
 .o-form-group-layout--standard {
 
   .o-form-group {
@@ -34,9 +36,12 @@ $o-form-group-label-font-weight: 500 !default;
     font-weight: $o-form-group-label-font-weight;
     display: block;
     flex: none;
+    .c-tooltip-icon{
+      margin-left: .4rem;
+    }
   }
 
-  .o-form-group__label--with-helper {
+  label.o-form-group__label--with-helper {
     display: flex;
     align-items: center;
   }
