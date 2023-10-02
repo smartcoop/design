@@ -5,7 +5,8 @@
 /* Variables
    ========================================================================== */
 
-$c-tooltip-bg: rgba(0,0,0,0.75) !default;
+
+$c-tooltip-bg: rgba(0,0,0,0.85) !default;
 
 /* Component
    ========================================================================== */
@@ -14,7 +15,7 @@ $c-tooltip-bg: rgba(0,0,0,0.75) !default;
   display: none;
   background: $c-tooltip-bg;
   color: #FFF;
-  padding: .8rem 1.2rem;
+  padding: 1rem 1.2rem;
   font-size: 1.3rem;
   border-radius: 0.4rem;
   max-width: 24rem;

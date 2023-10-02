@@ -1,0 +1,45 @@
+extends /templates/prototypes/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Récapitulatif des sommes des rémunérations"
+
+block content
+    .c-app-layout-inner
+        //- .c-app-layout-inner__sidebar.u-position-fixed
+        //-     include /templates/prototypes/partials/side-menu
+
+        .c-app-layout-inner__content
+            include /templates/prototypes/partials/main-title-concessions
+
+            .o-container.c-content
+                .o-container-vertical--padding-small.u-position-relative
+                    h3.c-h2.u-spacer-bottom-xl.o-flex.o-flex--vertical-center(style="margin-left: 12%;")
+                        | Mon récapitulatif pour PA
+                        span(class="c-tooltip-icon u-spacer-left-s" data-tooltip="tooltip-5" data-tooltip-placement="bottom")
+                            +icon('circle-help')
+                        .c-tooltip#tooltip-5(role="tooltip")
+                            | Information sur l'unité de production ou autre explication venant en aide à l'utilisateur
+                            .c-tooltip__arrow(data-popper-arrow)
+                    table.c-table.c-table--styled.c-table--bordered.js-data-table
+                        thead
+                            tr
+                                th(rowspan="2" class="disabled")
+                                th(rowspan="2") Statut
+                                th(colspan="3").u-text-center.dotted-bottom Concession de droit d’auteur
+                                th(rowspan="2").u-text-center salaire brut <small>(b)</small>
+                                th(rowspan="2").u-text-center Ratio <small>(a/a+b)</small>
+                            tr
+                                th.u-text-center.dotted Autre
+                                th.u-text-center.dotted Lié à une prestation  <small>(a)</small>
+                                th.u-text-center.dotted Total
+
+                        tbody
+                            tr
+                                td(rowspan="1" style="width: 12%;").border-top-left-r Nom Prénom
+                                td
+                                    +c-status-pill({skin: 'success'}) Validées
+                                td.u-text-center 300,<small>00&nbsp;€</small>
+                                td.u-text-center 500,<small>00&nbsp;€</small>
+                                td.u-text-center 700,<small>00&nbsp;€</small>
+                                td.u-text-center 1000,<small>00&nbsp;€</small>
+                                td.u-text-center 33%
